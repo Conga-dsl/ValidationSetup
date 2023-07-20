@@ -1,0 +1,177 @@
+Chatbot abishekv7 language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good" ,
+		"whose birthday today"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+ms_dhoni :
+	inputs in en {
+		msdhoni ,
+		msd ,
+		"ms dhoni" ,
+		dhoni
+}
+
+play_music :
+	inputs in en {
+		"play some music" ,
+		"play some songs" ,
+		songs
+}
+
+call_phone :
+	inputs in en {
+		"make a phone call to " ( vaisakh ) [ name ] ,
+		"call " ( john ) [ name ] ,
+		"give a ring to " ( Abishek ) [ name ] ,
+		"phone " ( aravind ) [ name ] ,
+		"ring " ( kavin ) [ name ]
+	}
+	parameters :
+		name : entity text ;
+
+mobile :
+	inputs in en {
+		cellular ,
+		mobile
+}
+
+landline :
+	inputs in en {
+		landline
+}
+
+^number :
+	inputs in en {
+		"number is " ( "3523923" ) [ ^number ] ,
+		"It is " ( "4623568" ) [ ^number ] ,
+		( "42352235" ) [ ^number ]
+	}
+	parameters :
+		^number : entity number ;
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Empty response action_phone_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_music_text :
+		inputs in en {
+			"Playing songs"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_msdhoni_text :
+		inputs in en {
+			"He is your role model and the coolest captain"
+	}
+	Empty response action_landline_empty
+	Empty response action_number_empty
+	Empty response action_call_phone_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user ms_dhoni => chatbot DefaultEmptyAction ;
+	- user play_music => chatbot DefaultEmptyAction ;
+	- user call_phone => chatbot action_call_phone_empty ;
+	- user mobile => chatbot action_phone_empty ;
+	- user landline => chatbot DefaultEmptyAction ;
+	- user ^number => chatbot action_number_empty ;
+

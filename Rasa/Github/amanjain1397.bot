@@ -1,0 +1,425 @@
+Chatbot amanjain1397 language : en
+
+intents :
+
+book_room :
+	inputs in en {
+		"i want a book a " ( room ) [ location ] " for my stay" ,
+		"I want to book a " ( room ) [ location ] ,
+		"i want to book a " ( room ) [ location ] ,
+		"i would like to book a " ( room ) [ location ] ,
+		"need a " ( room ) [ location ] ,
+		"can you book a " ( room ) [ location ] "?" ,
+		"book " ( room ) [ location ] ,
+		"book the " ( room ) [ location ] ,
+		"book a " ( room ) [ location ] ,
+		"Book a " ( Room ) [ location ] ,
+		"Book " ( room ) [ location ] " for my stay" ,
+		"book " ( rooms ) [ location ] ,
+		"book the " ( rooms ) [ location ] ,
+		"book " ( room ) [ location ] ,
+		"book the " ( room ) [ location ] ,
+		"book a " ( room ) [ location ] ,
+		"Book a " ( Room ) [ location ] ,
+		"Book " ( room ) [ location ] ,
+		"book " ( rooms ) [ location ] ,
+		"book the " ( rooms ) [ location ]
+	}
+	parameters :
+		location : entity text ;
+
+book_number_room :
+	inputs in en {
+		"i want to book (2)[number] " ( rooms ) [ location ] " for my stay" ,
+		"i would like to book " ( "1" ) [ ^number ] ( room ) [ location ] ,
+		"I want to book " ( "2" ) [ ^number ] ( rooms ) [ location ] ,
+		"book " ( "2" ) [ ^number ] ( rooms ) [ location ] " for me" ,
+		"need " ( "1" ) [ ^number ] ( room ) [ location ] ,
+		"book " ( "1" ) [ ^number ] ( room ) [ location ] ,
+		"book " ( "2" ) [ ^number ] ( rooms ) [ location ] ,
+		"need " ( "2" ) [ ^number ] ( rooms ) [ location ] " to book"
+	}
+	parameters :
+		location ,
+		^number : entity number ;
+
+num_rooms :
+	inputs in en {
+		( "2" ) [ ^number ] ,
+		( "1" ) [ ^number ]
+	}
+	parameters :
+		^number : entity number ;
+
+type_rooms :
+	inputs in en {
+		( ^Simple ) [ room_type ] ,
+		( Deluxe ) [ room_type ]
+	}
+	parameters :
+		room_type : entity text ;
+
+clean_room :
+	inputs in en {
+		"can you ask for someone to clean the clean the " ( room ) [ location ] "?" ,
+		"request for " ( room ) [ location ] " clean" ,
+		( room ) [ location ] " cleaning" ,
+		"i want to have my " ( room ) [ location ] " cleaned" ,
+		"could you send someone to clean the " ( room ) [ location ] ,
+		"send someone to clean the " ( room ) [ location ] ,
+		"need someone to clean the " ( room ) [ location ] ,
+		"i would like to request for " ( room ) [ location ] " cleaning" ,
+		"request " ( room ) [ location ] " cleaning service" ,
+		"can you send someone to clean the " ( room ) [ location ] "?" ,
+		"my " ( room ) [ location ] " needs to be cleaned" ,
+		"please send someone to clean my " ( room ) [ location ] ,
+		"i would like to have my " ( room ) [ location ] " cleaned"
+	}
+	parameters :
+		location : entity text ;
+
+clean_room_now :
+	inputs in en {
+		urgently ,
+		now ,
+		"could you send someone right now?" ,
+		"send someone right now" ,
+		"required now" ,
+		"needed now" ,
+		"send him now" ,
+		"it is urgent" ,
+		"please send someone right now" ,
+		"the requirement is urgent" ,
+		"can you send someone as soon as possible" ,
+		"as soon as possible"
+}
+
+clean_room_relative :
+	inputs in en {
+		"could you send someone after " ( "2" ) [ ^number ] " hours?" ,
+		"send someone after " ( "3" ) [ ^number ] " hours" ,
+		"schedule it after " ( "5" ) [ ^number ] " hours" ,
+		"send him around " ( "2" ) [ ^number ] " hours later" ,
+		"please send in " ( "2" ) [ ^number ] " hours"
+	}
+	parameters :
+		^number : entity number ;
+
+faq_check_in_time :
+	inputs in en {
+		"what are your check-in timings?" ,
+		"check in timings?" ,
+		"check in time" ,
+		"what is the check-in time?" ,
+		"what is the check in time?" ,
+		"can you tell me your check-in timings?" ,
+		"can you tell me your check in timings?" ,
+		"i would like to know your check-in timings" ,
+		"tell your check-in timings" ,
+		"when can I check in?" ,
+		"check-in?" ,
+		"could you tell me when to check-in?" ,
+		"when check in?" ,
+		"i want to check in. can you tell me check in timing?"
+}
+
+faq_check_out_time :
+	inputs in en {
+		"what are your check-out timings?" ,
+		"check out timings?" ,
+		"check out time" ,
+		"what is the check-in time?" ,
+		"what is the check in time?" ,
+		"can you tell me your check-out timings?" ,
+		"can you tell me your check out timings?" ,
+		"i would like to know your check-out timings" ,
+		"tell your check-out timings" ,
+		"when can I check out?" ,
+		"check-out?" ,
+		"could you tell me when to check-out?" ,
+		"when check in?" ,
+		"i want to check out. can you tell me check out timings?"
+}
+
+faq_cancel_reservation :
+	inputs in en {
+		"i want to cancel the reservation that i made" ,
+		"cancel my reservation that i made earlier" ,
+		"i would like to cancel my reservation" ,
+		"cancel my reservation" ,
+		"can you cancel my reservation?" ,
+		"how do i cancel my reservation?" ,
+		"can i cancel my reservation?" ,
+		"please cancel my reservation" ,
+		"i request you to cancel the reservation that i made" ,
+		"it would be great if you could cancel my reservation"
+}
+
+faq_cancellation_policy :
+	inputs in en {
+		"what is your cancellation policy?" ,
+		"can you state your cancellation policy" ,
+		"i would like to know your cancellation policy" ,
+		"show me your cancellation policy" ,
+		"do you have any cancellation policy?" ,
+		"i want to see your cancellation policy" ,
+		"where is your cancellation policy?"
+}
+
+faq_have_restaurant :
+	inputs in en {
+		"does the hotel have a " ( restaurant ) [ location ] "?" ,
+		"do you have a " ( restaurant ) [ location ] "?" ,
+		"is there a " ( restaurant ) [ location ] "?" ,
+		"is there a " ( restaurant ) [ location ] " in the hotel?" ,
+		"tell me about the " ( restaurant ) [ location ] ,
+		"can you tell me about any " ( restaurant ) [ location ] " in the hotel?" ,
+		"are there " ( restaurants ) [ location ] " in the hotel?" ,
+		"number of " ( restaurants ) [ location ] "?" ,
+		"can i find " ( restaurants ) [ location ] " here?" ,
+		"i heard there is a " ( restaurant ) [ location ] " also" ,
+		"inform me about the " ( restaurant ) [ location ] ,
+		"where is " ( restaurant ) [ location ] "?"
+	}
+	parameters :
+		location : entity text ;
+
+faq_breakfast_avail :
+	inputs in en {
+		"does the hotel offer breakfast?" ,
+		"is there breakfast offered by the hotel?" ,
+		"is breakfast facility available?" ,
+		"is breakfast there?" ,
+		"can i get breakfast here?" ,
+		"do you provide breakfast?" ,
+		"breakfast?" ,
+		"do you serve breakfast?" ,
+		"is breakfast available?"
+}
+
+faq_breakfast_time :
+	inputs in en {
+		"what is the time for breakfast?" ,
+		"time for doing breakfast?" ,
+		"what are the breakfast timings?" ,
+		"can you tell me about timings of breakfast?" ,
+		"tell me about breakfast timings" ,
+		"want to know about breakfast timings" ,
+		"breakfast timings what are they?" ,
+		"what is the time for breakfast?" ,
+		"when is breakfast served?" ,
+		"which time is the breakfast served?" ,
+		"you serve breakfast at what time?" ,
+		"what is the timing for breakfast?"
+}
+
+faq_restaurant_time :
+	inputs in en {
+		"what are timings of your " ( restaurant ) [ location ] "?" ,
+		"what is the time of the " ( restaurant ) [ location ] "?" ,
+		"timings of " ( restaurant ) [ location ] ,
+		( restaurant ) [ location ] " open time" ,
+		( restaurant ) [ location ] " open timings" ,
+		( restaurant ) [ location ] " timings" ,
+		"till when " ( restaurant ) [ location ] " remain open?" ,
+		"till what time will the " ( restaurant ) [ location ] " remain open?" ,
+		"can you share the timings of " ( restaurant ) [ location ] "?"
+	}
+	parameters :
+		location : entity text ;
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		"hello there"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		affirmative ,
+		ok ,
+		okay
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really" ,
+		"one more thing"
+}
+
+goodbye :
+	inputs in en {
+		"have a nice day!" ,
+		"take care!" ,
+		"have fun!" ,
+		"adios!"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Text response utter_cancel_reservation_text :
+		inputs in en {
+			"To cancel a reservation, select the “Reservations” link from the homepage." ,
+			"On the Reservations page, under the heading ‘View, Change or Cancel a Reservation,’enter your confirmation number, and either the last name on the reservation or the last four digits of the credit card used to make the reservation."
+	}
+	Empty response action_my_fallback_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How can I help you?" ,
+			"Hey there! How can I help you, today?"
+	}
+	Empty response action_restaurant_time_empty
+	Empty response action_cancellation_policy_empty
+	Text response utter_cancellation_policy_text :
+		inputs in en {
+			"The booking deposit is refundable if the cancellation occurs at least 15 days before arrival. For cancellations made after this limit, a penalty will be imposed based on the cancellation policy."
+	}
+	Text response utter_ask_room_type_text :
+		inputs in en {
+			"Select from one of the room types"
+	}
+	Empty response action_cancel_reservation_empty
+	Text response utter_restaurant_time_text :
+		inputs in en {
+			"Our restaurant serves a dazzling 24-hour menu."
+	}
+	Empty response action_breakfast_avail_empty
+	Text response utter_breakfast_avail_text :
+		inputs in en {
+			"The hotel provides its guests with a free made-to-order breakfast each morning."
+	}
+	Text response utter_fallback_message_text :
+		inputs in en {
+			"Sorry, I did not understand. Can you rephrase?"
+	}
+	Empty response action_check_in_time_empty
+	Empty response action_have_restaurant_empty
+	Text response utter_is_that_all_text :
+		inputs in en {
+			"Would that be all?"
+	}
+	Text response utter_deny_message_text :
+		inputs in en {
+			"How can I help you?"
+	}
+	Text response utter_check_in_time_text :
+		inputs in en {
+			"Check-in time starts at 4 PM. Minimum check-in age is 21. Please contact the reception for early check-in requests."
+	}
+	mage response utter_simple_room_image_img :
+		URL : "https://media-cdn.tripadvisor.com/media/photo-s/01/59/93/8d/simple-room.jpg"
+		caption : "Simple room: "
+	mage response utter_deluxe_room_image_img :
+		URL : "https://www.mhotel.in/img/super/01.jpg"
+		caption : "Deluxe room: "
+	Empty response action_check_out_time_empty
+	Text response utter_breakfast_time_text :
+		inputs in en {
+			"Monday through Friday breakfast is 6 am to 9 am. On Saturday and Sunday, we are open from 7 am to 10:30 am."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Ok then! Have a nice day!"
+	}
+	Text response utter_clean_room_text :
+		inputs in en {
+			"When do you want to clean your room?"
+	}
+	Text response utter_have_restaurant_text :
+		inputs in en {
+			"Yes, the hotel has a restaurant called the Zephyr Bar. With our menu we strive to reflect the historic art and the spirit of our neighborhood by offering a glimpse into what makes our area unique."
+	}
+	Empty response action_reset_slots_empty
+	Text response utter_ask_number_text :
+		inputs in en {
+			"Select the number of rooms you want to book"
+	}
+	Empty response action_breakfast_time_empty
+	Text response utter_clean_room_relative_text :
+		inputs in en {
+			"Someone will be sent at your required time!"
+	}
+	Text response utter_check_out_time_text :
+		inputs in en {
+			"Check-out time is 11 AM. Please contact the reception for late checkout requests."
+	}
+	Text response utter_clean_room_now_text :
+		inputs in en {
+			"Someone is being sent to your room ASAP!"
+	}
+	Text response utter_submit_text :
+		inputs in en {
+			"Your room(s) have been booked. Number of {room_type} rooms booked : {number}"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user book_room => chatbot action_reset_slots_empty , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user book_number_room => chatbot action_reset_slots_empty , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user clean_room => chatbot utter_clean_room_text , utter_clean_room_relative_text , utter_clean_room_now_text {
+			=> user clean_room_now => chatbot utter_clean_room_now_text , utter_is_that_all_text {
+				=> user affirm => chatbot utter_goodbye_text ;
+				=> user deny => chatbot utter_deny_message_text ;
+			} ;
+			=> user clean_room_relative => chatbot utter_clean_room_relative_text , utter_is_that_all_text {
+				=> user affirm => chatbot utter_goodbye_text ;
+				=> user deny => chatbot utter_deny_message_text ;
+			} ;
+		} ;
+		=> user faq_check_in_time => chatbot utter_check_in_time_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_check_out_time => chatbot utter_check_out_time_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_cancel_reservation => chatbot utter_cancel_reservation_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_cancellation_policy => chatbot utter_cancellation_policy_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_have_restaurant => chatbot utter_have_restaurant_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_breakfast_avail => chatbot utter_breakfast_avail_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_breakfast_time => chatbot utter_breakfast_time_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+		=> user faq_restaurant_time => chatbot utter_restaurant_time_text , utter_is_that_all_text {
+			=> user affirm => chatbot utter_goodbye_text ;
+			=> user deny => chatbot utter_deny_message_text ;
+		} ;
+	} ;
+	- user FallbackIntent => chatbot action_my_fallback_empty ;
+

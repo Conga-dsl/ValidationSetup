@@ -1,0 +1,144 @@
+Chatbot Chatbot_Cab language : en
+
+intents :
+
+greet :
+	inputs in en {
+		^hi ,
+		hello ,
+		"hi there" ,
+		hey
+}
+
+cab_book :
+	inputs in en {
+		"i like to book a cab" ,
+		"i would like to book a cab" ,
+		"i want to book a cab" ,
+		"i want to book a taxi" ,
+		"can you book a cab from me"
+}
+
+cancel :
+	inputs in en {
+		"i like to cancel my booking" ,
+		"i like to cancel my cab" ,
+		"i am willing to cancel my cab" ,
+		"please cancel my cab" ,
+		"i want to cancel my booking" ,
+		"cancel my cab" ,
+		"cancel my booking"
+}
+
+details :
+	inputs in en {
+		"can i know my booking details" ,
+		"i would like to know my cab details" ,
+		"i would like to know my booking details" ,
+		"can i see my booking details" ,
+		"can i know my cab details"
+}
+
+bye :
+	inputs in en {
+		"bye bye" ,
+		bye ,
+		goodbye ,
+		"good bye"
+}
+
+from :
+	inputs in en {
+		Warangal ,
+		Hyderabad ,
+		Mumbai ,
+		Delhi
+}
+
+^to :
+	inputs in en {
+		Guwahati ,
+		Pune ,
+		America ,
+		Canada
+}
+
+nano :
+	inputs in en {
+		one ,
+		two ,
+		nano
+}
+
+micro :
+	inputs in en {
+		three ,
+		four ,
+		micro
+}
+
+macro :
+	inputs in en {
+		five ,
+		six ,
+		seven ,
+		eight ,
+		macro
+}
+
+actions :
+	Text response utter_from_text :
+		inputs in en {
+			"Please mention the pick-up point"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hello, How may I help you"
+	}
+	Text response utter_ask_bookingid_text :
+		inputs in en {
+			"Can you mention your booking ID"
+	}
+	Text response utter_details_text :
+		inputs in en {
+			"Can I know your booking ID"
+	}
+	Text response utter_passengers_text :
+		inputs in en {
+			"Sure, Please select the number of passengers"
+	}
+	Text response utter_to_text :
+		inputs in en {
+			"Please mention the destination point"
+	}
+	Text response utter_booked_text :
+		inputs in en {
+			"Your cab has been booked. Here are the details Booking ID={id} Mobile={number} From {pick_up} To {destination}. Happy Journey"
+	}
+	Text response utter_ask_mobile_text :
+		inputs in en {
+			"Please provide your mobile number"
+	}
+	Text response utter_bye_text :
+		inputs in en {
+			"Have a good day, Bye"
+	}
+	Text response utter_ask_source_text :
+		inputs in en {
+			"Please mention the pick-up address"
+	}
+	Text response utter_ask_arrival_text :
+		inputs in en {
+			"Now please mention the destination address"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot DefaultEmptyAction ;
+	- user cab_book => chatbot DefaultEmptyAction ;
+	- user nano => chatbot DefaultEmptyAction ;
+	- user micro => chatbot DefaultEmptyAction ;
+	- user macro => chatbot DefaultEmptyAction ;
+	- user cancel => chatbot DefaultEmptyAction ;
+	- user details => chatbot DefaultEmptyAction ;
+

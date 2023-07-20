@@ -1,0 +1,176 @@
+Chatbot "256644" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"thank you" ,
+		"nice to see you"
+}
+
+name_entry :
+	inputs in en {
+		( Ramya ) [ name ] ,
+		( Raksha ) [ name ] ,
+		( Deepthi ) [ name ] ,
+		( Teju ) [ name ] ,
+		( Shradha ) [ name ] ,
+		( Karthik ) [ name ] ,
+		( Shreya ) [ name ] ,
+		( Tulasidas ) [ name ] ,
+		( John ) [ name ] ,
+		( Savitri ) [ name ]
+	}
+	parameters :
+		name : entity text ;
+
+info :
+	inputs in en {
+		"insights of the EC department" ,
+		"Vision of the department" ,
+		Vision ,
+		insights
+}
+
+mission :
+	inputs in en {
+		"Mission of EC department" ,
+		mission ,
+		Objectives ,
+		objectives
+}
+
+faculty :
+	inputs in en {
+		"Faculty and qualifications" ,
+		"Strength of faculty" ,
+		"Give me an overview of EC department faculties" ,
+		"How qualified are EC department faculties" ,
+		"Tell me about EC department faculties" ,
+		"About faculty" ,
+		"Faculty info"
+}
+
+student :
+	inputs in en {
+		"Placements and Alumni" ,
+		"about pass out students" ,
+		"Where are the graduates of EC department?" ,
+		"What are the heights of EC department graduates?" ,
+		"Describe about the graduates of EC department" ,
+		"graduates of EC department"
+}
+
+placement :
+	inputs in en {
+		"Placement of the previous year" ,
+		"How is the placement in EC department?" ,
+		"How has been the placement in EC department?" ,
+		"Give a record of the placements in EC department in the past few years" ,
+		"What is the rate of placements in EC department?" ,
+		"About placements in ECE" ,
+		"How good is placement in ECE"
+}
+
+results :
+	inputs in en {
+		"Department toppers" ,
+		results ,
+		"Toppers of ECE" ,
+		Result
+}
+
+facility :
+	inputs in en {
+		Facilities ,
+		"What are the facilities provided by the EC department" ,
+		"How equipped is EC department" ,
+		"How is EC department technically assisting the students?" ,
+		"Technical assistance to students by department" ,
+		infrastructre
+}
+
+hod :
+	inputs in en {
+		HoD ,
+		"What are the qualifications of EC department HoD" ,
+		"What is the background of EC department HoD" ,
+		"Who is the present HoD" ,
+		"About HoD"
+}
+
+actions :
+	Text response utter_show_name_country_text :
+		inputs in en {
+			"Hello " [ "name_entry.name" ] " ,How may i Help you"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Welcome to Electronics and Communication department\n-----please enter your name-----"
+	}
+	Text response utter_nyc_text :
+		inputs in en {
+			"For more information:http://www.sit.ac.in/html/department.php?deptid=7 "
+	}
+	mage response utter_results_img :
+		URL : "http://www.sit.ac.in/html/component/ecedept/eceimg/topper.jpg"
+		caption : "Toppers of Department"
+	Text response utter_faculty_text :
+		inputs in en {
+			"The faculty strength of the department is 31,\n which includes\n3 Professors\n7 Associate Professors\n21 Assistant Professors. \nNine of the faculty have completed their PhDs in IITs and reputed universities in the area of Speech Processing, Image processing, Networking, Communication & Microelectronics.\n Seven faculty members are pursuing their PhDs at IISc, IITs and other reputed institutions.\n For more Information:https://sit.irins.org/faculty/index/Electronics+and+Communication+Engineering"
+	}
+	Text response utter_placement_text :
+		inputs in en {
+			"The students of E & C Department have good track records of being placed in reputed companies. In the latest academic year 2018-19, 105 students are placed on campus with the highest salary of 11.50 Lakh/Annum. Placement process for the year 2019-20 already started, 68 students have been placed in different companies. One student is offered a placement in CISCO with the package of 29 Lakh/Annum."
+	}
+	Text response utter_mission_text :
+		inputs in en {
+			"To provide a congenial environment for superior learning experience and offer high quality education relevant to the current and future needs of the society and careers of students in the field of Electronics and Communication Engineering."
+	}
+	Text response utter_student_text :
+		inputs in en {
+			"Students graduated from the department are well placed in India and abroad. Quite a few of them have pursued higher studies both in India and abroad. Some of them have qualified for Indian Engineering and Defense Services. Students of the department have bagged university ranks including the First rank on several occasions.\nStudents of the department have bagged gold medal for securing highest CGPA among all the students of SIT. The department has state-of-the-art laboratories in the areas of Communication, DSP, Embedded systems, and Microelectronics."
+	}
+	Text response utter_facility_text :
+		inputs in en {
+			"Electronics Devices and Circuit Laboratory,\nDigital Electronics and Circuit Laboratory,\nCommunication Laboratory,\nAdvanced Communication Laboratory,\nLinear Integrated Circuits Laboratory,\nMicrocontroller Laboratory,\nDigitial Signal Processing Laboratory,\nVHDL Laboratory,\nVLSI Laboratory,\nPG Computer Centre,\nWireless Communication Lab,\nM10x Center / Project Laboratory,\n E - Class Room"
+	}
+	Text response utter_info_text :
+		inputs in en {
+			"To create professionally competent and socially sensitive Electronics and Communication engineers capable of working in multicultural global environment."
+	}
+	Text response utter_hod_text :
+		inputs in en {
+			"Dr Kumaraswamy R\n•Ph.D - Indian Institute of Technology, Madras \n•M.E-BMS College of Engineering, Bangalore \n•B.E-Siddaganga Institute of Technology \nMore info: https://sit.irins.org/profile/90923#expertise_information_panel"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Thank you"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user name_entry => chatbot utter_show_name_country_text ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text , utter_nyc_text ;
+	- user mission => chatbot utter_mission_text , utter_goodbye_text ;
+	- user info => chatbot utter_info_text , utter_goodbye_text ;
+	- user faculty => chatbot utter_faculty_text , utter_goodbye_text ;
+	- user student => chatbot utter_student_text , utter_goodbye_text ;
+	- user placement => chatbot utter_placement_text , utter_goodbye_text ;
+	- user results => chatbot utter_results_img , utter_goodbye_text ;
+	- user facility => chatbot utter_facility_text , utter_goodbye_text ;
+	- user hod => chatbot utter_hod_text , utter_goodbye_text ;
+

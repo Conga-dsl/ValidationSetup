@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Chatbot_Cab">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cab_book">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like to book a cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to book a cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to book a cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to book a taxi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you book a cab from me"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cancel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like to cancel my booking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like to cancel my cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am willing to cancel my cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please cancel my cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to cancel my booking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel my cab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel my booking"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="details">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i know my booking details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to know my cab details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to know my booking details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i see my booking details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i know my cab details"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="from">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Warangal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hyderabad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Delhi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="to">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Guwahati"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Pune"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="America"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Canada"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nano">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="two"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nano"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="micro">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="three"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="four"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="micro"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="macro">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="five"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="six"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="seven"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="eight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="macro"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_from_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please mention the pick-up point"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, How may I help you"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_bookingid_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you mention your booking ID"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_details_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I know your booking ID"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_passengers_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure, Please select the number of passengers"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_to_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please mention the destination point"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_booked_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your cab has been booked. Here are the details Booking ID={id} Mobile={number} From {pick_up} To {destination}. Happy Journey"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_mobile_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please provide your mobile number"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_bye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Have a good day, Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_source_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please mention the pick-up address"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_arrival_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Now please mention the destination address"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.11"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,112 @@
+Chatbot Ali language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+inform_person :
+	inputs in en {
+		( "Vlad Maraev" ) [ person ] ,
+		( "Staffan Larsson" ) [ person ] ,
+		( "Alex Berman" ) [ person ]
+	}
+	parameters :
+		person : entity text ;
+
+inform_date :
+	inputs in en {
+		( Tuesday ) [ ^date ] ,
+		( Monday ) [ ^date ] ,
+		( Thuresday ) [ ^date ] ,
+		( friday ) [ ^date ] ,
+		"[wednesday]" ,
+		( monday ) [ ^date ] ,
+		( tuesday ) [ ^date ] ,
+		( thuresday ) [ ^date ] ,
+		( Wednesday ) [ ^date ]
+	}
+	parameters :
+		^date : entity date ;
+
+inform_time :
+	inputs in en {
+		( four ) [ ^time ] ,
+		( five ) [ ^time ] ,
+		( two ) [ ^time ] ,
+		( one ) [ ^time ] ,
+		( three ) [ ^time ] ,
+		( "1" ) [ ^time ] ,
+		( "1:15" ) [ ^time ] ,
+		( "4:30" ) [ ^time ] ,
+		( "5:35" ) [ ^time ] ,
+		( "4:20" ) [ ^time ] ,
+		( "6:30 pm" ) [ ^time ] ,
+		( "11 am" ) [ ^time ] ,
+		( "10 am" ) [ ^time ] ,
+		( "3 pm" ) [ ^time ]
+	}
+	parameters :
+		^time : entity time ;
+
+actions :
+	Text response utter_yn_correct_text :
+		inputs in en {
+			"Is this correct?"
+	}
+	Text response utter_wh_person_text :
+		inputs in en {
+			"Who are you meeting with?"
+	}
+	Text response utter_wa_time_text :
+		inputs in en {
+			"what time would you like to meet?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hello there, would you like to set a meeting?"
+	}
+	Text response utter_wi_date_text :
+		inputs in en {
+			"which day would you like the meeting to be?"
+	}
+	Text response utter_inform_text :
+		inputs in en {
+			"Here is your appointment.\nYou are meeting " [ "inform_person.person" ] " on " [ "inform_date.date" ] " at " [ "inform_time.time" ] ".\n"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user affirm => chatbot utter_wh_person_text ;
+	} ;
+	- user inform_person => chatbot utter_wi_date_text {
+		=> user inform_date => chatbot utter_wa_time_text { => user inform_time => chatbot utter_inform_text ; } ;
+	} ;
+	- user deny => chatbot utter_wh_person_text ;
+
