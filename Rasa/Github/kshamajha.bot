@@ -1,0 +1,785 @@
+Chatbot kshamajha language : en
+
+intents :
+
+	affirm :
+		inputs in en {
+			yes ,
+			yep ,
+			yeah ,
+			ya ,
+			yup ,
+			yap ,
+			indeed ,
+			"that\'s right" ,
+			ok ,
+			great ,
+			"right, thank you" ,
+			correct ,
+			"great choice" ,
+			"sounds really good" ,
+			thanks ,
+			"Thank you" ,
+			"yes. Please" ,
+			Thanks ,
+			"thank you"
+	}
+
+	negative :
+		inputs in en {
+			^no ,
+			not ,
+			n ,
+			nope ,
+			nop ,
+			nothing ,
+			"no need" ,
+			"no, thank you" ,
+			wrong ,
+			^false ,
+			dont ,
+			"not at all" ,
+			"sounds bad"
+	}
+
+	goodbye :
+		inputs in en {
+			bye ,
+			goodbye ,
+			"good bye" ,
+			stop ,
+			end ,
+			farewell ,
+			"Bye bye" ,
+			"have a good one" ,
+			"Good day" ,
+			"have a great day" ,
+			"Good bye" ,
+			bbye ,
+			goodday ,
+			"Thank you. bye" ,
+			"Thank you."
+	}
+
+	greetIntent :
+		inputs in en {
+			hey ,
+			howdy ,
+			"hey there" ,
+			hello ,
+			"Hello!" ,
+			^hi ,
+			"good morning" ,
+			"good evening" ,
+			"good afternoon" ,
+			"dear sir" ,
+			"hello there" ,
+			"hi dude" ,
+			"hi sir" ,
+			"hello sir" ,
+			Hi ,
+			Hola ,
+			hola ,
+			Hey
+	}
+
+	restaurant_search :
+		inputs in en {
+			"i\'m looking for a place to eat" ,
+			"I want to grab lunch" ,
+			"I want to grab dinner" ,
+			"want to eat" ,
+			"find food" ,
+			"find restaurant" ,
+			"place to eat" ,
+			"looking for food" ,
+			"I am searching for a dinner spot" ,
+			"I am looking for some restaurants in " ( Delhi ) [ location ] "." ,
+			"I am looking for some restaurants in " ( Bangalore ) [ location ] ,
+			"show me " ( chinese ) [ cuisine ] " restaurants" ,
+			"show me " ( chines ) [ cuisine ] " restaurants in the " ( Delhi ) [ location ] ,
+			"show me " ( chines ) [ cuisine ] " restaurants in the " ( Bombay ) [ location ] ,
+			"show me a " ( mexican ) [ cuisine ] " place in the " ( centre ) [ location ] ,
+			"i am looking for an " ( indian ) [ cuisine ] " spot called olaolaolaolaolaola" ,
+			"search for restaurants" ,
+			"anywhere in the " ( west ) [ location ] ,
+			"I am looking for " ( "asian fusion" ) [ cuisine ] " food" ,
+			"I am looking a restaurant in " ( "294328" ) [ location ] ,
+			"in " ( Gurgaon ) [ location ] ,
+			( "South Indian" ) [ cuisine ] ,
+			( "North Indian" ) [ cuisine ] ,
+			( Italian ) [ cuisine ] ,
+			( American ) [ cuisine ] ,
+			( low ) [ price ] ,
+			( medium ) [ price ] ,
+			( high ) [ price ] ,
+			( Chinese ) [ cuisine ] ,
+			( chinese ) [ cuisine ] ,
+			( Lithuania ) [ location ] ,
+			"Oh, sorry, in " ( Italy ) [ location ] ,
+			"in " ( delhi ) [ location ] ,
+			"I am looking for some restaurants in " ( Mumbai ) [ location ] ,
+			"I am looking for " ( "mexican indian fusion" ) [ cuisine ] ,
+			"can you book a table in " ( rome ) [ location ] " in a " ( moderate ) [ price ] " price range with " ( british ) [ cuisine ] " food for " ( four ) [ people ] " people" ,
+			( central ) [ location ] ( indian ) [ cuisine ] " restaurant" ,
+			"please help me to find restaurants in " ( pune ) [ location ] ,
+			"Please find me a restaurantin " ( bangalore ) [ location ] ,
+			( mumbai ) [ location ] ,
+			"show me restaurants" ,
+			"please find me " ( chinese ) [ cuisine ] " restaurant in " ( delhi ) [ location ] ,
+			"can you find me a " ( chinese ) [ cuisine ] " restaurant" ,
+			( delhi ) [ location ] ,
+			"please find me a restaurant in " ( ahmedabad ) [ location ] ,
+			"please show me a few " ( italian ) [ cuisine ] " restaurants in " ( bangalore ) [ location ] ,
+			( Lucknow ) [ location ] ,
+			( Mexican ) [ cuisine ] ,
+			( Prayagraj ) [ location ] ,
+			"find restaurant in " ( delhi ) [ location ] ,
+			( dilli ) [ location ] ,
+			food ,
+			( Delhi ) [ location ] ,
+			( chines ) [ cuisine ] ,
+			( moderate ) [ price ] ,
+			"search " ( mexican ) [ cuisine ] " restaurant in " ( bengalur ) [ location ] ,
+			( Bengaluru ) [ location ] ,
+			( "300-700" ) [ price ] " range" ,
+			( Bombay ) [ location ] ,
+			"i will prefer " ( american ) [ cuisine ] ,
+			( ">700" ) [ price ] ,
+			"Can you suggest some good restaurants in " ( Rishikesh ) [ location ] ,
+			"Okay. Show me some in " ( Allahabad ) [ location ] ,
+			"Iâ€™ll prefer " ( chines ) [ cuisine ] ,
+			( "<300" ) [ price ] ,
+			"Iâ€™m hungry. Looking out for some good restaurants" ,
+			( bengaluru ) [ location ] ,
+			"I will prefer " ( "north indian" ) [ cuisine ] ,
+			"Can you suggest some good restaurants in " ( kolkata ) [ location ] ,
+			( american ) [ cuisine ] ,
+			"Can you suggest some good restaurants in " ( Kashi ) [ location ] ,
+			( "south indian" ) [ cuisine ] ,
+			( Tiruchirappalli ) [ location ] ,
+			( Bareilly ) [ location ] ,
+			( Aligarh ) [ location ] ,
+			( Tiruppur ) [ location ] ,
+			( Gurgaon ) [ location ] ,
+			( Moradabad ) [ location ] ,
+			( Jalandhar ) [ location ] ,
+			( Bhubaneswar ) [ location ] ,
+			( Warangal ) [ location ] ,
+			( "Mira-Bhayandar" ) [ location ] ,
+			( Jalgaon ) [ location ] ,
+			( Guntur ) [ location ] ,
+			( Thiruvananthapuram ) [ location ] ,
+			( Bhiwandi ) [ location ] ,
+			( Saharanpur ) [ location ] ,
+			( Gorakhpur ) [ location ] ,
+			( Bikaner ) [ location ] ,
+			( Amravati ) [ location ] ,
+			"yes, check for " ( medium ) [ price ] " price" ,
+			"in " ( mubaim ) [ location ] ,
+			"in " ( Mumbai ) [ location ] ,
+			( high ) [ price ] " price" ,
+			"Iâ€™m hungry. Looking out for some good " ( chinese ) [ cuisine ] " restaurants in " ( chandigarh ) [ location ] ,
+			"find " ( cheap ) [ price ] ( chinese ) [ cuisine ] " restaurant in " ( nasik ) [ location ] ,
+			"find " ( low ) [ price ] " budget restaurant" ,
+			( kolkata ) [ location ] ,
+			"find " ( Mexican ) [ cuisine ] " places" ,
+			( Gurugram ) [ location ] ,
+			"find " ( mid ) [ price ] " budget restaurant in " ( mangaluru ) [ location ] ,
+			( etawa ) [ location ] ,
+			( Mumbai ) [ location ] ,
+			( Delhi ) [ location ] ,
+			( Bangalore ) [ location ] ,
+			( Hyderabad ) [ location ] ,
+			( Ahmedabad ) [ location ] ,
+			( Chennai ) [ location ] ,
+			( Kolkata ) [ location ] ,
+			( Surat ) [ location ] ,
+			( Pune ) [ location ] ,
+			( Jaipur ) [ location ] ,
+			( Kanpur ) [ location ] ,
+			( Nagpur ) [ location ] ,
+			( Indore ) [ location ] ,
+			( Thane ) [ location ] ,
+			( Bhopal ) [ location ] ,
+			"fetch " ( costly ) [ price ] ( "north indian" ) [ cuisine ] " places" ,
+			( simla ) [ location ] ,
+			"fetch " ( cheap ) [ price ] ( american ) [ cuisine ] " places" ,
+			( cochin ) [ location ] ,
+			"find " ( moderate ) [ price ] " range places in " ( madras ) [ location ] ,
+			"find restaurant in " ( faridabad ) [ location ] " in range " ( "300 and 700" ) [ price ] ,
+			southindian ,
+			( southindian ) [ cuisine ] ,
+			"find more " ( costly ) [ price ] " restaurant in " ( mysore ) [ location ] ,
+			( northindian ) [ cuisine ] ,
+			"find " ( "less costly" ) [ price ] ( "north indian" ) [ cuisine ] " places in " ( chandigarh ) [ location ] ,
+			( "more than 700" ) [ price ] ,
+			"find restaurant in " ( gorakhpur ) [ location ] ,
+			"find food in " ( Jammu ) [ location ] ,
+			"hi, find restaurant in " ( Roorkee ) [ location ] ,
+			( Vadodara ) [ location ] ,
+			( Ghaziabad ) [ location ] ,
+			( Ludhiana ) [ location ] ,
+			( Agra ) [ location ] ,
+			( Nashik ) [ location ] ,
+			( Ranchi ) [ location ] ,
+			( Faridabad ) [ location ] ,
+			"find restaurant in " ( soorat ) [ location ] ,
+			"range " ( "300 to 700" ) [ price ] ,
+			"find restaurant in " ( noida ) [ location ] ,
+			( "lesser than 300" ) [ price ] ,
+			"find " ( low ) [ price ] " range restaurant in " ( puna ) [ location ] ,
+			( italian ) [ cuisine ] ,
+			"find in " ( puna ) [ location ] ,
+			( "greater than 700" ) [ price ] ,
+			"search food" ,
+			( chinese ) [ cuisine ] ,
+			( delhi ) [ location ] ,
+			search ,
+			( benaras ) [ location ] ,
+			( Coimbatore ) [ location ] ,
+			( Visakhapatnam ) [ location ] ,
+			( "Pimpri-Chinchwad" ) [ location ] ,
+			( Patna ) [ location ] ,
+			( Rajasthani ) [ cuisine ] ,
+			"find me best " ( low ) [ price ] " cost " ( mexican ) [ cuisine ] " restaurant in " ( delhi ) [ location ] ,
+			"find me best " ( Low ) [ price ] " budget restaurant in " ( nasik ) [ location ] ,
+			"i am hungry" ,
+			( Puna ) [ location ] ,
+			"find restaurant in " ( Baroda ) [ location ] ,
+			hungry ,
+			( Meerut ) [ location ] ,
+			( Rajkot ) [ location ] ,
+			( "Kalyan-Dombivli" ) [ location ] ,
+			( "Vasai-Virar" ) [ location ] ,
+			( Varanasi ) [ location ] ,
+			( Srinagar ) [ location ] ,
+			( Aurangabad ) [ location ] ,
+			( Dhanbad ) [ location ] ,
+			( Amritsar ) [ location ] ,
+			( "Navi Mumbai" ) [ location ] ,
+			( Allahabad ) [ location ] ,
+			( Howrah ) [ location ] ,
+			( Gwalior ) [ location ] ,
+			( Jabalpur ) [ location ] ,
+			( Madurai ) [ location ] ,
+			( Vijayawada ) [ location ] ,
+			( Jodhpur ) [ location ] ,
+			( Salem ) [ location ] ,
+			( Raipur ) [ location ] ,
+			( Kota ) [ location ] ,
+			( Chandigarh ) [ location ] ,
+			( Guwahati ) [ location ] ,
+			( Solapur ) [ location ] ,
+			( "Hubliâ€“Dharwad" ) [ location ] ,
+			( Mysore ) [ location ] ,
+			( Noida ) [ location ] ,
+			( Jamshedpur ) [ location ] ,
+			( Bhilai ) [ location ] ,
+			( Cuttack ) [ location ] ,
+			( Firozabad ) [ location ] ,
+			( Kochi ) [ location ] ,
+			( Nellore ) [ location ] ,
+			( Bhavnagar ) [ location ] ,
+			( Dehradun ) [ location ] ,
+			( Durgapur ) [ location ] ,
+			( Asansol ) [ location ] ,
+			( Rourkela ) [ location ] ,
+			( Nanded ) [ location ] ,
+			( Kolhapur ) [ location ] ,
+			( Ajmer ) [ location ] ,
+			( Akola ) [ location ] ,
+			( Gulbarga ) [ location ] ,
+			( Jamnagar ) [ location ] ,
+			( Ujjain ) [ location ] ,
+			( Loni ) [ location ] ,
+			( Siliguri ) [ location ] ,
+			( Jhansi ) [ location ] ,
+			( Ulhasnagar ) [ location ] ,
+			( Jammu ) [ location ] ,
+			( "Sangli-Miraj & Kupwad" ) [ location ] ,
+			( Mangalore ) [ location ] ,
+			( Erode ) [ location ] ,
+			( Belgaum ) [ location ] ,
+			( Kurnool ) [ location ] ,
+			( Ambattur ) [ location ] ,
+			( Rajahmundry ) [ location ] ,
+			( Tirunelveli ) [ location ] ,
+			( Malegaon ) [ location ] ,
+			( Gaya ) [ location ] ,
+			( Tirupati ) [ location ] ,
+			( Udaipur ) [ location ] ,
+			( Kakinada ) [ location ] ,
+			( Davanagere ) [ location ] ,
+			( Kozhikode ) [ location ] ,
+			( Maheshtala ) [ location ] ,
+			( "Rajpur Sonarpur" ) [ location ] ,
+			( Bokaro ) [ location ] ,
+			( "South Dumdum" ) [ location ] ,
+			( Bellary ) [ location ] ,
+			( Patiala ) [ location ] ,
+			( Gopalpur ) [ location ] ,
+			( Agartala ) [ location ] ,
+			( Bhagalpur ) [ location ] ,
+			( Muzaffarnagar ) [ location ] ,
+			( Bhatpara ) [ location ] ,
+			( Panihati ) [ location ] ,
+			( Latur ) [ location ] ,
+			( Dhule ) [ location ] ,
+			( Rohtak ) [ location ] ,
+			( Sagar ) [ location ] ,
+			( Korba ) [ location ] ,
+			( Bhilwara ) [ location ] ,
+			( Berhampur ) [ location ] ,
+			( Muzaffarpur ) [ location ] ,
+			( Ahmednagar ) [ location ] ,
+			( Mathura ) [ location ] ,
+			( Kollam ) [ location ] ,
+			( Avadi ) [ location ] ,
+			( Kadapa ) [ location ] ,
+			( Anantapuram ) [ location ] ,
+			( Kamarhati ) [ location ] ,
+			( Bilaspur ) [ location ] ,
+			( Sambalpur ) [ location ] ,
+			( Shahjahanpur ) [ location ] ,
+			( Satara ) [ location ] ,
+			( Bijapur ) [ location ] ,
+			( Rampur ) [ location ] ,
+			( Shimoga ) [ location ] ,
+			( Chandrapur ) [ location ] ,
+			( Junagadh ) [ location ] ,
+			( Thrissur ) [ location ] ,
+			( Alwar ) [ location ] ,
+			( Bardhaman ) [ location ] ,
+			( Kulti ) [ location ] ,
+			( Nizamabad ) [ location ] ,
+			( Parbhani ) [ location ] ,
+			( Tumkur ) [ location ] ,
+			( Khammam ) [ location ] ,
+			( Uzhavarkarai ) [ location ] ,
+			( "Bihar Sharif" ) [ location ] ,
+			( Panipat ) [ location ] ,
+			( Darbhanga ) [ location ] ,
+			( Bally ) [ location ] ,
+			( Aizawl ) [ location ] ,
+			( Dewas ) [ location ] ,
+			( Ichalkaranji ) [ location ] ,
+			( Karnal ) [ location ] ,
+			( Bathinda ) [ location ] ,
+			( Jalna ) [ location ] ,
+			( Eluru ) [ location ] ,
+			( Barasat ) [ location ] ,
+			( "Kirari Suleman Nagar" ) [ location ] ,
+			( Purnia ) [ location ] ,
+			( Satna ) [ location ] ,
+			( Mau ) [ location ] ,
+			( Sonipat ) [ location ] ,
+			( Farrukhabad ) [ location ] ,
+			( Durg ) [ location ] ,
+			( Imphal ) [ location ] ,
+			( Ratlam ) [ location ] ,
+			( Hapur ) [ location ] ,
+			( Arrah ) [ location ] ,
+			( Anantapur ) [ location ] ,
+			( Karimnagar ) [ location ] ,
+			( Etawah ) [ location ] ,
+			( Ambarnath ) [ location ] ,
+			( "North Dumdum" ) [ location ] ,
+			( Bharatpur ) [ location ] ,
+			( Begusarai ) [ location ] ,
+			( "New Delhi" ) [ location ] ,
+			( Gandhidham ) [ location ] ,
+			( Baranagar ) [ location ] ,
+			( Tiruvottiyur ) [ location ] ,
+			( Pondicherry ) [ location ] ,
+			( Sikar ) [ location ] ,
+			( Thoothukudi ) [ location ] ,
+			( Rewa ) [ location ] ,
+			( Mirzapur ) [ location ] ,
+			( Raichur ) [ location ] ,
+			( Pali ) [ location ] ,
+			( Ramagundam ) [ location ] ,
+			( Silchar ) [ location ] ,
+			( Haridwar ) [ location ] ,
+			( Vijayanagaram ) [ location ] ,
+			( Tenali ) [ location ] ,
+			( Nagercoil ) [ location ] ,
+			( "Sri Ganganagar" ) [ location ] ,
+			( "Karawal Nagar" ) [ location ] ,
+			( Mango ) [ location ] ,
+			( Thanjavur ) [ location ] ,
+			( Bulandshahr ) [ location ] ,
+			( Uluberia ) [ location ] ,
+			( Katni ) [ location ] ,
+			( Sambhal ) [ location ] ,
+			( Singrauli ) [ location ] ,
+			( Nadiad ) [ location ] ,
+			( Secunderabad ) [ location ] ,
+			( Naihati ) [ location ] ,
+			( Yamunanagar ) [ location ] ,
+			( Bidhannagar ) [ location ] ,
+			( Pallavaram ) [ location ] ,
+			( Bidar ) [ location ] ,
+			( Munger ) [ location ] ,
+			( Panchkula ) [ location ] ,
+			( Burhanpur ) [ location ] ,
+			( "Raurkela Industrial Township" ) [ location ] ,
+			( Kharagpur ) [ location ] ,
+			( Dindigul ) [ location ] ,
+			( Gandhinagar ) [ location ] ,
+			( Hospet ) [ location ] ,
+			( "Nangloi Jat" ) [ location ] ,
+			( Malda ) [ location ] ,
+			( Ongole ) [ location ] ,
+			( Deoghar ) [ location ] ,
+			( Chapra ) [ location ] ,
+			( Haldia ) [ location ] ,
+			( Khandwa ) [ location ] ,
+			( Nandyal ) [ location ] ,
+			( Morena ) [ location ] ,
+			( Amroha ) [ location ] ,
+			( Anand ) [ location ] ,
+			( Bhind ) [ location ] ,
+			( "Bhalswa Jahangir Pur" ) [ location ] ,
+			( Madhyamgram ) [ location ] ,
+			( Bhiwani ) [ location ] ,
+			( Berhampore ) [ location ] ,
+			( Ambala ) [ location ] ,
+			( Morbi ) [ location ] ,
+			( Fatehpur ) [ location ] ,
+			( Raebareli ) [ location ] ,
+			( "Khora, Ghaziabad" ) [ location ] ,
+			( Chittoor ) [ location ] ,
+			( Bhusawal ) [ location ] ,
+			( Orai ) [ location ] ,
+			( Bahraich ) [ location ] ,
+			( Phusro ) [ location ] ,
+			( Vellore ) [ location ] ,
+			( Mehsana ) [ location ] ,
+			( Raiganj ) [ location ] ,
+			( Sirsa ) [ location ] ,
+			( Danapur ) [ location ] ,
+			( Serampore ) [ location ] ,
+			( "Sultan Pur Majra" ) [ location ] ,
+			( Guna ) [ location ] ,
+			( Jaunpur ) [ location ] ,
+			( Panvel ) [ location ] ,
+			( Shivpuri ) [ location ] ,
+			( "Surendranagar Dudhrej" ) [ location ] ,
+			( Unnao ) [ location ] ,
+			( Chinsurah ) [ location ] ,
+			( Alappuzha ) [ location ] ,
+			( Kottayam ) [ location ] ,
+			( Machilipatnam ) [ location ] ,
+			( Shimla ) [ location ] ,
+			( Adoni ) [ location ] ,
+			( Udupi ) [ location ] ,
+			( Katihar ) [ location ] ,
+			( Proddatur ) [ location ] ,
+			( Mahbubnagar ) [ location ] ,
+			( Saharsa ) [ location ] ,
+			( Dibrugarh ) [ location ] ,
+			( Jorhat ) [ location ] ,
+			( Hazaribagh ) [ location ] ,
+			( Hindupur ) [ location ] ,
+			( Nagaon ) [ location ] ,
+			( Sasaram ) [ location ] ,
+			( Hajipur ) [ location ] ,
+			( "Port Blair" ) [ location ] ,
+			( Giridih ) [ location ] ,
+			( Bhimavaram ) [ location ] ,
+			( Kumbakonam ) [ location ] ,
+			( Bongaigaon ) [ location ] ,
+			( Dehri ) [ location ] ,
+			( Madanapalle ) [ location ] ,
+			( Siwan ) [ location ] ,
+			( Bettiah ) [ location ] ,
+			( Ramgarh ) [ location ] ,
+			( Tinsukia ) [ location ] ,
+			( Guntakal ) [ location ] ,
+			( Srikakulam ) [ location ] ,
+			( Motihari ) [ location ] ,
+			( Dharmavaram ) [ location ] ,
+			( Medininagar ) [ location ] ,
+			( Gudivada ) [ location ] ,
+			( Phagwara ) [ location ] ,
+			( Pudukkottai ) [ location ] ,
+			( Hosur ) [ location ] ,
+			( Narasaraopet ) [ location ] ,
+			( Suryapet ) [ location ] ,
+			( Miryalaguda ) [ location ] ,
+			( Tadipatri ) [ location ] ,
+			( Karaikudi ) [ location ] ,
+			( Kishanganj ) [ location ] ,
+			( Jamalpur ) [ location ] ,
+			( Ballia ) [ location ] ,
+			( Kavali ) [ location ] ,
+			( Tadepalligudem ) [ location ] ,
+			( Amaravati ) [ location ] ,
+			( Buxar ) [ location ] ,
+			( Tezpur ) [ location ] ,
+			( Jehanabad ) [ location ] ,
+			( Gangtok ) [ location ] ,
+			( "Vasco Da Gama" ) [ location ] ,
+			( Bhubaneshwar ) [ location ] ,
+			( Thai ) [ cuisine ] ,
+			( Spanish ) [ cuisine ] ,
+			( Puducherry ) [ location ] ,
+			( Vizag ) [ location ] ,
+			( Goa ) [ location ] ,
+			( Ooty ) [ location ] ,
+			"find restaurant in " ( gwalior ) [ location ] ,
+			"search restaurant in " ( jalandhar ) [ location ] ,
+			( baroda ) [ location ] ,
+			"search in " ( Lucknow ) [ location ] ,
+			"search restaurant in " ( nasik ) [ location ] ,
+			( "South Indian" ) [ cuisine ] ,
+			( Thai ) [ cuisine ] ,
+			( Mughlai ) [ cuisine ] ,
+			( Japanese ) [ cuisine ] ,
+			( Korean ) [ cuisine ] ,
+			( "asian fusion" ) [ cuisine ] ,
+			( Spanish ) [ cuisine ] ,
+			( Malay ) [ cuisine ] ,
+			( Indonesian ) [ cuisine ] ,
+			( Malaysian ) [ cuisine ]
+		}
+		parameters :
+			location ,
+			cuisine ,
+			price ,
+			people : entity number ;
+
+	send_email :
+		inputs in en {
+			"my email id is " ( "Zomato99009@gmail.com" ) [ mail_id ] ,
+			( "Zomato99009@gmail.com" ) [ mail_id ] ,
+			"Please send email to " ( "Zomato99009@gmail.com" ) [ mail_id ] ,
+			"my email id " ( "Ravi123@gmail.com" ) [ mail_id ] ,
+			"can u mail me the information to " ( "abc@abc.com" ) [ mail_id ] "?" ,
+			"can u mail to test@tes.com?" ,
+			"can u mail me at test-123.456@dom.123.co.in?" ,
+			"email address - test.some@gmail.co.in. Mail this list." ,
+			"email me at email-123@domino.com" ,
+			"mail me " ( "email@domain.io" ) [ mail_id ] ,
+			"please send this to " ( "email.123@123.456.com" ) [ mail_id ] ,
+			"send this to " ( "abc-email@abc.com" ) [ mail_id ] ,
+			"send to " ( "bc_123-email@abc123.com" ) [ mail_id ] ,
+			"this is my email address - " ( "email-abc_123@abc.com.edu" ) [ mail_id ] ,
+			"yes please send it on " ( "abcxy@gmail.com" ) [ mail_id ] ,
+			( "kshama0602@gmail.com" ) [ mail_id ] ,
+			( "friendskshama@gmail.com" ) [ mail_id ] ,
+			"yes send it to " ( "kshama0602@gmail.com" ) [ mail_id ] ,
+			"yes. Please send it to " ( "xyz@sth.edu" ) [ mail_id ] ,
+			"yes. Please send it to " ( "ahbcdj@dkj.com" ) [ mail_id ] ,
+			( "jddk.2jmd@kdl.co.in" ) [ mail_id ] ,
+			( "rahuldua.aec@gmail.com" ) [ mail_id ] ,
+			"yes. send to " ( "friendskshama@gmail.com" ) [ mail_id ] ,
+			( "test@test.co.in" ) [ mail_id ] ,
+			"send to " ( "friendskshama@gmail.com" ) [ mail_id ] ,
+			"send to " ( "kshama0602@gmail.com" ) [ mail_id ] ,
+			( "test@email.co.in" ) [ mail_id ] ,
+			"myemail " ( "hello@gmail.com" ) [ email ] ,
+			"to " ( "hi@gmail.com" ) [ email ] ,
+			"forward to " ( "abc_email@abc.com" ) [ mail_id ]
+		}
+		parameters :
+			mail_id : entity mail_id ;
+			email : entity text ;
+
+	donot_send_email :
+		inputs in en {
+			"no, not required" ,
+			"no not required" ,
+			^no ,
+			nope
+	}
+
+	stop :
+		inputs in en {
+			dghfshdfgsdf ,
+			"fuck you" ,
+			"der resg" ,
+			elgld ,
+			egldi ,
+			shfsdfgdsf ,
+			dlehi ,
+			ghhfewf ,
+			dfdsfdsf ,
+			fdsfdsf ,
+			sdfgdsgfsd ,
+			fsdfdsf ,
+			sdsfsdfsf ,
+			dsdsd
+	}
+
+entities :
+	Regex entity mail_id :
+		inputs in en {
+			pattern : "^(\\w|.|_|-)+@+[.]\\w{2,3}$"
+	}
+	Regex entity greet :
+		inputs in en {
+			pattern : "hey[^\\s]*"
+	}
+
+actions :
+	Text response utter_we_dont_operate_text :
+		inputs in en {
+			"Sorry, we don\'t operate in that area yet! :("
+	}
+	Text response utter_email_sent_text :
+		inputs in en {
+			"Email sent. Bon Appetit!" ,
+			"Sent. Bon Appetit!"
+	}
+	Empty response action_check_cuisine_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"hey there! How may i help you" ,
+			"Hi, How can I help you!" ,
+			"Hey, How is it going? How may I help you today?"
+	}
+	Text response utter_ask_price_text :
+		inputs in en {
+			"What price range are you looking at?"
+	}
+	Text response utter_do_not_sent_email_text :
+		inputs in en {
+			"Okay. Bon Appetit!" ,
+			"Sure. Bon Appetit!"
+	}
+	Text response utter_ask_cuisine_text :
+		inputs in en {
+			"What kind of cuisine would you prefer?"
+	}
+	Text response utter_more_help_text :
+		inputs in en {
+			"Do you want to find some more restaurants?"
+	}
+	Empty response action_check_price_empty
+	Text response utter_ask_emailid_text :
+		inputs in en {
+			"Please provide your email id."
+	}
+	Empty response action_check_loc_empty
+	Text response utter_ask_howcanhelp_text :
+		inputs in en {
+			"how can I help you?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Goodbye ,
+			"Bye-bye" ,
+			"See you again soon"
+	}
+	Empty response action_send_mail_empty
+	Text response utter_ask_email_text :
+		inputs in en {
+			"Do you want the details of top restaurants on your email?"
+	}
+	Empty response action_search_restaurants_empty
+	Text response utter_ask_location_text :
+		inputs in en {
+			"In what location?" ,
+			"What location do you prefer?"
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"Sorry, I cannot understand that"
+	}
+	Text response utter_ask_locationagain_text :
+		inputs in en {
+			"Please provide some other preferred location." ,
+			"We are happy to serve you in other location. Please provide other prefered location."
+	}
+
+flows :
+	- user greetIntent => chatbot utter_greet_text {
+		=> user restaurant_search => chatbot utter_ask_location_text , utter_ask_locationagain_text , action_check_loc_empty , utter_ask_cuisine_text , action_check_cuisine_empty , utter_ask_price_text , action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text {
+			=> user restaurant_search => chatbot action_check_loc_empty , utter_ask_cuisine_text , action_check_cuisine_empty , utter_ask_price_text , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text {
+				=> user restaurant_search => chatbot action_check_cuisine_empty , utter_ask_price_text , action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text , action_check_loc_empty , utter_ask_cuisine_text {
+					=> user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text , action_check_cuisine_empty , utter_ask_price_text , action_check_loc_empty , utter_ask_cuisine_text {
+						=> user send_email => chatbot utter_ask_emailid_text , action_send_mail_empty , utter_email_sent_text {
+							=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text { => user goodbye => chatbot utter_goodbye_text ; } ;
+						} ;
+						=> user affirm => chatbot utter_ask_emailid_text {
+							=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text ;
+						} ;
+						=> user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , action_check_cuisine_empty , utter_ask_emailid_text , utter_ask_email_text , utter_ask_price_text {
+							=> user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text , action_check_cuisine_empty , utter_ask_price_text {
+								=> user affirm => chatbot utter_ask_emailid_text {
+									=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text ;
+								} ;
+								=> user restaurant_search => chatbot action_check_price_empty {
+									=> user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text { => user donot_send_email => chatbot utter_do_not_sent_email_text ; } ;
+								} ;
+								=> user donot_send_email => chatbot utter_do_not_sent_email_text {
+									=> user goodbye => chatbot utter_goodbye_text ;
+								} ;
+							} ;
+							=> user send_email => chatbot utter_ask_emailid_text {
+								=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text ;
+							} ;
+						} ;
+						=> user donot_send_email => chatbot utter_do_not_sent_email_text {
+							=> user goodbye => chatbot utter_goodbye_text ;
+						} ;
+					} ;
+					=> user donot_send_email => chatbot utter_do_not_sent_email_text {
+						=> user affirm => chatbot utter_goodbye_text ;
+					} ;
+					=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text , utter_ask_emailid_text {
+						=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text { => user affirm => chatbot utter_goodbye_text ; } ;
+					} ;
+				} ;
+				=> user donot_send_email => chatbot utter_do_not_sent_email_text ;
+				=> user affirm => chatbot utter_ask_price_text {
+					=> user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text { => user send_email => chatbot action_send_mail_empty , utter_email_sent_text ; } ;
+				} ;
+				=> user send_email => chatbot utter_ask_emailid_text {
+					=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text { => user goodbye => chatbot utter_goodbye_text ; } ;
+				} ;
+				=> user goodbye => chatbot utter_goodbye_text ;
+			} ;
+			=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text {
+				=> user affirm => chatbot utter_goodbye_text ;
+			} ;
+			=> user donot_send_email => chatbot utter_do_not_sent_email_text {
+				=> user goodbye => chatbot utter_goodbye_text ;
+			} ;
+			=> user stop => chatbot utter_default_text {
+				=> user stop => chatbot utter_default_text { => user stop => chatbot utter_default_text { => user stop => chatbot utter_default_text { => user stop => chatbot utter_default_text { => user stop => chatbot utter_default_text { => user stop => chatbot utter_default_text { => user stop => chatbot utter_default_text ; } ; } ; } ; } ; } ; } ;
+			} ;
+			=> user goodbye => chatbot utter_goodbye_text ;
+		} ;
+		=> user goodbye => chatbot utter_goodbye_text ;
+		=> user stop => chatbot utter_default_text {
+			=> user stop => chatbot utter_default_text ;
+		} ;
+	} ;
+	- user restaurant_search => chatbot utter_ask_location_text , utter_ask_locationagain_text , action_check_loc_empty , action_check_cuisine_empty , utter_ask_price_text , action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text , utter_ask_cuisine_text {
+		=> user restaurant_search => chatbot action_check_loc_empty , action_search_restaurants_empty , utter_more_help_text , utter_ask_cuisine_text , utter_ask_price_text , action_check_cuisine_empty , utter_ask_emailid_text , utter_ask_email_text {
+			=> user restaurant_search => chatbot action_check_loc_empty , utter_ask_cuisine_text , action_check_cuisine_empty , action_search_restaurants_empty , action_check_price_empty , utter_ask_emailid_text , utter_ask_email_text {
+				=> user restaurant_search => chatbot action_check_cuisine_empty , utter_ask_price_text {
+					=> user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text { => user send_email => chatbot utter_ask_emailid_text { => user send_email => chatbot action_send_mail_empty , utter_email_sent_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ;
+				} ;
+				=> user goodbye => chatbot utter_goodbye_text ;
+				=> user send_email => chatbot utter_ask_emailid_text {
+					=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text ;
+				} ;
+			} ;
+			=> user affirm => chatbot utter_ask_location_text , utter_ask_locationagain_text {
+				=> user restaurant_search => chatbot action_check_loc_empty , utter_ask_cuisine_text { => user restaurant_search => chatbot action_check_cuisine_empty , utter_ask_price_text { => user restaurant_search => chatbot action_check_price_empty , action_search_restaurants_empty , utter_ask_emailid_text , utter_ask_email_text { => user donot_send_email => chatbot utter_do_not_sent_email_text ; } ; } ; } ;
+			} ;
+			=> user send_email => chatbot utter_ask_emailid_text {
+				=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text ;
+			} ;
+			=> user donot_send_email => chatbot utter_do_not_sent_email_text ;
+		} ;
+		=> user send_email => chatbot utter_ask_emailid_text {
+			=> user send_email => chatbot action_send_mail_empty , utter_email_sent_text ;
+		} ;
+	} ;
+	- user stop => chatbot utter_default_text ;
+

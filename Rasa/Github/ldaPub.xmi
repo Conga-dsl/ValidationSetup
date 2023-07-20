@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="ldaPub">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2021;&#xd8;&#xa7;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb1;&#xd8;&#xd8;&#xa8;&#xd8;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb3;&#xd9;&#x201e;&#xd8;&#xa7;&#xd9;&#x2026; &#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x160;&#xd9;&#x192;&#xd9;&#x2026;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd9;&#x160;&#xd8;&#xb1;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd8;&#xb1;&#xd8;&#xaf;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb5;&#xd8;&#xa8;&#xd8;&#xa7;&#xd8; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd9;&#x160;&#xd8;&#xb1;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa8;&#xd8;&#xa7;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb9; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb3;&#xd9;&#x201e;&#xd8;&#xa7;&#xd9;&#x2026;&#xd8;&#xa9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x192;&#xd8;&#xb1;&#xd8;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x160;&#xd8;&#xb9;&#xd8;&#xb7;&#xd9;&#x160;&#xd9;&#x192; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb9;&#xd8;&#xa7;&#xd9;&#xfffd;&#xd9;&#x160;&#xd8;&#xa9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb4;&#xd9;&#x192;&#xd9;&#x2c6;&#xd8;&#xb1;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x201a;&#xd8;&#xb5;&#xd8;&#xb1;&#xd8;&#xaa;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x160;&#xd8;&#xb3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x2021;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2020;&#xd8;&#xb9;&#xd9;&#x2026;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb7;&#xd8;&#xa8;&#xd8;&#xb9;&#xd8;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb5;&#xd8;&#xd9;&#x160;&#xd8;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2020;&#xd9;&#x2c6;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xaf;&#xd8;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaa;&#xd9;&#x201a;&#xd8;&#xaf;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x201e;&#xd8;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xaa;&#xd8;&#xd9;&#x160;&#xd9;&#x201e;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd9;&#x2026;&#xd8;&#xaa;&#xd8;&#xa7;&#xd8;&#xb2;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x192;&#xd9;&#x2c6;&#xd9;&#x160;&#xd8;&#xb3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xd9;&#x2026;&#xd8;&#xaf;&#xd9;&#x201e;&#xd9;&#x201e;&#xd9;&#x2021;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa8;&#xd8;&#xae;&#xd9;&#x160;&#xd8;&#xb1;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xd8;&#xb2;&#xd9;&#x160;&#xd9;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb4; &#xd9;&#x192;&#xd9;&#x2c6;&#xd9;&#x160;&#xd8;&#xb3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb2;&#xd8;&#xb9;&#xd9;&#x201e;&#xd8;&#xa7;&#xd9;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb4; &#xd9;&#x2026;&#xd8;&#xa8;&#xd8;&#xb3;&#xd9;&#x2c6;&#xd8;&#xb7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa8; &#xd8;&#xb3;&#xd8;&#xb9;&#xd9;&#x160;&#xd8;&#xaf;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb2;&#xd9;&#x201a;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2021;&#xd9;&#x201e; &#xd8;&#xa7;&#xd9;&#x2020;&#xd8;&#xaa; &#xd8;&#xb1;&#xd9;&#x2c6;&#xd8;&#xa8;&#xd9;&#x2c6;&#xd8;&#xaa; &#xd8;&#x178;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x2020;&#xd8;&#xaa; &#xd8;&#xa8;&#xd8;&#xb4;&#xd8;&#xb1; &#xd8;&#x178;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x2020;&#xd8;&#xa7; &#xd8;&#xa7;&#xd9;&#x192;&#xd9;&#x201e;&#xd9;&#x2026; &#xd9;&#x2026;&#xd9;&#x160;&#xd9;&#x2020; &#xd8;&#x178;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x2020;&#xd8;&#xaa; &#xd8;&#xa7;&#xd8;&#xaf;&#xd9;&#x2026;&#xd9;&#x160; &#xd9;&#x2c6;&#xd9;&#x201e;&#xd8;&#xa7; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa9; &#xd8;&#x178;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="salary">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my salary"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my salary"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much do i take ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much i'm paid ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my annual salary ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i know my salary ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="salary"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me my salary please"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="paySlip">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my payslip ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my payslip at the end of FEB"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my payslip at 30/7/2020"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my payslip ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you show me my payslip ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my salary details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are my salaries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i see my salaries details ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="payslip"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="absences_balance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my absences balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my vacation balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my leaves balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many remaining leaves do i have ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many vacations do i have ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many leave did i take ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i know my absences balance ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absences balance"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="employee_information">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my phone number ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my email ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my name ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what information do you have about me ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you know about me ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my information"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are my personal information"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="personal information"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bankAcc_information">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my bank account ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i know which bank i use ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bank details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my bank details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my bank ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bank"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="employees_attendance_for_Manager">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="employees otl"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me my employees attendance times"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when did my employee come ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="attendance times"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="attendance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="otl records"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="otl"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="notification_for_manager">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me my notifications"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my notifications"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have something to approve ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have something to reject ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have any notifications ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there any pending actions from me ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="notifications"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="salary_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa8;&#xd8;&#xaf;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x192;&#xd9;&#x2026; &#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb4;&#xd9;&#x2021;&#xd8;&#xb1;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb3;&#xd9;&#x2020;&#xd9;&#x2c6;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="employee_information_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd9;&#x2c6;&#xd8;&#xb8;&#xd9;&#xfffd;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x160; &#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x2c6; &#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x2020;&#xd9;&#x2c6; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd8;&#xa7;&#xd8;&#xb5;&#xd8;&#xa9; &#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd8;&#xa7;&#xd8;&#xb5;&#xd8;&#xa9; &#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bankAcc_information_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd8;&#xa7;&#xd8;&#xb5;&#xd8;&#xa9; &#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x2c6; &#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x160; &#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x160; &#xd9;&#x2026;&#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd8;&#xa7;&#xd8;&#xb5;&#xd8;&#xa9; &#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2c6;&#xd8;&#xb4; &#xd9;&#x2021;&#xd9;&#x2c6; &#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x160;&#xd8;&#xb4; &#xd8;&#xa8;&#xd9;&#x2020;&#xd9;&#x192;&#xd9;&#x160;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="absences_balance_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb1;&#xd8;&#xb5;&#xd9;&#x160;&#xd8;&#xaf; &#xd8;&#xa7;&#xd8;&#xac;&#xd8;&#xa7;&#xd8;&#xb2;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x2c6; &#xd8;&#xb1;&#xd8;&#xb5;&#xd9;&#x160;&#xd8;&#xaf; &#xd8;&#xa7;&#xd8;&#xac;&#xd8;&#xa7;&#xd8;&#xb2;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x2020;&#xd9;&#x2c6; &#xd8;&#xb1;&#xd8;&#xb5;&#xd9;&#x160;&#xd8;&#xaf;&#xd9;&#x160; &#xd8;&#xa8;&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa7;&#xd8;&#xac;&#xd8;&#xa7;&#xd8;&#xb2;&#xd8;&#xa7;&#xd8;&#xaa;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x2c6; &#xd8;&#xb1;&#xd8;&#xb5;&#xd9;&#x160;&#xd8;&#xaf; &#xd8;&#xa7;&#xd8;&#xac;&#xd8;&#xa7;&#xd8;&#xb2;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd8;&#xb1;&#xd8;&#xb5;&#xd9;&#x160;&#xd8;&#xaf; &#xd8;&#xa7;&#xd8;&#xac;&#xd8;&#xa7;&#xd8;&#xb2;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb1;&#xd8;&#xb5;&#xd9;&#x160;&#xd8;&#xaf; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa7;&#xd8;&#xac;&#xd8;&#xa7;&#xd8;&#xb2;&#xd8;&#xa7;&#xd8;&#xaa;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="paySlip_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb3;&#xd9;&#x160;&#xd8;&#xb1; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xb7;&#xd9;&#x160;&#xd9;&#x2020;&#xd9;&#x160; &#xd9;&#x2026;&#xd8;&#xb3;&#xd9;&#x160;&#xd8;&#xb1; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd9;&#x2026;&#xd8;&#xb3;&#xd9;&#x160;&#xd8;&#xb1; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xaa;&#xd9;&#xfffd;&#xd8;&#xa7;&#xd8;&#xb5;&#xd9;&#x160;&#xd9;&#x201e; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xb7;&#xd9;&#x160;&#xd9;&#x2020;&#xd9;&#x160; &#xd8;&#xaa;&#xd9;&#xfffd;&#xd8;&#xa7;&#xd8;&#xb5;&#xd9;&#x160;&#xd9;&#x201e; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd8;&#xaa;&#xd9;&#xfffd;&#xd8;&#xa7;&#xd8;&#xb5;&#xd9;&#x160;&#xd9;&#x201e; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x201a;&#xd8;&#xb3;&#xd9;&#x160;&#xd9;&#x2026;&#xd8;&#xa9; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xb7;&#xd9;&#x160;&#xd9;&#x2020;&#xd9;&#x160; &#xd9;&#x201a;&#xd8;&#xb3;&#xd9;&#x160;&#xd9;&#x2026;&#xd8;&#xa9; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd9;&#x201a;&#xd8;&#xb3;&#xd9;&#x160;&#xd9;&#x2026;&#xd8;&#xa9; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd9;&#xfffd;&#xd8;&#xb1;&#xd8;&#xaf;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xb7;&#xd9;&#x160;&#xd9;&#x2020;&#xd9;&#x160; &#xd9;&#x2026;&#xd9;&#xfffd;&#xd8;&#xb1;&#xd8;&#xaf;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd9;&#x2026;&#xd9;&#xfffd;&#xd8;&#xb1;&#xd8;&#xaf;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x192;&#xd8;&#xb4;&#xd9;&#xfffd; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd8;&#xa8;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="employees_attendance_for_Manager_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x2c6;&#xd9;&#x201a;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xaf;&#xd9;&#x2c6;&#xd8;&#xa7;&#xd9;&#x2026;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x2c6;&#xd9;&#x201a;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xaf;&#xd9;&#x2c6;&#xd8;&#xa7;&#xd9;&#x2026; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd9;&#x2c6;&#xd8;&#xb8;&#xd9;&#xfffd;&#xd9;&#x160;&#xd9;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x2c6;&#xd9;&#x201a;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xaf;&#xd9;&#x2c6;&#xd8;&#xa7;&#xd9;&#x2026; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd9;&#x2c6;&#xd8;&#xb8;&#xd9;&#xfffd;&#xd9;&#x160;&#xd9;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd8;&#xa7;&#xd9;&#x2c6;&#xd9;&#x201a;&#xd8;&#xa7;&#xd9;&#x2026; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xaf;&#xd9;&#x2c6;&#xd8;&#xa7;&#xd9;&#x2026; &#xd8;&#xd9;&#x201a; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd9;&#x2c6;&#xd8;&#xb8;&#xd9;&#xfffd;&#xd9;&#x160;&#xd9;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xaa;&#xd9;&#x2030; &#xd9;&#x160;&#xd8;&#xaf;&#xd8;&#xa7;&#xd9;&#x2c6;&#xd9;&#x2026;&#xd9;&#x2c6;&#xd9;&#x2020; &#xd9;&#x2026;&#xd9;&#x2c6;&#xd8;&#xb8;&#xd9;&#xfffd;&#xd9;&#x160;&#xd9;&#x2020;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2c6;&#xd8;&#xb1;&#xd9;&#x2020;&#xd9;&#x160; &#xd9;&#x2026;&#xd8;&#xaa;&#xd9;&#x2030; &#xd8;&#xac;&#xd8;&#xa7;&#xd9;&#x2c6; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd9;&#x2c6;&#xd8;&#xb8;&#xd9;&#xfffd;&#xd9;&#x160;&#xd9;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb9;&#xd8;&#xb7;&#xd9;&#x2020;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x2c6;&#xd9;&#x201a;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xaf;&#xd9;&#x2c6;&#xd8;&#xa7;&#xd9;&#x2026;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="notification_for_manager_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xb4;&#xd8;&#xb9;&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xa7; &#xd9;&#x2021;&#xd9;&#x160; &#xd8;&#xa7;&#xd8;&#xb4;&#xd8;&#xb9;&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa7;&#xd8;&#xb4;&#xd8;&#xb9;&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa7;&#xd8;&#xb4;&#xd8;&#xb9;&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa7;&#xd8;&#xb4;&#xd8;&#xb9;&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xae;&#xd8;&#xa7;&#xd8;&#xb5;&#xd8;&#xa9; &#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb4;&#xd9;&#x2020;&#xd9;&#x2c6; &#xd8;&#xa7;&#xd8;&#xae;&#xd8;&#xb1; &#xd8;&#xa7;&#xd8;&#xb4;&#xd8;&#xb9;&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xa7;&#xd8;&#xaa;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="help_en">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can i ask you ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which services do you have ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help please"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="help_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd9;&#x2020;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd9;&#x2021;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd8;&#xa9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x192;&#xd9;&#x160;&#xd9;&#xfffd; &#xd8;&#xaa;&#xd9;&#x201a;&#xd8;&#xaf;&#xd8;&#xb1; &#xd8;&#xaa;&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd9;&#x2020;&#xd9;&#x160; &#xd8;&#x178;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xb1;&#xd8;&#xac;&#xd9;&#x2c6; &#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd9;&#x2021;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd9;&#x2021;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb3;&#xd8;&#xa7;&#xd8;&#xb9;&#xd8;&#xaf;&#xd8;&#xa9;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="expense_en">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expense claim"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to claim my expense"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i've bought a new mouse for my laptop and i want my money back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want my money back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i claim my expense ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to be paid for an expense"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="expense_ar">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa8;&#xd8;&#xaf;&#xd9;&#x160; &#xd8;&#xa7;&#xd9;&#x201a;&#xd8;&#xaf;&#xd9;&#x2026; &#xd8;&#xb9;&#xd9;&#x201e;&#xd9;&#x2030; &#xd8;&#xa7;&#xd9;&#x192;&#xd8;&#xb3;&#xd8;&#xa8;&#xd9;&#x2020;&#xd8;&#xb3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd9;&#xfffd;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd8;&#xb3;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd8;&#xba;&#xd9;&#x160;&#xd8;&#xb1;&#xd8;&#xaa; &#xd9;&#x201a;&#xd8;&#xb7;&#xd8;&#xb9; &#xd9;&#x201e;&#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xaa;&#xd9;&#x2c6;&#xd8;&#xa8;&#xd9;&#x160;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd9;&#x2026;&#xd9;&#x160; &#xd9;&#xfffd;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x2c6;&#xd8;&#xb1;&#xd8;&#xa9; &#xd8;&#xa7;&#xd8;&#xa8;&#xd8;&#xba;&#xd9;&#x2030; &#xd8;&#xa7;&#xd9;&#x201a;&#xd8;&#xaf;&#xd9;&#x2026;&#xd9;&#x2021;&#xd8;&#xa7; &#xd9;&#x201e;&#xd9;&#x201e;&#xd8;&#xb4;&#xd8;&#xb1;&#xd9;&#x192;&#xd8;&#xa9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x192;&#xd9;&#x160;&#xd9;&#xfffd; &#xd8;&#xa7;&#xd9;&#x201a;&#xd8;&#xaf;&#xd8;&#xb1; &#xd8;&#xa7;&#xd8;&#xb7;&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8; &#xd8;&#xa8;&#xd9;&#xfffd;&#xd9;&#x201e;&#xd9;&#x2c6;&#xd8;&#xb3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x192;&#xd9;&#x160;&#xd9;&#xfffd; &#xd8;&#xa7;&#xd8;&#xb7;&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8; &#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xb4;&#xd8;&#xb1;&#xd9;&#x192;&#xd8;&#xa9; &#xd8;&#xa8;&#xd9;&#x201a;&#xd9;&#x160;&#xd9;&#x2026;&#xd8;&#xa9; &#xd9;&#xfffd;&#xd8;&#xa7;&#xd8;&#xaa;&#xd9;&#x2c6;&#xd8;&#xb1;&#xd8;&#xa9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd9;&#x2026;&#xd8;&#xb7;&#xd8;&#xa7;&#xd9;&#x201e;&#xd8;&#xa8;&#xd8;&#xa9; &#xd8;&#xa8;&#xd8;&#xa7;&#xd9;&#x201e;&#xd9;&#x2020;&#xd9;&#xfffd;&#xd9;&#x201a;&#xd8;&#xa7;&#xd8;&#xaa;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="out_of_scope"/>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x645;&#x639; &#x627;&#x644;&#x633;&#x644;&#x627;&#x645;&#x629;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_img_ar_empty"/>
+  <actions xsi:type="generator:Image" name="utter_greet_img" URL="https://www.nab3.info/images/companies_logo/59a3e3376d344.png" caption="Hi Yousef!,  i'm AppsPro Assistant and i'm here to help you "/>
+  <actions xsi:type="generator:Text" name="utter_employee_information_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="  - &#x627;&#x633;&#x645;&#x643;: &#x64a;&#x648;&#x633;&#x641; &#x627;&#x62d;&#x645;&#x62f;  &#xA; - &#x631;&#x642;&#x645; &#x62c;&#x648;&#x627;&#x644;&#x643;: +966 563198972  &#xA; - &#x628;&#x631;&#x64a;&#x62f;&#x643; &#x627;&#x644;&#x627;&#x644;&#x643;&#x62a;&#x631;&#x648;&#x646;&#x64a;: user@AppsPro.com"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_expense_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please attach your expense by using the attach icon below"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_employee_information_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="- Name is : Yousef Abudakar &#xA; - Mobile No.: +966 563198972 &#xA; - Email is : user@AppsPro.com"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_pdf_empty"/>
+  <actions xsi:type="generator:Text" name="utter_expense_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x627;&#x644;&#x631;&#x62c;&#x627;&#x621; &#x627;&#x631;&#x641;&#x627;&#x642; &#x627;&#x644;&#x641;&#x627;&#x62a;&#x648;&#x631;&#x629; &#x645;&#x646; &#x62e;&#x644;&#x627;&#x644; &#x627;&#x644;&#x636;&#x63a;&#x638; &#x639;&#x644;&#x649; &#x632;&#x631; &#x627;&#x644;&#x627;&#x631;&#x641;&#x627;&#x642; &#x628;&#x627;&#x644;&#x627;&#x633;&#x641;&#x644;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_ar_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="&#x62a;&#x641;&#x636;&#x644; &#x647;&#x627;&#x64a; &#x627;&#x644;&#x635;&#x648;&#x631;&#x629; &#x64a;&#x645;&#x643;&#x646; &#x62a;&#x633;&#x627;&#x639;&#x62f;&#x643; &#x62a;&#x639;&#x62f;&#x644; &#x645;&#x632;&#x627;&#x62c;&#x643;"/>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_absences_balance_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="- &#x627;&#x644;&#x631;&#x635;&#x64a;&#x62f; &#x627;&#x644;&#x643;&#x644;&#x64a;: 14 &#x64a;&#x648;&#x645; &#xA; - &#x627;&#x644;&#x631;&#x635;&#x64a;&#x62f; &#x627;&#x644;&#x645;&#x633;&#x62a;&#x62e;&#x62f;&#x645;: 2 &#x64a;&#x648;&#x645; &#xA; - &#x627;&#x644;&#x631;&#x635;&#x64a;&#x62f; &#x627;&#x644;&#x645;&#x62a;&#x628;&#x642;&#x64a;: 12 &#x64a;&#x648;&#x645; &#xA; &#xA; &#x644;&#x627;&#x638;&#x647;&#x627;&#x631; &#x631;&#x635;&#x64a;&#x62f; &#x627;&#x644;&#x627;&#x62c;&#x627;&#x632;&#x627;&#x62a; &#x641;&#x64a; &#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x631;&#x62c;&#x627;&#x621; &#x627;&#x644;&#x636;&#x63a;&#x637; &#x639;&#x644;&#x649; &#x627;&#x644;&#x631;&#x627;&#x628;&#x637; &#x628;&#x627;&#x644;&#x627;&#x633;&#x641;&#x644;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_default_fallback_empty"/>
+  <actions xsi:type="generator:Empty" name="action_img_empty"/>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x647;&#x644; &#x633;&#x627;&#x639;&#x62f;&#x643; &#x630;&#x644;&#x643; &#x61f;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_Questions_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" &#x64a;&#x645;&#x643;&#x646;&#x646;&#x64a; &#x645;&#x633;&#x627;&#x639;&#x62f;&#x62a;&#x643; &#x628;&#x627;&#x644;&#x627;&#x62a;&#x64a; : "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_absences_balance_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="- Remaining Balance : 12 Days &#xA; - Used Balance: 2 Days &#xA; - Total Balance: 14 Days &#xA; &#xA; to view your absences balance as a chart kindly click on the link below"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_absences_balance_img_ar_img" URL="https://gisinter.online/wp-rasa-awamleh/wp-content/uploads/2020/07/absence-balance-1024x515.png" caption="&#x631;&#x635;&#x64a;&#x62f; &#x627;&#x644;&#x627;&#x62c;&#x627;&#x632;&#x627;&#x62a;"/>
+  <actions xsi:type="generator:Text" name="utter_salary_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" - &#x631;&#x627;&#x62a;&#x628;&#x643; &#x627;&#x644;&#x634;&#x647;&#x631;&#x64a; &#x647;&#x648;:  3000 &#x631;&#x64a;&#x627;&#x644; &#x633;&#x639;&#x648;&#x62f;&#x64a; &#xA; - &#x631;&#x627;&#x62a;&#x628;&#x643; &#x627;&#x644;&#x633;&#x646;&#x648;&#x64a; &#x647;&#x648;:  36000 &#x631;&#x64a;&#x627;&#x644; &#x633;&#x639;&#x648;&#x62f;&#x64a;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_notification_for_manager_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you have the following notifications : &#xA; &#xA; - Sub: Absence Request     &#xA; From: Amro Alfaris &#xA; &#xA; - Sub: Business Trip Payment &#xA; From: Mohammed Awamleh  "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x64a;&#x627; &#x647;&#x644;&#x627;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x62f;&#x648;&#x645; &#x627;&#x646; &#x634;&#x627;&#x621; &#x627;&#x644;&#x644;&#x647; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_salary_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="- Monthly salary is : 3000 SR &#xA; - Annual Salary is : 36000 SR"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_absences_balance_img_img" URL="https://gisinter.online/wp-rasa-awamleh/wp-content/uploads/2020/07/absence-balance-1024x515.png" caption="Absences Balance"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_employees_attendance_for_Manager_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" - &#x627;&#x633;&#x645; &#x627;&#x644;&#x645;&#x648;&#x638;&#x641;: &#x64a;&#x648;&#x633;&#x641; &#x627;&#x62d;&#x645;&#x62f;  &#xA; &#x648;&#x642;&#x62a; &#x627;&#x644;&#x62d;&#x636;&#x648;&#x631;: 8:30 AM  &#xA; &#x648;&#x642;&#x62a; &#x627;&#x644;&#x645;&#x63a;&#x627;&#x62f;&#x631;&#x629; : 2:30 pm &#xA; &#xA; - &#x627;&#x633;&#x645; &#x627;&#x644;&#x645;&#x648;&#x638;&#x641;: &#x639;&#x645;&#x631;&#x648; &#x627;&#x644;&#x641;&#x627;&#x631;&#x633;  &#xA; &#x648;&#x642;&#x62a; &#x627;&#x644;&#x62d;&#x636;&#x648;&#x631;: 8:35 AM  &#xA; &#x648;&#x642;&#x62a; &#x627;&#x644;&#x645;&#x63a;&#x627;&#x62f;&#x631;&#x629; : 2:40 pm  &#xA; &#xA; - &#x627;&#x633;&#x645; &#x627;&#x644;&#x645;&#x648;&#x638;&#x641;: &#x645;&#x62d;&#x645;&#x62f; &#x627;&#x644;&#x639;&#x648;&#x627;&#x645;&#x644;&#x629;  &#xA; &#x648;&#x642;&#x62a; &#x627;&#x644;&#x62d;&#x636;&#x648;&#x631;: 8:35 AM  &#xA; &#x648;&#x642;&#x62a; &#x627;&#x644;&#x645;&#x63a;&#x627;&#x62f;&#x631;&#x629; : 2:40 pm  "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_bankAcc_information_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x647;&#x630;&#x647; &#x647;&#x64a; &#x62a;&#x641;&#x627;&#x635;&#x64a;&#x644; &#x627;&#x644;&#x628;&#x646;&#x643; &#x627;&#x644;&#x62e;&#x627;&#x635; &#x628;&#x643;:  &#xA; &#xA;  - &#x627;&#x644;&#x628;&#x646;&#x643;: &#x628;&#x646;&#x643; &#x627;&#x644;&#x631;&#x627;&#x62c;&#x62d;&#x64a;.&#xA;   - &#x631;&#x642;&#x645; &#x627;&#x644;&#x62d;&#x633;&#x627;&#x628; &#x627;&#x644;&#x645;&#x635;&#x631;&#x641;&#x64a;  IBAN: SAxxxxxxxxxxxxxxxx"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_Questions_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" here's a list of our services"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_employees_attendance_for_Manager_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="- Employee Name: Yousef Abudakar &#xA; Attendance Time: 8:30 Am &#xA; Leaving Time: 5:00 Pm &#xA; &#xA; - Employee Name: Amro Alfaris &#xA; Attendance Time: 8:50 Am &#xA; Leaving Time: 5:10 Pm &#xA; &#xA; - Employee Name: Mohammed Awamleh &#xA; Attendance Time: 9:00 Am &#xA; Leaving Time: 6:00 Pm  "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_notification_for_manager_ar_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=":&#x644;&#x62f;&#x64a;&#x643; &#x627;&#x644;&#x627;&#x634;&#x639;&#x627;&#x631;&#x627;&#x62a; &#x627;&#x644;&#x62a;&#x627;&#x644;&#x64a;&#x629; &#xA; &#xA; - &#x627;&#x644;&#x645;&#x648;&#x636;&#x648;&#x639; : &#x637;&#x644;&#x628; &#x627;&#x62c;&#x627;&#x632;&#x629;              &#xA; &#x627;&#x644;&#x645;&#x648;&#x638;&#x641; : &#x639;&#x645;&#x631;&#x648; &#x627;&#x644;&#x641;&#x627;&#x631;&#x633; &#xA; &#xA; - &#x627;&#x644;&#x645;&#x648;&#x636;&#x648;&#x639; : &#x631;&#x62d;&#x644;&#x629; &#x639;&#x645;&#x644; &#x645;&#x62f;&#x641;&#x648;&#x639;&#x629;          &#xA; &#x627;&#x644;&#x645;&#x648;&#x638;&#x641; : &#x645;&#x62d;&#x645;&#x62f; &#x627;&#x644;&#x639;&#x648;&#x627;&#x645;&#x644;&#x629; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_bankAcc_information_en_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="- Bank : Alrajhi Bank &#xA; - IBAN: SA4xxxxxxxxxxxxxxx"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="action_default_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't undestand you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.3 //@actions.16 //@actions.21 //@actions.29">
+      <outcoming intent="//@intents.8">
+        <target actions="//@actions.22 //@actions.27"/>
+      </outcoming>
+      <outcoming intent="//@intents.10">
+        <target actions="//@actions.0 //@actions.10 //@actions.5 //@actions.15">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.22 //@actions.27"/>
+          </outcoming>
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.1 //@actions.25"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.1 //@actions.25"/>
+  </flows>
+  <flows intent="//@intents.12">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.14">
+    <target actions="//@actions.23"/>
+  </flows>
+  <flows intent="//@intents.15">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.17">
+    <target actions="//@actions.7"/>
+  </flows>
+  <flows intent="//@intents.18">
+    <target actions="//@actions.32"/>
+  </flows>
+  <flows intent="//@intents.19">
+    <target actions="//@actions.30"/>
+  </flows>
+  <flows intent="//@intents.20">
+    <target actions="//@actions.20"/>
+  </flows>
+  <flows intent="//@intents.16">
+    <target actions="//@actions.17 //@actions.2 //@actions.14"/>
+  </flows>
+  <flows intent="//@intents.21">
+    <target actions="//@actions.19"/>
+  </flows>
+  <flows intent="//@intents.25">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.24">
+    <target actions="//@actions.2"/>
+  </flows>
+  <flows intent="//@intents.22">
+    <target actions="//@actions.4"/>
+  </flows>
+  <flows intent="//@intents.23">
+    <target actions="//@actions.28"/>
+  </flows>
+  <flows intent="//@intents.26">
+    <target actions="//@actions.26"/>
+  </flows>
+  <flows intent="//@intents.27">
+    <target actions="//@actions.31"/>
+  </flows>
+  <flows intent="//@intents.28">
+    <target actions="//@actions.29"/>
+  </flows>
+  <flows intent="//@intents.29">
+    <target actions="//@actions.16"/>
+  </flows>
+  <flows intent="//@intents.30">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.31">
+    <target actions="//@actions.9"/>
+  </flows>
+  <flows intent="//@intents.32">
+    <target actions="//@actions.13"/>
+  </flows>
+  <flows intent="//@intents.33">
+    <target actions="//@actions.13 //@actions.33"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="mpchatbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="expert_mentoring">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need expert mentoring."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="details related to expert mentoring please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring needed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay, i need expert mentoring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring is needed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need to find a mentor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mentoring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Need expert mentoring"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="expert_AI">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="AI"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Artificial Intelligence"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in AI"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in Artificial intelligence"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="related to AI"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what about AI"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ai"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="student_discount">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you provide student discounts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="student discounts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are student discount provided?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have student discounts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="discounts for students?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are discounts for students available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to know if you guys provide student discounts?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="expert_ML">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need expert mentoring in machine learning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="machine learning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ml"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="machine learning expert mentoring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring ml"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring machine learning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="expert mentoring in ML please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ML"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want mentoring in ml"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="connect_agent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please connect me to a person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect me to person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please connect me to an agent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect to an agent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to talk to an agent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to talk to a person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer my chat to a person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer my chat to an agent"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="utter_expert_ML_details"/>
+  <actions xsi:type="generator:Text" name="utter_connect_agent_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, currently no agents are available. You can email us at support@mentorplanet.in with your queries and we will get back to you within 24-48 hours."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_expert_ML_details_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That's a great choice! Following are the details related to expert mentoring in ML."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! Welcome to MentorPlanet! How can I help you today?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_expert_mentoring_details_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In which domain are you looking for expert mentoring?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="expert_ML_empty"/>
+  <actions xsi:type="generator:Text" name="utter_expert_AI_details_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That's a great choice! Following are the details related to expert mentoring in AI."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_student_discount_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, we do provide a 15% discount on all of our courses upon verification of student role."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.4">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.7">
+        <target actions="//@actions.7">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.4">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.6">
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.8"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.8">
+        <target actions="//@actions.1"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.3"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.7"/>
+  </flows>
+  <flows intent="//@intents.10">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.0"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

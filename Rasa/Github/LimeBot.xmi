@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="LimeBot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bookrooms">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book a hotel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book a room"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We want to book some rooms"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cleanrooms">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want my room to be cleaned"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I have my room cleaned?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to clean my room"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to have my room cleaned"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cleannow">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you send someone right now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need room cleanin right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It is very dirty, so right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Its urgent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="As soon as possible"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="schedulecleantime">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you send someone after "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" hours?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Send someone after "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you send someone after "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" hours?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="after "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you send someone after "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="8"/>
+        <tokens xsi:type="generator:Literal" text=" hours?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="after "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+    </inputs>
+    <parameters name="cleaning_hours" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bookhotel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="8"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="32"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="64"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="50"/>
+        <tokens xsi:type="generator:Literal" text=" rooms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" rooms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" rooms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" rooms for us"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We require "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" rooms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="Simple"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="Deluxe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="Simple"/>
+      </inputs>
+    </inputs>
+    <parameters name="no_of_rooms" defaultEntity="NUMBER"/>
+    <parameters name="type_of_rooms"/>
+  </intents>
+  <intents name="bookhoteladv">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="Simple"/>
+        <tokens xsi:type="generator:Literal" text=" rooms."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want like to book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="Simple"/>
+        <tokens xsi:type="generator:Literal" text=" rooms."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="PLease book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="6"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="Simple"/>
+        <tokens xsi:type="generator:Literal" text=" rooms."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you book "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="9"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="Simple"/>
+        <tokens xsi:type="generator:Literal" text=" rooms?"/>
+      </inputs>
+    </inputs>
+    <parameters name="no_of_rooms" defaultEntity="NUMBER"/>
+    <parameters name="type_of_rooms"/>
+  </intents>
+  <intents name="checkintiming"/>
+  <intents name="checkouttime"/>
+  <actions xsi:type="generator:Text" name="utter_confirmation_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You have chosen to book "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.6/@parameters.0"/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.6/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text=" rooms."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="validate_timings_empty"/>
+  <actions xsi:type="generator:Text" name="utter_clean_now_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure, I will send someone to your room right away."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_check_in_time_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Check in time starts at 4 PM. Minimum check in age is 21. Please contact the reception for early check in requests"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! I am Bot. I can assist you in  room services. How can I help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_clean_time_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When should I arrange for cleaning?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_checkout_time_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Check out time is 11 AM. Please contact the reception for late checkout requests."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_select_type_of_rooms_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We have two types of rooms Simple and Deluxe. What type of room would you prefer?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_no_rooms_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many rooms do you want to book?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="how_many_rooms_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.4">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.6">
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.2">
+              <outcoming intent="//@intents.1">
+                <target actions="//@actions.9">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.10">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.11"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.7">
+        <target actions="//@actions.0">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.6">
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.1">
+                  <outcoming intent="//@intents.8">
+                    <target actions="//@actions.3">
+                      <outcoming intent="//@intents.9">
+                        <target actions="//@actions.7">
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.11"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.10">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.6">
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.8">
+                        <target actions="//@actions.3">
+                          <outcoming intent="//@intents.9">
+                            <target actions="//@actions.7">
+                              <outcoming intent="//@intents.5">
+                                <target actions="//@actions.11"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.9">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.10">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.6">
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.11"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.6">
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.2">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.11"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

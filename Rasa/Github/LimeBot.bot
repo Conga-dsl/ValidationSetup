@@ -1,0 +1,158 @@
+Chatbot LimeBot language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+bookrooms :
+	inputs in en {
+		"I want to book a hotel" ,
+		"I want to book a room" ,
+		"We want to book some rooms"
+}
+
+cleanrooms :
+	inputs in en {
+		"I want my room to be cleaned" ,
+		"Can I have my room cleaned?" ,
+		"I want to clean my room" ,
+		"I want to have my room cleaned"
+}
+
+cleannow :
+	inputs in en {
+		"Can you send someone right now?" ,
+		"I need room cleanin right now" ,
+		"right now" ,
+		"It is very dirty, so right now" ,
+		"Its urgent" ,
+		"As soon as possible"
+}
+
+schedulecleantime :
+	inputs in en {
+		"Can you send someone after " ( "1" ) [ cleaning_hours ] " hours?" ,
+		"Send someone after " ( "4" ) [ cleaning_hours ] " hours" ,
+		"Can you send someone after " ( "5" ) [ cleaning_hours ] " hours?" ,
+		"after " ( "3" ) [ cleaning_hours ] " hours" ,
+		"Can you send someone after " ( "8" ) [ cleaning_hours ] " hours?" ,
+		"after " ( "4" ) [ cleaning_hours ] " hours"
+	}
+	parameters :
+		cleaning_hours : entity number ;
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+bookhotel :
+	inputs in en {
+		( "1" ) [ no_of_rooms ] ,
+		( "4" ) [ no_of_rooms ] ,
+		( "8" ) [ no_of_rooms ] ,
+		( "16" ) [ no_of_rooms ] ,
+		( "32" ) [ no_of_rooms ] ,
+		( "64" ) [ no_of_rooms ] " please" ,
+		( "50" ) [ no_of_rooms ] " rooms" ,
+		"I want " ( "1" ) [ no_of_rooms ] " rooms" ,
+		"I want to book " ( "5" ) [ no_of_rooms ] " rooms" ,
+		"I need to book " ( "5" ) [ no_of_rooms ] " rooms for us" ,
+		"We require " ( "5" ) [ no_of_rooms ] " rooms" ,
+		( ^Simple ) [ type_of_rooms ] ,
+		( Deluxe ) [ type_of_rooms ] ,
+		"Book " ( ^Simple ) [ type_of_rooms ]
+	}
+	parameters :
+		no_of_rooms : entity number ;
+		type_of_rooms : entity text ;
+
+bookhoteladv :
+	inputs in en {
+		"I would like to book " ( "1" ) [ no_of_rooms ] ( ^Simple ) [ type_of_rooms ] " rooms." ,
+		"I want like to book " ( "4" ) [ no_of_rooms ] ( ^Simple ) [ type_of_rooms ] " rooms." ,
+		"PLease book " ( "6" ) [ no_of_rooms ] ( ^Simple ) [ type_of_rooms ] " rooms." ,
+		"Can you book " ( "9" ) [ no_of_rooms ] ( ^Simple ) [ type_of_rooms ] " rooms?"
+	}
+	parameters :
+		no_of_rooms : entity number ;
+		type_of_rooms : entity text ;
+
+checkintiming :
+
+checkouttime :
+
+actions :
+	Text response utter_confirmation_text :
+		inputs in en {
+			"You have chosen to book " [ "bookhotel.no_of_rooms" ] [ "bookhotel.type_of_rooms" ] " rooms."
+	}
+	Empty response validate_timings_empty
+	Text response utter_clean_now_text :
+		inputs in en {
+			"Sure, I will send someone to your room right away."
+	}
+	Text response utter_check_in_time_text :
+		inputs in en {
+			"Check in time starts at 4 PM. Minimum check in age is 21. Please contact the reception for early check in requests"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! I am Bot. I can assist you in  room services. How can I help you?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot."
+	}
+	Text response utter_ask_clean_time_text :
+		inputs in en {
+			"When should I arrange for cleaning?"
+	}
+	Text response utter_checkout_time_text :
+		inputs in en {
+			"Check out time is 11 AM. Please contact the reception for late checkout requests."
+	}
+	Text response utter_select_type_of_rooms_text :
+		inputs in en {
+			"We have two types of rooms Simple and Deluxe. What type of room would you prefer?"
+	}
+	Text response utter_no_rooms_text :
+		inputs in en {
+			"How many rooms do you want to book?"
+	}
+	Empty response how_many_rooms_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user cleanrooms => chatbot utter_ask_clean_time_text {
+			=> user cleannow => chatbot utter_clean_now_text { => user bookrooms => chatbot utter_no_rooms_text { => user bookhotel => chatbot how_many_rooms_empty { => user bookhotel => chatbot utter_confirmation_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ;
+		} ;
+		=> user bookhoteladv => chatbot utter_confirmation_text {
+			=> user cleanrooms => chatbot utter_ask_clean_time_text { => user schedulecleantime => chatbot validate_timings_empty { => user checkintiming => chatbot utter_check_in_time_text { => user checkouttime => chatbot utter_checkout_time_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ;
+		} ;
+		=> user bookhotel => chatbot how_many_rooms_empty {
+			=> user bookhotel => chatbot utter_confirmation_text { => user cleanrooms => chatbot utter_ask_clean_time_text { => user schedulecleantime => chatbot validate_timings_empty { => user checkintiming => chatbot utter_check_in_time_text { => user checkouttime => chatbot utter_checkout_time_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+	- user bookrooms => chatbot utter_no_rooms_text {
+		=> user bookhotel => chatbot how_many_rooms_empty { => user bookhotel => chatbot utter_confirmation_text { => user cleanrooms => chatbot utter_ask_clean_time_text { => user schedulecleantime => chatbot validate_timings_empty { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ;
+	} ;
+	- user cleanrooms => chatbot utter_ask_clean_time_text {
+		=> user cleannow => chatbot utter_clean_now_text { => user goodbye => chatbot utter_goodbye_text ; } ;
+	} ;
+

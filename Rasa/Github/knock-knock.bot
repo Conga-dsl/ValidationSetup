@@ -1,0 +1,148 @@
+Chatbot "knock-knock" language : en
+
+intents :
+
+ask_joke :
+	inputs in en {
+		"tell me a joke" ,
+		"tell me a knock-knock joke"
+}
+
+whoisthere :
+	inputs in en {
+		"who is there?" ,
+		"who\'s there"
+}
+
+who :
+	inputs in en {
+		"blabla who" ,
+		"deja who" ,
+		"doctor who" ,
+		who ,
+		"Cow says who" ,
+		"Robin who" ,
+		"Nobel who" ,
+		"Annie who" ,
+		"To who" ,
+		"An extraterrestrial who"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+mood_great :
+	inputs in en {
+		"good one" ,
+		wonderful ,
+		"This was funny" ,
+		"this\'s funny" ,
+		hahaha ,
+		"ha ha ha ha"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good"
+}
+
+deny :
+	inputs in en {
+		^no ,
+		"no, thak you" ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really" ,
+		"that is enough" ,
+		"That\'s enough" ,
+		"enough for now"
+}
+
+mood_unhappy :
+	inputs in en {
+		bad ,
+		"very bad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely bad" ,
+		"This is not funny" ,
+		"Where is the joke" ,
+		"I do not understand" ,
+		"not funny" ,
+		"That is very old joke" ,
+		"very old joke" ,
+		"old one"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Text response utter_sorry_text :
+		inputs in en {
+			"Oh, sorry."
+	}
+	Empty response action_joke_punchline_empty
+	Empty response action_start_joke_empty
+	Text response utter_blamedevloper_text :
+		inputs in en {
+			"it is not my fault. I am just a bot. My developer fshould be blamed for this."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great. Glad that you like my jokes"
+	}
+	Empty response action_joke_setup_empty
+	Text response utter_anotherjoke_text :
+		inputs in en {
+			"Do you want me to tell another joke"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi there."
+	}
+	Text response utter_knockknock_text :
+		inputs in en {
+			"Knock knock!"
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"Sorry, I don’t understand."
+	}
+	Empty response action_checksessionstarted_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Ok, Bye bye"
+	}
+	Text response action_default_fallback_text :
+		inputs in en {
+			"Sorry, I don\'t undestand you "
+	}
+
+flows :
+	- user ask_joke => chatbot action_start_joke_empty {
+		=> user mood_great => chatbot action_checksessionstarted_empty , utter_happy_text , utter_anotherjoke_text { => user affirm => chatbot utter_knockknock_text ; } ;
+	} ;
+	- user mood_great => chatbot action_checksessionstarted_empty , utter_happy_text , utter_anotherjoke_text {
+		=> user deny => chatbot utter_goodbye_text ;
+	} ;
+	- user mood_unhappy => chatbot action_checksessionstarted_empty , utter_sorry_text , utter_blamedevloper_text , utter_anotherjoke_text {
+		=> user affirm => chatbot utter_knockknock_text ;
+		=> user deny => chatbot utter_goodbye_text ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user FallbackIntent => chatbot action_default_fallback_text ;
+

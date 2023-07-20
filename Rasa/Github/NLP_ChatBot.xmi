@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="NLP_ChatBot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi folks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi Mister"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi pal!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello everybody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello is anybody there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello robot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hallo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heeey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hola"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey bot!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello friend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yo what up"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="request_flight">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im looking for a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to go on a trip"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to book a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to book a trip"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need a ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me find a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me out of here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to travel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to fly somewhere"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i get a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to go on a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want a flight from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="new york"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me a flight from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="seattle"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="denver"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book a flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book a fligt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book a flight somewhere"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i wanna book a flight"/>
+      </inputs>
+    </inputs>
+    <parameters name="origin"/>
+    <parameters name="destination"/>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="um yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes and i dont care"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i love that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cool"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no new selection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="breath no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no this does not work for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not what i want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no im good thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah im good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm coming from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im coming from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="new york"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="starting from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="vancouver"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="los angeles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="chicago"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leaving from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="dallas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="departing from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="denver"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="depart from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="seattle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="miami"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm going to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="florida"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im going to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="tokyo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="new york"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to get to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="denver"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="tokyo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lets go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="miami"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="seattle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="new york"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="miami"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="dallas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im planning on leaving from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="august 14"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="september 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trip is planned from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="august 14"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="september 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to go from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="jan 14"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="apr 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="november 14"/>
+        <tokens xsi:type="generator:Literal" text=" and get back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="december 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="october 4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="january 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i planned to leave on [february 8]"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="come back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="mar 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="return on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="february 9"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="planned on being back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="april 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="$2000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no more than "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="1000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="max "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="$400"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="100 dollars"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="100 - "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="200"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Tokyo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to leave from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="september 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to come back on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="september 24"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to come back on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="december 24"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="2000"/>
+        <tokens xsi:type="generator:Literal" text=" dollars"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="new york"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am coming from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="december 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to come back on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="aug 24"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="800"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="paris"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="jan 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="jan 3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="feb 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="feb 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mar 9"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mar 23"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="apr 24"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="apr 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="may 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="may 16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="june 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="june 16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="july 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="july 15"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="aug 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="aug 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="sept 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="sept 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="oct 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="oct 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="nov 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="dec 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="dec 27"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="nov 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="jan 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="jan 3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="feb 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="feb 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mar 9"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mar 23"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="apr 24"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="apr 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="may 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="may 16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="june 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="june 16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="july 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="july 15"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="aug 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="aug 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="sept 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="sept 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="oct 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="oct 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="nov 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="dec 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="dec 27"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="nov 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="jan 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="jan 3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="feb 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="feb 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="mar 9"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="mar 23"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="apr 24"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="apr 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="may 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="may 16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="june 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="june 16"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="july 12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="july 15"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="aug 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="aug 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="sept 18"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="sept 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="oct 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="oct 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="nov 14"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="dec 17"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="nov 13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="dec 22"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="$2000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am leaving from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="$1000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="vancouver"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="imma leave from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="toronto"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i wanna leave "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="sept 1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i wanna be back "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="sept 20"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="max "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="$500"/>
+      </inputs>
+    </inputs>
+    <parameters name="origin"/>
+    <parameters name="destination"/>
+    <parameters name="depart_date" defaultEntity="DATE"/>
+    <parameters name="return_date" defaultEntity="DATE"/>
+    <parameters name="budget"/>
+  </intents>
+  <intents name="thankyou">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="um thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay cool uh good bye thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you rock"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and thats all thank you and good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you and good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sorry about my mistakes thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay thank you goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ah thank you goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you noise"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="noise thank you goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh okay thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="um okay thank you good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="chitchat">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to know the company which designed you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to know the company which generated you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to know the company which invented you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to know who invented you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="May I ask who invented you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please tell me the company who created you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please tell me who created you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about your creators"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about your founders"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ahoy matey how are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you having a good day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are you ok?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you feel good?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are things going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are things with you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How are things?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you doing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you doing this morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How are you?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="stop">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok then you cant help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that was shit, you're not helping"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can't help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can't help me with what i need"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i guess you can't help me then"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok i guess you can't help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's not what i want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok, but that doesnt help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this is leading to nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this conversation is not really helpful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you cannot help me with what I want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think you cant help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hm i don't think you can do what i want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop go back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and that's it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="forminform"/>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! I am a flight search assistant :airplane: How can I help?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_return_date_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when did you want to be back?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_destination_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where do you want to go?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_origin_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where are you leaving from?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_noworries_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are welcome :slightly_smiling_face:"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_continue_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you want to continue?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_chitchat_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="chitchat"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_budget_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is your budget?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_more_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can I help you with anything else?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_slots_values_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am going to look for flight offers with the info you gave me:&#xA;- destination: "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.1/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="&#xA;- origin: "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.1/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="&#xA;- departing: "/>
+        <tokens xsi:type="generator:Literal" text="depart_date"/>
+        <tokens xsi:type="generator:Literal" text="&#xA;- returning: "/>
+        <tokens xsi:type="generator:Literal" text="return_date"/>
+        <tokens xsi:type="generator:Literal" text="&#xA;- budget: "/>
+        <tokens xsi:type="generator:Literal" text="budget"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_depart_date_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when did you want to leave?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sorry, I didn't understand you, please try something else"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_submit_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="All done!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.0">
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.14">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.8">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.4"/>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.9">
+            <target actions="//@actions.14">
+              <outcoming intent="//@intents.9">
+                <target actions="//@actions.14">
+                  <outcoming intent="//@intents.9">
+                    <target actions="//@actions.14">
+                      <outcoming intent="//@intents.9">
+                        <target actions="//@actions.14">
+                          <outcoming intent="//@intents.9">
+                            <target actions="//@actions.14">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.8">
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.4"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.14">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.6">
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.5">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.10">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.4"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.9"/>
+  </flows>
+  <flows intent="//@intents.10"/>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Mint-Events-Lead-Gen-bot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="namaskar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wassup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="namaste"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey How are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello How are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hrllo"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tata"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="acha to hum chalte hain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks, bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="End"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="haan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sahi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="na"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="naa"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="filler">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hmm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="acha"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="interesting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hehe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="9560833330"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my phone number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="9560833330"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="vansh@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="vansh@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="va@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="vansh@cmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="vanshkapil@email.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="sachi@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="v@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="sachin@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="vansh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="vansh Kapil"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="Sachin Tendulkar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="Robin Singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="sucheta"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email id is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="vansh87493@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="surbhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="sourav duggal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="duggal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="tendulkar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="1234567890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="9876543211"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="tendu@st.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="babbar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="babbar singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="9876543455"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="singh@babbar.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="bilbo babins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="VVS Laxman"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="don"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="khgf@gmai.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="9876543456"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="kapil"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="8765432112"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="kap@cmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ganpat "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="Singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="8765433336"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="gs@yahoo.com"/>
+      </inputs>
+    </inputs>
+    <parameters name="visitor_phone_number" entity="//@entities.0"/>
+    <parameters name="visitor_email" entity="//@entities.1"/>
+    <parameters name="visitor_name"/>
+  </intents>
+  <intents name="chitchat/ask_abuse">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="behenchod"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="kutte"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="kamine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bhosdike"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fuck"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="harami"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lodu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lund"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="chut"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fuck you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="idiot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stupid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you crazy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who you fucking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who fucked you."/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="chitchat/ask_bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are you ?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="exhibitions">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you do "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="exhibitions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to enquire about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="exhibitions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/exhibitions{&quot;visitor_event_type&quot;:&quot;exhibitions&quot;}"/>
+      </inputs>
+    </inputs>
+    <parameters name="visitor_event_type"/>
+  </intents>
+  <intents name="weddings">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you do "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="weddings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/weddings{&quot;visitor_event_type&quot;:&quot;weddings&quot;}"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weddings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you do weddings"/>
+      </inputs>
+    </inputs>
+    <parameters name="visitor_event_type"/>
+  </intents>
+  <intents name="corporate">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you do "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="corporate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/corporate{&quot;visitor_event_type&quot;:&quot;corporate&quot;}"/>
+      </inputs>
+    </inputs>
+    <parameters name="visitor_event_type"/>
+  </intents>
+  <intents name="start">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="START"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start it"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="chitchat">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge"/>
+  <intents name="forminform"/>
+  <intents name="formexhibitions"/>
+  <entities name="visitor_phone_number">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="^[6-9]\d{9}$"/>
+    </inputs>
+  </entities>
+  <entities name="visitor_email">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="[^@]+@[^@]+.[^@]+"/>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:Image" name="utter_wedding_ack_img" URL="https://youtu.be/WFd3XLkXY_c" caption="Wonderful, you came to the right place. We integrate Indian traditions with modern flavours. &#xA;&#xA; Check out this quick video "/>
+  <actions xsi:type="generator:Image" name="utter_greet_img" URL="https://minteventz.com/wp-content/uploads/2020/01/logo.png" caption="Hi, Welcome to Mint Eventz Company. &#xA;&#xA; We are India's premiere event management company."/>
+  <actions xsi:type="generator:Empty" name="respond_chitchat_empty"/>
+  <actions xsi:type="generator:Image" name="utter_exhibitions_ack_img" URL="https://minteventz.com/wp-content/uploads/2020/02/man-beside-flat-screen-television-with-photos-background-716276-copy.jpg" caption="Mint Eventz&#x2019;s vision is of organizing exhibition is We are in the business where you do the business! "/>
+  <actions xsi:type="generator:Text" name="utter_ask_visitor_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="May I ask what's your name?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ok_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hmm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_phone_number_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This phone number is invalid. Please enter a 10 digit number without country code and spaces. (for eg 9563839843)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_eventwelcome_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_visitor_phone_number_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Before we move forward, please share your mobile number"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_visitor_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and your email id"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_visitor_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This email is invalid. Please retry."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_visitor_event_type_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" Ok {visitor_name}, &#xA;&#xA; Please tell me how may I help you? We have expertise in "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey, I am just a bot"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_request_question_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please ask if you have any specific questions"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_corporate_ack_img" URL="https://minteventz.com/wp-content/uploads/2020/02/image_2020_02_05T22_18_58_965Z.png" caption=" Mint Eventz Company offers the most exotic locales and destinations for MICE events. Inland domestic destinations to the most exotic foreign locations Mint Eventz Company offers End-2-End solutions."/>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I did not understand that."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.11">
+    <target actions="//@actions.1 //@actions.7 //@actions.0 //@actions.15 //@actions.3">
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.8"/>
+      </outcoming>
+      <outcoming intent="//@intents.10">
+        <target actions="//@actions.7"/>
+      </outcoming>
+      <outcoming intent="//@intents.12">
+        <target actions="//@actions.2 //@actions.7">
+          <outcoming intent="//@intents.14">
+            <target actions="//@actions.17">
+              <outcoming intent="//@intents.14">
+                <target actions="//@actions.17">
+                  <outcoming intent="//@intents.15">
+                    <target actions="//@actions.7"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.9">
+        <target actions="//@actions.7"/>
+      </outcoming>
+      <outcoming intent="//@intents.8">
+        <target actions="//@actions.7"/>
+      </outcoming>
+      <outcoming intent="//@intents.14">
+        <target actions="//@actions.17">
+          <outcoming intent="//@intents.14">
+            <target actions="//@actions.17">
+              <outcoming intent="//@intents.14">
+                <target actions="//@actions.7"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.13">
+    <target actions="//@actions.13"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

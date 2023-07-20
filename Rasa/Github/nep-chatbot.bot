@@ -1,0 +1,222 @@
+Chatbot "nep-chatbot" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		hlo ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+start :
+	inputs in en {
+		start
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		"I want to something different"
+}
+
+nep_intro :
+	inputs in en {
+		"what is nep" ,
+		"what do you know about nep" ,
+		"tell me about nep" ,
+		"tell me new education policy" ,
+		"what is new education policy of india"
+}
+
+nep_history :
+	inputs in en {
+		"what is history of education policy" ,
+		"what is previous education policy" ,
+		"what is history of nep" ,
+		"tell me about history of nep"
+}
+
+nep_why :
+	inputs in en {
+		"what is the aim of nep" ,
+		"tell me about goal of nep" ,
+		"why is new education policy" ,
+		"why nep in india" ,
+		"can you tell me different about nep" ,
+		"can you tell me about goal of nep"
+}
+
+nep_more :
+	inputs in en {
+		"what is more about nep" ,
+		"tell me more about nep" ,
+		"do you know more about that"
+}
+
+nep_foreign :
+	inputs in en {
+		"is that true foreign university set up in india" ,
+		"what about foreign college" ,
+		"why is foreign university in india" ,
+		"tell me about foreign policy in nep"
+}
+
+nep_school :
+	inputs in en {
+		"what is the effect on school students" ,
+		"tell me about effect on school student" ,
+		"what changes in school" ,
+		"what will impact on schools" ,
+		"higher education" ,
+		school
+}
+
+nep_bachelor :
+	inputs in en {
+		"what will impact on bachelor" ,
+		"tell me bachelor course" ,
+		"what changes in bachelor course" ,
+		"what will the effect if i am college going student" ,
+		"tell me about effect on bachelor degree" ,
+		college
+}
+
+nep_mphill :
+	inputs in en {
+		"what will impact on mphill course" ,
+		"tell me about mphill in nep" ,
+		"what change in mphill programme" ,
+		"tell me about effect on mphill degree"
+}
+
+nep_uniqueness :
+	inputs in en {
+		"what is unique in nep" ,
+		"is anything different in nep" ,
+		"tell me about uniqueness of nep"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		thanks ,
+		soon ,
+		excellent ,
+		wonderful ,
+		ok
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?" ,
+		"Who are you?"
+}
+
+actions :
+	Text response utter_nep_bachelor_text :
+		inputs in en {
+			"Under this proposed 4-year programme, students can exit, • After one year with a certificate, • After two years with a diploma, and • After three years with a bachelor’s degree. • Four-year bachelor’s programmes generally include a certain amount of research work. Therefore, the student will get deeper knowledge in the subject s/he decides to major in. After four years, a UG student could enter a research degree programme directly depending on how well s/he has performed. However, master’s degree programmes will continue to function as they do, following which student may do a PhD. "
+	}
+	Text response utter_affirm_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! I am NEP bot. I am here to tell you about the New Education Policy. I can tell you about - Aim of NEP.  History of NEP. Foreign universities in nep. bachelor’s course in nep. MPhil course in nep unique in nep and more about nep.  So what do you want to know."
+	}
+	Text response utter_nep_why_text :
+		inputs in en {
+			": New Policy aims for Universalization of Education from pre-school to secondary level with 100 % GER in school education by 2030 Policy aims to transform India into a vibrant knowledge society. The Policy focuses on making India global knowledge superpower by making both school and college education more holistic, flexible, multidisciplinary, suited to 21st century needs. Ultimately the reforms are aimed at bringing out the unique capabilities of each student. "
+	}
+	Text response utter_nep_more_text :
+		inputs in en {
+			"School education - The new NEP focuses on overhauling the curriculum and easier Board exams. It also focused on a reduction in the syllabus to retain core essentials and thrust on experiential learning and critical thinking. It pitches for a “5+3+3+4” design of school education in the place of a “10+2” structure. This design will be corresponding to age groups 3-8 years (foundational stage), 8-11 (preparatory), 11-14 (middle), and 14-18 (secondary). This brings early childhood education (pre-school education for children of ages 3 to 5) under the ambit of formal schooling. The mid-day meal programme will be extended to pre-school children. The NEP says students until Class 5 should be taught in their mother tongue or regional language. Higher education - The NEP proposes to open up Indian higher education to foreign universities. It proposes to dismantle the UGC and the All India Council for Technical Education (AICTE). It proposes to introduce a 4-year multidisciplinary UG programme with multiple exit options, and discontinuation of the M Phil programme. It also proposes phasing out of all institutions offering single streams. It says that all universities and colleges must aim to become multidisciplinary by 2040. "
+	}
+	Text response utter_deny_text :
+		inputs in en {
+			"For more details Visit these links. https://iasbhai.com/national-education-policy-2020-upsc/ https://www.legacyias.com/national-education-policy-nep-2020/"
+	}
+	Text response utter_nep_intro_text :
+		inputs in en {
+			"It the New Education Policy approved by the Government of India recently making way for large scale, transformational reforms in both school and higher education sectors."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Thanks for visiting !!!.     For more details Visit these links. https://iasbhai.com/national-education-policy-2020-upsc/ https://www.legacyias.com/national-education-policy-nep-2020/"
+	}
+	Text response utter_nep_school_text :
+		inputs in en {
+			"The new NEP focuses on overhauling the curriculum and easier Board exams. It also focused on a reduction in the syllabus to retain core essentials and thrust on experiential learning and critical thinking. It pitches for a “5+3+3+4” design of school education in the place of a “10+2” structure. This design will be corresponding to age groups 3-8 years (foundational stage), 8-11 (preparatory), 11-14 (middle), and 14-18 (secondary). This brings early childhood education (pre-school education for children of ages 3 to 5) under the ambit of formal schooling. The mid-day meal programme will be extended to pre-school children. The NEP says students until Class 5 should be taught in their mother tongue or regional language."
+	}
+	Text response utter_nep_uniqueness_text :
+		inputs in en {
+			"MHRD has been renamed as Ministry of Education Higher Education Commission of India (HECI) will be set up as a single umbrella body for the entire higher education, excluding medical and legal education. HECI will be having four independent verticals namely, • National Higher Education Regulatory Council (NHERC) for regulation, • General Education Council (GEC) for standard setting, • Higher Education Grants Council (HEGC) for funding, • National Accreditation Council (NAC) for accreditation. "
+	}
+	Text response utter_start_text :
+		inputs in en {
+			"Hey! I am NEP bot. I am here to tell you about the New Education Policy. I can tell you about - Aim of NEP.  History of NEP. Foreign universities in nep. bachelor’s course in nep. MPhil course in nep unique in nep and more about nep.  So what do you want to know."
+	}
+	Text response utter_nep_foreign_text :
+		inputs in en {
+			"The document states universities from among the top 100 in the world will be able to set up campuses in India. The government may use the ‘QS World University Rankings’. "
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a NEP bot."
+	}
+	Text response utter_nep_mphill_text :
+		inputs in en {
+			"This would not affect the higher education trajectory at all. In normal course, after a master’s degree a student can register for a PhD programme. This is the current practice almost all over the world. In most universities, M Phil was a middle research degree between a master’s and a PhD. MPhil degrees have slowly been phased out in favour of a direct PhD programme. "
+	}
+	Text response utter_nep_history_text :
+		inputs in en {
+			"Parliament passed the first NEP in 1968. NEPs till now - In 1968, the first NEP came under the Prime Ministership of Indira Gandhi. In 1986, the second NEP came under Rajiv Gandhi (Revised in 1992). The third one is the NEP 2020 under Narendra Modi. "
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text ;
+	- user start => chatbot utter_start_text ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user nep_intro => chatbot utter_nep_intro_text ;
+	- user nep_history => chatbot utter_nep_history_text ;
+	- user nep_why => chatbot utter_nep_why_text ;
+	- user nep_more => chatbot utter_nep_more_text ;
+	- user nep_foreign => chatbot utter_nep_foreign_text ;
+	- user nep_school => chatbot utter_nep_school_text ;
+	- user nep_bachelor => chatbot utter_nep_bachelor_text ;
+	- user nep_mphill => chatbot utter_nep_mphill_text ;
+	- user nep_uniqueness => chatbot utter_nep_uniqueness_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user affirm => chatbot utter_affirm_text ;
+	- user deny => chatbot utter_deny_text ;
+

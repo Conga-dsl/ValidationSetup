@@ -1,0 +1,157 @@
+Chatbot "ml-data-bot" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+thanks :
+	inputs in en {
+		"Thank you so much" ,
+		Thanks ,
+		"Thank you" ,
+		"Thanks very much"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+inform :
+	inputs in en {
+		( titanic ) [ dataset ] ,
+		( "housing price" ) [ dataset ]
+	}
+	parameters :
+		dataset : entity text ;
+
+ask_stats :
+	inputs in en {
+		"How many " ( rows ) [ question_type ] " are there in dataset " ( "housing price" ) [ dataset ] "?" ,
+		"how many " ( columns ) [ question_type ] " are there in dataset " ( titanic ) [ dataset ] "?" ,
+		"I want to " ( "check null values" ) [ question_type ] " in dataset " ( titanic ) [ dataset ] "." ,
+		"Please " ( "delete null values" ) [ question_type ] " in dataset " ( titanic ) [ dataset ] "." ,
+		"Please " ( "remove null values" ) [ question_type ] " in dataset " ( "housing price" ) [ dataset ] "." ,
+		( "replace null values with mean" ) [ question_type ] " from " ( titanic ) [ dataset ] " dataset." ,
+		"what are the " ( "categorical columns" ) [ question_type ] " in " ( "housing price" ) [ dataset ] " dataset?" ,
+		"What are " ( "numerical columns" ) [ question_type ] " in " ( titanic ) [ dataset ] " dataset?" ,
+		"What are " ( "numeric columns" ) [ question_type ] " in " ( "housing price" ) [ dataset ] " dataset?" ,
+		( "Label encode" ) [ question_type ] " categorical columns in " ( titanic ) [ dataset ] " dataset." ,
+		( standardize ) [ question_type ] " numerical columns in " ( "housing price" ) [ dataset ] " dataset."
+	}
+	parameters :
+		question_type ,
+		dataset : entity text ;
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_ask_dataset_text :
+		inputs in en {
+			"What dataset you are talking about?" ,
+			"To find the information about " [ "ask_stats.question_type" ] ", I need the name of the dataset."
+	}
+	Empty response action_answer_empty
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user ask_stats => chatbot action_answer_empty , utter_ask_dataset_text {
+			=> user thanks => chatbot utter_goodbye_text ;
+			=> user inform => chatbot action_answer_empty {
+				=> user thanks => chatbot utter_goodbye_text ;
+			} ;
+		} ;
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

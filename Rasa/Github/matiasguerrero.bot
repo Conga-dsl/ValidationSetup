@@ -1,0 +1,71 @@
+Chatbot matiasguerrero language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		Hola ,
+		"Buen dia" ,
+		"Buenas tardes" ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening"
+}
+
+enviarJSON :
+	inputs in en {
+		"Te envio el JSON" ,
+		Enviado ,
+		"Te lo envie"
+}
+
+negacion :
+	inputs in en {
+		"No lo tengo" ,
+		"No lo envie"
+}
+
+enviarJSONORnegacion :
+
+actions :
+	Text response utter_lecturaUS_text :
+		inputs in en {
+			"Por favor enviame los tiempos de lectura de las US"
+	}
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_tiempoUS_text :
+		inputs in en {
+			"Me enviás los tiempos de finalización de las US?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_recursos_text :
+		inputs in en {
+			"Me enviás las interacciones con recursos?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_participmeet_text :
+		inputs in en {
+			"Enviame las participaciones en los meets de cada persona"
+	}
+	Empty response action_sendData_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Hasta luego" ,
+			Chau
+	}
+
+flows :
+	- user greet => chatbot utter_lecturaUS_text {
+		=> user enviarJSONORnegacion => chatbot action_sendData_empty , utter_tiempoUS_text { => user enviarJSONORnegacion => chatbot action_sendData_empty , utter_recursos_text { => user enviarJSONORnegacion => chatbot action_sendData_empty , utter_participmeet_text { => user enviarJSONORnegacion => chatbot action_sendData_empty , utter_goodbye_text ; } ; } ; } ;
+	} ;
+

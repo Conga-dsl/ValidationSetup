@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="nep-chatbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hlo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="start">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to something different"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_intro">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you know about nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me new education policy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is new education policy of india"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_history">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is history of education policy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is previous education policy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is history of nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about history of nep"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_why">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the aim of nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about goal of nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is new education policy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why nep in india"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me different about nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about goal of nep"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_more">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is more about nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you know more about that"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_foreign">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is that true foreign university set up in india"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what about foreign college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is foreign university in india"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about foreign policy in nep"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_school">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the effect on school students"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about effect on school student"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what changes in school"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will impact on schools"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="higher education"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="school"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_bachelor">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will impact on bachelor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me bachelor course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what changes in bachelor course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will the effect if i am college going student"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about effect on bachelor degree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="college"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_mphill">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will impact on mphill course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about mphill in nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what change in mphill programme"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about effect on mphill degree"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="nep_uniqueness">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is unique in nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is anything different in nep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about uniqueness of nep"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="soon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="excellent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are you?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_nep_bachelor_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Under this proposed 4-year programme, students can exit, &#x2022; After one year with a certificate, &#x2022; After two years with a diploma, and &#x2022; After three years with a bachelor&#x2019;s degree. &#x2022; Four-year bachelor&#x2019;s programmes generally include a certain amount of research work. Therefore, the student will get deeper knowledge in the subject s/he decides to major in. After four years, a UG student could enter a research degree programme directly depending on how well s/he has performed. However, master&#x2019;s degree programmes will continue to function as they do, following which student may do a PhD. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_affirm_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! I am NEP bot. I am here to tell you about the New Education Policy. I can tell you about - Aim of NEP.  History of NEP. Foreign universities in nep. bachelor&#x2019;s course in nep. MPhil course in nep unique in nep and more about nep.  So what do you want to know."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_why_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=": New Policy aims for Universalization of Education from pre-school to secondary level with 100 % GER in school education by 2030 Policy aims to transform India into a vibrant knowledge society. The Policy focuses on making India global knowledge superpower by making both school and college education more holistic, flexible, multidisciplinary, suited to 21st century needs. Ultimately the reforms are aimed at bringing out the unique capabilities of each student. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_more_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="School education - The new NEP focuses on overhauling the curriculum and easier Board exams. It also focused on a reduction in the syllabus to retain core essentials and thrust on experiential learning and critical thinking. It pitches for a &#x201c;5+3+3+4&#x201d; design of school education in the place of a &#x201c;10+2&#x201d; structure. This design will be corresponding to age groups 3-8 years (foundational stage), 8-11 (preparatory), 11-14 (middle), and 14-18 (secondary). This brings early childhood education (pre-school education for children of ages 3 to 5) under the ambit of formal schooling. The mid-day meal programme will be extended to pre-school children. The NEP says students until Class 5 should be taught in their mother tongue or regional language. Higher education - The NEP proposes to open up Indian higher education to foreign universities. It proposes to dismantle the UGC and the All India Council for Technical Education (AICTE). It proposes to introduce a 4-year multidisciplinary UG programme with multiple exit options, and discontinuation of the M Phil programme. It also proposes phasing out of all institutions offering single streams. It says that all universities and colleges must aim to become multidisciplinary by 2040. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_deny_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="For more details Visit these links. https://iasbhai.com/national-education-policy-2020-upsc/ https://www.legacyias.com/national-education-policy-nep-2020/"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_intro_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It the New Education Policy approved by the Government of India recently making way for large scale, transformational reforms in both school and higher education sectors."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for visiting !!!.     For more details Visit these links. https://iasbhai.com/national-education-policy-2020-upsc/ https://www.legacyias.com/national-education-policy-nep-2020/"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_school_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The new NEP focuses on overhauling the curriculum and easier Board exams. It also focused on a reduction in the syllabus to retain core essentials and thrust on experiential learning and critical thinking. It pitches for a &#x201c;5+3+3+4&#x201d; design of school education in the place of a &#x201c;10+2&#x201d; structure. This design will be corresponding to age groups 3-8 years (foundational stage), 8-11 (preparatory), 11-14 (middle), and 14-18 (secondary). This brings early childhood education (pre-school education for children of ages 3 to 5) under the ambit of formal schooling. The mid-day meal programme will be extended to pre-school children. The NEP says students until Class 5 should be taught in their mother tongue or regional language."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_uniqueness_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="MHRD has been renamed as Ministry of Education Higher Education Commission of India (HECI) will be set up as a single umbrella body for the entire higher education, excluding medical and legal education. HECI will be having four independent verticals namely, &#x2022; National Higher Education Regulatory Council (NHERC) for regulation, &#x2022; General Education Council (GEC) for standard setting, &#x2022; Higher Education Grants Council (HEGC) for funding, &#x2022; National Accreditation Council (NAC) for accreditation. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_start_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! I am NEP bot. I am here to tell you about the New Education Policy. I can tell you about - Aim of NEP.  History of NEP. Foreign universities in nep. bachelor&#x2019;s course in nep. MPhil course in nep unique in nep and more about nep.  So what do you want to know."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_foreign_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The document states universities from among the top 100 in the world will be able to set up campuses in India. The government may use the &#x2018;QS World University Rankings&#x2019;. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a NEP bot."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_mphill_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This would not affect the higher education trajectory at all. In normal course, after a master&#x2019;s degree a student can register for a PhD programme. This is the current practice almost all over the world. In most universities, M Phil was a middle research degree between a master&#x2019;s and a PhD. MPhil degrees have slowly been phased out in favour of a direct PhD programme. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_nep_history_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Parliament passed the first NEP in 1968. NEPs till now - In 1968, the first NEP came under the Prime Ministership of Indira Gandhi. In 1986, the second NEP came under Rajiv Gandhi (Revised in 1992). The third one is the NEP 2020 under Narendra Modi. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2"/>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.10"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.7"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.14"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.3"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.4"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.0"/>
+  </flows>
+  <flows intent="//@intents.10">
+    <target actions="//@actions.13"/>
+  </flows>
+  <flows intent="//@intents.11">
+    <target actions="//@actions.9"/>
+  </flows>
+  <flows intent="//@intents.14">
+    <target actions="//@actions.12"/>
+  </flows>
+  <flows intent="//@intents.12">
+    <target actions="//@actions.1"/>
+  </flows>
+  <flows intent="//@intents.13">
+    <target actions="//@actions.5"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

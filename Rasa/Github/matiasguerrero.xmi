@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="matiasguerrero">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hola"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buen dia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buenas tardes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="enviarJSON">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Te envio el JSON"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Enviado"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Te lo envie"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="negacion">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No lo tengo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No lo envie"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="enviarJSONORnegacion"/>
+  <actions xsi:type="generator:Text" name="utter_lecturaUS_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Por favor enviame los tiempos de lectura de las US"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_tiempoUS_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Me envi&#xe1;s los tiempos de finalizaci&#xf3;n de las US?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_recursos_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Me envi&#xe1;s las interacciones con recursos?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_participmeet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Enviame las participaciones en los meets de cada persona"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_sendData_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hasta luego"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Chau"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.0">
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.7 //@actions.2">
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.7 //@actions.4">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.7 //@actions.6">
+                  <outcoming intent="//@intents.3">
+                    <target actions="//@actions.7 //@actions.8"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="MADE-dialog">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thanks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that was helpful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you very much"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="statistics_get">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my stats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="study_hours_stats_get">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics about study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats about study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics about study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics about study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my stats about study"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics about study"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats about study"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics about study"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics about study"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my study hours rates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my study hours rates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me study hours rates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study hours statistics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study hours stats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study hours rates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my study statistics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics about study hours for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats about study hours for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics about study hours for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics about study hours for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my stats about study for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics about study for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats about study for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics about study for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics about study for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my study hours rates for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my study hours rates for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me study hours rates for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study hours statistics for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study hours stats for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study hours rates for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my study statistics for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="weak"/>
+      </inputs>
+    </inputs>
+    <parameters name="period"/>
+  </intents>
+  <intents name="weight_stats_get">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weight statistics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weight stats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my weight statistics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my weight stats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics about weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats about weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics about weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics about weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weight statistics for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weight stats for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my weight statistics for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my weight stats for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my statistics about weight for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me stats about weight for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="weak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my statistics about weight for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="month"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my statistics about weight for the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="weak"/>
+      </inputs>
+    </inputs>
+    <parameters name="period"/>
+  </intents>
+  <intents name="record_write">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create record"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create new record"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write a record"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create record"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create new record"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write a record"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="intent_weight_write">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create record about weigh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create new record of my weigh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write a weigh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my weigh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create record with a weight"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="intent_study_hours_write">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create record about study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create new record of my study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write a study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my study hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create record with a study hours"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="weight_write">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my weight is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="99"/>
+        <tokens xsi:type="generator:Literal" text=" kg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my weight is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="101"/>
+        <tokens xsi:type="generator:Literal" text=" kilograms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="100"/>
+        <tokens xsi:type="generator:Literal" text=" kg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="98"/>
+        <tokens xsi:type="generator:Literal" text=" kilograms"/>
+      </inputs>
+    </inputs>
+    <parameters name="weight" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="study_hours_write">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i've studied "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i have studied "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+    </inputs>
+    <parameters name="study_hours" defaultEntity="NUMBER"/>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_weight_stats_get_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Over the past "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.5/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=", the weight loss rate has increased. 15 kg remained to the target."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_record_write_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of record do you want to write?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_intent_weight_write_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your weight?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_statistics_get_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of statistics do you want to get?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_weight_write_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Record created successfully."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_context_date_empty"/>
+  <actions xsi:type="generator:Text" name="utter_intent_study_hours_write_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much time did you study?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_thanks_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You are welcome."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_study_hours_stats_get_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="20% more study time than planned this "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.0"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_study_hours_write_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Record created successfully."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.3">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.1">
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.2">
+              <outcoming intent="//@intents.9">
+                <target actions="//@actions.5">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.8">
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.10"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.8">
+            <target actions="//@actions.7">
+              <outcoming intent="//@intents.10">
+                <target actions="//@actions.11">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.8">
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.10"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.4">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.9">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.8">
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.10"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.8">
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.10"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

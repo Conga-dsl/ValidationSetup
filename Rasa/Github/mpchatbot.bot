@@ -1,0 +1,165 @@
+Chatbot mpchatbot language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		"thank you bye"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+expert_mentoring :
+	inputs in en {
+		"I need expert mentoring." ,
+		"expert mentoring details" ,
+		"details related to expert mentoring please" ,
+		"expert mentoring" ,
+		"expert mentoring please" ,
+		"expert mentoring needed" ,
+		"okay, i need expert mentoring" ,
+		"expert mentoring is needed" ,
+		"need to find a mentor" ,
+		mentoring ,
+		"Need expert mentoring"
+}
+
+expert_AI :
+	inputs in en {
+		AI ,
+		"Artificial Intelligence" ,
+		"in AI" ,
+		"in Artificial intelligence" ,
+		"related to AI" ,
+		"what about AI" ,
+		ai
+}
+
+student_discount :
+	inputs in en {
+		"Do you provide student discounts?" ,
+		"student discounts?" ,
+		"are student discount provided?" ,
+		"do you have student discounts?" ,
+		"discounts for students?" ,
+		"are discounts for students available?" ,
+		"i want to know if you guys provide student discounts?"
+}
+
+expert_ML :
+	inputs in en {
+		"need expert mentoring in machine learning" ,
+		"machine learning" ,
+		ml ,
+		"machine learning expert mentoring" ,
+		"expert mentoring ml" ,
+		"expert mentoring machine learning" ,
+		"expert mentoring in ML please" ,
+		ML ,
+		"i want mentoring in ml"
+}
+
+connect_agent :
+	inputs in en {
+		"please connect me to a person" ,
+		"connect me to person" ,
+		"please connect me to an agent" ,
+		"connect to an agent" ,
+		"i want to talk to an agent" ,
+		"i want to talk to a person" ,
+		"transfer my chat to a person" ,
+		"transfer my chat to an agent"
+}
+
+utter_expert_ML_details :
+
+actions :
+	Text response utter_connect_agent_text :
+		inputs in en {
+			"Sorry, currently no agents are available. You can email us at support@mentorplanet.in with your queries and we will get back to you within 24-48 hours."
+	}
+	Text response utter_expert_ML_details_text :
+		inputs in en {
+			"That\'s a great choice! Following are the details related to expert mentoring in ML."
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! Welcome to MentorPlanet! How can I help you today?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_expert_mentoring_details_text :
+		inputs in en {
+			"In which domain are you looking for expert mentoring?"
+	}
+	Empty response expert_ML_empty
+	Text response utter_expert_AI_details_text :
+		inputs in en {
+			"That\'s a great choice! Following are the details related to expert mentoring in AI."
+	}
+	Text response utter_student_discount_text :
+		inputs in en {
+			"Yes, we do provide a 15% discount on all of our courses upon verification of student role."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user expert_mentoring => chatbot utter_expert_mentoring_details_text {
+			=> user expert_AI => chatbot utter_expert_AI_details_text ;
+		} ;
+		=> user student_discount => chatbot utter_student_discount_text {
+			=> user expert_mentoring => chatbot utter_expert_mentoring_details_text { => user expert_AI => chatbot utter_expert_AI_details_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ;
+		} ;
+		=> user expert_ML => chatbot utter_expert_ML_details_text ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user student_discount => chatbot utter_student_discount_text ;
+	- user utter_expert_ML_details => chatbot expert_ML_empty ;
+	- user connect_agent => chatbot utter_connect_agent_text ;
+

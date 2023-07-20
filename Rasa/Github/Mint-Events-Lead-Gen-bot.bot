@@ -1,0 +1,287 @@
+Chatbot "Mint-Events-Lead-Gen-bot" language : en
+
+intents :
+
+	greet :
+		inputs in en {
+			hey ,
+			hello ,
+			^hi ,
+			"good morning" ,
+			"good evening" ,
+			"hey there" ,
+			namaskar ,
+			wassup ,
+			namaste ,
+			"whats up" ,
+			"hey How are you" ,
+			"hello How are you" ,
+			"hi there" ,
+			Hrllo
+	}
+
+	goodbye :
+		inputs in en {
+			bye ,
+			goodbye ,
+			"see you around" ,
+			"see you later" ,
+			tata ,
+			"ok bye" ,
+			"acha to hum chalte hain" ,
+			"thanks, bye" ,
+			Stop ,
+			End
+	}
+
+	affirm :
+		inputs in en {
+			yes ,
+			indeed ,
+			"of course" ,
+			"that sounds good" ,
+			correct ,
+			yeah ,
+			ya ,
+			haan ,
+			sahi
+	}
+
+	deny :
+		inputs in en {
+			^no ,
+			never ,
+			"I don\'t think so" ,
+			"don\'t like that" ,
+			"no way" ,
+			"not really" ,
+			na ,
+			naa ,
+			nope
+	}
+
+	filler :
+		inputs in en {
+			ok ,
+			hmm ,
+			acha ,
+			good ,
+			interesting ,
+			wow ,
+			Hehe ,
+			Ok ,
+			nothing
+	}
+
+	inform :
+		inputs in en {
+			( "9560833330" ) [ visitor_phone_number ] ,
+			"my phone number is " ( "9560833330" ) [ visitor_phone_number ] ,
+			( "vansh@gmail.com" ) [ visitor_email ] ,
+			"my email is " ( "vansh@gmail.com" ) [ visitor_email ] ,
+			( "va@gmail.com" ) [ visitor_email ] ,
+			( "vansh@cmail.com" ) [ visitor_email ] ,
+			( "vanshkapil@email.com" ) [ visitor_email ] ,
+			( "sachi@gmail.com" ) [ visitor_email ] ,
+			( "v@gmail.com" ) [ visitor_email ] ,
+			( "sachin@gmail.com" ) [ visitor_email ] ,
+			( vansh ) [ visitor_name ] ,
+			( "vansh Kapil" ) [ visitor_name ] ,
+			( "Sachin Tendulkar" ) [ visitor_name ] ,
+			"I am " ( "Robin Singh" ) [ visitor_name ] ,
+			"my name is " ( sucheta ) [ visitor_name ] ,
+			"my email id is " ( "vansh87493@gmail.com" ) [ visitor_email ] ,
+			( surbhi ) [ visitor_name ] ,
+			( "sourav duggal" ) [ visitor_name ] ,
+			( duggal ) [ visitor_name ] ,
+			( tendulkar ) [ visitor_name ] ,
+			( "1234567890" ) [ visitor_phone_number ] ,
+			( "9876543211" ) [ visitor_phone_number ] ,
+			( "tendu@st.com" ) [ visitor_email ] ,
+			( babbar ) [ visitor_name ] ,
+			( "babbar singh" ) [ visitor_name ] ,
+			( "9876543455" ) [ visitor_phone_number ] ,
+			( "singh@babbar.com" ) [ visitor_email ] ,
+			( "bilbo babins" ) [ visitor_name ] ,
+			( "VVS Laxman" ) [ visitor_name ] ,
+			( don ) [ visitor_name ] ,
+			( "khgf@gmai.com" ) [ visitor_email ] ,
+			( "9876543456" ) [ visitor_phone_number ] ,
+			( kapil ) [ visitor_name ] ,
+			( "8765432112" ) [ visitor_phone_number ] ,
+			( "kap@cmail.com" ) [ visitor_email ] ,
+			"Ganpat " ( Singh ) [ visitor_name ] ,
+			( "8765433336" ) [ visitor_phone_number ] ,
+			( "gs@yahoo.com" ) [ visitor_email ]
+		}
+		parameters :
+			visitor_phone_number : entity visitor_phone_number ;
+			visitor_email : entity visitor_email ;
+			visitor_name : entity text ;
+
+	"chitchat/ask_abuse" :
+		inputs in en {
+			bc ,
+			behenchod ,
+			kutte ,
+			kamine ,
+			bhosdike ,
+			fuck ,
+			dog ,
+			harami ,
+			lodu ,
+			lund ,
+			chut ,
+			"fuck you" ,
+			idiot ,
+			stupid ,
+			"are you crazy" ,
+			"who you fucking" ,
+			"who fucked you."
+	}
+
+	"chitchat/ask_bot_challenge" :
+		inputs in en {
+			"are you a bot?" ,
+			"are you a human?" ,
+			"am I talking to a bot?" ,
+			"am I talking to a human?" ,
+			"Who are you ?"
+	}
+
+	exhibitions :
+		inputs in en {
+			"do you do " ( exhibitions ) [ visitor_event_type ] ,
+			"I want to enquire about " ( exhibitions ) [ visitor_event_type ] ,
+			"/exhibitions{\"visitor_event_type\":\"exhibitions\"}"
+		}
+		parameters :
+			visitor_event_type : entity text ;
+
+	weddings :
+		inputs in en {
+			"do you do " ( weddings ) [ visitor_event_type ] ,
+			"/weddings{\"visitor_event_type\":\"weddings\"}" ,
+			weddings ,
+			"do you do weddings"
+		}
+		parameters :
+			visitor_event_type : entity text ;
+
+	corporate :
+		inputs in en {
+			"do you do " ( corporate ) [ visitor_event_type ] ,
+			"/corporate{\"visitor_event_type\":\"corporate\"}"
+		}
+		parameters :
+			visitor_event_type : entity text ;
+
+	start :
+		inputs in en {
+			start ,
+			Start ,
+			START ,
+			"start it"
+	}
+
+	chitchat :
+		inputs in en {
+			"are you a bot"
+	}
+
+	bot_challenge :
+
+	forminform :
+
+	formexhibitions :
+
+entities :
+	Regex entity visitor_phone_number :
+		inputs in en {
+			pattern : "^[6-9]\\d{9}$"
+	}
+	Regex entity visitor_email :
+		inputs in en {
+			pattern : "[^@]+@[^@]+.[^@]+"
+	}
+
+actions :
+	mage response utter_wedding_ack_img :
+		URL : "https://youtu.be/WFd3XLkXY_c"
+		caption : "Wonderful, you came to the right place. We integrate Indian traditions with modern flavours. \n\n Check out this quick video "
+	mage response utter_greet_img :
+		URL : "https://minteventz.com/wp-content/uploads/2020/01/logo.png"
+		caption : "Hi, Welcome to Mint Eventz Company. \n\n We are India\'s premiere event management company."
+	Empty response respond_chitchat_empty
+	mage response utter_exhibitions_ack_img :
+		URL : "https://minteventz.com/wp-content/uploads/2020/02/man-beside-flat-screen-television-with-photos-background-716276-copy.jpg"
+		caption : "Mint Eventz’s vision is of organizing exhibition is We are in the business where you do the business! "
+	Text response utter_ask_visitor_name_text :
+		inputs in en {
+			"May I ask what\'s your name?"
+	}
+	Text response utter_ok_text :
+		inputs in en {
+			okay ,
+			hmm ,
+			alright
+	}
+	Text response utter_wrong_phone_number_text :
+		inputs in en {
+			"This phone number is invalid. Please enter a 10 digit number without country code and spaces. (for eg 9563839843)"
+	}
+	Empty response action_eventwelcome_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_ask_visitor_phone_number_text :
+		inputs in en {
+			"Before we move forward, please share your mobile number"
+	}
+	Text response utter_ask_visitor_email_text :
+		inputs in en {
+			"and your email id"
+	}
+	Text response utter_wrong_visitor_email_text :
+		inputs in en {
+			"This email is invalid. Please retry."
+	}
+	Text response utter_ask_visitor_event_type_text :
+		inputs in en {
+			" Ok {visitor_name}, \n\n Please tell me how may I help you? We have expertise in "
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"Hey, I am just a bot"
+	}
+	Text response utter_request_question_text :
+		inputs in en {
+			"Please ask if you have any specific questions"
+	}
+	mage response utter_corporate_ack_img :
+		URL : "https://minteventz.com/wp-content/uploads/2020/02/image_2020_02_05T22_18_58_965Z.png"
+		caption : " Mint Eventz Company offers the most exotic locales and destinations for MICE events. Inland domestic destinations to the most exotic foreign locations Mint Eventz Company offers End-2-End solutions."
+	Text response utter_default_text :
+		inputs in en {
+			"Sorry, I did not understand that."
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user "chitchat/ask_abuse" => chatbot DefaultEmptyAction ;
+	- user "chitchat/ask_bot_challenge" => chatbot DefaultEmptyAction ;
+	- user start => chatbot utter_greet_img , action_eventwelcome_empty , utter_wedding_ack_img , utter_corporate_ack_img , utter_exhibitions_ack_img {
+		=> user goodbye => chatbot utter_goodbye_text ;
+		=> user corporate => chatbot action_eventwelcome_empty ;
+		=> user chitchat => chatbot respond_chitchat_empty , action_eventwelcome_empty {
+			=> user forminform => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user formexhibitions => chatbot action_eventwelcome_empty ; } ; } ;
+		} ;
+		=> user weddings => chatbot action_eventwelcome_empty ;
+		=> user exhibitions => chatbot action_eventwelcome_empty ;
+		=> user forminform => chatbot DefaultEmptyAction {
+			=> user forminform => chatbot DefaultEmptyAction { => user forminform => chatbot action_eventwelcome_empty ; } ;
+		} ;
+	} ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

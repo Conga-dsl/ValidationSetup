@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="QuizWithRasa">
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="game_answer">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok, i choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would t"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text="ke a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="maybe it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how a"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+        <tokens xsi:type="generator:Literal" text="out b"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="m"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text="ybe a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i think it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+        <tokens xsi:type="generator:Literal" text=" is the answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="only "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's easy, it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no br"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text="iner! the answer is a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text="m 100% sure the correct answer is a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ah, of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+        <tokens xsi:type="generator:Literal" text="ourse i mean c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this one is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+        <tokens xsi:type="generator:Literal" text=" maybe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i think it's 4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure it h"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text="s to be a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i think it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+        <tokens xsi:type="generator:Literal" text=", right?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="b"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="its "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="a"/>
+      </inputs>
+    </inputs>
+    <parameters name="answer_option"/>
+  </intents>
+  <intents name="game_start">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to play a game."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's play a game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play a game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lets start playing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can we start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let us start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok, let's begin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lass uns starten"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok, lass uns starten"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good, lets start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's start a game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok, let's start a game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start a quiz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lets start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lets start a quiz"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="game_mode">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I will pick "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="open"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="open"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="open"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to play in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="open"/>
+        <tokens xsi:type="generator:Literal" text=" mode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="open"/>
+        <tokens xsi:type="generator:Literal" text=" questions open"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to choose a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="topic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="topics"/>
+      </inputs>
+    </inputs>
+    <parameters name="game_mode"/>
+  </intents>
+  <intents name="game_topics">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="NLU"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Dialogflow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Rasa"/>
+        <tokens xsi:type="generator:Literal" text=" sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="NLU"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I prefer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Dialogflow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Rasa"/>
+        <tokens xsi:type="generator:Literal" text=" would be a nice start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aehm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="NLU"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Dialogflow"/>
+        <tokens xsi:type="generator:Literal" text=" for sure"/>
+      </inputs>
+    </inputs>
+    <parameters name="game_topic"/>
+  </intents>
+  <intents name="bot_challenge"/>
+  <intents name="game_topicIntent"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome to my quiz! Do you need instructions or can we start?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_game_topic_chosen_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="NLU question are a good pick!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_game_start_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Want to play a specific topic or jus"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_game_mode_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want questions from a specific subject?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_game_result_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You lost!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_game_question_empty"/>
+  <actions xsi:type="generator:Text" name="utter_game_round_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, here is round X!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_game_answer_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wrong, the answer is 42!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hell yeah, 42 is correct."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no, XYZ is not a number - idot!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_game_topic_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want to play &quot;NLU&quot;, &quot;Rasa&quot; or &quot;Dialogflow&quot;?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_answer_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, didn't get that. Do you choose a, b, or c?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.12"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.1">
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.5">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.10 //@actions.9 //@actions.3 //@actions.13">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.11 //@actions.7"/>
+              </outcoming>
+              <outcoming intent="//@intents.9">
+                <target actions="//@actions.3 //@actions.10 //@actions.9">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.11 //@actions.7"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

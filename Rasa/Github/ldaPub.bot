@@ -1,0 +1,498 @@
+Chatbot ldaPub language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+greet_ar :
+	inputs in en {
+		"Ù‡Ø§ÙŠ" ,
+		"Ù…Ø±ØØ¨Ø§" ,
+		"Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…" ,
+		"Ù…Ø³Ø§ Ø§Ù„Ø®ÙŠØ±" ,
+		"Ù…Ø³Ø§ Ø§Ù„ÙˆØ±Ø¯" ,
+		"ØµØ¨Ø§Ø Ø§Ù„Ø®ÙŠØ±"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+goodbye_ar :
+	inputs in en {
+		"Ø¨Ø§ÙŠ" ,
+		"Ù…Ø¹ Ø§Ù„Ø³Ù„Ø§Ù…Ø©" ,
+		"Ø´ÙƒØ±Ø§" ,
+		"ÙŠØ¹Ø·ÙŠÙƒ Ø§Ù„Ø¹Ø§Ù�ÙŠØ©" ,
+		"Ù…Ø´ÙƒÙˆØ±" ,
+		"Ù…Ø§ Ù‚ØµØ±Øª"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+affirm_ar :
+	inputs in en {
+		"ÙŠØ³" ,
+		"Ø§Ù‡" ,
+		"Ù†Ø¹Ù…" ,
+		"Ø·Ø¨Ø¹Ø§" ,
+		"ØµØÙŠØ"
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+deny_ar :
+	inputs in en {
+		"Ù†Ùˆ" ,
+		"Ø§Ø¨Ø¯Ø§" ,
+		"Ù…Ø§ Ø§Ø¹ØªÙ‚Ø¯" ,
+		"Ù„Ø§" ,
+		"Ù…Ø³ØªØÙŠÙ„"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_great_ar :
+	inputs in en {
+		"Ù…Ù…ØªØ§Ø²" ,
+		"ÙƒÙˆÙŠØ³" ,
+		"Ø§Ù„ØÙ…Ø¯Ù„Ù„Ù‡" ,
+		"Ø¨Ø®ÙŠØ±"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+mood_unhappy_ar :
+	inputs in en {
+		"ØØ²ÙŠÙ†" ,
+		"Ù…Ø´ ÙƒÙˆÙŠØ³" ,
+		"Ø²Ø¹Ù„Ø§Ù†" ,
+		"Ù…Ø´ Ù…Ø¨Ø³ÙˆØ·" ,
+		"Ù…Ø¨ Ø³Ø¹ÙŠØ¯" ,
+		"Ø²Ù‚"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+bot_challenge_ar :
+	inputs in en {
+		"Ù‡Ù„ Ø§Ù†Øª Ø±ÙˆØ¨ÙˆØª ØŸ" ,
+		"Ø§Ù†Øª Ø¨Ø´Ø± ØŸ" ,
+		"Ø§Ù†Ø§ Ø§ÙƒÙ„Ù… Ù…ÙŠÙ† ØŸ" ,
+		"Ø§Ù†Øª Ø§Ø¯Ù…ÙŠ ÙˆÙ„Ø§ Ø§Ù„Ø© ØŸ"
+}
+
+salary :
+	inputs in en {
+		"what is my salary" ,
+		"my salary" ,
+		"how much do i take ?" ,
+		"how much i\'m paid ?" ,
+		"what is my annual salary ?" ,
+		"can i know my salary ?" ,
+		salary ,
+		"show me my salary please"
+}
+
+paySlip :
+	inputs in en {
+		"what is my payslip ?" ,
+		"my payslip at the end of FEB" ,
+		"what is my payslip at 30/7/2020" ,
+		"my payslip ?" ,
+		"can you show me my payslip ?" ,
+		"give me my salary details" ,
+		"what are my salaries" ,
+		"can i see my salaries details ?" ,
+		payslip
+}
+
+absences_balance :
+	inputs in en {
+		"my absences balance" ,
+		"my vacation balance" ,
+		"my leaves balance" ,
+		"how many remaining leaves do i have ?" ,
+		"how many vacations do i have ?" ,
+		"how many leave did i take ?" ,
+		"can i know my absences balance ?" ,
+		"absences balance"
+}
+
+employee_information :
+	inputs in en {
+		"what is my phone number ?" ,
+		"what is my email ?" ,
+		"what is my name ?" ,
+		"what information do you have about me ?" ,
+		"what do you know about me ?" ,
+		"my information" ,
+		"my details" ,
+		"what are my personal information" ,
+		"personal information"
+}
+
+bankAcc_information :
+	inputs in en {
+		"what is my bank account ?" ,
+		"can i know which bank i use ?" ,
+		"bank details" ,
+		"my bank details" ,
+		"what is my bank ?" ,
+		bank
+}
+
+employees_attendance_for_Manager :
+	inputs in en {
+		"employees otl" ,
+		"show me my employees attendance times" ,
+		"when did my employee come ?" ,
+		"attendance times" ,
+		attendance ,
+		"otl records" ,
+		otl
+}
+
+notification_for_manager :
+	inputs in en {
+		"show me my notifications" ,
+		"my notifications" ,
+		"do i have something to approve ?" ,
+		"do i have something to reject ?" ,
+		"do i have any notifications ?" ,
+		"is there any pending actions from me ?" ,
+		notifications
+}
+
+salary_ar :
+	inputs in en {
+		"Ø§Ø¨ØºÙ‰ Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø¨Ø¯ÙŠ Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"ÙƒÙ… Ø±Ø§ØªØ¨ÙŠ" ,
+		"Ø±Ø§ØªØ¨ÙŠ Ø§Ù„Ø´Ù‡Ø±ÙŠ" ,
+		"Ø±Ø§ØªØ¨ÙŠ Ø§Ù„Ø³Ù†ÙˆÙŠ" ,
+		"Ø§Ù„Ø±Ø§ØªØ¨"
+}
+
+employee_information_ar :
+	inputs in en {
+		"Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ" ,
+		"Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù…ÙˆØ¸Ù�" ,
+		"Ù…Ø§ Ù‡ÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ" ,
+		"Ø´Ùˆ Ù…Ø¹Ù„ÙˆÙ…Ø§ØªÙŠ" ,
+		"Ø´Ù†Ùˆ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¨ÙŠ" ,
+		"Ù…Ø§ Ù‡ÙŠ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¨ÙŠ"
+}
+
+bankAcc_information_ar :
+	inputs in en {
+		"Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø¨Ù†Ùƒ" ,
+		"Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø¨Ù†Ùƒ Ø§Ù„Ø®Ø§ØµØ© Ø¨ÙŠ" ,
+		"Ø§Ø¨ØºÙ‰ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø¨Ù†Ùƒ" ,
+		"Ø´Ùˆ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø¨Ù†Ùƒ" ,
+		"Ù…Ø§ Ù‡ÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø¨Ù†Ùƒ" ,
+		"Ù…Ø§ Ù‡ÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ø¨Ù†Ùƒ Ø§Ù„Ø®Ø§ØµØ© Ø¨ÙŠ" ,
+		"ÙˆØ´ Ù‡Ùˆ Ø¨Ù†ÙƒÙŠ" ,
+		"Ø§ÙŠØ´ Ø¨Ù†ÙƒÙŠ"
+}
+
+absences_balance_ar :
+	inputs in en {
+		"Ø±ØµÙŠØ¯ Ø§Ø¬Ø§Ø²Ø§ØªÙŠ" ,
+		"Ù…Ø§ Ù‡Ùˆ Ø±ØµÙŠØ¯ Ø§Ø¬Ø§Ø²Ø§ØªÙŠ" ,
+		"Ø´Ù†Ùˆ Ø±ØµÙŠØ¯ÙŠ Ø¨Ø§Ù„Ø§Ø¬Ø§Ø²Ø§Øª" ,
+		"Ø´Ùˆ Ø±ØµÙŠØ¯ Ø§Ø¬Ø§Ø²Ø§ØªÙŠ" ,
+		"Ø§Ø¨ØºÙ‰ Ø±ØµÙŠØ¯ Ø§Ø¬Ø§Ø²Ø§ØªÙŠ" ,
+		"Ø±ØµÙŠØ¯ Ø§Ù„Ø§Ø¬Ø§Ø²Ø§Øª"
+}
+
+paySlip_ar :
+	inputs in en {
+		"Ù…Ø³ÙŠØ± Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¹Ø·ÙŠÙ†ÙŠ Ù…Ø³ÙŠØ± Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¨ØºÙ‰ Ù…Ø³ÙŠØ± Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"ØªÙ�Ø§ØµÙŠÙ„ Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¹Ø·ÙŠÙ†ÙŠ ØªÙ�Ø§ØµÙŠÙ„ Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¨ØºÙ‰ ØªÙ�Ø§ØµÙŠÙ„ Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ù‚Ø³ÙŠÙ…Ø© Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¹Ø·ÙŠÙ†ÙŠ Ù‚Ø³ÙŠÙ…Ø© Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¨ØºÙ‰ Ù‚Ø³ÙŠÙ…Ø© Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ù…Ù�Ø±Ø¯Ø§Øª Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¹Ø·ÙŠÙ†ÙŠ Ù…Ù�Ø±Ø¯Ø§Øª Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"Ø§Ø¨ØºÙ‰ Ù…Ù�Ø±Ø¯Ø§Øª Ø§Ù„Ø±Ø§ØªØ¨" ,
+		"ÙƒØ´Ù� Ø§Ù„Ø±Ø§ØªØ¨"
+}
+
+employees_attendance_for_Manager_ar :
+	inputs in en {
+		"Ø§ÙˆÙ‚Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù…" ,
+		"Ø§ÙˆÙ‚Ø§Øª Ø¯ÙˆØ§Ù… Ø§Ù„Ù…ÙˆØ¸Ù�ÙŠÙ†" ,
+		"Ù…Ø§ Ù‡ÙŠ Ø§ÙˆÙ‚Ø§Øª Ø¯ÙˆØ§Ù… Ø§Ù„Ù…ÙˆØ¸Ù�ÙŠÙ†" ,
+		"Ø§Ø¨ØºÙ‰ Ø§ÙˆÙ‚Ø§Ù… Ø§Ù„Ø¯ÙˆØ§Ù… ØÙ‚ Ø§Ù„Ù…ÙˆØ¸Ù�ÙŠÙ†" ,
+		"Ù…ØªÙ‰ ÙŠØ¯Ø§ÙˆÙ…ÙˆÙ† Ù…ÙˆØ¸Ù�ÙŠÙ†ÙŠ" ,
+		"ÙˆØ±Ù†ÙŠ Ù…ØªÙ‰ Ø¬Ø§Ùˆ Ø§Ù„Ù…ÙˆØ¸Ù�ÙŠÙ†" ,
+		"Ø¹Ø·Ù†ÙŠ Ø§ÙˆÙ‚Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù…"
+}
+
+notification_for_manager_ar :
+	inputs in en {
+		"Ø§Ø´Ø¹Ø§Ø±Ø§ØªÙŠ" ,
+		"Ù…Ø§ Ù‡ÙŠ Ø§Ø´Ø¹Ø§Ø±Ø§ØªÙŠ" ,
+		"Ø§Ø¨ØºÙ‰ Ø§Ù„Ø§Ø´Ø¹Ø§Ø±Ø§Øª" ,
+		"Ø§Ù„Ø§Ø´Ø¹Ø§Ø±Ø§Øª" ,
+		"Ø§Ù„Ø§Ø´Ø¹Ø§Ø±Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¨ÙŠ" ,
+		"Ø´Ù†Ùˆ Ø§Ø®Ø± Ø§Ø´Ø¹Ø§Ø±Ø§Øª"
+}
+
+help_en :
+	inputs in en {
+		"help me" ,
+		help ,
+		"what can i ask you ?" ,
+		"which services do you have ?" ,
+		"help please"
+}
+
+help_ar :
+	inputs in en {
+		"Ø³Ø§Ø¹Ø¯Ù†ÙŠ" ,
+		"Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ù‡" ,
+		"Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø©" ,
+		"ÙƒÙŠÙ� ØªÙ‚Ø¯Ø± ØªØ³Ø§Ø¹Ø¯Ù†ÙŠ ØŸ" ,
+		"Ø§Ø±Ø¬Ùˆ Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ù‡" ,
+		"Ù…Ø³Ø§Ø¹Ø¯Ù‡" ,
+		"Ù…Ø³Ø§Ø¹Ø¯Ø©"
+}
+
+expense_en :
+	inputs in en {
+		"expense claim" ,
+		"i want to claim my expense" ,
+		"i\'ve bought a new mouse for my laptop and i want my money back" ,
+		"i want my money back" ,
+		"how can i claim my expense ?" ,
+		"i want to be paid for an expense"
+}
+
+expense_ar :
+	inputs in en {
+		"Ø¨Ø¯ÙŠ Ø§Ù‚Ø¯Ù… Ø¹Ù„Ù‰ Ø§ÙƒØ³Ø¨Ù†Ø³" ,
+		"Ø§Ø¨ØºÙ‰ Ù�Ù„ÙˆØ³ÙŠ" ,
+		"ØºÙŠØ±Øª Ù‚Ø·Ø¹ Ù„Ø§Ø¨ØªÙˆØ¨ÙŠ" ,
+		"Ù…Ù…ÙŠ Ù�Ø§ØªÙˆØ±Ø© Ø§Ø¨ØºÙ‰ Ø§Ù‚Ø¯Ù…Ù‡Ø§ Ù„Ù„Ø´Ø±ÙƒØ©" ,
+		"ÙƒÙŠÙ� Ø§Ù‚Ø¯Ø± Ø§Ø·Ø§Ù„Ø¨ Ø¨Ù�Ù„ÙˆØ³" ,
+		"ÙƒÙŠÙ� Ø§Ø·Ø§Ù„Ø¨ Ø§Ù„Ø´Ø±ÙƒØ© Ø¨Ù‚ÙŠÙ…Ø© Ù�Ø§ØªÙˆØ±Ø©" ,
+		"Ù…Ø·Ø§Ù„Ø¨Ø© Ø¨Ø§Ù„Ù†Ù�Ù‚Ø§Øª"
+}
+
+out_of_scope :
+
+FallbackIntent Fallback :
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_goodbye_ar_text :
+		inputs in en {
+			"مع السلامة"
+	}
+	Empty response action_img_ar_empty
+	mage response utter_greet_img :
+		URL : "https://www.nab3.info/images/companies_logo/59a3e3376d344.png"
+		caption : "Hi Yousef!,  i\'m AppsPro Assistant and i\'m here to help you "
+	Text response utter_employee_information_ar_text :
+		inputs in en {
+			"  - اسمك: يوسف احمد  \n - رقم جوالك: +966 563198972  \n - بريدك الالكتروني: user@AppsPro.com"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_expense_en_text :
+		inputs in en {
+			"please attach your expense by using the attach icon below"
+	}
+	Text response utter_employee_information_en_text :
+		inputs in en {
+			"- Name is : Yousef Abudakar \n - Mobile No.: +966 563198972 \n - Email is : user@AppsPro.com"
+	}
+	Empty response action_pdf_empty
+	Text response utter_expense_ar_text :
+		inputs in en {
+			"الرجاء ارفاق الفاتورة من خلال الضغظ على زر الارفاق بالاسفل"
+	}
+	mage response utter_cheer_up_ar_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "تفضل هاي الصورة يمكن تساعدك تعدل مزاجك"
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_absences_balance_ar_text :
+		inputs in en {
+			"- الرصيد الكلي: 14 يوم \n - الرصيد المستخدم: 2 يوم \n - الرصيد المتبقي: 12 يوم \n \n لاظهار رصيد الاجازات في صورة الرجاء الضغط على الرابط بالاسفل"
+	}
+	Empty response action_default_fallback_empty
+	Empty response action_img_empty
+	Text response utter_did_that_help_ar_text :
+		inputs in en {
+			"هل ساعدك ذلك ؟"
+	}
+	Text response utter_greet_Questions_ar_text :
+		inputs in en {
+			" يمكنني مساعدتك بالاتي : "
+	}
+	Text response utter_absences_balance_en_text :
+		inputs in en {
+			"- Remaining Balance : 12 Days \n - Used Balance: 2 Days \n - Total Balance: 14 Days \n \n to view your absences balance as a chart kindly click on the link below"
+	}
+	mage response utter_absences_balance_img_ar_img :
+		URL : "https://gisinter.online/wp-rasa-awamleh/wp-content/uploads/2020/07/absence-balance-1024x515.png"
+		caption : "رصيد الاجازات"
+	Text response utter_salary_ar_text :
+		inputs in en {
+			" - راتبك الشهري هو:  3000 ريال سعودي \n - راتبك السنوي هو:  36000 ريال سعودي"
+	}
+	Text response utter_notification_for_manager_en_text :
+		inputs in en {
+			"you have the following notifications : \n \n - Sub: Absence Request     \n From: Amro Alfaris \n \n - Sub: Business Trip Payment \n From: Mohammed Awamleh  "
+	}
+	Text response utter_greet_ar_text :
+		inputs in en {
+			"يا هلا"
+	}
+	Text response utter_happy_ar_text :
+		inputs in en {
+			"دوم ان شاء الله "
+	}
+	Text response utter_salary_en_text :
+		inputs in en {
+			"- Monthly salary is : 3000 SR \n - Annual Salary is : 36000 SR"
+	}
+	mage response utter_absences_balance_img_img :
+		URL : "https://gisinter.online/wp-rasa-awamleh/wp-content/uploads/2020/07/absence-balance-1024x515.png"
+		caption : "Absences Balance"
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_employees_attendance_for_Manager_ar_text :
+		inputs in en {
+			" - اسم الموظف: يوسف احمد  \n وقت الحضور: 8:30 AM  \n وقت المغادرة : 2:30 pm \n \n - اسم الموظف: عمرو الفارس  \n وقت الحضور: 8:35 AM  \n وقت المغادرة : 2:40 pm  \n \n - اسم الموظف: محمد العواملة  \n وقت الحضور: 8:35 AM  \n وقت المغادرة : 2:40 pm  "
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_bankAcc_information_ar_text :
+		inputs in en {
+			"هذه هي تفاصيل البنك الخاص بك:  \n \n  - البنك: بنك الراجحي.\n   - رقم الحساب المصرفي  IBAN: SAxxxxxxxxxxxxxxxx"
+	}
+	Text response utter_greet_Questions_en_text :
+		inputs in en {
+			" here\'s a list of our services"
+	}
+	Text response utter_employees_attendance_for_Manager_en_text :
+		inputs in en {
+			"- Employee Name: Yousef Abudakar \n Attendance Time: 8:30 Am \n Leaving Time: 5:00 Pm \n \n - Employee Name: Amro Alfaris \n Attendance Time: 8:50 Am \n Leaving Time: 5:10 Pm \n \n - Employee Name: Mohammed Awamleh \n Attendance Time: 9:00 Am \n Leaving Time: 6:00 Pm  "
+	}
+	Text response utter_notification_for_manager_ar_text :
+		inputs in en {
+			":لديك الاشعارات التالية \n \n - الموضوع : طلب اجازة              \n الموظف : عمرو الفارس \n \n - الموضوع : رحلة عمل مدفوعة          \n الموظف : محمد العواملة "
+	}
+	Text response utter_bankAcc_information_en_text :
+		inputs in en {
+			"- Bank : Alrajhi Bank \n - IBAN: SA4xxxxxxxxxxxxxxx"
+	}
+	Text response action_default_fallback_text :
+		inputs in en {
+			"Sorry, I don\'t undestand you "
+	}
+
+flows :
+	- user greet => chatbot utter_greet_img , utter_greet_Questions_ar_text , utter_greet_ar_text , utter_greet_Questions_en_text {
+		=> user mood_great => chatbot utter_happy_ar_text , utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_cheer_up_ar_img , utter_did_that_help_text , utter_did_that_help_ar_text {
+			=> user affirm => chatbot utter_happy_ar_text , utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_ar_text , utter_goodbye_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_ar_text , utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user salary => chatbot utter_salary_en_text ;
+	- user paySlip => chatbot action_pdf_empty ;
+	- user employee_information => chatbot utter_employee_information_en_text ;
+	- user bankAcc_information => chatbot utter_bankAcc_information_en_text ;
+	- user employees_attendance_for_Manager => chatbot utter_employees_attendance_for_Manager_en_text ;
+	- user notification_for_manager => chatbot utter_notification_for_manager_en_text ;
+	- user absences_balance => chatbot utter_absences_balance_en_text , action_img_ar_empty , action_img_empty ;
+	- user salary_ar => chatbot utter_salary_ar_text ;
+	- user paySlip_ar => chatbot action_pdf_empty ;
+	- user absences_balance_ar => chatbot action_img_ar_empty ;
+	- user employee_information_ar => chatbot utter_employee_information_ar_text ;
+	- user bankAcc_information_ar => chatbot utter_bankAcc_information_ar_text ;
+	- user employees_attendance_for_Manager_ar => chatbot utter_employees_attendance_for_Manager_ar_text ;
+	- user notification_for_manager_ar => chatbot utter_notification_for_manager_ar_text ;
+	- user help_en => chatbot utter_greet_Questions_en_text ;
+	- user help_ar => chatbot utter_greet_Questions_ar_text ;
+	- user expense_en => chatbot utter_expense_en_text ;
+	- user expense_ar => chatbot utter_expense_ar_text ;
+	- user out_of_scope => chatbot action_default_fallback_empty ;
+	- user FallbackIntent => chatbot action_default_fallback_empty , action_default_fallback_text ;
+

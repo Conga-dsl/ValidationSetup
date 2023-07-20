@@ -1,0 +1,210 @@
+Chatbot "NLP-workshop-newsbot" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+request :
+	inputs in en {
+		"Could you please give me some news about " ( Revolut ) [ target ] "?" ,
+		"I want some information about " ( Bitcoin ) [ target ] "." ,
+		"I am looking for breaking news about " ( Apple ) [ target ] "." ,
+		"Do you have any news about " ( Microsoft ) [ target ] "?" ,
+		"Could you please send me some news about " ( Revolut ) [ target ] "?" ,
+		"Do you know anything about " ( Revolut ) [ target ] "?" ,
+		"What is the latest news about " ( Ethereum ) [ target ] "?" ,
+		"I need to get the latest news on " ( PlusOne ) [ target ] "." ,
+		"Please send me the latest news about " ( FinTech ) [ target ] "."
+	}
+	parameters :
+		target : entity text ;
+
+details :
+	inputs in en {
+		"Could you please get me the " ( title ) [ news_detail ] " of " ( "first news" ) [ sent_news ] " you just sent?" ,
+		"Could you please get me the " ( content ) [ news_detail ] " of " ( "second news" ) [ sent_news ] " you just sent?" ,
+		"Could you please get me the " ( publication ) [ news_detail ] " date of " ( "first one" ) [ sent_news ] " you just sent?" ,
+		"Give me " ( title ) [ news_detail ] " of latest news about " ( FinTech ) [ target ] "." ,
+		"Give me " ( "publication date" ) [ news_detail ] " of latest news about " ( Revolut ) [ target ] "." ,
+		"Give me " ( source ) [ news_detail ] " of latest news about " ( Apple ) [ target ] "." ,
+		"Give me " ( content ) [ news_detail ] " of latest news about " ( Microsoft ) [ target ] "." ,
+		"Do you know what is the " ( title ) [ news_detail ] " of latest news about " ( Bitcoin ) [ target ] "?" ,
+		"Do you know what is the " ( content ) [ news_detail ] " of latest news about " ( Bitcoin ) [ target ] "?" ,
+		"Do you know what is the " ( source ) [ news_detail ] " of latest news about " ( Bitcoin ) [ target ] "?" ,
+		"and the second one?" ,
+		"and the first one?" ,
+		"what about the " ( "first one" ) [ sent_news ] "?" ,
+		"what about the " ( "second one" ) [ sent_news ] "?" ,
+		"what about the " ( "third one" ) [ sent_news ] "?" ,
+		"what about the " ( second ) [ sent_news ] "?" ,
+		"what about the " ( third ) [ sent_news ] "?"
+	}
+	parameters :
+		news_detail ,
+		sent_news ,
+		target : entity text ;
+
+requestdetails :
+	inputs in en {
+		"Please give me " ( title ) [ news_detail ] " of latest news about " ( Revolut ) [ target ] "." ,
+		"What is the " ( "publication date" ) [ news_detail ] " of latest news about " ( Apple ) [ target ] "?" ,
+		"What is " ( content ) [ news_detail ] " of latest news about " ( Microsoft ) [ target ]
+	}
+	parameters :
+		news_detail ,
+		target : entity text ;
+
+link :
+	inputs in en {
+		"please send me the link" ,
+		"link please" ,
+		"Could you also send me the link?" ,
+		"I also need the link to the news" ,
+		"Also need the link"
+}
+
+affirmlink :
+	inputs in en {
+		"yes, also please send me the link" ,
+		"indeed and the link please" ,
+		"of course. Could you also send me the link?" ,
+		"that sounds good. I also need the link to the news" ,
+		"correct. Also need the link"
+}
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_send_details_text :
+		inputs in en {
+			[ "requestdetails.news_detail" ] " of " [ "requestdetails.target" ] " article is: " news_content
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_more_news_text :
+		inputs in en {
+			"Do you want more news?"
+	}
+	Empty response action_get_latest_news_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_news_title_text :
+		inputs in en {
+			"title: " news_title
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_need_more_text :
+		inputs in en {
+			"do you need more?"
+	}
+	Text response utter_send_link_text :
+		inputs in en {
+			"here is the link: " news_link
+	}
+	Empty response action_get_more_news_empty
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user request => chatbot action_get_latest_news_empty , utter_news_title_text , utter_more_news_text {
+			=> user affirm => chatbot action_get_more_news_empty , utter_news_title_text , utter_need_more_text {
+				=> user requestdetails => chatbot utter_send_details_text , utter_need_more_text { => user requestdetails => chatbot utter_send_details_text , utter_need_more_text { => user deny => chatbot utter_goodbye_text ; } ; } ;
+			} ;
+			=> user affirmlink => chatbot action_get_more_news_empty , utter_news_title_text , utter_send_link_text , utter_need_more_text {
+				=> user deny => chatbot utter_goodbye_text ;
+			} ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

@@ -1,0 +1,215 @@
+Chatbot "MADE-dialog" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+thanks :
+	inputs in en {
+		thanks ,
+		"thank you" ,
+		"that was helpful" ,
+		"thank you very much"
+}
+
+statistics_get :
+	inputs in en {
+		"show my stats" ,
+		"show my statistics" ,
+		"give me stats" ,
+		"give my statistics" ,
+		"what is my statistics"
+}
+
+study_hours_stats_get :
+	inputs in en {
+		"show my statistics about study hours" ,
+		"give me stats about study hours" ,
+		"give my statistics about study hours" ,
+		"what is my statistics about study hours" ,
+		"show my stats about study" ,
+		"show my statistics about study" ,
+		"give me stats about study" ,
+		"give my statistics about study" ,
+		"what is my statistics about study" ,
+		"show my study hours rates" ,
+		"show my study hours rates" ,
+		"give me study hours rates" ,
+		"study hours statistics" ,
+		"study hours stats" ,
+		"study hours rates" ,
+		"what is my study statistics" ,
+		"show my statistics about study hours for the last " ( month ) [ period ] ,
+		"give me stats about study hours for the last " ( month ) [ period ] ,
+		"give my statistics about study hours for the last " ( month ) [ period ] ,
+		"what is my statistics about study hours for the last " ( month ) [ period ] ,
+		"show my stats about study for the last " ( month ) [ period ] ,
+		"show my statistics about study for the last " ( month ) [ period ] ,
+		"give me stats about study for the last " ( month ) [ period ] ,
+		"give my statistics about study for the last " ( month ) [ period ] ,
+		"what is my statistics about study for the last " ( weak ) [ period ] ,
+		"show my study hours rates for the last " ( weak ) [ period ] ,
+		"show my study hours rates for the last " ( weak ) [ period ] ,
+		"give me study hours rates for the last " ( weak ) [ period ] ,
+		"study hours statistics for the last " ( weak ) [ period ] ,
+		"study hours stats for the last " ( weak ) [ period ] ,
+		"study hours rates for the last " ( weak ) [ period ] ,
+		"what is my study statistics for the last " ( weak ) [ period ]
+	}
+	parameters :
+		period : entity text ;
+
+weight_stats_get :
+	inputs in en {
+		"weight statistics" ,
+		"weight stats" ,
+		"what is my weight statistics" ,
+		"what is my weight stats" ,
+		"show my statistics about weight" ,
+		"give me stats about weight" ,
+		"give my statistics about weight" ,
+		"what is my statistics about weight" ,
+		"weight statistics for the last " ( month ) [ period ] ,
+		"weight stats for the last " ( weak ) [ period ] ,
+		"what is my weight statistics for the last " ( month ) [ period ] ,
+		"what is my weight stats for the last " ( weak ) [ period ] ,
+		"show my statistics about weight for the last " ( month ) [ period ] ,
+		"give me stats about weight for the last " ( weak ) [ period ] ,
+		"give my statistics about weight for the last " ( month ) [ period ] ,
+		"what is my statistics about weight for the last " ( weak ) [ period ]
+	}
+	parameters :
+		period : entity text ;
+
+record_write :
+	inputs in en {
+		"create record" ,
+		"create new record" ,
+		"write a record" ,
+		"create record" ,
+		"create new record" ,
+		"write a record"
+}
+
+intent_weight_write :
+	inputs in en {
+		"create record about weigh" ,
+		"create new record of my weigh" ,
+		"write a weigh" ,
+		"my weigh" ,
+		"write weight" ,
+		"create record with a weight"
+}
+
+intent_study_hours_write :
+	inputs in en {
+		"create record about study hours" ,
+		"create new record of my study hours" ,
+		"write a study hours" ,
+		"write study hours" ,
+		"my study hours" ,
+		"create record with a study hours"
+}
+
+weight_write :
+	inputs in en {
+		"my weight is " ( "99" ) [ weight ] " kg" ,
+		"my weight is " ( "101" ) [ weight ] " kilograms" ,
+		( "100" ) [ weight ] " kg" ,
+		( "98" ) [ weight ] " kilograms"
+	}
+	parameters :
+		weight : entity number ;
+
+study_hours_write :
+	inputs in en {
+		"i\'ve studied " ( "4" ) [ study_hours ] " hours" ,
+		"i have studied " ( "4" ) [ study_hours ] " hours" ,
+		( "4" ) [ study_hours ] " hours"
+	}
+	parameters :
+		study_hours : entity number ;
+
+actions :
+	Text response utter_weight_stats_get_text :
+		inputs in en {
+			"Over the past " [ "weight_stats_get.period" ] ", the weight loss rate has increased. 15 kg remained to the target."
+	}
+	Text response utter_record_write_text :
+		inputs in en {
+			"What kind of record do you want to write?"
+	}
+	Text response utter_intent_weight_write_text :
+		inputs in en {
+			"What is your weight?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_statistics_get_text :
+		inputs in en {
+			"What kind of statistics do you want to get?"
+	}
+	Text response utter_weight_write_text :
+		inputs in en {
+			"Record created successfully."
+	}
+	Empty response action_context_date_empty
+	Text response utter_intent_study_hours_write_text :
+		inputs in en {
+			"How much time did you study?"
+	}
+	Text response utter_thanks_text :
+		inputs in en {
+			"You are welcome."
+	}
+	Text response utter_study_hours_stats_get_text :
+		inputs in en {
+			"20% more study time than planned this " [ "study_hours_stats_get.period" ]
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_study_hours_write_text :
+		inputs in en {
+			"Record created successfully."
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user record_write => chatbot utter_record_write_text {
+			=> user intent_weight_write => chatbot utter_intent_weight_write_text {
+				=> user weight_write => chatbot utter_weight_write_text { => user thanks => chatbot utter_thanks_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ;
+			} ;
+			=> user intent_study_hours_write => chatbot utter_intent_study_hours_write_text {
+				=> user study_hours_write => chatbot utter_study_hours_write_text { => user thanks => chatbot utter_thanks_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ;
+			} ;
+		} ;
+		=> user statistics_get => chatbot utter_statistics_get_text {
+			=> user study_hours_stats_get => chatbot utter_study_hours_stats_get_text {
+				=> user thanks => chatbot utter_thanks_text { => user goodbye => chatbot utter_goodbye_text ; } ;
+			} ;
+			=> user weight_stats_get => chatbot utter_weight_stats_get_text {
+				=> user thanks => chatbot utter_thanks_text { => user goodbye => chatbot utter_goodbye_text ; } ;
+			} ;
+		} ;
+	} ;
+
