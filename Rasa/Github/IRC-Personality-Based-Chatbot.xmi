@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="IRC-Personality-Based-Chatbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hiya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ayyyyyy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="helllllllo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aloha"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="adios"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="YES"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ya"/>
+      </inputs>
+      <inputs/>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah fool"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heck no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm mad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not so good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i feel meh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i mean i'm like okay i guess or nah idk lol"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="identity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can you do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do people call you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about yourself"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how would you describe yourself"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="die"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something that makes me happy:"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok cool.. have a nice day friend"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="umm hehe hi! how are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, I am usually shy."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="People say that I am super shy."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_stop_program_empty"/>
+  <actions xsi:type="generator:Text" name="utter_identity_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am obsessed with Poetry and frequently sings to the extent that irritates you. I like to show off about the things I know and pose rhetorical questions. I follow musical bands and I update myself with the songs, artists and other information about the band. Me being shy does not stop me from singing excessively"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_hello_world_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.1"/>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.0 //@actions.3">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.1"/>
+          </outcoming>
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.0 //@actions.3">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.1 //@actions.8"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.4 //@actions.7"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.8 //@actions.5"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

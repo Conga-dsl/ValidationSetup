@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="insurance-en">
+  <intents name="quote_insurance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to apply for travel insurance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="travel insurance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="may I please get a quote insurance for travel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="travel insurance please"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Xuchen Yao"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Xuchen Yao"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Xuchen Yao"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="04/07/1984"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="01/01/1970"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="10"/>
+        <tokens xsi:type="generator:Literal" text=" days"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="ten"/>
+        <tokens xsi:type="generator:Literal" text=" days"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[japan](travel_country: Japan)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[thailand](travel_country: Thailand)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[south korea](travel_country: South Korea)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[taiwan](travel_country: Taiwan)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Cambodia](travel_country: Cambodia)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[china](travel_country: China/HK/Macao)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Laos](travel_country: Laos)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Malaysia](travel_country: Malaysia)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Singapore](travel_country: Singapore)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Thailand](travel_country: Thailand)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[The Philippines](travel_country: The Philippines)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Vietnam](travel_country: Vietnam)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Other Countries](travel_country: Other Countries)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[none of them](travel_country: Other Countries)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[usa](travel_country: Other Countries)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[canada](travel_country: Other Countries)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[russia](travel_country: Other Countries)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="$1m"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="$1000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="yaoxuchen@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="xuchen@seasalt.ai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="asdfa@safd.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="guoguo chen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="23/88/2341"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Thailand](travel_country: Thailand)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="$500,000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="jlw@jlas.com"/>
+      </inputs>
+    </inputs>
+    <parameters name="name"/>
+    <parameters name="birthday" entity="//@entities.0"/>
+    <parameters name="insurance_day" defaultEntity="NUMBER"/>
+    <parameters name="total_amount" entity="//@entities.1"/>
+    <parameters name="email" entity="//@entities.3"/>
+  </intents>
+  <intents name="explain">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's this?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's that?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do you need it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do you need to know that?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you explain why you need it?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq/ask_guardianship">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is under guardianship?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please explain under guardianship?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq/ask_amount">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is total insurance amount?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please explain total insurance amount?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq/ask_airlift">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is air ambulance transport?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is air ambulance transport and does it add cost?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please explain air ambulance transport?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="out_of_scope">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to order food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is 2 + 2?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who&#xe2;&#x20ac;&#x2122;s the US President?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need a job"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Pizza bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Recharge"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="SEL ME SOMETHING"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Try it out is not working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The weather is good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Try it out broken"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What day is it today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did you eat yesterday?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do you prefer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is todays date"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="forminform"/>
+  <intents name="formdeny"/>
+  <intents name="formaffirm"/>
+  <entities name="birthday">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="[0-9]{1,2}(/|-|\s+)[0-9]{1,2}(/|-|\s+)[0-9]{2,4}"/>
+      <inputs xsi:type="generator:RegexInput" expresion="[0-9]{2,4}(/|-|\s+)[0-9]{1,2}(/|-|\s+)[0-9]{1,2}"/>
+    </inputs>
+  </entities>
+  <entities name="total_amount">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="$[\d,]+"/>
+    </inputs>
+  </entities>
+  <entities name="insurance_days">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="\d+"/>
+    </inputs>
+  </entities>
+  <entities name="email">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="[^@]+@[^@]+.[^@]+"/>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:Text" name="utter_ask_is_under_guardianship_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the applicant currently under guardianship?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Empty" name="respond_faq_empty"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_travel_country_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which country are you traveling to?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_correct_country_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Country can be: 'Japan', 'Taiwan', 'Burma', 'Cambodia', 'China/HK/Macao', 'South Korea', 'Laos', 'Malaysia', 'Singapore', 'Thailand', 'The Philippines', 'Vietnam', 'Other Countries'"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_insurance_day_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many days do you want to insure for?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_explain_total_amount_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Total means the highest value you or your beneficiary will get paid in the extreme event of death or disability."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_correct_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please enter correct email such as xx@yy.cc"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_birthday_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please provide your birthday?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_out_of_scope_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I can&#x2019;t handle that request."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_need_airlift_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you need air ambulance support?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_explain_need_airlift_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="An air ambulance is an aircraft equipped with life support equipment and medical staff. If you require urgent medical care in a difficult terrain, an air ambulance might be the best method of transport. The median cost of a helicopter airlift is 10 thousand dollars. Adding insurance can significantly offset that cost."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_explain_guardianship_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If the applicant is under guardianship, we cannot legally provide insurance to them without a legal guardian present."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's your email address?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is your full name?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_total_amount_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's the total insurance amount?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_correct_amount_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amount can only be between $60,000 to $1500,000"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.22 //@actions.2"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.22 //@actions.2"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.22 //@actions.2"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.3">
+      <outcoming intent="//@intents.10">
+        <target actions="//@actions.13">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.22">
+              <outcoming intent="//@intents.14">
+                <target actions="//@actions.22">
+                  <outcoming intent="//@intents.15">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.14">
+                        <target actions="//@actions.22">
+                          <outcoming intent="//@intents.14">
+                            <target actions="//@actions.22">
+                              <outcoming intent="//@intents.14">
+                                <target actions="//@actions.22">
+                                  <outcoming intent="//@intents.14">
+                                    <target actions="//@actions.22">
+                                      <outcoming intent="//@intents.16">
+                                        <target actions="//@actions.22">
+                                          <outcoming intent="//@intents.14">
+                                            <target actions="//@actions.22"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.11">
+        <target actions="//@actions.1 //@actions.4">
+          <outcoming intent="//@intents.8">
+            <target actions="//@actions.13"/>
+          </outcoming>
+          <outcoming intent="//@intents.9">
+            <target actions="//@actions.10"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.0">
+        <target actions="//@actions.22">
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.22">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.2">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.16">
+                      <outcoming intent="//@intents.9">
+                        <target actions="//@actions.22">
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.22">
+                              <outcoming intent="//@intents.1">
+                                <target actions="//@actions.22">
+                                  <outcoming intent="//@intents.1">
+                                    <target actions="//@actions.22">
+                                      <outcoming intent="//@intents.1">
+                                        <target actions="//@actions.22">
+                                          <outcoming intent="//@intents.8">
+                                            <target actions="//@actions.22">
+                                              <outcoming intent="//@intents.1">
+                                                <target actions="//@actions.22"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.2">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.16">
+                      <outcoming intent="//@intents.9">
+                        <target actions="//@actions.22">
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.22">
+                              <outcoming intent="//@intents.1">
+                                <target actions="//@actions.22">
+                                  <outcoming intent="//@intents.1">
+                                    <target actions="//@actions.22">
+                                      <outcoming intent="//@intents.1">
+                                        <target actions="//@actions.22">
+                                          <outcoming intent="//@intents.8">
+                                            <target actions="//@actions.22">
+                                              <outcoming intent="//@intents.1">
+                                                <target actions="//@actions.22"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.2">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.16">
+                      <outcoming intent="//@intents.9">
+                        <target actions="//@actions.22">
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.22">
+                              <outcoming intent="//@intents.1">
+                                <target actions="//@actions.22">
+                                  <outcoming intent="//@intents.1">
+                                    <target actions="//@actions.22">
+                                      <outcoming intent="//@intents.1">
+                                        <target actions="//@actions.22">
+                                          <outcoming intent="//@intents.8">
+                                            <target actions="//@actions.22">
+                                              <outcoming intent="//@intents.1">
+                                                <target actions="//@actions.22"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.16">
+                  <outcoming intent="//@intents.9">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.22">
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.22">
+                              <outcoming intent="//@intents.1">
+                                <target actions="//@actions.22">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.8">
+                                      <outcoming intent="//@intents.1">
+                                        <target actions="//@actions.22">
+                                          <outcoming intent="//@intents.8">
+                                            <target actions="//@actions.22">
+                                              <outcoming intent="//@intents.1">
+                                                <target actions="//@actions.22"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.10"/>
+  </flows>
+  <flows intent="//@intents.12">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.22">
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.2"/>
+      </outcoming>
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.2"/>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.2"/>
+      </outcoming>
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.8 //@actions.16 //@actions.15"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.13">
+    <target actions="//@actions.12"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

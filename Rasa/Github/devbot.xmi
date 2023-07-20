@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="devbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thats all for today. bye!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="artifact">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the .java class that I'm supposed to be editing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are artifacts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I edit class client.java?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many artifacts do I have to change to accomplish the first task?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me the artifacts' names in a list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Gonna start editing the .java file now, help me bring it up?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which artifacts do I need to edit?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which part of client.java needs to be edited?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="commit">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I commit my code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Devbot, could you commit my code please?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Just help me commit my tests and changes if the integration tests pass?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please commit my code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please commit my edits to my repository?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="tasks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does my overall day look like today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I update the status to Done? Is this in the Jira?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I update status to Done."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is task 27405"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is task 27405 located in the program management tool."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How does my schedule look like today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay. Are there any similar tasks like 13003?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there a deadline to the task?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there a person I can go to for this task who can help me of I have doubts ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Also, what are my most important tasks now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Update my task list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what tasks do I need to complete?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok which task ID should I work on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are my open tasks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do I have to do today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are my tasks?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="priority">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the priority of the tasks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the second highest priority task"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The lowest priority task"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the priorities of my tasks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which is of my higher priority ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which task has higher priority?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the task with highest priority?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what i have to do first"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pull">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to do I make a pull request"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I make a pull request?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, create a PR with the usual feature template"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Need that comment into the PR"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there a pull request template or procedure that I should follow for the repo I AM: pushing to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who should I ping to look at my pull request?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok create a pull request for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you make a pull request now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create a pull request to a branch identified with my task ID."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create a pull request"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please create a pull request"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you. can you create a PR?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="push">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="push code"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="sync">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the command for syncing my repo?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and sync it"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="tool">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the difference between the Eclipse editor and Visual Studio?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="DevBot, what is the difference between Git and Jira?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the technologies needed for that task?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="followup">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you? What else can I help you with?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="botservice">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="DevBot, what can you help me with?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can you do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can you help me?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="exception">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When can I merge my code with master?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know where the coffee machine is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Git?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey DevBot, can you fetch the newest code?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do a merge after that if there are no conflicts, thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you help me record what my colleague just said? She said the second artifact is probably not needed for an update"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What tests do you think we need for this task?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you start a new file for the tests? Please name it with the usual format"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Actually, can you fill the file in with the test function templates as well?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Gonna code the tests in now, just help me fix the usual typos and whatnot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Looks like I got most of them, DevBot is there any test cases I left out?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Actually, it looks like I haven't logged into Github, wanna help me do that too?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Insert the comment: &quot;Task 27405 completed referring to bug https://github.com/Repo/issues/13&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove 27405"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Actually, assign it to Done, not remove it, my bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nice, that was helpful, put there too that I used about 3 hours for the task"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome, looks like we are good, get some rest and hang out with your chatbot friends, we'll talk again tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What testing framework is expected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are there any CLAs that need to be signed to make the pull request?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which repository is that task associated with?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="but which repo is it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok. please clone the repo."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you please set task 13003 to status Done?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="best way to talk to my boss about getting a raise?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great"/>
+  <intents name="mood_unhappy"/>
+  <intents name="affirm"/>
+  <intents name="deny"/>
+  <intents name="bot_challenge"/>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_followup_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you? What else can I help you with?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! What do you need to know regarding your scenario today?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_tasks_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tasks 27405, 67933 and 13003 are open and assigned to you."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_pull_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please, create a pull request to a branch identified with your task ID."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_sync_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You should synchronize your repo. Click in the sync repobutton on your version control page."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_exception_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I can&#x2019;t help you with that. Is there anything else I can help with?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_priority_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The task with the highest priority assigned to you is Task 13003."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_commit_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="OK, I am committing your code to your repository."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_botservice_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can help you discover which tasks are assigned to you,their priorities, how to do a pull request and you can ask meto commit your code."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_artifact_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You need to edit class client.java and class diagram OrderMain."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_push_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please, download or clone your repository to your local machine.Keep it synchronized."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_tool_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You have to open Eclipse or VSCode and synchronize your code.After, assign a test task to the test team."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.13">
+        <target actions="//@actions.8 //@actions.0 //@actions.3">
+          <outcoming intent="//@intents.15">
+            <target actions="//@actions.8 //@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.4"/>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.10">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.5">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.12">
+                  <outcoming intent="//@intents.12">
+                    <target actions="//@actions.9">
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.6"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.17">
+    <target actions="//@actions.11"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.14"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.4 //@actions.17">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.17">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.17">
+              <outcoming intent="//@intents.12">
+                <target actions="//@actions.17">
+                  <outcoming intent="//@intents.6"/>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.12"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.10">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.11">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.12">
+    <target actions="//@actions.9"/>
+  </flows>
+  <flows intent="//@intents.18">
+    <target actions="//@actions.9"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

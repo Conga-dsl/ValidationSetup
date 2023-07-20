@@ -1,0 +1,292 @@
+Chatbot ibot language : en
+
+intents :
+
+alt_reply :
+	inputs in en {
+		"Ok, let me do so" ,
+		"ok, let me do so" ,
+		"Sure, let me do so" ,
+		"just kept on charge" ,
+		"just did it" ,
+		"doing so" ,
+		Thanks ,
+		"Thanks for creating the ticket"
+}
+
+answer_negative :
+	inputs in en {
+		No ,
+		^no
+}
+
+answer_positive :
+	inputs in en {
+		Yes ,
+		yes
+}
+
+answer_screen_negative :
+	inputs in en {
+		"No, I still can\'t see anything on the screen" ,
+		"no, I still can\'t see anything on the screen" ,
+		"No, I can\'t see anything on the screen" ,
+		"no, I can\'t see anything on the screen" ,
+		"Still nothing on the display" ,
+		"I afraid but still I can\'t see"
+}
+
+answer_screen_positive :
+	inputs in en {
+		"Yes, I can see on the screen." ,
+		"Ohh, I can see the display" ,
+		"Whoa, I can see my screen" ,
+		"Superb, I can see my screen"
+}
+
+buy_year :
+	inputs in en {
+		"I bought this a year ago" ,
+		"I bought it One year ago" ,
+		"I bought it 1 year ago" ,
+		"Two years ago" ,
+		"I bought this two years ago" ,
+		"I bought it two years ago" ,
+		"I bought it 2 years ago" ,
+		"I bought this few months back" ,
+		"Five years ago" ,
+		"bought recently" ,
+		"2016" ,
+		"2017"
+}
+
+bye :
+	inputs in en {
+		Bye ,
+		Bbye
+}
+
+device_issue :
+	inputs in en {
+		"I have a " ( problem ) [ notify_problem ] " with my " ( iPhone ) [ device_name ] ,
+		"I have an " ( issue ) [ notify_problem ] " with my " ( iPhone ) [ device_name ] ,
+		"I am facing some " ( problem ) [ notify_problem ] " with my " ( iPhone ) [ device_name ] ,
+		"I am facing some " ( issue ) [ notify_problem ] " with my " ( iPhone ) [ device_name ] ,
+		"My " ( iPhone ) [ device_name ] " has some " ( problem ) [ notify_problem ] ,
+		"My " ( iPhone ) [ device_name ] " has some " ( issue ) [ notify_problem ] ,
+		"There seems to be some " ( problem ) [ notify_problem ] " with my " ( iPhone ) [ device_name ] ,
+		"There seems to be some " ( issue ) [ notify_problem ] " with my " ( iPhone ) [ device_name ]
+	}
+	parameters :
+		notify_problem ,
+		device_name : entity text ;
+
+device_model :
+	inputs in en {
+		( "iPhone 5" ) [ model_name ] ,
+		( "iPhone 5s" ) [ model_name ] ,
+		( "iPhone 5S" ) [ model_name ] ,
+		( "iPhone 6" ) [ model_name ] ,
+		( "iPhone 6s" ) [ model_name ] ,
+		( "iPhone 6S" ) [ model_name ] ,
+		( "iPhone 7" ) [ model_name ] ,
+		( "iPhone 7 plus" ) [ model_name ] ,
+		( "iPhone 7 Plus" ) [ model_name ]
+	}
+	parameters :
+		model_name : entity text ;
+
+fine_ask :
+	inputs in en {
+		"I am good, how are you doing?" ,
+		"I\'m fine, how are you?" ,
+		"I\'m good, how are you?" ,
+		"I am good, how are you?" ,
+		"Doing good, how are you?" ,
+		"Awesome, how are you?" ,
+		"im fine, how are you?" ,
+		"im good, how are you?" ,
+		"I am doing good. How about you?"
+}
+
+fine_normal :
+	inputs in en {
+		"I am doing great" ,
+		"I\'m doing great" ,
+		"I\'m fine" ,
+		"I\'m good" ,
+		"Doing good" ,
+		Awesome ,
+		"im fine" ,
+		"im good"
+}
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"good afternoon" ,
+		"hey there" ,
+		"hi there" ,
+		hii ,
+		Hi
+}
+
+prob_device_screen :
+	inputs in en {
+		"I am unable to see anything on my " ( iPhone ) [ device_name ] ,
+		"I am unable to see anything on my " ( iPhone ) [ device_name ] ( screen ) [ problem_type ] ,
+		"I am unable to see anything on my " ( screen ) [ problem_type ] ,
+		"I am not able to see anything on my " ( iPhone ) [ device_name ] ( screen ) [ problem_type ] ,
+		"I am not able to see anything on my " ( screen ) [ problem_type ] ,
+		"Can\'t see anything on the " ( screen ) [ problem_type ] ,
+		"My " ( iPhone ) [ device_name ] " is switched on but I cannot see anything on the " ( screen ) [ problem_type ]
+	}
+	parameters :
+		device_name ,
+		problem_type : entity text ;
+
+thanks :
+	inputs in en {
+		"I am good for now. Thanks for your help" ,
+		"I am good for now. Thanks for all your help" ,
+		"Thanks for your help. Bye" ,
+		"Thanks for your help. I will touch base with the service desk" ,
+		"Thanks for your help. Let me connect with service desk" ,
+		"Thanks for all your help"
+}
+
+greet_ticket :
+
+actions :
+	Text response utter_glad_text :
+		inputs in en {
+			"I\'m glad I could help" ,
+			"I\'m happy I could help" ,
+			"I\'m happy to resolve your problem" ,
+			"I\'m happy to resolve your issue"
+	}
+	Text response utter_ofc_text :
+		inputs in en {
+			"I can definitely help you" ,
+			"Surely, I can help you" ,
+			"Happy to help you"
+	}
+	Text response utter_process_ticket_text :
+		inputs in en {
+			"Let me raise a ticket with our service desk and they will be happy to help you with this. Give me a moment" ,
+			"I am raising a ticket with our service desk and they will be happy to help you with this. Give me a moment"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey, how are you?" ,
+			"Hello, How are you doing?"
+	}
+	Text response utter_anything_else_text :
+		inputs in en {
+			"Is there anything else I can help you with?" ,
+			"Let me know if there is anything else I can help you with"
+	}
+	Text response utter_device_model_text :
+		inputs in en {
+			"May I know the model of your " [ "device_issue.device_name" ] "?" ,
+			"Would you please tell me the model of your " [ "device_issue.device_name" ] "?"
+	}
+	Text response utter_thanks_text :
+		inputs in en {
+			"Thank you and have a nice day"
+	}
+	Text response utter_reply_text :
+		inputs in en {
+			"I\'m doing great. Please let me know what I can do for you." ,
+			"I\'m doing great. Tell me How can I help you today?"
+	}
+	Text response utter_restart_outcome_text :
+		inputs in en {
+			"Once your " device_name " starts let me know if you can see anything on the screen"
+	}
+	Text response utter_device_charged_text :
+		inputs in en {
+			"I will try my best to help you with this. Can you please put your " device_name " on charge" ,
+			"Ok, Let me do my best. Can you please put your " device_name " on charge"
+	}
+	Text response utter_issue_damage_text :
+		inputs in en {
+			"Thank you so much for the details, So what exactly is the " notify_problem " here?" ,
+			"Great, So what exactly is the problem/damage here?" ,
+			"Thank you for providing the details, So what exactly is the " notify_problem " here?"
+	}
+	Text response utter_year_text :
+		inputs in en {
+			"Thanks. Can you also tell me when you\'ve bought this " device_name "?" ,
+			"Thanks. May I also know the Year of Purchase?" ,
+			"Thanks. May I also know when did you buy this " device_name "?" ,
+			"Thanks. Can you please tell me in which year did you buy this " device_name "?"
+	}
+	Text response utter_issue_resolution_text :
+		inputs in en {
+			"Great, There is a possibility your " device_name " was hanged." ,
+			"Great, looks like your " device_name " got hanged."
+	}
+	Text response utter_damage_screen_text :
+		inputs in en {
+			"It looks like there is some internal damage to the screen" ,
+			"It looks like your screen is damaged" ,
+			"I am afraid to say but It looks like your screen is damaged" ,
+			"I am afraid to say but there is some internal damage to the screen"
+	}
+	Text response utter_help_text :
+		inputs in en {
+			"Great. How can I help you?" ,
+			"Great. Tell me How can I help you?"
+	}
+	Text response utter_issue_stamp_text :
+		inputs in en {
+			"Did anyone has sat or stamped on your " device_name "." ,
+			"Do you recall if someone has stamped on your " device_name "."
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"I am not sure what you\'re aiming for"
+	}
+	Text response utter_issue_fall_text :
+		inputs in en {
+			"Okay, I see. Did you, by any chance drop your " [ "prob_device_screen.device_name" ] "?" ,
+			"I am so sorry for that but did you by any chance drop your " [ "prob_device_screen.device_name" ] "?"
+	}
+	Empty response action_restart_empty
+	Text response utter_restart_text :
+		inputs in en {
+			"While your " device_name " is charging, Please hold on your power button and press your home button."
+	}
+	Empty response action_create_ticket_empty
+	Text response utter_bye_text :
+		inputs in en {
+			Bye ,
+			Bbye
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user fine_ask => chatbot utter_reply_text ;
+	} ;
+	- user fine_normal => chatbot utter_help_text ;
+	- user fine_ask => chatbot utter_reply_text ;
+	- user device_issue => chatbot utter_ofc_text , utter_device_model_text ;
+	- user device_model => chatbot utter_year_text {
+		=> user buy_year => chatbot utter_issue_damage_text ;
+	} ;
+	- user prob_device_screen => chatbot utter_issue_fall_text ;
+	- user answer_negative => chatbot utter_issue_stamp_text {
+		=> user answer_negative => chatbot utter_device_charged_text { => user alt_reply => chatbot utter_restart_outcome_text , utter_restart_text ; } ;
+	} ;
+	- user answer_positive => chatbot utter_damage_screen_text , utter_process_ticket_text , action_create_ticket_empty ;
+	- user answer_screen_negative => chatbot utter_damage_screen_text , utter_process_ticket_text , action_create_ticket_empty ;
+	- user answer_screen_positive => chatbot utter_issue_resolution_text , utter_glad_text , utter_anything_else_text ;
+	- user greet_ticket => chatbot utter_anything_else_text ;
+	- user thanks => chatbot utter_thanks_text ;
+	- user bye => chatbot utter_bye_text ;
+

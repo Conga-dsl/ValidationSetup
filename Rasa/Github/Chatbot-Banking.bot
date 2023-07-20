@@ -1,0 +1,301 @@
+Chatbot "Chatbot-Banking" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		"selamat siang" ,
+		"selamat malam" ,
+		"selamat sore" ,
+		"selamat pagi" ,
+		"siang kak" ,
+		"malam kak" ,
+		"pagi kak" ,
+		hey ,
+		hay ,
+		^hi ,
+		hai ,
+		hello ,
+		halo ,
+		"sore kak"
+}
+
+tanya_nama :
+	inputs in en {
+		"saya " ( dedy ) [ nama ] ,
+		"nama aku " ( dedy ) [ nama ] ,
+		"nama saya " ( buala ) [ nama ] ,
+		"nama saya " ( gery ) [ nama ] ,
+		"nama saya " ( marudut ) [ nama ] ,
+		"nama saya " ( fikri ) [ nama ] ,
+		"nama saya " ( christian ) [ nama ] ,
+		"nama saya " ( hovely ) [ nama ] ,
+		"nama saya " ( adrian ) [ nama ] ,
+		"nama saya " ( basado ) [ nama ] ,
+		"nama saya " ( samuel ) [ nama ] ,
+		"nama saya " ( besly ) [ nama ] ,
+		"nama aku " ( buala ) [ nama ] ,
+		"nama aku " ( gery ) [ nama ] ,
+		"nama aku " ( marudut ) [ nama ] ,
+		"saya " ( buala ) [ nama ]
+	}
+	parameters :
+		nama : entity text ;
+
+not_yet :
+	inputs in en {
+		belum ,
+		"gak tau" ,
+		"tidak tau" ,
+		"ga tau"
+}
+
+jenis_rekening_silver :
+	inputs in en {
+		"jenis rekening " ( silver ) [ card ] ,
+		"rekening " ( silver ) [ card ] ,
+		"jenis rek " ( silver ) [ card ] ,
+		"rekening nya " ( silver ) [ card ]
+	}
+	parameters :
+		card : entity text ;
+
+jenis_rekening_gold :
+	inputs in en {
+		"jenis " ( gold ) [ kartu ] ,
+		"jenis rek " ( gold ) [ kartu ] ,
+		"jenis rekening " ( gold ) [ kartu ] ,
+		"rekening nya " ( gold ) [ kartu ]
+	}
+	parameters :
+		kartu : entity text ;
+
+pin :
+	inputs in en {
+		"saya lupa pin " ( ATM ) [ ^id ] ,
+		"pin atm saya lupa " ( ATM ) [ ^id ] ,
+		"lupa pin " ( ATM ) [ ^id ] ,
+		"pin atm lupa " ( ATM ) [ ^id ]
+	}
+	parameters :
+		^id : entity text ;
+
+saldo :
+	inputs in en {
+		"saya ingin cek saldo" ,
+		"ingin tau saldo" ,
+		"saldo saya berapa" ,
+		"jumlah saldo saya sekarang berapa" ,
+		"saya mau lihat saldo sekarang" ,
+		"aku liat saldo sekarang" ,
+		"aku mau cek saldo sekarang"
+}
+
+affirm :
+	inputs in en {
+		"ya kak" ,
+		ya ,
+		"baik kak" ,
+		baik ,
+		ok ,
+		oke ,
+		"okeh kak" ,
+		siap ,
+		sip ,
+		okay ,
+		y ,
+		yah
+}
+
+deny :
+	inputs in en {
+		tidak ,
+		tdk ,
+		engga ,
+		ga
+}
+
+registrasi_rekening :
+	inputs in en {
+		"Saya ingin membuat rekening" ,
+		"rekening baru" ,
+		"buat rekening baru" ,
+		"saya mau buat tabungan baru" ,
+		"tabungan baru"
+}
+
+type_rekening :
+	inputs in en {
+		"saya ingin " ( gold ) [ type ] ,
+		( gold ) [ type ] ,
+		"saya ingin " ( silver ) [ type ] ,
+		( silver ) [ type ]
+	}
+	parameters :
+		type : entity text ;
+
+blok_kartuATM :
+	inputs in en {
+		"blokir " ( ATM ) [ ^id ] ,
+		"saya ingin blok " ( ATM ) [ ^id ] ,
+		"tolong blokir " ( ATM ) [ ^id ] " saya" ,
+		"saya ingin blokir " ( ATM ) [ ^id ]
+	}
+	parameters :
+		^id : entity text ;
+
+no_rek :
+	inputs in en {
+		"norek nya " ( "1301160802" ) [ norek ] ,
+		"nomor rekening nya " ( "1301160802" ) [ norek ] ,
+		"nomor rekening nya " ( "1301160987" ) [ norek ] ,
+		"norek nya " ( "1301160987" ) [ norek ] ,
+		"nomor rekening nya " ( "1301160456" ) [ norek ] ,
+		"norek nya " ( "1301160456" ) [ norek ] ,
+		"nomor rekening nya " ( "1301160946" ) [ norek ] ,
+		"norek nya " ( "1301160946" ) [ norek ] ,
+		"nomor rekening nya " ( "1301160998" ) [ norek ] ,
+		"norek nya " ( "1301160998" ) [ norek ] ,
+		"nomor rekening nya " ( "1301167643" ) [ norek ] ,
+		"norek nya " ( "1301167643" ) [ norek ] ,
+		"nomor rekening nya " ( "1301160805" ) [ norek ] ,
+		"norek nya " ( "1301160805" ) [ norek ] ,
+		"nomor rekening nya " ( "1301162345" ) [ norek ] ,
+		"norek nya " ( "1301162345" ) [ norek ]
+	}
+	parameters :
+		norek : entity number ;
+
+info_rekening :
+	inputs in en {
+		"saya butuh info membuat rek baru" ,
+		"butuh info buat rekening baru" ,
+		"bagaimana cara membuat rekening baru?" ,
+		"apa saja syarat untuk membuat rekening baru?" ,
+		"apa saja yang dibutuhkan untuk membuat rekening baru?" ,
+		"cara membuat rekening baru" ,
+		"buat rekening baru gimana cara nya ya?"
+}
+
+goodbye :
+	inputs in en {
+		"sampai jumpa" ,
+		"sampai jumpa lagi" ,
+		"see u" ,
+		"good bye" ,
+		dah ,
+		dadah ,
+		bye ,
+		"bye bye"
+}
+
+gratitude :
+	inputs in en {
+		"tidak, terimakasih" ,
+		"tdk, makasih" ,
+		"makasih ya" ,
+		mksh ,
+		tq ,
+		thx ,
+		thanks ,
+		"thank you" ,
+		"makasih, anda sangat membantu" ,
+		"thank you very much" ,
+		thnks ,
+		thxs ,
+		"oke, terima kasih"
+}
+
+jenis_rekening :
+
+actions :
+	Empty response action_pin_customer_empty
+	Empty response action_blok_customer_empty
+	Text response utter_tanya_nama_text :
+		inputs in en {
+			"ini dengan nama siapa ya kak?\n"
+	}
+	Text response utter_final_blok_text :
+		inputs in en {
+			"Rekening kakak sudah berhasil kami blok. \n"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hallo kak, ada yang bisa kami bantu ?:)\n"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Apakah kakak butuh bantuan lagi?\n"
+	}
+	Text response utter_jenis_rekening_gold_text :
+		inputs in en {
+			"baik kak untuk pembuatan rekening jenis gold terdapat beberapa persyaratan seperti: \n 1.Telah memiliki kartu pengenalan seperti : KTP/SIM/Pasport, \n 2.Tabungan ini bisa dibuka dengan setoran awal minimal Rp 200.000 \n 3.Dikenakan biaya Rp 10.000,- / bulannya \n Apakah saudara bernecana membuat rekening baru?\n"
+	}
+	Text response utter_account_text :
+		inputs in en {
+			"Baik kak, Kakak mau buat rekening yang jenis apa ya kak?\n"
+	}
+	Text response utter_jenis_rekening_silver_text :
+		inputs in en {
+			"Baik kak untuk pembuatan rekening jenis silver terdapat beberapa persyaratan seperti: \n 1.Telah memiliki kartu pengenalan seperti : KTP/SIM/Pasport, \n 2.Tabungan ini bisa dibuka dengan setoran awal minimal Rp 100.000 \n 3.Dikenakan biaya Rp 5.500,- / bulannya \n Apakah saudara berencana membuat rekening baru?"
+	}
+	Text response utter_tanya_syarat_text :
+		inputs in en {
+			"sebelumnya kakak udah mengetahui segala persyaratan pembuatan rekening ?\n"
+	}
+	Text response utter_link_registrasi_text :
+		inputs in en {
+			"Baik kak , mohon untuk melanjutkan pembuatan rekening baru mengisi form yang telah kami sediakan pada link ini http://localhost/bank \n"
+	}
+	Text response utter_tanya_jenis_rekening_text :
+		inputs in en {
+			"Oke kak, disini kita menyediakan 2 jenis rekening ada Silver dan Gold mau jenis rekening apa kak?\n"
+	}
+	Text response utter_tanya_type_text :
+		inputs in en {
+			"Mau Rekening type apa kak? kebetulan di Bank kita menyediakan 2 tipe, yaitu: GOLD dan SILVER \n"
+	}
+	Empty response utter_can_help_empty
+	Text response utter_thanks_text :
+		inputs in en {
+			"baik, terima kasih kak\n"
+	}
+	Text response utter_unclear_text :
+		inputs in en {
+			"Saya tidak mengerti pertanyaan nya kak, bisa diulangi lagi kak?\n"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Bye\n"
+	}
+	Text response utter_tanya_norek_text :
+		inputs in en {
+			"sebelumnya, boleh kirim nomor rekening nya kak? \n"
+	}
+	Text response utter_pernyataan_pin_text :
+		inputs in en {
+			"Baik kak, untuk forget pin maka kami akan memberikan pertanyaan kepada saudara, apakah saudara bersedia?\n"
+	}
+	Empty response action_saldo_customer_empty
+	Empty response utter_affirmation_empty
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user blok_kartuATM => chatbot utter_tanya_nama_text {
+			=> user tanya_nama => chatbot utter_tanya_norek_text { => user blok_kartuATM => chatbot action_blok_customer_empty { => user affirm => chatbot utter_did_that_help_text { => user gratitude => chatbot utter_thanks_text ; } ; } ; } ;
+		} ;
+		=> user pin => chatbot utter_tanya_nama_text {
+			=> user tanya_nama => chatbot utter_tanya_norek_text { => user pin => chatbot action_pin_customer_empty { => user affirm => chatbot utter_did_that_help_text { => user gratitude => chatbot utter_thanks_text ; } ; } ; } ;
+		} ;
+		=> user saldo => chatbot utter_tanya_nama_text {
+			=> user tanya_nama => chatbot utter_tanya_norek_text { => user saldo => chatbot action_saldo_customer_empty { => user affirm => chatbot utter_did_that_help_text { => user gratitude => chatbot utter_thanks_text ; } ; } ; } ;
+		} ;
+		=> user registrasi_rekening => chatbot utter_tanya_type_text {
+			=> user type_rekening => chatbot utter_link_registrasi_text { => user affirm => chatbot utter_did_that_help_text { => user gratitude => chatbot utter_thanks_text ; } ; } ;
+		} ;
+		=> user info_rekening => chatbot utter_tanya_nama_text {
+			=> user tanya_nama => chatbot utter_tanya_jenis_rekening_text { => user jenis_rekening => chatbot utter_tanya_syarat_text { => user not_yet => chatbot utter_jenis_rekening_silver_text , utter_jenis_rekening_gold_text { => user affirm => chatbot utter_link_registrasi_text { => user gratitude => chatbot utter_thanks_text ; } ; => user deny => chatbot utter_thanks_text ; } ; } ; } ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+

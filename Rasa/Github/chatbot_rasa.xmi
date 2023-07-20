@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="chatbot_rasa">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good afternoon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hii"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="fine_normal">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Doing good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="that_all">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That will be all, thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That's it, thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah I need more help"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="fine_ask">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm fine, how are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good, how are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Doing good, how are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome, how are you?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ask_help">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you assist me with this?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need your help on this issue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a problem, can you look into this"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="model_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPhone 7"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPhone 8"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPhone x"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPhone 7s"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPhone 8"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Macbook Pro"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Macbook Air"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPad mini"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPad air"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPad pro"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="year_buy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Two years ago"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One year ago"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Four years ago"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I bought this a few months ago"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I bought this two years ago"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I bought this a year ago"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="damage_ans">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah, it fell down a few times"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No it had no physical damage"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="express_issue">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a problem with my iphone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a problem with my ipad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a problem with my macbook"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There is something wrong with my macbook"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There is something wrong with my ipad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There is something wrong with my iphone"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="no_idea">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Don't know what's wrong with my PC"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have no idea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't know"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't. I don't know"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="working">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="working"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="not_working">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's not working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tried it and it's not working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Still not working"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="express_task">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my phone's case is broken"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="prob">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="qqqqqqqqqqq"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="prob1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't see anything on the screen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am unable to pair my headset"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="def1"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="proj_select">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="asasasas"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="my_device1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My device stopped working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a problem with my device"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I fix my device"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="my_device">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aaaaaaa"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="device_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPhone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="iPad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Macbook"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Mac"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Watch"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="yess">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="noo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_welcome_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Glad I could help"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_what_problem_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the name of your device?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ofc_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Of course, tell me about it"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_alt_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alt"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_alt1_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Long press the power button to restart and check"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ques_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want a new one?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_anything_else_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me more about the problem you are facing"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_alt3_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Make sure that the battery is not loose"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ticket_raised_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ninja"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_alt2_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Put it on charge for a while and see if it works"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_usual_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="salp"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_what_model_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="san"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_please_try_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please try it and see if its resolved"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_chose_proj_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Select the project: IPAD, PHON, MACB"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_damage_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Was there any physical damage?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_damage_rep_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay, explain the problem"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_thank_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tank"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_reply_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm doing great. What can I do for you"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_how_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I help you"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_what_device_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the name of your device?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_when_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did you buy this device"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_restart_empty"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.5">
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.19"/>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.18"/>
+      </outcoming>
+      <outcoming intent="//@intents.12">
+        <target actions="//@actions.6">
+          <outcoming intent="//@intents.19">
+            <target actions="//@actions.9"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.8">
+        <target actions="//@actions.1">
+          <outcoming intent="//@intents.9">
+            <target actions="//@actions.11"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.2"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.12">
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.21">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.15 //@actions.16">
+              <outcoming intent="//@intents.7">
+                <target actions="//@actions.16">
+                  <outcoming intent="//@intents.14">
+                    <target actions="//@actions.4">
+                      <outcoming intent="//@intents.11">
+                        <target actions="//@actions.10">
+                          <outcoming intent="//@intents.11">
+                            <target actions="//@actions.8">
+                              <outcoming intent="//@intents.11">
+                                <target actions="//@actions.9">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.17"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.13">
+                    <target actions="//@actions.3 //@actions.4 //@actions.8 //@actions.10">
+                      <outcoming intent="//@intents.20">
+                        <target actions="//@actions.13">
+                          <outcoming intent="//@intents.10">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.11">
+                            <target actions="//@actions.9"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.17">
+    <target actions="//@actions.1">
+      <outcoming intent="//@intents.9">
+        <target actions="//@actions.14">
+          <outcoming intent="//@intents.15">
+            <target actions="//@actions.7">
+              <outcoming intent="//@intents.9">
+                <target actions="//@actions.11"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.16">
+    <target actions="//@actions.20">
+      <outcoming intent="//@intents.18">
+        <target actions="//@actions.12">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.21">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.15 //@actions.16">
+                  <outcoming intent="//@intents.7">
+                    <target actions="//@actions.16">
+                      <outcoming intent="//@intents.14">
+                        <target actions="//@actions.4">
+                          <outcoming intent="//@intents.11">
+                            <target actions="//@actions.10">
+                              <outcoming intent="//@intents.11">
+                                <target actions="//@actions.8">
+                                  <outcoming intent="//@intents.11">
+                                    <target actions="//@actions.9">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.17"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

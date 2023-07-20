@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="ChatBot-for-Restaurant">
+  <intents name="confirmaffirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay that's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that is ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes it is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yew"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yea fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fine okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="YEAH"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay buddy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hmm okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay cool"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coool"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="confirmdeny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't come"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not needed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not at this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no forget"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no don't want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sorry no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't want that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope not that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dont need that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cuisinetype">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like something in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Mexican"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's try "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="south Indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="would like to have something in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Italian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am looking for something "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="north indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me something in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="chinese"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="any "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="south indian"/>
+        <tokens xsi:type="generator:Literal" text=" cuisine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="looking something "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="American"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Italian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="North Indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want some good "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" food."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's try something in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="American"/>
+        <tokens xsi:type="generator:Literal" text=" cuisine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's try "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="mexican"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am in mood to have some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" food."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="would like to have some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="south indian"/>
+      </inputs>
+    </inputs>
+    <parameters name="cuisine"/>
+  </intents>
+  <intents name="greetingsbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hope to see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="till next time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I must go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you soon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye-bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye see you soon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye take care"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I said bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never mind bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="now bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's all goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's it goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave me alone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to bed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can go now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get lost"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see ya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay thank you bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="c u"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greetingshello">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey buddy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi bru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello amigo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi, nice to see you again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="itemquantity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="1"/>
+      </inputs>
+    </inputs>
+    <parameters name="quant" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="selecteditem">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chole"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chawal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chole"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chawal"/>
+      </inputs>
+    </inputs>
+    <parameters name="food"/>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_ask.cuisine_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What cuisine would you like to try out today?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_order.anything_else_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Would you like to order anything else?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_select.item_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please select from the menu. &#xA; 1. Burger &#xA; 2. Paratha &#xA; 3. Chole Chawal &#xA; 4. Idli sambar"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="order.add_item_empty"/>
+  <actions xsi:type="generator:Text" name="utter_order.cancel_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay, the order has been cancelled."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_display.menu_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=".. Great choice. Here's the menu for today..."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greetings.hello_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there!!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="order.summary_empty"/>
+  <actions xsi:type="generator:Text" name="utter_order.placed_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool, your order has been placed. You will receive full updates on this chat."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="order.process_empty"/>
+  <actions xsi:type="generator:Text" name="utter_item.quantity.how_many_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many would you like to have?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_item.not_available_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, we are out of "/>
+        <tokens xsi:type="generator:Literal" text="item"/>
+        <tokens xsi:type="generator:Literal" text=". Would you like to have something else?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_default_fallback_empty"/>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am sorry, I didn't understand what you said. Can you try again?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="order.remove_item_empty"/>
+  <actions xsi:type="generator:Text" name="utter_agent.welcome_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi!!! I am Bru, your food ordering assistant."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_order.confirm_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Would you like to confirm the order?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greetings.bye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye!!!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Adios Amigo!!!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.6 //@actions.15 //@actions.0">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.5 //@actions.2">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.10 //@actions.11 //@actions.1">
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.16">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.8">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.17"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.2">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.16">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.8">
+                              <outcoming intent="//@intents.3">
+                                <target actions="//@actions.17"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.10">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.1">
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.16">
+                              <outcoming intent="//@intents.0">
+                                <target actions="//@actions.8">
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.17"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.11 //@actions.2">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.10">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.16">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.8 //@actions.1">
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.17">
+                              <outcoming intent="//@intents.3"/>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.17"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.11">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.5 //@actions.2">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.10">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.16">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.8 //@actions.1">
+                              <outcoming intent="//@intents.1">
+                                <target actions="//@actions.17">
+                                  <outcoming intent="//@intents.3"/>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.5 //@actions.2 //@actions.11 //@actions.10 //@actions.16 //@actions.1">
+      <outcoming intent="//@intents.0">
+        <target actions="//@actions.8 //@actions.0"/>
+      </outcoming>
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.1 //@actions.17">
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.17"/>
+          </outcoming>
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.0"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.17"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

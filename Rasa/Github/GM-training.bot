@@ -1,0 +1,252 @@
+Chatbot "GM-training" language : en
+
+intents :
+
+	deregister :
+		inputs in en {
+			Deregister ,
+			"Deregister my number from this" ,
+			"Deregister my account" ,
+			"Deregister my number" ,
+			"Deregister me from this" ,
+			"deregister my no." ,
+			"deregister my number" ,
+			"I want to deregister" ,
+			"Please help me to deregister" ,
+			"I want to delete my account" ,
+			"Delete my account" ,
+			"Help me to delete my account" ,
+			"Please help me to delete my account" ,
+			"Delete account" ,
+			"Deregister from this" ,
+			"I want to deregister from this" ,
+			"cancel my account" ,
+			"remove my account" ,
+			"I dont want to use this anymore" ,
+			"I don\'t want to be here" ,
+			"Please close my account"
+	}
+
+	find_in_mongo :
+		inputs in en {
+			"do i exist?" ,
+			"my details"
+	}
+
+	inform :
+		inputs in en {
+			( sitka ) [ location ] ,
+			( juneau ) [ location ]
+		}
+		parameters :
+			location : entity text ;
+
+	name :
+		inputs in en {
+			( anurag ) [ name ] ,
+			( suraj ) [ name ] ,
+			( simran ) [ name ] ,
+			( kajal ) [ name ] ,
+			( omkar ) [ name ] ,
+			( "omkar patil" ) [ name ] ,
+			( "omkar c patil" ) [ name ] ,
+			( "anurag joshi" ) [ name ] ,
+			"my name is " ( omkar ) [ name ] ,
+			"i am know as " ( omkar ) [ name ] ,
+			"you can call me " ( omkar ) [ name ] ,
+			"my name is " ( suraj ) [ name ] ,
+			"i am know as " ( suraj ) [ name ] ,
+			"you can call me " ( suraj ) [ name ] ,
+			"my name is " ( kajal ) [ name ] ,
+			"i am know as " ( kajal ) [ name ] ,
+			"you can call me " ( kajal ) [ name ] ,
+			"my name is " ( simran ) [ name ] ,
+			"i am know as " ( simran ) [ name ] ,
+			"you can call me " ( simran ) [ name ] ,
+			"my name is " ( anurag ) [ name ] ,
+			"i am know as " ( anurag ) [ name ] ,
+			"you can call me " ( anurag ) [ name ]
+		}
+		parameters :
+			name : entity text ;
+
+	emailIntent :
+		inputs in en {
+			( "anurag@gmail.com" ) [ email ] ,
+			( "suraj@gmail.com" ) [ email ] ,
+			( "simran@gmail.com" ) [ email ] ,
+			( "kajal@gmail.com" ) [ email ] ,
+			( "ocpatil@gmail.com" ) [ email ]
+		}
+		parameters :
+			email : entity email ;
+
+	search_provider :
+		inputs in en {
+			"i need a " ( hospital ) [ facility_type ] ,
+			"find me nearby " ( hospital ) [ facility_type ] ,
+			"please find me nearby " ( restaurant ) [ facility_type ] ,
+			"i need some " ( restaurant ) [ facility_type ]
+		}
+		parameters :
+			facility_type : entity text ;
+
+	thanks :
+		inputs in en {
+			"thank you" ,
+			thanks ,
+			"thank you very much"
+	}
+
+	greet :
+		inputs in en {
+			hey ,
+			hello ,
+			^hi ,
+			"good morning" ,
+			"good evening" ,
+			"hey there" ,
+			thanks
+	}
+
+	goodbye :
+		inputs in en {
+			bye ,
+			goodbye ,
+			"see you around" ,
+			"see you later"
+	}
+
+	affirm :
+		inputs in en {
+			yes ,
+			indeed ,
+			"of course" ,
+			"that sounds good" ,
+			correct
+	}
+
+	deny :
+		inputs in en {
+			^no ,
+			never ,
+			"I don\'t think so" ,
+			"don\'t like that" ,
+			"no way" ,
+			"not really"
+	}
+
+	mood_great :
+		inputs in en {
+			perfect ,
+			"very good" ,
+			great ,
+			amazing ,
+			wonderful ,
+			"I am feeling very good" ,
+			"I am great" ,
+			"I\'m good"
+	}
+
+	mood_unhappy :
+		inputs in en {
+			sad ,
+			"very sad" ,
+			unhappy ,
+			bad ,
+			"very bad" ,
+			awful ,
+			terrible ,
+			"not very good" ,
+			"extremely sad" ,
+			"so sad"
+	}
+
+	bot_challenge :
+		inputs in en {
+			"are you a bot?" ,
+			"are you a human?" ,
+			"am I talking to a bot?" ,
+			"am I talking to a human?"
+	}
+
+entities :
+	Regex entity email :
+		inputs in en {
+			pattern : "^\\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+	}
+
+actions :
+	Text response utter_welcome_text :
+		inputs in en {
+			"your welcome buddy"
+	}
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Empty response action_facility_search_empty
+	Empty response action_ask_location_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Empty response action_form_ask_name_empty
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Empty response actions_find_in_mongo_empty
+	Text response utter_how_can_i_help_text :
+		inputs in en {
+			"hello, i am a medicare location. do you want nearby hospitals"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_ask_email_text :
+		inputs in en {
+			"Please provide your email" ,
+			"Could you Please provide your email"
+	}
+	Empty response actions_deregister_empty
+	Text response utter_ask_location_text :
+		inputs in en {
+			"provide your location" ,
+			"to find the nearest {facility_type} I need your address"
+	}
+	Text response utter_ask_name_text :
+		inputs in en {
+			"seems you are not registred, please enter your name" ,
+			"Could you please tell me your name for registration"
+	}
+
+flows :
+	- user deregister => chatbot actions_deregister_empty ;
+	- user find_in_mongo => chatbot actions_find_in_mongo_empty , action_form_ask_name_empty {
+		=> user thanks => chatbot utter_goodbye_text ;
+	} ;
+	- user greet => chatbot actions_find_in_mongo_empty {
+		=> user search_provider => chatbot action_facility_search_empty , action_ask_location_empty {
+			=> user thanks => chatbot utter_goodbye_text ;
+			=> user inform => chatbot action_facility_search_empty {
+				=> user thanks => chatbot utter_welcome_text , utter_goodbye_text ;
+			} ;
+		} ;
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

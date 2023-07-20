@@ -1,0 +1,222 @@
+Chatbot "Employee-BOT" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"hey there" ,
+		Hi ,
+		hey ,
+		hello ,
+		^hi ,
+		"hey there" ,
+		Hi
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		sure ,
+		ok ,
+		yeah ,
+		fine ,
+		yes ,
+		indeed ,
+		sure ,
+		ok ,
+		yeah ,
+		fine
+}
+
+name_entry :
+	inputs in en {
+		"My name is " ( Aumkar ) [ name ] ,
+		"My name is " ( Om ) [ name ] ,
+		"My name is " ( Ram ) [ name ] ,
+		"My name is " ( Shyam ) [ name ] ,
+		"My name is " ( Raj ) [ name ] ,
+		"My name is " ( Rahul ) [ name ] ,
+		"My name is " ( Ajay ) [ name ] ,
+		"My name is " ( Akash ) [ name ] ,
+		"My name is " ( Vijay ) [ name ] ,
+		"My name is " ( Aumkar ) [ name ] ,
+		"My name is " ( Om ) [ name ] ,
+		"My name is " ( Ram ) [ name ] ,
+		"My name is " ( Shyam ) [ name ] ,
+		"My name is " ( Raj ) [ name ] ,
+		"My name is " ( Rahul ) [ name ] ,
+		"My name is " ( Ajay ) [ name ] ,
+		"My name is " ( Akash ) [ name ] ,
+		"My name is " ( Vijay ) [ name ]
+	}
+	parameters :
+		name : entity text ;
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"no way" ,
+		"not really" ,
+		none ,
+		"absolutely not" ,
+		"no thanks" ,
+		"didn\'t do any" ,
+		"no I didn\'t" ,
+		"could have been better" ,
+		"not great" ,
+		nope ,
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"no way" ,
+		"not really" ,
+		none ,
+		"absolutely not" ,
+		"no thanks" ,
+		"didn\'t do any" ,
+		"no I didn\'t" ,
+		"could have been better" ,
+		"not great" ,
+		nope
+}
+
+thankyou :
+	inputs in en {
+		"okay great thanks" ,
+		"thank you" ,
+		"sure thanks" ,
+		"thanks bye" ,
+		"okay great thanks" ,
+		"thank you" ,
+		"sure thanks" ,
+		"thanks bye"
+}
+
+feel_entry :
+	inputs in en {
+		"I am feeling " ( good ) [ feeling ] ,
+		"I am feeling " ( neutral ) [ feeling ] ,
+		"I am feeling " ( sad ) [ feeling ] ,
+		"I feel " ( good ) [ feeling ] ,
+		"I feel " ( sad ) [ feeling ] ,
+		( Good ) [ feeling ] ,
+		( Sad ) [ feeling ] ,
+		( Neutral ) [ feeling ] ,
+		"I am feeling " ( good ) [ feeling ] ,
+		"I am feeling " ( neutral ) [ feeling ] ,
+		"I am feeling " ( sad ) [ feeling ] ,
+		"I feel " ( good ) [ feeling ] ,
+		"I feel " ( sad ) [ feeling ] ,
+		( Good ) [ feeling ] ,
+		( Sad ) [ feeling ] ,
+		( Neutral ) [ feeling ]
+	}
+	parameters :
+		feeling : entity text ;
+
+out_of_scope :
+	inputs in en {
+		"that\'s not what I want to do" ,
+		"wait stop" ,
+		"you\'re no help" ,
+		"this is no help at all" ,
+		"this isn\'t working" ,
+		"I already told you that" ,
+		"don\'t like that" ,
+		"I don\'t want to tell you that" ,
+		"none of your business" ,
+		"that\'s not right" ,
+		"stop asking" ,
+		nevermind ,
+		"I want to do something else" ,
+		"I changed my mind" ,
+		"that\'s not what I want to do" ,
+		"wait stop" ,
+		"you\'re no help" ,
+		"this is no help at all" ,
+		"this isn\'t working" ,
+		"I already told you that" ,
+		"don\'t like that" ,
+		"I don\'t want to tell you that" ,
+		"none of your business" ,
+		"that\'s not right" ,
+		"stop asking" ,
+		nevermind ,
+		"I want to do something else" ,
+		"I changed my mind"
+}
+
+actions :
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi there! I\'m helperbot. And what\'s your name?"
+	}
+	Text response utter_consent_text :
+		inputs in en {
+			"Alright, " [ "name_entry.name" ] ", let\'s get to know you. Can I ask you some questions?"
+	}
+	Text response utter_ask_a1_text :
+		inputs in en {
+			"Do you find your job challenging and exciting?"
+	}
+	Text response utter_slots_values_text :
+		inputs in en {
+			"You\'ve submitted the following answers:\n - a1: " a1 "\n - a2: " a2 "\n - a3: " a3 "\n - a4: " a4
+	}
+	Text response utter_no_worries_text :
+		inputs in en {
+			"No problem :)"
+	}
+	Text response utter_ask_feeling_text :
+		inputs in en {
+			"How are you feeling?"
+	}
+	Text response utter_ask_continue_text :
+		inputs in en {
+			"Sorry, I don\'t quite understand. Do you want to continue?"
+	}
+	Text response utter_ask_a4_text :
+		inputs in en {
+			"\'Do you feel the salary for the job is right for the responsibilities you have?"
+	}
+	Text response utter_ask_a3_text :
+		inputs in en {
+			"\'Do you feel the salary for the job is right for the responsibilities you have?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"See you tomorrow. Bye!"
+	}
+	Text response utter_ask_a2_text :
+		inputs in en {
+			"Are your workplace issues dealt with quickly and efficiently?"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user greet => chatbot utter_greet_text {
+		=> user name_entry => chatbot utter_consent_text {
+			=> user affirm => chatbot utter_slots_values_text , DefaultEmptyAction { => user out_of_scope => chatbot utter_ask_continue_text { => user deny => chatbot DefaultEmptyAction ; => user affirm => chatbot utter_slots_values_text ; } ; } ;
+		} ;
+		=> user deny => chatbot utter_goodbye_text ;
+	} ;
+

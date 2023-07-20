@@ -1,0 +1,97 @@
+Chatbot islaycode language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+appointment :
+	inputs in en {
+		"create appointment" ,
+		"i would like to create appointment" ,
+		appointment ,
+		"book appointment"
+}
+
+name :
+	inputs in en {
+		"my name is [binod] (name)" ,
+		"my self [ravi] (name)" ,
+		"name is [nikhil] (name)" ,
+		"name [abuzer] (name)" ,
+		"my name [sahil] (name)"
+}
+
+country :
+	inputs in en {
+		"[India] (country)" ,
+		"[US] (country)" ,
+		"[BRAZIL] (country)" ,
+		"[CANADA] (country)"
+}
+
+^date :
+	inputs in en {
+		"10 july" ,
+		"18 august" ,
+		"17 march"
+}
+
+actions :
+	Text response utter_appointment_text :
+		inputs in en {
+			"Sure, when would like to book an appointment?"
+	}
+	Text response utter_country_text :
+		inputs in en {
+			"Please enter your country and get your booking id?"
+	}
+	Text response utter_show_name_country_text :
+		inputs in en {
+			"Your appointment has been fixed for Tommorow, Your name is " name " country is " country " and booking id is P:010 ."
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi Welcome to Ayur, would you like to book an appoint, Please Enter Your name?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Bye Have a nice day "
+	}
+	Text response utter_name_text :
+		inputs in en {
+			"Please enter your name"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user name => chatbot utter_country_text { => user country => chatbot utter_show_name_country_text , utter_goodbye_text ; } ;
+	} ;
+

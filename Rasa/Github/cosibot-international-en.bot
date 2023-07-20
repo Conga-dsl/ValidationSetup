@@ -1,0 +1,529 @@
+Chatbot "cosibot-international-en" language : en
+
+intents :
+
+start :
+	inputs in en {
+		"/start" ,
+		"/start" ,
+		"/start_conversation" ,
+		"/start_chat" ,
+		"/get started" ,
+		"/start_dialogue" ,
+		"/start dialogue"
+}
+
+bot_change_bot :
+
+"start-dialogue" :
+
+greeting_hello :
+
+start_dialogue :
+
+greeting_goodbye :
+
+greeting_how_are_you :
+
+travel_before :
+
+travel_while :
+
+travel_after :
+
+covid_tech4covid :
+
+covid_volunteer :
+
+covid_register :
+
+covid_cosibot :
+
+covid_current_statistics :
+
+covid_situation :
+
+coronavirus_info :
+
+covid_info :
+
+covid_meaning :
+
+covid_symptoms :
+
+covid_worry :
+
+covid_sars :
+
+myth_influenza :
+
+covid_incubation :
+
+covid_surfaces :
+
+covid_food :
+
+covid_crisis_howlong :
+
+covid_mortality_rate :
+
+covid_dangerous :
+
+covid_procedure_after_infection :
+
+covid_treatment :
+
+covid_origins :
+
+covid_duration :
+
+covid_disease_process :
+
+covid_aftereffects :
+
+covid_immunity :
+
+covid_preexisting_illness :
+
+covid_babys_children :
+
+economy_consequences :
+
+covid_pandemic :
+
+covid_sex :
+
+covid_schools :
+
+ebola :
+
+prevention_general :
+
+prevention_informed :
+
+prevention_clean_hands :
+
+prevention_distance :
+
+prevention_touch :
+
+prevention_respiratory_hygiene :
+
+prevention_medical_attention :
+
+prevention_home :
+
+prevention_medicine :
+
+prevention_measures :
+
+prevention_disinfection :
+
+prevention_vaccine :
+
+myth_air_conditioning :
+
+myth_5G :
+
+myth_hand_dryer :
+
+myth_uv_lamps :
+
+myth_thermal_scanner :
+
+myth_antibiotics :
+
+myth_alcohol :
+
+myth_pneumonia_vaccine :
+
+myth_saline :
+
+myth_garlic :
+
+myth_sesame_oil :
+
+myth_packages :
+
+myth_transmission_hot_areas :
+
+myth_cold_weather :
+
+myth_hot_bath :
+
+myth_conspiracy_fakenews :
+
+myth_mosquitoes :
+
+spread_general :
+
+spread_air :
+
+spread_no_symptoms :
+
+spread_feces :
+
+spread_risk :
+
+spread_animals :
+
+spread_pets :
+
+spread_surfaces_food_objects :
+
+quarantine_general :
+
+quarantine_dogwalking :
+
+quarantine_when_who_howlong :
+
+quaratine_how_it_works :
+
+quarantine_control :
+
+quarantine_dos_and_donts :
+
+quarantine_toiletpaper :
+
+mask_general :
+
+mask_use_put :
+
+mask_use_after :
+
+mask_visors :
+
+test_virus :
+
+test_who :
+
+vocative_help :
+
+vocative_thank_you :
+
+vocative_you_welcome :
+
+vocative_call :
+
+vocative_sorry :
+
+vocative_yesORvocative_no :
+
+features_date :
+
+features_time :
+
+bot_name :
+
+bot_version :
+
+bot_origin :
+
+bot_languages :
+
+bot_appearance :
+
+bot_capabilities :
+
+bot_goal :
+
+bot_real :
+
+bot_availability :
+
+bot_books :
+
+bot_fear :
+
+bot_movies :
+
+bot_music :
+
+bot_residence :
+
+bot_personality :
+
+bot_personal_questions :
+
+bot_sexual :
+
+cc_weather :
+
+cc_moon :
+
+cc_chicken_egg :
+
+cc_joke :
+
+cc_politics :
+
+cc_religion :
+
+cc_philosophical :
+
+cc_lets_talk :
+
+cc_newspaper :
+
+user_happy :
+
+user_friend :
+
+user_love :
+
+user_angry :
+
+user_scared :
+
+user_no_further_questions :
+
+user_particles :
+
+comment_positive :
+
+comment_negative :
+
+comment_smart :
+
+comment_offense :
+
+comment_racist :
+
+covid_situationORcovid_situation_testedORcovid_situation_recoveredORcovid_situation_last_updateORcovid_situation_infected_criticalORcovid_situation_infectedORcovid_situation_deaths :
+
+vocative_yes :
+
+country :
+
+vocative_no :
+
+covid_situation_tested :
+
+covid_situation_recovered :
+
+covid_situation_last_update :
+
+covid_situation_infected_critical :
+
+covid_situation_infected :
+
+covid_situation_deaths :
+
+FallbackIntent Fallback :
+
+actions :
+	Empty response utter_covid_procedure_after_infection_empty
+	Empty response utter_prevention_clean_hands_empty
+	Empty response utter_travel_before_empty
+	Empty response utter_quarantine_dogwalking_empty
+	Empty response utter_user_love_empty
+	Empty response utter_user_love_empty2
+	Empty response utter_covid_situation_empty
+	Empty response utter_covid_preexisting_illness_empty
+	Empty response utter_mask_use_after_empty
+	Empty response utter_covid_sex_empty
+	Empty response utter_cc_moon_empty
+	Empty response utter_cc_moon_empty2
+	Empty response utter_spread_feces_empty
+	Empty response utter_cc_politics_empty
+	Empty response utter_cc_politics_empty2
+	Empty response utter_ebola_empty
+	Empty response utter_covid_volunteer_empty
+	Empty response utter_comment_positive_empty
+	Empty response utter_myth_packages_empty
+	Empty response utter_myth_saline_empty
+	Empty response utter_spread_risk_empty
+	Empty response utter_myth_mosquitoes_empty
+	Empty response utter_covid_situation_infected_empty
+	Empty response utter_covid_aftereffects_empty
+	Empty response utter_prevention_disinfection_empty
+	Empty response action_default_fallback_empty
+	Empty response utter_bot_version_empty
+	Empty response utter_bot_version_empty2
+	Empty response utter_bot_version_empty3
+	Empty response utter_cc_religion_empty
+	Empty response utter_cc_religion_empty2
+	Empty response utter_prevention_respiratory_hygiene_empty
+	Empty response utter_comment_smart_empty
+	Empty response utter_vocative_help_empty
+	Empty response utter_vocative_help_empty2
+	Empty response utter_vocative_help_empty3
+	Empty response utter_bot_residence_empty
+	Empty response utter_covid_treatment_empty
+	Empty response utter_covid_influenza_empty
+	Empty response utter_economy_consequences_empty
+	Empty response utter_bot_music_empty
+	Empty response utter_mask_visors_empty
+	Empty response utter_spread_surfaces_food_objects_empty
+	Empty response utter_prevention_vaccine_empty
+	Empty response utter_cc_philosophical_empty
+	Empty response utter_cc_philosophical_empty2
+	Empty response utter_bot_personality_empty
+	Empty response utter_myth_5g_empty
+	Empty response utter_bot_movies_empty
+	Empty response utter_bot_movies_empty2
+	Empty response utter_bot_movies_empty3
+	Empty response utter_bot_movies_empty4
+	Empty response action_get_news_request_empty
+	Empty response utter_myth_garlic_empty
+	Empty response utter_covid_current_statistics_empty
+	Empty response utter_user_particles_empty
+	Empty response utter_user_scared_empty
+	Empty response utter_fallback_request_hasdata_empty
+	Empty response utter_test_who_empty
+	Empty response utter_comment_negative_empty
+	Empty response utter_myth_uv_lamps_empty
+	Empty response utter_myth_pneumonia_vaccine_empty
+	Empty response utter_further_questions_empty
+	Empty response utter_further_questions_empty2
+	Empty response utter_further_questions_empty3
+	Empty response utter_quarantine_toiletpaper_empty
+	Empty response utter_myth_hot_bath_empty
+	Empty response utter_ask_which_country_empty
+	Empty response utter_myth_antibiotics_empty
+	Empty response utter_covid_situation_infected_critical_empty
+	Empty response utter_fallback_request_error_empty
+	Empty response utter_news_request_hasdata_empty
+	Empty response utter_covid_surfaces_empty
+	Empty response utter_prevention_home_empty
+	Empty response utter_covid_situation_recovered_empty
+	Empty response utter_myth_air_conditioning_empty
+	Empty response utter_bot_appearance_empty
+	Empty response utter_covid_cosibot_empty
+	Empty response utter_covid_situation_tested_empty
+	Empty response utter_bot_languages_empty
+	Empty response utter_greeting_goodbye_empty
+	Empty response utter_greeting_goodbye_empty2
+	Empty response utter_greeting_goodbye_empty3
+	Empty response utter_spread_no_symptoms_empty
+	Empty response utter_mask_use_put_empty
+	Empty response utter_covid_tech4covid_empty
+	Empty response action_change_preferred_language_empty
+	Empty response utter_user_friend_empty
+	Empty response utter_user_friend_empty2
+	Empty response utter_user_happy_empty
+	Empty response utter_user_happy_empty2
+	Empty response utter_covid_schools_empty
+	Empty response utter_covid_info_empty
+	Empty response utter_greeting_hello_empty
+	Empty response utter_greeting_hello_empty2
+	Empty response utter_greeting_hello_empty3
+	Empty response utter_covid_symptoms_empty
+	Empty response utter_coronavirus_info_empty
+	Empty response utter_covid_duration_empty
+	Empty response utter_myth_thermal_scanner_empty
+	Empty response utter_bot_books_empty
+	Empty response utter_bot_sexual_empty
+	Empty response "utter_test 2_empty"
+	Empty response utter_bot_real_empty
+	Empty response utter_covid_pandemic_empty
+	Empty response utter_quaratine_how_it_works_empty
+	Empty response utter_covid_mortality_rate_empty
+	Empty response utter_quarantine_control_empty
+	Empty response utter_bot_availability_empty
+	Empty response utter_covid_meaning_empty
+	Empty response utter_bot_name_empty
+	Empty response utter_bot_name_empty2
+	Empty response utter_bot_name_empty3
+	Empty response utter_travel_after_empty
+	Empty response utter_covid_no_country_current_statistics_empty
+	Empty response utter_vocative_you_welcome_empty
+	Empty response utter_vocative_you_welcome_empty2
+	Empty response utter_covid_disease_process_empty
+	Empty response utter_myth_conspiracy_fakenews_empty
+	Empty response utter_vocative_thank_you_empty
+	Empty response utter_vocative_thank_you_empty2
+	Empty response utter_vocative_thank_you_empty3
+	Empty response utter_vocative_thank_you_empty4
+	Empty response utter_cc_lets_talk_empty
+	Empty response utter_quarantine_general_empty
+	Empty response utter_covid_babys_children_empty
+	Empty response utter_test_virus_empty
+	Empty response action_check_Bot_Introduced_empty
+	Empty response utter_covid_sars_empty
+	Empty response utter_want_to_add_country_empty
+	Empty response utter_prevention_measures_empty
+	Empty response utter_spread_pets_empty
+	Empty response utter_prevention_informed_empty
+	Empty response utter_myth_cold_weather_empty
+	Empty response utter_spread_general_empty
+	Empty response utter_cc_newspaper_empty
+	Empty response utter_cc_newspaper_empty2
+	Empty response utter_cc_newspaper_empty3
+	Empty response utter_myth_hand_dryer_empty
+	Empty response utter_covid_situation_last_update_empty
+	Empty response utter_covid_situation_last_update_empty2
+	Empty response utter_covid_situation_last_update_empty3
+	Empty response utter_cc_chicken_egg_empty
+	Empty response utter_covid_incubation_empty
+	Empty response utter_prevention_general_empty
+	Empty response utter_myth_sesame_oil_empty
+	Empty response utter_cc_joke_empty
+	Empty response utter_cc_joke_empty2
+	Empty response utter_quarantine_dos_and_donts_empty
+	Empty response utter_myth_alcohol_empty
+	Empty response utter_fallback_first_empty
+	Empty response utter_prevention_touch_empty
+	Empty response utter_prevention_medicine_empty
+	Empty response utter_covid_dangerous_empty
+	Empty response utter_comment_racist_empty
+	Empty response utter_greeting_how_are_you_empty
+	Empty response utter_greeting_how_are_you_empty2
+	Empty response utter_vocative_sorry_empty
+	Empty response utter_vocative_sorry_empty2
+	Empty response utter_vocative_sorry_empty3
+	Empty response utter_bot_origin_empty
+	Empty response utter_welcome_empty
+	Empty response utter_bot_capabilities_empty
+	Empty response utter_covid_worry_empty
+	Empty response utter_spread_air_empty
+	Empty response utter_cc_weather_empty
+	Empty response utter_covid_origins_empty
+	Empty response utter_covid_crisis_howlong_empty
+	Empty response utter_mask_general_empty
+	Empty response utter_covid_situation_deaths_empty
+	Empty response utter_quarantine_when_who_howlong_empty
+	Empty response utter_bot_fear_empty
+	Empty response utter_bot_fear_empty2
+	Empty response utter_features_date_empty
+	Empty response utter_features_date_empty2
+	Empty response utter_covid_register_empty
+	Empty response action_search_stats_empty
+	Empty response utter_bot_personal_questions_empty
+	Empty response utter_prevention_distance_empty
+	Empty response utter_covid_food_empty
+	Empty response utter_spread_animals_empty
+	Empty response utter_fallback_request_emptyanswer_empty
+	Empty response action_get_date_empty
+	Empty response utter_comment_offense_empty
+	Empty response action_get_time_empty
+	Empty response utter_covid_immunity_empty
+	Empty response utter_myth_transmission_hot_areas_empty
+	Empty response utter_prevenion_medical_attention_empty
+	Empty response utter_travel_while_empty
+	Empty response utter_vocative_call_empty
+	Empty response utter_vocative_call_empty2
+	Empty response utter_user_no_further_questions_empty
+	Empty response utter_user_no_further_questions_empty2
+	Empty response utter_command_change_bot_empty
+	Empty response utter_features_time_empty
+	Empty response utter_features_time_empty2
+	Empty response utter_features_time_empty3
+	Empty response utter_user_angry_empty
+	Empty response utter_user_angry_empty2
+	Empty response utter_news_request_emptyanswer_empty
+	Empty response utter_test_caroussel_empty
+	Empty response utter_bot_goal_empty
+	Empty response DefaultEmptyAction
+	Text response action_default_fallback_text :
+		inputs in en {
+			"Sorry, I don\'t undestand you "
+	}
+
+flows :
+	- user bot_change_bot => chatbot action_change_preferred_language_empty , utter_command_change_bot_empty , action_check_Bot_Introduced_empty , DefaultEmptyAction , utter_welcome_empty , utter_greeting_hello_empty , utter_greeting_hello_empty2 , utter_greeting_hello_empty3 , utter_greeting_goodbye_empty , utter_greeting_goodbye_empty2 , utter_greeting_goodbye_empty3 , utter_travel_before_empty , utter_travel_while_empty , utter_covid_tech4covid_empty , utter_covid_volunteer_empty , utter_covid_register_empty , utter_covid_cosibot_empty , utter_covid_current_statistics_empty , utter_coronavirus_info_empty , utter_covid_info_empty , utter_covid_meaning_empty , utter_covid_symptoms_empty , utter_covid_worry_empty , utter_covid_sars_empty , utter_covid_influenza_empty , utter_covid_incubation_empty , utter_covid_surfaces_empty , utter_covid_food_empty , utter_covid_crisis_howlong_empty , utter_covid_mortality_rate_empty , utter_covid_dangerous_empty , utter_covid_procedure_after_infection_empty , utter_covid_treatment_empty , utter_covid_origins_empty , utter_covid_duration_empty , utter_covid_disease_process_empty , utter_covid_aftereffects_empty , utter_covid_immunity_empty , utter_covid_preexisting_illness_empty , utter_covid_babys_children_empty , utter_economy_consequences_empty , utter_covid_pandemic_empty , utter_covid_sex_empty , utter_covid_schools_empty , utter_prevention_general_empty , utter_prevention_informed_empty , utter_prevention_clean_hands_empty , utter_prevention_distance_empty , utter_prevention_touch_empty , utter_prevention_respiratory_hygiene_empty , utter_prevenion_medical_attention_empty , utter_prevention_home_empty , utter_prevention_medicine_empty , utter_prevention_measures_empty , utter_prevention_disinfection_empty , utter_myth_air_conditioning_empty , utter_myth_5g_empty , utter_myth_hand_dryer_empty , utter_myth_uv_lamps_empty , utter_myth_thermal_scanner_empty , utter_myth_antibiotics_empty , utter_myth_alcohol_empty , utter_myth_pneumonia_vaccine_empty , utter_myth_saline_empty , utter_myth_garlic_empty , utter_myth_sesame_oil_empty , utter_myth_packages_empty , utter_myth_transmission_hot_areas_empty , utter_myth_cold_weather_empty , utter_myth_hot_bath_empty , utter_myth_conspiracy_fakenews_empty , utter_spread_general_empty , utter_spread_air_empty , utter_spread_no_symptoms_empty , utter_spread_feces_empty , utter_spread_risk_empty , utter_spread_animals_empty , utter_spread_pets_empty , utter_quarantine_general_empty , utter_quarantine_dogwalking_empty , utter_quarantine_when_who_howlong_empty , utter_quaratine_how_it_works_empty , utter_quarantine_control_empty , utter_quarantine_dos_and_donts_empty , utter_mask_general_empty , utter_mask_use_put_empty , utter_mask_use_after_empty , utter_test_virus_empty , utter_vocative_help_empty , utter_vocative_help_empty2 , utter_vocative_help_empty3 , utter_vocative_thank_you_empty , utter_vocative_thank_you_empty2 , utter_vocative_thank_you_empty3 , utter_vocative_thank_you_empty4 , utter_further_questions_empty , utter_further_questions_empty2 , utter_further_questions_empty3 , utter_vocative_you_welcome_empty , utter_vocative_you_welcome_empty2 , utter_vocative_call_empty , utter_vocative_call_empty2 , utter_vocative_sorry_empty , utter_vocative_sorry_empty2 , utter_vocative_sorry_empty3 , action_get_date_empty , utter_features_date_empty , utter_features_date_empty2 , utter_bot_name_empty , utter_bot_name_empty2 , utter_bot_name_empty3 , utter_bot_version_empty , utter_bot_version_empty2 , utter_bot_version_empty3 , utter_bot_origin_empty , utter_bot_languages_empty , utter_bot_appearance_empty , utter_bot_capabilities_empty , utter_bot_goal_empty , utter_bot_real_empty , utter_bot_availability_empty , utter_bot_books_empty , utter_bot_fear_empty , utter_bot_fear_empty2 , utter_bot_movies_empty , utter_bot_movies_empty2 , utter_bot_movies_empty3 , utter_bot_movies_empty4 , utter_bot_music_empty , utter_bot_residence_empty , utter_bot_personality_empty , utter_bot_personal_questions_empty , utter_cc_weather_empty , utter_cc_moon_empty , utter_cc_moon_empty2 , utter_cc_chicken_egg_empty , utter_cc_joke_empty , utter_cc_joke_empty2 , utter_cc_politics_empty , utter_cc_politics_empty2 , utter_cc_religion_empty , utter_cc_religion_empty2 , utter_cc_philosophical_empty , utter_cc_philosophical_empty2 , utter_cc_lets_talk_empty , utter_cc_newspaper_empty , utter_cc_newspaper_empty2 , utter_cc_newspaper_empty3 , utter_user_happy_empty , utter_user_happy_empty2 , utter_user_friend_empty , utter_user_friend_empty2 , utter_user_love_empty , utter_user_love_empty2 , utter_user_angry_empty , utter_user_angry_empty2 , utter_user_scared_empty , utter_user_no_further_questions_empty , utter_user_no_further_questions_empty2 , utter_user_particles_empty , utter_comment_positive_empty , utter_comment_negative_empty , utter_comment_smart_empty , utter_comment_offense_empty , utter_want_to_add_country_empty , action_search_stats_empty , utter_covid_situation_empty , utter_covid_situation_infected_empty , utter_covid_situation_infected_critical_empty , utter_covid_situation_recovered_empty , utter_covid_situation_tested_empty , utter_covid_situation_last_update_empty , utter_covid_situation_last_update_empty2 , utter_covid_situation_last_update_empty3 , utter_covid_situation_deaths_empty , utter_fallback_first_empty {
+		=> user features_time => chatbot action_get_time_empty , utter_ask_which_country_empty , utter_further_questions_empty , utter_further_questions_empty2 , utter_further_questions_empty3 , action_search_stats_empty , DefaultEmptyAction , utter_covid_current_statistics_empty , utter_covid_situation_empty , utter_covid_situation_infected_empty , utter_covid_situation_infected_critical_empty , utter_covid_situation_recovered_empty , utter_covid_situation_tested_empty , utter_covid_situation_last_update_empty , utter_covid_situation_last_update_empty2 , utter_covid_situation_last_update_empty3 , utter_covid_situation_deaths_empty { => user country => chatbot action_search_stats_empty , utter_covid_situation_empty , utter_covid_situation_infected_empty , utter_covid_situation_infected_critical_empty , utter_covid_situation_recovered_empty , utter_covid_situation_tested_empty , utter_covid_situation_last_update_empty , utter_covid_situation_last_update_empty2 , utter_covid_situation_last_update_empty3 , utter_covid_situation_deaths_empty , utter_covid_no_country_current_statistics_empty { => user covid_situation_infected => chatbot utter_want_to_add_country_empty { => user vocative_yes => chatbot utter_ask_which_country_empty { => user country => chatbot action_search_stats_empty , utter_covid_situation_empty , utter_covid_situation_infected_empty , utter_covid_situation_infected_critical_empty , utter_covid_situation_recovered_empty , utter_covid_situation_tested_empty , utter_covid_situation_last_update_empty , utter_covid_situation_last_update_empty2 , utter_covid_situation_last_update_empty3 , utter_covid_situation_deaths_empty { => user covid_situation_infected => chatbot action_search_stats_empty , utter_covid_situation_infected_empty , utter_covid_situation_infected_critical_empty ; } ; } ; } ; } ; } ;
+	} ;
+	- user start => chatbot action_check_Bot_Introduced_empty , utter_welcome_empty , utter_greeting_hello_empty , utter_greeting_hello_empty2 , utter_greeting_hello_empty3 ;
+	- user FallbackIntent => chatbot action_default_fallback_empty , action_default_fallback_text ;
+

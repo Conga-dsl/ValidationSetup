@@ -1,0 +1,197 @@
+Chatbot elekdra01 language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		"hello everybody" ,
+		"hello is anybody there" ,
+		"hello robot"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		"bye for now" ,
+		"catch you later" ,
+		"gotta go" ,
+		"See you" ,
+		goodnight ,
+		"have a nice day" ,
+		"i\'m off" ,
+		"see you later alligator" ,
+		"we\'ll speak soon"
+}
+
+inform :
+	inputs in en {
+		( kerala ) [ location ] ,
+		( tamilnadu ) [ location ] ,
+		( karnataka ) [ location ] ,
+		( andrapradesh ) [ location ] ,
+		( "madhya pradesh" ) [ location ] ,
+		( goa ) [ location ]
+	}
+	parameters :
+		location : entity text ;
+
+search_provider :
+	inputs in en {
+		"I need a " ( hospital ) [ facility_type ] ,
+		"find me the nearest one " ( "health center" ) [ facility_type ] ,
+		"show me the " ( "health agencies" ) [ facility_type ] ,
+		"i need a home " ( "medical shop" ) [ facility_type ] ,
+		"I need to consult my " ( physician ) [ facility_type ] ,
+		"need to go some " ( clinic ) [ facility_type ] " in" ( kerala ) [ location ] ,
+		"need to fix an appoinment in " ( "hospital nhcs" ) [ facility_type ] ,
+		"find me a nearby " ( hospital ) [ facility_type ] ,
+		"show me " ( hospitals ) [ facility_type ]
+	}
+	parameters :
+		facility_type ,
+		location : entity text ;
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		"go on" ,
+		"yes yes yes" ,
+		definitely ,
+		yeah ,
+		si ,
+		ok ,
+		okay
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really" ,
+		"uh no" ,
+		noope ,
+		"do you have something else" ,
+		"no this does not work for me"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+thankyou :
+	inputs in en {
+		Thanks ,
+		"Thank you" ,
+		"Thank you so much" ,
+		"Thanks bot" ,
+		"Thanks for that" ,
+		cheers ,
+		"cheers bro" ,
+		"ok thanks!"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+thanks :
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Empty response action_facility_search_empty
+	Text response utter_how_can_i_help_text :
+		inputs in en {
+			"Hello i am medicare locator .I can help you to find the nearest hospital.How can i hep?" ,
+			"hey i am medo do you need any help today?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_ask_location_text :
+		inputs in en {
+			"Can you provide your location please?" ,
+			"to find the nearest " [ "search_provider.facility_type" ] " I need your address"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text , utter_how_can_i_help_text {
+		=> user search_provider => chatbot action_facility_search_empty , utter_ask_location_text {
+			=> user thanks => chatbot utter_goodbye_text ;
+			=> user inform => chatbot action_facility_search_empty {
+				=> user thanks => chatbot utter_goodbye_text ;
+			} ;
+		} ;
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user thankyou => chatbot DefaultEmptyAction ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

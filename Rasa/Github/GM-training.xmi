@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="GM-training">
+  <intents name="deregister">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Deregister"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Deregister my number from this"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Deregister my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Deregister my number"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Deregister me from this"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="deregister my no."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="deregister my number"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to deregister"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please help me to deregister"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to delete my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Delete my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Help me to delete my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please help me to delete my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Delete account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Deregister from this"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to deregister from this"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I dont want to use this anymore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want to be here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please close my account"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="find_in_mongo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i exist?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my details"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="sitka"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="juneau"/>
+      </inputs>
+    </inputs>
+    <parameters name="location"/>
+  </intents>
+  <intents name="name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="anurag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="suraj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="simran"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="kajal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="omkar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="omkar patil"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="omkar c patil"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="anurag joshi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="omkar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am know as "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="omkar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="omkar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="suraj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am know as "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="suraj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="suraj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="kajal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am know as "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="kajal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="kajal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="simran"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am know as "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="simran"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="simran"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="anurag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am know as "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="anurag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="anurag"/>
+      </inputs>
+    </inputs>
+    <parameters name="name"/>
+  </intents>
+  <intents name="emailIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="anurag@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="suraj@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="simran@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="kajal@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="ocpatil@gmail.com"/>
+      </inputs>
+    </inputs>
+    <parameters name="email" entity="//@entities.0"/>
+  </intents>
+  <intents name="search_provider">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me nearby "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please find me nearby "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="restaurant"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="restaurant"/>
+      </inputs>
+    </inputs>
+    <parameters name="facility_type"/>
+  </intents>
+  <intents name="thanks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you very much"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="email">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="^\w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"/>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:Text" name="utter_welcome_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="your welcome buddy"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_facility_search_empty"/>
+  <actions xsi:type="generator:Empty" name="action_ask_location_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_form_ask_name_empty"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="actions_find_in_mongo_empty"/>
+  <actions xsi:type="generator:Text" name="utter_how_can_i_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, i am a medicare location. do you want nearby hospitals"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please provide your email"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you Please provide your email"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="actions_deregister_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_location_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="provide your location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to find the nearest {facility_type} I need your address"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="seems you are not registred, please enter your name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you please tell me your name for registration"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.13"/>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.9 //@actions.7">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.9">
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.4 //@actions.5">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.6"/>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.4">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.0 //@actions.6"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.11">
+        <target actions="//@actions.8"/>
+      </outcoming>
+      <outcoming intent="//@intents.12">
+        <target actions="//@actions.1 //@actions.3">
+          <outcoming intent="//@intents.9">
+            <target actions="//@actions.8"/>
+          </outcoming>
+          <outcoming intent="//@intents.10">
+            <target actions="//@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.13">
+    <target actions="//@actions.11"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

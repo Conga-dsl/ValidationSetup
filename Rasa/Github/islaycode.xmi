@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="islaycode">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="appointment">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to create appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="book appointment"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is [binod] (name)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my self [ravi] (name)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="name is [nikhil] (name)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="name [abuzer] (name)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name [sahil] (name)"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="country">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[India] (country)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[US] (country)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[BRAZIL] (country)"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[CANADA] (country)"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="date">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="10 july"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="18 august"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="17 march"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_appointment_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure, when would like to book an appointment?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_country_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter your country and get your booking id?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_show_name_country_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your appointment has been fixed for Tommorow, Your name is "/>
+        <tokens xsi:type="generator:Literal" text="name"/>
+        <tokens xsi:type="generator:Literal" text=" country is "/>
+        <tokens xsi:type="generator:Literal" text="country"/>
+        <tokens xsi:type="generator:Literal" text=" and booking id is P:010 ."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi Welcome to Ayur, would you like to book an appoint, Please Enter Your name?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye Have a nice day "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter your name"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.3">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.1">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.2 //@actions.5"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

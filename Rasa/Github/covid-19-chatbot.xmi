@@ -1,0 +1,3343 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="covid-19-chatbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="aboutcorona">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mortality"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="novel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="define"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="about"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="panic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tense"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="worried"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="worry"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="who_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="w.h.o"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="world health organisation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="called"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="epidemic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="panidemic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="second"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="symptoms_corona">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sign"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="identify that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other have corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cold"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my friend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="family member"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="know"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="came to"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="detect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="investigate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="identify"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="incubation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="incubation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="period"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="days"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="many"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="appear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="detect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="incubation"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="close_contact">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="closecontact"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="close contact"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="relation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spread"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="surface"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="door"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="things"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="object"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touching the"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="furniture"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="door"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="knob"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="wrong_spread">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="colony"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="city"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whole"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="state"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="community"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="anyone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="colony"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="status_things">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="object"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="know"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="things"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="before"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="home"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="materials"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="anyone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i know that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="detect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="identify"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="furniture"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="door"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="knob"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="risk_who">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="elder"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="large"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="age"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more age"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="child"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="baby"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diabetes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="blood pressure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hypertension"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heart disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tense"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="worried"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="worry"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="newborn"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="group"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="prove risky"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="affect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more age"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="precautions_infected">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="special"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="precaution"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="steps"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="prevention"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what steps"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="family"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="measurement"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="anyone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="if i have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="doubt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="during"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="avoid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="preventive measure"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="home_quarantined">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="home quarantine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lock down"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="isolated"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make myself"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yourself"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="isolated"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="test_positive">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="after home quarantine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test positive"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="report positive"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="quarantine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when my report"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptom"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="vaccine_availablity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="vaccine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="available"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="come"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="myth_vaccine">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="penicilin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="antibiotic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pneumonia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ayurvedic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="anti malaria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="paracitamol"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cold"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cough syrup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="penicilin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="anti malaria"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="recur_corona">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recur corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="after"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="treatment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="chances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="develop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reback"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recur corona"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pregnant_child">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pregnant"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="woman"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="child"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="chances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in baby"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="testing_centers">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="private"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="testing lab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="any"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="performed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where are"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="private lab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hospitals"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_survive">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="survive"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in air"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="on surface"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="object"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="furniture"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="door"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="knob"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much time"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_goods">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goods"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="material"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goods from china"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exported"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="other country"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="object"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="item"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_animals">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spread from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="animals"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="non vegetarian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="meat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="egg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fish"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected animal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nonveg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="non veg"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="wash_hands">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hand wash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clean"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hand"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nails"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wrist"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="palm"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="time_wash">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="time wash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="interval"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="interval"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="between"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="gap"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mask_wear">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mask"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="necessary"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when wear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="use"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which type of mask"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what type of mask"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="n95"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="everyone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when wear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what type of mask"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mask_change">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long mask"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mask"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long mask"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="colleauge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="colleauge"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="office"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="colleauge"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="office staff"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="colleauge"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="office"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="office staff"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="hospitals_infected">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="visit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hospitals"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="safe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected patients"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="temperature_effect">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="effect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="temperature"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="summer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="increase"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="humidity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="humid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weather"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weather"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rain"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="avoid_malls">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="malls"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="malls"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="park"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="crowd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="market"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="office"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="malls"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="restaurants"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="social_distancing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="best way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="social distancing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="keep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="necesaary"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is social"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="yoga">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yoga"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pranayam"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="immunity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rise"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yoga"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yoga"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="blood_donor">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="blood"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="donation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk if donate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="blood"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="donor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk if donate"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="drink_hot">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="drink"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hot things"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="water"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="soap_sanitizers">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="soap"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which is better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which one better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sanitizer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="available"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="present"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="kill"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sanitizer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alcohol"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hand wash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alternative"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hand"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="clean_door">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="door"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="knobs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clean"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="surface"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="with sanitizer"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cloth_infection">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cough"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="droplets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clothes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="handkerchief"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="precaution_pregnant">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pregnant"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="protection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="steps"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="special"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="precaution"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="steps"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="prevention"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what steps"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="preventive measure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lady"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="flight">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="flight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="airport"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="travel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="flight"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="immunity_indians">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="immunity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more immune"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no risk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indians"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="us"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smoking">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="smoking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cigarette"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="smoke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="smoking effect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tobacco"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="smoking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cigarette"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="smoke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="smoking effect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tobacco"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="alcohol">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="drink"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alcohol"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="consumption"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="consume"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alcohol"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="when_test">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who should test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="may i test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="normal fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who have to test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who should test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="normal fever"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="emergency_symptoms">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="emergency"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="danger"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when to contact"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="contact"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="emergency"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="stigma">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stigma"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hurt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="misinformation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rumour"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="social sites"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stigma"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rumour"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="social sites"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="funeral">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="funeral"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="attend funeral"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cremation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="attend funeral"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cremation"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deabody">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch deadbody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="deadbody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch infected dead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch deadbody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch infected dead"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pets">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="concern about pets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pet dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="milk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="concern about pets"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="infected_pets">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="touch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="concern about pets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pet dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="avoid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="keep distance from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="parrot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="parrot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cat"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="eat_nonveg">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="eat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="non veg"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="currency">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="currency notes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="credit card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="currency notes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="credit card"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="drink_water">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="water cure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hydration"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="drink"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="water cure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hydration"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="lighltly">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lightly spread in our country"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spread in India"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="breat_milk">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="breast"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="milk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="feed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="feed milk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="baby"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="protect_children">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make safe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="children"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk in children"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="safe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="protect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="children"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="child"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="child"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="symptoms_children">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="low symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="children"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mild symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="children"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="school_dismissal">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dismissal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tution"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to school"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tution"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to school"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="study_loss">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study loss"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tution"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="class"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coaching"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exams"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="online class"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="study loss"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exams"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="water_spreading">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spread"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="drink"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pure water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ro water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="role of water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="through"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pool">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="swimming pool"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tubs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="swimming pool"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tubs"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="sewarage">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sewer line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sewerage water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="waste water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sewer line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sewerage water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="waste water"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="hiv">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hiv patient"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="hiv_medicine">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hiv medicine"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="asthama">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="asthama"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have asthama"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk for asthama"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="asthama patient"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="asthama patient"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have asthama"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="risk for asthama"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="origin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from where"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from which"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="country"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="originate from animal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how it start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="source of corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start from china"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spread in countries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="outbreak"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="how_test">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how corona test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sample of corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i get"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how corona test"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="test_cost">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cost"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="free test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="charge"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="charges the test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in government lab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="chargeable"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="free"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="free test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="charges the test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="chargeable"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="free"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="test_strategy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="priority"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="strategy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whom tested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="days"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="report"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="test_process">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="complete"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="process of test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="process"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="time taken"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stages"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="screening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test performed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="screening"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="about_corona">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="about corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about new virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="novel virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="new virus"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="first_case">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="first case of corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="first case"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when first case reported"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thanks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="about_you">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="about you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about yourself"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who made you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="can_do">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i aks you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_happy"/>
+  <intents name="mood_unhappy"/>
+  <intents name="deadbody"/>
+  <intents name="self_go"/>
+  <actions xsi:type="generator:Empty" name="action_test_process_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_symptoms_empty"/>
+  <actions xsi:type="generator:Text" name="utter_cheer_up_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Don't be sad. Keep smiling!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_myth_vaccine_empty"/>
+  <actions xsi:type="generator:Empty" name="action_when_test_empty"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, how can i help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_home_quarantined_empty"/>
+  <actions xsi:type="generator:Empty" name="action_first_case_empty"/>
+  <actions xsi:type="generator:Empty" name="action_recur_corona_empty"/>
+  <actions xsi:type="generator:Empty" name="action_wrong_spread_empty"/>
+  <actions xsi:type="generator:Empty" name="action_sewarage_empty"/>
+  <actions xsi:type="generator:Empty" name="action_eat_nonveg_empty"/>
+  <actions xsi:type="generator:Empty" name="action_test_strategy_empty"/>
+  <actions xsi:type="generator:Empty" name="action_self_go_empty"/>
+  <actions xsi:type="generator:Empty" name="action_symptoms_children_empty"/>
+  <actions xsi:type="generator:Empty" name="action_animal_infection_empty"/>
+  <actions xsi:type="generator:Empty" name="action_time_wash_empty"/>
+  <actions xsi:type="generator:Empty" name="action_mask_change_empty"/>
+  <actions xsi:type="generator:Empty" name="action_test_cost_empty"/>
+  <actions xsi:type="generator:Empty" name="action_origin_empty"/>
+  <actions xsi:type="generator:Empty" name="action_how_test_empty"/>
+  <actions xsi:type="generator:Empty" name="action_asthama_empty"/>
+  <actions xsi:type="generator:Empty" name="action_wash_hands_empty"/>
+  <actions xsi:type="generator:Empty" name="action_emergency_symptoms_empty"/>
+  <actions xsi:type="generator:Empty" name="action_protect_children_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_about_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_incubation_empty"/>
+  <actions xsi:type="generator:Empty" name="action_joke_empty"/>
+  <actions xsi:type="generator:Empty" name="action_clean_door_empty"/>
+  <actions xsi:type="generator:Empty" name="action_precaution_pregnant_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_close_empty"/>
+  <actions xsi:type="generator:Empty" name="action_breat_milk_empty"/>
+  <actions xsi:type="generator:Empty" name="action_temperature_effect_empty"/>
+  <actions xsi:type="generator:Empty" name="action_deadbody_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_about_you_empty"/>
+  <actions xsi:type="generator:Empty" name="action_yoga_empty"/>
+  <actions xsi:type="generator:Empty" name="action_immunity_indians_empty"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_infected_pets_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_survive_empty"/>
+  <actions xsi:type="generator:Empty" name="action_avoid_malls_empty"/>
+  <actions xsi:type="generator:Empty" name="action_cloth_infection_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_default_empty"/>
+  <actions xsi:type="generator:Empty" name="action_thanks_empty"/>
+  <actions xsi:type="generator:Empty" name="action_flight_empty"/>
+  <actions xsi:type="generator:Empty" name="action_drink_hot_empty"/>
+  <actions xsi:type="generator:Empty" name="action_pregnant_child_empty"/>
+  <actions xsi:type="generator:Empty" name="action_lighltly_empty"/>
+  <actions xsi:type="generator:Empty" name="action_drink_water_empty"/>
+  <actions xsi:type="generator:Empty" name="action_social_distancing_empty"/>
+  <actions xsi:type="generator:Empty" name="action_school_dismissal_empty"/>
+  <actions xsi:type="generator:Empty" name="action_testing_centers_empty"/>
+  <actions xsi:type="generator:Empty" name="action_close_contact_empty"/>
+  <actions xsi:type="generator:Empty" name="action_hiv_medicine_empty"/>
+  <actions xsi:type="generator:Empty" name="action_blood_donor_empty"/>
+  <actions xsi:type="generator:Empty" name="action_infected_precautions_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_who_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_goods_empty"/>
+  <actions xsi:type="generator:Empty" name="action_pool_empty"/>
+  <actions xsi:type="generator:Empty" name="action_smoking_empty"/>
+  <actions xsi:type="generator:Empty" name="action_vaccine_available_empty"/>
+  <actions xsi:type="generator:Empty" name="action_colleauge_empty"/>
+  <actions xsi:type="generator:Empty" name="action_hiv_empty"/>
+  <actions xsi:type="generator:Empty" name="action_study_loss_empty"/>
+  <actions xsi:type="generator:Empty" name="action_can_do_empty"/>
+  <actions xsi:type="generator:Empty" name="action_currency_empty"/>
+  <actions xsi:type="generator:Empty" name="action_hospitals_infected_empty"/>
+  <actions xsi:type="generator:Empty" name="action_water_spreading_empty"/>
+  <actions xsi:type="generator:Empty" name="action_pets_empty"/>
+  <actions xsi:type="generator:Empty" name="action_mask_wear_empty"/>
+  <actions xsi:type="generator:Empty" name="action_soap_sanitizers_empty"/>
+  <actions xsi:type="generator:Empty" name="action_alcohol_empty"/>
+  <actions xsi:type="generator:Empty" name="action_stigma_empty"/>
+  <actions xsi:type="generator:Empty" name="action_risky_empty"/>
+  <actions xsi:type="generator:Empty" name="action_test_positive_empty"/>
+  <actions xsi:type="generator:Empty" name="action_stay_things_empty"/>
+  <actions xsi:type="generator:Empty" name="action_funeral_empty"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.5">
+      <outcoming intent="//@intents.73">
+        <target actions="//@actions.38 //@actions.27">
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.34"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.68">
+        <target actions="//@actions.25">
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.57">
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.1">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.26">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.53">
+                          <outcoming intent="//@intents.7">
+                            <target actions="//@actions.30">
+                              <outcoming intent="//@intents.8">
+                                <target actions="//@actions.76">
+                                  <outcoming intent="//@intents.9">
+                                    <target actions="//@actions.74">
+                                      <outcoming intent="//@intents.10">
+                                        <target actions="//@actions.56">
+                                          <outcoming intent="//@intents.11">
+                                            <target actions="//@actions.6">
+                                              <outcoming intent="//@intents.12">
+                                                <target actions="//@actions.75">
+                                                  <outcoming intent="//@intents.13">
+                                                    <target actions="//@actions.61">
+                                                      <outcoming intent="//@intents.14">
+                                                        <target actions="//@actions.3">
+                                                          <outcoming intent="//@intents.15">
+                                                            <target actions="//@actions.8">
+                                                              <outcoming intent="//@intents.16">
+                                                                <target actions="//@actions.47">
+                                                                  <outcoming intent="//@intents.17">
+                                                                    <target actions="//@actions.52">
+                                                                      <outcoming intent="//@intents.18">
+                                                                        <target actions="//@actions.40">
+                                                                          <outcoming intent="//@intents.19">
+                                                                            <target actions="//@actions.58">
+                                                                              <outcoming intent="//@intents.20">
+                                                                                <target actions="//@actions.15">
+                                                                                  <outcoming intent="//@intents.21">
+                                                                                    <target actions="//@actions.22">
+                                                                                      <outcoming intent="//@intents.22">
+                                                                                        <target actions="//@actions.16">
+                                                                                          <outcoming intent="//@intents.23">
+                                                                                            <target actions="//@actions.70">
+                                                                                              <outcoming intent="//@intents.24">
+                                                                                                <target actions="//@actions.17">
+                                                                                                  <outcoming intent="//@intents.25">
+                                                                                                    <target actions="//@actions.62">
+                                                                                                      <outcoming intent="//@intents.26">
+                                                                                                        <target actions="//@actions.67">
+                                                                                                          <outcoming intent="//@intents.27">
+                                                                                                            <target actions="//@actions.32">
+                                                                                                              <outcoming intent="//@intents.28">
+                                                                                                                <target actions="//@actions.41">
+                                                                                                                  <outcoming intent="//@intents.29">
+                                                                                                                    <target actions="//@actions.50">
+                                                                                                                      <outcoming intent="//@intents.30">
+                                                                                                                        <target actions="//@actions.36">
+                                                                                                                          <outcoming intent="//@intents.31">
+                                                                                                                            <target actions="//@actions.55">
+                                                                                                                              <outcoming intent="//@intents.32">
+                                                                                                                                <target actions="//@actions.46">
+                                                                                                                                  <outcoming intent="//@intents.33">
+                                                                                                                                    <target actions="//@actions.71">
+                                                                                                                                      <outcoming intent="//@intents.34">
+                                                                                                                                        <target actions="//@actions.28">
+                                                                                                                                          <outcoming intent="//@intents.35">
+                                                                                                                                            <target actions="//@actions.42">
+                                                                                                                                              <outcoming intent="//@intents.36">
+                                                                                                                                                <target actions="//@actions.29">
+                                                                                                                                                  <outcoming intent="//@intents.37">
+                                                                                                                                                    <target actions="//@actions.45">
+                                                                                                                                                      <outcoming intent="//@intents.38">
+                                                                                                                                                        <target actions="//@actions.37">
+                                                                                                                                                          <outcoming intent="//@intents.39">
+                                                                                                                                                            <target actions="//@actions.60">
+                                                                                                                                                              <outcoming intent="//@intents.40">
+                                                                                                                                                                <target actions="//@actions.72">
+                                                                                                                                                                  <outcoming intent="//@intents.41">
+                                                                                                                                                                    <target actions="//@actions.4">
+                                                                                                                                                                      <outcoming intent="//@intents.42">
+                                                                                                                                                                        <target actions="//@actions.23">
+                                                                                                                                                                          <outcoming intent="//@intents.43">
+                                                                                                                                                                            <target actions="//@actions.73">
+                                                                                                                                                                              <outcoming intent="//@intents.44">
+                                                                                                                                                                                <target actions="//@actions.77">
+                                                                                                                                                                                  <outcoming intent="//@intents.75">
+                                                                                                                                                                                    <target actions="//@actions.33">
+                                                                                                                                                                                      <outcoming intent="//@intents.46">
+                                                                                                                                                                                        <target actions="//@actions.69">
+                                                                                                                                                                                          <outcoming intent="//@intents.47">
+                                                                                                                                                                                            <target actions="//@actions.39">
+                                                                                                                                                                                              <outcoming intent="//@intents.48">
+                                                                                                                                                                                                <target actions="//@actions.11">
+                                                                                                                                                                                                  <outcoming intent="//@intents.49">
+                                                                                                                                                                                                    <target actions="//@actions.66">
+                                                                                                                                                                                                      <outcoming intent="//@intents.50">
+                                                                                                                                                                                                        <target actions="//@actions.49">
+                                                                                                                                                                                                          <outcoming intent="//@intents.51">
+                                                                                                                                                                                                            <target actions="//@actions.48">
+                                                                                                                                                                                                              <outcoming intent="//@intents.52">
+                                                                                                                                                                                                                <target actions="//@actions.31">
+                                                                                                                                                                                                                  <outcoming intent="//@intents.53">
+                                                                                                                                                                                                                    <target actions="//@actions.24">
+                                                                                                                                                                                                                      <outcoming intent="//@intents.54">
+                                                                                                                                                                                                                        <target actions="//@actions.14">
+                                                                                                                                                                                                                          <outcoming intent="//@intents.55">
+                                                                                                                                                                                                                            <target actions="//@actions.51">
+                                                                                                                                                                                                                              <outcoming intent="//@intents.56">
+                                                                                                                                                                                                                                <target actions="//@actions.64">
+                                                                                                                                                                                                                                  <outcoming intent="//@intents.57">
+                                                                                                                                                                                                                                    <target actions="//@actions.68">
+                                                                                                                                                                                                                                      <outcoming intent="//@intents.58">
+                                                                                                                                                                                                                                        <target actions="//@actions.59">
+                                                                                                                                                                                                                                          <outcoming intent="//@intents.70">
+                                                                                                                                                                                                                                            <target actions="//@actions.44">
+                                                                                                                                                                                                                                              <outcoming intent="//@intents.71">
+                                                                                                                                                                                                                                                <target actions="//@actions.35">
+                                                                                                                                                                                                                                                  <outcoming intent="//@intents.72">
+                                                                                                                                                                                                                                                    <target actions="//@actions.65">
+                                                                                                                                                                                                                                                      <outcoming intent="//@intents.69">
+                                                                                                                                                                                                                                                        <target actions="//@actions.7">
+                                                                                                                                                                                                                                                          <outcoming intent="//@intents.59">
+                                                                                                                                                                                                                                                            <target actions="//@actions.10">
+                                                                                                                                                                                                                                                              <outcoming intent="//@intents.60">
+                                                                                                                                                                                                                                                                <target actions="//@actions.54 //@actions.63">
+                                                                                                                                                                                                                                                                  <outcoming intent="//@intents.61">
+                                                                                                                                                                                                                                                                    <target actions="//@actions.54">
+                                                                                                                                                                                                                                                                      <outcoming intent="//@intents.62">
+                                                                                                                                                                                                                                                                        <target actions="//@actions.21">
+                                                                                                                                                                                                                                                                          <outcoming intent="//@intents.64">
+                                                                                                                                                                                                                                                                            <target actions="//@actions.20">
+                                                                                                                                                                                                                                                                              <outcoming intent="//@intents.65">
+                                                                                                                                                                                                                                                                                <target actions="//@actions.18">
+                                                                                                                                                                                                                                                                                  <outcoming intent="//@intents.63">
+                                                                                                                                                                                                                                                                                    <target actions="//@actions.19">
+                                                                                                                                                                                                                                                                                      <outcoming intent="//@intents.76">
+                                                                                                                                                                                                                                                                                        <target actions="//@actions.13">
+                                                                                                                                                                                                                                                                                          <outcoming intent="//@intents.66">
+                                                                                                                                                                                                                                                                                            <target actions="//@actions.12">
+                                                                                                                                                                                                                                                                                              <outcoming intent="//@intents.67">
+                                                                                                                                                                                                                                                                                                <target actions="//@actions.0">
+                                                                                                                                                                                                                                                                                                  <outcoming intent="//@intents.1">
+                                                                                                                                                                                                                                                                                                    <target actions="//@actions.34"/>
+                                                                                                                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                                                                                                                </target>
+                                                                                                                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                                                                                                                            </target>
+                                                                                                                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                                                                                                                        </target>
+                                                                                                                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                                                                                                                    </target>
+                                                                                                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                                                                                                </target>
+                                                                                                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                                                                                                            </target>
+                                                                                                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                                                                                                        </target>
+                                                                                                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                                                                                                    </target>
+                                                                                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                                                                                </target>
+                                                                                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                                                                                            </target>
+                                                                                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                                                                                        </target>
+                                                                                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                                                                                    </target>
+                                                                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                                                                </target>
+                                                                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                                                                            </target>
+                                                                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                                                                        </target>
+                                                                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                                                                    </target>
+                                                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                                                </target>
+                                                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                                                            </target>
+                                                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                                                        </target>
+                                                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                                                    </target>
+                                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                                </target>
+                                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                                            </target>
+                                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                                        </target>
+                                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                                    </target>
+                                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                                </target>
+                                                                                                                                                                                              </outcoming>
+                                                                                                                                                                                            </target>
+                                                                                                                                                                                          </outcoming>
+                                                                                                                                                                                        </target>
+                                                                                                                                                                                      </outcoming>
+                                                                                                                                                                                    </target>
+                                                                                                                                                                                  </outcoming>
+                                                                                                                                                                                </target>
+                                                                                                                                                                              </outcoming>
+                                                                                                                                                                            </target>
+                                                                                                                                                                          </outcoming>
+                                                                                                                                                                        </target>
+                                                                                                                                                                      </outcoming>
+                                                                                                                                                                    </target>
+                                                                                                                                                                  </outcoming>
+                                                                                                                                                                </target>
+                                                                                                                                                              </outcoming>
+                                                                                                                                                            </target>
+                                                                                                                                                          </outcoming>
+                                                                                                                                                        </target>
+                                                                                                                                                      </outcoming>
+                                                                                                                                                    </target>
+                                                                                                                                                  </outcoming>
+                                                                                                                                                </target>
+                                                                                                                                              </outcoming>
+                                                                                                                                            </target>
+                                                                                                                                          </outcoming>
+                                                                                                                                        </target>
+                                                                                                                                      </outcoming>
+                                                                                                                                    </target>
+                                                                                                                                  </outcoming>
+                                                                                                                                </target>
+                                                                                                                              </outcoming>
+                                                                                                                            </target>
+                                                                                                                          </outcoming>
+                                                                                                                        </target>
+                                                                                                                      </outcoming>
+                                                                                                                    </target>
+                                                                                                                  </outcoming>
+                                                                                                                </target>
+                                                                                                              </outcoming>
+                                                                                                            </target>
+                                                                                                          </outcoming>
+                                                                                                        </target>
+                                                                                                      </outcoming>
+                                                                                                    </target>
+                                                                                                  </outcoming>
+                                                                                                </target>
+                                                                                              </outcoming>
+                                                                                            </target>
+                                                                                          </outcoming>
+                                                                                        </target>
+                                                                                      </outcoming>
+                                                                                    </target>
+                                                                                  </outcoming>
+                                                                                </target>
+                                                                              </outcoming>
+                                                                            </target>
+                                                                          </outcoming>
+                                                                        </target>
+                                                                      </outcoming>
+                                                                    </target>
+                                                                  </outcoming>
+                                                                </target>
+                                                              </outcoming>
+                                                            </target>
+                                                          </outcoming>
+                                                        </target>
+                                                      </outcoming>
+                                                    </target>
+                                                  </outcoming>
+                                                </target>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="elekdra01">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello everybody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello is anybody there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello robot"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="catch you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="gotta go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodnight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a nice day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm off"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later alligator"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="we'll speak soon"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="kerala"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="tamilnadu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="karnataka"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="andrapradesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="madhya pradesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="goa"/>
+      </inputs>
+    </inputs>
+    <parameters name="location"/>
+  </intents>
+  <intents name="search_provider">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me the nearest one "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="health center"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="health agencies"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need a home "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="medical shop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to consult my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="physician"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need to go some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="clinic"/>
+        <tokens xsi:type="generator:Literal" text=" in"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="kerala"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need to fix an appoinment in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="hospital nhcs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me a nearby "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="hospitals"/>
+      </inputs>
+    </inputs>
+    <parameters name="facility_type"/>
+    <parameters name="location"/>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes yes yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="si"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="noope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no this does not work for me"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thankyou">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you so much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cheers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cheers bro"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok thanks!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thanks"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_facility_search_empty"/>
+  <actions xsi:type="generator:Text" name="utter_how_can_i_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello i am medicare locator .I can help you to find the nearest hospital.How can i hep?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey i am medo do you need any help today?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_location_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you provide your location please?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to find the nearest "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=" I need your address"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2 //@actions.5">
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.4 //@actions.7">
+          <outcoming intent="//@intents.10">
+            <target actions="//@actions.8"/>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.4">
+              <outcoming intent="//@intents.10">
+                <target actions="//@actions.8"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.1"/>
+      </outcoming>
+      <outcoming intent="//@intents.7">
+        <target actions="//@actions.0 //@actions.3">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.1"/>
+          </outcoming>
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.8"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.9"/>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

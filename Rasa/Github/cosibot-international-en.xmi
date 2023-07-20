@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="cosibot-international-en">
+  <intents name="start">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/start_conversation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/start_chat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/get started"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/start_dialogue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="/start dialogue"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_change_bot"/>
+  <intents name="start-dialogue"/>
+  <intents name="greeting_hello"/>
+  <intents name="start_dialogue"/>
+  <intents name="greeting_goodbye"/>
+  <intents name="greeting_how_are_you"/>
+  <intents name="travel_before"/>
+  <intents name="travel_while"/>
+  <intents name="travel_after"/>
+  <intents name="covid_tech4covid"/>
+  <intents name="covid_volunteer"/>
+  <intents name="covid_register"/>
+  <intents name="covid_cosibot"/>
+  <intents name="covid_current_statistics"/>
+  <intents name="covid_situation"/>
+  <intents name="coronavirus_info"/>
+  <intents name="covid_info"/>
+  <intents name="covid_meaning"/>
+  <intents name="covid_symptoms"/>
+  <intents name="covid_worry"/>
+  <intents name="covid_sars"/>
+  <intents name="myth_influenza"/>
+  <intents name="covid_incubation"/>
+  <intents name="covid_surfaces"/>
+  <intents name="covid_food"/>
+  <intents name="covid_crisis_howlong"/>
+  <intents name="covid_mortality_rate"/>
+  <intents name="covid_dangerous"/>
+  <intents name="covid_procedure_after_infection"/>
+  <intents name="covid_treatment"/>
+  <intents name="covid_origins"/>
+  <intents name="covid_duration"/>
+  <intents name="covid_disease_process"/>
+  <intents name="covid_aftereffects"/>
+  <intents name="covid_immunity"/>
+  <intents name="covid_preexisting_illness"/>
+  <intents name="covid_babys_children"/>
+  <intents name="economy_consequences"/>
+  <intents name="covid_pandemic"/>
+  <intents name="covid_sex"/>
+  <intents name="covid_schools"/>
+  <intents name="ebola"/>
+  <intents name="prevention_general"/>
+  <intents name="prevention_informed"/>
+  <intents name="prevention_clean_hands"/>
+  <intents name="prevention_distance"/>
+  <intents name="prevention_touch"/>
+  <intents name="prevention_respiratory_hygiene"/>
+  <intents name="prevention_medical_attention"/>
+  <intents name="prevention_home"/>
+  <intents name="prevention_medicine"/>
+  <intents name="prevention_measures"/>
+  <intents name="prevention_disinfection"/>
+  <intents name="prevention_vaccine"/>
+  <intents name="myth_air_conditioning"/>
+  <intents name="myth_5G"/>
+  <intents name="myth_hand_dryer"/>
+  <intents name="myth_uv_lamps"/>
+  <intents name="myth_thermal_scanner"/>
+  <intents name="myth_antibiotics"/>
+  <intents name="myth_alcohol"/>
+  <intents name="myth_pneumonia_vaccine"/>
+  <intents name="myth_saline"/>
+  <intents name="myth_garlic"/>
+  <intents name="myth_sesame_oil"/>
+  <intents name="myth_packages"/>
+  <intents name="myth_transmission_hot_areas"/>
+  <intents name="myth_cold_weather"/>
+  <intents name="myth_hot_bath"/>
+  <intents name="myth_conspiracy_fakenews"/>
+  <intents name="myth_mosquitoes"/>
+  <intents name="spread_general"/>
+  <intents name="spread_air"/>
+  <intents name="spread_no_symptoms"/>
+  <intents name="spread_feces"/>
+  <intents name="spread_risk"/>
+  <intents name="spread_animals"/>
+  <intents name="spread_pets"/>
+  <intents name="spread_surfaces_food_objects"/>
+  <intents name="quarantine_general"/>
+  <intents name="quarantine_dogwalking"/>
+  <intents name="quarantine_when_who_howlong"/>
+  <intents name="quaratine_how_it_works"/>
+  <intents name="quarantine_control"/>
+  <intents name="quarantine_dos_and_donts"/>
+  <intents name="quarantine_toiletpaper"/>
+  <intents name="mask_general"/>
+  <intents name="mask_use_put"/>
+  <intents name="mask_use_after"/>
+  <intents name="mask_visors"/>
+  <intents name="test_virus"/>
+  <intents name="test_who"/>
+  <intents name="vocative_help"/>
+  <intents name="vocative_thank_you"/>
+  <intents name="vocative_you_welcome"/>
+  <intents name="vocative_call"/>
+  <intents name="vocative_sorry"/>
+  <intents name="vocative_yesORvocative_no"/>
+  <intents name="features_date"/>
+  <intents name="features_time"/>
+  <intents name="bot_name"/>
+  <intents name="bot_version"/>
+  <intents name="bot_origin"/>
+  <intents name="bot_languages"/>
+  <intents name="bot_appearance"/>
+  <intents name="bot_capabilities"/>
+  <intents name="bot_goal"/>
+  <intents name="bot_real"/>
+  <intents name="bot_availability"/>
+  <intents name="bot_books"/>
+  <intents name="bot_fear"/>
+  <intents name="bot_movies"/>
+  <intents name="bot_music"/>
+  <intents name="bot_residence"/>
+  <intents name="bot_personality"/>
+  <intents name="bot_personal_questions"/>
+  <intents name="bot_sexual"/>
+  <intents name="cc_weather"/>
+  <intents name="cc_moon"/>
+  <intents name="cc_chicken_egg"/>
+  <intents name="cc_joke"/>
+  <intents name="cc_politics"/>
+  <intents name="cc_religion"/>
+  <intents name="cc_philosophical"/>
+  <intents name="cc_lets_talk"/>
+  <intents name="cc_newspaper"/>
+  <intents name="user_happy"/>
+  <intents name="user_friend"/>
+  <intents name="user_love"/>
+  <intents name="user_angry"/>
+  <intents name="user_scared"/>
+  <intents name="user_no_further_questions"/>
+  <intents name="user_particles"/>
+  <intents name="comment_positive"/>
+  <intents name="comment_negative"/>
+  <intents name="comment_smart"/>
+  <intents name="comment_offense"/>
+  <intents name="comment_racist"/>
+  <intents name="covid_situationORcovid_situation_testedORcovid_situation_recoveredORcovid_situation_last_updateORcovid_situation_infected_criticalORcovid_situation_infectedORcovid_situation_deaths"/>
+  <intents name="vocative_yes"/>
+  <intents name="country"/>
+  <intents name="vocative_no"/>
+  <intents name="covid_situation_tested"/>
+  <intents name="covid_situation_recovered"/>
+  <intents name="covid_situation_last_update"/>
+  <intents name="covid_situation_infected_critical"/>
+  <intents name="covid_situation_infected"/>
+  <intents name="covid_situation_deaths"/>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_procedure_after_infection_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_clean_hands_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_travel_before_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_quarantine_dogwalking_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_love_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_love_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_preexisting_illness_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_mask_use_after_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_sex_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_moon_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_moon_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_feces_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_politics_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_politics_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_ebola_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_volunteer_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_comment_positive_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_packages_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_saline_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_risk_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_mosquitoes_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_infected_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_aftereffects_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_disinfection_empty"/>
+  <actions xsi:type="generator:Empty" name="action_default_fallback_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_version_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_version_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_version_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_religion_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_religion_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_respiratory_hygiene_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_comment_smart_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_help_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_help_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_help_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_residence_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_treatment_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_influenza_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_economy_consequences_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_music_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_mask_visors_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_surfaces_food_objects_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_vaccine_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_philosophical_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_philosophical_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_personality_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_5g_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_movies_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_movies_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_movies_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_movies_empty4"/>
+  <actions xsi:type="generator:Empty" name="action_get_news_request_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_garlic_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_current_statistics_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_particles_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_scared_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_fallback_request_hasdata_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_test_who_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_comment_negative_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_uv_lamps_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_pneumonia_vaccine_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_further_questions_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_further_questions_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_further_questions_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_quarantine_toiletpaper_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_hot_bath_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_ask_which_country_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_antibiotics_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_infected_critical_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_fallback_request_error_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_news_request_hasdata_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_surfaces_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_home_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_recovered_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_air_conditioning_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_appearance_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_cosibot_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_tested_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_languages_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_goodbye_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_goodbye_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_goodbye_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_no_symptoms_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_mask_use_put_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_tech4covid_empty"/>
+  <actions xsi:type="generator:Empty" name="action_change_preferred_language_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_friend_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_friend_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_user_happy_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_happy_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_schools_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_info_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_hello_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_hello_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_hello_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_symptoms_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_coronavirus_info_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_duration_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_thermal_scanner_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_books_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_sexual_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_test 2_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_real_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_pandemic_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_quaratine_how_it_works_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_mortality_rate_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_quarantine_control_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_availability_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_meaning_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_name_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_name_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_name_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_travel_after_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_no_country_current_statistics_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_you_welcome_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_you_welcome_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_disease_process_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_conspiracy_fakenews_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_thank_you_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_thank_you_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_thank_you_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_thank_you_empty4"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_lets_talk_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_quarantine_general_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_babys_children_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_test_virus_empty"/>
+  <actions xsi:type="generator:Empty" name="action_check_Bot_Introduced_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_sars_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_want_to_add_country_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_measures_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_pets_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_informed_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_cold_weather_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_general_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_newspaper_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_newspaper_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_newspaper_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_hand_dryer_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_last_update_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_last_update_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_last_update_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_chicken_egg_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_incubation_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_general_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_sesame_oil_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_joke_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_joke_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_quarantine_dos_and_donts_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_alcohol_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_fallback_first_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_touch_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_medicine_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_dangerous_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_comment_racist_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_how_are_you_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_greeting_how_are_you_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_sorry_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_sorry_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_sorry_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_origin_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_welcome_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_capabilities_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_worry_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_air_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_cc_weather_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_origins_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_crisis_howlong_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_mask_general_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_situation_deaths_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_quarantine_when_who_howlong_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_fear_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_fear_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_features_date_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_features_date_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_register_empty"/>
+  <actions xsi:type="generator:Empty" name="action_search_stats_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_personal_questions_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevention_distance_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_food_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_spread_animals_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_fallback_request_emptyanswer_empty"/>
+  <actions xsi:type="generator:Empty" name="action_get_date_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_comment_offense_empty"/>
+  <actions xsi:type="generator:Empty" name="action_get_time_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_covid_immunity_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_myth_transmission_hot_areas_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_prevenion_medical_attention_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_travel_while_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_call_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_vocative_call_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_user_no_further_questions_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_no_further_questions_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_command_change_bot_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_features_time_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_features_time_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_features_time_empty3"/>
+  <actions xsi:type="generator:Empty" name="utter_user_angry_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_user_angry_empty2"/>
+  <actions xsi:type="generator:Empty" name="utter_news_request_emptyanswer_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_test_caroussel_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_bot_goal_empty"/>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <actions xsi:type="generator:Text" name="action_default_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't undestand you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.86 //@actions.193 //@actions.127 //@actions.202 //@actions.161 //@actions.93 //@actions.94 //@actions.95 //@actions.80 //@actions.81 //@actions.82 //@actions.2 //@actions.188 //@actions.85 //@actions.16 //@actions.175 //@actions.77 //@actions.54 //@actions.97 //@actions.92 //@actions.109 //@actions.96 //@actions.163 //@actions.128 //@actions.38 //@actions.143 //@actions.72 //@actions.179 //@actions.167 //@actions.106 //@actions.153 //@actions.0 //@actions.37 //@actions.166 //@actions.98 //@actions.117 //@actions.23 //@actions.185 //@actions.7 //@actions.125 //@actions.39 //@actions.104 //@actions.9 //@actions.91 //@actions.144 //@actions.132 //@actions.1 //@actions.178 //@actions.151 //@actions.31 //@actions.187 //@actions.73 //@actions.152 //@actions.130 //@actions.24 //@actions.75 //@actions.47 //@actions.138 //@actions.60 //@actions.99 //@actions.68 //@actions.149 //@actions.61 //@actions.19 //@actions.53 //@actions.145 //@actions.18 //@actions.186 //@actions.133 //@actions.66 //@actions.118 //@actions.134 //@actions.164 //@actions.83 //@actions.12 //@actions.20 //@actions.180 //@actions.131 //@actions.124 //@actions.3 //@actions.170 //@actions.105 //@actions.107 //@actions.148 //@actions.168 //@actions.84 //@actions.8 //@actions.126 //@actions.33 //@actions.34 //@actions.35 //@actions.119 //@actions.120 //@actions.121 //@actions.122 //@actions.62 //@actions.63 //@actions.64 //@actions.115 //@actions.116 //@actions.189 //@actions.190 //@actions.157 //@actions.158 //@actions.159 //@actions.182 //@actions.173 //@actions.174 //@actions.110 //@actions.111 //@actions.112 //@actions.26 //@actions.27 //@actions.28 //@actions.160 //@actions.79 //@actions.76 //@actions.162 //@actions.201 //@actions.103 //@actions.108 //@actions.100 //@actions.171 //@actions.172 //@actions.48 //@actions.49 //@actions.50 //@actions.51 //@actions.40 //@actions.36 //@actions.46 //@actions.177 //@actions.165 //@actions.10 //@actions.11 //@actions.142 //@actions.146 //@actions.147 //@actions.13 //@actions.14 //@actions.29 //@actions.30 //@actions.44 //@actions.45 //@actions.123 //@actions.135 //@actions.136 //@actions.137 //@actions.89 //@actions.90 //@actions.87 //@actions.88 //@actions.4 //@actions.5 //@actions.197 //@actions.198 //@actions.56 //@actions.191 //@actions.192 //@actions.55 //@actions.17 //@actions.59 //@actions.32 //@actions.183 //@actions.129 //@actions.176 //@actions.6 //@actions.22 //@actions.69 //@actions.74 //@actions.78 //@actions.139 //@actions.140 //@actions.141 //@actions.169 //@actions.150">
+      <outcoming intent="//@intents.100">
+        <target actions="//@actions.184 //@actions.67 //@actions.62 //@actions.63 //@actions.64 //@actions.176 //@actions.202 //@actions.54 //@actions.6 //@actions.22 //@actions.69 //@actions.74 //@actions.78 //@actions.139 //@actions.140 //@actions.141 //@actions.169">
+          <outcoming intent="//@intents.141">
+            <target actions="//@actions.176 //@actions.6 //@actions.22 //@actions.69 //@actions.74 //@actions.78 //@actions.139 //@actions.140 //@actions.141 //@actions.169 //@actions.114">
+              <outcoming intent="//@intents.147">
+                <target actions="//@actions.129">
+                  <outcoming intent="//@intents.140">
+                    <target actions="//@actions.67">
+                      <outcoming intent="//@intents.141">
+                        <target actions="//@actions.176 //@actions.6 //@actions.22 //@actions.69 //@actions.74 //@actions.78 //@actions.139 //@actions.140 //@actions.141 //@actions.169">
+                          <outcoming intent="//@intents.147">
+                            <target actions="//@actions.176 //@actions.22 //@actions.69"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.127 //@actions.161 //@actions.93 //@actions.94 //@actions.95"/>
+  </flows>
+  <flows intent="//@intents.149">
+    <target actions="//@actions.25 //@actions.203"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,274 @@
+Chatbot chatbot_rasa language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"good afternoon" ,
+		"hey there" ,
+		"hi there" ,
+		hii
+}
+
+fine_normal :
+	inputs in en {
+		"I\'m fine" ,
+		"I\'m good" ,
+		"Doing good" ,
+		Awesome
+}
+
+that_all :
+	inputs in en {
+		"That will be all, thank you" ,
+		"That\'s it, thank you" ,
+		"Yeah I need more help"
+}
+
+fine_ask :
+	inputs in en {
+		"I\'m fine, how are you?" ,
+		"I\'m good, how are you?" ,
+		"Doing good, how are you?" ,
+		"Awesome, how are you?"
+}
+
+ask_help :
+	inputs in en {
+		"Can you assist me with this?" ,
+		"I need your help on this issue" ,
+		"I have a problem, can you look into this"
+}
+
+model_name :
+	inputs in en {
+		"iPhone 7" ,
+		"iPhone 8" ,
+		"iPhone x" ,
+		"iPhone 7s" ,
+		"iPhone 8" ,
+		"Macbook Pro" ,
+		"Macbook Air" ,
+		"iPad mini" ,
+		"iPad air" ,
+		"iPad pro"
+}
+
+year_buy :
+	inputs in en {
+		"Two years ago" ,
+		"One year ago" ,
+		"Four years ago" ,
+		"I bought this a few months ago" ,
+		"I bought this two years ago" ,
+		"I bought this a year ago"
+}
+
+damage_ans :
+	inputs in en {
+		"Yeah, it fell down a few times" ,
+		"No it had no physical damage"
+}
+
+express_issue :
+	inputs in en {
+		"I have a problem with my iphone" ,
+		"I have a problem with my ipad" ,
+		"I have a problem with my macbook" ,
+		"There is something wrong with my macbook" ,
+		"There is something wrong with my ipad" ,
+		"There is something wrong with my iphone"
+}
+
+no_idea :
+	inputs in en {
+		"Don\'t know what\'s wrong with my PC" ,
+		"I have no idea" ,
+		"I don\'t know" ,
+		"I can\'t. I don\'t know"
+}
+
+working :
+	inputs in en {
+		"It\'s working" ,
+		working
+}
+
+not_working :
+	inputs in en {
+		"It\'s not working" ,
+		"Tried it and it\'s not working" ,
+		"Still not working"
+}
+
+express_task :
+	inputs in en {
+		"my phone\'s case is broken"
+}
+
+prob :
+	inputs in en {
+		qqqqqqqqqqq
+}
+
+prob1 :
+	inputs in en {
+		"I can\'t see anything on the screen" ,
+		"I am unable to pair my headset" ,
+		def1
+}
+
+proj_select :
+	inputs in en {
+		asasasas
+}
+
+my_device1 :
+	inputs in en {
+		"My device stopped working" ,
+		"I have a problem with my device" ,
+		"How do I fix my device"
+}
+
+my_device :
+	inputs in en {
+		aaaaaaa
+}
+
+device_name :
+	inputs in en {
+		iPhone ,
+		iPad ,
+		Macbook ,
+		Mac ,
+		Watch
+}
+
+yess :
+	inputs in en {
+		yes
+}
+
+noo :
+	inputs in en {
+		^no
+}
+
+actions :
+	Text response utter_welcome_text :
+		inputs in en {
+			"Glad I could help"
+	}
+	Text response utter_what_problem_text :
+		inputs in en {
+			"What\'s the name of your device?"
+	}
+	Text response utter_ofc_text :
+		inputs in en {
+			"Of course, tell me about it"
+	}
+	Text response utter_alt_text :
+		inputs in en {
+			alt
+	}
+	Text response utter_alt1_text :
+		inputs in en {
+			"Long press the power button to restart and check"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_ques_text :
+		inputs in en {
+			"Do you want a new one?"
+	}
+	Text response utter_anything_else_text :
+		inputs in en {
+			"Can you tell me more about the problem you are facing"
+	}
+	Text response utter_alt3_text :
+		inputs in en {
+			"Make sure that the battery is not loose"
+	}
+	Text response utter_ticket_raised_text :
+		inputs in en {
+			ninja
+	}
+	Text response utter_alt2_text :
+		inputs in en {
+			"Put it on charge for a while and see if it works"
+	}
+	Text response utter_usual_text :
+		inputs in en {
+			salp
+	}
+	Text response utter_what_model_text :
+		inputs in en {
+			san
+	}
+	Text response utter_please_try_text :
+		inputs in en {
+			"please try it and see if its resolved"
+	}
+	Text response utter_chose_proj_text :
+		inputs in en {
+			"Select the project: IPAD, PHON, MACB"
+	}
+	Text response utter_damage_text :
+		inputs in en {
+			"Was there any physical damage?"
+	}
+	Text response utter_damage_rep_text :
+		inputs in en {
+			"Okay, explain the problem"
+	}
+	Text response utter_thank_text :
+		inputs in en {
+			tank
+	}
+	Text response utter_reply_help_text :
+		inputs in en {
+			"I\'m doing great. What can I do for you"
+	}
+	Text response utter_how_help_text :
+		inputs in en {
+			"How can I help you"
+	}
+	Text response utter_what_device_text :
+		inputs in en {
+			"What\'s the name of your device?"
+	}
+	Text response utter_when_text :
+		inputs in en {
+			"When did you buy this device"
+	}
+	Empty response action_restart_empty
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user fine_normal => chatbot utter_how_help_text ;
+		=> user fine_ask => chatbot utter_reply_help_text ;
+		=> user express_task => chatbot utter_ques_text {
+			=> user yess => chatbot utter_ticket_raised_text ;
+		} ;
+		=> user express_issue => chatbot utter_what_problem_text {
+			=> user no_idea => chatbot utter_usual_text ;
+		} ;
+	} ;
+	- user ask_help => chatbot utter_ofc_text ;
+	- user express_issue => chatbot utter_what_model_text {
+		=> user model_name => chatbot utter_when_text { => user year_buy => chatbot utter_damage_text , utter_damage_rep_text { => user damage_ans => chatbot utter_damage_rep_text { => user prob1 => chatbot utter_alt1_text { => user not_working => chatbot utter_alt2_text { => user not_working => chatbot utter_alt3_text { => user not_working => chatbot utter_ticket_raised_text { => user that_all => chatbot utter_thank_text ; } ; } ; } ; } ; => user prob => chatbot utter_alt_text , utter_alt1_text , utter_alt3_text , utter_alt2_text { => user noo => chatbot utter_please_try_text { => user working => chatbot utter_welcome_text ; => user not_working => chatbot utter_ticket_raised_text ; } ; } ; } ; } ; } ;
+	} ;
+	- user my_device => chatbot utter_what_problem_text {
+		=> user no_idea => chatbot utter_chose_proj_text { => user proj_select => chatbot utter_anything_else_text { => user no_idea => chatbot utter_usual_text ; } ; } ;
+	} ;
+	- user my_device1 => chatbot utter_what_device_text {
+		=> user device_name => chatbot utter_what_model_text { => user model_name => chatbot utter_when_text { => user year_buy => chatbot utter_damage_text , utter_damage_rep_text { => user damage_ans => chatbot utter_damage_rep_text { => user prob1 => chatbot utter_alt1_text { => user not_working => chatbot utter_alt2_text { => user not_working => chatbot utter_alt3_text { => user not_working => chatbot utter_ticket_raised_text { => user that_all => chatbot utter_thank_text ; } ; } ; } ; } ; } ; } ; } ; } ;
+	} ;
+

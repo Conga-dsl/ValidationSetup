@@ -1,0 +1,95 @@
+Chatbot "corona-chatbot" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+corona_intro :
+	inputs in en {
+		"What is corona virus" ,
+		"what is covid" ,
+		"what is a novel corona virus" ,
+		"what is covid-19" ,
+		"tell me about corona" ,
+		"can you tell me about covid"
+}
+
+corona_spread :
+	inputs in en {
+		"how does corona virus spread" ,
+		"how does the virus spread"
+}
+
+corona_food_spread :
+	inputs in en {
+		"Does corona spread from food" ,
+		"how will corona spread from food"
+}
+
+warm_weather :
+	inputs in en {
+		"will warm weather stop the spread" ,
+		"will it stop with warm weather"
+}
+
+high_risk :
+	inputs in en {
+		"who is at a higher risk of infection"
+}
+
+actions :
+	Text response utter_corona_intro_text :
+		inputs in en {
+			"Coronaviruses are a group of related viruses that cause diseases in mammals and birds. In humans, coronaviruses cause respiratory tract infections that can be mild, such as some cases of the common cold (among other possible causes, predominantly rhinoviruses), and others that can be lethal, such as SARS, MERS, and COVID-19"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user corona_intro => chatbot utter_corona_intro_text ;
+	- user corona_spread => chatbot DefaultEmptyAction ;
+	- user corona_food_spread => chatbot DefaultEmptyAction ;
+	- user warm_weather => chatbot DefaultEmptyAction ;
+	- user high_risk => chatbot DefaultEmptyAction ;
+

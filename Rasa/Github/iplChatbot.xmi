@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="iplChatbot">
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye friend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="catch you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="gotta go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodnight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a nice day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm off"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later alligator"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="we'll speak soon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="end"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="finish"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi folks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi Mister"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi pal!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello everybody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello is anybody there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello robot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do you do?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thanks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you so much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cheers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cheers bro"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok thanks!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks a bunch for everything"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks for the help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks a lot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing, thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cool, thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cool thank you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="y"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Y"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes yes yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes, it did."/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="current_matches">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the current matches"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you list the matches in ipl 2019"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which cricket match is happening right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which ipl match is next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which teams are playing next in ipl"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which team will play next in ipl"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me some ipl news"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want ipl updates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you give me ipl latest updates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the latest match updates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who won the last ipl match"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which teams are competing in the next match"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is ipl going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was the result of the last match"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when is the next match"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="n"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="N"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirmorthanks"/>
+  <actions xsi:type="generator:Text" name="utter_gratitude_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Glad that I could be of help to you!&#xA;Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_match_news_empty"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! What can I do for you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_again_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay! Let's start again, please tell me what do you need?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No issues! Let's try this again.&#xA; Please repeat your query?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I hope that solved your query"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am sorry, I didn't get that. Could you please repeat your query?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am not sure what you are aiming for."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.1 //@actions.4">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.6"/>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.3">
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.1 //@actions.4">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.6"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.1 //@actions.4">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.0">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

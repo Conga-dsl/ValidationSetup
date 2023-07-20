@@ -1,0 +1,351 @@
+Chatbot chatform language : en
+
+intents :
+
+greet :
+	inputs in en {
+		Hi ,
+		Hey ,
+		heyy ,
+		"Hi bot" ,
+		"Hey bot" ,
+		Hello ,
+		hellloo ,
+		"Good morning" ,
+		"hi again" ,
+		"hi folks" ,
+		"hi Mister" ,
+		"hi pal!" ,
+		"hi there" ,
+		greetings ,
+		"hello everybody" ,
+		"hello is anybody there" ,
+		"hello robot" ,
+		hallo ,
+		heeey ,
+		"hi hi" ,
+		hey ,
+		"hey hey" ,
+		"hello there" ,
+		^hi ,
+		hello ,
+		yo ,
+		hola ,
+		"hi?" ,
+		"hey bot!" ,
+		"hello friend" ,
+		ssup
+}
+
+request_jobposting :
+	inputs in en {
+		"i am looking to hire" ,
+		"i want to post a job" ,
+		"i want to hire" ,
+		"how can i post" ,
+		"how can i post job" ,
+		"i want to hire a " ( driver ) [ profile ] ,
+		"i want to hire a " ( maid ) [ profile ] ,
+		"i want to hire an " ( accountant ) [ profile ] ,
+		"i want to hire a " ( male ) [ gender ] ( accountant ) [ profile ] ,
+		"i want to hire a " ( male ) [ gender ] ( maid ) [ profile ] ,
+		"i want to hire a " ( female ) [ gender ] ( maid ) [ profile ] ,
+		"i want to hire a " ( male ) [ gender ] ,
+		"i want to hire a " ( female ) [ gender ] ,
+		"post job" ,
+		"job posting" ,
+		"need a " ( driver ) [ profile ] ,
+		"I need a " ( driver ) [ profile ] ,
+		"need a " ( maid ) [ profile ] ,
+		"I need a " ( maid ) [ profile ] ,
+		"need an " ( accountant ) [ profile ] ,
+		"I need an " ( accountant ) [ profile ] ,
+		"can i post a job" ,
+		"how can i hire" ,
+		help
+	}
+	parameters :
+		profile ,
+		gender : entity text ;
+
+affirm :
+	inputs in en {
+		"yeah a genuine person" ,
+		correct ,
+		ye ,
+		"uh yes" ,
+		"let\'s do it" ,
+		yeah ,
+		"um yes" ,
+		"yes knocking" ,
+		"that\'s correct" ,
+		"yes yes" ,
+		right ,
+		yea ,
+		yes ,
+		"yes right" ,
+		"yes and i dont care" ,
+		"right on" ,
+		"i love that" ,
+		yupp ,
+		yup ,
+		cool ,
+		haa ,
+		ha ,
+		alright
+}
+
+deny :
+	inputs in en {
+		^no ,
+		"no new selection" ,
+		"no thanks" ,
+		"no thank you" ,
+		"uh no" ,
+		"breath no" ,
+		"do you have something else" ,
+		"no this does not work for me" ,
+		nope ,
+		nah ,
+		nahi ,
+		naa
+}
+
+inform :
+	inputs in en {
+		( driver ) [ profile ] ,
+		( accountant ) [ profile ] ,
+		( maid ) [ profile ] ,
+		( male ) [ gender ] ,
+		( female ) [ gender ] ,
+		( both ) [ gender ] ,
+		( both ) [ gender ] " are fine" ,
+		( "0 - 6 months" ) [ experience ] ,
+		( "1 - 2 years" ) [ experience ] ,
+		( "more than 2 years" ) [ experience ] ,
+		( "0" ) [ ^number ] ,
+		( "1" ) [ ^number ] ,
+		"[2](number" ,
+		( driver ) [ profile ]
+	}
+	parameters :
+		profile ,
+		gender ,
+		experience ,
+		^number : entity number ;
+
+thankyou :
+	inputs in en {
+		"um thank you good bye" ,
+		"okay cool uh good bye thank you" ,
+		"okay thank you good bye" ,
+		"you rock" ,
+		"and thats all thank you and good bye" ,
+		"thank you and good bye" ,
+		"sorry about my mistakes thank you good bye" ,
+		"noise thank you good bye" ,
+		"thank you goodbye noise" ,
+		"okay thank you goodbye" ,
+		"uh thank you good bye" ,
+		"thank you goodbye" ,
+		"thank you goodbye noise thank you goodbye" ,
+		"breath thank you goodbye" ,
+		"thank you" ,
+		"okay thank you" ,
+		"thanks goodbye" ,
+		"ah thank you goodbye" ,
+		"thank you noise" ,
+		"thank you good bye" ,
+		"breath thank you very much goodbye" ,
+		thanks ,
+		"noise thank you goodbye" ,
+		"unintelligible thank you goodbye" ,
+		"uh okay thank you good bye" ,
+		"thank you bye" ,
+		"um okay thank you good bye"
+}
+
+chitchat :
+	inputs in en {
+		"can you share your boss with me?" ,
+		"i want to get to know your owner" ,
+		"i want to know the company which designed you" ,
+		"i want to know the company which generated you" ,
+		"i want to know the company which invented you" ,
+		"i want to know who invented you" ,
+		"May I ask who invented you?" ,
+		"please tell me the company who created you" ,
+		"please tell me who created you" ,
+		"tell me more about your creators" ,
+		"tell me more about your founders" ,
+		"Ahoy matey how are you?" ,
+		"are you alright" ,
+		"are you having a good day" ,
+		"Are you ok?" ,
+		"are you okay" ,
+		"Do you feel good?" ,
+		"how are things going" ,
+		"how are things with you?" ,
+		"How are things?" ,
+		"how are you" ,
+		"how are you doing" ,
+		"how are you doing this morning" ,
+		"how are you feeling" ,
+		"how are you today" ,
+		"How are you?" ,
+		"How is the weather today?" ,
+		"What\'s the weather like?" ,
+		"How is the weather?" ,
+		"What is the weather at your place?" ,
+		"Do you have good weather?" ,
+		"Is it raining?" ,
+		"What\'s it like out there?" ,
+		"Is it hot or cold?" ,
+		"Beautiful day, isn\'t it?" ,
+		"What\'s the weather forecast?" ,
+		"Is it quite breezy outside?"
+}
+
+stop :
+	inputs in en {
+		"ok then you cant help me" ,
+		"that was shit, you\'re not helping" ,
+		"you can\'t help me" ,
+		"you can\'t help me with what i need" ,
+		"i guess you can\'t help me then" ,
+		"ok i guess you can\'t help me" ,
+		"that\'s not what i want" ,
+		"ok, but that doesnt help me" ,
+		"this is leading to nothing" ,
+		"this conversation is not really helpful" ,
+		"you cannot help me with what I want" ,
+		"I think you cant help me" ,
+		"hm i don\'t think you can do what i want" ,
+		stop ,
+		"stop go back" ,
+		"do you get anything?" ,
+		"and you call yourself bot company? pff" ,
+		"and that\'s it?" ,
+		"nothing else?" ,
+		cancel ,
+		quit ,
+		finish
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Text response utter_ask_preferences_text :
+		inputs in en {
+			"please provide additional preferences"
+	}
+	Text response utter_ask_gender_text :
+		inputs in en {
+			"What gender do you prefer for the above job?"
+	}
+	Text response utter_ask_feedback_text :
+		inputs in en {
+			"please give your feedback on your experience so far"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hello! I am Recruiter assistant! How can I help?"
+	}
+	Text response utter_wrong_skills_text :
+		inputs in en {
+			"None of the skills match, please try again (use ,)"
+	}
+	Text response utter_noworries_text :
+		inputs in en {
+			"you are welcome :)"
+	}
+	Text response utter_chitchat_text :
+		inputs in en {
+			chitchat
+	}
+	Text response utter_ask_continue_text :
+		inputs in en {
+			"do you want to continue?"
+	}
+	Text response utter_ask_profile_text :
+		inputs in en {
+			"Which profile do you want to hire?"
+	}
+	Text response utter_wrong_experience_text :
+		inputs in en {
+			"I can\'t understand the experience level, please try again"
+	}
+	Text response utter_stop_text :
+		inputs in en {
+			"Aborted process. How can I help?"
+	}
+	Text response utter_ask_experience_text :
+		inputs in en {
+			"Okay, how much experience is required?"
+	}
+	Text response utter_slots_values_text :
+		inputs in en {
+			"Thank you " company ", your " [ "request_jobposting.profile" ] " job has been submitted for review.\n Experience: " experience ",\n Gender: " [ "request_jobposting.gender" ] ",\n Skills: " skills
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_ask_company_text :
+		inputs in en {
+			"All set! Just tell us your company name and we\'re done."
+	}
+	Empty response action_reset_all_slots_empty
+	Empty response action_set_slot_experience_empty
+	Text response utter_wrong_gender_text :
+		inputs in en {
+			"the gender field seems incorrect, please try again"
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"sorry, I didn\'t understand you, please try something else"
+	}
+	Empty response utter_restart_empty
+	Text response utter_wrong_profile_text :
+		inputs in en {
+			"this profile type is not in the database, please try again"
+	}
+	Text response utter_submit_text :
+		inputs in en {
+			"All done!"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text ;
+	- user thankyou => chatbot utter_noworries_text ;
+	- user request_jobposting => chatbot utter_slots_values_text , action_reset_all_slots_empty , DefaultEmptyAction {
+		=> user chitchat => chatbot utter_chitchat_text , utter_slots_values_text , action_reset_all_slots_empty {
+			=> user chitchat => chatbot utter_chitchat_text {
+				=> user chitchat => chatbot utter_chitchat_text , utter_slots_values_text , action_reset_all_slots_empty { => user chitchat => chatbot utter_chitchat_text , utter_slots_values_text , action_reset_all_slots_empty ; } ;
+			} ;
+			=> user stop => chatbot utter_ask_continue_text {
+				=> user affirm => chatbot utter_slots_values_text , action_reset_all_slots_empty , DefaultEmptyAction {
+					=> user chitchat => chatbot utter_chitchat_text , utter_slots_values_text , action_reset_all_slots_empty ;
+				} ;
+				=> user deny => chatbot utter_stop_text ;
+			} ;
+		} ;
+		=> user stop => chatbot utter_ask_continue_text {
+			=> user affirm => chatbot utter_slots_values_text , action_reset_all_slots_empty , DefaultEmptyAction {
+				=> user chitchat => chatbot utter_chitchat_text , utter_slots_values_text , action_reset_all_slots_empty ;
+			} ;
+			=> user deny => chatbot utter_stop_text ;
+		} ;
+	} ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user FallbackIntent ;
+

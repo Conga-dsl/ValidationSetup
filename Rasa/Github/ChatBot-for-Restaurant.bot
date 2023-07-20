@@ -1,0 +1,249 @@
+Chatbot "ChatBot-for-Restaurant" language : en
+
+intents :
+
+confirmaffirm :
+	inputs in en {
+		"yeah exactly" ,
+		"okay that\'s fine" ,
+		alright ,
+		"that is ok" ,
+		okey ,
+		ya ,
+		"ok yes" ,
+		"yes it is" ,
+		yep ,
+		yew ,
+		yeah ,
+		"yeah fine" ,
+		"yea fine" ,
+		"yep okay" ,
+		"fine okay" ,
+		yup ,
+		YEAH ,
+		"okay buddy" ,
+		"hmm okay" ,
+		"yeah sure" ,
+		"okay cool" ,
+		coool
+}
+
+confirmdeny :
+	inputs in en {
+		"don\'t" ,
+		"don\'t want" ,
+		"need not" ,
+		"don\'t come" ,
+		"not needed" ,
+		"of course not" ,
+		"not at this time" ,
+		"not exactly" ,
+		"absolutely no" ,
+		"no forget" ,
+		"do not" ,
+		"no thanks" ,
+		"no don\'t want" ,
+		"sorry no" ,
+		"don\'t want that" ,
+		"do not" ,
+		nope ,
+		"nope not that" ,
+		nah ,
+		^no ,
+		"dont need that" ,
+		"nah nope" ,
+		^no ,
+		nope ,
+		^no
+}
+
+cuisinetype :
+	inputs in en {
+		"i would like something in " ( Mexican ) [ cuisine ] ,
+		"let\'s try " ( "south Indian" ) [ cuisine ] ,
+		"would like to have something in " ( Italian ) [ cuisine ] ,
+		"I am looking for something " ( "north indian" ) [ cuisine ] ,
+		"show me something in " ( chinese ) [ cuisine ] ,
+		"any " ( "south indian" ) [ cuisine ] " cuisine" ,
+		"looking something " ( American ) [ cuisine ] ,
+		( Italian ) [ cuisine ] ,
+		( "North Indian" ) [ cuisine ] ,
+		"I want some good " ( chinese ) [ cuisine ] " food." ,
+		"let\'s try something in " ( American ) [ cuisine ] " cuisine" ,
+		"let\'s try " ( mexican ) [ cuisine ] ,
+		"I am in mood to have some " ( chinese ) [ cuisine ] " food." ,
+		"would like to have some " ( "south indian" ) [ cuisine ]
+	}
+	parameters :
+		cuisine : entity text ;
+
+greetingsbye :
+	inputs in en {
+		"okay see you later" ,
+		"hope to see you later" ,
+		"bye for now" ,
+		"till next time" ,
+		"I must go" ,
+		bye ,
+		goodbye ,
+		"see you" ,
+		"see you soon" ,
+		"bye-bye" ,
+		"bye bye good night" ,
+		"good bye" ,
+		"bye bye see you" ,
+		"bye bye see you soon" ,
+		"bye bye take care" ,
+		"I said bye" ,
+		"never mind bye" ,
+		"now bye" ,
+		"that\'s all goodbye" ,
+		"that\'s it goodbye" ,
+		"leave me alone" ,
+		"go to bed" ,
+		"goodbye for now" ,
+		"talk to you later" ,
+		"you can go now" ,
+		"get lost" ,
+		"goodbye see you later" ,
+		"alright bye" ,
+		"see ya" ,
+		"thanks bye bye" ,
+		"okay bye" ,
+		"okay thank you bye" ,
+		"see you tomorrow" ,
+		"ok bye" ,
+		"c u" ,
+		"ok bye"
+}
+
+greetingshello :
+	inputs in en {
+		hello ,
+		^hi ,
+		"hey buddy" ,
+		"hi bru" ,
+		"hello amigo" ,
+		"hey hi" ,
+		"hello there" ,
+		"hello again" ,
+		"hi, nice to see you again" ,
+		^hi ,
+		^hi ,
+		^hi ,
+		^hi ,
+		^hi ,
+		^hi
+}
+
+itemquantity :
+	inputs in en {
+		( "1" ) [ quant ]
+	}
+	parameters :
+		quant : entity number ;
+
+selecteditem :
+	inputs in en {
+		( chole ) [ food ] ( chawal ) [ food ] ,
+		( chole ) [ food ] ( chawal ) [ food ]
+	}
+	parameters :
+		food : entity text ;
+
+actions :
+	Text response "utter_ask.cuisine_text" :
+		inputs in en {
+			"What cuisine would you like to try out today?"
+	}
+	Text response "utter_order.anything_else_text" :
+		inputs in en {
+			"Would you like to order anything else?"
+	}
+	Text response "utter_select.item_text" :
+		inputs in en {
+			"Please select from the menu. \n 1. Burger \n 2. Paratha \n 3. Chole Chawal \n 4. Idli sambar"
+	}
+	Empty response "order.add_item_empty"
+	Text response "utter_order.cancel_text" :
+		inputs in en {
+			"Okay, the order has been cancelled."
+	}
+	Text response "utter_display.menu_text" :
+		inputs in en {
+			[ "cuisinetype.cuisine" ] ".. Great choice. Here\'s the menu for today..."
+	}
+	Text response "utter_greetings.hello_text" :
+		inputs in en {
+			^hi ,
+			hey ,
+			"hey there!!"
+	}
+	Empty response "order.summary_empty"
+	Text response "utter_order.placed_text" :
+		inputs in en {
+			"Cool, your order has been placed. You will receive full updates on this chat."
+	}
+	Empty response "order.process_empty"
+	Text response "utter_item.quantity.how_many_text" :
+		inputs in en {
+			"How many would you like to have?"
+	}
+	Text response "utter_item.not_available_text" :
+		inputs in en {
+			"Sorry, we are out of " item ". Would you like to have something else?"
+	}
+	Empty response action_default_fallback_empty
+	Text response utter_default_text :
+		inputs in en {
+			"I am sorry, I didn\'t understand what you said. Can you try again?"
+	}
+	Empty response "order.remove_item_empty"
+	Text response "utter_agent.welcome_text" :
+		inputs in en {
+			"Hi!!! I am Bru, your food ordering assistant."
+	}
+	Text response "utter_order.confirm_text" :
+		inputs in en {
+			"Would you like to confirm the order?"
+	}
+	Text response "utter_greetings.bye_text" :
+		inputs in en {
+			"Goodbye!!!" ,
+			"Adios Amigo!!!"
+	}
+
+flows :
+	- user greetingshello => chatbot "utter_greetings.hello_text" , "utter_agent.welcome_text" , "utter_ask.cuisine_text" {
+		=> user cuisinetype => chatbot "utter_display.menu_text" , "utter_select.item_text" {
+			=> user selecteditem => chatbot "utter_item.quantity.how_many_text" , "utter_item.not_available_text" , "utter_order.anything_else_text" {
+				=> user itemquantity => chatbot "utter_order.confirm_text" {
+					=> user confirmaffirm => chatbot "utter_order.placed_text" { => user greetingsbye => chatbot "utter_greetings.bye_text" ; } ;
+				} ;
+				=> user confirmaffirm => chatbot "utter_select.item_text" {
+					=> user itemquantity => chatbot "utter_order.anything_else_text" {
+						=> user confirmdeny => chatbot "utter_order.confirm_text" { => user confirmaffirm => chatbot "utter_order.placed_text" { => user greetingsbye => chatbot "utter_greetings.bye_text" ; } ; } ;
+					} ;
+					=> user selecteditem => chatbot "utter_item.quantity.how_many_text" {
+						=> user itemquantity => chatbot "utter_order.anything_else_text" { => user confirmdeny => chatbot "utter_order.confirm_text" { => user confirmaffirm => chatbot "utter_order.placed_text" { => user greetingsbye => chatbot "utter_greetings.bye_text" ; } ; } ; } ;
+					} ;
+				} ;
+			} ;
+			=> user cuisinetype => chatbot "utter_item.not_available_text" , "utter_select.item_text" {
+				=> user selecteditem => chatbot "utter_item.quantity.how_many_text" { => user itemquantity => chatbot "utter_order.confirm_text" { => user confirmaffirm => chatbot "utter_order.placed_text" , "utter_order.anything_else_text" { => user confirmdeny => chatbot "utter_greetings.bye_text" { => user greetingsbye ; } ; } ; } ; } ;
+			} ;
+			=> user confirmdeny => chatbot "utter_greetings.bye_text" ;
+		} ;
+		=> user selecteditem => chatbot "utter_item.not_available_text" {
+			=> user confirmaffirm => chatbot "utter_ask.cuisine_text" { => user cuisinetype => chatbot "utter_display.menu_text" , "utter_select.item_text" { => user selecteditem => chatbot "utter_item.quantity.how_many_text" { => user itemquantity => chatbot "utter_order.confirm_text" { => user confirmaffirm => chatbot "utter_order.placed_text" , "utter_order.anything_else_text" { => user confirmdeny => chatbot "utter_greetings.bye_text" { => user greetingsbye ; } ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+	- user cuisinetype => chatbot "utter_display.menu_text" , "utter_select.item_text" , "utter_item.not_available_text" , "utter_item.quantity.how_many_text" , "utter_order.confirm_text" , "utter_order.anything_else_text" {
+		=> user confirmaffirm => chatbot "utter_order.placed_text" , "utter_ask.cuisine_text" ;
+		=> user confirmdeny => chatbot "utter_order.anything_else_text" , "utter_greetings.bye_text" {
+			=> user confirmdeny => chatbot "utter_greetings.bye_text" ;
+			=> user confirmaffirm => chatbot "utter_ask.cuisine_text" ;
+		} ;
+	} ;
+	- user greetingsbye => chatbot "utter_greetings.bye_text" ;
+

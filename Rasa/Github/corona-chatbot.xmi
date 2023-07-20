@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="corona-chatbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_intro">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is a novel corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about covid"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_spread">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does corona virus spread"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does the virus spread"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_food_spread">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Does corona spread from food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will corona spread from food"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="warm_weather">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will warm weather stop the spread"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will it stop with warm weather"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="high_risk">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is at a higher risk of infection"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_corona_intro_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Coronaviruses are a group of related viruses that cause diseases in mammals and birds. In humans, coronaviruses cause respiratory tract infections that can be mild, such as some cases of the common cold (among other possible causes, predominantly rhinoviruses), and others that can be lethal, such as SARS, MERS, and COVID-19"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.4"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.3"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.0"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.5"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

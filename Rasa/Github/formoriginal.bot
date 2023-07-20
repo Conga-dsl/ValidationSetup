@@ -1,0 +1,96 @@
+Chatbot formoriginal language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+request_meeting :
+	inputs in en {
+		"I want to meet with [Vlad](person:Vlad Maraev)" ,
+		"I want to meet with someone..." ,
+		"I want to meet with [Vlad](person:Vlad Maraev) on " ( Monday ) [ ^date ]
+	}
+	parameters :
+		^date : entity date ;
+
+inform :
+	inputs in en {
+		( "Vlad Maraev" ) [ person ] ,
+		( "Staffan Larsson" ) [ person ] ,
+		( "Alex Berman" ) [ person ] ,
+		( Monday ) [ ^date ] ,
+		( Tuesday ) [ ^date ] ,
+		( "9:00" ) [ ^time ]
+	}
+	parameters :
+		person ,
+		^date : entity date ;
+		^time : entity time ;
+
+actions :
+	Text response utter_yn_correct_text :
+		inputs in en {
+			"Is this correct?"
+	}
+	Text response utter_wh_person_text :
+		inputs in en {
+			"Who are you meeting with?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Let’s make an appointment."
+	}
+	Text response utter_ask_time_text :
+		inputs in en {
+			"What time is your meeting?"
+	}
+	Empty response meeting_form_empty
+	Text response utter_ask_person_text :
+		inputs in en {
+			"Who are you meeting with?"
+	}
+	Text response utter_ask_date_text :
+		inputs in en {
+			"What date is your meeting with {person}?"
+	}
+	Text response utter_inform_text :
+		inputs in en {
+			"Here is your appointment.\nYou are meeting {person} on {date} at {time}.\n"
+	}
+	Text response utter_submit_text :
+		inputs in en {
+			"All set!"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user request_meeting => chatbot meeting_form_empty ;
+	} ;
+

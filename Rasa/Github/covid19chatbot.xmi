@@ -1,0 +1,3144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="covid19chatbot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey im great"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk_human">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am a talking with a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i speaking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i talking to a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i talking to a person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i talking to a real person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i talking to a robot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a real person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you real?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i contact a human being?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i don't want to speak with a bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i don't want to talk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i don't want to talk to a chatbot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i don't want to talk with a chatbot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'd like to speak to a person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this a person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this a real person or a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who am i talking to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you real?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="covid_intro">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are corona virus and COVID-19 different?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are coronavirus and covid 19 the same"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are coronaviruses common"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are coronaviruses seasonal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can covid-19 mutate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I have information about corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you break down the general information for corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you give me information about Covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me about Covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me about the corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me more about COVID-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me more this new virus Covid19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me what corona virus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me what Corona virus is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me what coronavirus is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me what covid-19 is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me where the corona virus attacks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cornavirus pandemic."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Corona virus at a glance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Corona virus covid 19 latest updates."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Coronavirus and SARS and MERS."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Coronavirus covid19 effect on global economy."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Coronavirus sars and mers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you please tell me something about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you show me information regarding coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you tell me more about COVID-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Define corona virus for me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Definition of corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Describe the coronavirus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did coronavirus mutate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do coronavirus mutate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have facts about COVID-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have information about Covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have information on covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have information that you would like to share about what the Corona virus is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know about Covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know if the corona virus a flu strain?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know what Corona virus is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know what coronavirus is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know what covid-19 is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know what Covid19 is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know what is corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Explain corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Explain coronavirus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Explain Covid please?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Explain me what corona virus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Explain the Corona Virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me an overview of COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me information about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me information about corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me information about Coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me more information on coronavirus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="has coronavirus mutated"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can corona virus be explained"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I find out more about covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can i understand the general information on corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can i understand what corona virus is?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how coronavirus works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How dangerous is corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How to define the Corona Virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am curious about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am curious about the corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am curious about the new virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am curious to learn more about the Corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am eager to know what coronavirus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am not sure if corona virus is dangerous"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am quite eager to learn about this Covid19 virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am seeking general information about COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am wondering about covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am wondering what corona virus is."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am wondering what coronavirus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I corona virus real?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help understanding corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need information about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need more details about the Corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to understand more about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need you to Explain corona virus or Covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want information on COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want official information about covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want some information about corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know about corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know about coronavirus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know about Covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know about covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know everything about corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know more about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know more about coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know more COVID-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know more information about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know what corona virus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know what covid-19 is."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know what is corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn about coronavirus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn about Covid19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn about covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn about the Novel Coronavirus disease."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn more about corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn more about COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn more about COVID-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to learn more about the Corona Virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to see a description of COVID-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I was wondering if you can teach me more about Covid19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I was wondering what can I do to learn more about Corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wonder what corona virus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like learn more about this Covid19 virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to know what covid-19 is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm wondering what coronavirus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm wondering what makes COVID-19 fatal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Information on corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus a disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus a pheic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus a virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus actually dangerous"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus aiurborne"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus as bad as"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is corona virus dangerous"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is corona virus dangerous?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus enteric"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus icos or helical"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is corona virus new?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus a disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus a flu virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus a pandemic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus a plague"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus airborne"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus deadly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus fatal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus in the air"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus more contagious than flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus seasonal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus that bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus the flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 a disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is COVID-19 a disease?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 a pandemic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 a retrovirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 a virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 airborne"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 airborne or droplet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 the flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is COVID-19 virus new?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it corona virus or coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is it possible for you to enlighten me about the Corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the corona virus a disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the corona virus a pandemic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the corona virus new"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the corona virus that bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the corona virus the flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the corona virus worldwide"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there any way I can learn about Corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is this Covid a virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I've been wondering about the Corona virus. What is it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Look up corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Look up COVID-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="May I have some information about coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="More about covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="More information on Covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="More information on the corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please explain corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please give me more information about covid19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please share what you know about the Corona Virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search 'coronavirus' for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search for coronavirus for me."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search for information concerning COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search for information on Covid19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search the web for covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search 'what is coronavirus' for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Searching for information about corona virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Send me information about Coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Share with me all information about COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me information about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me information about coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me information about covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me information about COVID-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me information on covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me what corona virus is."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me what the corona virus entails."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me what type of disease is COVID-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Teach me about covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about the coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about the Novel Coronavirus disease."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me everything about covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me everything about the Corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me the main characteristics of coronavirus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me what corona virus consists in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me what corona virus is"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me what is the Corona Virus."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This Corona virus makes me very curious and I would like to know more about it."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Understanding the corona virus or Covid-19."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Update me on the corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the types of corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what corona viruses are there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what coronavirus looks like"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what covid-19 stands for"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what disease is corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I need to know about corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do i need to know about coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I need to know about the Corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I need to know about the Novel Coronavirus disease?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do we know about Covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do you know about corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do you know about coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do you know of this Corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does corona virus mean"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does COVID-19 stand for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What entails corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is corona virus defined by"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is covid 19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is COVID-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is COVID-19 about?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is COVID-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is SARS-CoV-2?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the Covid-19 strain virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the COVID-19 virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the definition of Corona Virus or Covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the difference between COVID 19 and corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the general definition of Corona virus or covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the r/o for covid 19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the r0 for covid 19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is this new Corona virus and can you tell me more?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is this new pandemic virus going around?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is this virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of disease is corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of disease is Corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what makes a corona virus a coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What should I know about the Coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What should people know about coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What virus is causing the global pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's the corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where did the name corona virus come from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why coronavirus is deadly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why coronavirus kills"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why covid-19 is considered a pandemic"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why does corona virus kill you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is corona called corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is coronavirus called corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is it called to corona virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wondering about the corona Virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Would you tell me about COVID-19?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_distancing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i going into quarantine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there guidelines for how to self-isolate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i go for a walk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i still go outside?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i still travel to work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i walk somewhere?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have to avoid going outside?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have to avoid people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have to isolate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have to stay away from people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have to stay inside?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for how long do i need to stay at home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for what reasons can i still go outside?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for what reasons can i still travel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i avoid people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i self isolate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i socially distance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does quarantine work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does social distancing work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how far apart should i stay for social distancing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long do i have to self-isolate for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long do i have to stay inside"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will social distancing help?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i stay away from people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what amount of time do i have to self-isolate for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the guidelines for a lockdown?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the guidelines for isolating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the guidelines for social-distancing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what counts as essential travel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do i have to self-isolate for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does social distancing mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what essential travel can i still do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what if i want to go for a walk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is essential travel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is quarantine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is self-isolation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is social distancing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i stay in isolation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who doesn't need to stay at home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who needs to stay at home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do i have to avoid going outside?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do i have to avoid people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do i have to stay inside?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why does social distancing help?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why should i isolate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why should i quarantine myself?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why should most people isolate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will quarantine work?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_symptoms">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i going to die?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i going to need hospital treatment?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are aches a symptom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are the symptoms serious?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i still have it but have no symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can people die from contacting covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can people die from contracting covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can people die from coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can people die from this?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can there be complications from covid-19 symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you be infected and not show any symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me what the symptoms are?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could i be carrying coronavirus if i don't have symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does everyone have symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how badly should i be coughing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i identify the symptoms of corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i tell if i have corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know i have covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know i might be a carrier?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know i might have it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know if i have a high temperature?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know if i have it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know if i need hospital treatment?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know if i'm a carrier of covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know if i've caught coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i know if i've caught it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how high does my fever have to be for me to go to hospital?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how high is a fever?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your body affected by corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long do i have to be sick for before i can go to a clinic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long should i have a fever for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how severe do my symptoms have to be before i go to hospital?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how would my body feel if i caught the virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i have a fever, do i have corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm coughing, what should i do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is a symptom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coughing a symptom of the disease?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is joint pain a symptom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i go to a health centre if i have symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the signs and symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the signs of corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the signs of covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the signs?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what counts as a high temperature?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do aches and pains mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do the symptoms look like?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does a high temperature feel like?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does asymptomatic mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does dry cough mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does having corona feel like?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does having corona virus feel like?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does having the virus feel like?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does it mean if i'm coughing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does it mean to be asymptomatic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does persistent cough mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does the virus do to your body?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does this virus do to the body?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is a dry cough?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is a fever?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is a high temperatures?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is an asymptomatic carrier?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is different about a dry cough?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do if i think i have it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do if i think i might have corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what signs of covid-19 should i look for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what temperature is a fever?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when do i need to go to a clinic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when is a cough persistent?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i go to hospital?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i go to the emergency room?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What Happens If i get Coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does Coronavirus do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How does human body behave if i get coronavirus?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_vaccine">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i immune once i've been vaccinated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are inoculations available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are they researching vaccines?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are they working on vaccines?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can covid be cured?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i be vaccinated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can inoculation protect you from coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can researching make a vaccine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can vaccines protect you from corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you be inoculated against the virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you be inoculated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you be vaccinated to protect you from covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you be vaccinated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you get vaccinated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i be vaccinated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does vaccine research work"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will it take to develop a vaccine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will it take to develop inoculation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will it take to research a vaccine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is a vaccine being developed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there a cure?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there a vaccine against coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there si cure for covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does herd immunity mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is herd immunity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is inoculation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when can we expected a vaccine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when will inoculations be available?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_vulnerable">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i more vulnerable if i have cancer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are children at risk of coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are children vulnerable to corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are my dogs at risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can cats get the virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can children get coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can children get it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can dogs get the virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can my baby get coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can my cat get it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can pets get the virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can your age affect the severity of the illness?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can your age affect the severity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does my age matter?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does respiratory disease increase my risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many years old are those at risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how old are those likely to have a severe reaction?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how what age group is most at risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am pregnant, am i at a higher risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am years old"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am years old, am i at risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i have asthma, am i more at risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm concerned about my parents"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm pregnant, am i at a higher risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm worried about my grand parents"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i be worried about my parents?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i be worried if i'm expecting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what age group is most vulnerable?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what age range is most at risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the high risk groups?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are ventilators for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what groups are vulnerable?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what if i'm high risk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what if i'm years old?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what if someone is diabetic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what people are most likely to experience severe symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is most at risk of severe symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is most likely to need hospital treatment?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is most likely to need to go to the hospital?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who might need intensive care?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who might need ventilators?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who should avoid contact during the outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who should avoid contact?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who should i avoid contact with during the outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why are older age people more at risk from this illness?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why are symptoms more severe depending on how old i am?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why are symptoms more severe in some people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do some people need intensive care?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do we need ventilators?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why does age affect the severity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why does my age matter?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="company_open">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="any changes to your services?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there any changes to your operations?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there any changes to your services due to coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there any changes to your services?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you open at different times?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you open the same hours?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you operating as normal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you operating at reduced capacity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you still open?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you still operating as usual?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you still operating at full capacity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your offices closed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your services still available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i expect coronavirus to cause changes to your service?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i expected business as usual?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i expected normal service?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i still book a meeting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i use your service with online chat?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i use your service with video chat?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do we have to meet virtually?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have you closed your offices due to corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have you closed your offices?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are your operating during the covid-19 pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i arrange a meeting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can we meet virtually?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it business as usual?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the company currently active?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the company currently operating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the office still open?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is video chat available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is your office still open?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will the office still be open?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will you continue operating as usual?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will you continue operating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will you continue to work as usual during coronavirus?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="company_wfh">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are people working from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there any key workers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you in the office?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your people working from home right now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your staff in the office right now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your staff in the office?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your staff still working?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are your staff working from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i contact your staff at the office?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i contact your staff right now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you work from home if needed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have any key workers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have people still working?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have the resources for working from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have the resources to work from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you still have key workers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do your staff have the resources to work from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does your company have the resources to work from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i contact your staff?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is anyone still working?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where are your staff?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is available for remote meetings?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is available for virtual meetings?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is available to speak to while your office is closed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is available while staff are working from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is available while working from home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who is still working?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_testing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are tests available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there tests to detect corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i have a test even if i don't have symptoms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i have a test if i think i have coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i have a test?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are they testing people for covid19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i get tested?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do they test for covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do they test someone for covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does testing for corona work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does testing work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i think i have coronavirus, should i get a test?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i think i've got it, should i get a test?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there any testing going on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i get a test?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when will testing be available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where are test available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who are they testing for corona virus right now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who can get tested?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_supplies">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are the supermarkets going to run out of food?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are the supermarkets going to run out of supplies?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i go to the shops for"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i go to the shops for that?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could there be shortages?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i need to buy anything?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i need to buy more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i need to buy more toilet paper"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do people need to stockpile?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to buy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to buy can i go to the shops for that?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to buy more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to buy more medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to buy more soap"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm worried about supply chains"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i stockpile?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should we be worried about food shortages?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what extra supplies to do i need"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what food should i be stocking up?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what if i need more soap?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what if i run out of soap and need to buy more?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is panic buying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of food should i buy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do if the supermarkets are empty?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do if there's a shortage?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i stock up on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what supplies might there be a shortage of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what supplies should i stock up on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what things should i buy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what type of food is good for stocking up?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why are people panic-buying?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will shortages be a problem?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will supply chains be affected"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_flu">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are the symptoms like influenza?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does corona virus compare with a flu outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid-19 compare with influenza?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does it compare to a cold?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is corona different from the flu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is covid-19 different from the flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is this different from the flu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona a flu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona the same as swine flu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus just a bad cold?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is coronavirus like influenza?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid a kind of influenza?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid19 a kind of influenza?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is covid-19 like swine flu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it like a cold"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is the virus a kind of influenza?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this caused by h1n1?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this like the h1n1 outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this like the spanish flu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this similar to h1n1?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this similar to swine flu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="isn't it just a cold?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="isn't it just a really bad cold?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_howmany">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are there a lot of cases right now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does the country have a lot of cases?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does the have a lot of cases?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have many people died due to covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many cases have there been"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many cases of corona infection have there been?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many deaths have there been?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many fatalities have there been?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many have died due to coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many have tested positive?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many people have been infected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many people have tested positive"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="number of cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the fatality number?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the fatality rate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the number of cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the number of deaths"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the number of fatalities?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the number of infections?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what number have tested positive?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what number of people have been infected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what number of people have tested positive?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="company_mitigation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you keeping your workers safe?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you paying your staff even if they are unwell?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me your continuity plan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have a business continuity plan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have a disaster recovery plan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have a plan for economic recovery?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does the company have a continuity plan for this crisis?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you going to cope with coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you going to cope with the pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you keeping staff safe?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you protecting your staff?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you protecting your workers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does your business plan to recover?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is the company going to cope with covid19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will you ensure business continuity during the outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will you manage if people are self-isolating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will your business recover?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there a continuity plan for coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there a continuity plan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there a disaster recovery plan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing for business continuity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing if people are self-isolating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing if staff are self-isolating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing if staff are sick?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing if staff are unwell?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing to cope with covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you doing to manage corona at your company?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are your mitigation strategies for coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are your mitigation strategies?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are your strategies for dealing with coronavirus as a company?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are your strategies for the covid-19 outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what services can you still provide while i'm self-isolating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will do do if staff are sick?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will you do if staff are unwell?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will you do so the company can recover more quickly?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will you business recover?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="company_deliveries">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you still able to deliver goods?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you still able to deliver products by post during the pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you still doing deliveries during the outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i order online during the covid-19 outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i order online during the outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i order your items online?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i order your products online?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i receive deliveries without contact?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you deliver with zero contact?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you do contact-free deliveries?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you do deliveries by zero-contact post?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you send your products in the post?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you sent items by post?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you still deliver goods?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide deliveries to people who are isolating?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide deliveries?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid-19 affect home delivery services?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will coronavirus affect your home delivery?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus affecting your delivery channels?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will covid affect your home delivery services?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_masks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can a mask protect me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can covering my face protect me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i need to cover my face?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i need to start covering my face?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do mask help?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do masks help stop the spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do masks help to stop covid 19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do masks help to stop the spread of corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can a mask help?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i cover my face with a mask?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i cover my face?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the right kind of mask to use?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of mask should i use?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what type of face-mask do i need?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what type of mask should i use?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who needs to use face masks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why are people using face masks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is everyone wearing face-masks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will a mask protect me from the virus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will it help to cover my face?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_timescale">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can a virus change over time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can covid-19 mutate over time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could coronavirus come back in the winter?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could covid19 return in the autumn?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could this still be going on next year?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does a pandemic progress?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does a viral outbreak progress?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does an outbreak progress?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long does a pandemic last?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long does it take for a pandemic to end?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long has the pandemic been going on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long has this been going on for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will a pandemic last?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will the be a pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will the coronavirus outbreak last?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long will this outbreak last?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many months can we expect this to last?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many months has coronavirus been going on for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many months will this continue?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many months will this pandemic last?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will covid-19 progress over time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will the virus change over time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will the virus mutate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how will things have changes in a year?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is a virus better in summer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona worse in winter?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will be happening in a months time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will be happening in a week"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what will happen next year?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when can we go back to normal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when will life go back to normal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when will things go back to normal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when will this be over?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will corona ever go away?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will it get worse again in the autumn?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will the outbreak be over soon?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will the pandemic last years?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will the situation change in a few weeks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will the situation have changed in a month?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will the virus go away?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will things be different in a month?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will things be different next week?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will things improve in the spring?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will things improve in the summer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will this continue into autumn?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will this continue into next winter?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="will this continue into next year"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_spread">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can coronavirus spread by coughing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can coronavirus survive on skin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can covid get into my eyes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can sneezing spread coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you catch corona from an unclean surface?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you catch coronavirus from another person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you catch the virus from dirty surfaces?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could i pass corona virus onto someone else?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does coughing spread corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does coughing spread covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="does does a virus spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i avoid covid-19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i avoid getting coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i protect myself?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how contagious is it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did corona become so widespread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did covid-19 become so widespread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did it become so widespread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did this disease become so widespread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do i catch corona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do viruses become widespread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do we stop people getting coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do we stop people getting it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do we stop people getting sick?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do you catch coronavirus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do you catch it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid 19 spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid pass from person to person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid spread from person to person?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid-19 spread between between?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid-19 spread from one person to another?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does covid-19 spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does the virus spread"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is it so contagious?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long can the virus remain on surfaces?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long does coronavirus stay on surfaces?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long does it stay on skin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long does the virus stay on your hands face?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long does the virus stay on your hands?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how would i catch the virus from someone else?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to avoid getting covid, what should i do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is corona virus contagious?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it contagious?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is this disease very contagious?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do to avoid getting coronavirus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do to avoid getting covid?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do to protect myself from catching covid19?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i do to protect myself?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why can't i touch my face with my hands?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do you have to clean surfaces?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why is skin-on-skin contact to be avoided?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why shouldn't i touch my eyes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why shouldn't i touch my face?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what happens if i get corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to prevent from covid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to prevent myself from corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i save myself from covid"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_handwashing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can soap help keep the virus off my hands?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can soap help with corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i need to use hand sanitiser?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does hand-sanitiser work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does soap help keep the virus away?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long should i hand-wash for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how often should i wash my hands"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how should i wash my hands"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="should i use soap or hand sanitiser?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what amount of alcohol is needed in hand gel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are good methods for handwashing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the handwashing techniques"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the hand-washing techniques?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the instructions for hand-washing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the techniques for hand washing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is important about hand-washing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the guidance for handwashing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what strength percentage of alcohol is required for hand gel to work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i wash my hands"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do i need to use soap?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do i need to wash my hands"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why does soap help with containing covid 19?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_curve">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can we prevent spikes in the infection rate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can we reduce the number of cases?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can you slow the infection?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do we flatten the curve"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do we prevent spikes in the number of infected people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do we reduce the number of cases?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does health care capacity relate to the curve?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how does healthcare capacity relate to the curve"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how fast can it spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how fast is covid-19 spreading?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly can it spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly could corona virus spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly could the health service be overwhelmed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly could this get out of control?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly is it spreading?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly should coronavirus spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how quickly will it spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reducing the frequency of cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="slow the rate of infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are spikes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are spikes and why do they happen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are spikes and why should we try to slow them?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does a spike in cases look like?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does it mean the flatten the curve"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what happens when there's a surge in cases?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what happens when you reduce the number of cases?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is a fast spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is a slow spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is flattening the curve"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is healthcare system capacity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is infection rate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the curve of cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the difference between a fast spread and a slow spread?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the difference between and fast and slow pandemic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when do spikes in infection rate occur?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why are there spikes in the frequency of cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do infections suddenly spike"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why do you need to slow the infection"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why should we try to slow the infection?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_origin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did it start?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did the covid outbreak start?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how did the outbreak start?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what caused corona virus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what caused covid-19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what caused covid-19 to happen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what caused the corona outbreak?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when did it start?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when did the outbreak start?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when was corona virus detected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when was coronavirus identified?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when was it detected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where did it come from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where did the coronavirus come from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where was the virus first detected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why did corona happen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why did this happen?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq_status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the current status"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me live count"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="live counter"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="world map counter"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many are confirmed cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many deaths till now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me real time status updates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many have recovered cases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me live stats of corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me graph of current situation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me live information"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="live news of corona"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="latest stats updates for corona"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="corona_state_status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="india"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="karnataka"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many people are suffering from corona in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me the corona status in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me the corona status in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="punjab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="punjab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="tamil nadu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me the corona status in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="bihar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="uttar pradesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="west bengal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="goa"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many patients are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="madhya pradesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many cases are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="bihar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many cases are there in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="uttar pradesh"/>
+      </inputs>
+    </inputs>
+    <parameters name="state"/>
+  </intents>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Empty" name="action_faq_distancing_empty"/>
+  <actions xsi:type="generator:Empty" name="action_faq_status_empty"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! I'm Covid Bot. How are you feeling?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_faq_spread_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye &#x1f44b;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_faq_symptoms_empty"/>
+  <actions xsi:type="generator:Empty" name="action_corona_state_status_empty"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on! &#x1f642;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_covid_intro_img" URL="https://i.pinimg.com/originals/3f/0a/7d/3f0a7d813b7e1402f9c66cab2f82dd38.gif" caption="Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus."/>
+  <actions xsi:type="generator:Text" name="utter_sad_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks, I appreciate that, and I'm sorry &#x1f614;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_default_fallback_empty"/>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry! I am unable to understand what you said. Try again..."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="action_default_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't undestand you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.3">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.9"/>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.0 //@actions.4">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.9"/>
+          </outcoming>
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.9">
+        <target actions="//@actions.1"/>
+      </outcoming>
+      <outcoming intent="//@intents.27">
+        <target actions="//@actions.2"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.12"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.10"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.1"/>
+  </flows>
+  <flows intent="//@intents.23">
+    <target actions="//@actions.5 //@actions.4">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.9"/>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.11"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.10">
+    <target actions="//@actions.7 //@actions.4">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.9"/>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.11"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.27">
+    <target actions="//@actions.2"/>
+  </flows>
+  <flows intent="//@intents.28">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.29">
+    <target actions="//@actions.13 //@actions.15"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,1287 @@
+Chatbot "covid-19-chatbot" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+aboutcorona :
+	inputs in en {
+		"what is corona virus" ,
+		"what is coronavirus" ,
+		"what is covid" ,
+		fear ,
+		mortality ,
+		novel ,
+		"Tell me about corona" ,
+		define ,
+		about ,
+		tell ,
+		panic ,
+		tense ,
+		worried ,
+		worry
+}
+
+who_name :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		name ,
+		"w.h.o" ,
+		"world health organisation" ,
+		"other name" ,
+		called ,
+		epidemic ,
+		panidemic ,
+		second
+}
+
+symptoms_corona :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		symptoms ,
+		symptom ,
+		sign ,
+		"identify that" ,
+		"other have corona" ,
+		cold ,
+		flu ,
+		someone ,
+		other ,
+		"another person" ,
+		"other person" ,
+		"my friend" ,
+		"family member" ,
+		"infected from" ,
+		know ,
+		have ,
+		another ,
+		"came to" ,
+		detect ,
+		investigate ,
+		identify ,
+		infection
+}
+
+incubation :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		incubation ,
+		period ,
+		how ,
+		days ,
+		many ,
+		"how much" ,
+		^time ,
+		appear ,
+		symptom ,
+		someone ,
+		have ,
+		show ,
+		"other person" ,
+		another ,
+		detect ,
+		when ,
+		incubation
+}
+
+close_contact :
+	inputs in en {
+		closecontact ,
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"close contact" ,
+		sex ,
+		relation ,
+		spread ,
+		touch ,
+		surface ,
+		door ,
+		things ,
+		object ,
+		"touching the" ,
+		"how it" ,
+		furniture ,
+		door ,
+		knob
+}
+
+wrong_spread :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		colony ,
+		city ,
+		whole ,
+		state ,
+		community ,
+		someone ,
+		person ,
+		anyone ,
+		have ,
+		"other person" ,
+		infection ,
+		colony
+}
+
+status_things :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		infected ,
+		object ,
+		someone ,
+		other ,
+		know ,
+		things ,
+		before ,
+		touch ,
+		home ,
+		materials ,
+		touch ,
+		person ,
+		anyone ,
+		"other person" ,
+		have ,
+		another ,
+		"i know that" ,
+		detect ,
+		identify ,
+		furniture ,
+		door ,
+		knob
+}
+
+risk_who :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		risk ,
+		elder ,
+		large ,
+		age ,
+		"more age" ,
+		child ,
+		baby ,
+		diabetes ,
+		"blood pressure" ,
+		hypertension ,
+		"heart disease" ,
+		tense ,
+		worried ,
+		worry ,
+		newborn ,
+		group ,
+		"prove risky" ,
+		someone ,
+		have ,
+		symptom ,
+		infection ,
+		affect ,
+		human ,
+		"more age"
+}
+
+precautions_infected :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		special ,
+		precaution ,
+		"what should" ,
+		steps ,
+		prevention ,
+		"what steps" ,
+		symptoms ,
+		have ,
+		someone ,
+		family ,
+		infection ,
+		infected ,
+		measurement ,
+		anyone ,
+		"if i have" ,
+		doubt ,
+		during ,
+		avoid ,
+		"preventive measure"
+}
+
+home_quarantined :
+	inputs in en {
+		"home quarantine" ,
+		"lock down" ,
+		isolated ,
+		"make myself" ,
+		yourself ,
+		alone ,
+		isolated
+}
+
+test_positive :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"after home quarantine" ,
+		"test positive" ,
+		"report positive" ,
+		infected ,
+		quarantine ,
+		"what should" ,
+		"when my report" ,
+		symptom
+}
+
+vaccine_availablity :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		vaccine ,
+		available ,
+		medicine ,
+		when ,
+		will ,
+		come
+}
+
+myth_vaccine :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		penicilin ,
+		antibiotic ,
+		pneumonia ,
+		ayurvedic ,
+		medicine ,
+		"anti malaria" ,
+		paracitamol ,
+		cold ,
+		flu ,
+		"cough syrup" ,
+		penicilin ,
+		"anti malaria"
+}
+
+recur_corona :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"recur corona" ,
+		after ,
+		treatment ,
+		recur ,
+		chances ,
+		recur ,
+		again ,
+		symptom ,
+		develop ,
+		reback ,
+		infected ,
+		"recur corona"
+}
+
+pregnant_child :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		pregnant ,
+		woman ,
+		child ,
+		chances ,
+		"in baby"
+}
+
+testing_centers :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		private ,
+		"testing lab" ,
+		any ,
+		lab ,
+		test ,
+		"where test" ,
+		performed ,
+		"where are" ,
+		"private lab" ,
+		"test in" ,
+		hospitals
+}
+
+corona_survive :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		survive ,
+		"in air" ,
+		"on surface" ,
+		object ,
+		thing ,
+		stay ,
+		furniture ,
+		door ,
+		knob ,
+		"how long" ,
+		"how much time"
+}
+
+corona_goods :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		goods ,
+		material ,
+		"goods from china" ,
+		exported ,
+		"other country" ,
+		object ,
+		item
+}
+
+corona_animals :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"spread from" ,
+		animals ,
+		"non vegetarian" ,
+		food ,
+		meat ,
+		egg ,
+		fish ,
+		"infected animal" ,
+		hen ,
+		nonveg ,
+		"non veg"
+}
+
+wash_hands :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		how ,
+		"hand wash" ,
+		wash ,
+		clean ,
+		hand ,
+		nails ,
+		wrist ,
+		palm
+}
+
+time_wash :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"time wash" ,
+		"how much" ,
+		delay ,
+		interval ,
+		^time ,
+		interval ,
+		what ,
+		how ,
+		between ,
+		wash ,
+		gap
+}
+
+mask_wear :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		mask ,
+		necessary ,
+		wear ,
+		"when wear" ,
+		use ,
+		"which type of mask" ,
+		"what type of mask" ,
+		n95 ,
+		everyone ,
+		"when wear" ,
+		"what type of mask"
+}
+
+mask_change :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"how long mask" ,
+		mask ,
+		when ,
+		^time ,
+		symptoms ,
+		infection ,
+		"how much" ,
+		"how long mask"
+}
+
+colleauge :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		colleauge ,
+		office ,
+		colleauge ,
+		infected ,
+		"office staff" ,
+		infection ,
+		symptoms ,
+		have ,
+		colleauge ,
+		office ,
+		"office staff"
+}
+
+hospitals_infected :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		visit ,
+		hospitals ,
+		safe ,
+		"infected patients" ,
+		symptoms ,
+		infection
+}
+
+temperature_effect :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		effect ,
+		temperature ,
+		summer ,
+		hot ,
+		increase ,
+		humidity ,
+		humid ,
+		weather ,
+		rain ,
+		weather ,
+		rain
+}
+
+avoid_malls :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		malls ,
+		restaurants ,
+		malls ,
+		park ,
+		restaurants ,
+		crowd ,
+		market ,
+		office ,
+		malls ,
+		restaurants
+}
+
+social_distancing :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"best way" ,
+		"social distancing" ,
+		keep ,
+		necesaary ,
+		"what is social"
+}
+
+yoga :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		yoga ,
+		pranayam ,
+		immunity ,
+		rise ,
+		yoga ,
+		yoga
+}
+
+blood_donor :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		blood ,
+		donation ,
+		"risk if donate" ,
+		blood ,
+		donor ,
+		risk ,
+		"risk if donate"
+}
+
+drink_hot :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		drink ,
+		"hot things" ,
+		hot ,
+		water
+}
+
+soap_sanitizers :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		soap ,
+		"which is better" ,
+		"which one better" ,
+		sanitizer ,
+		not ,
+		available ,
+		present ,
+		kill ,
+		better ,
+		sanitizer ,
+		alcohol ,
+		"hand wash" ,
+		wash ,
+		alternative ,
+		hand ,
+		which
+}
+
+clean_door :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		door ,
+		knobs ,
+		clean ,
+		surface ,
+		"with sanitizer"
+}
+
+cloth_infection :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		cough ,
+		droplets ,
+		clothes ,
+		infection ,
+		handkerchief
+}
+
+precaution_pregnant :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		pregnant ,
+		protection ,
+		steps ,
+		special ,
+		precaution ,
+		"what should" ,
+		steps ,
+		prevention ,
+		"what steps" ,
+		symptoms ,
+		have ,
+		infection ,
+		infected ,
+		"preventive measure" ,
+		lady
+}
+
+flight :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		flight ,
+		airport ,
+		travel ,
+		flight
+}
+
+immunity_indians :
+	inputs in en {
+		indian ,
+		immunity ,
+		"more immune" ,
+		"no risk" ,
+		indians ,
+		us
+}
+
+smoking :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		smoking ,
+		cigarette ,
+		smoke ,
+		"smoking effect" ,
+		tobacco ,
+		smoking ,
+		cigarette ,
+		smoke ,
+		"smoking effect" ,
+		tobacco
+}
+
+alcohol :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		drink ,
+		alcohol ,
+		consumption ,
+		consume ,
+		alcohol
+}
+
+when_test :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"who should test" ,
+		"may i test" ,
+		"should i test" ,
+		"normal fever" ,
+		"who have to test" ,
+		i ,
+		test ,
+		"who should test" ,
+		"should i test" ,
+		"normal fever"
+}
+
+emergency_symptoms :
+	inputs in en {
+		emergency ,
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		danger ,
+		"when to contact" ,
+		doctor ,
+		contact ,
+		emergency
+}
+
+stigma :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		stigma ,
+		fight ,
+		hurt ,
+		misinformation ,
+		rumour ,
+		"social sites" ,
+		stigma ,
+		rumour ,
+		"social sites"
+}
+
+funeral :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		funeral ,
+		"attend funeral" ,
+		cremation ,
+		"attend funeral" ,
+		cremation
+}
+
+deabody :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"touch deadbody" ,
+		deadbody ,
+		touch ,
+		"touch infected dead" ,
+		"touch deadbody" ,
+		"touch infected dead"
+}
+
+pets :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		touch ,
+		pets ,
+		"concern about pets" ,
+		"pet dog" ,
+		pet ,
+		cat ,
+		cow ,
+		milk ,
+		"concern about pets"
+}
+
+infected_pets :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		touch ,
+		pets ,
+		"concern about pets" ,
+		"pet dog" ,
+		pet ,
+		cat ,
+		avoid ,
+		"keep distance from" ,
+		dog ,
+		parrot ,
+		cat ,
+		cow ,
+		dog ,
+		parrot ,
+		cat
+}
+
+eat_nonveg :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		eat ,
+		"non veg"
+}
+
+currency :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"currency notes" ,
+		"credit card" ,
+		"currency notes" ,
+		"credit card"
+}
+
+drink_water :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"water cure" ,
+		hydration ,
+		drink ,
+		water ,
+		"water cure" ,
+		hydration
+}
+
+lighltly :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"lightly spread in our country" ,
+		"spread in India"
+}
+
+breat_milk :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		breast ,
+		milk ,
+		feed ,
+		"feed milk" ,
+		baby
+}
+
+protect_children :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"make safe" ,
+		children ,
+		"risk in children" ,
+		safe ,
+		protect ,
+		children ,
+		child ,
+		child
+}
+
+symptoms_children :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"low symptoms" ,
+		children ,
+		"mild symptoms" ,
+		children
+}
+
+school_dismissal :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		dismissal ,
+		leave ,
+		tution ,
+		"go to school" ,
+		tution ,
+		"go to school"
+}
+
+study_loss :
+	inputs in en {
+		"study loss" ,
+		tution ,
+		class ,
+		coaching ,
+		exams ,
+		"online class" ,
+		"study loss" ,
+		exams
+}
+
+water_spreading :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		water ,
+		spread ,
+		drink ,
+		"pure water" ,
+		"ro water" ,
+		"role of water" ,
+		through
+}
+
+pool :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"swimming pool" ,
+		tubs ,
+		"swimming pool" ,
+		tubs
+}
+
+sewarage :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"sewer line" ,
+		"sewerage water" ,
+		"waste water" ,
+		"sewer line" ,
+		"sewerage water" ,
+		"waste water"
+}
+
+hiv :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"hiv patient"
+}
+
+hiv_medicine :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"hiv medicine"
+}
+
+asthama :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		asthama ,
+		"have asthama" ,
+		"risk for asthama" ,
+		"asthama patient" ,
+		"asthama patient" ,
+		"have asthama" ,
+		"risk for asthama"
+}
+
+origin :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"from where" ,
+		start ,
+		"from which" ,
+		country ,
+		"originate from animal" ,
+		"how it start" ,
+		"source of corona" ,
+		"start from china" ,
+		"how it" ,
+		"spread in countries" ,
+		outbreak
+}
+
+how_test :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		"how corona test" ,
+		"sample of corona" ,
+		how ,
+		"i get" ,
+		tested ,
+		"corona test" ,
+		"how corona test"
+}
+
+test_cost :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		cost ,
+		test ,
+		"free test" ,
+		charge ,
+		"charges the test" ,
+		"in government lab" ,
+		chargeable ,
+		free ,
+		money ,
+		"free test" ,
+		"charges the test" ,
+		chargeable ,
+		free
+}
+
+test_strategy :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		priority ,
+		test ,
+		strategy ,
+		"whom tested" ,
+		"how many" ,
+		days ,
+		report
+}
+
+test_process :
+	inputs in en {
+		coronavirus ,
+		covid ,
+		corona ,
+		"corona virus" ,
+		complete ,
+		"process of test" ,
+		test ,
+		process ,
+		^time ,
+		"time taken" ,
+		stages ,
+		screening ,
+		how ,
+		"test performed" ,
+		"how much time" ,
+		screening
+}
+
+about_corona :
+	inputs in en {
+		"about corona virus" ,
+		"about corona" ,
+		"what is corona virus" ,
+		"what is corona" ,
+		"what is coronavirus" ,
+		"tell me about corona" ,
+		"tell me about new virus" ,
+		"tell me about corona virus" ,
+		"tell me about coronavirus" ,
+		"novel virus" ,
+		"new virus"
+}
+
+first_case :
+	inputs in en {
+		"first case of corona" ,
+		"first case" ,
+		"when first case reported"
+}
+
+thanks :
+	inputs in en {
+		thanks ,
+		"thank you"
+}
+
+about_you :
+	inputs in en {
+		"about you" ,
+		"tell me about yourself" ,
+		"tell me about you" ,
+		"who made you"
+}
+
+can_do :
+	inputs in en {
+		"what can you do" ,
+		"what should i aks you" ,
+		"can you do" ,
+		"you do" ,
+		"help me"
+}
+
+mood_happy :
+
+mood_unhappy :
+
+deadbody :
+
+self_go :
+
+actions :
+	Empty response action_test_process_empty
+	Empty response action_corona_symptoms_empty
+	Text response utter_cheer_up_text :
+		inputs in en {
+			"Don\'t be sad. Keep smiling!"
+	}
+	Empty response action_myth_vaccine_empty
+	Empty response action_when_test_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi, how can i help you?"
+	}
+	Empty response action_home_quarantined_empty
+	Empty response action_first_case_empty
+	Empty response action_recur_corona_empty
+	Empty response action_wrong_spread_empty
+	Empty response action_sewarage_empty
+	Empty response action_eat_nonveg_empty
+	Empty response action_test_strategy_empty
+	Empty response action_self_go_empty
+	Empty response action_symptoms_children_empty
+	Empty response action_animal_infection_empty
+	Empty response action_time_wash_empty
+	Empty response action_mask_change_empty
+	Empty response action_test_cost_empty
+	Empty response action_origin_empty
+	Empty response action_how_test_empty
+	Empty response action_asthama_empty
+	Empty response action_wash_hands_empty
+	Empty response action_emergency_symptoms_empty
+	Empty response action_protect_children_empty
+	Empty response action_corona_about_empty
+	Empty response action_corona_incubation_empty
+	Empty response action_joke_empty
+	Empty response action_clean_door_empty
+	Empty response action_precaution_pregnant_empty
+	Empty response action_corona_close_empty
+	Empty response action_breat_milk_empty
+	Empty response action_temperature_effect_empty
+	Empty response action_deadbody_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Goodbye!"
+	}
+	Empty response action_about_you_empty
+	Empty response action_yoga_empty
+	Empty response action_immunity_indians_empty
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Empty response action_infected_pets_empty
+	Empty response action_corona_survive_empty
+	Empty response action_avoid_malls_empty
+	Empty response action_cloth_infection_empty
+	Empty response utter_default_empty
+	Empty response action_thanks_empty
+	Empty response action_flight_empty
+	Empty response action_drink_hot_empty
+	Empty response action_pregnant_child_empty
+	Empty response action_lighltly_empty
+	Empty response action_drink_water_empty
+	Empty response action_social_distancing_empty
+	Empty response action_school_dismissal_empty
+	Empty response action_testing_centers_empty
+	Empty response action_close_contact_empty
+	Empty response action_hiv_medicine_empty
+	Empty response action_blood_donor_empty
+	Empty response action_infected_precautions_empty
+	Empty response action_corona_who_empty
+	Empty response action_corona_goods_empty
+	Empty response action_pool_empty
+	Empty response action_smoking_empty
+	Empty response action_vaccine_available_empty
+	Empty response action_colleauge_empty
+	Empty response action_hiv_empty
+	Empty response action_study_loss_empty
+	Empty response action_can_do_empty
+	Empty response action_currency_empty
+	Empty response action_hospitals_infected_empty
+	Empty response action_water_spreading_empty
+	Empty response action_pets_empty
+	Empty response action_mask_wear_empty
+	Empty response action_soap_sanitizers_empty
+	Empty response action_alcohol_empty
+	Empty response action_stigma_empty
+	Empty response action_risky_empty
+	Empty response action_test_positive_empty
+	Empty response action_stay_things_empty
+	Empty response action_funeral_empty
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user mood_happy => chatbot utter_happy_text , action_joke_empty {
+			=> user goodbye => chatbot utter_goodbye_text ;
+		} ;
+		=> user about_corona => chatbot action_corona_about_empty {
+			=> user who_name => chatbot action_corona_who_empty { => user symptoms_corona => chatbot action_corona_symptoms_empty { => user incubation => chatbot action_corona_incubation_empty { => user close_contact => chatbot action_close_contact_empty { => user wrong_spread => chatbot action_corona_close_empty { => user status_things => chatbot action_stay_things_empty { => user risk_who => chatbot action_risky_empty { => user precautions_infected => chatbot action_infected_precautions_empty { => user home_quarantined => chatbot action_home_quarantined_empty { => user test_positive => chatbot action_test_positive_empty { => user vaccine_availablity => chatbot action_vaccine_available_empty { => user myth_vaccine => chatbot action_myth_vaccine_empty { => user recur_corona => chatbot action_recur_corona_empty { => user pregnant_child => chatbot action_pregnant_child_empty { => user testing_centers => chatbot action_testing_centers_empty { => user corona_survive => chatbot action_corona_survive_empty { => user corona_goods => chatbot action_corona_goods_empty { => user corona_animals => chatbot action_animal_infection_empty { => user wash_hands => chatbot action_wash_hands_empty { => user time_wash => chatbot action_time_wash_empty { => user mask_wear => chatbot action_mask_wear_empty { => user mask_change => chatbot action_mask_change_empty { => user colleauge => chatbot action_colleauge_empty { => user hospitals_infected => chatbot action_hospitals_infected_empty { => user temperature_effect => chatbot action_temperature_effect_empty { => user avoid_malls => chatbot action_avoid_malls_empty { => user social_distancing => chatbot action_social_distancing_empty { => user yoga => chatbot action_yoga_empty { => user blood_donor => chatbot action_blood_donor_empty { => user drink_hot => chatbot action_drink_hot_empty { => user soap_sanitizers => chatbot action_soap_sanitizers_empty { => user clean_door => chatbot action_clean_door_empty { => user cloth_infection => chatbot action_cloth_infection_empty { => user precaution_pregnant => chatbot action_precaution_pregnant_empty { => user flight => chatbot action_flight_empty { => user immunity_indians => chatbot action_immunity_indians_empty { => user smoking => chatbot action_smoking_empty { => user alcohol => chatbot action_alcohol_empty { => user when_test => chatbot action_when_test_empty { => user emergency_symptoms => chatbot action_emergency_symptoms_empty { => user stigma => chatbot action_stigma_empty { => user funeral => chatbot action_funeral_empty { => user deadbody => chatbot action_deadbody_empty { => user pets => chatbot action_pets_empty { => user infected_pets => chatbot action_infected_pets_empty { => user eat_nonveg => chatbot action_eat_nonveg_empty { => user currency => chatbot action_currency_empty { => user drink_water => chatbot action_drink_water_empty { => user lighltly => chatbot action_lighltly_empty { => user breat_milk => chatbot action_breat_milk_empty { => user protect_children => chatbot action_protect_children_empty { => user symptoms_children => chatbot action_symptoms_children_empty { => user school_dismissal => chatbot action_school_dismissal_empty { => user study_loss => chatbot action_study_loss_empty { => user water_spreading => chatbot action_water_spreading_empty { => user pool => chatbot action_pool_empty { => user thanks => chatbot action_thanks_empty { => user about_you => chatbot action_about_you_empty { => user can_do => chatbot action_can_do_empty { => user first_case => chatbot action_first_case_empty { => user sewarage => chatbot action_sewarage_empty { => user hiv => chatbot action_hiv_medicine_empty , action_hiv_empty { => user hiv_medicine => chatbot action_hiv_medicine_empty { => user asthama => chatbot action_asthama_empty { => user how_test => chatbot action_how_test_empty { => user test_cost => chatbot action_test_cost_empty { => user origin => chatbot action_origin_empty { => user self_go => chatbot action_self_go_empty { => user test_strategy => chatbot action_test_strategy_empty { => user test_process => chatbot action_test_process_empty { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+

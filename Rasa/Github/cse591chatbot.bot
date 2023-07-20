@@ -1,0 +1,238 @@
+Chatbot cse591chatbot language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"hello there" ,
+		"good morning" ,
+		"good evening" ,
+		moin ,
+		"hey there" ,
+		"let\'s go" ,
+		"hey dude" ,
+		goodmorning ,
+		goodevening ,
+		"good afternoon"
+}
+
+goodbye :
+	inputs in en {
+		cu ,
+		"good by" ,
+		"cee you later" ,
+		"good night" ,
+		"good afternoon" ,
+		bye ,
+		goodbye ,
+		"have a nice day" ,
+		"see you around" ,
+		"bye bye" ,
+		"see you later"
+}
+
+mood_affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+mood_deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		"feeling like a king" ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I am amazing" ,
+		"I am going to save the world" ,
+		super ,
+		"extremely good" ,
+		"so so perfect" ,
+		"so good" ,
+		"so perfect"
+}
+
+mood_unhappy :
+	inputs in en {
+		"my day was horrible" ,
+		"I am sad" ,
+		"I don\'t feel very well" ,
+		"I am disappointed" ,
+		"super sad" ,
+		"I\'m so sad" ,
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not so good" ,
+		"not very good" ,
+		"extremly sad" ,
+		"so saad" ,
+		"so sad"
+}
+
+bye :
+	inputs in en {
+		Bye ,
+		Goodbye ,
+		"See you later" ,
+		"Bye bot" ,
+		"Goodbye friend" ,
+		bye ,
+		"bye for now" ,
+		"catch you later" ,
+		"gotta go" ,
+		"See you" ,
+		goodnight ,
+		"have a nice day" ,
+		"i\'m off" ,
+		"see you later alligator" ,
+		"we\'ll speak soon"
+}
+
+thank :
+	inputs in en {
+		Thanks ,
+		"Thank you" ,
+		"Thank you so much" ,
+		"Thanks bot" ,
+		"Thanks for that" ,
+		cheers ,
+		"cheers bro" ,
+		"ok thanks!" ,
+		"perfect thank you" ,
+		"thanks a bunch for everything" ,
+		"thanks for the help" ,
+		"thanks a lot" ,
+		"amazing, thanks" ,
+		"cool, thanks" ,
+		"cool thank you"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		"yes sure" ,
+		absolutely ,
+		"for sure" ,
+		"yes yes yes" ,
+		definitely
+}
+
+name :
+	inputs in en {
+		"My name is " ( Juste ) [ name ] ,
+		"I am " ( Josh ) [ name ] ,
+		"I\'m " ( Lucy ) [ name ] ,
+		"People call me " ( Greg ) [ name ] ,
+		"It\'s " ( David ) [ name ] ,
+		"Usually people call me " ( Amy ) [ name ] ,
+		"My name is " ( John ) [ name ] ,
+		"You can call me " ( Sam ) [ name ] ,
+		"Please call me " ( Linda ) [ name ] ,
+		"Name name is " ( Tom ) [ name ] ,
+		"I am " ( Richard ) [ name ] ,
+		"I\'m " ( Tracy ) [ name ] ,
+		"Call me " ( Sally ) [ name ] ,
+		"I am " ( Philipp ) [ name ] ,
+		"I am " ( Charlie ) [ name ]
+	}
+	parameters :
+		name : entity text ;
+
+joke :
+	inputs in en {
+		"Can you tell me a joke?" ,
+		"I would like to hear a joke" ,
+		"Tell me a joke" ,
+		"A joke please" ,
+		"Tell me a joke please" ,
+		"I would like to hear a joke" ,
+		"I would loke to hear a joke, please" ,
+		"Can you tell jokes?" ,
+		"Please tell me a joke" ,
+		"I need to hear a joke"
+}
+
+user_response :
+
+user_certain :
+
+user_uncertain :
+
+user_buy :
+
+thanks :
+
+actions :
+	Text response utter_question_text :
+		inputs in en {
+			"So what are you looking for today?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_close_text :
+		inputs in en {
+			"That\'s wonderful? So how many purchases are we looking at?"
+	}
+	Text response utter_loop_text :
+		inputs in en {
+			"I feel what you\'re saying. But what do you think of the idea?"
+	}
+	Text response utter_amplify_pain_text :
+		inputs in en {
+			"How many hours can you save by taking a Lime?"
+	}
+	Text response utter_judge_certainty_text :
+		inputs in en {
+			"So how do you feel about this product?"
+	}
+	Text response utter_congrats_text :
+		inputs in en {
+			"Congrats! You\'ve made a wise decision."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Bye!"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text , DefaultEmptyAction {
+		=> user user_response => chatbot utter_amplify_pain_text {
+			=> user user_certain => chatbot utter_close_text { => user user_uncertain => chatbot utter_loop_text { => user user_buy => chatbot utter_congrats_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ;
+		} ;
+		=> user name => chatbot utter_greet_text {
+			=> user joke => chatbot DefaultEmptyAction { => user thanks => chatbot DefaultEmptyAction { => user goodbye => chatbot utter_goodbye_text ; } ; } ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user thanks => chatbot DefaultEmptyAction ;
+	- user name => chatbot utter_greet_text ;
+	- user joke => chatbot DefaultEmptyAction ;
+

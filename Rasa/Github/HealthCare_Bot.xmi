@@ -1,0 +1,3072 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="HealthCare_Bot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ogod mroning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good mroning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mornin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="evenin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="tell_me_a_joke">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me a joke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wanna hear a joke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Joke"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="im_bored">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm bored"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm bored to death"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't say that I find this very interesting."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I was dying of boredom."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I've been bored since morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm so bored today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What should I do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey, I'm bored, can you give me tips on what to do?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet_with_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ogod mroning, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good mroning, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mornin, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="evenin, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy, my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ogod mroning, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good mroning, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mornin, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="evenin, I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy, myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi, myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning, myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening, myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="name"/>
+      </inputs>
+    </inputs>
+    <parameters name="name"/>
+  </intents>
+  <intents name="sick">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel unwell"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't feel well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm facing some symptoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need medical help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am unwell"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm feeling unwell"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="analyse my symtoms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="analyze my SymptomS"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="analyse my symptoms"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="side">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="left"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="both"/>
+      </inputs>
+    </inputs>
+    <parameters name="side"/>
+  </intents>
+  <intents name="symptoms">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="blocked rt ear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BILATERAL EAR BLOCK"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="both ear ache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BOTH EAR ACHE &amp; TENDER + BLOCKED"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BOTH EAR BLOCKED"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BOTH EAR ACHE &amp; TENDER + BLOCKED nose congestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="both ear blocked &amp; decreased hearing + Right ear aching"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="both ear ache and hard of hearing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="both ear blocked &amp; decreased hearing + aching"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="both ear blocked &amp; decreased hearing recurrent sore throat odynophagia stertor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="both ear pressure sensation, ringing and blocked"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Ear pain BE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="f.b lt ear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="f.b rt ear"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="FRONTAL HEAD ACHE, , pain facial pain and pressure, nose congestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="frontal headache, facial pain and pressure, nose congestion, post nasal discahrge and cough"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="frontal headache, facial pain and pressure, nose congestion, post nasal discahrge, reflux and nose blocked"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="frontal headache, facial pain and pressure, nose congestion, post nasal discahrge, reflux and cough"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="left ear ache radiating to head and neck"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="NASAL BLOCK, HEADACHE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="NOSE BLOCK &amp; CONGESTION + Post nasal discharge &amp; headache, sneezing, wheezing and itchy nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="SPASMODIC COUGH, BREATHLESSNESS, NOSE CONGESTION, HEADACHE, REFLUX, SORE THROAT"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="migraine headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="known case of migraine on medications"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="acute migraine headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="PAIN AND REDNESS OF THE EYES SINCE THE PAST"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="REDNESS OF EYES SINCE THE PAST FEW DAYS WITH DRYNESS"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="irritation eyes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itching eyes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BURNING EYE PAIN BOTH EYES"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="defective vision &amp; discomfort in both eyes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="red eye , itching , Discharge. - both eyes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Transient blurring of vision , discomfort - both eyes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headaches body aches burning eyes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HISTORY OF REDNESS OF EYES AND MYALGIAS FOR THE PAST FEW DAYS"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="nasal congestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="nasal congestion, blocked nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="nose blockage running nose breathing difficulty"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="sore throat, block nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="sore throat, runny nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="pain in throat and blocked nose and runnyn nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="blocked nose , throat irritation and cough"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="fever,body pain,cough,runny nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="newly diagnosed type 2 diabetes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="runny and blocked nose , throat pain and cough"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="runny nose and throat pain mild cough"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="delayed teething"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="teething pains"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding gums and carious teeth and difficulty to chew"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding gums and sensitive teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="caries painful teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding gums and sensitive and deposits on teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BROKEN &amp; decayed teeth in right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding gums &amp; sensitive teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding gums &amp; sensitive teeth and caries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding &amp;SWOLLEN gums &amp; deposits in the teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bleeding gums , sensitive carious teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="broken caries teeth &amp; difficulty in chewing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="broken root filled teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="broken teeth , difficulty in chewing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="broken teeth in lower right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="BROKEN TEETH IN UPPER LT POST. REGION"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="broken teeth in upper right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="calculus deposits on teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="crowded and forwardly placed front teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="crowded and displaced teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="crowded and forwardly placed teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="crowding and forwardly placed front teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="crowding of fully erupted teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="crowding of front teeth and improper bite"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in lower right POSTERIOR region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in lower right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in left upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in lower left posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in left upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth lower left posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth upper left posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth upper right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth lower left posterior"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth right lower posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth lower right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; sensitivity teeth in left lower posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth upper anterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; sensitivity teeth in right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; sensitivity teeth right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decayed &amp; broken teeth in lower left posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay teeth upper right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decayed &amp; sensitivity in upper left posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decayed &amp; broken teeth in upper right posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decayed and sensitivity in lower lt posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decayed teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="DECAYED TOOTH"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dental caries , sensitive to cold"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dental caries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dental pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dental check up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits in the teeth &amp; stains"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits and bleeding gums and sensitivity in teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits in the teeth &amp; bleeding gums &amp; stains"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits in the teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits in the teeth &amp; stains"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits in the teeth &amp;bleeding gums"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="deposits on teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="neck and shoulder pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="neck pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="neck pain radiating to L shoulder"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Pain in left shoulder"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Pain in neck"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Rt shoulder pain and stiffness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dysuria LOWER ABDOMEN PAIN"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dysuria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dysuria lower abdomen BACK PAIN"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dysuria lower abdomen pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cough cold chest congestion asthma"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="diahorea abdomen pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cough cold chest congestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dysuria lower abdomen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="pain dysuria LOIN PAIN"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE frontal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="joint pain leg swelling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="diahorea 4to 5 times abdomne pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="low back pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="diahorea 4to 5 times"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="POLYURIA dysuria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="low back pain difficuty bending"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE neck pain difficult moving neck"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="took medicine NO RELIEF"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE frontal hemicranial"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE cold fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cold rhinitis"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE nausea diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE diziness FEVER"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE neck pain diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE diziness POSITIONAL"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cold rhinitis blocked nose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cold rhinitis HEADACHE FEVER"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE neck pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cold rhinitis HEADACHE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE diziness neck pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE fever BODY PAIN"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE nausea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE FRONTal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE fever body pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE OCCIPIATL diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE fever body pain chilling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACHE diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="HEADACE fever BODY PAIN chills"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd discomfort"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,constipation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,back pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,dysuria,hematuria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,recurrent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,chest discomfort"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,vomiting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,loose stools"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,dysuria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abd pain,vomiting,loose stools"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdomen pain epigastric"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="ABDOMEN PAIN"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdomen pain GERD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdomen pain diahorea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdomen pain gas burping"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal BLOATING INDIGESTION"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal BLOATING"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discomfort/dyspepsia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal BLOATING pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal BLOATING constipation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain heartburn"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discomfort"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain BLOATING"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal bloatedness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain right lower abdomen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal cramps"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discofort"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal bloatedness, heartburns"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discomfort"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal bloating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discomfort/nausea/lose of appetite"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal distension"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discomfort/dyspepsia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal discomfort /dyspepsia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain diahorea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain bloating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain heartburn"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain blaoting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain bloating constipation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain bloating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain h/o gastritis"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain gastritis"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain left loin pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain nausea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain on and off, with cramping"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain nausea diahorrea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain vomiting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, bloating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, cramping, on an off"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, diarrhea, distension"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, diarrhea, nausea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, diarrhea, vomiting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, diarrhea, nausea, fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, distension, diarrhea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, diarrhea, vomiting, fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, nausea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, distension"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, nausea, vomiting, diarrhea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, repeated vomiting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, vomiting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, vomiting, fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, vomiting, diarrhea, fever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain,distension"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain, vomiting, diarrhea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain,dysuria,hematuria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain,dysuria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain/GERD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="abdominal pain,loose stools"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I've a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="severe staining, plaque and calculus on upper and lower teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I've a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Burn injury with hot oil at home while cooking on 19/10/19 at around 2am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itchy scally rash on the hand and leg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I've a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="nail disorder and pallor and xerosis of skin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="stomach ache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm experiencing "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="nausea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="depressed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="unwell"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chest pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="general weakness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="discomfort"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dizziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="joint pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="palpitation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="gases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="acidity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="ALICO LIFE INSURACE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="anemia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="anxiety"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="skin allergy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="weakness, fatigue, tiredness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chest discomfort and heaviness, palpitation, persistent since with multiple joint pain and dizziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chest discomfort on breathing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="difficulty in opening mouth .impacted teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache and diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="arm hurts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ive a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="ear pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="leg pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="anxious"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="ALICO LIFE INSURACE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="anemia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="anxiety"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="skin allergy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="weakness, fatigue, tiredness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chest discomfort and heaviness, palpitation, persistent since with multiple joint pain and dizziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="chest discomfort on breathing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="decay &amp; broken teeth in right upper posterior region"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="difficulty in opening mouth .impacted teeth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache and diziness"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="headache"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="arm hurts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="ear pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="leg pain"/>
+      </inputs>
+    </inputs>
+    <parameters name="symptom"/>
+  </intents>
+  <intents name="intensity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="6"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="7"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="8"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="9"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="10"/>
+      </inputs>
+    </inputs>
+    <parameters name="intensity" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="doc_info">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know about a doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wish to know baout a doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need information on a doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me about a doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are the doctors in your clinic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="Dr. Tyagi"/>
+      </inputs>
+    </inputs>
+    <parameters name="doctor"/>
+  </intents>
+  <intents name="doc_info_with_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name"/>
+        <tokens xsi:type="generator:Literal" text=" resume?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want ot know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wish to see "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name3"/>
+        <tokens xsi:type="generator:Literal" text="'s resume"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name4"/>
+        <tokens xsi:type="generator:Literal" text=" good?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Dr. Name5"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="doctor"/>
+  </intents>
+  <intents name="closest_thing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where's the closest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="California"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me the closest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where's the nearest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me the nearest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me the closest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="California"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+        <tokens xsi:type="generator:Literal" text=" near me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="clinic"/>
+        <tokens xsi:type="generator:Literal" text=" close to me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="clinic"/>
+        <tokens xsi:type="generator:Literal" text=" cloes to me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is the closest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="hospital"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="amenity"/>
+    <parameters name="location"/>
+  </intents>
+  <intents name="info_services">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about the services you provide."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about your services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what services do you provide"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what services do you have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of services do you provide"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of services do you have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about the services you provide."/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="location_entry">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="New Jersey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="California"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="New York"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Texas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Los Angeles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Florida"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Gurgaon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="UP"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Haryana"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Vegas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Livingston"/>
+      </inputs>
+    </inputs>
+    <parameters name="location"/>
+  </intents>
+  <intents name="picking_specialty">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="CARDIOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="CHIROPRACTOR"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="DENTAL"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="DERMATOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="E.N.T"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="ENDOCRINOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="GASTROENTEROLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="GENERAL"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="GENERAL SURGERY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="GYNECOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="INTERNAL MEDICINE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="NEPHROLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="NEUROSURGERY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="NEUROLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="NUTRITION &amp; DIETETICS"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="OPHTHALMOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="ORTHOPAEDIC"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="PULMONOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="RHEUMATOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="SPECIALIST PHYSICIAN"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="UROLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="OBSTETRICS &amp; GYNAECOLOGY"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Cardiology"/>
+      </inputs>
+    </inputs>
+    <parameters name="specialty"/>
+  </intents>
+  <intents name="location_based_services">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulances"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check-up"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="delivery"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check-up"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you tell me about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="delivery"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check-ups"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="deliveries"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="place1"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="place2"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check-ups"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="place3"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you provide "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="deliveries"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="delivery"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="place1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+        <tokens xsi:type="generator:Literal" text=" services at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="place3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to know about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check-up"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="place2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about your "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about your "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check ups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me about your "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="delivery"/>
+        <tokens xsi:type="generator:Literal" text=" services"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="ambulance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="home check-ups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="deliveries"/>
+      </inputs>
+    </inputs>
+    <parameters name="service"/>
+    <parameters name="location"/>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see ya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="toodles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a nice day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a good one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks and bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="form_entry">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehakpreet Kaur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Robin Sharrma"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Arushi Tyagi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehul Chhajer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehakpreet Kaur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Brishti Bose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Rohan Kalia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="myself "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehul Chhajer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Brishti Bose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Rohan Kalia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehakpreet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehakpreet Kaur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Kajal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Kajal Kaur Kapoor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Kavita"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Kavita Beri"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Ridhit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Ridhit Beri"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Rajat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Rajat Beri"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Harpuneet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Harpuneet Kaur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Parvinder"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Parvinder Singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Gunraj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Gunraj Singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Akaash"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Akaash Sharma"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My phone number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My phoen number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="numbr is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my mobile is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="phone is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="123-456-7890"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="numbr is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="2017049762"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my mobile is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="9810047734"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="phone is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="9810263548"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="7263768329"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="2013748392"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="9810047734"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="9810263548"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="7263768329"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="2846281028"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="201-374-8392"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="981-004-7734"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="981-026-3548"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="726-376-8329"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="284-628-1028"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My age is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My aeg "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="15"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="age is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="21"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my age is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="32"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aeg is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="31"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="32"/>
+        <tokens xsi:type="generator:Literal" text=" years old"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="20"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="26"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="29"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="30"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My age is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My aeg "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="age is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="20"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my age is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="52"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aeg is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="61"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="25"/>
+        <tokens xsi:type="generator:Literal" text=" years old"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="27"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello, my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Mehak"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="2017049762"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="19"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Kajal Kapoor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="9810283041"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="19"/>
+        <tokens xsi:type="generator:Literal" text=" years old"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.2" textReference="21"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="mekk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="2017049832"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="Arushi Tyagi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="9910576342"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="raj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.1" textReference="2017049736"/>
+      </inputs>
+    </inputs>
+    <parameters name="name"/>
+    <parameters name="phone"/>
+    <parameters name="age" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mhm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no, thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="doc_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Karan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr.Kumar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Komal Singh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Beri"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Tyagi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Kapoor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes, "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Tyagi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Tyagi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="Dr. Rakesh"/>
+      </inputs>
+    </inputs>
+    <parameters name="doctor"/>
+  </intents>
+  <intents name="pick_time">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="1:30 pm Tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="3:30 pm Tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="2:30 pm Tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="4:30 pm Tomorrow"/>
+      </inputs>
+    </inputs>
+    <parameters name="time" defaultEntity="TIME"/>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who am I talking to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thanks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you so much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks a lot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="grateful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im grateful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, thanks!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="make_appointment">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ineed to make an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to make an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to arrange an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I make an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good, I need an appointment"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="formform_entry"/>
+  <intents name="out_of_scope"/>
+  <intents name="timeIntent"/>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Empty" name="action_intensity_empty"/>
+  <actions xsi:type="generator:Empty" name="symptom_search_empty"/>
+  <actions xsi:type="generator:Text" name="utter_anything_else_icanhelpwith_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I help you with something else?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_welcome_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No problem!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_symptoms_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the symptoms you're facing?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! I'm the healthcare chatbot! How can I help you?&#xA;I can:&#xA;&#x9;Tell you about our services&#xA;&#x9;Analyze your symptoms&#xA;&#x9;Make an appointment for you&#xA;&#x9;Give you information about Doctors"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_doc_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have a particular doctor in mind?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_doyouwantappointment_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want to book an appointment?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_check_number_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_side_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please specify region of discomfort if applicable:"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_age_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter your age"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_service_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of services would you like to know about?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_phone_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter your phone number"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_service_response_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, there are "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.14/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=" services provided at "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a healthcare chatbot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_default_fallback_empty"/>
+  <actions xsi:type="generator:Text" name="utter_appointment_maker_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Pick the best time for yourself:"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_location_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you tell me your location or zipcode?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you please enter your full name?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_place_search_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_intensity_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the intensity of discomfort?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_side_empty"/>
+  <actions xsi:type="generator:Text" name="utter_doc_info_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.8/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=":&#xA; &#x9; Name:"/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.8/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; &#x9;Specialty:Cardiology&#xA; &#x9;Experience:5 years&#xA; &#x9;Contact:9827482038"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_im_sorry_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry. I'd have to ask some questions to get you registered."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_spec_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please pick a specialty"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, "/>
+        <tokens xsi:type="generator:Literal" text="name"/>
+        <tokens xsi:type="generator:Literal" text="! I'm the healthcare chatbot! How can I help you?&#xA;I can:&#xA;&#x9;Tell you about our services&#xA;&#x9;Analyze your symptoms&#xA;&#x9;Make an appointment for you&#xA;&#x9;Give you information about Doctors"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Have a nice day!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_doctor_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the doctor's name?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_isthatcorrect_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is that correct?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_appointment_made_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Appointment made for "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.20/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.19/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:Literal" text="name"/>
+        <tokens xsi:type="generator:Literal" text="!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_intensity_buttons_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the intensity of pain?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="summarize_empty"/>
+  <actions xsi:type="generator:Text" name="utter_submit_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your name is {name}, age is {age} and phone number is {phone}. Is that correct?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <actions xsi:type="generator:Text" name="action_default_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't undestand you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.6 //@actions.27 //@actions.36">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.25 //@actions.4 //@actions.10">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.23 //@actions.36">
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.1 //@actions.36">
+                  <outcoming intent="//@intents.7">
+                    <target actions="//@actions.0 //@actions.36">
+                      <outcoming intent="//@intents.13">
+                        <target actions="//@actions.9 //@actions.36">
+                          <outcoming intent="//@intents.18">
+                            <target actions="//@actions.2 //@actions.36">
+                              <outcoming intent="//@intents.18">
+                                <target actions="//@actions.28"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.17">
+                                <target actions="//@actions.6 //@actions.27"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.17">
+                            <target actions="//@actions.19">
+                              <outcoming intent="//@intents.12">
+                                <target actions="//@actions.36 //@actions.8">
+                                  <outcoming intent="//@intents.24">
+                                    <target actions="//@actions.36">
+                                      <outcoming intent="//@intents.16">
+                                        <target actions="//@actions.10">
+                                          <outcoming intent="//@intents.24">
+                                            <target actions="//@actions.8">
+                                              <outcoming intent="//@intents.17">
+                                                <target actions="//@actions.29">
+                                                  <outcoming intent="//@intents.19">
+                                                    <target actions="//@actions.18">
+                                                      <outcoming intent="//@intents.20">
+                                                        <target actions="//@actions.32 //@actions.34 //@actions.2">
+                                                          <outcoming intent="//@intents.18">
+                                                            <target actions="//@actions.28"/>
+                                                          </outcoming>
+                                                        </target>
+                                                      </outcoming>
+                                                    </target>
+                                                  </outcoming>
+                                                </target>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.17">
+                                    <target actions="//@actions.29">
+                                      <outcoming intent="//@intents.19">
+                                        <target actions="//@actions.18">
+                                          <outcoming intent="//@intents.20">
+                                            <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.7">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.13">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.17">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.12">
+                            <target actions="//@actions.36">
+                              <outcoming intent="//@intents.19">
+                                <target actions="//@actions.36">
+                                  <outcoming intent="//@intents.26">
+                                    <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.24">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.24">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.24">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.36">
+                              <outcoming intent="//@intents.7">
+                                <target actions="//@actions.36">
+                                  <outcoming intent="//@intents.13"/>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.23">
+        <target actions="//@actions.29 //@actions.36">
+          <outcoming intent="//@intents.19">
+            <target actions="//@actions.4">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.23 //@actions.1">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.7">
+                        <target actions="//@actions.0 //@actions.18">
+                          <outcoming intent="//@intents.20">
+                            <target actions="//@actions.32"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.7">
+                    <target actions="//@actions.18">
+                      <outcoming intent="//@intents.20">
+                        <target actions="//@actions.32"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.24">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.24">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.24">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.19">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.20">
+                            <target actions="//@actions.32 //@actions.34">
+                              <outcoming intent="//@intents.18">
+                                <target actions="//@actions.28"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.10">
+        <target actions="//@actions.36">
+          <outcoming intent="//@intents.15">
+            <target actions="//@actions.28"/>
+          </outcoming>
+          <outcoming intent="//@intents.12">
+            <target actions="//@actions.21"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.11">
+        <target actions="//@actions.36">
+          <outcoming intent="//@intents.14">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.12">
+                <target actions="//@actions.15"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.36 //@actions.25">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.7">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.13">
+                    <target actions="//@actions.36 //@actions.34">
+                      <outcoming intent="//@intents.15">
+                        <target actions="//@actions.28"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.13">
+                <target actions="//@actions.34">
+                  <outcoming intent="//@intents.17">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.12">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.19">
+                            <target actions="//@actions.36">
+                              <outcoming intent="//@intents.26">
+                                <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.8">
+        <target actions="//@actions.36 //@actions.29 //@actions.24 //@actions.2">
+          <outcoming intent="//@intents.19">
+            <target actions="//@actions.24 //@actions.2">
+              <outcoming intent="//@intents.17">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.25 //@actions.4"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.18">
+            <target actions="//@actions.28"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.9">
+        <target actions="//@actions.24 //@actions.2"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.23 //@actions.36">
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.1 //@actions.36">
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.0 //@actions.36">
+              <outcoming intent="//@intents.13">
+                <target actions="//@actions.9 //@actions.36">
+                  <outcoming intent="//@intents.18">
+                    <target actions="//@actions.2">
+                      <outcoming intent="//@intents.17">
+                        <target actions="//@actions.6 //@actions.27"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.17">
+                    <target actions="//@actions.36 //@actions.19">
+                      <outcoming intent="//@intents.12">
+                        <target actions="//@actions.36 //@actions.29">
+                          <outcoming intent="//@intents.19">
+                            <target actions="//@actions.36 //@actions.18">
+                              <outcoming intent="//@intents.20">
+                                <target actions="//@actions.32 //@actions.34 //@actions.2">
+                                  <outcoming intent="//@intents.17">
+                                    <target actions="//@actions.6 //@actions.27"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.18">
+                                    <target actions="//@actions.28"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.15">
+    <target actions="//@actions.28"/>
+  </flows>
+  <flows intent="//@intents.21">
+    <target actions="//@actions.16"/>
+  </flows>
+  <flows intent="//@intents.25">
+    <target actions="//@actions.17"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.27 //@actions.36">
+      <outcoming intent="//@intents.10">
+        <target actions="//@actions.36">
+          <outcoming intent="//@intents.15">
+            <target actions="//@actions.28"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.11">
+        <target actions="//@actions.13 //@actions.36">
+          <outcoming intent="//@intents.14">
+            <target actions="//@actions.19 //@actions.36">
+              <outcoming intent="//@intents.12">
+                <target actions="//@actions.15 //@actions.36">
+                  <outcoming intent="//@intents.17">
+                    <target actions="//@actions.2 //@actions.36">
+                      <outcoming intent="//@intents.18">
+                        <target actions="//@actions.28"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.17">
+                        <target actions="//@actions.6 //@actions.27"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.23">
+        <target actions="//@actions.36 //@actions.29">
+          <outcoming intent="//@intents.24">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.24">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.24">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.19">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.20">
+                            <target actions="//@actions.32 //@actions.34">
+                              <outcoming intent="//@intents.18">
+                                <target actions="//@actions.28"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.19">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.23">
+                  <outcoming intent="//@intents.7">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.20">
+                        <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.25">
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.13">
+                <target actions="//@actions.34">
+                  <outcoming intent="//@intents.17">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.12">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.19">
+                            <target actions="//@actions.36">
+                              <outcoming intent="//@intents.26">
+                                <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.25 //@actions.10">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.7">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.13">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.17">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.12">
+                            <target actions="//@actions.36">
+                              <outcoming intent="//@intents.19">
+                                <target actions="//@actions.36">
+                                  <outcoming intent="//@intents.26">
+                                    <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.7">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.13">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.17">
+                            <target actions="//@actions.36">
+                              <outcoming intent="//@intents.12">
+                                <target actions="//@actions.36">
+                                  <outcoming intent="//@intents.17">
+                                    <target actions="//@actions.36">
+                                      <outcoming intent="//@intents.19">
+                                        <target actions="//@actions.36">
+                                          <outcoming intent="//@intents.20">
+                                            <target actions="//@actions.32 //@actions.34 //@actions.2"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.25">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.36">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.7">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.13">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.18">
+                        <target actions="//@actions.36">
+                          <outcoming intent="//@intents.18">
+                            <target actions="//@actions.28"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.23">
+    <target actions="//@actions.36">
+      <outcoming intent="//@intents.24">
+        <target actions="//@actions.36">
+          <outcoming intent="//@intents.24">
+            <target actions="//@actions.36">
+              <outcoming intent="//@intents.24">
+                <target actions="//@actions.36">
+                  <outcoming intent="//@intents.19">
+                    <target actions="//@actions.36">
+                      <outcoming intent="//@intents.20">
+                        <target actions="//@actions.32 //@actions.34">
+                          <outcoming intent="//@intents.17">
+                            <target actions="//@actions.6 //@actions.27"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.27">
+    <target actions="//@actions.17 //@actions.37"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

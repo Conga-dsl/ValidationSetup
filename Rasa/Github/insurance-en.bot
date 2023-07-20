@@ -1,0 +1,319 @@
+Chatbot "insurance-en" language : en
+
+intents :
+
+	quote_insurance :
+		inputs in en {
+			"I\'d like to apply for travel insurance" ,
+			"travel insurance" ,
+			"may I please get a quote insurance for travel?" ,
+			"travel insurance please"
+	}
+
+	inform :
+		inputs in en {
+			( "Xuchen Yao" ) [ name ] ,
+			"my name is " ( "Xuchen Yao" ) [ name ] ,
+			"i\'m " ( "Xuchen Yao" ) [ name ] ,
+			( "04/07/1984" ) [ birthday ] ,
+			( "01/01/1970" ) [ birthday ] ,
+			( "10" ) [ insurance_day ] " days" ,
+			( ten ) [ insurance_day ] " days" ,
+			"[japan](travel_country: Japan)" ,
+			"[thailand](travel_country: Thailand)" ,
+			"[south korea](travel_country: South Korea)" ,
+			"[taiwan](travel_country: Taiwan)" ,
+			"[Cambodia](travel_country: Cambodia)" ,
+			"[china](travel_country: China/HK/Macao)" ,
+			"[Laos](travel_country: Laos)" ,
+			"[Malaysia](travel_country: Malaysia)" ,
+			"[Singapore](travel_country: Singapore)" ,
+			"[Thailand](travel_country: Thailand)" ,
+			"[The Philippines](travel_country: The Philippines)" ,
+			"[Vietnam](travel_country: Vietnam)" ,
+			"[Other Countries](travel_country: Other Countries)" ,
+			"[none of them](travel_country: Other Countries)" ,
+			"[usa](travel_country: Other Countries)" ,
+			"[canada](travel_country: Other Countries)" ,
+			"[russia](travel_country: Other Countries)" ,
+			( "$1m" ) [ total_amount ] ,
+			( "$1000" ) [ total_amount ] ,
+			( "yaoxuchen@gmail.com" ) [ email ] ,
+			( "xuchen@seasalt.ai" ) [ email ] ,
+			( "asdfa@safd.com" ) [ email ] ,
+			( "guoguo chen" ) [ name ] ,
+			( "23/88/2341" ) [ birthday ] ,
+			( "13" ) [ insurance_day ] ,
+			"[Thailand](travel_country: Thailand)" ,
+			( "$500,000" ) [ total_amount ] ,
+			( "jlw@jlas.com" ) [ email ]
+		}
+		parameters :
+			name ,
+			birthday : entity birthday ;
+			insurance_day : entity number ;
+			total_amount : entity total_amount ;
+			email : entity email ;
+
+	explain :
+		inputs in en {
+			why ,
+			"what\'s this?" ,
+			"what\'s that?" ,
+			"what is it?" ,
+			"why is that" ,
+			"why do you need it" ,
+			"why do you need to know that?" ,
+			"could you explain why you need it?"
+	}
+
+	"faq/ask_guardianship" :
+		inputs in en {
+			"what is under guardianship?" ,
+			"could you please explain under guardianship?"
+	}
+
+	"faq/ask_amount" :
+		inputs in en {
+			"what is total insurance amount?" ,
+			"could you please explain total insurance amount?"
+	}
+
+	"faq/ask_airlift" :
+		inputs in en {
+			"what is air ambulance transport?" ,
+			"what is air ambulance transport and does it add cost?" ,
+			"could you please explain air ambulance transport?"
+	}
+
+	greet :
+		inputs in en {
+			hey ,
+			hello ,
+			^hi ,
+			"good morning" ,
+			"good evening" ,
+			"hey there"
+	}
+
+	goodbye :
+		inputs in en {
+			bye ,
+			goodbye ,
+			"see you around" ,
+			"see you later"
+	}
+
+	affirm :
+		inputs in en {
+			yes ,
+			indeed ,
+			"of course" ,
+			"that sounds good" ,
+			correct ,
+			"yes please"
+	}
+
+	deny :
+		inputs in en {
+			^no ,
+			never ,
+			"I don\'t think so" ,
+			"don\'t like that" ,
+			"no way" ,
+			"not really" ,
+			nope
+	}
+
+	mood_great :
+		inputs in en {
+			perfect ,
+			"very good" ,
+			great ,
+			amazing ,
+			wonderful ,
+			"I am feeling very good" ,
+			"I am great" ,
+			"I\'m good"
+	}
+
+	mood_unhappy :
+		inputs in en {
+			sad ,
+			"very sad" ,
+			unhappy ,
+			bad ,
+			"very bad" ,
+			awful ,
+			terrible ,
+			"not very good" ,
+			"extremely sad" ,
+			"so sad"
+	}
+
+	bot_challenge :
+		inputs in en {
+			"are you a bot?" ,
+			"are you a human?" ,
+			"am I talking to a bot?" ,
+			"am I talking to a human?"
+	}
+
+	out_of_scope :
+		inputs in en {
+			"I want to order food" ,
+			"What is 2 + 2?" ,
+			"Whoâ€™s the US President?" ,
+			"I need a job" ,
+			"Now?" ,
+			"Pizza bot" ,
+			Recharge ,
+			"SEL ME SOMETHING" ,
+			"The Try it out is not working" ,
+			"The weather is good" ,
+			Today ,
+			"Try it out broken" ,
+			"What day is it today?" ,
+			"What did you eat yesterday?" ,
+			"What do you prefer?" ,
+			"What is todays date"
+	}
+
+	forminform :
+
+	formdeny :
+
+	formaffirm :
+
+entities :
+	Regex entity birthday :
+		inputs in en {
+			pattern : "[0-9]{1,2}(/|-|\\s+)[0-9]{1,2}(/|-|\\s+)[0-9]{2,4}"
+			pattern : "[0-9]{2,4}(/|-|\\s+)[0-9]{1,2}(/|-|\\s+)[0-9]{1,2}"
+	}
+	Regex entity total_amount :
+		inputs in en {
+			pattern : "$[\\d,]+"
+	}
+	Regex entity insurance_days :
+		inputs in en {
+			pattern : "\\d+"
+	}
+	Regex entity email :
+		inputs in en {
+			pattern : "[^@]+@[^@]+.[^@]+"
+	}
+
+actions :
+	Text response utter_ask_is_under_guardianship_text :
+		inputs in en {
+			"is the applicant currently under guardianship?"
+	}
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Empty response respond_faq_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_ask_travel_country_text :
+		inputs in en {
+			"which country are you traveling to?"
+	}
+	Text response utter_correct_country_text :
+		inputs in en {
+			"Country can be: \'Japan\', \'Taiwan\', \'Burma\', \'Cambodia\', \'China/HK/Macao\', \'South Korea\', \'Laos\', \'Malaysia\', \'Singapore\', \'Thailand\', \'The Philippines\', \'Vietnam\', \'Other Countries\'"
+	}
+	Text response utter_ask_insurance_day_text :
+		inputs in en {
+			"how many days do you want to insure for?"
+	}
+	Text response utter_explain_total_amount_text :
+		inputs in en {
+			"Total means the highest value you or your beneficiary will get paid in the extreme event of death or disability."
+	}
+	Text response utter_correct_email_text :
+		inputs in en {
+			"please enter correct email such as xx@yy.cc"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_ask_birthday_text :
+		inputs in en {
+			"could you please provide your birthday?"
+	}
+	Text response utter_out_of_scope_text :
+		inputs in en {
+			"Sorry, I can’t handle that request."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_ask_need_airlift_text :
+		inputs in en {
+			"do you need air ambulance support?"
+	}
+	Text response utter_explain_need_airlift_text :
+		inputs in en {
+			"An air ambulance is an aircraft equipped with life support equipment and medical staff. If you require urgent medical care in a difficult terrain, an air ambulance might be the best method of transport. The median cost of a helicopter airlift is 10 thousand dollars. Adding insurance can significantly offset that cost."
+	}
+	Text response utter_explain_guardianship_text :
+		inputs in en {
+			"If the applicant is under guardianship, we cannot legally provide insurance to them without a legal guardian present."
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_ask_email_text :
+		inputs in en {
+			"what\'s your email address?"
+	}
+	Text response utter_ask_name_text :
+		inputs in en {
+			"what is your full name?"
+	}
+	Text response utter_ask_total_amount_text :
+		inputs in en {
+			"what\'s the total insurance amount?"
+	}
+	Text response utter_correct_amount_text :
+		inputs in en {
+			"amount can only be between $60,000 to $1500,000"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user "faq/ask_guardianship" => chatbot DefaultEmptyAction , respond_faq_empty ;
+	- user "faq/ask_amount" => chatbot DefaultEmptyAction , respond_faq_empty ;
+	- user "faq/ask_airlift" => chatbot DefaultEmptyAction , respond_faq_empty ;
+	- user greet => chatbot utter_greet_text {
+		=> user mood_great => chatbot utter_happy_text {
+			=> user quote_insurance => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user formdeny => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user formaffirm => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction ; } ; } ; } ; } ; } ; } ; } ; } ;
+		} ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+		=> user quote_insurance => chatbot DefaultEmptyAction {
+			=> user inform => chatbot DefaultEmptyAction { => user "faq/ask_guardianship" => chatbot respond_faq_empty { => user explain => chatbot utter_explain_guardianship_text { => user deny => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user affirm => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction ; } ; } ; } ; } ; } ; } ; } ; } ; => user "faq/ask_amount" => chatbot respond_faq_empty { => user explain => chatbot utter_explain_guardianship_text { => user deny => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user affirm => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction ; } ; } ; } ; } ; } ; } ; } ; } ; => user "faq/ask_airlift" => chatbot respond_faq_empty { => user explain => chatbot utter_explain_guardianship_text { => user deny => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user affirm => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction ; } ; } ; } ; } ; } ; } ; } ; } ; => user explain => chatbot utter_explain_guardianship_text { => user deny => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user explain => chatbot utter_explain_total_amount_text { => user inform => chatbot DefaultEmptyAction { => user affirm => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction ; } ; } ; } ; } ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user quote_insurance => chatbot DefaultEmptyAction {
+		=> user "faq/ask_guardianship" => chatbot respond_faq_empty ;
+		=> user "faq/ask_amount" => chatbot respond_faq_empty ;
+		=> user "faq/ask_airlift" => chatbot respond_faq_empty ;
+		=> user explain => chatbot utter_explain_total_amount_text , utter_explain_guardianship_text , utter_explain_need_airlift_text ;
+	} ;
+	- user out_of_scope => chatbot utter_out_of_scope_text ;
+
