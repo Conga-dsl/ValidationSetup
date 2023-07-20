@@ -1,0 +1,299 @@
+Chatbot Spaceonova_Chatbot language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		"hello there" ,
+		moin ,
+		"hey there" ,
+		"let\'s go" ,
+		"hey dude" ,
+		goodmorning ,
+		goodevening ,
+		"good afternoon" ,
+		"hi folks" ,
+		"hi again" ,
+		hii ,
+		"hi folks" ,
+		"hi Mister" ,
+		"hi pal!" ,
+		"hi there" ,
+		greetings ,
+		"hello everybody" ,
+		"hello is anybody there" ,
+		"hello robot" ,
+		"who are you?" ,
+		"what are you?" ,
+		"what\'s up" ,
+		"how do you do?"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		"good afternoon" ,
+		cu ,
+		"good by" ,
+		"cee you later" ,
+		"good night" ,
+		bye ,
+		goodbye ,
+		"have a nice day" ,
+		"see you around" ,
+		"bye bye" ,
+		"see you later" ,
+		"gotta well" ,
+		farewell ,
+		bbyee ,
+		byeeeee ,
+		"take care" ,
+		"i\'m off" ,
+		"see you later alligator" ,
+		"we\'ll speak soon" ,
+		end ,
+		finish ,
+		"bye for now" ,
+		"see you" ,
+		"gotta go" ,
+		"catch you later"
+}
+
+thank :
+	inputs in en {
+		Thanks ,
+		"Thank you" ,
+		"Thank you so much" ,
+		"Thanks bot" ,
+		"Thanks for that" ,
+		"cheers- intent: thank" ,
+		Thanks ,
+		"Thank you" ,
+		"Thank you so much" ,
+		"Thanks bot" ,
+		"Thanks for that" ,
+		cheers
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+spaceonova_intro :
+	inputs in en {
+		"what is spaceonova?" ,
+		"what does spaceonova do?" ,
+		"about spaceonova?" ,
+		"can you tell me about spaceonva?" ,
+		"tell me about spaceonova organisation?" ,
+		"what is this organisaton for?" ,
+		"what is the purpose of this organisation?"
+}
+
+about_people :
+	inputs in en {
+		"who is ceo?" ,
+		"who is the ceo of organisation?" ,
+		ceo
+}
+
+courses :
+	inputs in en {
+		"name some courses" ,
+		"what courses do spaceonova provide?" ,
+		"what courses this organisation teach?" ,
+		"which type of courses do you teach?" ,
+		"what are some training programmes?" ,
+		"training programmes" ,
+		courses ,
+		"name some training programmes" ,
+		"name some master classes" ,
+		masterclass ,
+		"master class"
+}
+
+corona_intro :
+	inputs in en {
+		"What is corona virus" ,
+		"what is covid" ,
+		"what is a novel corona virus" ,
+		"what is covid-19" ,
+		"tell me about corona" ,
+		"can you tell me about covid"
+}
+
+corona_spread :
+	inputs in en {
+		"how does corona virus spread" ,
+		"how does the virus spread"
+}
+
+corona_food_spread :
+	inputs in en {
+		"Does corona spread from food" ,
+		"how will corona spread from food"
+}
+
+warm_weather :
+	inputs in en {
+		"will warm weather stop the spread" ,
+		"will it stop with warm weather"
+}
+
+high_risk :
+	inputs in en {
+		"who is at a higher risk of infection"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		y ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		n ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		great ,
+		amazing ,
+		"feeling like a king" ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I am amazing" ,
+		"I am going to save the world" ,
+		"super stoked" ,
+		"extremely good" ,
+		"so so perfect" ,
+		"so good" ,
+		"so perfect"
+}
+
+mood_unhappy :
+	inputs in en {
+		"my day was horrible" ,
+		"I am sad" ,
+		"I don\'t feel very well" ,
+		"I am disappointed" ,
+		"super sad" ,
+		"I\'m so sad" ,
+		sad ,
+		"very sad" ,
+		unhappy ,
+		"not good" ,
+		"not very good" ,
+		"extremly sad" ,
+		"so saad" ,
+		"so sad"
+}
+
+actions :
+	Text response utter_welcome_text :
+		inputs in en {
+			"You\'re Welcome :)"
+	}
+	Text response utter_corona_intro_text :
+		inputs in en {
+			"Coronaviruses are a group of related viruses that cause diseases in mammals and birds. In humans, coronaviruses cause respiratory tract infections that can be mild, such as some cases of the common cold (among other possible causes, predominantly rhinoviruses), and others that can be lethal, such as SARS, MERS, and COVID-19"
+	}
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?" ,
+			Hii ,
+			"Hey!" ,
+			"Hey! What can I do for you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_courses_text :
+		inputs in en {
+			"- Python Training Programme and Master Class\n - Rocketry Master class\n - Astrobiology Training Programme and Master Class\n"
+	}
+	Text response utter_high_risk_text :
+		inputs in en {
+			"Older adults and people of any age who have serious underlying medical conditions may be at higher risk for more serious complications from COVID-19. These people who may be at higher risk of getting very sick from this illness, includes; Older adults, People who have serious underlying medical conditions like... Heart disease, Diabetes, Lung disease,"
+	}
+	Text response utter_intro_text :
+		inputs in en {
+			"A company spreading the word of astronomy ,astrobiology and computer applications in space through science popularization and making these topics accessible and understandable to public and enthusiastic and aspiring students."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye ,
+			Bbyee ,
+			"Take Care <3"
+	}
+	Text response utter_corona_spread_text :
+		inputs in en {
+			"This virus was first detected in Wuhan City, Hubei Province, China. The first infections were linked to a live animal market, but the virus is now spreading from person-to-person. It’s important to note that person-to-person spread can happen on a continuum. Some viruses are highly contagious (like measles), while other viruses are less so. The virus that causes COVID-19 is spreading from person-to-person. Someone who is actively sick with COVID-19 can spread the illness to others. That is why we recommend that these patients be isolated either in the hospital or at home (depending on how sick they are) until they are better and no longer pose a risk of infecting others.\nHow long someone is actively sick can vary so the decision on when to release someone from isolation is made on a case-by-case basis in consultation with doctors, infection prevention and control experts, and public health officials and involves considering specifics of each situation including disease severity, illness signs and symptoms, and results of laboratory testing for that patient.\nThe virus that causes COVID-19 seems to be spreading easily and sustainably in the community (“community spread”) in some affected geographic areas. Community spread means people have been infected with the virus in an area, including some who are not sure how or where they became infected."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_corona_food_spread_text :
+		inputs in en {
+			"Coronaviruses are generally thought to be spread from person-to-person through respiratory droplets. Currently there is no evidence to support transmission of COVID-19 associated with food. Before preparing or eating food it is important to always wash your hands with soap and water for 20 seconds for general food safety. Throughout the day wash your hands after blowing your nose, coughing or sneezing, or going to the bathroom."
+	}
+	Text response utter_warm_weather_text :
+		inputs in en {
+			"It is not yet known whether weather and temperature impact the spread of COVID-19. Some other viruses, like the common cold and flu, spread more during cold weather months but that does not mean it is impossible to become sick with these viruses during other months.  At this time, it is not known whether the spread of COVID-19 will decrease when weather becomes warmer.  There is much more to learn about the transmissibility, severity, and other features associated with COVID-19 and investigations are ongoing."
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_people_text :
+		inputs in en {
+			"Shivam Kumar Singh"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text ;
+	- user mood_great => chatbot utter_happy_text ;
+	- user mood_unhappy => chatbot utter_cheer_up_img ;
+	- user thank => chatbot utter_welcome_text ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user spaceonova_intro => chatbot utter_intro_text ;
+	- user about_people => chatbot utter_people_text ;
+	- user corona_intro => chatbot utter_corona_intro_text ;
+	- user corona_spread => chatbot utter_corona_spread_text ;
+	- user corona_food_spread => chatbot utter_corona_food_spread_text ;
+	- user warm_weather => chatbot utter_warm_weather_text ;
+	- user high_risk => chatbot utter_high_risk_text ;
+	- user courses => chatbot utter_courses_text ;
+

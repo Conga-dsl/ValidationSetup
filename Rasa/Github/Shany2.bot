@@ -1,0 +1,126 @@
+Chatbot Shany2 language : en
+
+intents :
+
+greeting :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"hi there" ,
+		"hello bot" ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+get_horoscope :
+	inputs in en {
+		"I want to know my Horoscope" ,
+		"Can you please tell me my horoscope?" ,
+		"Tell me my horoscope please" ,
+		"What does my horoscope say?" ,
+		"What\'s today\'s horoscope?" ,
+		"I would like to know my horoscope for today" ,
+		Capricorn ,
+		Aries ,
+		"My horoscope sign is Cancer" ,
+		sagittarius ,
+		"What is my horoscope?" ,
+		"Virgo is my horoscope sign"
+}
+
+subscription :
+	inputs in en {
+		"Please subscribe me" ,
+		"yes subscribe" ,
+		subscribe ,
+		"subscribe me horoscopebot" ,
+		"subscribe me please" ,
+		"what is the horoscope for Capricorn?" ,
+		"tell me the horoscope for Gemini" ,
+		"horoscope for Aries" ,
+		"Leo\'s today\'s horoscope" ,
+		"what\'s the horoscope for Sagittarius" ,
+		"What is the horoscope for Scorpio today?" ,
+		"what\'s the horoscope for Aquarius?" ,
+		"unsubscribe me please" ,
+		unsubscribe
+}
+
+dob_intent :
+	inputs in en {
+		"12-12" ,
+		"08-01" ,
+		"01-01" ,
+		"15-08" ,
+		"19-01" ,
+		"28-02" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+actions :
+	Empty response utter_cheer_up_empty
+	Empty response utter_happy_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hello! What can I do for you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Empty response utter_get_todays_horoscope_empty
+	Text response utter_subscribe_text :
+		inputs in en {
+			"Do you want to subscribe for daily updates?"
+	}
+	Text response utter_ask_dob_text :
+		inputs in en {
+			"What is your DOB in DD-MM format?"
+	}
+	Empty response subscribe_user_empty
+	Empty response action_get_todays_horoscope_empty
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_ask_horoscope_sign_text :
+		inputs in en {
+			"What is your horoscope sign?"
+	}
+
+flows :
+	- user greeting => chatbot utter_greet_text {
+		=> user get_horoscope => chatbot action_get_todays_horoscope_empty , utter_subscribe_text , utter_did_that_help_text , utter_ask_horoscope_sign_text {
+			=> user subscription => chatbot subscribe_user_empty ;
+			=> user get_horoscope => chatbot action_get_todays_horoscope_empty , utter_subscribe_text {
+				=> user subscription => chatbot subscribe_user_empty ;
+			} ;
+		} ;
+		=> user subscription => chatbot subscribe_user_empty ;
+	} ;
+

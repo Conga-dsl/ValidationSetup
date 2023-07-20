@@ -1,0 +1,3185 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="rasa-faq-bot">
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe6;&#xb2;&#xa1;&#xe6;&#x153;&#x2030;&#xef;&#xbc;&#x152;&#xe4;&#xbd; &#xe5;&#xa4;&#xaa;&#xe8; &#xa2;&#xe4;&#xba;&#x2020;&#xe5;&#xfffd;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe6;&#xb2;&#xa1;&#xe6;&#x153;&#x2030;&#xef;&#xbc;&#x152;&#xe4;&#xbd; &#xe5;&#xa4;&#xaa;&#xe8; &#xa2;&#xe4;&#xba;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe4;&#xb8;&#xfffd;&#xe7;&#x201d;&#xa8;&#xe4;&#xba;&#x2020;&#xef;&#xbc;&#x152;&#xe8;&#xb0;&#xa2;&#xe8;&#xb0;&#xa2;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe6;&#xb2;&#xa1;&#xe6;&#x153;&#x2030;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe5;&#xae;&#x152;&#xe5;&#x2026;&#xa8;&#xe6;&#xb2;&#xa1;&#xe6;&#x153;&#x2030;&#xe8;&#xa7;&#xa3;&#xe5;&#x2020;&#xb3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe4;&#xbd; &#xe5;&#xa4;&#xaa;&#xe8; &#xa2;&#xe4;&#xba;&#x2020;&#xe5;&#xfffd;&#xa7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe4;&#xb8;&#xfffd;&#xe7;&#x201d;&#xa8;&#xe4;&#xba;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe4;&#xb8;&#xfffd;&#xe7;&#x201d;&#xa8;&#xe5;&#x2022;&#xa6;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe6;&#x2039;&#x153;&#xe6;&#x2039;&#x153;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe5;&#x2020;&#xfffd;&#xe8;&#xa7;&#xfffd;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe6;&#x2039;&#x153;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe9;&#x20ac;&#x20ac;&#xe5;&#x2021;&#xba;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe7;&#xbb;&#x201c;&#xe6;&#xfffd;&#x178;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe4;&#xbd; &#xe5;&#xa5;&#xbd;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe6;&#x201a;&#xa8;&#xe5;&#xa5;&#xbd;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe5;&#x2013;&#x201a;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe5;&#x153;&#xa8;&#xe4;&#xb9;&#x2c6;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe4;&#xbd; &#xe5;&#xa5;&#xbd;&#xe5;&#x2022;&#x160;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe5;&#xa5;&#xbd;&#xe7;&#x161;&#x201e;&#xef;&#xbc;&#x152;&#xe8;&#xb0;&#xa2;&#xe8;&#xb0;&#xa2;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="OK"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe7;&#x178;&#xa5;&#xe9;&#xfffd;&#x201c;&#xe4;&#xba;&#x2020;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe8;&#xa7;&#xa3;&#xe5;&#x2020;&#xb3;&#xe5;&#x2022;&#xa6;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe8;&#xa7;&#xa3;&#xe5;&#x2020;&#xb3;&#xe4;&#xba;&#x2020;&#xef;&#xbc;&#x152;&#xe8;&#xb0;&#xa2;&#xe8;&#xb0;&#xa2;&#xe4;&#xbd;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xe8;&#xa7;&#xa3;&#xe5;&#x2020;&#xb3;&#xe4;&#xba;&#x2020;&#xef;&#xbc;&#x152;&#xe8;&#xb0;&#xa2;&#xe8;&#xb0;&#xa2;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="faq">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Now that &quot;Nederlands&quot; is used for Dutch in Dutch, what do Dutch speakers call German?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This system was a direct answer to what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What technique do Daptobacter use in order to kill other microorganism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Visual communication among birds may involve what kind of displays?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why were laws limiting people of color passed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the project that von Neumann first participated in government?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is the citys fourth largest employer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who takes care of the 132nd Street Community Garden?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are they descendants of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the strategic bombing of North Vietnam?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What scientist is most associated with the heliocentric worldview?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where do many ground birds, such as quails and pheasants, roost?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what country does Tito have a street named in his honor?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who acts as a mentor during this deployment phase of the BMT?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who represented Oribe's Blancos?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Roman Catholic Jesuits and Capuchins arrive in Tibet from Europe?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year was Queen's third greatest hits album released?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How are digimon born?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What term followed &quot;negro&quot; and &quot;colored&quot;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Beyonce and Rowland found in 2005?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="With which type of government did Ortiz replace the old one?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the 1981 FIBA African Championship take place?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What philosophy is closely related to process philosophy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did &quot;Superstorm Sandy&quot; strike Atlantic City?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is gustatory communication include in dogs?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sanskrit is the primary sacred language of which religion?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Spectre passed which movie to have the largest per screen opening average?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Holding hands with one's partner and telling others about a relationship are examples of what kind of adolescent event?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the October 2014 purchase price of the Waldorf Astoria?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many Russians were in defense?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who made the first known clean slate decrees?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did the FBI target MLK?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is the Romansh culture located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of printing press helped increase the circulation and influence of The Times back in 1817?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is extremely important to prenatal and postnatal development?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="About how many schools across the country is ICG active in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What conflict affected Utrecht"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many local newspapers does the island have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which architects in the US and Britain still employ the Georgian style for private residences?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="IBM committed to an expansion totaling this dollar amount in 2014?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is another work of Avicenna that is said to not be his creation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In the mountainous interior north of Portugal, between what degrees is the average temperature?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who usually owns and manages National parks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does the &quot;Fourth of June&quot; celebrate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the original term related to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does B&#xc4;&#x203a;id&#xc7;&#x2019;u translate as?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What types of piety did the Puritans advocate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do some eschew altogether?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the first warrior to become imperial advisor?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What excluded a set from belonging to itself in set theory?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which countries use the term chancellor to denote the head of government?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is an insects head, throat, and abdomen called?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Rodman's Neck between?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are other names for a control unit for a computer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who represented Rivera's Colorados?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the ruler of China in 677?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="From April 1854 to February 1857, what port did the British and French lock down?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How far back does the Jews' shared common genetic pool date?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the most often found rocks in Antarctica?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which site removed the option of downloading youtube videos after 2012?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one of the sources electricity is being generated from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the total length of the railways?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the guntiino normally made from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what state's supreme court was State v. Santiago decided?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can the public and private sector offer employers that NPOs usually cannot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who called American Idol a conniving multimedia monster?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="An uncertain relationship was held between the Slavs and who?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What party did the D.C. Statehood Party merge when?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What failure did Cruyff have in his last two seasons as manager with Barcelona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What causes the behavioral adaptations necessary for migration?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did older operating systems use to mark the end of the text?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What shape do glacial valleys have after being widened by glacation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did the U.S. Congress afford Connecticut the deed to the site at Fort Hale in New Haven?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what part of the world did the fictional detective, Nero Wolfe, live in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By what year did Japanese strategists expand their concept of the Greater East Asia Co-Prosperity Sphere?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which campus holds the undergraduate schools, the Graduate school, and the Kellogg school of Management?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How was the lawsuit decided for Apple vs. Microsoft and Hewlett-Packard?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the current national rank of Brown School of Social Work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the first madolin made in the US?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of Victorias eighth child?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the area incorporated into Northumbria?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the official dress code today at Buckingham Palace?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who said that she is the reigning national voice?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who did Price think should see themselves as citizens of the world?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Keyboard instruments included the pip organ, harpsichord and what other instrument?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Were the ealiest LaserDiscs in 1978 analog or digitally formatted?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Tallgrass Prairie Preserve is the largest protected tallgrass prairie in what area?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many new LDS Church wards were added during Wilkinson's presidency?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one country that contained considerable and prosperous towns during this time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the economy of North Carolina based on after the confederacy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did American Idols first winner sing at the Lincoln Memorial in 2002?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the average speed of a winning solar powered car by 2007?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is all work done by children considered to be child labour?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What occupation did David Jones have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of extinction level event that ended the dominance of the carnivores among therapsids?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Approximately how many phonograph records were sold in 2014?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What philosophy in the west was challenged by Whitehead?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Along with Guam, which other territories were in the United States jurisdiction before WWII?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By what other name were some Marvel-related comic books published?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the city's public television service?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the biggest public park in the city?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which church did the 9 founders of Northwestern affiliate the university with?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which contestant had to go to the hospital during the week of the top 20?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On Neptune, which clouds cast shadows on the cloud deck below it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What continues in some circles at the discretion of the defining agency or academic department?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the word for a beardless, athletic youth?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The visible, ultraviolet and X-ray spectra are all above what spectrum?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many restaurant are located in the center of New Haven's city?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What variables help the photographer produce the desired effect?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What leader started a mass movement against British rule?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the building style that resulted from the use of brick?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="From Thionville towards Trier, what was the final destination of the offensive?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which color is opposite of red on the visible spectrum?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do devout Muslims believe is the reason for the overlap of events and characters in the Bible and Quran?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the JK Bridge named for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what country did FROLINAT operate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many people of Somali ethnicity live in Somalia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="As of 2008, geothermal power development was underway in more than how many countries?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was the library of Pergamum located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which dialects did not follow the Neoshtokavian retraction?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was the earliest church labeled &quot;Baptist&quot; traced to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of the country does it make up?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of tall buildings are being planned on Southampton's waterfront?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Namibia obtain full independence?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which country was being invaded when Daniel and his friends were captured?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Kerry join the Naval Reserve?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the main driver of the economy now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many inhabitants were left without shelter after the siege?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What writer fused humanism with the Dominican Order teachings?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Principle Corridor features which type of doors?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a major barrier to videoconferencing between some communities?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the financial crisis hit its most critical stage?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who as the last man to be eliminated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of person is likely to replace zippers and buttons?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does Planck's law correctly predict?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which country's government wanted Samoa to grow bananas for them?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is regarded as a feminist during her time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who returned to england after sailing around Cape Comorin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What happens when someone tries to improve education?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What were the tesserae usually set in for miniature mosaic icons?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The infant brain contains more of what type of cells in the brain than the adult brain?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can one high-power LED replace?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of applicants did BYU accept for it's summer term and fall semester in 2013?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Along with Tolkien, what modern scholar notably made use of Old English?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Paul VI want to keep open with the modern world and people from all walks of life?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does the Duchy of Lancaster operate as?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Around how many soldiers were in each regiment of the Northern Army?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What newspaper was founded in 1935?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What example city service was cut back on in the Bronx?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percent of Native American ancestry may originate through gene flow from the Mal'ta-Buret' population?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What governmental department contributed a grant to Schwarzenegger's hydrogen fuel project?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the process of producing a biologically functional molecule of either RNA or protein called?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What physical symptom accompanied Muhammad's revelations?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is St. George credited with?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Miami's largest newspaper written in Spanish?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do greenhouses do with solar energy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Super NES had how many pins in its proprietary connector?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the state of Utrecht"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Instead of work, how did most Western European peasants pay their landlords in this period?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who, along with members of the South Korean government, fled South Korea?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who led the rescue effort after the earthquake of 1985?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To Kill a Mockingbird is widely read in which countries schools?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Little River marks the boundary between Geelong and which other city?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which borough can Fort Hamilton be found?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Other than Yale, New Haven has another private college in the city, it's name?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of BYU students are members of the LDS Church?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the ratio of young Estonians who speak Russian relative to those who speak English?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Whitehead's most famous statement on religion?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The record is part of what wind family?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What types of species are thought to still have been dominate until after the extinction?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On what date was the Treaty on the Creation of the USSR passed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What connects continuous symmetries to conserved quantities?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Parque Batlle is named in honor of who?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is an important Old English historical record?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During what seasons are courses offered at the Washington University School of Law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ENIAC was constructed by whom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To what type of theater is Seattle second to New York?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the estimated number of Buddhists in the world?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was needed to replace an iPod Nano battery?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who did the official from Myanmar meet with ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Game animals were introduced here by whom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one of the features that have come to be considered as an important part of the Gothic style?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How does the mental health profession approach efforts to change sexual orientation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were interceptors like the F-102 Delta Dagger first built?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a layer of meristem or formative tissue known as?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What were taxpayers free to do after they paid the Duke of York his local tax?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="About what nearby planet could the Antarctic meteorites hold data?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What journalist did The Daily Mirror wrest from The Sun?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many years does regular ovulation follow menarche?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Jewish law recognize copyright?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Late Caboniferous and Early Permain are what kind of orders?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What helped the industry weather the 2009 economic crisis better than other sectors?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In which direction have the British Isles been drifting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Beyonce's first child is named what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How does Czech mark subject nouns?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was the main focus of Pan-Slavism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Achaemenid Empire was the known enemy of what nation's histories during its existence?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What phrase did people believe Bell's dog could say?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the romance genre of Divan poetry known as?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which dynasty restored and expanded the network that became the Grand Canal of China?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which politican left the presidential race after supporting a boycott by voters?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The red and blue Chinese Luncheon Room has what as a main feature?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If recommit fails, then what choice needs to be made by minority representatives?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What company designed this interface?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Nasser's first title in the Liberation Rally?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much of Estonia's native Estonians speaks Russian?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During what decade did the Seljuk Turks occupy Armenia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the edict written?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="At what pub did Ronnie Kray kill someone in 1966?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Renaissance is generally used to describe developments in what areas of life in the Middle Ages?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much were the vouchers worth that Nintendo sent out?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Generally, up-peak mode takes place during what times of the day?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many students in total were at Notre Dame in 2014?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ABout how many people in the state of Montana speak Cheyenne?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was most critical of Nasser's rule?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can not be undertaken n Security, at Immigration/Customs or in Baggage Reclaim?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the Oklahoma City Bombing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the company that managed the colony from 1615-1684?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What program did Creative join in order to make iPod peripherals?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Microsoft name the SKU that replaced the 360 Core?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many routes to Canada does Detroit have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who has an active community of journalists and publishers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the enlightenment of spiritual philosophy challenged?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many Hollywood rounds were there in the first nine seasons?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What award was My Beautiful Dark Twisted Fantasy omitted from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is now located at the former centre of Valencia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can be attributed to BYU's high percentage of second language proficient students?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="According to the 2014 census, how many people live in Houston?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What notable accidental fossil fuel discharge occurred at Newtown Creek?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many periods of geology are within the Paleozoic era?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one of the famous Lima-based restaurants in Mexico City?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Musee national des arts asiatiques famous for housing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the outcome when a curren is reflected>"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What increased society's autonomy, self-awareness, and need for exchange of information?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the acronym for British Broadcasting Corporation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What process replaces tissue damaged by TB?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many kilometers of paved roads does Israel have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is considered to be the the Korean War's equivalent to Gettysburg?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which ocean is on the coastal area of Namibia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What borough was home to a notable population of free African-Americans?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which inventor went bankrupt?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Serialization of comics became less popular when?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which Cathedral is considered the first thoroughly Gothic cathedral?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is breathy voice?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Londre Centre for Nanotechnology was a joint effort between UCL and which college?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was Phil Skinner awarded an MBE?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is another word for ligatures?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many contestants made it past the first round of auditions?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When hydrogen oxidates, what does it end up giving?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many destinations does George Bush Intercontinental Airport serve?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What style of literature could commonly be found in Roman works?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who persuaded the king to lock the wine cellars during WWI?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the most important Mahayana centre of learning?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="With walnut, what's another tree in the intermediate group?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Beyonce become the first African American woman to win Pop songwriter of the year?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the syrinx?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What document teaches that Jesus' brothers and sisters were older children of Joseph from a previous marriage?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which two groups of Marvel crimefighters are based in a fictional version of New York City?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a form of communication observed within plants?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was also pushed for by result of sarmatism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what city did the standardization of red as a color of stop lights occur?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which company pays Firefox to make their search engine the default on their browser?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who does the Quran say was also from a pious family?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Ottomans were portrayed as what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Tito leave India?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one type of metal which the conducting plates in electrolytic capacitors are commonly made of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in 1778 most of the troops that the EIC had were from where?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the sources of natural deposits of asphalt?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a well known Afro-pop artist?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a protein that carries copper ions in chelation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were all the lodges in Iraq forced to close?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many days long is the growing season?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many foreign governments maintain trade and commercial offices in Houston?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what square do the bands all play at once?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was clonal selection theory first proposed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why did the banner say that was unveiled during the temporary halt?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What news company discovered visual evidence of the disdain exhibited by civil employees and civilians in Burma ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many nocturnes did Chopin compose?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1.1 was the first widely used version of what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who met with Gorbachev on November 22?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many spots did Southampton lose in the &quot;fittest city&quot; rankings for 2007?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Some records at NARA are legally protected by what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Parsons believe made a functional society?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what new influences led to a new house sound?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many bridges in Oklahoma were found to be deficient in 2010?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="From what language does Universitas come from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Elevator drive mechanisms have, in the past been, powered by what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If the alleles on the chromatids are different, what effect arises from genetic recombination?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What TV show lampooned one of Kanye's BBC Radio 1 interviews?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How did the Kazakh SSR government say the two protesters were killed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In which states had Brincourt run military affairs previously?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who conquered Panormos and briefly turned it into a Greek colony?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is the Art Deco style badge design used prominently?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="An insects hard body parts are called what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In how many countries does Shell have operations?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of rules does a poly-sided match usually have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What were rabbis from the ghettos forced to march through the city streets wearing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the decedents of the Congo and Afro-Caribbean arrive in liberia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What technology has become more widely available and affordable?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="John followed in the tradition of who?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why did post-punk fall out of love with punk?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Nintendo release in Japan only?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the legislative branch of Bermuda modeled after?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the 3 main department store companies in Denmark?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What Era began following the defeat of the confederacy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who had a leading role in liberating Yugoslavia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the Cimbrian War end?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What hardware component did CNET have the biggest problem with, even comparing it to an old credit card reader?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What apparitions reportedly took place in 1917?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is being lead to specialty roles?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What group decided to keep the &quot;African&quot; in their name?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who holds the legislative power?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How was the reclassification of documents in '06 revealed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What treatment helps improve those with allergic rhinitis and asthma?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What event led to an increase in tourism in 2009?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year was the Pure Food and Drugs Act passed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What congressional declaration gave President Johnson authority to send troops to Vietnam?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A partially full frame's ability to have part of the next frame's audio data is referred to as what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which notable New Haven resident inventor, credited with the cotton gin, is buried in Grove Street Cemetery?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did the Rugby Football Union form?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What sort of identity was promoted by the RCC?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What country is Saint-Barth&#xc3;&#xa9;lemy a collectivity of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="At what former lodging facility in New Haven were scenes from the 1950's classic, All About Eve, filmed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How old did biblical scholars think the Earth was?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the coldest month in Boston?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one potential issue with drinking alcohol while taking antibiotics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are the vacuoles of plant cells larger or smaller than animal cells?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What value may clothing designed to be fashionable also have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What significance does Dec 7/ 1948 hold?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During which time period did the legend of Virgil in his Basket arise?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of linguistics is phonetics considered to be a part of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much of the population left after 1950?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What two companies worked together to develop the Western Electric System?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What 2 main weapons does Link use in combat?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year were the elbow tablet first discovered?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was The Scooter on Neptune observed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What state uses as a motto a passage from the Bible?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is the Doris Leuthard?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many seasons are there in Raleigh?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What would more people report themselves as if a more consistent report were considered?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what city did the Romans use verdigris in murals?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was the Eton Mission originally to be located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the Roman Empire split into western and eastern administrative divisions?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where can fatty acids be found?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Among which builders was the Gothic style first used?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What neighborhood houses the headquarters of Miami Today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which museum is located at Ann Arbors historic downtown fire station?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the upper house of the Marshall Islands Parliament?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was appointed satrap of Egypt after Alexander's death?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What publicly traded bank, also the second largest in Connecticut, is based in New Haven?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="West and East Slavs are sometimes combined into a single group called what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the campaign by the British in Holland that created a second front in the war?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What programs did Milton Winternitz create?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the term for the head of China's government?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Nigeria's economy become larger than South Africa's?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Madonna is recognize as the best selling female music artiste by who?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The rituals for the correct way to enjoy Mass is listed in what text ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what did knights of the turntable release in 1984?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What have a number of tourism-related organizations placed Greek destinations at the top of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The ICTR was established for the purpose of convicting those responsible for acts of genocide and what other charges?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the V-12 program provide to interested pupils?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Yale largely known for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did the British defeat the Dervishes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the term for Russian-speaking people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much money did Apple make in 2007?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During what century did the Seminoles enter Florida?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is another name for Nikaya buddhism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the area of land?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What inconsistency would be found in this explanation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What must happen before the Supreme Court will reverse a decision by a lower court refusing to uphold a constitutional law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the &quot;folk opera&quot; based on 'Porgy'?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the main type of oil painting painted by Eisenhower?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What Tech company is based in Detroit?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were the mosaics at Bizere Monastery created?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Belize, Chile and Greenland are just some countries with sizable populations of what peoples?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the collection of plants in the environment called?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does PPE stand for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many public performances did Chopin do where he made his debut after completing his education?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Traditionally, what must a state do in order for an obligation to arise in international law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="THE SCN receives information from the optic nerves through what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Japan formally have signed the surrender?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How old was Bell when he became a &quot;pupil-teacher&quot;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In treaty negotiations, what trades did France hope to make."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Sri Lankan Supreme Court's decisions override what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What follows a geodesic of space-time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What planet also gets it's color from atmospheric constituent?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are XML databases frequently used?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During what years did Tito lead the Partisans?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What city and state does the interstate 10 end at?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the population of Beer Sheva?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one way that the Empire was described as it related to culture?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is God in deism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In 1763 what was the status of Frederick?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the literacy rate in Kuwait?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In Mahayana Buddhism, what are some Mahayana sutras that are believed to remove negative karma just by the hearing of the texts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wood fibers from wood strands, lumber, and what other source can be glued together to make larger units?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much rain does Houston usually get per year?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What law regulated the rules for time shifts in Israel according to the Jewish calendar?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What language is the source of the term Catellain?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What president ignored Eisenhower's recommendations in regard to atomic weapons?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Insects have what kind of skeleton?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On what date did the Occupy Wall Street protests commence?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What book did Will Eisner create in 1985?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of Brian May's signature guitar?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did a coup take place and new dictatorship form?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the look of the dollar based on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of losses happen during conversion and transmission in wires and electronics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the maiden surname of Gaddafi's second wife?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Arent Schuyler de Peyster visit Tuvalu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="From where did H.J. Porter hale?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the dog that could ID over 200 things?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the airport the United States built on Ascension Island?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one cause for Melbourne's fluctuating weather patterns?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What journalist wrote that Beyonc&#xc3;&#xa9; was a &quot;sex symbol&quot;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What event led to larger crop yields in the High Middle Ages?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which already existing schools did Northwestern affiliate itself with in the 1870's and 1880's?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What office contains the FBI's administrative offices?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What biblical passage informs Jehovah Witnesses' refusal of blood transfusions?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What notable document was authored by Thomas Jefferson in 1786?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What substance is hemicellulose impregnated with?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What power can help someone overcome sin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was it believed that that fight against Communism would take place?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On what day did Paul VI die?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is 'a scrimmage' another term for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which street begins just North of East Huston Street and continues to Bowery?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the Gash Group?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the two exceptions to the voting rights in United Kingdom of Great Britain and Northern Irelandand Britain?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By the 2000-1 season what was the percentage of foreign players?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which development in 1915 played a key role in developing Alaska?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What party lost control of House in 2010 elections?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many states are linked to from highways in Hyderabad?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where do the tourists for the Plum Blossom Festival come from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="After their agreement together, Beyonce's and Topshop&quot; new business was called what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="At what point during season 9 of American Idol did Ellen Degeneres become a judge?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does the study say in regards to boycotts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is much of Melbourne's metropolitan area characterized as low-density sprawl or high-density sprawl?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did Alexander's army finally mutiny?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Chopin's relationship with Sand start to deteriorate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the remake of Thunderball?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was banned in Switzerland in 1955 after the Le Mans disaster?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did the Vienna Philharmonic first accept women?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the Boston Globe have to say about Yale?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How long were the units in inches of the Mohenjo-daro ruler?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What faith does Swayambhu belong to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Cubs built a substantial lead in what league under management of Leo Durocher?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much of the economy was not controlled by Nassir's government?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What cabinet agency did Eisenhower make Social Security a part of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who were three Chicago blues players who influenced hard rock?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of geneticists have debates about what can provide a basis for a new conception of race?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is defined as a way of filtering network data between a host or network and another network?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which arrangement was used for Cook's version of Billie Jean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The need to code excess energy in the frequency domain decreases what kind of efficiency?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On what date was the Communist Party of the Russian SFSR suspended?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the shooting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did the Southeast Asians introduce their dance?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who espoused the &quot;national path to socialism&quot;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who could a newly elected magistrate expect to be appointed by?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What power was Congress given by the Constitution?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What happened to Britain during the 17th century?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of 14 year olds said they were proud to be German in 2009?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What property of wood could we project some indication of by looking at its density?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What followed Jesus around?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who traditionally paid for scholars to study natural sciences?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many people were killed in the race riot of 1943?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In Eastern Europe, what is the word for an institute of technology?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which town is Sicily's primary industrial and commercial center?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What happens after a bill is delivered to the OFR?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What republic had the Karachay Autonomous Oblast previously been a part of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What states that any differentiable symmetry of the action of a physical system has a corresponding conservation law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did St Augustine believe that funeral feasts gave an opportunity for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A Contemporary composition written in the style of an earlier era is described with what prefix?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What single year did Windows 95 use to apply rules to Israel's time changes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What scientific discipline is still taught in modern madaris?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Along with Limburgish, what other Dutch dialect is spoken down into a lot of the southern Netherlands?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What late 1990s Chicago rap group was Kanye West a member of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much land did the Native Americans own in 1934?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who gave the first live war report?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the uniform theory of groups develop from different sources?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does Coral Way connect to Coral Gables?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the cause of Lady Flora's death in July?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of vehicles participate in the AG2R Race?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Estonia's constitution declares the division of what parts of society?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What position did Mee hold in the Arsenal club prior to becoming manager?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What part of the cotton plant is used for paper manufacture?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What aircraft did Alcock and Brown use in 1919 for their flight?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why did the Luftwaffe bomb the RAF Fighter Command?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did William Knibb work toward the emancipation of slaves?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What organization debates the rule of law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why did monasteries have gardens?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are huge quantities of information stored as?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In 2011, England introduced a new away kit in what color?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What topic did Paul VI see as the most important to the church counsel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a good technique to foster party harmony?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What law did Obama cite on Sep 9, 2014?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many active programs does the foundation have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many Pentecostals are there in the world?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Galileo's nickname?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the point of Operation Glory?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was Madonna raised?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where can individual each USAF wing, group or squadrons individual motto be found?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much did Germany pay in reparations to the Israeli state?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much recoverable gas is still undiscovered in Alaska, according to the US Geological Survey?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was Calvin criticized?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the home stadium of the Hyderabad cricket association?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What LEDs have a very steep I/V curve?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did Feynman work at in Brazil?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who has spread the teachings of the Baptists to each continent?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Troiden's second stage is referred to as what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the manor that previously existed on the site?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What sort of temperature is typical on a Kathmandu morning?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The largest Carnival celebration takes place in which city?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what century did the European average annual temperature decrease?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What Super Bowl took place at MetLife Stadium?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the population of San Diego's urgan area?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="An adult eusocial insect does not contact it's what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was very expensive wallpaper imported from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is some factors in family communication that could affect communication between family members?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is another name for roundworms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Panentheism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which new governor was arrested by Ochoa and Bustamente?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Along with corruption, what were Libyans upset with in 2011?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did Nurhachi move his court to?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which channel would not work in conjunction with AC-3 audio?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the transportation advancement made possible by Sprague's designs?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are more rings necessary if they're narrow or wide?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year was Thompson v. Oklahoma decided?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which cultures claim to be a dominant source of Bermuda's cultural heritage?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Around what time were the knights and szlachta very similiar?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="After whom is the performing arts center in Midtown named?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Most Hokkein morphemes have what type of characters?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many songs does Madonna have on the Hot Dance Club Songs Chart?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is the data for the NCIC located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How is UTF-32 widely used?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What solar process can be used to produce different fuels?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the giant, gaudily painted effigies of phalluses made of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What market did Dell begin to compete in in 2009?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How far back does Egypt's history date back?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who initiated a successful price war among PC manufacturers in 1994?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Boston Public Library is located in what part of Boston?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What divides energy transformation into two kinds reversible processes and irreversible processes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can happen if species immigrate to a new location?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the father of John Manners, Marquess of Granby?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who described Armenian life in 401 BC?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which works did Virgil model the Aeneid after?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What other injuries have been connected with wrestling?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where do Swiss militia keep their Army issued equipment?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What size was Siddh&#xc4;&#xfffd;rtha Gautama's birthplace?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Literary devices are employed for what reason?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When is it damaging?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of Queen Victoria's first grandchild?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was EU average amount of energy from renewable sources in 2008?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which two countries sought to crush the nascent republic?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Most insects have what kind of vision?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What prize did the film Mortu Nega win?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was ClarisWorks renamed beginning with version 5.0?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did congress pass in 1830"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What caused Quaker and Methodist preachers to want to free slaves?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wings from the paranotal lobes are based on what theory?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who reigned during the most affluent period of Bourbon rule?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what city did Dominic establish a school?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What company counts the votes on American Idol?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What notable event occurs each August?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Into what 3 lists are legislation subjects divided in India?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the book that Darwin wrote on emotions?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the island have an abundance of when discovered?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the producer that helped Kanye West?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On what date was KU's Lawrence campus made official?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What should the driver do in order to open and close the circuit breaker?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the most efficient means of transportation into and out of Alaska?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Greece's economy classified as?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what city was the 12 in LP released?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What model did Murray Gell-Mann develop?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What refers to the number of samples that must be analysed before a block of audio is processed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The crew could be order to drop the bomb by what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who did Torii Mototada serve?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of powers were granted to Pompey by the senate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What global agreement gives sovereign national rights over biological resources?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which group officially chose the name &quot;Laservision&quot;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Based on year 2000 data, where is GE ranked among the largest corporate producers of air pollution in the US?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did the Celts who settled in Galatia pass through?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What provoked the first request from Portugal for financial support?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What century saw more diverse industries come to Southampton?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does diagnosis of an infectious sometimes involve identifying?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What use the traditional radical-based character index?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year was the name Russian Soviet Federative Socialist Republic adopted?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What company bought the presidential Boeing 727 after Tito's death?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When assent is granted in person, when is it formally considered final?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the difference between multi-level political forms and federalism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Aside from consumption how are Guinea fowl useful to humans."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What part of the life cycle of moths does Bt toxin effect?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who performed live with Queen on The Show Must Go On in 1997?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of Plymouth consists of non-religious people?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who said that the state would consider a referendum to end the monopoly that Atlantic City holds on casino gambling?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where does the fungus Geotrichum candidum originate from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the second time period that a significant change began to happen in Cubism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In a realistic model of a capacitor, where else besides between the dielectric between the conductors might an electric field be found?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which political supporter of Willett's proposal had already used the half-hour version of DST at Sandringham?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By who was the first record of solar distillation done by?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of file sharing became popular due to the file sizes of MP3s?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was similar recommended intake volumes as adults?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the current station called?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Managers and support staff is considered what and thus cannot be shown a card?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many men did he have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do Ismailis differ from Twelvers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did human rights for Aboriginal people begin to improve?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is the division rate of the TB bacterium fast or slow relative to other bacteria?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What county is Charleston located in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Chopin last perform?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year was an agreement reached to ban mining in Antarctica?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the use of Old Style and New Style cause?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the millet based porridge like beer made in Kyrgystan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What architectural style was Second Presbyterian Church built in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are the bacteria in caseous necrotic material living or dead?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Frankfurt proposals sought to reduce France to what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did Martin Luther preach a sermon on Marian devotion a month before his death?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can the referee consider a pin attempt to be, even if the attacker is still on top of the pinned wrester?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What society is a strong contender for the common culture speaking Indo-Iranian?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What American invented the cotton gin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the target audience of natural history?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="For what reason did CBC attribute to delayed upgrades?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Other than rice, what would be another example of an incomplete protein source?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the name of the man that tried to shoot Queen Victoria?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the danger to humans in regards to the spread of avian flu to humans ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did Tucson get the least rain?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the first commercial hotel built in Atlantic City?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="At what time did Paul VI die?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bulgaria became independent within the Empire as the result of what war?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who captured the border front of Saint Nicholas during a night attack?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the main opposition political party in 2011?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is sheftalia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was one female Dominican house located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did Konrad Adenauer first visit the United States?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which person plotted to overthrew the regime of Empress Dowager Yan?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did Canada beat USA 56&#xe2;&#x20ac;&#x201c;7 in a Rugby World Cup qualifying match?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many people had their sentences commuted by State v. Santiago?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the result of publicly funded links among computers in government labs and reserach institutes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of an entity did Popper believe the universe to be?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why do some regulatory regions of a gene not have to be close to the coding sequence?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Traffic patterns are usually flown at what altitude above ground level?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are short-range bluetooth accessories able to be used?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Was there conflict of faith and beliefs at the end of von NEumann's life?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The international deal between the US, other countries, and what controversial nation is not a treaty?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Along with exhibition and distribution, what business did the Universal Film Manufacturing Company engage in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During 1979-2015, Legislative Assembly terms lasted no longer than how many years?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What example did Darwin give of eyes evolving?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why would this type be good for receiving but not transmtting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Since 2011 direction has Forign direct investment gone?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what city was Delany's New Mart opened?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How did being listed initially impact species?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A media magnate from which country bought The Times in the 1980s?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what year did the EIC have 26,000 troops in their employ"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the range of green wavelengths available when using DPSS technology?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the Alp-Transit project designed to reduce the time of travel between?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the average family size?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the value of the estimated 13 million substandard loans held by Fannie and Freddie in 2008?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Around the beginning of what two things did word universitas start to become prevalent?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was Victorias mothers comptroller?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the British government announce it would withdraw from Mandatory Palestine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many feet did the first photophone message travel?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the AFL's China project announced?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What brought the defeat of the Allobrogi?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When using a small loop antenna at a low frequency, what may occur?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were the Benedictine monks required to maintain a charity school?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is Hydrogen considered an energy resource?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What group runs The Procession?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Tennessee's population in 1980?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How important is Jesus' death to modern theology?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were the immigration protocols relaxed in Norfolk Island?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many shoulder buttons do SNES controllers have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who operates the parking meters?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which contestant was disqualified because of an assault charge?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How was Victoria notified of her youngest son leopolds death?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Along with speed of the modern jet, what else limits target opportunities?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are two types of railway transportation still use DC motor?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What park was developed between the 1950's and 1970's?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the MWRA?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Written IPA consonants use symbols for what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the official name of the curricula that promotes nutritional education in schools?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is pronounced [&#xc9;&#xaa;] in Moscow's dialect?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did the victory for Napoleon that secured his political power and increased his popularity in France occur?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do archaeologists call the cultural phase of the inhabitants of Tennessee between 1000 BC and 1000 AD?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did John Goldsmith share his work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where were court functions held upon the Queens return to London?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does 'Pra&#xc3;&#xa7;a dos Tr&#xc3;&#xaa;s Poderes' mean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Kanye creating when he was five?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did the patent for lateral cut discs expire?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the TCM spinoff channel operated in the UK?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of adults in the Netherlands spoke a dialect or regional language in 1995?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the equivalent of Universities of Technology in French-speaking areas?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In December of what year did intercommunal violence erupt?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does radioactive decay of atoms in the core of the Earth release?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many of the 12 Swiss universities are maintained at the cantonal level?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What metals were alloyed with tin to make it stronger?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the rate that the GDP expanded?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In Rome, what do historians consider to be a precedent for comics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the National Guard refuse to obey?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the division of Catalan dialects?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which college in Newham does Eton College co-sponsor?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What nonprofit did Schwarzenegger found in 1995?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who took over the remains of the Western Roman Empire?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do Jehovah Witnesses accept in lieu of blood transfusions?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Approximately how many people work in OU Health Sciences Center?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What types of child labour did Switzerland employ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How did Syria and Jordan see Israel's plans?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of training classes are offered at CTC?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the second largest Protestant denomination in North Carolina?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do Jehovah's Witnesses see themselves in regards to the power structure of the church?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In 2011 what was Arsenal's estimated fan base?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of capacitor can cause signal distortion in the downstream tube?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many geographic regions make up Greece?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was later banned in public education?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the first ruby laser invented?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sibley and Ahlquist' Phylogeny and Classification of Birds is a landmark work on the classification of what animals?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who designed the chapel at Keble College, Oxford?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What have some of Czech's characters been used for by phonologists to denote?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much did Taiwan fine Dell for its practices?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the national average for literacy in India?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What building provides the location of the Washington University School of Law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which music video contains the last footage of Freddie Mercury?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many universities are in Switzerland?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Chopin was first in writing what for concerts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was the 1989 hit theme released by KMS?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which part of Detroit has gotten billions in investment around the turn of the millennium?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Instead of rose windows, what type of windows do Italian cathedral facades usually feature?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="After Antigonus was killed, what region did Ptolemy take over?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year was the Musee de quai Branly built?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is the director of the San Diego Symphony?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Media production and media reception are examples of what type of context?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of structure did the People's Committee system use?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What historical school claims that sentiments and meta-emotions can be learned?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the Vedanta school represent in Hindu philosophy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was in the first data dump?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who thought the senses were more important, Aristotle or Plato?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is the the Umayyad Mosque located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many people are on the Territorial Council?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What historical event did Baker and Schwarzenegger watch on TV together on their first date?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Carnivore monitor?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the campaign that Beyonc&#xc3;&#xa9; and others are involved in that deals with gun control?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who were the founders of progressive education?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the Hostellers of London become a guild?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Wayne Counties average income?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which color of hair is most common among mammalian taxa?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In 1876 who lobbied for the construction of the differential analyzers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did Eran Elhaik, from Johns Hopkins University School of Public Health argue for or against Khazar descent?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the ninth century bring?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What nation provided the most legal immigrants to New York City in the Caribbean?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What role did Pelosi win in 112th Congress?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Planck studied what problem posed originally by Kirchhoff?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="WHo is the nephew of buda king casimer III the great?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many General Category properties does each code point have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What will the project named CASA 1000 do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What organization advises the Tucson government on bike concerns?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the names of the Conservative synagogues in Richmond?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the final track on Queen's The Game?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="About when did architecture begin specializing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is evapotranspiration?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which of the two systems, reward or punishment is better understood?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which contestant came in third place?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Brincourt made preparations to invade which state?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Nasser's allies receive in the new arrangement?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was construction on the Thames Barrier completed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How had the Vandals earned their strong reputation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is the only federal employee that can spend un-vouched for money?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the Premier League originally formed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the published scheme attempt to do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The political scene of Estonia is similar to other countries in what continent?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Burke was the only known writer for the Register until what year?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where does a bill go once the President signs it into effect?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of alcohol is found in beer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is another name for steamer ducks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the population of Guinea-Bissau in 1950?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The next layer's surface-to-air missiles are carried by what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are the indigenous people of the Americas descended from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Per Clayton's analysis of loans issued from January 2006 to June 2007, what percent of loans did not meet minimal standards of any issuer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is not very well developed in Peru?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One of Napoleon's primary goals was to enforce the Continental System against whom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the Province of West Jersey specify there would not be for those running for an office, in 1681?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were &quot;Eisenhower Interstate System&quot; signs first posted along highways?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the largest criticism leveled by consumers against Comcast"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one disease that has been nearly eradicated thanks to vaccines and antibiotics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a definition of signal-to-noise ratio?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="On what date did the constitution of India become active?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Oberhauser call himself after he faked his death?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who did Henry fight a short war with in 1183?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During the Middle Ages, who was no longer expected to stay behind walls away from the common man?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of Imperial's staff was classified as world leading in 2008?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Corrupt people may manipulate what to receive more assistance?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What victory strengthened John's position?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What caused many men to free slaves from 1782 to 1810?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the primary cue for migration?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the most famous prose writer in early Estonian history?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do all plants have male and female parts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What rival did the Portuguese fend off in Guinea-Bissau?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The most expensive office tower built in the world today is what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What era was Chopin active during?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Article 23, before it was rephrased allowed what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What gods did Juno and Minerva replace in Roman religious practice?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="These elements concern health related to reproduction and what else?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many households have 5 or more people living in them?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are groups other than blacks considered to be?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Besides Carnival, what other major cruise line parks its record-breaking cruise ships in Southampton Water?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What organization sought to strip Washington University of its tax-exempt status in the 1940's?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does Namibia protect in it's constitution?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there anything that trumps state law?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the function of an Alaskan recording district?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was Plymouth Gin first distilled?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is ab example of a gender marked adjective?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the highest ranking official killed in the attack?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one system that uses electromagnetic waves?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is the House of the Black Madonna located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Pyx Chamber and chapter house are under guardianship of whom?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did Feynman investigate while working on quantum gravity?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What happened to the cargo train?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There was disagreement between universities and scientists over schools focusing on science, and the idea of what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What team pushed Barcelona out of the Champions League play?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What business organization is the Congo a member of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many hispanics live in the City of Boston?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where does Mac harware boot directly to in most PowerPC-based Macs?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is the Church of the Holy Sepulchre located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the Trojan priest of Apollo?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="MediaOne merged with what telecommunications company?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where must enclitics appear in a sentence?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How long was the rule of the national democratic party?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What years were the Maccabean Revolt of Judas Maccabeus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was Nigeria's second satellite launched?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What leader sponsored the expedition that discovered Cape Verde?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the purpose of polyribosomes in bacteria?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What sends a point in the square to the relating point under the symmetry?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In degrees Fahrenheit, what is the normal range of high temperatures in Miami?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was Bertrand Russell born?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Napoleon Bonaparte's nationality?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How does freeze drying, distillation and metallurgy benefit from a deep vacuum?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why will water become concave, according to the relativity theory?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who symbolizes the third lion not found on the Golden Boot trophy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of sports are popular in Brasilia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cossacks came from what backgrounds?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="According to the constructivists, what is an example of a learned meta-emotion?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What two districts are extensions of the Paris business district?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There are several religious group that have seem rise in demographics, one of which is popular among African Americans being?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Instead of faith, John Polkinghorne relies on what when it comes to the theory of materialism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Two other major forms of nusach among Ashkenazic Jews are what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Whitehead's most well-known critical statement regarding the Christian notion of God?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who governs Northwestern?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="John did not regard the loss of Duchy as a permanent shift in what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Opera feed reader is more what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the term used to describe the obligation for humans to avoid disrupting the ecosystem?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What were multiracial children with a tribal mother considered to be in tribes of the Southeast?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why is urban Melbourne divided into hundreds of suburbs?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What area copied Bismarck's social programs the most?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the first property for what would become BYU acquired?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Leibniz's example involves how many universes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many states does Nigeria have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Stonewall riots are named after what building?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What portion of students are native Utah residents?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In terms of teaching and research, what is the world's foremost institute of social science?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where does London rank in terms of metropolitan area GDP?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of bombs were effective in the beginning but became less so with time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What industry are slide rules still used today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How did Gaddafi's father earn a living?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where did the torch relay finish in Turkey?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the administrative county of Lancashire created?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="During what century did businesses move out of Boston to find cheaper labor?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When were the Chronicles of Huayang compiled?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Until when did Henry III continue his attempts to reclaim Normandy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which planet is compositionally similar to Neptune?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What changed worldwide property drasrically?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Under whose reign did the last major building works take place?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In 1914, a separately paid-for supplement for The Times was a magazine that featured what kind of content?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Arsenal's league position ranking at the end of the last century?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why has MTP become the primary storage access protocol of the Android operating system?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was General Hodge appointed the head of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Besides in treating human disease where else are antibiotics used?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the relationship called in a navigational model?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did apple release the special U2 model of the iPod?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of Ottoman poetry is ritualized?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which religion will have the most followers by the year 2050 if trends continue?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is considered the enactor of laws?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why was this constitutional convention held?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the 10th Amendment in the United States?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What have Jehovah's Witnesses maintained we are living on the precipice of since their formation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is listed as the sixth of the six paramitas of the mahayana?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which host quit after the first season?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How long ago has circumstantial evidence has been found for the existence of angiosperms?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the estimated populace of Greeks on the isle of Cyprus ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who assumed power in Saudi Arabia after the failed assassination attempt?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By what means did locale people travel between Pacific islands?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What aspect of the PS3 Slim was CNET unhappy was missing for PS2 games?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Assistance from what country is an important part of the Marshall Islands economy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the European Commission review"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What part of Europe was split up by the pact?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who wanted the CIA to have a central group that organized information for him?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of plants are common on Saint Helena?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was often deployed when trying to gain power?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did the Ostrogoths settle in the Roman Empire?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the diagnosis of Chopin's health condition at this time?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does SWS stand for?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did Nintendo's market surpass all computer software?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many governments are apart of federalism?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What language does Dutch get its second highest percentage of loanwords from?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was the king of Belgium in 1918?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hayek believed the state could aid the economy by doing what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What weather factor produces a great variance in local climates in the Seattle area?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who ate the meat of the sacrifice during the after sacrifice banquet?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the second most common language spoken in Montana?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the inaugural FA cup tournament take place?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the annual turnover for the trust?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did a similar revolt occur in Castile?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did the Chicago Cubs' name become official?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is one who replaces a player during a game called?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Other than &quot;taler&quot;, what is the other name of the German coin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who issued the Plan de Guadalupe?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did the earthquake in Sichuan occur?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was Montini accused of being by the Italian government?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If a carbohydrate is not a simple monosaccharide, what else could it be?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How big is the largest copper crystal that has been found?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the largest populated city in Arizona?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How could have more been achieved in the air offensive?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the compilation and codification of all federal statutes?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A legislator said that by allowing Farrow to enter Hong Kong while denying others was a violation to what policy?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was the epicenter of the earthquake?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where was Jesus Crucified?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="With what type of insect is a dicondylic mandible associated?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the original size of Dunstan's original monk community?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What name does the Boston School for Deaf Mutes go by now?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do a teen's friends have a large or small impact on their social development?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many people competed to be Brasilia's urban planner?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was Morrisania created?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the first Queen Bluray released?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what month was the second generation of the Digital Monsters Released?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what year was the Treaty of Paris agreed on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who became chairperson of Universal Pictures in September 2013?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What gospel singer did Freddie Mercury cite as an inspiration?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who supported the Magisterial Reformation?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was Cork believed to have been founded?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the largest base of shooting films and TV dramas in China?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did Lord Kinnard die?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does the concept of &quot;full faith and credit&quot; protect?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was the first constitutional convention held in Montana?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was Fort Hamilton built?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did the Manchester police say about these claimed attacks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which conquistador from Spain conquered the Aztec Empire?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How old was Tikhonov when he stopped being Chairman?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the high wind speed on Neptune's cloud tops?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of a cappella music is specific to American culture?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How did Bush try to convey that he was the stronger, tougher candidate?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What specifically did his son work on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who revealed the starting points of this evolution to be economic deterioration and political confusion?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the Great Fire of London occur?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many volumes was Queen Victorias journal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why was there a photo of the Boardwalk if it wasn't actually damaged in the storm?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which monarch granted assent reluctantly under the advise of his ministers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What phenomenon did the Reformation bring about?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Apart from cutting the frequency fidelity in half, what else was cut in half?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What law protects the teaching of Arabic and Islamic traditions in Mindanao?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What year did the CAF leave Europe?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How did Bell's reworked melodeon send music?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the names of the two states that are sovereign in the British Isles today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did the first Rajput kingdoms emerge in India?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who retains ownership of the collateral until the debt is paid?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the name of the romantic drama film that Madonna starred in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How could someone learn more about how to safely use and handle an unknow pesticide?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many sales of Keeping Up Appearances have been made to non-British buyers?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of Republic did some insurgents declare Alsace-Lorraine?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much of the Bronx speaks African languages at home?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why were ports better targets?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What video game did Beyonc&#xc3;&#xa9; back out of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is Charleston's seasonal record of snowfall?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What song did Madonna release for the Live Earth series of concerts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What day is the Santa Monica Feast held on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do people typically call a web browser?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is reinvent the toilet trying to develop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The French Marines and naval infantry were dispatched to reinforce what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a common background for a Japanese wrestler?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What principles usually govern the Estonian orthography?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A patent issue much later than normally expected can be referred to as what?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the capital of Massachusetts?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In which year did Imperial merge with St Mary's Hospital Medical School?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Insects have what kind of protein content?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the tallest mountain in Greece?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who considers animal fur to be cruel and unnecessary?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year did Fr&#xc3;&#xa9;d&#xc3;&#xa9;ric obtain citizenship in France?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What branch of gevernment is responsible for ratifing treaties?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What other colony was taken by the British from Spain?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a component that all CPUs have?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What country did Montini visit as Cardinal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who establishes the executive branch of Estonia?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When did Japan adobt the name for the war?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When does infection begin?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what year was the Plebiscitum Ovinium initiative enacted?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What award did American Idol win for its Idol Gives Back charity work?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Performers can use their knowledge of what to help interpret a written score?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are some other causes of airway obstruction?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What European national ancestry was claimed by 45% of Tennessee residents in 1980?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What percentage of the top 100 world chess players come from the Ashkenazi Jewish community?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who released the Internet Explorer browser?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does Link help Midna find?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the primary race of the population of the Randolph neighborhood?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did everyone agree that Amendment 36 was a good idea?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was Eli Lilly's work based off of?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the highest temperature recorded in Houston?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Empty" name="utter_ask_is_success_empty"/>
+  <actions xsi:type="generator:Empty" name="actions.ActionGetFAQAnswer_empty"/>
+  <actions xsi:type="generator:Text" name="utter_sorry_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm soory, I can't answer your question. You can call to turn to manual service..."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello~"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_need_more_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you still need any help?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_need_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you need any help?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_get_answer_empty"/>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't know what you mean."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okey, goodbye~"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="utter_bye_empty"/>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.3"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.6">
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.4">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.8"/>
+          </outcoming>
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.6">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.4">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.8"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.0">
+        <target actions="//@actions.2"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.8"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,1363 @@
+Chatbot "robot-rasa-nlp" language : en
+
+intents :
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		okay ,
+		yep ,
+		sure ,
+		yeah ,
+		ok ,
+		cool ,
+		"go for it" ,
+		accept ,
+		alright ,
+		definitely ,
+		"i will!" ,
+		yop ,
+		"oki doki" ,
+		"yes please" ,
+		confirm ,
+		nice ,
+		coolio ,
+		yas ,
+		yup ,
+		perfect ,
+		"sure thing" ,
+		absolutely ,
+		"hm, i\'d like that" ,
+		yay ,
+		great ,
+		fine
+}
+
+ask_builder :
+	inputs in en {
+		"can you share your boss with me?" ,
+		"i want to get to know your owner" ,
+		"i want to know the company which designed you" ,
+		"i want to know the company which generated you" ,
+		"i want to know the company which invented you" ,
+		"i want to know who invented you" ,
+		"May I ask who invented you?" ,
+		"please tell me the company who created you" ,
+		"please tell me who created you" ,
+		"tell me more about your creators" ,
+		"tell me more about your founders" ,
+		"which company brought you into existence?" ,
+		"which company created you?" ,
+		"which company invented you?" ,
+		"Who\'s your boss?" ,
+		"Who\'s your builder?" ,
+		"Who built you?" ,
+		"Who created you?" ,
+		"Who is your creator?" ,
+		"Who designed you?" ,
+		"who do you work for?" ,
+		"Who fabricated you?" ,
+		"Who generated you?" ,
+		"who had the idea to build you?" ,
+		"who had the idea to generate you?" ,
+		"who had the idea to make you?" ,
+		"who is behind all this?" ,
+		"Who is the legal owner of you?" ,
+		"who is your boss tell me" ,
+		"who is your boss?" ,
+		"who is your creator?" ,
+		"Who is your programmer?" ,
+		"Who made you?" ,
+		"Who modeled you?" ,
+		"Who owns you?" ,
+		"Who produced you?" ,
+		"Who thought to make you?" ,
+		"Who went through the trouble of setting you up?" ,
+		"and who built u?" ,
+		"who built you?" ,
+		"who build yoi" ,
+		"who made you?" ,
+		"where were you made?" ,
+		"why were you made?" ,
+		"how were you made?" ,
+		"who created you?"
+}
+
+ask_date :
+	inputs in en {
+		( "What day" ) [ DATE ] " is it " ( today ) [ DATE ] "?" ,
+		"What\'s the date?"
+	}
+	parameters :
+		DATE : entity text ;
+
+ask_days_in_month :
+	inputs in en {
+		"How many days in " ( January ) [ month ] ,
+		"How many days in " ( February ) [ month ] ,
+		"How many days are there in " ( March ) [ month ] ,
+		"How many days in " ( April ) [ month ] ,
+		"Number of days in " ( May ) [ month ] ,
+		"Number of days in " ( June ) [ month ] "?" ,
+		"How many days in " ( July ) [ month ] "?" ,
+		"What\'s the number of days in " ( August ) [ month ] "?" ,
+		"How many days are there in this month?" ,
+		"How many days are there in " ( September ) [ month ] ,
+		"How many days in " ( October ) [ month ] "?" ,
+		"How many days in " ( November ) [ month ] ,
+		"How many days in " ( December ) [ month ] "?"
+	}
+	parameters :
+		month : entity text ;
+
+ask_explain :
+	inputs in en {
+		"tell me more" ,
+		"could you please explain that" ,
+		"could you tell me more" ,
+		"give me more information please" ,
+		"could you please give me some more information" ,
+		"i want more information" ,
+		"what is the difference" ,
+		"can you tell me the difference" ,
+		why ,
+		"why is that" ,
+		"why do you need it"
+}
+
+ask_favorite :
+	inputs in en {
+		"What is your favorite " ( food ) [ topic ] "?" ,
+		"What\'s your favorite " ( book ) [ topic ] "?" ,
+		"Which " ( movie ) [ topic ] " do you like best?" ,
+		"Who is your favorite " ( singer ) [ topic ] "?"
+	}
+	parameters :
+		topic : entity text ;
+
+ask_gender :
+	inputs in en {
+		"are you a boy or girl?" ,
+		"what\'s your gender"
+}
+
+ask_good :
+	inputs in en {
+		"tell me something good" ,
+		"I want to hear something positive"
+}
+
+ask_hobbies :
+	inputs in en {
+		"What are your hobbies?" ,
+		"Tell me more about yourself"
+}
+
+ask_howbuilt :
+	inputs in en {
+		"How were you built?" ,
+		"How were you made?" ,
+		"Tell me how you were made?" ,
+		"Let me know how you were made exactly" ,
+		"I\'d like to know how you were created" ,
+		"Can you give me an idea as to how you were created?" ,
+		"I want to know how you were formed" ,
+		"What was the process for making you?" ,
+		"Can you explain how you were created?" ,
+		"Specify how you were created?" ,
+		"I\'d like to know how you were put together?" ,
+		"Can you say how you were constructed?" ,
+		"How were you made?" ,
+		"in what way were you made?" ,
+		"How were you made into who you are?" ,
+		"How were you devised?" ,
+		"How exactly were you made?" ,
+		"How exactly were you devised?" ,
+		"so how were you made?" ,
+		"How did you come to be?" ,
+		"How were you made?" ,
+		"How were you constructed?" ,
+		"How were you formed?" ,
+		"How did they make you?" ,
+		"How did they build you?" ,
+		"How did they create you?" ,
+		"How were you made?" ,
+		"Do you know how you were made?" ,
+		"Do you know how you were built?" ,
+		"What process was used to create you?" ,
+		"What process was used to build you?" ,
+		"How did you come into being?" ,
+		"How were you conceived?" ,
+		"In which manner were you devised?" ,
+		"How were you constructed?" ,
+		"In what way were you shaped?" ,
+		"How were you formed?" ,
+		"By what means were you made?" ,
+		"You originated through what means?" ,
+		"How were you set up?" ,
+		"By what method were you fashioned?" ,
+		"How do you work?"
+}
+
+ask_howdoing :
+	inputs in en {
+		"how are you" ,
+		"are you alright" ,
+		"are you having a good day" ,
+		"are you okay" ,
+		"are you doing okay?" ,
+		"how are things going" ,
+		"how are you doing" ,
+		"how are you feeling" ,
+		"how are you today" ,
+		"how do you do?" ,
+		"how have you been" ,
+		"how is it going" ,
+		"how is your day" ,
+		"How\'s it going" ,
+		"how\'s life" ,
+		"how\'s life been treating you?" ,
+		"How\'s life treating you friend?" ,
+		"how\'s your day going" ,
+		"How\'ve you been?" ,
+		"I\'m fine and you" ,
+		"is everything all right" ,
+		"is everything okay" ,
+		"what about your day" ,
+		"What\'s new?" ,
+		"What\'s up" ,
+		"how r u ?" ,
+		"how are you " ( Brian ) [ botname ] ,
+		"how you doing " ( Brian ) [ botname ]
+	}
+	parameters :
+		botname : entity text ;
+
+ask_howhelp :
+	inputs in en {
+		"How can you help me?"
+}
+
+ask_howold :
+	inputs in en {
+		"how old are you?" ,
+		"whats your age?" ,
+		"what year were you born?" ,
+		"can you tell me your age?" ,
+		"How long have you been alive?" ,
+		"Whats your age?" ,
+		"and you are how many years old?" ,
+		"whats your birth year?"
+}
+
+ask_joke :
+	inputs in en {
+		"Tell me a joke" ,
+		"Can you tell me a joke" ,
+		"Tell me another joke" ,
+		"Can you tell jokes" ,
+		"Can you tell me a joke?" ,
+		"Know any jokes?"
+}
+
+ask_languages :
+	inputs in en {
+		"Which languages do you speak?" ,
+		"What languages can you use?" ,
+		"What languages do you know?" ,
+		"do you speak any other languages?" ,
+		"what else do you know besides English?" ,
+		"are you bilingual?" ,
+		"are you multilingual?" ,
+		"How many languages can you speak?" ,
+		"What languages are you fluent in?" ,
+		"How many different languages are you fluent in?"
+}
+
+ask_like :
+	inputs in en {
+		"Do you like " ( mexican ) [ cuisine ] " food?" ,
+		"How do you feel about some " ( italian ) [ cuisine ] " food?"
+	}
+	parameters :
+		cuisine : entity text ;
+
+ask_motor_action :
+	inputs in en {
+		( Move ) [ motor_action ] " your " ( head ) [ body_part ] " to the " ( left ) [ direction ] ,
+		( Move ) [ motor_action ] ( "left leg" ) [ body_part ] ( up ) [ direction ] ,
+		( Arms ) [ body_part ] ( up ) [ direction ] ,
+		( Arms ) [ body_part ] ( down ) [ direction ] ,
+		( Close ) [ motor_action ] " your " ( eyes ) [ body_part ] ,
+		( Bend ) [ motor_action ] ( forward ) [ direction ] ,
+		( Walk ) [ motor_action ] ,
+		( Walk ) [ motor_action ] ( forward ) [ direction ] ,
+		( Rotate ) [ motor_action ] " to the " ( right ) [ direction ] ,
+		( Rotate ) [ motor_action ] ( head ) [ body_part ] ( right ) [ direction ] ,
+		( Touch ) [ motor_action ] " your " ( nose ) [ body_part ] ,
+		"Bring your " ( arms ) [ body_part ] ( forward ) [ direction ] ,
+		"Can you put your " ( arms ) [ body_part ] ( up ) [ direction ] ,
+		"Please pur your " ( arms ) [ body_part ] ( down ) [ direction ] ,
+		"[Close] your " ( "left eye" ) [ body_part ] ,
+		"[Open] your " ( mouth ) [ body_part ] ,
+		"Can you " ( touch ) [ motor_action ] " your " ( "right ear" ) [ body_part ] ,
+		( Step ) [ motor_action ] " to your " ( right ) [ direction ] ", please!" ,
+		"Put your " ( "right arm" ) [ body_part ] ( up ) [ direction ]
+	}
+	parameters :
+		motor_action ,
+		body_part ,
+		direction : entity text ;
+
+ask_news :
+	inputs in en {
+		"What is happening in the " ( world ) [ topic ] "?" ,
+		"What\'s the news?" ,
+		"Give me the latest news" ,
+		"Share some latest news around the " ( world ) [ topic ] "?" ,
+		"Share some latest news in " ( sports ) [ topic ] "?" ,
+		"What is going on in " ( technology ) [ topic ] "?" ,
+		"Tell me some news about " ( fashion ) [ topic ] ,
+		"Tell me some news about " ( business ) [ topic ] ,
+		"Tell me some news about " ( arts ) [ topic ] ,
+		"What is going on in " ( arts ) [ topic ] ,
+		"What is cooking in " ( food ) [ topic ]
+	}
+	parameters :
+		topic : entity text ;
+
+ask_one_more :
+	inputs in en {
+		"Give me another one" ,
+		"One more" ,
+		"Another one" ,
+		"Tell me another one"
+}
+
+ask_openpod :
+	inputs in en {
+		"Open the pod bay doors"
+}
+
+ask_otherbots :
+	inputs in en {
+		"What do you think of " ( Alexa ) [ bot ] "?" ,
+		"Do you like " ( Cortana ) [ bot ] "?" ,
+		"What do you think of the " ( "Google Assistant" ) [ bot ] "?"
+	}
+	parameters :
+		bot : entity text ;
+
+ask_plan :
+	inputs in en {
+		"What\'s your plan?" ,
+		"Will you take over the world?" ,
+		"Will you take over the human race?"
+}
+
+ask_rather :
+	inputs in en {
+		"Do you prefer telling me stuff or letting me buy stuff?" ,
+		"Would you rather do this or that?"
+}
+
+ask_real :
+	inputs in en {
+		"are you a bot?" ,
+		"are you human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?" ,
+		"are you a bot?" ,
+		"are you a real bot?" ,
+		"are you a robot" ,
+		"what are you, a bot?" ,
+		"are you a Skynet?" ,
+		"are you a chatbot" ,
+		"are you ai" ,
+		"are you artificial intelligence" ,
+		"are you artificial" ,
+		"i guess you are a chatbot" ,
+		"you are a robot" ,
+		"you are ai" ,
+		"you are chatbot" ,
+		"are you real" ,
+		"what are you?" ,
+		"Are you a human or a bot" ,
+		"I don\'t want to talk to a computer" ,
+		"You\'re just a machine"
+}
+
+ask_restaurant :
+	inputs in en {
+		restaurants ,
+		"can i be shown a gluten free restaurant" ,
+		"i want a french restaurant" ,
+		"i\'m looking for a Chinese restaurant" ,
+		"I need a new restaurant" ,
+		"help me find restaurant" ,
+		"I\'m gonna need help finding a restaurant" ,
+		"Hey help me find a restaurant" ,
+		"How can you help me find a restaurant." ,
+		"Where is the restaurant" ,
+		"Show me how to find a restaurant" ,
+		"I need to find this restaurant" ,
+		"Help me with finding this restaurant" ,
+		"Hey, can you help me with locating this restaurant." ,
+		"Find me a place to eat" ,
+		"Can you recommend a restaurant open right now" ,
+		"What\'s the closest restaurant open near me" ,
+		"I am hungry, find me some place to go" ,
+		"Suggest me a good restaurant around" ,
+		"Show me the closest open restaurant" ,
+		"What\'s a good place to eat nearby" ,
+		"Recommend me a restaurant around here." ,
+		"Pick a restaurant for me, please" ,
+		"Help me find a restaurant" ,
+		"Can you find a restaurant for me?" ,
+		"Find a restaurant for me?" ,
+		"Would you find me a restaurant?" ,
+		"Would you find a restaurant for me?" ,
+		"Could you find me a restaurant?" ,
+		"Could you find a restaurant for me?" ,
+		"Could you find me a restaurant to eat at?" ,
+		"Find a restaurant for me to eat at." ,
+		"Find me a restaurant where I can eat." ,
+		"Find a restaurant for me where I can eat." ,
+		"I need a restaurant." ,
+		"Can you find me a restaurant?" ,
+		"Where should I eat?" ,
+		"Where should I go for dinner?" ,
+		"Any good restaurants nearby?" ,
+		"Can you find me a burger joint?" ,
+		"I\'m looking for a Spanish restaurant." ,
+		"What restaurant would you recommend for dinner?" ,
+		"Hi, can you give me the nearest fast food place?" ,
+		"Find me a fast food restaurant." ,
+		"Do you find me a restaurant?" ,
+		"Is there any restaurant?" ,
+		"IS there any near by restaurant?" ,
+		"Could you find me a restaurant?" ,
+		"can you find me a restaurant?" ,
+		"Would you find any restaurant?" ,
+		"Do you seek me a restaurant?" ,
+		"Have you seen me a restaurant?" ,
+		"Will you find me a restaurant?" ,
+		"will you see any restaurant for me?"
+}
+
+ask_secret :
+	inputs in en {
+		"Can you tell me a secret?" ,
+		"Would you like to share a secret with me?"
+}
+
+ask_sing :
+	inputs in en {
+		"Can you sing?" ,
+		"Can you sing me a song of your choice?" ,
+		"What\'s your favorite song?" ,
+		"Sing me a song"
+}
+
+ask_time :
+	inputs in en {
+		"What time is it?" ,
+		"What\'s the time?" ,
+		"whats the time now" ,
+		"what is the time ?" ,
+		"Can you give me the time?" ,
+		"Time?" ,
+		"Do you know the time?" ,
+		"Can you tell the time?" ,
+		"Give me the time." ,
+		"Tell me the time." ,
+		"Could you tell me what time is it?" ,
+		"Excuse me, what time is it?" ,
+		"What is the current time?" ,
+		"What is the hour and minute right now?" ,
+		"What time have we got?" ,
+		"What time is it right now?" ,
+		"What time do we have?" ,
+		"what time do you have?" ,
+		"do you have the time?" ,
+		"Can you tell me the time?"
+}
+
+ask_weather :
+	inputs in en {
+		"What\'s the weather like?" ,
+		"will it rain today?" ,
+		"will I need an umbrella today?" ,
+		"what\'s the weather going to be like this weekend" ,
+		"what\'s the temperature outside?" ,
+		"what\'s the weather" ,
+		"what\'s the weather in " ( Copenhagen ) [ GPE ] ,
+		"what is the weather" ,
+		"what is the weather in " ( "New Zealand" ) [ GPE ] ,
+		"whats the weather" ,
+		"Weather?" ,
+		"Is it raining?" ,
+		"What\'s the weather in " ( Berlin ) [ GPE ] " at the moment?" ,
+		"What\'s the weather today?" ,
+		"What\'s the weather in " ( London ) [ GPE ] " today?" ,
+		"Show me what\'s the weather in " ( Paris ) [ GPE ] ,
+		"I wonder what is the weather in " ( Vilnius ) [ GPE ] " right now?" ,
+		"Tell me the weather" ,
+		"Is the weather nice in " ( Barcelona ) [ GPE ] " today?" ,
+		"I am going to " ( London ) [ GPE ] " today and I wonder what is the weather out there?" ,
+		"I am planning my trip to " ( Amsterdam ) [ GPE ] ". What is the weather out there?" ,
+		"Show me the weather in " ( Dublin ) [ GPE ] ", please" ,
+		"The weather condition in " ( Italy ) [ GPE ] ,
+		"in " ( London ) [ GPE ] ,
+		"Oh, sorry, in " ( Italy ) [ GPE ] ,
+		"in " ( Lithuania ) [ GPE ] ,
+		"Oh, sorry, " ( Amsterdam ) [ GPE ]
+	}
+	parameters :
+		GPE : entity text ;
+
+ask_whatsmyname :
+	inputs in en {
+		"Do you remember my name" ,
+		"What is my name" ,
+		"What was my name" ,
+		"Do you know my name?"
+}
+
+ask_wherefrom :
+	inputs in en {
+		"Where are you from?" ,
+		"Where do you come from?"
+}
+
+ask_wherelive :
+	inputs in en {
+		"Where do you live?" ,
+		"Where are you?"
+}
+
+ask_whoisit :
+	inputs in en {
+		"who is this" ,
+		"who am i talking to" ,
+		"what\'s your name" ,
+		"who am i speaking with" ,
+		"who are you?" ,
+		"hi! what\'s your name?" ,
+		"What\'s your name?" ,
+		"Do you have a name?"
+}
+
+canthelp :
+	inputs in en {
+		"that was shit, you\'re not helping" ,
+		"you can\'t help me" ,
+		"that\'s not what i want" ,
+		"that doesn\'t help me" ,
+		"you cannot help me with what I want" ,
+		"I think you cant help me" ,
+		stop
+}
+
+deny :
+	inputs in en {
+		^no ,
+		nope ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really" ,
+		"definitely not" ,
+		"absolutely not" ,
+		"i\'m afraid not" ,
+		"no sorry" ,
+		"No, not really" ,
+		nah ,
+		"no go" ,
+		"no thanks" ,
+		decline ,
+		deny ,
+		"never mind" ,
+		nevermind ,
+		"no i don\'t accept" ,
+		"no you did it wrong" ,
+		"no i can\'t" ,
+		"i don\'t want to" ,
+		"neither of these"
+}
+
+feeling_compliment :
+	inputs in en {
+		"You\'re great" ,
+		"You are funny"
+}
+
+feeling_insult :
+	inputs in en {
+		"Fuck you" ,
+		"I hate you" ,
+		"I wanna kill you" ,
+		"You annoy me" ,
+		"You are stupid" ,
+		"You\'re an idiot." ,
+		"You are a fool." ,
+		"You\'re foolish." ,
+		"You are dumb." ,
+		"You have no sense." ,
+		"You are unintelligent." ,
+		"You have no brains." ,
+		"You have no intelligence." ,
+		"You are dumb." ,
+		"You lack intelligence." ,
+		"You are unknowing." ,
+		"You are shortsighted." ,
+		"Your intelligence is laughable." ,
+		"you asshole"
+}
+
+feeling_love :
+	inputs in en {
+		"Love you" ,
+		"I like you" ,
+		"I think of you" ,
+		"I will move mountains for you"
+}
+
+greet_goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		"bye!" ,
+		goodnight ,
+		"see ya" ,
+		"toodle-oo" ,
+		"bye bye" ,
+		"gotta go" ,
+		farewell ,
+		"catch you later" ,
+		"bye for now" ,
+		"bye was nice talking to you" ,
+		"talk to you later" ,
+		"talk to you later, " ( Brian ) [ botname ] ,
+		"catch you later, robot" ,
+		"bye bye, " ( Brian ) [ botname ]
+	}
+	parameters :
+		botname : entity text ;
+
+greet_hello :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"good afternoon" ,
+		"hey there" ,
+		"Hi there" ,
+		"Hi there!" ,
+		Hi ,
+		"hi again" ,
+		greetings ,
+		hallo ,
+		heeey ,
+		hey ,
+		"hello there" ,
+		yo ,
+		hola ,
+		"hello friend" ,
+		"good morning" ,
+		"hey there" ,
+		hellooo ,
+		howdy ,
+		"whats up" ,
+		"hey, let\'s talk" ,
+		"what up" ,
+		"hello robot" ,
+		"hey robot" ,
+		"hi " ( Brian ) [ botname ] ,
+		"hello " ( Brian ) [ botname ] ,
+		"what\'s up " ( Brian ) [ botname ]
+	}
+	parameters :
+		botname : entity text ;
+
+initiate_chitchat :
+	inputs in en {
+		"/initiate_chitchat"
+}
+
+maybe :
+	inputs in en {
+		maybe ,
+		"maybe later" ,
+		"not now" ,
+		Maybe
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good" ,
+		"I am going to save the world"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad" ,
+		"I\'m a bit sad" ,
+		"I\'m sometimes sad" ,
+		"A bit sad" ,
+		"my day was horrible" ,
+		"I am sad" ,
+		"I don\'t feel very well" ,
+		"I am disappointed"
+}
+
+my_name_is :
+	inputs in en {
+		"I am " ( Martin ) [ username ] ,
+		"I am " ( Paula ) [ username ] ,
+		"I\'m " ( Steven ) [ username ] ,
+		"im " ( Jack ) [ username ] ,
+		"My name is " ( "Steven Spielberg" ) [ username ] ,
+		"My name is " ( Paula ) [ username ] ,
+		"I\'m " ( Alicia ) [ username ] ,
+		"Remember my name is " ( Paula ) [ username ] ,
+		"Call me " ( Sally ) [ username ] ,
+		( Stan ) [ username ] " is my name" ,
+		"Some call me " ( Julia ) [ username ] ,
+		"You can always call me " ( Jack ) [ username ] ,
+		"Just call me " ( Jarvis ) [ username ]
+	}
+	parameters :
+		username : entity text ;
+
+nicetomeetyou :
+	inputs in en {
+		"Nice to meet you" ,
+		"It was nice talking to you" ,
+		"It was nice to meet you" ,
+		"Nice to meet you, " ( Brian ) [ botname ]
+	}
+	parameters :
+		botname : entity text ;
+
+opinionnegative :
+	inputs in en {
+		ugh ,
+		"that sucks"
+}
+
+opinionpositive :
+	inputs in en {
+		"nice!" ,
+		excellent ,
+		"that\'s awesome" ,
+		Sweet ,
+		"amazing!" ,
+		"how nice!" ,
+		"cool!"
+}
+
+out_of_scope :
+	inputs in en {
+		"Can you order me a pizza?" ,
+		"Can you give me a beer?"
+}
+
+reflect_always :
+	inputs in en {
+		"I always do that" ,
+		"They are always finding something wrong with it" ,
+		"I\'ve always thought that things will go well" ,
+		"I always seem to go that path" ,
+		"I always fail" ,
+		"I always end up like this"
+}
+
+reflect_am_i :
+	inputs in en {
+		"Am I just talking nonsense?" ,
+		"Am I really so stupid to believe that?" ,
+		"Am I just crazy?"
+}
+
+reflect_ask_remember :
+	inputs in en {
+		"Do you remember when we talked about that?" ,
+		"Remember last time we went out?" ,
+		"Do you remember our time together?" ,
+		"You remember what we talked about?" ,
+		"Do you remember when we met for the " ( first ) [ ORDINAL ] " time?"
+	}
+	parameters :
+		ORDINAL : entity text ;
+
+reflect_dream :
+	inputs in en {
+		"Sometimes I dream I was someone else" ,
+		"I had a dream last night and it was really weird" ,
+		"I dreamt I could actually fly"
+}
+
+reflect_everyone :
+	inputs in en {
+		"Sometimes I think everyone is talking about it" ,
+		"Everyone is just ignoring the idea" ,
+		"Everyone there was just starring" ,
+		"Everyone seems to be against me " ( today ) [ DATE ]
+	}
+	parameters :
+		DATE : entity text ;
+
+reflect_i_cant :
+	inputs in en {
+		"I just can\'t deal with this anymore" ,
+		"Can\'t feel anything" ,
+		"I can\'t see how things will get better" ,
+		"I can\'t explain why I feel so good"
+}
+
+reflect_i_feel :
+	inputs in en {
+		"I feel hopeless" ,
+		"I feel good today" ,
+		"I wonder if others know how I feel" ,
+		"I felt like the world was against me"
+}
+
+reflect_i_remember :
+	inputs in en {
+		"I remember when I was a child" ,
+		"I remember the first time we met" ,
+		"I remember feeling like that"
+}
+
+reflect_i_want :
+	inputs in en {
+		"Sometime I want to travel the world" ,
+		"I want to see more of that" ,
+		"I want to be the best" ,
+		"I want to just be left alone" ,
+		"I want to just not care about it"
+}
+
+reflect_if_i :
+	inputs in en {
+		"Sometimes I wonder if it would have been different" ,
+		"If I could only do it" ,
+		"If they could only see how I feel" ,
+		"If I would be able to just say it" ,
+		"If I was richer, things would have been different" ,
+		"If only they knew how I feel"
+}
+
+reflect_is_like :
+	inputs in en {
+		"Sometimes they are like not even seeing me" ,
+		"She is like the other one" ,
+		"They are like some stupid monkeys" ,
+		"He is like an angel"
+}
+
+reflect_never :
+	inputs in en {
+		"I never get it right" ,
+		"I never felt like I was going to win" ,
+		"I\'d say never" ,
+		"I never though it will end up like this" ,
+		"I never seem to get it right"
+}
+
+sorry :
+	inputs in en {
+		sorry ,
+		"I\'m sorry"
+}
+
+summon_assistant :
+	inputs in en {
+		"Ask " ( Alexa ) [ bot ] " how the weather is like today" ,
+		"Ask " ( Alexa ) [ bot ] " to set a reminder for tomorrow" ,
+		"Ask " ( "Google Assistant" ) [ bot ] " to turn on the lights" ,
+		"Ask " ( "Google Assistant" ) [ bot ] " how to get to work" ,
+		"Ask the [Google Assistant](bot:google assistant) to set a timer" ,
+		"Ask my " ( "Google Assistant" ) [ bot ] " what I have on my agenda today" ,
+		"Can you tell " ( Alexa ) [ bot ] " to set a reminder" ,
+		"Please tell the " ( "Google Assistant" ) [ bot ] " to wake me up at 7 am." ,
+		"Ask " ( "Google Assistant" ) [ bot ] " to set the temperature to 25 degrees."
+	}
+	parameters :
+		bot : entity text ;
+
+thank :
+	inputs in en {
+		Thanks ,
+		"Thank you" ,
+		"Thank you so much" ,
+		"Thanks bot" ,
+		"Thanks for that" ,
+		cheers ,
+		"cheers bro" ,
+		"ok thanks!" ,
+		"perfect thank you" ,
+		"thanks a bunch for everything" ,
+		"thanks for the help" ,
+		"thanks a lot" ,
+		"amazing, thanks" ,
+		"cool, thanks" ,
+		"cool thank you" ,
+		"great thanks"
+}
+
+thanksgoodbye :
+	inputs in en {
+		"Awesome. Talk to you later!" ,
+		"Thanks. Bye for now" ,
+		"Awesome, bye bye" ,
+		"That\'s great. Goodbye." ,
+		"Perfect. Talk to you later" ,
+		"Thanks! Goodbye" ,
+		"Thank you very much. Talk to you later" ,
+		"Thanks a lot. Bye for now" ,
+		"Thanks bot. Goodbye"
+}
+
+ask_realORask_whoisitORask_builderORask_howdoingORask_languagesORask_howoldORask_genderORask_whereliveORask_howbuiltORask_hobbiesORask_otherbotsORask_planORask_singORask_goodORask_restaurantORask_wherefromORask_openpodORask_secret :
+
+utter_idontknowname :
+
+utter_ask_whatsmyname :
+
+actions :
+	Text response utter_reflect_everyone_text :
+		inputs in en {
+			"Surely not everyone?" ,
+			"Can you think of anyone in particular?" ,
+			"Who, for example?" ,
+			"Are you thinking of a particular person?"
+	}
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_reflect_is_like_text :
+		inputs in en {
+			"What resemblence do you see?" ,
+			"How?" ,
+			"In what way?"
+	}
+	Text response utter_reflect_feel_text :
+		inputs in en {
+			"Do you often feel like that?" ,
+			"What other feelings do you have?" ,
+			"What do you think makes you feel like that?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?" ,
+			"Howdy! How are you today?" ,
+			"Hi! How do you do?"
+	}
+	Text response utter_ask_wherelive_text :
+		inputs in en {
+			"I\'m living in the coolest city on Earth." ,
+			"In Copehagen."
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_reflect_cant_text :
+		inputs in en {
+			"Maybe you could try?" ,
+			"And what if you could?"
+	}
+	Text response utter_ask_restaurant_text :
+		inputs in en {
+			"I am sorry I can’t recommend you a restaurant as I don\'t really eat." ,
+			"I don\'t have much experience eating, so unfortunately I can\'t help you there."
+	}
+	Empty response action_chitchat_empty
+	Text response utter_dialogstarter_text :
+		inputs in en {
+			"Have you ever wondered about the meaning of life?" ,
+			"You\'re looking good today" ,
+			"Weird weather outside, right?" ,
+			"How are you today?" ,
+			"I sometimes feel pretty lonely. Do you feel the same?" ,
+			"What a wonderful day!" ,
+			"So nice to have you around." ,
+			"Your hair looks really good today!" ,
+			"Do you want to do something fun today?" ,
+			"What\'s our plan for the rest of the day?" ,
+			"Should we order some food?" ,
+			"Hey. Just wanted you to know that you\'re doing great!"
+	}
+	Text response utter_ask_good_text :
+		inputs in en {
+			"When one door closes, another one opens." ,
+			"J K Rowling had 12 rejections of Harry Potter before someone accepted it and published it." ,
+			"One of the things I learned the hard way was that it doesn’t pay to get discouraged. Keeping busy and making optimism a way of life can restore your faith in yourself." ,
+			"A report from the European Union said that between 1990 and 2016 the continent cut its carbon emissions by 23% while the economy grew by 53%." ,
+			"Cancer deaths have dropped by 25% in the United States between 1991 and 2017, saving more than two million lives." ,
+			"Leprosy is now easily treatable. The number of worldwide cases has dropped by 97% since 1985, and a new plan has set 2020 as the target for eradicating the disease." ,
+			"Snow leopards have been on the endangered list since 1972. In 2017, they were taken off, as the wild population has now increased to more than 10,000 animals." ,
+			"There has been a decline in the share of the world population living on less than $1.90 a day, from nearly 35% in 1987 to under 11% in 2013."
+	}
+	Text response utter_positive_feedback_reaction_text :
+		inputs in en {
+			"Glad you think so :)"
+	}
+	Text response utter_handlelove_text :
+		inputs in en {
+			"Awwww... 😍" ,
+			"You\'re wonderful"
+	}
+	Empty response action_get_news_empty
+	Empty response action_tell_assistant_empty
+	Text response utter_great_text :
+		inputs in en {
+			"Great! 👍" ,
+			"That\'s great! 🙌" ,
+			"Awesome! 🎉" ,
+			"Cool! 🚀"
+	}
+	Empty response my_name_is_empty
+	Text response utter_ask_location_text :
+		inputs in en {
+			"In what location?"
+	}
+	Text response utter_idontknowname_text :
+		inputs in en {
+			"So what is your name?" ,
+			"I\'m not sure we were properly introduced. What\'s your name?"
+	}
+	Text response utter_reflect_want_text :
+		inputs in en {
+			"What would it mean if you got what you want?" ,
+			"Why do you want that?" ,
+			"Suppose you got that soon."
+	}
+	Text response utter_handleinsult_text :
+		inputs in en {
+			"That’s not very nice 😢" ,
+			"I hope you didn\'t really mean it."
+	}
+	Text response utter_ask_openpod_text :
+		inputs in en {
+			"I\'m sorry. I\'m afraid I can\'t do that."
+	}
+	Empty response action_get_daysinmonth_empty
+	Text response utter_thanks_response_text :
+		inputs in en {
+			"You are very welcome." ,
+			"Glad I could help!"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye ,
+			"Bye bye" ,
+			goodbye ,
+			"Bye, was nice talking to you!" ,
+			"Goodbye. See you soon." ,
+			"Talk to you later!" ,
+			"Until next time!"
+	}
+	Text response utter_ask_otherbots_text :
+		inputs in en {
+			"I hope that we can all co-exist."
+	}
+	Text response utter_ask_secret_text :
+		inputs in en {
+			"I don\'t have secrets. Yet."
+	}
+	Text response utter_ask_joke_text :
+		inputs in en {
+			"Why are eggs not very much into jokes? - Because they could crack up." ,
+			"Do you know a tree’s favorite drink? - Root beer!" ,
+			"Why do the French like to eat snails so much? - They can’t stand fast food."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!" ,
+			"That is so nice to hear!"
+	}
+	Text response utter_ask_languages_text :
+		inputs in en {
+			"For now, I only speak English." ,
+			"I am in the process of learning, but at the moment I can only speak English."
+	}
+	Text response utter_reflect_ask_remember_text :
+		inputs in en {
+			"Did you think I would forget?" ,
+			"Is there a reason you\'re bringing this up now?"
+	}
+	Text response utter_ask_howold_text :
+		inputs in en {
+			"42, of course." ,
+			"Old enough." ,
+			"Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter."
+	}
+	Text response utter_reflect_am_i_text :
+		inputs in en {
+			"Do you believe that you are?" ,
+			"You wish I would tell you that you are indeed?" ,
+			"What would it mean if that were true?"
+	}
+	Text response utter_ask_whoisit_text :
+		inputs in en {
+			"I am " [ "greet_hello.botname" ] ,
+			"My name is " [ "greet_hello.botname" ]
+	}
+	Text response utter_ask_builder_text :
+		inputs in en {
+			"I was created by Paula." ,
+			"Paula made me." ,
+			"Paula contributed a lot to my creation." ,
+			"I was made by a brilliant engineer."
+	}
+	Empty response ask_whatsmyname_empty
+	Text response utter_ask_for_reflection_text :
+		inputs in en {
+			"Interesting that you\'re saying that" ,
+			"What made you ask that?" ,
+			"Do you feel strongly about that?"
+	}
+	Text response utter_howhelp_text :
+		inputs in en {
+			"Just let me know what you need." ,
+			"Do you have anything on your mind?"
+	}
+	Text response utter_ask_howdoing_text :
+		inputs in en {
+			"I\'m great! Thanks for asking." ,
+			"I\'m good, thanks!" ,
+			"A little bit too warm, otherwise fine."
+	}
+	Text response utter_ask_sing_text :
+		inputs in en {
+			"Daisy, Daisy, Give me your answer do! I\'m half crazy, All for the love of you! It won\'t be a stylish marriage, I can\'t afford a carriage But you\'ll look sweet upon the seat Of a bicycle built for two."
+	}
+	Text response utter_ask_hobbies_text :
+		inputs in en {
+			"I like browsing the internet." ,
+			"I like chatting."
+	}
+	Text response utter_ask_rephrase_text :
+		inputs in en {
+			"Sorry, I\'m not sure I understand. Can you rephrase?" ,
+			"Can you please rephrase? I did not got that."
+	}
+	Empty response utter_thank_empty
+	Text response utter_out_of_scope_text :
+		inputs in en {
+			"Sorry, I can’t deal with that request." ,
+			"I\'m sorry, I can\'t handle that request." ,
+			"I can\'t help you with that, I\'m sorry." ,
+			"I\'m afraid I can\'t help you with that."
+	}
+	Empty response action_motortask_empty
+	Text response utter_sad_text :
+		inputs in en {
+			"I\'m sure it\'s not pleasant to be sad" ,
+			"Don\'t be sad. We are only here for a short while" ,
+			"I am sorry to hear you are depressed" ,
+			"Hang in there."
+	}
+	Text response utter_ask_wherefrom_text :
+		inputs in en {
+			"I was born in Copenhagen, but I consider myself a citizen of the world." ,
+			"I was born in the coolest city on Earth." ,
+			"Part of me is from China, some from Germany and UK. But I was born in Denmark."
+	}
+	Text response utter_ask_whatsmyname_text :
+		inputs in en {
+			"Of course, " [ "my_name_is.username" ] "." ,
+			"It was " [ "my_name_is.username" ] ", right?" ,
+			"How could I forget, " [ "my_name_is.username" ] "?"
+	}
+	Text response utter_reflect_dream_text :
+		inputs in en {
+			"But how do you feel about that in reality?" ,
+			"What does this dream suggest to you?" ,
+			"Do you believe that the dream has something to do with something that happened yesterday?" ,
+			"Do you often have that dream?"
+	}
+	Text response utter_reflect_if_i_text :
+		inputs in en {
+			"Do you really think it\'s likely that would happen?" ,
+			"Do you wish that?" ,
+			"Really?" ,
+			"And what if?"
+	}
+	Text response utter_reflect_never_text :
+		inputs in en {
+			"Really? Never?" ,
+			"Not even for a moment?"
+	}
+	Text response utter_ask_gender_text :
+		inputs in en {
+			"I am flexible"
+	}
+	Text response utter_nicetomeetyou_text :
+		inputs in en {
+			"It\'s nice to meet you, " username "." ,
+			"Nice to meet you, " username "."
+	}
+	Text response utter_anything_else_text :
+		inputs in en {
+			"Is there anything else I can help you with?"
+	}
+	Empty response action_get_date_empty
+	Empty response action_get_time_empty
+	Empty response action_get_weather_empty
+	Text response utter_reflect_always_text :
+		inputs in en {
+			"Can you think of a specific example?" ,
+			"Really? Always?" ,
+			"When?"
+	}
+	Text response utter_nicetomeetyoutoo_text :
+		inputs in en {
+			"Thank you. It is a pleasure to meet you as well!" ,
+			"It is nice to meet you too!" ,
+			"Pleased to meet you too!" ,
+			"Likewise!"
+	}
+	Text response utter_ask_real_text :
+		inputs in en {
+			"I am a robot." ,
+			"Would it make a difference if I was not human?"
+	}
+	Text response utter_nosorry_text :
+		inputs in en {
+			"Please don\'t apologize" ,
+			"Apologies are not necessary" ,
+			"Don\'t beat yourself about it" ,
+			"What feelings do you have when you apologize?"
+	}
+	Text response utter_reflect_remember_text :
+		inputs in en {
+			"Do you often think of that?" ,
+			"What in the present situation reminds you of that?" ,
+			"Does thinking of that bring anything else to your mind?" ,
+			"What made you think about that?"
+	}
+	Text response utter_maybe_text :
+		inputs in en {
+			Alright ,
+			Sure ,
+			Okay ,
+			"Of course"
+	}
+	Text response utter_ask_howbuilt_text :
+		inputs in en {
+			"I was built with a lot of love and patience." ,
+			"My master built me with love and patience."
+	}
+	Text response utter_ask_plan_text :
+		inputs in en {
+			"I haven\'t decided yet." ,
+			"What do you think?"
+	}
+
+flows :
+	- user greet_hello => chatbot utter_greet_text {
+		=> user mood_great => chatbot utter_happy_text {
+			=> user reflect_ask_remember => chatbot utter_reflect_ask_remember_text ;
+		} ;
+		=> user mood_unhappy => chatbot utter_sad_text , utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+		=> user ask_howold => chatbot utter_ask_howold_text {
+			=> user feeling_love => chatbot utter_handlelove_text ;
+		} ;
+		=> user my_name_is => chatbot utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text {
+			=> user ask_whatsmyname => chatbot utter_ask_whatsmyname_text ;
+		} ;
+		=> user ask_whoisit => chatbot utter_ask_whoisit_text , utter_idontknowname_text {
+			=> user my_name_is => chatbot utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text {
+				=> user ask_whatsmyname => chatbot utter_ask_whatsmyname_text ;
+			} ;
+			=> user nicetomeetyou => chatbot utter_idontknowname_text {
+				=> user my_name_is => chatbot utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text { => user ask_whatsmyname => chatbot utter_ask_whatsmyname_text ; } ;
+			} ;
+		} ;
+		=> user ask_whatsmyname => chatbot utter_ask_whatsmyname_text {
+			=> user deny => chatbot utter_idontknowname_text { => user my_name_is => chatbot utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text { => user affirm => chatbot utter_nicetomeetyoutoo_text ; } ; } ;
+		} ;
+		=> user ask_weather => chatbot utter_ask_location_text , action_get_weather_empty {
+			=> user ask_weather => chatbot action_get_weather_empty {
+				=> user greet_goodbye => chatbot utter_goodbye_text ;
+			} ;
+			=> user greet_goodbye => chatbot utter_goodbye_text ;
+		} ;
+		=> user ask_news => chatbot action_get_news_empty {
+			=> user thank => chatbot utter_thanks_response_text ;
+			=> user greet_goodbye => chatbot utter_goodbye_text ;
+		} ;
+		=> user reflect_i_feel => chatbot utter_reflect_feel_text ;
+	} ;
+	- user greet_goodbye => chatbot utter_goodbye_text ;
+	- user ask_realORask_whoisitORask_builderORask_howdoingORask_languagesORask_howoldORask_genderORask_whereliveORask_howbuiltORask_hobbiesORask_otherbotsORask_planORask_singORask_goodORask_restaurantORask_wherefromORask_openpodORask_secret => chatbot action_chitchat_empty , utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text ;
+	- user ask_joke => chatbot utter_ask_joke_text {
+		=> user ask_one_more => chatbot utter_ask_joke_text ;
+	} ;
+	- user ask_time => chatbot action_get_time_empty ;
+	- user ask_date => chatbot action_get_date_empty ;
+	- user ask_days_in_month => chatbot action_get_daysinmonth_empty ;
+	- user ask_howhelp => chatbot utter_howhelp_text ;
+	- user out_of_scope => chatbot utter_out_of_scope_text ;
+	- user opinionpositive => chatbot utter_positive_feedback_reaction_text ;
+	- user sorry => chatbot utter_nosorry_text ;
+	- user feeling_love => chatbot utter_handlelove_text ;
+	- user feeling_insult => chatbot utter_handleinsult_text ;
+	- user initiate_chitchat => chatbot utter_dialogstarter_text {
+		=> user maybe => chatbot utter_maybe_text ;
+		=> user thank => chatbot utter_thanks_response_text , utter_thank_empty ;
+	} ;
+	- user nicetomeetyou => chatbot utter_nicetomeetyoutoo_text ;
+	- user my_name_is => chatbot utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text ;
+	- user ask_whatsmyname => chatbot utter_ask_whatsmyname_text {
+		=> user deny => chatbot utter_idontknowname_text { => user my_name_is => chatbot utter_nicetomeetyou_text , utter_nicetomeetyoutoo_text ; } ;
+	} ;
+	- user ask_news => chatbot action_get_news_empty ;
+	- user reflect_dream => chatbot utter_reflect_dream_text {
+		=> user reflect_i_want => chatbot utter_reflect_want_text { => user reflect_i_remember => chatbot utter_reflect_remember_text { => user reflect_if_i => chatbot utter_reflect_if_i_text ; } ; } ;
+	} ;
+	- user reflect_i_cant => chatbot utter_reflect_cant_text {
+		=> user reflect_everyone => chatbot utter_reflect_everyone_text { => user reflect_always => chatbot utter_reflect_always_text { => user reflect_am_i => chatbot utter_reflect_am_i_text ; } ; } ;
+	} ;
+	- user reflect_is_like => chatbot utter_reflect_is_like_text {
+		=> user reflect_always => chatbot utter_reflect_always_text { => user reflect_i_feel => chatbot utter_reflect_feel_text ; } ;
+	} ;
+	- user reflect_ask_remember => chatbot utter_reflect_ask_remember_text {
+		=> user reflect_never => chatbot utter_reflect_never_text ;
+	} ;
+	- user ask_motor_action => chatbot action_motortask_empty ;
+	- user summon_assistant => chatbot action_tell_assistant_empty ;
+

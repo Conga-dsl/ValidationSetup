@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="RasaProject_Docker">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="open_position">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I&#xe2;&#x20ac;&#x2122;d like to know which positions are open right now."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know the available positions now."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to know the open positions."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to know the available positions."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Would you please write me the open positions at RASA"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I&#xe2;&#x20ac;&#x2122;d like to know what are the open positions now at RASA."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the available positions now?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="role">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="technical"/>
+        <tokens xsi:type="generator:Literal" text=" one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="tech"/>
+        <tokens xsi:type="generator:Literal" text=" position"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="business"/>
+        <tokens xsi:type="generator:Literal" text=" one"/>
+      </inputs>
+    </inputs>
+    <parameters name="role_type"/>
+  </intents>
+  <intents name="job_status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Ali"/>
+        <tokens xsi:type="generator:Literal" text=" Park. I applied for a job and would like to know when I&#xe2;&#x20ac;&#x2122;ll hear back."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Sebastian"/>
+        <tokens xsi:type="generator:Literal" text=" Pork, i applied for a job and would like to check my application."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Michal"/>
+        <tokens xsi:type="generator:Literal" text=". I applied for a job and would like to know when I&#xe2;&#x20ac;&#x2122;ll hear back."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, I&#xe2;&#x20ac;&#x2122;m "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Kristian"/>
+        <tokens xsi:type="generator:Literal" text=". I would like to check the status of my application."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="William"/>
+        <tokens xsi:type="generator:Literal" text=". I want to know my application status."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Chris"/>
+        <tokens xsi:type="generator:Literal" text=". I applied for a job and would like to know when I&#xe2;&#x20ac;&#x2122;ll hear back."/>
+      </inputs>
+    </inputs>
+    <parameters name="PERSON"/>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Empty" name="action_check_positions_empty"/>
+  <actions xsi:type="generator:Text" name="utter_application_check_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="! Let me check that for you"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi, I&#x2019;m Rasa&#x2019;s recruiting bot. How can I help?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_role_type_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are you looking for a technical or a business role?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_application_status_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, your application has been "/>
+        <tokens xsi:type="generator:Literal" text="status"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sorry i didn't understand, please ask me again!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_check_status_empty"/>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <actions xsi:type="generator:Text" name="action_default_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't undestand you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.3">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.0"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.1 //@actions.6 //@actions.4"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.7"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.8"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

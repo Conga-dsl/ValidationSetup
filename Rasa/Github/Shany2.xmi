@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Shany2">
+  <intents name="greeting">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="get_horoscope">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know my Horoscope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you please tell me my horoscope?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me my horoscope please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What does my horoscope say?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's today's horoscope?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to know my horoscope for today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Capricorn"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Aries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My horoscope sign is Cancer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sagittarius"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is my horoscope?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Virgo is my horoscope sign"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="subscription">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please subscribe me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes subscribe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="subscribe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="subscribe me horoscopebot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="subscribe me please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the horoscope for Capricorn?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me the horoscope for Gemini"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="horoscope for Aries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Leo's today's horoscope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's the horoscope for Sagittarius"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the horoscope for Scorpio today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's the horoscope for Aquarius?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unsubscribe me please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unsubscribe"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="dob_intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="12-12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="08-01"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="01-01"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="15-08"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="19-01"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="28-02"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Empty" name="utter_cheer_up_empty"/>
+  <actions xsi:type="generator:Empty" name="utter_happy_empty"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! What can I do for you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="utter_get_todays_horoscope_empty"/>
+  <actions xsi:type="generator:Text" name="utter_subscribe_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want to subscribe for daily updates?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_dob_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your DOB in DD-MM format?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="subscribe_user_empty"/>
+  <actions xsi:type="generator:Empty" name="action_get_todays_horoscope_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_horoscope_sign_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your horoscope sign?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.8 //@actions.5 //@actions.3 //@actions.10">
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.7"/>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.8 //@actions.5">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.7"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.7"/>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

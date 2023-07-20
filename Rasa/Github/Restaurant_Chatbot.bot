@@ -1,0 +1,215 @@
+Chatbot Restaurant_Chatbot language : en
+
+intents :
+
+	affirm :
+		inputs in en {
+			yes ,
+			yep ,
+			yeah ,
+			indeed ,
+			"that\'s right" ,
+			ok ,
+			great ,
+			"right, thank you" ,
+			correct ,
+			"great choice" ,
+			"sounds really good" ,
+			thanks ,
+			thanks ,
+			"cool,thanks" ,
+			"that\'s great" ,
+			"amazing, thank you so much" ,
+			cheers ,
+			"good thank you"
+	}
+
+	goodbye :
+		inputs in en {
+			bye ,
+			goodbye ,
+			"good bye" ,
+			stop ,
+			end ,
+			farewell ,
+			"Bye bye" ,
+			"have a good one" ,
+			"no,good bye" ,
+			"no,thank you"
+	}
+
+	greet :
+		inputs in en {
+			hey ,
+			howdy ,
+			"hey there" ,
+			hello ,
+			^hi ,
+			"good morning" ,
+			"good evening" ,
+			"dear sir" ,
+			^hi ,
+			^hi ,
+			hello ,
+			"hey buddy" ,
+			"hey dude" ,
+			"hii dude" ,
+			"hii bot" ,
+			"hiiiii bottttttt" ,
+			"hello, mister" ,
+			hello ,
+			"hello sweatheart" ,
+			"Whats up my bot" ,
+			"hello?" ,
+			"hey, let\'s talk"
+	}
+
+	restaurant_search :
+		inputs in en {
+			"i\'m looking for a place to eat" ,
+			"I want to grab lunch" ,
+			"I am searching for a dinner spot" ,
+			"I am looking for some restaurants in " ( Delhi ) [ location ] "." ,
+			"I am looking for some restaurants in " ( Bangalore ) [ location ] ,
+			"show me " ( chinese ) [ cuisine ] " restaurants" ,
+			"show me " ( chines ) [ cuisine ] " restaurants in the " ( "New Delhi" ) [ location ] ,
+			"show me a " ( mexican ) [ cuisine ] " place in the " ( centre ) [ location ] ,
+			"i am looking for an " ( indian ) [ cuisine ] " spot called olaolaolaolaolaola" ,
+			"search for restaurants" ,
+			"anywhere in the " ( west ) [ location ] ,
+			"I am looking for " ( "asian fusion" ) [ cuisine ] " food" ,
+			"I am looking a restaurant in " ( "294328" ) [ location ] ,
+			"in " ( Gurgaon ) [ location ] ,
+			( "South Indian" ) [ cuisine ] ,
+			( "North Indian" ) [ cuisine ] ,
+			( Italian ) [ cuisine ] ,
+			( Chinese ) [ cuisine ] ,
+			( chinese ) [ cuisine ] ,
+			( Lithuania ) [ location ] ,
+			( american ) [ cuisine ] ,
+			( mexican ) [ cuisine ] ,
+			"show me some " ( "South Indian" ) [ cuisine ] " restaurants" ,
+			"show me nearest restaurants in " ( Agra ) [ location ] ,
+			"show me great " ( Italian ) [ cuisine ] " restaurants in " ( Ahmedabad ) [ location ] ,
+			"please help me to find a restaurants in " ( Mumbai ) [ location ] ,
+			"show some great restaurants in " ( Allahabad ) [ location ] ,
+			"i am looking to search for " ( mexican ) [ cuisine ] " restaurants in " ( Amritsar ) [ location ] ,
+			"find a restaurants for " ( Italian ) [ cuisine ] ,
+			"i am hungry looking for some great " ( "South Indian" ) [ cuisine ] " food?" ,
+			"can you help me to find restaurants in " ( Aurangabad ) [ location ] ,
+			"could you please show me restaurants in " ( Banglore ) [ location ] ,
+			"help me to find restaurants in " ( Bombay ) [ location ] ,
+			"show me restaurants in " ( Bengaluru ) [ location ] ,
+			"suugest me a good restaurants in [dilli](location:New Delhi)" ,
+			"show me few restaurants in " ( Bhopal ) [ location ] ,
+			"recomend me a " ( american ) [ cuisine ] " places in " ( Bhubaneshwar ) [ location ] ,
+			"recomend a best restaurants in " ( Chandigarh ) [ location ] ,
+			"what is the good place to eat food in " ( Chennai ) [ location ] ,
+			"i want to eat " ( Italian ) [ cuisine ] " food in " ( Coimbatore ) [ location ] ,
+			( Faridabad ) [ location ] ,
+			( Dehradun ) [ location ] ,
+			( Gangtok ) [ location ] ,
+			( Ghaziabad ) [ location ] ,
+			"help me to find a restaurant in " ( Goa ) [ location ] ,
+			"help me to find " ( "North Indian" ) [ location ] " food in " ( Gurgaon ) [ location ] ,
+			( Gurugram ) [ location ] ,
+			( Guwahati ) [ location ] ,
+			( mexican ) [ cuisine ] " food in " ( Hyderabad ) [ location ] ,
+			( Indore ) [ location ] ,
+			"okay, show me some best places to eat in " ( Jaipur ) [ location ]
+		}
+		parameters :
+			location ,
+			cuisine : entity text ;
+
+	send_email :
+		inputs in en {
+			"send me this information to " ( "user.001@gmail.com" ) [ email ] ,
+			"can you mail me to " ( "adfa@gmail.com" ) [ email ] ,
+			"please send this to " ( "manojgadde13@gmail.com" ) [ email ] ,
+			"yes ,this is my mail address " ( "sdsfs@123.edu" ) [ email ] ,
+			( "jddk.2jmd@kdl.co.in" ) [ email ] ,
+			"please send this to " ( "email.123@123.456.com" ) [ email ]
+		}
+		parameters :
+			email : entity email ;
+
+	budget_for_two :
+		inputs in en {
+			( "<300" ) [ budget ] ,
+			( ">700" ) [ budget ] ,
+			( "200" ) [ budget ] ,
+			( "400" ) [ budget ] ,
+			( "600" ) [ budget ] ,
+			"Lesser than Rs. " ( "300" ) [ budget ] ,
+			"More than " ( "700" ) [ budget ]
+		}
+		parameters :
+			budget : entity text ;
+
+entities :
+	Regex entity email :
+		inputs in en {
+			pattern : "([\\w.-]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)"
+	}
+
+actions :
+	Text response utter_email_sent_text :
+		inputs in en {
+			"Sent, Bon Appetit!"
+	}
+	Text response utter_ask_budget_for_two_text :
+		inputs in en {
+			"what is your average budget for two people?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"hey there! How may i help you" ,
+			"Hi, How can I help you!" ,
+			"Hey, How is it going. How May I help you Today"
+	}
+	Text response utter_ask_cuisine_text :
+		inputs in en {
+			"what kind of cuisine would you like?"
+	}
+	Text response utter_ask_howcanhelp_text :
+		inputs in en {
+			"how can I help you?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"goodbye :(" ,
+			"Bye-bye"
+	}
+	Text response utter_no_email_sent_text :
+		inputs in en {
+			"Okay. Bon Appetit!Okay. Bon Appetit!"
+	}
+	Text response utter_sorry_dont_operate_text :
+		inputs in en {
+			"Sorry, we dont operate in this city. Can you please specify some other location ?"
+	}
+	Text response utter_ask_email_address_text :
+		inputs in en {
+			"To what email id should I send it to ?"
+	}
+	Empty response action_send_email_empty
+	Text response utter_ask_email_text :
+		inputs in en {
+			"Should I send you details of all the restaurants on email?"
+	}
+	Empty response action_search_restaurants_empty
+	Text response utter_ask_location_text :
+		inputs in en {
+			"In what location?"
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"i cannot understand"
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user restaurant_search => chatbot utter_ask_location_text , utter_ask_cuisine_text { => user restaurant_search => chatbot utter_ask_cuisine_text , utter_ask_budget_for_two_text { => user restaurant_search => chatbot utter_ask_budget_for_two_text , action_search_restaurants_empty , utter_ask_email_address_text , utter_ask_email_text { => user restaurant_search => chatbot action_search_restaurants_empty , utter_ask_email_address_text , utter_ask_email_text { => user send_email => chatbot action_send_email_empty { => user affirm => chatbot utter_goodbye_text ; } ; } ; => user send_email => chatbot action_send_email_empty { => user affirm => chatbot utter_goodbye_text { => user affirm => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ;
+	} ;
+

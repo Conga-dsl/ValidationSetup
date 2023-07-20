@@ -1,0 +1,93 @@
+Chatbot RasaProject_Docker language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+open_position :
+	inputs in en {
+		"Iâ€™d like to know which positions are open right now." ,
+		"I want to know the available positions now." ,
+		"I would like to know the open positions." ,
+		"I would like to know the available positions." ,
+		"Would you please write me the open positions at RASA" ,
+		"Iâ€™d like to know what are the open positions now at RASA." ,
+		"What are the available positions now?"
+}
+
+role :
+	inputs in en {
+		"A " ( technical ) [ role_type ] " one" ,
+		"A " ( tech ) [ role_type ] " position" ,
+		"A " ( business ) [ role_type ] " one"
+	}
+	parameters :
+		role_type : entity text ;
+
+job_status :
+	inputs in en {
+		"Hi, my name is " ( Ali ) [ PERSON ] " Park. I applied for a job and would like to know when Iâ€™ll hear back." ,
+		"Hey i am " ( Sebastian ) [ PERSON ] " Pork, i applied for a job and would like to check my application." ,
+		"Hi, i am " ( Michal ) [ PERSON ] ". I applied for a job and would like to know when Iâ€™ll hear back." ,
+		"Hi, Iâ€™m " ( Kristian ) [ PERSON ] ". I would like to check the status of my application." ,
+		"Hi, my name is " ( William ) [ PERSON ] ". I want to know my application status." ,
+		"Hi, my name is " ( Chris ) [ PERSON ] ". I applied for a job and would like to know when Iâ€™ll hear back."
+	}
+	parameters :
+		PERSON : entity text ;
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Empty response action_check_positions_empty
+	Text response utter_application_check_text :
+		inputs in en {
+			"Hi " [ "job_status.PERSON" ] "! Let me check that for you"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"hi, I’m Rasa’s recruiting bot. How can I help?"
+	}
+	Text response utter_role_type_text :
+		inputs in en {
+			"Are you looking for a technical or a business role?"
+	}
+	Text response utter_application_status_text :
+		inputs in en {
+			"Yes, your application has been " status "."
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"sorry i didn\'t understand, please ask me again!"
+	}
+	Empty response action_check_status_empty
+	Empty response DefaultEmptyAction
+	Text response action_default_fallback_text :
+		inputs in en {
+			"Sorry, I don\'t undestand you "
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user open_position => chatbot utter_role_type_text { => user role => chatbot action_check_positions_empty ; } ;
+	} ;
+	- user job_status => chatbot utter_application_check_text , action_check_status_empty , utter_application_status_text ;
+	- user bot_challenge => chatbot DefaultEmptyAction ;
+	- user FallbackIntent => chatbot action_default_fallback_text ;
+

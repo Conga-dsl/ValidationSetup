@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="santoshikalaskar">
+  <intents name="bridgelabz">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is bridgelabz?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is BridgeLabz?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bridgelabz is a company or constantly?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need information about bridgelabz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many employe are there in bridgelabz?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are you a consultancy or education institute?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What exactly Bridgelabz do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was the work done in bridgelabz?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="info_cic">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need information regarding codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i wan't to know about codinclub."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="may i know codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="coding club?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is 30 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is 21 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is 21 days online program?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="syllabus_cic">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus for codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus of codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="codinclub syllabus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="codinclub topics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="codinclub content?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus you going to be covered in codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus for 21 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus for 30 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which topic covered in codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which topic u have been covered in codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="syllabus for bootcamp?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="reg_cic">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to join codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to register for codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to enroll codinclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to reg for 30 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to registered for 21 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="link for registration of codinclub?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="job_cic">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is job guarantee after codingclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is job guarantee"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is job guarantee after completion of codingclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is job guarantee after completion of 30 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have u give any job assurity after completion?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="fee_cic">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is fee for codingclub?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is fee for 30 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is fee for 21 days bootcamp?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is fee?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is it paid?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there any fee for this 30 days training?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much i need to pay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it free or i have to pay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much i have to pay"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="fellowship_program">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is fellowship program?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is bridgelabz fellowship program?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fellowship program?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i wan't to know what is fellowship?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fellowship?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="reg_fellowship">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i register with fellowship?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to register for fellowship?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i join fellowship program?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to join fellowship"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me link to join fellowship"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send me link to enroll with fellowship program"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="technology_fellowship">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the syllabus of fellowship?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus for fellowship?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus for fellowship program?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which is the technology cover in 16 weeks?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What tools will fellowship engineer get a chance to work on?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which technology you going to tech us in fellowship program?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which topic u have been covered in fellowship?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="confusing_Ques_syllabus">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="syllabus of that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="syllabus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me topic list which you going to be cover"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="topic list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="which topic u have been covered?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="syllabus to be covered"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="topic to be covered"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me topic / technology list to be covered in there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I get to learn here?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is syllabus for that?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="confusing_Ques_registration">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to join"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to enroll there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to register"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to register there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send me link for registration"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please, could you send me link for reg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can i join with online program"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ask_again">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to ask a question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to ask couple of questions"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greethellothere"/>
+  <intents name="mood_greatamazing"/>
+  <intents name="goodbyebye-bye"/>
+  <intents name="greethello"/>
+  <intents name="mood_unhappynotgood"/>
+  <intents name="affirmyes"/>
+  <intents name="denynotreally"/>
+  <intents name="greethi"/>
+  <intents name="mood_unhappyveryterrible"/>
+  <intents name="denyno"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.11">
+    <target actions="//@actions.2"/>
+  </flows>
+  <flows intent="//@intents.14">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.12">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.15">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.13">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.16">
+    <target actions="//@actions.4"/>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.10">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.17">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.18">
+        <target actions="//@actions.1 //@actions.0 //@actions.3">
+          <outcoming intent="//@intents.19">
+            <target actions="//@actions.5 //@actions.1"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

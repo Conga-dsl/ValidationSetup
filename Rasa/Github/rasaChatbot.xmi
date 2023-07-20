@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="rasaChatbot">
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right, thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great choice"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds really good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, thanks!!!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, that would be helpful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks a ton"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awesome! thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes. Please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks cheers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That will do for now, thanks for your help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure, that will help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you for your support"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah sure"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="negation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No its okay for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That's not needed, thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No need"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks but I dont want the list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Its useless"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not needed for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not required"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not needed"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="end"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="farewell"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a good one"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greetIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dear sir"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello foodie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hola"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Helloo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi how are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey how you doing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello foodie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hola"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How you doing?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heyyy"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="restaurant_search">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm looking for places to eat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to grab lunch"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am searching for a dinner spot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm hungry. Looking out for some good restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am looking for some restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Delhi"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chines"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants in the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="New Delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="mexican"/>
+        <tokens xsi:type="generator:Literal" text=" place in the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="centre"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am looking for an "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="north indian"/>
+        <tokens xsi:type="generator:Literal" text=" spot called olaolaolaolaolaola"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search for restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am looking for some restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am looking for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="south indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please help me to find restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="pune"/>
+        <tokens xsi:type="generator:Literal" text=" with budget of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="150"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please find me a restaurantin "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bangalore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Mexican"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mumbai"/>
+        <tokens xsi:type="generator:Literal" text=" upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="500"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="american"/>
+        <tokens xsi:type="generator:Literal" text=" approx price "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="200"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please find me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" restaurant in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="delhi"/>
+        <tokens xsi:type="generator:Literal" text=" with charges upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="800"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you find me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="italian"/>
+        <tokens xsi:type="generator:Literal" text=" restaurant"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please find me a restaurant in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="ahmedabad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please show me a few "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="italian"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bangalore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you suggest some good restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="hyderabad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where can I find good "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where can I find a restaurant in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Pune"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="best "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="italian"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find restaurants with budget of approx "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Nasik"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Max amount upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="1000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="300-600"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the restaurants with average price between "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="300-700"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="restos in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Delhi"/>
+        <tokens xsi:type="generator:Literal" text=" which will cost upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="800"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Looking for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="South Indian"/>
+        <tokens xsi:type="generator:Literal" text=" upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="400"/>
+        <tokens xsi:type="generator:Literal" text=" for two people"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggest some best quality "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Mexican"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bhopal"/>
+        <tokens xsi:type="generator:Literal" text=" with price upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="100"/>
+        <tokens xsi:type="generator:Literal" text=" for single person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hygienic food in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bhilai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hygiene "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" restos near me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" restro"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="PunE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="mexican"/>
+        <tokens xsi:type="generator:Literal" text=" restaurant in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Pune"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me a resto that will cost upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="1000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Delhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Italian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Search me a restro in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Chennai"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Mexican"/>
+        <tokens xsi:type="generator:Literal" text=" food and my budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="300"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me some places to eat "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="north indian"/>
+        <tokens xsi:type="generator:Literal" text=" which will cost me not more than "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="200"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Around "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="nagpur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am searching for a good lunch home near "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Bombay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="North Indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Quickly find a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="North indian"/>
+        <tokens xsi:type="generator:Literal" text=" dinning place in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="goa"/>
+        <tokens xsi:type="generator:Literal" text=" costing upto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="700"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mangalore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mid"/>
+        <tokens xsi:type="generator:Literal" text=" range"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="posh"/>
+        <tokens xsi:type="generator:Literal" text=" places to eat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bengaluru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="American"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="cheap"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="south indian"/>
+        <tokens xsi:type="generator:Literal" text=" hotels in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mysore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mid"/>
+        <tokens xsi:type="generator:Literal" text=" range restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bangalore"/>
+        <tokens xsi:type="generator:Literal" text=" to eat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="South Indian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me restaurant in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="udupi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mangalore"/>
+        <tokens xsi:type="generator:Literal" text=" then"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="high"/>
+        <tokens xsi:type="generator:Literal" text=" end"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="mid"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="low"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="high"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm hungry! find me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="mexican"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="chennai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="sakleshpur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok. find me some in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bangalore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="200"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi there! Looking out for some good restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="bengaluru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you suggest some good restaurnts in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Rishikesh"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay. Show me some in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Allahabad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll prefer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chines"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference=">700"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you suggest some good restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="kolkata"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="&lt;300"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm hungry. Looking out for some good restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mubaim"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I&#xe2;&#x20ac;&#x2122;m hungry. Looking out for some good "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="chinese"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="chandigarh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="north indian"/>
+        <tokens xsi:type="generator:Literal" text=" restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Nagpur"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find some restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Baramati"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright, Find some in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Wuhan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh okay then find restaurants in navi "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="mumbai"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Pune"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="American"/>
+        <tokens xsi:type="generator:Literal" text=" food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find some good restaurants in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Jaipur"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="high"/>
+        <tokens xsi:type="generator:Literal" text=" price range"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am looking for restaurants that will cost me less than "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="300"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="North Indian"/>
+        <tokens xsi:type="generator:Literal" text=" cuisine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Pune"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Looking for restaurants costing between 300 to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="700"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="South Indian"/>
+        <tokens xsi:type="generator:Literal" text=" food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="low"/>
+        <tokens xsi:type="generator:Literal" text=" pricing restaurant in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Poona"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Mexican"/>
+        <tokens xsi:type="generator:Literal" text=" food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Pune"/>
+      </inputs>
+    </inputs>
+    <parameters name="location"/>
+    <parameters name="cuisine"/>
+    <parameters name="price" entity="//@entities.0"/>
+  </intents>
+  <intents name="sending_email">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="girish.shirke999@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send it to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="abcd@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mail it on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pqr123@yahoo.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please send the mail to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="rockstar.aaaa@yahoo.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="girish@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My mail id is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.shreyas08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please mail it to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="girish.shirke999@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please, send it to me on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.shreyas08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure. mail them to me at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.study08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure. mail them to me on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.shreyas08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mail them to me to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="gpoojitha25@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mail them to me on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.shreyas08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes. send me the results to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.study08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes. Please send it "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.study08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes. Please send it to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="gpoojitha25@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="pai.study08@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="girish.shirke999@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" is my id"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mail it to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="girish.shirke999@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sent the list to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="girish.shirke999@gmail.com"/>
+      </inputs>
+    </inputs>
+    <parameters name="emailId"/>
+  </intents>
+  <entities name="price">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="[0-9]{3,}"/>
+    </inputs>
+  </entities>
+  <entities name="greet">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="hey[^\s]*"/>
+      <inputs xsi:type="generator:RegexInput" expresion="hi+"/>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:Empty" name="action_check_location_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_emailAddress_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter your email address"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey there! How may I serve you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, How can I help you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey, How is it going. How may I help you today?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_send_mail_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_cuisine_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of cuisine would you like?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_resultToBeMailed_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want the results to be mailed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Should I mail you the top 10 results?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If you want, I can mail you the top 10 search results!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_search_restaurants_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_location_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In what location?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, we don&#x2019;t operate in "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=" yet. Can you please specify some other location?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_restart_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_priceRange_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what price range are you looking for?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye-bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bon Appetit!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Enjoy your meal!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Glad I could help :) Have a nice day!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.0 //@actions.10 //@actions.7 //@actions.6 //@actions.5 //@actions.4 //@actions.8">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.6 //@actions.5 //@actions.0 //@actions.4 //@actions.10 //@actions.8">
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.3">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.11 //@actions.9"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.6 //@actions.5 //@actions.10 //@actions.0 //@actions.4">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.3">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.11 //@actions.9"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.6 //@actions.5 //@actions.10">
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.11 //@actions.9"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.3">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.11 //@actions.9"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.11 //@actions.9"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.4">
+                        <target actions="//@actions.6 //@actions.5">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.1">
+                              <outcoming intent="//@intents.5">
+                                <target actions="//@actions.3">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.11 //@actions.9"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.11 //@actions.9"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.6 //@actions.5">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.3">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.9"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.3">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.11 //@actions.9"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.1">
+                <target actions="//@actions.11 //@actions.9"/>
+              </outcoming>
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.1">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.3">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.11 //@actions.9"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.3">
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.11 //@actions.9"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.0 //@actions.10">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.6 //@actions.5">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.1">
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.3">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.11 //@actions.9"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

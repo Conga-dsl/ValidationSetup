@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="rasa-for-beginners">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I did"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah, great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pretty good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You bet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I sure did"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more or less"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="didn't do any"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no I didn't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could have been better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thankyou">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay great thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a full "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="8 hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="only "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="four hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="six hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="low"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="medium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="high"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, I went for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="run"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh huh an hour of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="yoga"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep, I went for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="hike"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes I took the dog for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="walk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah, I played "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="tennis"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I went "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="swimming"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Took a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="spin class"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="boxing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="rock climbing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="played some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="basketball"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="played "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="football"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I did a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="workout"/>
+        <tokens xsi:type="generator:Literal" text=" video"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to get up early and go for a run"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Be more patient with my family"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Try to be a better friend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Make sure to eat better tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="eat less junk food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="eat better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spend less time on my phone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't procrastinate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Go to bed earlier"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Don't stay up so late"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="try to make some time to meditate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i ate pretty healthy overall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lots of fruits and vegetables"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I ate a salad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="too many snacks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="too many sweets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="too much junk food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a lot of carbs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="too much fatty food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Get more exercise"/>
+      </inputs>
+    </inputs>
+    <parameters name="sleep"/>
+    <parameters name="stress"/>
+    <parameters name="exercise"/>
+  </intents>
+  <intents name="out_of_scope">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's not what I want to do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wait stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're no help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this is no help at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how old are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to order a pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me the weather"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this isn't working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I already told you that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want to tell you that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none of your business"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's not right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop asking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nevermind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to do something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I changed my mind"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ask_lower_stress">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I do if I'm too stressed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I lower my stress level?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are some good ways to lower stress?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are good ways to relax?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are some things I can do lower my stress?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ask_eat_healthy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's considered a good diet?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's considered healthy food?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I follow a healthy diet?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's an example of a healthy diet?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I eat healthy?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ask_exercise">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's a good amount of exercise for someone in their thirties?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much exercise should I be getting?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much exercise is recommended?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is walking once a day enough exercise?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much exercise should I do every day?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many times per week should I go to the gym?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_ask_stress_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is your stress level low, medium, or high &#x1f9d8; ?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_diet_info_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A healthy diet includes fruits and vegetables, whole grains, dairy, lean protein, and plant-based fats. While there is room in a healthy diet for treats, added sugar should be eaten sparingly. Aim for a variety of foods, and balance."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! It's time for your daily wellness check. Tracking healthy habits is a great way to measure your progress over time. Would you like to answer a few questions about your health?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_no_worries_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No problem :)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_stress_info_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's ok to feel overwhelmed at times. Try to set realistic expectations and exercise time management techniques, like dividing large tasks into more manageable pieces. Relaxation techniques, like deep breathing and meditation, can also be beneficial."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_continue_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't quite understand. Do you want to continue?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you tomorrow. Bye!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_confirm_exercise_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did you exercise yesterday? Don't sweat it if you didn't run a marathon - walks count!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_exercise_info_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Most healthy adults should aim to get about 150 min of moderate exercise per week. This includes activities like a brisk walk or yard work."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_slots_values_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here's your daily wellness log:&#xA; - Exercised?: "/>
+        <tokens xsi:type="generator:Literal" text="confirm_exercise"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Type of exercise: "/>
+        <tokens xsi:type="generator:Literal" text="exercise"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Sleep: "/>
+        <tokens xsi:type="generator:Literal" text="sleep"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Stuck to a healthy diet?: "/>
+        <tokens xsi:type="generator:Literal" text="diet"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Stress level: "/>
+        <tokens xsi:type="generator:Literal" text="stress"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Goal: "/>
+        <tokens xsi:type="generator:Literal" text="goal"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_diet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did you stick to a healthy diet &#x1f966;  yesterday?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_goal_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Setting goals - even small ones - is a great way to focus your day. What do you want to accomplish today &#x1f947; ?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_sleep_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much sleep did you get &#x1f4a4;  last night?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_exercise_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of exercise did you do &#x1f4aa; ?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.9"/>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.10 //@actions.15">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.3 //@actions.6"/>
+          </outcoming>
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.5">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.6"/>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.10"/>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.10">
+            <target actions="//@actions.8 //@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.9">
+    <target actions="//@actions.1"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.4"/>
+  </flows>
+  <flows intent="//@intents.10">
+    <target actions="//@actions.8"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

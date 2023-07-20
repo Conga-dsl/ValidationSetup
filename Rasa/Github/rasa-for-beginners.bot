@@ -1,0 +1,253 @@
+Chatbot "rasa-for-beginners" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		Hi
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		sure ,
+		ok ,
+		"why not" ,
+		"ok great" ,
+		"yes I did" ,
+		"yeah, great" ,
+		"pretty good" ,
+		fine ,
+		"You bet" ,
+		"I sure did" ,
+		"more or less"
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"no way" ,
+		"not really" ,
+		none ,
+		"absolutely not" ,
+		"no thanks" ,
+		"didn\'t do any" ,
+		"no I didn\'t" ,
+		"could have been better" ,
+		"not great" ,
+		nope
+}
+
+thankyou :
+	inputs in en {
+		"okay great thanks" ,
+		"thank you" ,
+		"sure thanks" ,
+		"thanks bye" ,
+		thanks
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+inform :
+	inputs in en {
+		"a full " ( "8 hours" ) [ sleep ] ,
+		"only " ( "four hours" ) [ sleep ] ,
+		"about " ( "six hours" ) [ sleep ] ,
+		( low ) [ stress ] ,
+		( medium ) [ stress ] ,
+		( high ) [ stress ] ,
+		"Yes, I went for a " ( run ) [ exercise ] ,
+		"uh huh an hour of " ( yoga ) [ exercise ] ,
+		"yep, I went for a " ( hike ) [ exercise ] ,
+		"Yes I took the dog for a " ( walk ) [ exercise ] ,
+		"Yeah, I played " ( tennis ) [ exercise ] ,
+		"I went " ( swimming ) [ exercise ] ,
+		"Took a " ( "spin class" ) [ exercise ] ,
+		"Did some " ( boxing ) [ exercise ] ,
+		( "rock climbing" ) [ exercise ] ,
+		"played some " ( basketball ) [ exercise ] ,
+		"played " ( football ) [ exercise ] ,
+		"I did a " ( workout ) [ exercise ] " video" ,
+		"I want to get up early and go for a run" ,
+		"Be more patient with my family" ,
+		"Try to be a better friend" ,
+		"Make sure to eat better tomorrow" ,
+		"eat less junk food" ,
+		"eat better" ,
+		"spend less time on my phone" ,
+		"don\'t procrastinate" ,
+		"Go to bed earlier" ,
+		"Don\'t stay up so late" ,
+		"try to make some time to meditate" ,
+		"i ate pretty healthy overall" ,
+		"lots of fruits and vegetables" ,
+		"I ate a salad" ,
+		"too many snacks" ,
+		"too many sweets" ,
+		"too much junk food" ,
+		"a lot of carbs" ,
+		"too much fatty food" ,
+		"Get more exercise"
+	}
+	parameters :
+		sleep ,
+		stress ,
+		exercise : entity text ;
+
+out_of_scope :
+	inputs in en {
+		"that\'s not what I want to do" ,
+		"wait stop" ,
+		"you\'re no help" ,
+		"this is no help at all" ,
+		"how old are you" ,
+		"I want to order a pizza" ,
+		"tell me the weather" ,
+		"this isn\'t working" ,
+		"I already told you that" ,
+		"don\'t like that" ,
+		"I don\'t want to tell you that" ,
+		"none of your business" ,
+		"that\'s not right" ,
+		"stop asking" ,
+		nevermind ,
+		"I want to do something else" ,
+		"I changed my mind"
+}
+
+ask_lower_stress :
+	inputs in en {
+		"What do I do if I\'m too stressed?" ,
+		"How can I lower my stress level?" ,
+		"What are some good ways to lower stress?" ,
+		"What are good ways to relax?" ,
+		"What are some things I can do lower my stress?"
+}
+
+ask_eat_healthy :
+	inputs in en {
+		"What\'s considered a good diet?" ,
+		"What\'s considered healthy food?" ,
+		"How do I follow a healthy diet?" ,
+		"What\'s an example of a healthy diet?" ,
+		"How do I eat healthy?"
+}
+
+ask_exercise :
+	inputs in en {
+		"What\'s a good amount of exercise for someone in their thirties?" ,
+		"How much exercise should I be getting?" ,
+		"How much exercise is recommended?" ,
+		"Is walking once a day enough exercise?" ,
+		"How much exercise should I do every day?" ,
+		"How many times per week should I go to the gym?"
+}
+
+actions :
+	Text response utter_ask_stress_text :
+		inputs in en {
+			"Is your stress level low, medium, or high 🧘 ?"
+	}
+	Text response utter_diet_info_text :
+		inputs in en {
+			"A healthy diet includes fruits and vegetables, whole grains, dairy, lean protein, and plant-based fats. While there is room in a healthy diet for treats, added sugar should be eaten sparingly. Aim for a variety of foods, and balance."
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi! It\'s time for your daily wellness check. Tracking healthy habits is a great way to measure your progress over time. Would you like to answer a few questions about your health?"
+	}
+	Text response utter_no_worries_text :
+		inputs in en {
+			"No problem :)"
+	}
+	Text response utter_stress_info_text :
+		inputs in en {
+			"It\'s ok to feel overwhelmed at times. Try to set realistic expectations and exercise time management techniques, like dividing large tasks into more manageable pieces. Relaxation techniques, like deep breathing and meditation, can also be beneficial."
+	}
+	Text response utter_ask_continue_text :
+		inputs in en {
+			"Sorry, I don\'t quite understand. Do you want to continue?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"See you tomorrow. Bye!"
+	}
+	Text response utter_ask_confirm_exercise_text :
+		inputs in en {
+			"Did you exercise yesterday? Don\'t sweat it if you didn\'t run a marathon - walks count!"
+	}
+	Text response utter_exercise_info_text :
+		inputs in en {
+			"Most healthy adults should aim to get about 150 min of moderate exercise per week. This includes activities like a brisk walk or yard work."
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_slots_values_text :
+		inputs in en {
+			"Here\'s your daily wellness log:\n - Exercised?: " confirm_exercise "\n - Type of exercise: " exercise "\n - Sleep: " sleep "\n - Stuck to a healthy diet?: " diet "\n - Stress level: " stress "\n - Goal: " goal
+	}
+	Text response utter_ask_diet_text :
+		inputs in en {
+			"Did you stick to a healthy diet 🥦  yesterday?"
+	}
+	Text response utter_ask_goal_text :
+		inputs in en {
+			"Setting goals - even small ones - is a great way to focus your day. What do you want to accomplish today 🥇 ?"
+	}
+	Text response utter_ask_sleep_text :
+		inputs in en {
+			"How much sleep did you get 💤  last night?"
+	}
+	Text response utter_ask_exercise_text :
+		inputs in en {
+			"What kind of exercise did you do 💪 ?"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user greet => chatbot utter_greet_text {
+		=> user affirm => chatbot utter_slots_values_text , DefaultEmptyAction {
+			=> user thankyou => chatbot utter_no_worries_text , utter_goodbye_text ;
+			=> user out_of_scope => chatbot utter_ask_continue_text {
+				=> user deny => chatbot utter_goodbye_text ;
+				=> user affirm => chatbot utter_slots_values_text ;
+			} ;
+			=> user ask_exercise => chatbot utter_exercise_info_text , utter_goodbye_text ;
+		} ;
+		=> user deny => chatbot utter_goodbye_text ;
+	} ;
+	- user ask_eat_healthy => chatbot utter_diet_info_text ;
+	- user ask_lower_stress => chatbot utter_stress_info_text ;
+	- user ask_exercise => chatbot utter_exercise_info_text ;
+

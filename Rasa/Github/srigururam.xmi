@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="srigururam">
+  <intents name="user_defined">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" who sold "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="maximum"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="units"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Display the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="minimum"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="units"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show all the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Display the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="highest"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Display all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="min"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="doctors"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="max"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Customers"/>
+        <tokens xsi:type="generator:Literal" text=" who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="has been contacted by rep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="doctors"/>
+        <tokens xsi:type="generator:Literal" text=" who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="has been contacted by rep"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="maximum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Doctors"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="lowest"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="approved claims"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Customers"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="least"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="rejected claims"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="city"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="128 PEDIATRICS ASSOCIATES"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find number of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="approved claims"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="BARNETT MEDICAL ASSOCIATES"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" who sold "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="maximum"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="units"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Display the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="minimum"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="units"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show all the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Display the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="highest"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Display all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="customer"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="min"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="doctors"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="max"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Customers"/>
+        <tokens xsi:type="generator:Literal" text=" who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="has been contacted by rep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="doctors"/>
+        <tokens xsi:type="generator:Literal" text=" who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="has been contacted by rep"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="maximum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Doctors"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="lowest"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="approved claims"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Customers"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="least"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="rejected claims"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="city"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="128 PEDIATRICS ASSOCIATES"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find number of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="approved claims"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="BARNETT MEDICAL ASSOCIATES"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Find number of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="approved claims"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="BARNETT MEDICAL ASSOCIATES"/>
+      </inputs>
+    </inputs>
+    <parameters name="subject"/>
+    <parameters name="aggregates"/>
+    <parameters name="attributes"/>
+    <parameters name="name"/>
+  </intents>
+  <intents name="greet"/>
+  <intents name="mood_great"/>
+  <intents name="mood_unhappy"/>
+  <intents name="affirm"/>
+  <intents name="deny"/>
+  <intents name="goodbye"/>
+  <actions xsi:type="generator:Empty" name="user_defined_empty"/>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.3 //@actions.6">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.2 //@actions.1 //@actions.4">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.2 //@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.0"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

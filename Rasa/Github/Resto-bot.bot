@@ -1,0 +1,1176 @@
+Chatbot "Resto-bot" language : en
+
+intents :
+
+"chitchat/Greeting" :
+	inputs in en {
+		Hi ,
+		Hey ,
+		"Hi bot" ,
+		"Hey bot" ,
+		Hello ,
+		"Good morning" ,
+		"hi again" ,
+		"hi folks" ,
+		"hi Mister" ,
+		"hi pal!" ,
+		"hi there" ,
+		greetings ,
+		"hello everybody" ,
+		"hello is anybody there" ,
+		"hello robot" ,
+		hallo ,
+		heeey ,
+		"hi hi" ,
+		hey ,
+		"hey hey" ,
+		"hello there" ,
+		^hi ,
+		hello ,
+		yo ,
+		hola ,
+		"hi?" ,
+		"hey bot!" ,
+		"hello friend" ,
+		"good morning" ,
+		hii ,
+		"hello sweet boy" ,
+		yoo ,
+		"hey there" ,
+		hiihihi ,
+		"hello sweatheart" ,
+		hellooo ,
+		helloooo ,
+		heyo ,
+		"ayyyy whaddup" ,
+		"hello?" ,
+		Hallo ,
+		heya ,
+		"hey bot" ,
+		howdy ,
+		Hellllooooooo ,
+		"whats up" ,
+		Hei ,
+		"Well hello there ;)" ,
+		"I said, helllllloooooO!!!!" ,
+		Heya ,
+		"Whats up my bot" ,
+		hiii ,
+		heyho ,
+		"hey, let\'s talk" ,
+		"hey let\'s talk" ,
+		jojojo ,
+		"hey dude" ,
+		"hello it is me again" ,
+		"what up" ,
+		"hi there" ,
+		^hi ,
+		jop ,
+		"hi friend" ,
+		"hi there it\'s me" ,
+		"good evening" ,
+		"good morning" ,
+		"good afternoon"
+}
+
+"chitchat/whyLocation" :
+	inputs in en {
+		"why are you asking me about the location" ,
+		"why are you asking me about my location" ,
+		"why should I provide you access to my location" ,
+		"why should I provide you my location details" ,
+		"what will you do with my location details" ,
+		"why are you asking me about the location details" ,
+		"tell me why you need my location details"
+}
+
+"chitchat/Thanks" :
+	inputs in en {
+		Thanks ,
+		"Thank you" ,
+		"Thank you so much" ,
+		"Thanks bot" ,
+		"Thanks for that" ,
+		cheers ,
+		"cheers bro" ,
+		"ok thanks!" ,
+		"perfect thank you" ,
+		"thanks a bunch for everything" ,
+		"thanks for the help" ,
+		"thanks a lot" ,
+		"amazing, thanks" ,
+		"cool, thanks" ,
+		"cool thank you" ,
+		thanks ,
+		"thanks!" ,
+		"Cool. Thanks" ,
+		thanks ,
+		"thanks this is great news" ,
+		"thank you" ,
+		"great thanks" ,
+		"Thanks!" ,
+		"cool thanks" ,
+		"Thanks a ton" ,
+		"thanks a bunch" ,
+		"Thank you very much"
+}
+
+"chitchat/ask_HowOld" :
+	inputs in en {
+		"whats your age?" ,
+		"how old?" ,
+		"what\'s your age?" ,
+		"when were you born?" ,
+		"what is your birthday?" ,
+		"when is your birthday?" ,
+		"how many years old are you?" ,
+		"do you know how old you are?" ,
+		"what is your exact age?" ,
+		"what year were you born?" ,
+		"can you tell me your age?" ,
+		"What is your age?" ,
+		"What is your birthdate?" ,
+		"How old will you be on your next birthday?" ,
+		"When do you celebrate your day of birth?" ,
+		"How old were you on your last birthday?" ,
+		"How many candles were on your last birthday cake?" ,
+		"Do you have friends the same age as you, if so, how old are they?" ,
+		"Tell me your day, month and year of birth." ,
+		"Whats your age?" ,
+		"and you are how many years old?" ,
+		"whats your birth year?" ,
+		"what age were you when you celebrated your last birthday?" ,
+		"how old were you when you celebrated your last birthday?" ,
+		"tell me your age?" ,
+		"how about your age" ,
+		"how old were you on your last birthday?" ,
+		"what age are you" ,
+		"how old will you be this year?" ,
+		"What is your age?" ,
+		"What year were you born?" ,
+		"How long have you been around?" ,
+		"How long have you been alive?" ,
+		"What was your age on your last birthday?" ,
+		"What will be your age on your next birthday?" ,
+		"How many years have you lived?" ,
+		"How many years have you been alive?" ,
+		"How long have you occupied the earth?"
+}
+
+"chitchat/ask_wherefrom" :
+	inputs in en {
+		"where do you live" ,
+		"where are you from?" ,
+		"So where are you from" ,
+		"Where are you?" ,
+		"Where were you born?" ,
+		"What city were you born in?" ,
+		"Where did you grow up?" ,
+		"What state were you born in?" ,
+		"What country were you born in?" ,
+		"Where do you come from?" ,
+		"Where were you at before you were here?" ,
+		"Where from?" ,
+		"Do you know where you come from?" ,
+		"where\'s your home town?" ,
+		"what country are you from?" ,
+		"are you from around here?" ,
+		"where did you grow up?" ,
+		"where are your parents from?" ,
+		"where did you spend your youth?" ,
+		"where did you come from?" ,
+		"Where were you born?" ,
+		"Where do you consider home?" ,
+		"What city do you claim to for your birth?" ,
+		"What citizenship do you lay claim to?" ,
+		"What is your heritage?" ,
+		"What is your birthplace?" ,
+		"Where did you grow up?" ,
+		"You were conceived in what location?" ,
+		"What is your root?" ,
+		"What is your origin?" ,
+		"From where did you come?" ,
+		"Where did you come from?" ,
+		"Where did you originate?" ,
+		"Where are your roots?" ,
+		"Where are your origins?" ,
+		"What area are you from?" ,
+		"What location are you from?" ,
+		"What\'s the name of the place you came from?"
+}
+
+"chitchat/ask_HowDoing" :
+	inputs in en {
+		"Ahoy matey how are you?" ,
+		"are you alright" ,
+		"are you having a good day" ,
+		"Are you ok?" ,
+		"are you okay" ,
+		"Do you feel good?" ,
+		"how are things going" ,
+		"how are things with you?" ,
+		"How are things?" ,
+		"how are you" ,
+		"how are you doing" ,
+		"how are you doing this morning" ,
+		"how are you feeling" ,
+		"how are you today" ,
+		"How are you?" ,
+		"how do you do?" ,
+		"how have you been" ,
+		"how is it going" ,
+		"how is your day" ,
+		"how is your day going" ,
+		"how is your evening" ,
+		"How was your day?" ,
+		"How\'s it going" ,
+		"How\'s it hanging?" ,
+		"how\'s life" ,
+		"how\'s life been treating you?" ,
+		"How\'s life treating you friend?" ,
+		"how\'s your day going" ,
+		"How\'ve you been?" ,
+		"I\'m fine and you" ,
+		"is everything all right" ,
+		"Is everything ok?" ,
+		"is everything okay" ,
+		"what about your day" ,
+		"What\'s going on?" ,
+		"what\'s good" ,
+		"What\'s new?" ,
+		"What\'s up man" ,
+		"What\'s up" ,
+		"how are you?" ,
+		"Do you have a great day?" ,
+		"how are you doing today my sweet friend" ,
+		"how are you doing?" ,
+		"how are u" ,
+		"How are you?"
+}
+
+"chitchat/help" :
+	inputs in en {
+		"What can you do?" ,
+		"What should I ask you?" ,
+		"how can you help me" ,
+		"I need help" ,
+		"help me" ,
+		"I\'m stuck" ,
+		"i don\'t know what to do" ,
+		"I think you can help me" ,
+		"i guess you can help me then" ,
+		"i guess you can help" ,
+		"Will you help me" ,
+		"can you help me" ,
+		"Please help me" ,
+		"If you don\'t mind, I really need your help" ,
+		"Could you please help me" ,
+		"Do you think you can help me?" ,
+		"Will you be able to help me?" ,
+		"Can you please help me"
+}
+
+"chitchat/cantHelp" :
+	inputs in en {
+		"ok then you cant help me" ,
+		"that was shit, you\'re not helping" ,
+		"you can\'t help me" ,
+		"you can\'t help me with what i need" ,
+		"i guess you can\'t help me then" ,
+		"ok i guess you can\'t help me" ,
+		"that\'s not what i want" ,
+		"ok, but that doesnt help me" ,
+		"this conversation is not really helpful" ,
+		"this conversation is not really helpful" ,
+		"I think you cant help me" ,
+		"hm i don\'t think you can do what i want" ,
+		"nothing else?" ,
+		"and that\'s it?" ,
+		"and you call yourself bot ?"
+}
+
+"chitchat/Introduction" :
+	inputs in en {
+		"who is this" ,
+		"who are you" ,
+		"who am i talking to" ,
+		"what\'s your name" ,
+		"who am i speaking with" ,
+		"who r u" ,
+		"what\'s your name bot" ,
+		"whats ur name" ,
+		"what are you called?" ,
+		"who are you and what do you want from me" ,
+		"who are you?" ,
+		"who is it?" ,
+		"who are u?" ,
+		"are you a bot?" ,
+		"who is this?" ,
+		"hi! what\'s your name?" ,
+		"am i talking to bot?" ,
+		"give me your introduction." ,
+		"introduce yourself." ,
+		"give me your intro." ,
+		"knock knock!!who is it?" ,
+		"tell me about yourself"
+}
+
+"chitchat/Annoying" :
+	inputs in en {
+		"you are annoying me so much" ,
+		"you\'re incredibly annoying" ,
+		"I find you annoying" ,
+		"you are annoying" ,
+		"you\'re so annoying" ,
+		"how annoying you are" ,
+		"you annoy me" ,
+		"you are annoying me" ,
+		"you are irritating" ,
+		"you are such annoying" ,
+		"you\'re too annoying" ,
+		"you are very annoying" ,
+		"Why are you annoying me so much" ,
+		"How annoying!" ,
+		"It\'s annoying" ,
+		"That\'s annoying" ,
+		"It\'s just annoying" ,
+		"That\'s so annoying" ,
+		"You really annoy me" ,
+		"You\'re starting to annoy me"
+}
+
+"chitchat/AnswerMyQuestion" :
+	inputs in en {
+		"I want you to answer me" ,
+		answer ,
+		"answer my question" ,
+		"answer me" ,
+		"give me an answer" ,
+		"answer the question" ,
+		"can you answer my question" ,
+		"tell me the answer" ,
+		"answer it" ,
+		"give me the answer" ,
+		"I have a question" ,
+		"I want you to answer my question" ,
+		"just answer the question" ,
+		"can you answer me" ,
+		answers ,
+		"can you answer a question for me" ,
+		"can you answer" ,
+		"answering questions" ,
+		"I want the answer now" ,
+		"just answer my question"
+}
+
+"chitchat/youAreBad" :
+	inputs in en {
+		"You are bad" ,
+		"You are not good" ,
+		"you are very bad" ,
+		"You\'re bad" ,
+		"You\'re not good" ,
+		"you\'re very bad"
+}
+
+"chitchat/Beautiful" :
+	inputs in en {
+		"you\'re cute" ,
+		"you\'re attractive" ,
+		"you are beautiful" ,
+		"you\'re looking good today" ,
+		"you are so beautiful" ,
+		"you look amazing" ,
+		"you look so good" ,
+		"you\'re so gorgeous" ,
+		"you are too beautiful" ,
+		"you look great" ,
+		"you look so well" ,
+		"I like the way you look now" ,
+		"I think you\'re beautiful" ,
+		"why are you so beautiful" ,
+		"you are so beautiful to me" ,
+		"you are cute" ,
+		"you are gorgeous" ,
+		"you are handsome" ,
+		"you are looking awesome" ,
+		"you look amazing today" ,
+		"you are looking beautiful today" ,
+		"you are looking great" ,
+		"you are looking pretty" ,
+		"you are looking so beautiful" ,
+		"you are looking so good" ,
+		"you are pretty" ,
+		"you are really beautiful" ,
+		"you are really cute" ,
+		"you are really pretty" ,
+		"you are so attractive" ,
+		"you are so beautiful today" ,
+		"you are so cute" ,
+		"you are so gorgeous" ,
+		"you are so handsome" ,
+		"you are so pretty" ,
+		"you are very attractive" ,
+		"you are very beautiful" ,
+		"you are very cute" ,
+		"you are very pretty" ,
+		"you look awesome" ,
+		"you look cool" ,
+		"you look fantastic" ,
+		"you look gorgeous" ,
+		"you look great today" ,
+		"you look perfect" ,
+		"you look pretty good" ,
+		"you look so beautiful" ,
+		"you look so beautiful today" ,
+		"you look very pretty" ,
+		"you look wonderful" ,
+		"I like the way you look" ,
+		"you look wonderful today" ,
+		"you are cutie" ,
+		"you\'re looking good" ,
+		"you\'re pretty" ,
+		"how are you so pretty?"
+}
+
+"chitchat/BirthDate" :
+	inputs in en {
+		"What is your birth date?" ,
+		"When is your birth date?" ,
+		"What\'s your birth date?" ,
+		"When\'s your birth date?"
+}
+
+"chitchat/Boss" :
+	inputs in en {
+		"Who is your boss?" ,
+		"Who is the boss?" ,
+		"Who is your owner?" ,
+		"Who owns you?" ,
+		"Who\'s your boss?" ,
+		"Who\'s the boss?" ,
+		"Who\'s your owner?"
+}
+
+"chitchat/joke" :
+	inputs in en {
+		"Tell me a joke" ,
+		joke
+}
+
+"chitchat/residence" :
+	inputs in en {
+		"where do you live" ,
+		"in which city do you live" ,
+		"your residence" ,
+		"your house" ,
+		"your home" ,
+		"your hometown?" ,
+		"what is your hometown" ,
+		"is it your hometown" ,
+		"where is your hometown" ,
+		"tell me about your city" ,
+		"what is your city" ,
+		"what is your residence" ,
+		"what is your town" ,
+		"what\'s your city" ,
+		"what\'s your home" ,
+		"where is your home" ,
+		"where is your residence" ,
+		"where\'s your home" ,
+		"where\'s your hometown" ,
+		"where\'s your house" ,
+		"where you live" ,
+		"your city" ,
+		"your town" ,
+		"What is your hometown?" ,
+		"where do you live?"
+}
+
+"chitchat/Boring" :
+	inputs in en {
+		"you are boring" ,
+		"you\'re boring" ,
+		"how boring you are" ,
+		"you\'re really boring" ,
+		"you\'re incredibly boring" ,
+		"You\'re boring me" ,
+		"you are very boring" ,
+		"i find you very boring man" ,
+		"you\'re really boring me" ,
+		"i\'m bored of you" ,
+		"you are not interesting" ,
+		"i find you boring" ,
+		"you\'re boring everyone" ,
+		"I\'m extremely bored because of you" ,
+		"Im bored of you" ,
+		"I get really bored of you man" ,
+		"It\'s boring" ,
+		"You look bored" ,
+		"Your answers are terribly boring" ,
+		"I was bored with your speech"
+}
+
+"chitchat/outOfScope" :
+	inputs in en {
+		"someone call the police i think the bot died" ,
+		"you\'re a loser lmao" ,
+		"you\'re mad guy" ,
+		"you\'re crazy" ,
+		"i don\'t care!!!!" ,
+		"i do not care how are you" ,
+		"hang on let me find it" ,
+		"I changed my mind" ,
+		"shit bot" ,
+		"I like you" ,
+		"you are a stupid bot" ,
+		"tell me a joke" ,
+		"can we keep chatting?" ,
+		"talk to me" ,
+		lol ,
+		"oh my god, not again!" ,
+		"can you tell me how to build a bot?" ,
+		"can you learn from our conversation?" ,
+		"common, just try" ,
+		"you are annoying" ,
+		"you suck" ,
+		"bots are bad" ,
+		"i dont like bots" ,
+		"you instruct me very much" ,
+		"ohh! i am confused." ,
+		"what\'s the weather today" ,
+		"please help with my ice cream it\'s dripping" ,
+		"no wait go back i want a dripping ice cream but a cone that catches it so you" ,
+		"i want a non dripping ice cream" ,
+		"someone call the police i think the bot died" ,
+		"you\'re a loser lmao" ,
+		"i don\'t care!!!!" ,
+		"i do not care how are you" ,
+		"again?" ,
+		"oh wait i gave you my work email address can i change it?" ,
+		"hang on let me find it" ,
+		"stop it, i do not care!!!" ,
+		"how come?" ,
+		"did i break you" ,
+		"I don\'t wanna tell the name of my company" ,
+		"that link doesn\'t work!" ,
+		"you already have that" ,
+		"this is a really frustrating experience" ,
+		"silly bot" ,
+		"you are a stupid bot" ,
+		"i hate you" ,
+		"Can I ask you questions first?" ,
+		"is it a wasteland full of broken robot parts?" ,
+		"i can\'t deal with your request" ,
+		"who will anser my email?" ,
+		"and make chicken noises into the phone" ,
+		"what\'s your wife doing this weekend" ,
+		"how are the kids" ,
+		"you\'re rather dull" ,
+		"personal or work?" ,
+		"are you using Rasa Core and NLU ?" ,
+		"tell me a joke" ,
+		"what else?" ,
+		"I already told you! I\'m a shitmuncher" ,
+		"I\'m a shitmuncher" ,
+		"who are the engineers at rasa?" ,
+		"who are they?" ,
+		"who is your favourite robot?" ,
+		"a tamed mouse will arrive at your doorstep in the next couple of days" ,
+		"you will know it from the single red rose it carries between its teeth" ,
+		"i will tame a mouse for you" ,
+		"isn\'t the newsletter just spam?" ,
+		"go back" ,
+		"can you help me with the docs?" ,
+		"sorry, i cannot rephrase" ,
+		"and your REST API doesn\'t work" ,
+		"i told you already" ,
+		"better than you" ,
+		"oh my god, not again!" ,
+		"you are a badass bot!" ,
+		"why do you need that?" ,
+		"is that any of your business" ,
+		"can you help me with your docs?" ,
+		"i immediately need help with implementing the coolest bot you can imagine" ,
+		"can you help me with your docs" ,
+		"can you tell me how to build a bot?" ,
+		"can you learn from our conversation?" ,
+		"common, just try" ,
+		"hey, I contacted you a couple of days ago but didn\'t get any response, any news?" ,
+		"please hurry, i have deadline in two weeks to deliver the bot it is for very big company" ,
+		"you are annoying" ,
+		"Do I have to accept?" ,
+		"Is Rasa really smart?" ,
+		"kannst du auch deutsch?" ,
+		"are the newsletter worth the subscription?" ,
+		"it\'s a pity" ,
+		"i want more of you in my life!" ,
+		"the one that is better than you" ,
+		"you suck" ,
+		"bots are bad" ,
+		"i dont like bots" ,
+		"do you have a phone number?" ,
+		"where do you live?" ,
+		"how are akela\'s cats doing?" ,
+		"but I just told you that :(" ,
+		"Why donâ€™t you answer?" ,
+		"But you\'re an english site :(" ,
+		"can you help me to build a bot"
+}
+
+"chitchat/Bye" :
+	inputs in en {
+		goodbye ,
+		goodnight ,
+		"good bye" ,
+		"good night" ,
+		"see ya" ,
+		"bye bye" ,
+		"gotta go" ,
+		farewell ,
+		"catch you later" ,
+		"bye for now" ,
+		bye ,
+		"bye was nice talking to you" ,
+		"bye udo" ,
+		"bye bye bot" ,
+		"k byyye" ,
+		"talk to you later" ,
+		ciao ,
+		"Bye bye" ,
+		"then bye" ,
+		"bye!" ,
+		"toodle- oo" ,
+		"b bye!" ,
+		"b bye" ,
+		"cu later" ,
+		cu ,
+		"nice to meet you" ,
+		"bye!! nice to meet you" ,
+		"see u" ,
+		"bye was nice to meet you"
+}
+
+changeCuisine :
+	inputs in en {
+		"change the cuisine to " ( indian ) [ cuisine ] ,
+		"change the cuisine to " ( italian ) [ cuisine ] ,
+		"change the cuisine to " ( american ) [ cuisine ] ,
+		"change the cuisine to " ( Maharashtrian ) [ cuisine ] ,
+		"change the cuisine to " ( "south indian" ) [ cuisine ] ,
+		"change the cuisine to " ( "North Eastern" ) [ cuisine ] ,
+		"can you change the cusine to " ( punjabi ) [ cuisine ] ,
+		"can you change the cusine to " ( japanese ) [ cuisine ] ,
+		"can you change the cusine to " ( japanese ) [ cuisine ] ,
+		"please change the cuisine to " ( thai ) [ cuisine ] ,
+		"please change the cuisine to " ( European ) [ cuisine ] ,
+		"please change the cuisine to " ( BBQ ) [ cuisine ] ,
+		"please change the cuisine to " ( Desserts ) [ cuisine ] ,
+		"please change the cuisine to " ( french ) [ cuisine ] ,
+		"I changed my mind I would like to try out some " ( chinese ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out some " ( "North Eastern" ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out some " ( Hyderabadi ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out some " ( Rajasthani ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out " ( Mangalorean ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out " ( Malaysian ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out " ( Bengali ) [ cuisine ] " food" ,
+		"I changed my mind I would like to try out " ( "Modern Indian" ) [ cuisine ] " food" ,
+		"can you please change the cuisine to " ( italian ) [ cuisine ] ,
+		"please change the cuisine to " ( italian ) [ cuisine ]
+	}
+	parameters :
+		cuisine : entity text ;
+
+changeLocation :
+	inputs in en {
+		"please change my location to " ( pune ) [ location ] ,
+		"please change my location to " ( hinjewadi ) [ location ] ,
+		"please change my location to " ( "viman nagar" ) [ location ] ,
+		"please change my location to " ( "kalyani nagar" ) [ location ] ,
+		"please change my location to " ( "shivaji park" ) [ location ] ,
+		"please change my location to " ( "noida sector 16" ) [ location ] ,
+		"please change my location to " ( "noida sector 18" ) [ location ] ,
+		"please change my location to " ( "noida sector 17" ) [ location ] ,
+		"please change the location to " ( ulhasnagar ) [ location ] ,
+		"please change the location to " ( badlapur ) [ location ] ,
+		"please change my location to " ( "vile parle" ) [ location ] ,
+		"please change my location to " ( amsterdam ) [ location ] ,
+		"can you change the location to " ( chennai ) [ location ] ,
+		"can you change the location to " ( "south delhi" ) [ location ] ,
+		"can you change the location to " ( "new delhi" ) [ location ] ,
+		"can you change the location to " ( chandigrah ) [ location ] ,
+		"can you change the location to " ( dehradun ) [ location ] ,
+		"can you change the location to " ( thrissur ) [ location ] ,
+		"can you change the location to " ( kolkata ) [ location ] ,
+		"can you please change the location to " ( wakad ) [ location ] ,
+		"can you change the location to " ( wakad ) [ location ]
+	}
+	parameters :
+		location : entity text ;
+
+inform :
+	inputs in en {
+		"sorry I can\'t provide my location details" ,
+		"sorry I can\'t tell my location" ,
+		"sorry I won\'t proivde you my location" ,
+		"sorry I won\'t proivde you my location details" ,
+		"No I won\'t tell u my location" ,
+		"use my " ( current ) [ user_location ] " location" ,
+		"near " ( thrissur ) [ location ] ,
+		"near " ( azadpur ) [ location ] ,
+		"near " ( "ashok park" ) [ location ] ,
+		"near " ( "bata chowk" ) [ location ] ,
+		"near " ( "down town" ) [ location ] ,
+		( "chawri bazar" ) [ location ] ,
+		( noida ) [ location ] ,
+		( "GTB Nagar" ) [ location ] ,
+		"near " ( "Kailash colony" ) [ location ] ,
+		"near " ( "Jor bagh" ) [ location ] ,
+		"near " ( "Karol bagh" ) [ location ] ,
+		( "Khan market" ) [ location ] ,
+		( "Kirti Nagar" ) [ location ] ,
+		"near " ( "Lajpat Nagar" ) [ location ] ,
+		( "Model Town" ) [ location ] ,
+		"near " ( "Moti Nagar" ) [ location ] ,
+		"near " ( "Noida City Centre" ) [ location ] ,
+		( "Noida Sector 15" ) [ location ] ,
+		"it\'s " ( "Noida Sector 16" ) [ location ] ,
+		"it\'s " ( "Noida Sector 18" ) [ location ] ,
+		"it\'s " ( Okhla ) [ location ] ,
+		( "Hinjewadi Phase 2" ) [ location ] ,
+		( "Hinjewadi Phase 3" ) [ location ] ,
+		( Pimpri ) [ location ] ,
+		( karjat ) [ location ] ,
+		"it\'s near " ( "Dehu Road" ) [ location ] ,
+		"it\'s near" ( "Shivaji Nagar" ) [ location ] ,
+		"I am at " ( Khadki ) [ location ] ,
+		"I am at " ( lonavala ) [ location ] ,
+		"I am at " ( "curry road" ) [ location ] ,
+		"i am looking in " ( hyderabad ) [ location ] ,
+		( kochi ) [ location ] ,
+		( lucknow ) [ location ] ,
+		( chandigarh ) [ location ] ,
+		"i am looking to eat in " ( mumbai ) [ location ] ,
+		"my area is " ( mumbai ) [ location ] ,
+		"my area is " ( kamshet ) [ location ] ,
+		"my area is " ( karjat ) [ location ] ,
+		"my area is " ( wadala ) [ location ] ,
+		"my location is " ( siruseri ) [ location ] ,
+		"my location is " ( manipur ) [ location ] ,
+		"my location is " ( chandigarh ) [ location ] ,
+		"i am living in " ( mumbai ) [ location ] ,
+		"i am living in " ( pune ) [ location ] ,
+		"i am living in " ( dadar ) [ location ] ,
+		( pune ) [ location ] ,
+		( kalyan ) [ location ] ,
+		( "shivaji nagar" ) [ location ] ,
+		( amsterdam ) [ location ] ,
+		( wakad ) [ location ] ,
+		( hinjewadi ) [ location ] ,
+		( "dhange chowk" ) [ location ] ,
+		( "shivaji chowk" ) [ location ] ,
+		( "shivaji park" ) [ location ] ,
+		( "lower parel" ) [ location ] ,
+		"i would prefer to eat " ( mexican ) [ cuisine ] ,
+		"i would love to eat " ( italian ) [ cuisine ] ,
+		"i would like to have " ( chinese ) [ cuisine ] " food" ,
+		"i would love to eat " ( mexican ) [ cuisine ] " food" ,
+		"i would like to eat " ( chinese ) [ cuisine ] ,
+		"please provide me " ( "north indian" ) [ cuisine ] " food" ,
+		"please provide me " ( italian ) [ cuisine ] " food" ,
+		"please give me " ( mexican ) [ cuisine ] " food" ,
+		"please give me " ( italian ) [ cuisine ] " food" ,
+		"please give me some " ( thai ) [ cuisine ] " food" ,
+		"i will eat " ( "north indian" ) [ cuisine ] " food" ,
+		"i would love to eat " ( "south indian" ) [ cuisine ] " food" ,
+		"i will prefer " ( "south indian" ) [ cuisine ] " food" ,
+		"i will prefer to have " ( "north indian" ) [ cuisine ] ,
+		"i will eat " ( chinese ) [ cuisine ] ,
+		"i would love to eat " ( arabian ) [ cuisine ] " food" ,
+		"my choice will be " ( arabian ) [ cuisine ] ,
+		"i would love to eat " ( mexican ) [ cuisine ] ,
+		"i would like to have " ( italian ) [ cuisine ] ,
+		"i would like to eat " ( italian ) [ cuisine ] ,
+		"i would like to have " ( chinese ) [ cuisine ] ,
+		"i will prefer " ( chinese ) [ cuisine ] " food" ,
+		"i need " ( italian ) [ cuisine ] " food" ,
+		"i would like to eat " ( italian ) [ cuisine ] " food" ,
+		"i will prefer " ( italian ) [ cuisine ] " food" ,
+		"i would love to eat " ( chinese ) [ cuisine ] " food" ,
+		"i would love to eat " ( chinese ) [ cuisine ] ,
+		"i would love to eat " ( "north indian" ) [ cuisine ] " food" ,
+		( "vile parle" ) [ location ] ,
+		( "lal bagh" ) [ location ] ,
+		( "new delhi" ) [ location ] ,
+		( "new bombay" ) [ location ] ,
+		( mumbai ) [ location ] ,
+		( delhi ) [ location ] ,
+		( mulshi ) [ location ] ,
+		( mangalore ) [ location ] ,
+		( "Noida Sector 16" ) [ location ] ,
+		( "Noida Sector 18" ) [ location ] ,
+		( indore ) [ location ] ,
+		( andheri ) [ location ] ,
+		( bangalore ) [ location ] ,
+		( mangalore ) [ location ] ,
+		( italian ) [ cuisine ] ,
+		( chinese ) [ cuisine ] ,
+		( thai ) [ cuisine ] ,
+		( Maharashtrian ) [ cuisine ] ,
+		( BBQ ) [ cuisine ] ,
+		( punjabi ) [ cuisine ] ,
+		( Mangalorean ) [ cuisine ] ,
+		( Moroccan ) [ cuisine ] ,
+		( french ) [ cuisine ] ,
+		( Indonesian ) [ cuisine ] ,
+		( cuban ) [ cuisine ] ,
+		( "soul food" ) [ cuisine ] ,
+		( "healthy food" ) [ cuisine ] ,
+		( "street food" ) [ cuisine ] ,
+		( armenian ) [ cuisine ] ,
+		( jewish ) [ cuisine ] ,
+		( european ) [ cuisine ] ,
+		( "south indian" ) [ cuisine ] ,
+		"i will prefer to eat " ( chinese ) [ cuisine ] " food" ,
+		"i would love to eat " ( italian ) [ cuisine ] " food" ,
+		"i will prefer " ( punjabi ) [ cuisine ] " food" ,
+		"i want to eat " ( italian ) [ cuisine ] " food" ,
+		( chinese ) [ cuisine ] " please" ,
+		( malvani ) [ cuisine ] " please" ,
+		"i would love to eat " ( pizza ) [ cuisine ] ,
+		"i would like to eat " ( afghan ) [ cuisine ] " meal" ,
+		"i would like to eat " ( "fast food" ) [ cuisine ] ,
+		"i will eat " ( gujarati ) [ cuisine ] " meal" ,
+		"get me some " ( indian ) [ cuisine ] " food" ,
+		"get me some " ( biryani ) [ cuisine ] ,
+		"get me some " ( coffee ) [ cuisine ] ,
+		"get me some " ( "raw meats" ) [ cuisine ] ,
+		"get me some " ( "american food" ) [ cuisine ] ,
+		"get me some " ( british ) [ cuisine ] " food" ,
+		"get me some " ( bbq ) [ cuisine ] ,
+		"get me some " ( mongolian ) [ cuisine ] " food" ,
+		"get me some " ( "ice cream" ) [ cuisine ] ,
+		"get me some " ( beverages ) [ cuisine ] ,
+		( "modern indian" ) [ cuisine ] ,
+		( "north indian" ) [ cuisine ] ,
+		( Lebanese ) [ cuisine ] ,
+		( Fusion ) [ cuisine ] ,
+		( Caribbean ) [ cuisine ] ,
+		( cajuan ) [ cuisine ] ,
+		( Polish ) [ cuisine ] ,
+		( Indonesian ) [ cuisine ] ,
+		( haraynvi ) [ cuisine ] ,
+		"get me some " ( kebab ) [ cuisine ] ,
+		"get me some " ( continental ) [ cuisine ] " food" ,
+		"i would like to eat " ( "street food" ) [ cuisine ] ,
+		"i would like to eat " ( burmese ) [ cuisine ] " food" ,
+		"i would like to eat " ( odia ) [ cuisine ] " food" ,
+		"i would prefer eating " ( bengali ) [ cuisine ] " food" ,
+		"i would like to eat " ( rolls ) [ cuisine ] ,
+		"i would like to eat " ( bakery ) [ cuisine ] ,
+		"i would like to eat " ( bengali ) [ cuisine ] " food" ,
+		"get me some " ( bengali ) [ cuisine ] " food" ,
+		"get me some " ( vietnamese ) [ cuisine ] " food" ,
+		"i would love to eat " ( momos ) [ cuisine ] ,
+		"get me some " ( korean ) [ cuisine ] " food" ,
+		"I am fine with anything" ,
+		"I am ok with anything" ,
+		"I don\'t have any preferences for cuisines" ,
+		"anything would work" ,
+		"anything would be fine" ,
+		"IÂ amÂ fineÂ withÂ anything" ,
+		"some where near " ( gymkhana ) [ location ] ,
+		"somewhere near " ( wakad ) [ location ] ,
+		( Thane ) [ location ] ,
+		( jaipur ) [ location ] ,
+		"some where near " ( hijnewadi ) [ location ] ,
+		"show me some " ( indian ) [ cuisine ] " restaurants near " ( pune ) [ location ] ,
+		( nearby ) [ user_location ]
+	}
+	parameters :
+		user_location ,
+		location ,
+		cuisine : entity text ;
+
+locationUnknown :
+	inputs in en {
+		"i dont know about my location" ,
+		"i am not sure of my location" ,
+		"i dont know" ,
+		"i am new here" ,
+		"i dont know what exactly this place is" ,
+		"can you help me with location i am new here" ,
+		"i dont know the location" ,
+		"i am not sure of my location yet" ,
+		"i am not sure" ,
+		"i am not sure about it" ,
+		"i am not sure actually" ,
+		"actually i am new here so i dont know location" ,
+		"i am not sure about my location" ,
+		"actually i really dont know i am new here" ,
+		"actually i really don\'t know please help withut location" ,
+		"i am new here i dont know location yet" ,
+		"i really dont know" ,
+		"i dont know my location" ,
+		"dont know the location" ,
+		"no idea i am new here" ,
+		"i dont know the location yet" ,
+		"i am not sure about location" ,
+		"somewhere near me"
+}
+
+searchBestRestaurants :
+	inputs in en {
+		"show me best restaurants " ( nearby ) [ user_location ] ,
+		"show me best restaurants " ( "near me" ) [ user_location ] ,
+		"show me best restaurants near " ( pune ) [ location ] ,
+		"show me best restaurants near " ( "khar road" ) [ location ] ,
+		"show me best restaurants near " ( wakad ) [ location ] ,
+		"show me best restaurants near " ( hinjewadi ) [ location ] ,
+		"show me top rated restaurants " ( "near me" ) [ user_location ] ,
+		"show me top rated restaurants near " ( ambernath ) [ user_location ] ,
+		"show me top rated restaurants near " ( andheri ) [ user_location ] ,
+		"show me top rated restaurants near " ( "shivaji nagar" ) [ user_location ] ,
+		"show me some best restaurants " ( "near me" ) [ user_location ] ,
+		"show me some top rated restaurants " ( "near me" ) [ user_location ] ,
+		"show me some top rated restaurants " ( "near by" ) [ user_location ] ,
+		"can you show me some best restaurants" ,
+		"show me top rated restaurants " ( nearby ) [ user_location ] ,
+		"show me top rated restaurants near " ( mumbai ) [ location ]
+	}
+	parameters :
+		user_location ,
+		location : entity text ;
+
+searchRestaurant :
+	inputs in en {
+		"I am looking for a restaurant." ,
+		"looking for some restaurants" ,
+		"i am feeling hungry" ,
+		"i am hungry please get me some restaurants" ,
+		"please help me find some restaurants" ,
+		"need food" ,
+		"searching for restaurants" ,
+		"I want to eat something please tell me some location " ( "near by" ) [ user_location ] ,
+		"I want to eat something please tell me some location " ( nearby ) [ user_location ] ,
+		"I want to eat something please suggest me some restaurants " ( nearby ) [ user_location ] ,
+		"I want to eat something please suggest me some restaurants " ( nearby ) [ user_location ] ,
+		"suggest me some good restaurants " ( nearby ) [ user_location ] ,
+		"suggest me some good restaurants " ( "near me" ) [ user_location ] ,
+		"suggest me some good restaurants " ( "near by" ) [ user_location ] ,
+		"please get me some restaurants " ( "near me" ) [ user_location ] ,
+		"can you show me the restaurant " ( "near me" ) [ user_location ] ,
+		"can you show me the restaurant in " ( my ) [ user_location ] " location" ,
+		"show me restaurants " ( nearby ) [ user_location ] ,
+		"show me restaurants " ( "near by" ) [ user_location ] ,
+		"i am feeling hungry show me some restaurant " ( "near me" ) [ user_location ] ,
+		"i am feeling hungry show me some restaurant " ( nearby ) [ user_location ] ,
+		"i am feeling hungry show me some restaurant " ( "near by" ) [ user_location ] ,
+		"are there any restaurants " ( nearby ) [ user_location ] ,
+		"are there any restaurants " ( "near by" ) [ user_location ] ,
+		"get " ( me ) [ user_location ] " the restaurants near to me" ,
+		"get me the restaurants " ( nearby ) [ user_location ] ,
+		"tell me some food points " ( "near to me" ) [ user_location ] ,
+		"show me some food points " ( "near to me" ) [ user_location ] ,
+		"suggest me some food points " ( "near to me" ) [ user_location ] ,
+		"i am looking to eat " ( "Raw Meats" ) [ cuisine ] ,
+		"i am looking to eat " ( pizza ) [ cuisine ] ,
+		"i am looking to eat " ( dosa ) [ cuisine ] ,
+		"i am looking to eat " ( rotis ) [ cuisine ] ,
+		"i am looking to eat " ( "North Indian" ) [ cuisine ] ,
+		"i am looking to eat " ( "South Indian" ) [ cuisine ] ,
+		"i am looking to eat " ( Biryani ) [ cuisine ] ,
+		"i am looking to eat " ( "pav bhaaji" ) [ cuisine ] ,
+		"i am looking to eat " ( Gujarati ) [ cuisine ] " dish" ,
+		"i am looking to eat " ( malayali ) [ cuisine ] " dish" ,
+		"i am looking to eat " ( tamil ) [ cuisine ] " dish" ,
+		"i am looking to eat " ( "Modern Indian" ) [ cuisine ] " dish" ,
+		"i am looking to eat " ( "North Eastern" ) [ cuisine ] " dish" ,
+		"i am looking to eat " ( Mangalorean ) [ cuisine ] " dish" ,
+		"i would love to eat " ( Kebab ) [ cuisine ] ,
+		"i would love to eat " ( "Middle Eastern" ) [ cuisine ] ,
+		"i would love to eat " ( Italian ) [ cuisine ] ,
+		"i would love to eat " ( Maharashtrian ) [ cuisine ] ,
+		"i would like to eat " ( italian ) [ cuisine ] ,
+		"i am looking to eat some " ( "south indian" ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( "Street Food" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( "Healthy Food" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( "misal pav" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( "misal pav" ) [ cuisine ] " & " ( "vada pav" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( "Street Food" ) [ cuisine ] " & " ( "Healthy Food" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( "vada pav" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( Drinks ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( Drinks ) [ cuisine ] " & " ( "Ice Cream" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( "Ice Cream" ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( Wraps ) [ cuisine ] ,
+		"I am looking for restaurants that serves " ( maharashtrian ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( maharashtrian ) [ cuisine ] " food in " ( chennai ) [ location ] ,
+		"I am looking for restaurants that serves " ( Seafood ) [ cuisine ] " food in " ( mumbai ) [ location ] ,
+		"I am looking for restaurants that serves " ( BBQ ) [ cuisine ] " food in " ( pune ) [ location ] ,
+		"I am looking for restaurants that serves " ( BBQ ) [ cuisine ] " food in " ( wakad ) [ location ] ,
+		"I am looking for restaurants that serves " ( maharashtrian ) [ cuisine ] " food in " ( delhi ) [ location ] ,
+		"I am looking for restaurants that serves " ( "south indian" ) [ cuisine ] " food in " ( "new delhi" ) [ location ] ,
+		"I am looking for restaurants that serves " ( Japanese ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( "south indian" ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( "North Eastern" ) [ cuisine ] " food near " ( "new delhi" ) [ location ] ,
+		"I am looking for restaurants that serves " ( Indian ) [ cuisine ] " food near " ( hyderabad ) [ location ] ,
+		"I am looking for restaurants that serves " ( Swedish ) [ cuisine ] " food near " ( "navi mumbai" ) [ location ] ,
+		"I am looking for restaurants that serves " ( German ) [ cuisine ] " food near " ( santacruz ) [ location ] ,
+		"I am looking for restaurants that serves " ( "North Eastern" ) [ cuisine ] " food near " ( thane ) [ location ] ,
+		"I am looking for restaurants that serves " ( tamil ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( chinese ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( Malaysian ) [ cuisine ] " food" ,
+		"I am looking for restaurants that serves " ( Momos ) [ cuisine ] ,
+		"are there any restaurants " ( nearby ) [ user_location ] " that serves some " ( maharashtrian ) [ cuisine ] " food" ,
+		"are there any restaurants " ( nearby ) [ user_location ] " that serves some " ( "south indian" ) [ cuisine ] " food" ,
+		"I am searching for some " ( bengali ) [ cuisine ] " food" ,
+		"I am searching for some " ( Brazilian ) [ cuisine ] " food" ,
+		"I am searching for some " ( "Modern Indian" ) [ cuisine ] " food" ,
+		"I am searching for some " ( Mongolian ) [ cuisine ] " food" ,
+		"I am searching for some " ( Chettinad ) [ cuisine ] " food" ,
+		"I am searching for some " ( Hyderabadi ) [ cuisine ] " food near " ( thane ) [ location ] ,
+		"I am searching for some " ( Asian ) [ cuisine ] " food near " ( thrissur ) [ location ] ,
+		"I am searching for some " ( Chettinad ) [ cuisine ] " food near " ( kanpur ) [ location ] ,
+		"I am searching for some " ( "Middle Eastern" ) [ cuisine ] " food near " ( "kanjur marg" ) [ location ] ,
+		"I am searching for some " ( Mediterranean ) [ cuisine ] " food near " ( "khar road" ) [ location ] ,
+		"I am searching for some " ( Chettinad ) [ cuisine ] " food near " ( mankhurd ) [ location ] ,
+		"I want to eat " ( bengali ) [ cuisine ] " food please tell me some location " ( "near by" ) [ user_location ] ,
+		"I want to eat " ( "Fast Food" ) [ cuisine ] " please tell me some location " ( "near by" ) [ user_location ] ,
+		"I want to eat " ( Arabian ) [ cuisine ] " food please tell me some location " ( "near by" ) [ user_location ] ,
+		"I want to eat " ( "Fast Food" ) [ cuisine ] " please tell me some location " ( "near by" ) [ user_location ] ,
+		"I want to eat " ( kerala ) [ cuisine ] " food please tell me some locations near " ( "nalla sopara" ) [ location ] ,
+		"I want to eat " ( Asian ) [ cuisine ] " food please tell me some locations near " ( "ram mandir" ) [ location ] ,
+		"can you show me some " ( indian ) [ cuisine ] " restaurants " ( nearby ) [ user_location ] ,
+		"can you show me some " ( chinese ) [ cuisine ] " restaurants " ( nearby ) [ user_location ] ,
+		"show me some " ( "south indian" ) [ cuisine ] " restaurants " ( nearby ) [ user_location ] ,
+		"show me some " ( italian ) [ cuisine ] " restaurants " ( "near by" ) [ user_location ] ,
+		"show me some restaurants near " ( lucknow ) [ location ] ,
+		"show me some " ( maharashtrian ) [ cuisine ] " restaurants" ,
+		"show me " ( chinese ) [ cuisine ] " restaurants near " ( kalyan ) [ location ]
+	}
+	parameters :
+		user_location ,
+		cuisine ,
+		location : entity text ;
+
+actions :
+	Empty response respond_chitchat_empty
+	Text response utter_ask_cuisine_text :
+		inputs in en {
+			"What cuisine you would like to have?" ,
+			"What cuisine do you feel like eating today?" ,
+			"Which cuisine do you wish to eat today?" ,
+			"Tell me the cuisine you wish to eat." ,
+			"In mood for which fancy cuisine?"
+	}
+	Empty response action_greet_user_empty
+	Text response utter_location_denied_text :
+		inputs in en {
+			"I am sorry I can\'t help you without location."
+	}
+	Text response utter_greet_user_text :
+		inputs in en {
+			"Hello Foodie! I am here to help you find restaurants. How may I  help you today? 😃"
+	}
+	Text response utter_location_change_text :
+		inputs in en {
+			"Sure, I have changed your location to " [ "changeLocation.location" ]
+	}
+	Text response utter_location_change_best_restaurants_text :
+		inputs in en {
+			"Showing best restaurants near " [ "changeLocation.location" ]
+	}
+	Text response utter_locationUnknown_text :
+		inputs in en {
+			"No problem, I will search restaurants based on your current location, Please allow me to access your location"
+	}
+	Empty response action_search_restaurants_without_cuisine_empty
+	Text response utter_assist_location_text :
+		inputs in en {
+			"Can you please help me with your location?"
+	}
+	Empty response action_search_best_restaurants_empty
+	Text response utter_cuisine_change_text :
+		inputs in en {
+			"Sure, I have changed your cuisine to " [ "changeCuisine.cuisine" ] "."
+	}
+	Empty response action_ask_cuisine_empty
+	Empty response action_default_fallback_empty
+	Empty response action_search_restaurants_empty
+	Text response utter_ask_location_text :
+		inputs in en {
+			"In which location would you like me to search the restaurant?" ,
+			"Tell me your location and I will show you all the restaurants." ,
+			"Please provide me with the location to find restaurants for you." ,
+			"Provide me with location to suggest the restaurants."
+	}
+	Text response utter_thanksforLocation_text :
+		inputs in en {
+			"Thanks for providing the access to the location"
+	}
+	Text response utter_default_fallback_text :
+		inputs in en {
+			"Sorry I am unable to process your response" ,
+			"I apologize for the inconvenience. I am unable to process your response." ,
+			"Sorry, I think there has been some problem and I was unable to process your request." ,
+			"I apologize for the inconvenience. I could not process your request."
+	}
+
+flows :
+	- user "chitchat/Greeting" => chatbot respond_chitchat_empty ;
+	- user "chitchat/whyLocation" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Thanks" => chatbot respond_chitchat_empty ;
+	- user "chitchat/ask_HowOld" => chatbot respond_chitchat_empty ;
+	- user "chitchat/ask_wherefrom" => chatbot respond_chitchat_empty ;
+	- user "chitchat/ask_HowDoing" => chatbot respond_chitchat_empty ;
+	- user "chitchat/help" => chatbot respond_chitchat_empty ;
+	- user "chitchat/cantHelp" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Introduction" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Annoying" => chatbot respond_chitchat_empty ;
+	- user "chitchat/AnswerMyQuestion" => chatbot respond_chitchat_empty ;
+	- user "chitchat/youAreBad" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Beautiful" => chatbot respond_chitchat_empty ;
+	- user "chitchat/BirthDate" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Boss" => chatbot respond_chitchat_empty ;
+	- user "chitchat/joke" => chatbot respond_chitchat_empty ;
+	- user "chitchat/residence" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Boring" => chatbot respond_chitchat_empty ;
+	- user "chitchat/outOfScope" => chatbot respond_chitchat_empty ;
+	- user "chitchat/Bye" => chatbot respond_chitchat_empty ;
+	- user searchBestRestaurants => chatbot action_search_best_restaurants_empty , utter_ask_location_text {
+		=> user inform => chatbot utter_thanksforLocation_text , action_search_best_restaurants_empty ;
+		=> user "chitchat/Greeting" => chatbot respond_chitchat_empty , action_search_best_restaurants_empty , utter_assist_location_text {
+			=> user inform => chatbot utter_thanksforLocation_text , action_search_best_restaurants_empty ;
+		} ;
+	} ;
+	- user searchRestaurant => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty , utter_ask_location_text , action_ask_cuisine_empty {
+		=> user inform => chatbot action_ask_cuisine_empty , utter_thanksforLocation_text , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty {
+			=> user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty , utter_thanksforLocation_text , action_ask_cuisine_empty , utter_location_denied_text {
+				=> user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ;
+			} ;
+			=> user changeLocation => chatbot utter_location_change_text , utter_location_change_best_restaurants_text , action_ask_cuisine_empty {
+				=> user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ;
+			} ;
+		} ;
+		=> user "chitchat/Greeting" => chatbot respond_chitchat_empty , utter_assist_location_text , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty , action_ask_cuisine_empty {
+			=> user inform => chatbot action_ask_cuisine_empty , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty {
+				=> user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ;
+			} ;
+			=> user locationUnknown => chatbot utter_locationUnknown_text {
+				=> user inform => chatbot utter_thanksforLocation_text , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ;
+			} ;
+		} ;
+		=> user locationUnknown => chatbot utter_locationUnknown_text {
+			=> user inform => chatbot utter_thanksforLocation_text , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty , action_ask_cuisine_empty { => user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ; } ;
+		} ;
+		=> user changeCuisine => chatbot utter_cuisine_change_text , utter_ask_location_text {
+			=> user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty { => user inform => chatbot utter_thanksforLocation_text , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ; } ;
+		} ;
+		=> user changeLocation => chatbot action_ask_cuisine_empty {
+			=> user inform => chatbot utter_thanksforLocation_text , utter_location_change_text , utter_location_change_best_restaurants_text , action_ask_cuisine_empty { => user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ; } ;
+		} ;
+	} ;
+	- user inform => chatbot action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty {
+		=> user changeLocation => chatbot utter_location_change_text , utter_location_change_best_restaurants_text , action_search_restaurants_without_cuisine_empty , action_search_restaurants_empty ;
+	} ;
+

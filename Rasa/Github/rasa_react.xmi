@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="rasa_react">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good morning"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="wiki_question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who was "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="einstein"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="api_query"/>
+  </intents>
+  <intents name="find_question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="einstein"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="apple"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="spacex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="vitamin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="einstein"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="apple"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="spacex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="vitamin"/>
+      </inputs>
+    </inputs>
+    <parameters name="api_query"/>
+  </intents>
+  <intents name="today_quote">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="today quote"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="qotd"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="weather_question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is the weather in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="berlin"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the weather in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="berlin"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="weather_location"/>
+  </intents>
+  <intents name="image_question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="apple"/>
+        <tokens xsi:type="generator:Literal" text=" images"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="display "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="apple"/>
+        <tokens xsi:type="generator:Literal" text=" images"/>
+      </inputs>
+    </inputs>
+    <parameters name="image_keyword"/>
+  </intents>
+  <intents name="goto_url">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goto "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bing.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bing.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="open "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bing.com"/>
+      </inputs>
+    </inputs>
+    <parameters name="site_url"/>
+  </intents>
+  <intents name="my_location"/>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Empty" name="action_open_site_empty"/>
+  <actions xsi:type="generator:Empty" name="action_qotd_empty"/>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, I am Scarlet. Can I help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_greet_empty"/>
+  <actions xsi:type="generator:Empty" name="action_general_search_empty"/>
+  <actions xsi:type="generator:Empty" name="action_image_search_empty"/>
+  <actions xsi:type="generator:Empty" name="action_weather_search_empty"/>
+  <actions xsi:type="generator:Empty" name="action_find_empty"/>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2"/>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.4"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.7"/>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.6"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.1"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.0"/>
+  </flows>
+  <flows intent="//@intents.7">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.7"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

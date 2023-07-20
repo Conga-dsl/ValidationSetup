@@ -1,0 +1,132 @@
+Chatbot rasaopen language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+accept :
+	inputs in en {
+		yes ,
+		right ,
+		ok ,
+		okay ,
+		sure ,
+		fine ,
+		"it\'s ok" ,
+		"it is okay" ,
+		"of cause" ,
+		ofcause
+}
+
+reject :
+	inputs in en {
+		^no ,
+		"don\'t" ,
+		dont ,
+		"do not" ,
+		"please no" ,
+		"no please" ,
+		never ,
+		"don\'t do"
+}
+
+start_assessment :
+	inputs in en {
+		"start assessment" ,
+		"I\'m ready. start the assessments now" ,
+		"start the assessments now." ,
+		"assessment start" ,
+		"lets start the assessment now" ,
+		"covid assessment"
+}
+
+begin_lead :
+
+begin_assessment :
+
+actions :
+	Text response utter_ask_gender_text :
+		inputs in en {
+			"What is your birth gender? 👇"
+	}
+	Text response utter_ask_bodyTemperature_text :
+		inputs in en {
+			"Now let\'s understand your current body temperature in degrees Fahrenheit. 🤒\n Remember Normal body temperature is <b>98.6°F or 37°C.</b> 🌡"
+	}
+	Text response utter_ask_symptomChanges_text :
+		inputs in en {
+			"One last question and we are done. 🙏\n How have your symptoms progressed over the last 48 hrs? ⏰"
+	}
+	Text response utter_ask_medicalHistory_text :
+		inputs in en {
+			"To understand your condition, we need more details about previous health conditions. ⛑\n Hope you understand. 🙏 \n Do you have a history of any of these conditions?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi! 👋 I am COVID-19 Assessment Chatbot. I can help you by assessing your symptoms related to Covid-19."
+	}
+	Text response utter_under_16_text :
+		inputs in en {
+			"Please have a chat with your family first and come back. \n I\'m always here to help you.\n You can start your assessment by entering \'start assessment\' keywords. \n However, you must maintain social distancing and regularly wash your hands and sanitize them. \n #Stayhome. #Staysafe 🙂"
+	}
+	Text response utter_ask_symptoms1_text :
+		inputs in en {
+			"Hmm...🤔\n Are you experiencing any of the symptoms below? 🤒"
+	}
+	Text response utter_ask_symptoms2_text :
+		inputs in en {
+			"And what about these ones. 👇 \n Please verify if you are experiencing any of the symptoms below. ✍"
+	}
+	Text response utter_ask_age_text :
+		inputs in en {
+			"Great! So we\'re about to ask you a couple of questions to determine your health condition. \n Let\'s start with the basics! <b>How old are you?</b>"
+	}
+	Text response utter_wrong_age_format_text :
+		inputs in en {
+			"Please enter the valid age number."
+	}
+	Text response utter_otherTime_text :
+		inputs in en {
+			"No problem. We can do your Covid-19 assessment anytime you need. I\'m always here to help you.\n You can start your assessment by entering \'start assessment\' keywords. \n However, you must maintain social distancing and regularly wash your hands and sanitize them. \n #Stayhome. #Staysafe 🙂"
+	}
+	Empty response utter_low_empty
+	Text response utter_above_107_text :
+		inputs in en {
+			"Long and healthy live dear user. Please contact your family first and come back. \n I\'m always here to help you.\n You can start your assessment by entering \'start assessment\' keywords. \n However, you must maintain social distancing and regularly wash your hands and sanitize them. \n <b>#Stayhome. #Staysafe</b> 🙂"
+	}
+	Text response utter_start_conv_text :
+		inputs in en {
+			"Hello, there 👋 We understand times are tough and everyone is panicking.\n But we\'re here to help ease it out for you! \n This medical conditions self-assessment is developed based on the World Health Organisation recommendations. \n Can we proceed with your assessment now? 👇"
+	}
+	Empty response utter_high_empty
+	Empty response action_reset_all_slots_empty
+	Text response utter_ask_travelHistory_text :
+		inputs in en {
+			"I noted that ✍\n Please tell us about your <b>travel</b> and exposure details. ✈"
+	}
+	Text response utter_bye_text :
+		inputs in en {
+			"Thanks for connecting with me."
+	}
+	Empty response utter_medium_empty
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot DefaultEmptyAction , utter_greet_text {
+		=> user begin_lead => chatbot DefaultEmptyAction { => user accept => chatbot DefaultEmptyAction ; => user reject => chatbot DefaultEmptyAction ; } ;
+	} ;
+	- user begin_assessment => chatbot utter_bye_text , action_reset_all_slots_empty ;
+	- user reject => chatbot utter_otherTime_text , utter_bye_text , action_reset_all_slots_empty ;
+	- user start_assessment => chatbot utter_start_conv_text {
+		=> user accept => chatbot utter_bye_text , action_reset_all_slots_empty ;
+		=> user reject => chatbot utter_otherTime_text , utter_bye_text , action_reset_all_slots_empty ;
+	} ;
+

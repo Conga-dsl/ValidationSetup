@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="sharadinfo">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I did"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah, great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pretty good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You bet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I sure did"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more or less"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="didn't do any"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no I didn't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could have been better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="thankyou">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay great thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my user name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="sharad_123"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="username is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="ramesh_123"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="username is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="gazonbb_098"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="internet"/>
+        <tokens xsi:type="generator:Literal" text=" not working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not open"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="portal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="network"/>
+        <tokens xsi:type="generator:Literal" text=" speed down"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="low"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="medium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="high"/>
+        <tokens xsi:type="generator:Literal" text=" priority right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, my name"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="sharad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="uh my self "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="suraj"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep, my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="ram"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes I name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="ramesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah, I name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="vishal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I self "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="ramesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="rajesh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to get up early and go for a run"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Be more patient with my family"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Try to be a better friend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Make sure to eat better tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="since"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="spend less time on my phone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't procrastinate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Go to bed earlier"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Don't stay up so late"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="try to make some time to meditate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i ate pretty healthy overall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="midnight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="today at"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="11:00am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="too many sweets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="yesterday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a lot of carbs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="too much fatty food"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Get more name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my mobile number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="8007976712"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="+918007976712"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="telephone number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="+210029256"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="here is my email"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="sharad@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="sharadrokade39@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="here is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="sharad@logify.io"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="demo@demo.com"/>
+      </inputs>
+    </inputs>
+    <parameters name="confirm_name"/>
+    <parameters name="issue"/>
+    <parameters name="priority"/>
+    <parameters name="name"/>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="mobile"/>
+    <parameters name="email"/>
+  </intents>
+  <intents name="out_of_scope">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's not what I want to do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wait stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're no help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this is no help at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how old are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to order a pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me the weather"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this isn't working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I already told you that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want to tell you that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none of your business"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's not right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop asking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nevermind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to do something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I changed my mind"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_wrong_mobile_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mobile number must be 10 digit only &#x1f4f1;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! Its complaint Drpartment, Do you want register your complaint?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_time_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Since when have you been facing this issue?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_issue_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please Enter your facing issue or complaint Name?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_no_worries_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No problem :)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_continue_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't quite understand. Do you want to continue?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_confirm_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please enter your user name &#x1f464;!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_mobile_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please enter your mobile number we will get back to you &#x1f4f1;?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you tomorrow. Bye!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please Enter Valid Email address &#x1f4e7;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Synnefo."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_slots_values_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You've submitted the following answers:&#xA; - Name?: "/>
+        <tokens xsi:type="generator:Literal" text="confirm_name"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Your Name: "/>
+        <tokens xsi:type="generator:Literal" text="name"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Issue Name: "/>
+        <tokens xsi:type="generator:Literal" text="issue"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - Facing Issue time?: "/>
+        <tokens xsi:type="generator:Literal" text="time"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - priority level: "/>
+        <tokens xsi:type="generator:Literal" text="priority"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - mobile: "/>
+        <tokens xsi:type="generator:Literal" text="mobile"/>
+        <tokens xsi:type="generator:Literal" text="&#xA; - email address:"/>
+        <tokens xsi:type="generator:Literal" text="email"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_priority_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your priority level of issue?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_email_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please Enter you email address &#x1f4e7;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_name_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please enter your name &#x1f464;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.8"/>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.10"/>
+  </flows>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.1">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.11 //@actions.15">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.4 //@actions.8"/>
+          </outcoming>
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.5">
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.8"/>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.11"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.8"/>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

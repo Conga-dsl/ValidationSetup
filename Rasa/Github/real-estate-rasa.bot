@@ -1,0 +1,235 @@
+Chatbot "real-estate-rasa" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		fine ,
+		good ,
+		nice ,
+		happy
+}
+
+confirmemail :
+	inputs in en {
+		"I submitted the details." ,
+		"I sent the details."
+}
+
+emer :
+	inputs in en {
+		Emergency ,
+		Urgent
+}
+
+notemer :
+	inputs in en {
+		High ,
+		Low ,
+		"Not emergency"
+}
+
+thankyou :
+	inputs in en {
+		"okay great thanks" ,
+		"thank you" ,
+		"thanks bye" ,
+		thanks
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+out_of_scope :
+	inputs in en {
+		"that\'s not what I want to do" ,
+		"wait stop" ,
+		"you are no help" ,
+		"how old are you" ,
+		"I want to order a pizza" ,
+		"Tell me the weather" ,
+		"I already told you that" ,
+		"That\'s not right" ,
+		"stop asking" ,
+		nevermind ,
+		"I want to do something else" ,
+		"I changed my mind"
+}
+
+support_ticket :
+	inputs in en {
+		"I want to raise a ticket." ,
+		"I want to create a ticket." ,
+		"To raise a ticket." ,
+		"For ticket" ,
+		Ticket
+}
+
+buy_new_plan :
+	inputs in en {
+		"I want to buy a plan" ,
+		"looking a plan" ,
+		"To buy a plan" ,
+		"Buy a new plan"
+}
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_ask_time_text :
+		inputs in en {
+			"What time the problem occured last time?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi! How can I help you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_ask_continue_text :
+		inputs in en {
+			"Sorry, I don\'t quite understand. Do you want to continue?"
+	}
+	Text response utter_ask_emailid_text :
+		inputs in en {
+			"Share your official email id?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_ask_aboutenvironment_text :
+		inputs in en {
+			"Is your environment completely blocked?"
+	}
+	Text response utter_ask_explainproblem_text :
+		inputs in en {
+			"Can you explain the problem?"
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_severity_text :
+		inputs in en {
+			"What is the severity?"
+	}
+	Text response utter_ask_orgsize_text :
+		inputs in en {
+			"What is your organization size?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_slots_values_text :
+		inputs in en {
+			"Here\'s your entries log:\n - problem: {explainproblem}\n - Time: {time}"
+	}
+	Text response utter_confirmemail_text :
+		inputs in en {
+			"All details are submitted. A response has been sent to your email. Do you want to continue?"
+	}
+	Text response utter_ask_plan_text :
+		inputs in en {
+			"Which plan you want to select?"
+	}
+	Text response utter_submit_text :
+		inputs in en {
+			"All details are submitted"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+		=> user buy_new_plan => chatbot utter_confirmemail_text {
+			=> user affirm => chatbot utter_greet_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+		=> user support_ticket => chatbot utter_severity_text {
+			=> user emer => chatbot DefaultEmptyAction {
+				=> user affirm => chatbot utter_greet_text ;
+				=> user deny => chatbot utter_goodbye_text ;
+			} ;
+			=> user notemer => chatbot DefaultEmptyAction {
+				=> user affirm => chatbot utter_greet_text ;
+				=> user deny => chatbot utter_goodbye_text ;
+			} ;
+		} ;
+		=> user deny => chatbot utter_goodbye_text ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

@@ -1,0 +1,211 @@
+Chatbot "rasa-song-chatbot" language : en
+
+intents :
+
+affirm :
+	inputs in en {
+		yes ,
+		"yes sure" ,
+		absolutely ,
+		"for sure" ,
+		"yes yes yes" ,
+		definitely ,
+		correct ,
+		ye ,
+		"uh yes" ,
+		"let\'s do it" ,
+		yeah ,
+		"uh yes" ,
+		"um yes" ,
+		"yes knocking" ,
+		"that\'s correct" ,
+		"yes yes" ,
+		right ,
+		yea ,
+		"yes right" ,
+		"yes and i dont care" ,
+		"right on" ,
+		"i love that"
+}
+
+deny :
+	inputs in en {
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		^no ,
+		"no new selection" ,
+		"no thanks" ,
+		"no thank you" ,
+		"uh no" ,
+		"hell no" ,
+		"do you have something else" ,
+		"no this does not work for me" ,
+		"not really"
+}
+
+out_of_scope :
+	inputs in en {
+		"can you share your boss with me?" ,
+		"i want to get to know your owner" ,
+		"i want to know the company which designed you" ,
+		"i want to know who invented you" ,
+		"May I ask who invented you?" ,
+		"please tell me the company who created you" ,
+		"please tell me who created you" ,
+		"tell me more about your creators" ,
+		"tell me more about your founders" ,
+		"How is the weather today?" ,
+		"What\'s the weather like?" ,
+		"What is the weather at your place?" ,
+		"Do you have good weather?" ,
+		"Is it raining?" ,
+		"Is it hot or cold?" ,
+		"Beautiful day, isn\'t it?" ,
+		"Is it quite breezy outside?" ,
+		"This is some nonsense chitchat" ,
+		"This is non sense" ,
+		"Here\'s a garbage sentence"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		bye ,
+		"i am going. tata" ,
+		"i need to leave" ,
+		"time to go" ,
+		"meet me soon" ,
+		tada ,
+		"bye bye"
+}
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		^hi ,
+		"how are things going" ,
+		"how are things with you?" ,
+		"How are things?" ,
+		"how are you" ,
+		"how are you doing" ,
+		"how are you doing this morning" ,
+		"how are you feeling" ,
+		"how are you today" ,
+		"How are you?" ,
+		hey ,
+		hola ,
+		ahoy ,
+		greetings
+}
+
+bot_functions :
+	inputs in en {
+		"who are you" ,
+		"what can you do" ,
+		"what are your functionalites" ,
+		"what are the things you can do" ,
+		"how can you help me" ,
+		"what are you function" ,
+		"/bot_functions" ,
+		"what would you do" ,
+		"i wonder what can you do for me"
+}
+
+play_song :
+	inputs in en {
+		"can you play " ( "right above it" ) [ song_name ] ,
+		"can you play " ( "everlong by foo fighters" ) [ song_name ] ,
+		"play the song " ( "god\'s plan" ) [ song_name ] ,
+		"please play " ( "come as you are" ) [ song_name ] " by nirvana" ,
+		"can you play music " ( satisfya ) [ song_name ] ,
+		"i need to play the song that goes like " ( "beh chala" ) [ song_name ] ,
+		"please play " ( "tum mile" ) [ song_name ] ,
+		"play " ( "brown rang" ) [ song_name ] ,
+		"i wanna play the song that goes like " ( "zindagi kuch toh bata" ) [ song_name ] ,
+		"please play " ( "dil ibaadat" ) [ song_name ] " by kk" ,
+		"i want to listen to the song " ( "zara sa" ) [ song_name ] ,
+		"how about you play " ( "tera fitoor" ) [ song_name ] " for me" ,
+		"i really want to listen " ( shayad ) [ song_name ] ,
+		"can you put on the song " ( "kun faaya kun" ) [ song_name ] ,
+		"i love the song " ( "jashn e bahara" ) [ song_name ] ". please play it" ,
+		"play " ( nagada ) [ song_name ] " song" ,
+		"play " ( "blue eyes" ) [ song_name ] " by honey singh" ,
+		"i wish to play " ( "Maula Mere Maula" ) [ song_name ] ,
+		"play aloud " ( "paint it red" ) [ song_name ] ,
+		"i want to listen the song " ( "Teri Deewani" ) [ song_name ] ,
+		"i want to play " ( "kaun hai woh" ) [ song_name ] ,
+		"play song " ( "chak len de" ) [ song_name ] ,
+		"play " ( "Aap Ki Kashish" ) [ song_name ] ,
+		"play my favorite " ( "Ae Meri Zohrajabeen" ) [ song_name ]
+	}
+	parameters :
+		song_name : entity text ;
+
+stop :
+	inputs in en {
+		"/stop" ,
+		"/stop"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi! I am a joke bot" ,
+			"Hello! What can I do for you?" ,
+			"Hi! What\'s up?"
+	}
+	Text response utter_bot_functions_text :
+		inputs in en {
+			"I can play songs for you" ,
+			"I can play music for you." ,
+			"you can ask me to play your favorite song"
+	}
+	Text response utter_play_song_text :
+		inputs in en {
+			"Here\'s your song" ,
+			"Okay, as you say"
+	}
+	Text response utter_song_not_found_text :
+		inputs in en {
+			"I coudn\'t find the song" ,
+			"The song isn\'t available online at the moment"
+	}
+	Empty response action_play_song_empty
+	Text response utter_default_text :
+		inputs in en {
+			"I couldn\'t understant. Can you please repeat what you said?" ,
+			"Can you please repeat? I couldn\'t understand." ,
+			"I\'m sorry. I couldn\'t understand. Please repeat?" ,
+			"Uhhh my bad. I couldn\'t understand. Please repeat?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye ,
+			"Good Bye" ,
+			"see you"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot DefaultEmptyAction , utter_greet_text {
+		=> user play_song => chatbot utter_play_song_text {
+			=> user greet => chatbot utter_greet_text { => user play_song => chatbot utter_play_song_text { => user greet => chatbot utter_greet_text { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot DefaultEmptyAction { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot DefaultEmptyAction { => user greet => chatbot utter_greet_text { => user goodbye => chatbot DefaultEmptyAction { => user goodbye => chatbot DefaultEmptyAction { => user greet => chatbot utter_greet_text { => user bot_functions => chatbot utter_bot_functions_text ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ;
+		} ;
+		=> user bot_functions => chatbot utter_bot_functions_text {
+			=> user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot DefaultEmptyAction { => user greet => chatbot utter_greet_text { => user bot_functions => chatbot utter_bot_functions_text { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot utter_goodbye_text { => user stop => chatbot DefaultEmptyAction { => user greet => chatbot utter_greet_text { => user bot_functions => chatbot utter_bot_functions_text { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot utter_goodbye_text { => user stop => chatbot DefaultEmptyAction { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user play_song => chatbot utter_play_song_text { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot DefaultEmptyAction { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user play_song => chatbot utter_play_song_text , action_play_song_empty { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+	- user FallbackIntent ;
+

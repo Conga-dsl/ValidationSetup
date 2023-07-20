@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Rasa_NLU_ChatBot">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hola"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sup"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="buy_phone_laptop">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to buy a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="phone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please suggest me a good "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wanted to purchase a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="phone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you recommend me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me some recommendations for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="mobile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you suggest a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wanna buy a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="mobile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Im interested in purchasing a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="phone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wanted to buy a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="refrigerator"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me a good "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="air conditioner"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please recommend me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="washing machine"/>
+      </inputs>
+    </inputs>
+    <parameters name="category"/>
+  </intents>
+  <intents name="ask_residence">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where do you live"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in which city do you live"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats your residence"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wheres your home"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wheres your house"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="your city"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="your town"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats your hometown"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where do you stay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where's your residence"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is your city"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where are you staying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wer do u stay"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="latest_news_phones_laptops">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whats the latest news with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="phones"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me about the trends regarding "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="phones"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whats going in the tech world for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="laptops"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you show me the trends in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="laptops"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Any new releases for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="mobiles"/>
+        <tokens xsi:type="generator:Literal" text=", whats the news"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update me on the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="mobile"/>
+        <tokens xsi:type="generator:Literal" text=" news"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the latest news for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="mobiles"/>
+      </inputs>
+    </inputs>
+    <parameters name="category"/>
+  </intents>
+  <intents name="out_of_scope">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="blablablablalblab"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="asdasdasdasd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hmmmmmm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hahahha"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=".."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=".."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what else can you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats the weather update"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im sleeping"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ciao"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="c u around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="c ya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="c u"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ciao"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="give_information">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm looking for 8 GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like 10 GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want a camera of 65 megapixel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm looking for 15 megapixel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="25 megapixel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I was looking for 4000 mah battery backup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="3500 mah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="around 16 GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="8 GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Well around 50 megapixel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am looking for 5000 mah battery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Well the battery should be 4300 mah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Well I would like 25 mp camera"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A camera of 40 mp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="around 8 GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="4 GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="5000 mah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="3000 mah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="25 mp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want 3500 mah battery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="50"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="25"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="8"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="5000"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="7000"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="budget_available">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my budget is around 400 usd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Well I can spend around 300 usd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my total spending on the phone can be 250 usd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can shell out approx 450 usd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="well its around 500 usd"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="600 usd"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Empty" name="action_search_empty"/>
+  <actions xsi:type="generator:Empty" name="action_my_fallback_empty"/>
+  <actions xsi:type="generator:Text" name="utter_wrong_ram_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter the correct value for ram."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_residence_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I live in this app all day long."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The virtual world is my playground. I'm always here."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Right here in this app. Whenever you need me."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_battery_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter the correct value for battery."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_storage_capacity_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whats the storage capacity you are looking for?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_storage_capacity_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter correct storage capacity in GBs."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_camera_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="PLease enter the correct value for camera."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It was great talking to you! Goodbye!!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry! I couldn't get you! Please use one of the following options."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_camera_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What megapixel camera are you looking for?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_budget_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whats your budget?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_battery_backup_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whats the minimum battery backup you are looking at?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_ram_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much GB RAM are you looking for?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_battery_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much battery capacity are you looking for in the mobile?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_budget_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter the budget in USD and below 4000."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_how_can_I_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome. I'm your shopping bot. I can help you with finding a phone or laptop and providing latest news for them."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_select_next_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please select what you want to do next."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_show_latest_news_empty"/>
+  <actions xsi:type="generator:Text" name="utter_wrong_battery_backup_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter correct value for battery backup (in hours)."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="action_your_residence_empty"/>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.16">
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.21">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.8 //@actions.21">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.21">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.21">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.21">
+                          <outcoming intent="//@intents.6">
+                            <target actions="//@actions.21">
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.21">
+                                  <outcoming intent="//@intents.5">
+                                    <target actions="//@actions.8">
+                                      <outcoming intent="//@intents.4">
+                                        <target actions="//@actions.1"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.21">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.21">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.21">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.21"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.1">
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.21">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.21">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.21">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.21">
+                          <outcoming intent="//@intents.6">
+                            <target actions="//@actions.21">
+                              <outcoming intent="//@intents.4">
+                                <target actions="//@actions.1">
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.18">
+                                      <outcoming intent="//@intents.5">
+                                        <target actions="//@actions.8"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.3">
+        <target actions="//@actions.18">
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.8"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4">
+    <target actions="//@actions.1"/>
+  </flows>
+  <flows intent="//@intents.8">
+    <target actions="//@actions.1"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

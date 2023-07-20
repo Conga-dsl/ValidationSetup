@@ -1,0 +1,231 @@
+Chatbot Rasa_NLU_ChatBot language : en
+
+intents :
+
+greet :
+	inputs in en {
+		^hi ,
+		hey ,
+		hello ,
+		"good morning" ,
+		"how are you" ,
+		hola ,
+		"good evening" ,
+		"whats up" ,
+		sup
+}
+
+buy_phone_laptop :
+	inputs in en {
+		"I would like to buy a " ( phone ) [ category ] ,
+		"I want to buy a " ( laptop ) [ category ] ,
+		"Please suggest me a good " ( laptop ) [ category ] ,
+		"I wanted to purchase a " ( phone ) [ category ] ,
+		"Can you recommend me a " ( laptop ) [ category ] ,
+		"give me some recommendations for " ( mobile ) [ category ] ,
+		"Can you suggest a " ( laptop ) [ category ] ,
+		"I wanna buy a " ( mobile ) [ category ] ,
+		"Im interested in purchasing a " ( phone ) [ category ] ,
+		"I wanted to buy a " ( refrigerator ) [ category ] ,
+		"show me a good " ( "air conditioner" ) [ category ] ,
+		"please recommend me a " ( "washing machine" ) [ category ]
+	}
+	parameters :
+		category : entity text ;
+
+ask_residence :
+	inputs in en {
+		"where do you live" ,
+		"in which city do you live" ,
+		"whats your residence" ,
+		"wheres your home" ,
+		"wheres your house" ,
+		"your city" ,
+		"your town" ,
+		"whats your hometown" ,
+		"where do you stay" ,
+		"where\'s your residence" ,
+		"what is your city" ,
+		"where are you staying" ,
+		"wer do u stay"
+}
+
+latest_news_phones_laptops :
+	inputs in en {
+		"Whats the latest news with " ( phones ) [ category ] ,
+		"Can you tell me about the trends regarding " ( phones ) [ category ] ,
+		"Whats going in the tech world for " ( laptops ) [ category ] ,
+		"Can you show me the trends in " ( laptops ) [ category ] ,
+		"Any new releases for " ( mobiles ) [ category ] ", whats the news" ,
+		"update me on the " ( mobile ) [ category ] " news" ,
+		"show me the latest news for " ( mobiles ) [ category ]
+	}
+	parameters :
+		category : entity text ;
+
+out_of_scope :
+	inputs in en {
+		blablablablalblab ,
+		asdasdasdasd ,
+		hmmmmmm ,
+		hahahha ,
+		".." ,
+		"where are you" ,
+		"what do you" ,
+		".." ,
+		"what else can you do" ,
+		"whats the weather update" ,
+		"im sleeping"
+}
+
+goodbye :
+	inputs in en {
+		goodbye ,
+		ciao ,
+		"c u around" ,
+		bye ,
+		"c ya" ,
+		"c u" ,
+		ciao ,
+		"talk to you later" ,
+		"see you around"
+}
+
+give_information :
+	inputs in en {
+		"I\'m looking for 8 GB RAM" ,
+		"I would like 10 GB RAM" ,
+		"I want a camera of 65 megapixel" ,
+		"I\'m looking for 15 megapixel" ,
+		"25 megapixel" ,
+		"I was looking for 4000 mah battery backup" ,
+		"3500 mah" ,
+		"around 16 GB RAM" ,
+		"8 GB RAM" ,
+		"Well around 50 megapixel" ,
+		"I am looking for 5000 mah battery" ,
+		"Well the battery should be 4300 mah" ,
+		"Well I would like 25 mp camera" ,
+		"A camera of 40 mp" ,
+		"around 8 GB RAM" ,
+		"4 GB RAM" ,
+		"5000 mah" ,
+		"3000 mah" ,
+		"25 mp" ,
+		"I want 3500 mah battery" ,
+		"50" ,
+		"25" ,
+		"8" ,
+		"5000" ,
+		"7000"
+}
+
+budget_available :
+	inputs in en {
+		"my budget is around 400 usd" ,
+		"Well I can spend around 300 usd" ,
+		"my total spending on the phone can be 250 usd" ,
+		"I can shell out approx 450 usd" ,
+		"well its around 500 usd" ,
+		"600 usd"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Empty response action_search_empty
+	Empty response action_my_fallback_empty
+	Text response utter_wrong_ram_text :
+		inputs in en {
+			"Please enter the correct value for ram."
+	}
+	Text response utter_residence_text :
+		inputs in en {
+			"I live in this app all day long." ,
+			"The virtual world is my playground. I\'m always here." ,
+			"Right here in this app. Whenever you need me."
+	}
+	Text response utter_wrong_battery_text :
+		inputs in en {
+			"Please enter the correct value for battery."
+	}
+	Text response utter_ask_storage_capacity_text :
+		inputs in en {
+			"Whats the storage capacity you are looking for?"
+	}
+	Text response utter_wrong_storage_capacity_text :
+		inputs in en {
+			"Please enter correct storage capacity in GBs."
+	}
+	Text response utter_wrong_camera_text :
+		inputs in en {
+			"PLease enter the correct value for camera."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"It was great talking to you! Goodbye!!"
+	}
+	Text response utter_fallback_text :
+		inputs in en {
+			"Sorry! I couldn\'t get you! Please use one of the following options."
+	}
+	Text response utter_ask_camera_text :
+		inputs in en {
+			"What megapixel camera are you looking for?"
+	}
+	Text response utter_ask_budget_text :
+		inputs in en {
+			"Whats your budget?"
+	}
+	Text response utter_ask_battery_backup_text :
+		inputs in en {
+			"Whats the minimum battery backup you are looking at?"
+	}
+	Text response utter_ask_ram_text :
+		inputs in en {
+			"How much GB RAM are you looking for?"
+	}
+	Text response utter_ask_battery_text :
+		inputs in en {
+			"How much battery capacity are you looking for in the mobile?"
+	}
+	Text response utter_wrong_budget_text :
+		inputs in en {
+			"Please enter the budget in USD and below 4000."
+	}
+	Text response utter_how_can_I_help_text :
+		inputs in en {
+			"Welcome. I\'m your shopping bot. I can help you with finding a phone or laptop and providing latest news for them."
+	}
+	Text response utter_select_next_text :
+		inputs in en {
+			"Please select what you want to do next."
+	}
+	Empty response action_show_latest_news_empty
+	Text response utter_wrong_battery_backup_text :
+		inputs in en {
+			"Please enter correct value for battery backup (in hours)."
+	}
+	Empty response action_your_residence_empty
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_how_can_I_help_text {
+		=> user buy_phone_laptop => chatbot DefaultEmptyAction {
+			=> user goodbye => chatbot utter_goodbye_text , DefaultEmptyAction {
+				=> user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user goodbye => chatbot utter_goodbye_text { => user out_of_scope => chatbot action_my_fallback_empty ; } ; } ; } ; } ; } ; } ;
+			} ;
+			=> user give_information => chatbot DefaultEmptyAction {
+				=> user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction ; } ; } ;
+			} ;
+		} ;
+		=> user goodbye => chatbot action_my_fallback_empty {
+			=> user buy_phone_laptop => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user give_information => chatbot DefaultEmptyAction { => user out_of_scope => chatbot action_my_fallback_empty { => user latest_news_phones_laptops => chatbot action_show_latest_news_empty { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ; } ; } ;
+		} ;
+		=> user latest_news_phones_laptops => chatbot action_show_latest_news_empty {
+			=> user goodbye => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user out_of_scope => chatbot action_my_fallback_empty ;
+	- user FallbackIntent => chatbot action_my_fallback_empty ;
+

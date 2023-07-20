@@ -1,0 +1,229 @@
+Chatbot sharadinfo language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		Hi
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		sure ,
+		ok ,
+		"why not" ,
+		"ok great" ,
+		"yes I did" ,
+		"yeah, great" ,
+		"pretty good" ,
+		fine ,
+		"You bet" ,
+		"I sure did" ,
+		"more or less"
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"no way" ,
+		"not really" ,
+		none ,
+		"absolutely not" ,
+		"no thanks" ,
+		"didn\'t do any" ,
+		"no I didn\'t" ,
+		"could have been better" ,
+		"not great" ,
+		nope
+}
+
+thankyou :
+	inputs in en {
+		"okay great thanks" ,
+		"thank you" ,
+		"sure thanks" ,
+		"thanks bye"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+inform :
+	inputs in en {
+		"my user name is " ( sharad_123 ) [ confirm_name ] ,
+		"username is " ( ramesh_123 ) [ confirm_name ] ,
+		"username is " ( gazonbb_098 ) [ confirm_name ] ,
+		"my " ( internet ) [ issue ] " not working" ,
+		"not open" ( portal ) [ issue ] ,
+		( network ) [ issue ] " speed down" ,
+		( low ) [ priority ] ,
+		( medium ) [ priority ] ,
+		( high ) [ priority ] " priority right now" ,
+		"Yes, my name" ( sharad ) [ name ] ,
+		"uh my self " ( suraj ) [ name ] ,
+		"yep, my name is " ( ram ) [ name ] ,
+		"Yes I name is " ( ramesh ) [ name ] ,
+		"Yeah, I name is " ( vishal ) [ name ] ,
+		"I self " ( ramesh ) [ name ] ,
+		"my name is " ( rajesh ) [ name ] ,
+		"I want to get up early and go for a run" ,
+		"Be more patient with my family" ,
+		"Try to be a better friend" ,
+		"Make sure to eat better tomorrow" ,
+		since ( day ) [ ^time ] ,
+		from ( hours ) [ ^time ] ,
+		"spend less time on my phone" ,
+		"don\'t procrastinate" ,
+		"Go to bed earlier" ,
+		"Don\'t stay up so late" ,
+		"try to make some time to meditate" ,
+		"i ate pretty healthy overall" ,
+		"in the " ( morning ) [ ^time ] ,
+		from ( midnight ) [ ^time ] ,
+		"today at" ( "11:00am" ) [ ^time ] ,
+		"too many sweets" ,
+		"from " ( yesterday ) [ ^time ] ,
+		"a lot of carbs" ,
+		"too much fatty food" ,
+		"Get more name" ,
+		"my mobile number is " ( "8007976712" ) [ mobile ] ,
+		"number is " ( "+918007976712" ) [ mobile ] ,
+		"telephone number is " ( "+210029256" ) [ mobile ] ,
+		"here is my email" ( "sharad@gmail.com" ) [ email ] ,
+		( "sharadrokade39@gmail.com" ) [ email ] ,
+		"here is " ( "sharad@logify.io" ) [ email ] ,
+		"my email is " ( "demo@demo.com" ) [ email ]
+	}
+	parameters :
+		confirm_name ,
+		issue ,
+		priority ,
+		name ,
+		^time : entity time ;
+		mobile ,
+		email : entity text ;
+
+out_of_scope :
+	inputs in en {
+		"that\'s not what I want to do" ,
+		"wait stop" ,
+		"you\'re no help" ,
+		"this is no help at all" ,
+		"how old are you" ,
+		"I want to order a pizza" ,
+		"tell me the weather" ,
+		"this isn\'t working" ,
+		"I already told you that" ,
+		"don\'t like that" ,
+		"I don\'t want to tell you that" ,
+		"none of your business" ,
+		"that\'s not right" ,
+		"stop asking" ,
+		nevermind ,
+		"I want to do something else" ,
+		"I changed my mind"
+}
+
+actions :
+	Text response utter_wrong_mobile_text :
+		inputs in en {
+			"mobile number must be 10 digit only 📱"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi! Its complaint Drpartment, Do you want register your complaint?"
+	}
+	Text response utter_ask_time_text :
+		inputs in en {
+			"Since when have you been facing this issue?"
+	}
+	Text response utter_ask_issue_text :
+		inputs in en {
+			"please Enter your facing issue or complaint Name?"
+	}
+	Text response utter_no_worries_text :
+		inputs in en {
+			"No problem :)"
+	}
+	Text response utter_ask_continue_text :
+		inputs in en {
+			"Sorry, I don\'t quite understand. Do you want to continue?"
+	}
+	Text response utter_ask_confirm_name_text :
+		inputs in en {
+			"please enter your user name 👤!"
+	}
+	Text response utter_ask_mobile_text :
+		inputs in en {
+			"please enter your mobile number we will get back to you 📱?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"See you tomorrow. Bye!"
+	}
+	Text response utter_wrong_email_text :
+		inputs in en {
+			"Please Enter Valid Email address 📧"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Synnefo."
+	}
+	Text response utter_slots_values_text :
+		inputs in en {
+			"You\'ve submitted the following answers:\n - Name?: " confirm_name "\n - Your Name: " name "\n - Issue Name: " issue "\n - Facing Issue time?: " ^time "\n - priority level: " priority "\n - mobile: " mobile "\n - email address:" email
+	}
+	Text response utter_ask_priority_text :
+		inputs in en {
+			"What is your priority level of issue?"
+	}
+	Text response utter_ask_email_text :
+		inputs in en {
+			"please Enter you email address 📧"
+	}
+	Text response utter_ask_name_text :
+		inputs in en {
+			"please enter your name 👤"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user greet => chatbot utter_greet_text {
+		=> user affirm => chatbot utter_slots_values_text , DefaultEmptyAction {
+			=> user thankyou => chatbot utter_no_worries_text , utter_goodbye_text ;
+			=> user out_of_scope => chatbot utter_ask_continue_text {
+				=> user deny => chatbot utter_goodbye_text ;
+				=> user affirm => chatbot utter_slots_values_text ;
+			} ;
+		} ;
+		=> user deny => chatbot utter_goodbye_text ;
+	} ;
+

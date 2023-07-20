@@ -1,0 +1,99 @@
+Chatbot rasa_react language : en
+
+intents :
+
+greet :
+	inputs in en {
+		Hi ,
+		Hey ,
+		Hello ,
+		"Good morning"
+}
+
+wiki_question :
+	inputs in en {
+		"Who is " ( einstein ) [ api_query ] "?" ,
+		"Who was " ( einstein ) [ api_query ] "?" ,
+		"What is " ( einstein ) [ api_query ] "?" ,
+		"Where is " ( einstein ) [ api_query ] "?" ,
+		"Who are " ( einstein ) [ api_query ] "?" ,
+		"What are " ( einstein ) [ api_query ] "?" ,
+		"Where are " ( einstein ) [ api_query ] "?"
+	}
+	parameters :
+		api_query : entity text ;
+
+find_question :
+	inputs in en {
+		"find " ( einstein ) [ api_query ] ,
+		"find " ( apple ) [ api_query ] ,
+		"find " ( spacex ) [ api_query ] ,
+		"find " ( vitamin ) [ api_query ] ,
+		"search for " ( einstein ) [ api_query ] ,
+		"search for " ( apple ) [ api_query ] ,
+		"search for " ( spacex ) [ api_query ] ,
+		"search for " ( vitamin ) [ api_query ]
+	}
+	parameters :
+		api_query : entity text ;
+
+today_quote :
+	inputs in en {
+		"today quote" ,
+		qotd
+}
+
+weather_question :
+	inputs in en {
+		"how is the weather in " ( berlin ) [ weather_location ] "?" ,
+		"What is the weather in " ( berlin ) [ weather_location ] "?"
+	}
+	parameters :
+		weather_location : entity text ;
+
+image_question :
+	inputs in en {
+		"show " ( apple ) [ image_keyword ] " images" ,
+		"display " ( apple ) [ image_keyword ] " images"
+	}
+	parameters :
+		image_keyword : entity text ;
+
+goto_url :
+	inputs in en {
+		"goto " ( "bing.com" ) [ site_url ] ,
+		"go to " ( "bing.com" ) [ site_url ] ,
+		"open " ( "bing.com" ) [ site_url ]
+	}
+	parameters :
+		site_url : entity text ;
+
+my_location :
+
+FallbackIntent Fallback :
+
+actions :
+	Empty response action_open_site_empty
+	Empty response action_qotd_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hello, I am Scarlet. Can I help you?"
+	}
+	Empty response action_greet_empty
+	Empty response action_general_search_empty
+	Empty response action_image_search_empty
+	Empty response action_weather_search_empty
+	Empty response action_find_empty
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text ;
+	- user wiki_question => chatbot action_general_search_empty ;
+	- user find_question => chatbot action_find_empty ;
+	- user weather_question => chatbot action_weather_search_empty ;
+	- user today_quote => chatbot action_qotd_empty ;
+	- user image_question => chatbot action_image_search_empty ;
+	- user goto_url => chatbot action_open_site_empty ;
+	- user my_location => chatbot DefaultEmptyAction ;
+	- user FallbackIntent => chatbot action_find_empty ;
+

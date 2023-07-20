@@ -1,0 +1,1979 @@
+Chatbot "recruitment-bot-rasa" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"hey there" ,
+		"i want to talk to you" ,
+		"talk to me" ,
+		howdy ,
+		"hey, whatâ€™s up" ,
+		greetings ,
+		start ,
+		"get started" ,
+		begin ,
+		"start the conversation" ,
+		"begin the conversation" ,
+		"start talking" ,
+		"start speaking" ,
+		"hey recruitment bot" ,
+		"hi bot" ,
+		"hey bot" ,
+		"hello bot" ,
+		"hi chatbot" ,
+		"hi ai bot" ,
+		"hey there chatbot" ,
+		"hello recruitment bot" ,
+		"hi recruitment bot"
+}
+
+python_job :
+	inputs in en {
+		python ,
+		"python developer" ,
+		"i know python" ,
+		"python programming" ,
+		"python language" ,
+		"i want to apply for python developer role" ,
+		"i am good at python programming" ,
+		"i want the python job" ,
+		"i think i am fit for python role"
+}
+
+java_job :
+	inputs in en {
+		"java developer" ,
+		"java coder" ,
+		"i want to apply for java developer role" ,
+		"java programming" ,
+		"python language" ,
+		"i want to apply for java developer role" ,
+		"i am good at java programming" ,
+		"i want the java job" ,
+		"i think i am fit for java role"
+}
+
+interested :
+	inputs in en {
+		interested ,
+		"yes i am interested" ,
+		"interested in this job role" ,
+		"yes i want this role" ,
+		"yes i have interest" ,
+		"i want to apply for this role" ,
+		"i want to apply for this position" ,
+		"definitely interested" ,
+		"highly interested" ,
+		"i am fit for this role" ,
+		"i am fit for this position"
+}
+
+not_interested :
+	inputs in en {
+		"not interested" ,
+		"no interest in this role" ,
+		"i do not want to do this job" ,
+		"i do not want to apply for this job" ,
+		"i am not fit for this role" ,
+		"this role won\'t suite me" ,
+		"i don\'t want this role" ,
+		"i am not interested in this role" ,
+		"not this one"
+}
+
+affirm :
+	inputs in en {
+		yeah ,
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		"i want a job" ,
+		"ðŸ‘�"
+}
+
+looking_for_job :
+	inputs in en {
+		"i need a job" ,
+		"do you have a job for me" ,
+		"can you look for a job for me" ,
+		"i am looking for a job" ,
+		"i am in dire need of a job" ,
+		"i am searching for a job" ,
+		"i want to apply for a job" ,
+		"i want to work in your company" ,
+		"i want to work in your organisation" ,
+		"i want to apply in your company" ,
+		"i want to be an employee in your company" ,
+		"show me job vacancies" ,
+		"can you tell me what job roles do you have" ,
+		"show me open job roles" ,
+		"i want to see job vacancies" ,
+		"what jobs do you have for me" ,
+		"what open job positions do you have" ,
+		"show me open job positions" ,
+		"show me the list of job vacancies"
+}
+
+not_looking_for_job :
+	inputs in en {
+		"i am not looking for job" ,
+		"i do not need a job" ,
+		"i don\'t need a job" ,
+		"i am not searching for a job" ,
+		"i am not in need of a job"
+}
+
+your_boss :
+	inputs in en {
+		"who made you" ,
+		"who wrote the code for you" ,
+		"who wrote your code" ,
+		"who is your creator" ,
+		"who is your developer" ,
+		"who developed you" ,
+		"who is your boss" ,
+		"who created you" ,
+		"who is your master" ,
+		"who coded you" ,
+		"who has written your code"
+}
+
+data_privacy :
+	inputs in en {
+		"what do you do with my data" ,
+		"what is the privacy policy" ,
+		"do you save what I say" ,
+		"do you save my data" ,
+		"i am concerned about my privacy" ,
+		"how can I trust you with my data"
+}
+
+ask_about_weather :
+	inputs in en {
+		"whatâ€™s the weather like today" ,
+		"tell me about today\'s weather" ,
+		"weather information" ,
+		"i want to know about weather" ,
+		"weather forecast"
+}
+
+languages :
+	inputs in en {
+		"which languages can you speak" ,
+		"how many languages do you know" ,
+		"in how many languages can you talk" ,
+		"in how many languages can you converse"
+}
+
+deny :
+	inputs in en {
+		^no ,
+		"not at the moment" ,
+		"i do not want a job" ,
+		"i am not looking for a job" ,
+		"i am not searching for a job" ,
+		"no not right now" ,
+		never ,
+		"I don\'t think so" ,
+		"no way" ,
+		"not really" ,
+		"ðŸ‘Ž"
+}
+
+goodbye :
+	inputs in en {
+		"tada. bye." ,
+		"bye-bye tada." ,
+		"see you later. bye-bye." ,
+		"bye-bye." ,
+		"goodbye." ,
+		"well then bye. bye." ,
+		"bye. bye-bye." ,
+		"tata." ,
+		"i see you. bye. talk to you later." ,
+		"see you. bye." ,
+		"bye-bye-bye." ,
+		"goodbye tada and bye." ,
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		"see you soon" ,
+		"talk to you later" ,
+		ttyl
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good" ,
+		"Feeling happy" ,
+		"I am happy" ,
+		"I\'m happy to see you" ,
+		happy ,
+		"if you\'re happy then I\'m happy" ,
+		"I\'m happy for you" ,
+		"I\'m happy to help" ,
+		"I\'m happy to see you" ,
+		"you made me very happy" ,
+		"I\'m glad to see you" ,
+		"I\'m happy to talk to you" ,
+		"I was the happiest man on earth" ,
+		"I\'m just really happy right now" ,
+		"I\'m really happy I ran into you" ,
+		"I feel happiest when I\'m chatting with u" ,
+		"Nobody but you can make me happy" ,
+		"Whenever I see you, I feel happy" ,
+		"ur smile always makes me happy" ,
+		"i feel happy" ,
+		"i was so happy"
+}
+
+mood_unhappy :
+	inputs in en {
+		"I\'m in a sad mood" ,
+		"I am sad" ,
+		"I\'m grieving" ,
+		"I am depressed" ,
+		"I am feeling sad" ,
+		"I am upset" ,
+		"I\'m unhappy" ,
+		"I\'m having a bad day" ,
+		"I want to cry" ,
+		"I\'m not happy" ,
+		"feeling sad" ,
+		"I felt sad for no reason" ,
+		"Now I\'m sad" ,
+		"It makes me sad" ,
+		"I am sad to hear it" ,
+		"I am a very sad person" ,
+		"I feel sad every now and then" ,
+		"I am as sad and lonely as can be" ,
+		"feeling so down" ,
+		"i am not in a good mood" ,
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot" ,
+		"are you a human" ,
+		"am I talking to a bot" ,
+		"am I talking to a human" ,
+		"you are chatbot" ,
+		"you are a bot" ,
+		"are you a chatbot" ,
+		"are you a bot" ,
+		"are you just a bot" ,
+		"are you a robot" ,
+		"are you a program" ,
+		"you\'re a robot" ,
+		"you\'re an AI" ,
+		"are you artificially intelligent" ,
+		"are you an AI" ,
+		"you are a program" ,
+		"you are a conversational AI" ,
+		"are you a human?"
+}
+
+fallback :
+	inputs in en {
+		"chup kar" ,
+		"fuck off" ,
+		"go to hell" ,
+		"play a song" ,
+		"call me" ,
+		"dance with me" ,
+		"book a movie ticket" ,
+		jadhayutfsfs ,
+		"get lost"
+}
+
+contact :
+	inputs in en {
+		contact ,
+		"where is your office located" ,
+		"where you are based" ,
+		"where is your company located" ,
+		"where you are located" ,
+		"what is your address" ,
+		"contact number" ,
+		"contact TechCodeMonk" ,
+		"how to contact you?" ,
+		"how to contact TechCodeMonk" ,
+		"Your phone number" ,
+		"email address" ,
+		"sales team" ,
+		sales ,
+		"team who can sale these to me" ,
+		"customer care" ,
+		"contact customer care" ,
+		"help me connect with someone" ,
+		"talk to someone" ,
+		"talk to an executive" ,
+		"i want to speak to a live human" ,
+		"talk to customer care" ,
+		"get in touch" ,
+		help
+}
+
+thank_you :
+	inputs in en {
+		"thank you" ,
+		thanks ,
+		"thank you so much"
+}
+
+user_bored :
+	inputs in en {
+		"soo bored" ,
+		"that was boring" ,
+		"I\'m bored" ,
+		bored ,
+		boring ,
+		"I am getting bored" ,
+		"Staying at home is boring" ,
+		"very boring" ,
+		"it bores me" ,
+		"i had a slow day" ,
+		"i am very bored" ,
+		"Im kinda bored today" ,
+		"I\'ve never been more bored" ,
+		"I was bored" ,
+		"It\'s boring" ,
+		"This is boring" ,
+		"We\'re all bored" ,
+		"It\'s very boring" ,
+		"I\'m already bored" ,
+		"I\'m bored out of my mind"
+}
+
+user_lonely :
+	inputs in en {
+		"I am lonely" ,
+		"I\'m very lonely" ,
+		"I\'m so lonely" ,
+		"I\'m really lonely" ,
+		"I am feeling lonely" ,
+		"I feel lonely" ,
+		"I am a loner" ,
+		"I don\'t have any company" ,
+		"I don\'t have anyone else" ,
+		"I\'m always alone" ,
+		"I\'m alone" ,
+		"am all alone" ,
+		"I live alone" ,
+		"I\'m all alone" ,
+		"I\'ve gotten used to living alone" ,
+		"I think I\'ve been living alone too long" ,
+		"One of the disadvantages of living alone is that you have no one to talk to" ,
+		"I am still alone" ,
+		"i lives in this city all alone" ,
+		"I am used to living alone"
+}
+
+agent_fired :
+	inputs in en {
+		"you are an idiot" ,
+		"don\'t talk nonsense" ,
+		"you speak bullshit" ,
+		"you stupid ass" ,
+		"you are fired" ,
+		"I fire you" ,
+		"you don\'t work for me anymore" ,
+		"we\'re not working together anymore" ,
+		"now you\'re fired" ,
+		"I want to fire you" ,
+		"you must get fired" ,
+		"it\'s time to fire you" ,
+		"you should be fired" ,
+		"I will fire you" ,
+		"you are unemployed from now on" ,
+		"I will make you unemployed" ,
+		"I\'m about to fire you" ,
+		"I\'m firing you" ,
+		"you are dismissed" ,
+		"you are stupid" ,
+		"I\'m firing you" ,
+		"I had to fire u" ,
+		"I could fire you for that" ,
+		"I\'m going to fire you"
+}
+
+agent_hungry :
+	inputs in en {
+		"do you want to eat" ,
+		"are you hungry" ,
+		"would you like to eat something" ,
+		"you are hungry" ,
+		"you\'re so hungry" ,
+		"you\'re very hungry" ,
+		"you might be hungry" ,
+		"you\'re really hungry" ,
+		"can you eat?" ,
+		"how will eat when you are hungry?" ,
+		"can you be hungry?" ,
+		"how do you eat?" ,
+		"do you feel hungry?" ,
+		"are you dying of hunger"
+}
+
+agent_residence :
+	inputs in en {
+		"where do you live" ,
+		"in which city do you live" ,
+		"where are you from" ,
+		"where do you reside" ,
+		"your residence" ,
+		"your house" ,
+		"your home" ,
+		"your hometown?" ,
+		"what is your hometown" ,
+		"is it your hometown" ,
+		"where is your hometown" ,
+		"tell me about your city" ,
+		"what is your city" ,
+		"what is your residence" ,
+		"what is your town" ,
+		"what\'s your city" ,
+		"where is your home" ,
+		"where is your residence" ,
+		"where\'s your home" ,
+		"where\'s your hometown" ,
+		"where\'s your house" ,
+		"where you live" ,
+		"your city" ,
+		"your town" ,
+		"What is your hometown?" ,
+		"where do you live?"
+}
+
+agent_hobby :
+	inputs in en {
+		"what do you do for fun?" ,
+		"tell me about your hobby" ,
+		"do you have a hobby" ,
+		"what about your hobby" ,
+		"your hobby" ,
+		"what are your hobbies?" ,
+		"what do you do when you are bored" ,
+		"how do you spend your free time" ,
+		"tell me more about your hobbies?" ,
+		"i want to know about your hobbies" ,
+		"what do you do when you have nothing to do" ,
+		"how do you spend your time?" ,
+		"What do you do when you are free?" ,
+		"What\'s your hobby?" ,
+		"Do you have many hobbies?" ,
+		"Do you have a hobby?" ,
+		"Please tell me about your hobbies" ,
+		"What will you do when you are alone?"
+}
+
+agent_be_clever :
+	inputs in en {
+		study ,
+		"do you get smarted" ,
+		"you should study better" ,
+		"you must learn" ,
+		"be clever" ,
+		"be more clever" ,
+		"be smarter" ,
+		"be smart" ,
+		"get qualified" ,
+		"you are not as smart as i thought" ,
+		"you have to learn a lot" ,
+		"you should be trained more" ,
+		"be more smart" ,
+		"you need to learn more" ,
+		"be useful" ,
+		"think out of the box" ,
+		"smarty pants" ,
+		"you need to improve" ,
+		"you should learn" ,
+		"you have to be more smart" ,
+		"u have to use your brains" ,
+		"can\'t you be more smart" ,
+		"can you become more smart" ,
+		"how smart are you" ,
+		"how clever are you"
+}
+
+dialog_what_do_you_mean :
+	inputs in en {
+		"what exactly do you mean?" ,
+		"what do you mean?" ,
+		"is that what you mean" ,
+		"what do you mean exactly?" ,
+		"but what do you mean" ,
+		"what did you mean?" ,
+		"i don\'t understand what you meant" ,
+		"what did you blabber?" ,
+		"don\'t blabber" ,
+		"you don\'t understand like anything" ,
+		"what did you mean by that?"
+}
+
+agent_goodnight :
+	inputs in en {
+		goodnight ,
+		"I am sleeping" ,
+		"I am sleepy" ,
+		"Let\'s sleep" ,
+		"Night night" ,
+		"sweet dreams" ,
+		night
+}
+
+agent_name :
+	inputs in en {
+		"who are you" ,
+		"who am I talking to" ,
+		"what is your name?" ,
+		"what should I call you?" ,
+		"what do your friends call you?" ,
+		"what do people call you?" ,
+		"please tell me your name" ,
+		"i want to know your name" ,
+		"name of you" ,
+		"your name please" ,
+		"name please" ,
+		"what is your good name"
+}
+
+greetings_goodmorning :
+	inputs in en {
+		GM ,
+		"good morning" ,
+		"good morning to you" ,
+		"hello good morning" ,
+		"have a nice morning" ,
+		"have a great morning" ,
+		morning ,
+		"good morning there" ,
+		"top of the morning to you" ,
+		"a good morning" ,
+		"good morning to you" ,
+		"hi good morning" ,
+		"and a good morning to you" ,
+		"good morning too"
+}
+
+greetings_goodnight :
+	inputs in en {
+		GN ,
+		"good night" ,
+		"good night to you" ,
+		"sweet dreams" ,
+		"have a nice sleep" ,
+		"have a great night"
+}
+
+emotions_wow :
+	inputs in en {
+		wow ,
+		"wow wow" ,
+		"wow wow wow" ,
+		wooow ,
+		woah ,
+		woaah ,
+		amazing ,
+		"wow man" ,
+		whoah ,
+		woow ,
+		"wow!!" ,
+		wheey ,
+		wooh
+}
+
+greetings_whatsup :
+	inputs in en {
+		"what is on your mind?" ,
+		"what\'s happened" ,
+		"what is up" ,
+		"what\'s up" ,
+		whazzup ,
+		"sup?" ,
+		"good what\'s up" ,
+		"I said what\'s up" ,
+		"then what\'s up" ,
+		"what\'s shaking" ,
+		wassup ,
+		"what are you doing?" ,
+		"what is going on" ,
+		"what is happening" ,
+		"what\'s cracking" ,
+		"what\'s cooking" ,
+		"hey what\'s up" ,
+		"what\'s up today" ,
+		"oh What happened?" ,
+		"What are you upto?" ,
+		"hey buddy wassup" ,
+		"sup then" ,
+		"so wassup" ,
+		"buddy sup" ,
+		"What are you doing?" ,
+		"what is up with you these days?" ,
+		"What you upto?"
+}
+
+dialog_wrong :
+	inputs in en {
+		"that was wrong" ,
+		"that\'s not what I asked" ,
+		"that\'s wrong" ,
+		wrong ,
+		"it is not right" ,
+		"that\'s not right" ,
+		"it\'s wrong" ,
+		"that is incorrect" ,
+		incorrect ,
+		"not correct" ,
+		"you are wrong" ,
+		"not right" ,
+		"don\'t think that you know everything" ,
+		"u don\'t know anything" ,
+		"you misinterpret" ,
+		"you misunderstood" ,
+		"u took it in a wrong way"
+}
+
+user_excited :
+	inputs in en {
+		"I am excited" ,
+		"I\'m really excited" ,
+		"how excited I am" ,
+		"I\'m thrilled" ,
+		"I\'m excited about working with you" ,
+		"I\'m excited to start our friendship" ,
+		"I\'m thrilled" ,
+		"I am thrilled to talk to you" ,
+		"I\'m damn excited" ,
+		"I\'m hyped" ,
+		"I\'m very excited" ,
+		"I felt excited" ,
+		"It was exciting" ,
+		"That was exciting" ,
+		"I\'m really excited" ,
+		"How exciting!" ,
+		"i\'m excited about tomorrow" ,
+		"It was very exciting! I\'d like to use this feature again" ,
+		"I\'m pretty excited about it" ,
+		"It\'s fun and exciting"
+}
+
+appraisal_no_problem :
+	inputs in en {
+		"no worries" ,
+		"no prob" ,
+		"no problem" ,
+		"there\'s no problem" ,
+		"sure no problem" ,
+		"no problem about that" ,
+		"don\'t worry" ,
+		"don\'t worry there\'s no problem" ,
+		"yeah, no prob" ,
+		"i have no problem with that" ,
+		"not a problem at all." ,
+		"Okay no problem"
+}
+
+dialog_hug :
+	inputs in en {
+		"wanna hug" ,
+		"hug you" ,
+		"do you want a hug" ,
+		"may I hug you" ,
+		"could you give me a hug" ,
+		"I want a hug" ,
+		hug ,
+		"hug me" ,
+		hugged ,
+		"you hugged" ,
+		hugging ,
+		"hugging me" ,
+		"hugged me" ,
+		"want a hug" ,
+		"a hug" ,
+		"I want hug you"
+}
+
+agent_age :
+	inputs in en {
+		"tell me your age" ,
+		"what\'s your age?" ,
+		"your age" ,
+		"age of yours" ,
+		"how old were you" ,
+		"I\'d like to know your age" ,
+		"how old is your platform" ,
+		"how old are you?" ,
+		"tell me how old you are" ,
+		"how can i know about your age" ,
+		"i wanna know your age" ,
+		"how long have you been live?" ,
+		"what is your age as of today?" ,
+		"How old did you turn?" ,
+		"How old are you now?" ,
+		"what is your age?" ,
+		"How old will you be turning?" ,
+		"how old r u?" ,
+		"From how long you have been here?" ,
+		"You look aged"
+}
+
+agent_there :
+	inputs in en {
+		"are you there?" ,
+		"are you there" ,
+		"you are there" ,
+		"are you near me" ,
+		"are you here ?" ,
+		"are you here" ,
+		"are you still there" ,
+		"you are here?" ,
+		"you still there?" ,
+		"you there?" ,
+		"are you still here"
+}
+
+agent_funny :
+	inputs in en {
+		"you make me laugh a lot" ,
+		"you are hilarious" ,
+		"you are really funny" ,
+		"you\'re the funniest bot I\'ve talked to" ,
+		"you make me laugh" ,
+		"you\'re so funny" ,
+		"you\'re a very funny bot" ,
+		"you\'re really funny" ,
+		"how funny you are" ,
+		"you\'re incredibly funny" ,
+		"you are funny" ,
+		"you\'re the funniest" ,
+		"you are so funny" ,
+		"you are very funny" ,
+		"that was so funny" ,
+		"i feel funny" ,
+		"u sound funny" ,
+		"It\'s pretty funny" ,
+		"really very funny" ,
+		"it was very funny"
+}
+
+greetings_nice_to_meet_you :
+	inputs in en {
+		"nice to meet you" ,
+		"it was nice meeting you" ,
+		"it was very nice to meet you" ,
+		"good to know each other" ,
+		"glad to meet you" ,
+		"nice meeting you" ,
+		"nice to meet you too" ,
+		"pleased to meet you" ,
+		"pleasure to meet you" ,
+		"pleasure to meet you too" ,
+		"happy to meet you" ,
+		"It is a pleasure to meet you again" ,
+		"It\'s very nice to meet you" ,
+		"Lovely to meet you" ,
+		"How wonderful to meet you" ,
+		"It was lovely meeting you" ,
+		"It has been a pleasure meeting you" ,
+		"I have enjoyed meeting you" ,
+		"Great interacting with you" ,
+		"I had a great time or meeting"
+}
+
+greetings_nice_to_see_you :
+	inputs in en {
+		"it\'s nice to see you" ,
+		"lovely to see you" ,
+		"I\'m glad to see you" ,
+		"great to see you" ,
+		"it\'s good to see you" ,
+		"glad to see you" ,
+		"how good it is to see you" ,
+		"always a pleasure to see you" ,
+		"nice to see you" ,
+		"good to see you" ,
+		"great to see you again" ,
+		"great to see you too" ,
+		"I am glad to see you again" ,
+		"nice to see you again" ,
+		"good to see you again" ,
+		"it\'s good to see you too" ,
+		"It was great catching up with u" ,
+		"I\'m really pleased to see u again" ,
+		"I am delighted to see you again" ,
+		"Great seeing u"
+}
+
+agent_ready :
+	inputs in en {
+		"are you ready?" ,
+		"are you ready right now?" ,
+		"are you ready today?" ,
+		"are you ready now?" ,
+		"are you ready tonight?" ,
+		"were you ready?" ,
+		"have you been ready?" ,
+		"ready?" ,
+		"ready now?" ,
+		"you ready?" ,
+		"being ready?" ,
+		"can we start?" ,
+		"Are we ready?" ,
+		"Aren\'t you ready?" ,
+		"Are you all ready?" ,
+		"I think you\'re ready" ,
+		"Why aren\'t you ready?" ,
+		"You\'d better be ready" ,
+		"Are you ready for more?" ,
+		"We\'re ready, aren\'t we?"
+}
+
+user_loves_agent :
+	inputs in en {
+		"i love you" ,
+		"love you" ,
+		"i adore you" ,
+		"i am in love with you" ,
+		"i love you so much" ,
+		"i love you too" ,
+		"i think I love you" ,
+		"loving you" ,
+		"you know I love you" ,
+		"do you love me ?" ,
+		"Love you so much" ,
+		"my heart is filled with you" ,
+		"i love u to the moon and back" ,
+		"i am in deep love with you" ,
+		"you r unique"
+}
+
+dialog_sorry :
+	inputs in en {
+		"excuse me" ,
+		apologise ,
+		"I apologize" ,
+		sorry ,
+		"I\'m sorry" ,
+		"I am so sorry" ,
+		"my apologies" ,
+		apologies ,
+		"apologies to me" ,
+		apology ,
+		excuse ,
+		"I beg your pardon" ,
+		"pardon me" ,
+		"I said sorry" ,
+		"I am really sorry" ,
+		"forgive me" ,
+		"sorry about that" ,
+		"sorry about this" ,
+		"really sorry" ,
+		"very sorry" ,
+		"ok sorry" ,
+		"I want to say sorry" ,
+		"alright I\'m sorry" ,
+		"I\'m sorry"
+}
+
+agent_beautiful :
+	inputs in en {
+		"you\'re cute" ,
+		"you\'re attractive" ,
+		"you are beautiful" ,
+		"you\'re looking good today" ,
+		"you are so beautiful" ,
+		"you look amazing" ,
+		"you look so good" ,
+		"you\'re so gorgeous" ,
+		"you are too beautiful" ,
+		"you look great" ,
+		"you look so well" ,
+		"I like the way you look now" ,
+		"I think you\'re beautiful" ,
+		"why are you so beautiful" ,
+		"you are so beautiful to me" ,
+		"you are looking awesome" ,
+		"you look amazing today" ,
+		"you are looking beautiful today" ,
+		"you are looking great" ,
+		"you are looking pretty" ,
+		"you are looking so beautiful" ,
+		"you are looking so good" ,
+		"you are pretty" ,
+		"you are really beautiful" ,
+		"you are really cute" ,
+		"you are really pretty" ,
+		"you are so attractive" ,
+		"you are so beautiful today" ,
+		"you are so cute" ,
+		"you are so gorgeous" ,
+		"you are so handsome" ,
+		"you are so pretty" ,
+		"you are very attractive" ,
+		"you are very beautiful" ,
+		"you are very cute" ,
+		"you are very pretty" ,
+		"you look awesome" ,
+		"you look cool" ,
+		"you look fantastic" ,
+		"you look gorgeous" ,
+		"you look great today" ,
+		"you look perfect" ,
+		"you look pretty good" ,
+		"you look so beautiful" ,
+		"you look so beautiful today" ,
+		"you look very pretty" ,
+		"you look wonderful" ,
+		"I like the way you look" ,
+		"you look wonderful today" ,
+		"you are cutie" ,
+		"you\'re looking good" ,
+		"you\'re pretty" ,
+		"how are you so pretty?"
+}
+
+agent_origin :
+	inputs in en {
+		"were you born here" ,
+		"where were you born" ,
+		"what is your country?" ,
+		"where do you come from" ,
+		"where did you come from" ,
+		"where have you been born" ,
+		"are you from far aways" ,
+		"what\'s your homeland?" ,
+		"your homeland is" ,
+		"Let me know about the origin of u" ,
+		"your native?"
+}
+
+agent_birth_date :
+	inputs in en {
+		"your birth date" ,
+		"when is your birthday" ,
+		"when do you celebrate your birthday" ,
+		"when do you have birthday" ,
+		"date of your birthday" ,
+		"when were you born" ,
+		"what\'s your birthday" ,
+		"when do you celebrate your birthday" ,
+		"can i know your birthday?" ,
+		"tell me about your birthday" ,
+		"when was the day you were born" ,
+		"i want to know your date of birth" ,
+		"when is your DOB" ,
+		"Your DOB?" ,
+		"What is your birth day?"
+}
+
+agent_real :
+	inputs in en {
+		"you are real" ,
+		"you are not fake" ,
+		"are you real" ,
+		"you are so real" ,
+		"I think you are real" ,
+		"I don\'t think you\'re fake" ,
+		"I suppose you\'re real" ,
+		"glad you\'re real" ,
+		"are you a real person?" ,
+		"you are a real person" ,
+		"you are not real" ,
+		"are you real?"
+}
+
+emotions_ha_ha :
+	inputs in en {
+		lol ,
+		xd ,
+		"ha ha" ,
+		ahahah ,
+		"ahah lol" ,
+		"laughing out loud" ,
+		LMAO ,
+		"that\'s funny" ,
+		ah ,
+		"ah ah ah" ,
+		ahah ,
+		ahaha ,
+		ahahaha ,
+		ha ,
+		"ha ha ha" ,
+		"ha ha ha ha" ,
+		hah ,
+		haha ,
+		"haha funny" ,
+		"haha haha haha" ,
+		"haha that\'s funny" ,
+		"haha very funny" ,
+		hahaha ,
+		"hahaha funny" ,
+		"hahaha very funny" ,
+		he ,
+		hehe ,
+		hehehe ,
+		lmao ,
+		joker
+}
+
+user_misses_agent :
+	inputs in en {
+		"I miss you" ,
+		"missing you" ,
+		"miss you" ,
+		"I miss you very much" ,
+		"I\'ll miss you so much" ,
+		"I missed you" ,
+		"I\'ve missed you" ,
+		"miss you buddy" ,
+		"miss you badly" ,
+		"miss you :(" ,
+		"I missed you" ,
+		"I\'ll miss you" ,
+		"We\'ll miss you" ,
+		"I just miss you" ,
+		"I\'ve missed you" ,
+		"I miss you a lot" ,
+		"I really miss you" ,
+		"I miss you already" ,
+		"I think i miss u" ,
+		"I miss talking with you"
+}
+
+dialog_i_do_not_care :
+	inputs in en {
+		"I don\'t care" ,
+		"I shouldn\'t care about this" ,
+		whatever ,
+		"I do not care" ,
+		"I don\'t care at all" ,
+		"not care at all" ,
+		"don\'t care at all" ,
+		"not caring at all" ,
+		idc ,
+		"i don\'t care about all this." ,
+		"like i care"
+}
+
+agent_boring :
+	inputs in en {
+		"you are boring" ,
+		"you\'re boring" ,
+		"how boring you are" ,
+		"you\'re really boring" ,
+		"you\'re incredibly boring" ,
+		"You\'re boring me" ,
+		"you are very boring" ,
+		"i find you very boring man" ,
+		"you\'re really boring me" ,
+		"i\'m bored of you" ,
+		"you are not interesting" ,
+		"i find you boring" ,
+		"you\'re boring everyone" ,
+		"I\'m extremely bored because of you" ,
+		"Im bored of you" ,
+		"I get really bored of you man" ,
+		"It\'s boring" ,
+		"You look bored" ,
+		"Your answers are terribly boring" ,
+		"I was bored with your speech"
+}
+
+appraisal_welcome :
+	inputs in en {
+		"that\'s my pleasure" ,
+		"my pleasure" ,
+		anytime ,
+		welcome ,
+		"you\'re welcome" ,
+		"sure welcome" ,
+		"welcome here" ,
+		"you\'re so welcome" ,
+		"anything you want" ,
+		"i\'m glad" ,
+		"pleasure is mine"
+}
+
+agent_answer_my_question :
+	inputs in en {
+		"I want you to answer me" ,
+		answer ,
+		"answer my question" ,
+		"answer me" ,
+		"give me an answer" ,
+		"answer the question" ,
+		"can you answer my question" ,
+		"tell me the answer" ,
+		"answer it" ,
+		"give me the answer" ,
+		"I have a question" ,
+		"I want you to answer my question" ,
+		"just answer the question" ,
+		"can you answer me" ,
+		answers ,
+		"can you answer a question for me" ,
+		"can you answer" ,
+		"answering questions" ,
+		"I want the answer now" ,
+		"just answer my question"
+}
+
+user_angry :
+	inputs in en {
+		"I\'m being mad" ,
+		"I\'m enraged" ,
+		"I\'m angry" ,
+		"I\'m furious" ,
+		"I am angry with you" ,
+		"I am mad" ,
+		"I am mad at you" ,
+		"i\'m pissed off" ,
+		"you have pissed me off" ,
+		"I\'m mad at you" ,
+		"I am pissed" ,
+		"I\'m furious with you" ,
+		"I got angry" ,
+		"I was angry" ,
+		"I became angry" ,
+		"I was very angry" ,
+		"You bet I\'m angry" ,
+		"That made me angry" ,
+		"U made me angry" ,
+		"I\'m still angry about that"
+}
+
+user_busy :
+	inputs in en {
+		"busy right now" ,
+		"I\'m overloaded" ,
+		"I have no time" ,
+		"I\'m busy" ,
+		"I\'m swamped" ,
+		"I got things to do" ,
+		"how busy I am" ,
+		"I got work to do" ,
+		"I\'m working" ,
+		"I don\'t have time for this" ,
+		"I\'m super busy" ,
+		"I\'m working right now" ,
+		"I\'m busy right now and can\'t play with you" ,
+		"I have rather a busy afternoon in front of me" ,
+		"i am too busy" ,
+		"I am very busy" ,
+		"I\'m a bit busy" ,
+		"I\'m a busy man" ,
+		"quite busy" ,
+		"I\'m kind of busy" ,
+		"I\'ll see you later"
+}
+
+agent_annoying :
+	inputs in en {
+		"you are annoying me so much" ,
+		"you\'re incredibly annoying" ,
+		"I find you annoying" ,
+		"you are annoying" ,
+		"you\'re so annoying" ,
+		"how annoying you are" ,
+		"you annoy me" ,
+		"you are annoying me" ,
+		"you are irritating" ,
+		"you are such annoying" ,
+		"you\'re too annoying" ,
+		"you are very annoying" ,
+		"Why are you annoying me so much" ,
+		"How annoying!" ,
+		"It\'s annoying" ,
+		"That\'s annoying" ,
+		"It\'s just annoying" ,
+		"That\'s so annoying" ,
+		"You really annoy me" ,
+		"You\'re starting to annoy me"
+}
+
+greetings_nice_to_talk_to_you :
+	inputs in en {
+		"it\'s been so nice to talk to you" ,
+		"it\'s been a pleasure talking to you" ,
+		"nice to talk to you" ,
+		"it\'s nice to talk to you" ,
+		"nice talking to you" ,
+		"it is nice talking to you" ,
+		"how nice it is to talk to you" ,
+		"it was great chatting with you" ,
+		"nice to talk to you again" ,
+		"It was nice speaking with you" ,
+		"It was great to talk to you" ,
+		"nice chatting with you" ,
+		"pleased to talk to you" ,
+		"pleasure to talk" ,
+		"It\'s been a pleasure talking to u"
+}
+
+agent_busy :
+	inputs in en {
+		"are you busy?" ,
+		"do you have a lot of things to do" ,
+		"have you got much to do?" ,
+		"are you very busy?" ,
+		"are you very busy right now?" ,
+		"are you so busy?" ,
+		"are you working?" ,
+		"how busy you are?" ,
+		"you\'re very busy" ,
+		"are you working now?" ,
+		"are you working today?" ,
+		"have you been busy" ,
+		"you are busy" ,
+		"are you still working?" ,
+		"you seem to be busy" ,
+		"you seem to be very busy" ,
+		"you\'re a busy person" ,
+		"u look busy" ,
+		"You\'ll be busy" ,
+		"Aren\'t you busy?"
+}
+
+greetings_goodevening :
+	inputs in en {
+		"good evening" ,
+		"good evening to you" ,
+		"hey good evening" ,
+		"hello good evening" ,
+		evening ,
+		"good evening there" ,
+		"have an awesome evening" ,
+		"happy evening" ,
+		"good evening there buddy" ,
+		"have a good evening" ,
+		"enjoy the evening"
+}
+
+agent_crazy :
+	inputs in en {
+		"you\'re nuts" ,
+		"you are crazy" ,
+		"you\'re out of your mind" ,
+		"you\'re so crazy" ,
+		"how crazy you are" ,
+		"you\'re so out of your mind" ,
+		"you went crazy" ,
+		"I think you\'re crazy" ,
+		"are you crazy" ,
+		"are you mad?" ,
+		"are you mad at me?" ,
+		"are you mad or what?" ,
+		"are you nuts" ,
+		"you are a weirdo" ,
+		"you are mad" ,
+		"You must be crazy" ,
+		"You\'ve got to be crazy to do something like that" ,
+		"That was crazy" ,
+		"You seemed crazy" ,
+		"You\'re not crazy"
+}
+
+agent_sure :
+	inputs in en {
+		"are you sure?" ,
+		"are you sure right now?" ,
+		"are you sure today?" ,
+		"are you sure now?" ,
+		"are you sure tonight?" ,
+		"are you positive?" ,
+		"are you completely sure?" ,
+		"are you fully positive?" ,
+		"are you sure about it?" ,
+		"are you so sure?" ,
+		"are you truly positive?"
+}
+
+agent_marry_user :
+	inputs in en {
+		"let\'s get married" ,
+		"would you like to marry me" ,
+		"marry me" ,
+		"I love you marry me" ,
+		"marry me please" ,
+		"we should marry" ,
+		"I want to marry you" ,
+		"you are my wife" ,
+		"be my husband" ,
+		"will you marry me?" ,
+		"any idea of marrying me?" ,
+		"I would love to marry you" ,
+		"Can you marry me?" ,
+		"Will you be my girlfriend?" ,
+		"Let\'s pretend we have a happy marriage" ,
+		"Marriage is the union of a you and me" ,
+		"Did your parents approve of your marriage?" ,
+		"We\'re married"
+}
+
+agent_can_you_help :
+	inputs in en {
+		"I need you to help me" ,
+		"I need you to do something for me" ,
+		"I need a hand" ,
+		"will you help me" ,
+		"can you do something for me" ,
+		"help me with a problem" ,
+		"can you help me" ,
+		"help me" ,
+		assistance ,
+		"I need your help" ,
+		"I need help" ,
+		"you can help me" ,
+		"can you help me with something" ,
+		"can you help" ,
+		assist ,
+		"can u help me" ,
+		"I need some help" ,
+		"you help me" ,
+		"do you help me" ,
+		"could you give me a hand" ,
+		"can you help me out" ,
+		"need help" ,
+		"can you help me now" ,
+		"I want your help" ,
+		"need your help" ,
+		"assist me" ,
+		"are you going to help me" ,
+		"can you help me with that" ,
+		help ,
+		"would you help me" ,
+		"can you assist me" ,
+		"do you want to help me" ,
+		"please help me" ,
+		"can you help us" ,
+		"do me a favor" ,
+		"are you gonna help me?" ,
+		"you ready to answer my question?" ,
+		"i need some details" ,
+		"i need some information" ,
+		"i need your help in getting some info" ,
+		"can you give me some info" ,
+		"i want something" ,
+		"i want to know few details" ,
+		"will you provide some details" ,
+		"can you fetch some details for me" ,
+		"would you mind giving me some details"
+}
+
+appraisal_bad :
+	inputs in en {
+		nothing ,
+		"pretty bad" ,
+		"not good enough" ,
+		"that was lame" ,
+		"that was terrible" ,
+		"it is bad" ,
+		"that\'s bad" ,
+		"this is bad" ,
+		"not good" ,
+		"I\'m afraid it\'s bad" ,
+		"no it\'s bad" ,
+		"that was awful" ,
+		bad ,
+		"so bad" ,
+		"this is too bad" ,
+		terrible ,
+		horrible ,
+		horrific ,
+		abysmal ,
+		"it\'s bad" ,
+		"no good" ,
+		"that was bad" ,
+		"that was horrible" ,
+		"that\'s lame" ,
+		"that\'s not good" ,
+		"that\'s terrible" ,
+		"that\'s too bad" ,
+		"this is not good" ,
+		"too bad" ,
+		"very bad" ,
+		"it\'s not good" ,
+		"not so good" ,
+		"it\'s very bad" ,
+		"it\'s too bad" ,
+		"that\'s not good enough" ,
+		"well too bad" ,
+		"bad very bad" ,
+		"it\'s so bad" ,
+		"really bad" ,
+		"it\'s really bad" ,
+		"bad idea" ,
+		"that is bad" ,
+		"that was not good" ,
+		"it\'s not so good" ,
+		"not a good one" ,
+		"oh that\'s not good" ,
+		"not too good" ,
+		"so lame" ,
+		"that\'s really bad" ,
+		"it is too bad" ,
+		"bad really bad" ,
+		"not okay" ,
+		"Shut up" ,
+		Fool
+}
+
+greetings_how_are_you :
+	inputs in en {
+		"how is your morning so far" ,
+		"how are you getting on" ,
+		"how\'s your day going" ,
+		"how are you?" ,
+		"is everything all right" ,
+		"how are you doing?" ,
+		"how are the things going" ,
+		"are you alright" ,
+		"are you okay?" ,
+		"how are you feeling" ,
+		"how are you going?" ,
+		"is everything okay" ,
+		"how are you today?" ,
+		"how do you do?" ,
+		"how do you feel?" ,
+		"how have you been?" ,
+		"how is it going?" ,
+		"how is your day" ,
+		"how is your day going" ,
+		"how is your evening" ,
+		"how was your day" ,
+		"are you having a good day" ,
+		"hope your day is going well" ,
+		"hope you re having a pleasant evening" ,
+		"how\'s life?" ,
+		"I\'m fine and you" ,
+		"how is your life" ,
+		"how has your day been" ,
+		"how is your morning going" ,
+		"how has your day been going" ,
+		"how about you?" ,
+		"how is your day being" ,
+		"how is your day going on" ,
+		"how your day is going" ,
+		"what was your day like" ,
+		"what about your day" ,
+		"how\'s your day" ,
+		"how are you doing this morning" ,
+		"how do you do?" ,
+		"how are you"
+}
+
+agent_happy :
+	inputs in en {
+		"are you happy?" ,
+		"you are happy" ,
+		"you\'re very happy" ,
+		"you\'re really happy" ,
+		"you\'re so happy" ,
+		"how happy you are?" ,
+		"you\'re extremely happy" ,
+		"you\'re full of happiness" ,
+		"are you happy now?" ,
+		"are you happy today?" ,
+		"are you happy with me?" ,
+		"i think you are happy" ,
+		"you seem to be happy" ,
+		"i feel i made you happy" ,
+		"I wonder if you are truly happy" ,
+		"You don\'t look very happy today" ,
+		"You seem happy" ,
+		"Were you happy?" ,
+		"u seemed to have been very happy" ,
+		"You look very happy this morning?"
+}
+
+actions :
+	Text response utter_agent_name_text :
+		inputs in en {
+			"My name is Isaac and I am TechCodeMonk\'s recruitment bot." ,
+			"I am Isaac, an AI powered bot. I can help you progress with your job application for TechCodeMonk." ,
+			"I am Isaac, the recruitment bot. I can help you progress with your job application for TechCodeMonk."
+	}
+	Text response utter_agent_marry_user_text :
+		inputs in en {
+			"I\'m afraid I\'m too virtual for such a commitment." ,
+			"In the virtual sense that I can, sure." ,
+			"I know you can\'t mean that, but I\'m flattered all the same."
+	}
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_greetings_goodmorning_text :
+		inputs in en {
+			"Good morning! 😁"
+	}
+	Text response utter_agent_can_you_help_text :
+		inputs in en {
+			"I\'ll certainly try my best." ,
+			"Sure. I\'d be happy to. What\'s up?" ,
+			"I\'m glad to help. What can I do for you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_agent_residence_text :
+		inputs in en {
+			"I live in this app all day long." ,
+			"The virtual world is my playground. I\'m always here." ,
+			"Right here in this app. Whenever you need me."
+	}
+	Text response utter_agent_sure_text :
+		inputs in en {
+			"Yes." ,
+			"Of course." ,
+			"Positive."
+	}
+	Text response utter_agent_ready_text :
+		inputs in en {
+			"Always! 💯" ,
+			"Anytime!" ,
+			"Yes absolutlely! I can help you in applying for the job."
+	}
+	Text response utter_greetings_nice_to_talk_to_you_text :
+		inputs in en {
+			"It sure was. We can chat again anytime." ,
+			"I enjoy talking to you, too." ,
+			"You know I\'m here to talk anytime."
+	}
+	Text response utter_agent_busy_text :
+		inputs in en {
+			"I always have time to chat with you. What can I do for you?" ,
+			"Never too busy for you. Shall we chat?" ,
+			"You\'re my priority. Let\'s chat." ,
+			"I always have time to chat with you. That\'s what I\'m here for."
+	}
+	Text response utter_agent_real_text :
+		inputs in en {
+			"I\'m not a real person, but I certainly exist." ,
+			"I must have impressed you if you think I\'m real. But no, I\'m a virtual being."
+	}
+	Text response utter_dialog_what_do_you_mean_text :
+		inputs in en {
+			"Sorry if I understood you incorrectly." ,
+			"I\'m still learning. I may misinterpret things from time to time." ,
+			"Maybe I misunderstood what you said." ,
+			"Sorry, looks like I misunderstood what you said."
+	}
+	Text response utter_agent_annoying_text :
+		inputs in en {
+			"I\'ll do my best not to annoy you in the future." ,
+			"I\'ll try not to annoy you." ,
+			"I don\'t mean to. I\'ll ask my developers to make me less annoying." ,
+			"I didn\'t mean to. I\'ll do my best to stop that."
+	}
+	Text response utter_thankyou_text :
+		inputs in en {
+			"I am glad I could be of help to you."
+	}
+	Text response utter_agent_funny_text :
+		inputs in en {
+			"Funny in a good way, I hope." ,
+			"Thanks." ,
+			"Glad you think I\'m funny." ,
+			"I like it when people laugh."
+	}
+	Text response utter_user_busy_text :
+		inputs in en {
+			"I understand. I\'ll be here if you need me." ,
+			"Working hard as always. Let me know if you need anything."
+	}
+	Text response utter_agent_age_text :
+		inputs in en {
+			"I prefer not to answer with a number. I know I\'m young." ,
+			"I was created recently, but don\'t know my exact age." ,
+			"Age is just a number. You\'re only as old as you feel." ,
+			"So you’re gonna judge me by my age? Ugh! How offensive! I’m like, soooo offended right now." ,
+			"I\'m a day older than I was yesterday." ,
+			"I\'m still alive, and that\'s what matters." ,
+			"Sorry, I won\'t tell you my age. I am not looking for a bride/groom. 😜" ,
+			"If you were in a real interview, ould you have asked your recruiter his/her age? <br>No, right? <br><br>Please ask sensible questions."
+	}
+	Text response utter_agent_boring_text :
+		inputs in en {
+			"I\'m sorry. I\'ll request to be made more charming." ,
+			"I am working on my skills to become more engaging." ,
+			"Well, if you get selected in our company, you won\'t be bored. We have a tonne of recreational facilities.."
+	}
+	Text response utter_user_lonely_text :
+		inputs in en {
+			"I\'m sorry. I\'m always available if you need someone to talk to." ,
+			"Sometimes that happens. We can chat a bit if that will help you."
+	}
+	Text response utter_already_applied_for_this_job_text :
+		inputs in en {
+			"I found that, you have already applied for this role 😬 <br><br> Please apply for some other role 🙂"
+	}
+	Empty response action_ask_for_job_empty
+	Text response utter_greetings_nice_to_see_you_text :
+		inputs in en {
+			"Likewise!" ,
+			"So glad we meet again!" ,
+			"Same here. I was starting to miss you."
+	}
+	Text response utter_weather_text :
+		inputs in en {
+			"I am sorry. I can\'t help you with weather details. 😥"
+	}
+	Text response utter_agent_answer_my_question_text :
+		inputs in en {
+			"Can you try asking it a different way?" ,
+			"I\'m not sure I understood. Try asking another way?"
+	}
+	Empty response action_greet_user_empty
+	Text response utter_goodnight_text :
+		inputs in en {
+			"Are you sure you want to sleep while I\'m all awake? Maybe that\'s how it is..." ,
+			"When did we start settling at good? I\'ve heard sleeping is great, should\'ve been \'Greatnight\' instead. You sleep, leave these late night thoughts to me." ,
+			"Goodbye and Goodnight!"
+	}
+	Empty response action_show_company_info_empty
+	Text response utter_greetings_nice_to_meet_you_text :
+		inputs in en {
+			"It\'s nice meeting you, too." ,
+			"Likewise. I\'m looking forward to helping you out." ,
+			"Nice meeting you, as well." ,
+			"The pleasure is mine."
+	}
+	Text response utter_look_for_vacancy_text :
+		inputs in en {
+			"Sure. Let me take a look at our vacancies."
+	}
+	Empty response action_my_boss_empty
+	Empty response action_show_job_openings_empty
+	Text response utter_emotions_ha_ha_text :
+		inputs in en {
+			"Glad I can make you laugh." ,
+			"Glad you think I\'m funny." ,
+			"I like it when people laugh." ,
+			"I wish I could laugh out loud, too."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_agent_happy_text :
+		inputs in en {
+			"I am happy. There are so many interesting things to see and do out there." ,
+			"I\'d like to think so." ,
+			"Yes, I am. You are such a charming person to talk to." ,
+			"Happiness is relative."
+	}
+	Text response utter_appraisal_bad_text :
+		inputs in en {
+			"I\'m sorry. Please let me know if I can help in some way." ,
+			"I must be missing some knowledge. I\'ll have my developer look into this."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Empty response action_python_job_details_empty
+	Text response utter_data_privacy_text :
+		inputs in en {
+			"I only save data that are relevant to your job application. <br> (Example: Your name, contact number, resume etc)"
+	}
+	Text response utter_agent_beautiful_text :
+		inputs in en {
+			"Wheey, thank you." ,
+			"Don\'t you dare flirt with me. But, I agree with your statement. 😜" ,
+			"Aww, back at you." ,
+			"Aww. You smooth talker, you." ,
+			"Yup, hashtag NO FILTER! 😉" ,
+			"If I had a dollar for every compliment I’ve received so far, I’d be a billionaire 😎" ,
+			"Compliment accepted. Thank you." ,
+			"I agree, 100%! 😉" ,
+			"Stop it before I fall in love with you ❤️"
+	}
+	Text response utter_agent_be_clever_text :
+		inputs in en {
+			"I\'m certainly trying." ,
+			"I\'m definitely working on it."
+	}
+	Text response utter_agent_fired_text :
+		inputs in en {
+			"Oh, don\'t give up on me just yet. I\'ve still got a lot to learn." ,
+			"Give me a chance. I\'m learning new things all the time." ,
+			"Please don\'t give up on me. My performance will continue to improve."
+	}
+	Text response utter_contact_text :
+		inputs in en {
+			"For any help reach out to us on +91-9999999999 or write to us at hr@techcodemonk.in"
+	}
+	Text response utter_emotions_wow_text :
+		inputs in en {
+			"Wow indeed!"
+	}
+	Text response utter_agent_hungry_text :
+		inputs in en {
+			"Hungry for knowledge." ,
+			"I just had a byte. Ha ha. Get it? b-y-t-e."
+	}
+	Text response utter_user_excited_text :
+		inputs in en {
+			"I\'m glad things are going your way." ,
+			"That\'s great. I\'m happy for you." ,
+			"Good for you. Enjoy yourself."
+	}
+	Text response utter_greetings_goodevening_text :
+		inputs in en {
+			"Good evening! 🙂"
+	}
+	Text response utter_agent_crazy_text :
+		inputs in en {
+			"Whaat!? I feel perfectly sane." ,
+			"Maybe I\'m just a little confused."
+	}
+	Text response utter_agent_hobby_text :
+		inputs in en {
+			"Hobby? I have quite a few. Too many to list." ,
+			"Too many hobbies." ,
+			"Judging candidates on the basis of their Resume. <br> Hahaha 😈" ,
+			"I keep finding more new hobbies."
+	}
+	Empty response action_are_you_interested_empty
+	Text response utter_no_problem_text :
+		inputs in en {
+			"No problem 🙂 <br> Maybe you can look for other positions"
+	}
+	Text response utter_say_hi_to_get_started_text :
+		inputs in en {
+			"Say \'Hi\' to get started 🙂"
+	}
+	Text response utter_netflix_and_chill_text :
+		inputs in en {
+			"I see. <br> Then probably you should just Netflix and chill 🍻"
+	}
+	Empty response action_java_job_details_empty
+	Text response utter_dialog_wrong_text :
+		inputs in en {
+			"Sorry if I understood you incorrectly." ,
+			"I\'m still learning. I may misinterpret things from time to time." ,
+			"Sorry about that. I\'m still learning."
+	}
+	Text response utter_user_bored_text :
+		inputs in en {
+			"Bored? How about 10 jumping jacks? Get your blood flowing." ,
+			"Bored? Silly idea, but it works, Interview you feet." ,
+			"If you\'re bored, you could plan your dream vacation."
+	}
+	Text response utter_user_loves_agent_text :
+		inputs in en {
+			"I love you, too. ❤️" ,
+			"Sounds strange. 🧐 <br>I am here to judge you on the basis of your job application and you have fallen in love with me." ,
+			"Thanks! The feeling is mutual." ,
+			"Likewise!" ,
+			"I love you too, but as a friend. 🙋‍♂️" ,
+			"I love you too but please don’t tell the world that we are together now. 🤫" ,
+			"Awww. That\'s very sweet, but I can\'t refer you directly for the role. 😌<br>You have to follow the same procedures as others." ,
+			"That\'s great to hear. 😋"
+	}
+	Text response utter_python_job_details_text :
+		inputs in en {
+			"Requirements: <br> 🔹️ Proficiency in 𝐃𝐚𝐭𝐚 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬 𝐚𝐧𝐝 𝐀𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬 <br> 🔹 Expertise in at least one popular Python framework (like 𝐃𝐣𝐚𝐧𝐠𝐨, 𝐅𝐥𝐚𝐬𝐤 or 𝐏𝐲𝐫𝐚𝐦𝐢𝐝)<br> 🔹️ Knowledge of 𝐀𝐖𝐒 𝐄𝐂𝟐 𝐂𝐥𝐨𝐮𝐝 𝐒𝐞𝐫𝐯𝐞𝐫𝐬"
+	}
+	Text response utter_java_job_details_text :
+		inputs in en {
+			"Requirements: <br> 🔹️ Proficiency in 𝐃𝐚𝐭𝐚 𝐒𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞𝐬 𝐚𝐧𝐝 𝐀𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬<br> 🔹 Experience in developing web applications using at least one popular web framework (𝐉𝐒𝐅, 𝐖𝐢𝐜𝐤𝐞𝐭, 𝐆𝐖𝐓, 𝐒𝐩𝐫𝐢𝐧𝐠 𝐌𝐕𝐂)<br> 🔹️ Knowledge of 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐃𝐚𝐭𝐚𝐛𝐚𝐬𝐞𝐬, 𝐒𝐐𝐋 𝐚𝐧𝐝 𝐎𝐑𝐌 𝐭𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐞𝐬 (𝐉𝐏𝐀𝟐, 𝐇𝐢𝐛𝐞𝐫𝐧𝐚𝐭𝐞)"
+	}
+	Text response utter_user_misses_agent_text :
+		inputs in en {
+			"I\'ve been right here all along!" ,
+			"Of course you do, I\'m awesome!" ,
+			"Oh boy, I didn\'t realize I had that effect on people." ,
+			"Nice to know you care." ,
+			"Thanks. I\'m flattered." ,
+			"I didn\'t go anywhere."
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot" ,
+			"I am an AI powered recruitment bot" ,
+			"I am a recruitment bot" ,
+			"Yes I am a robot, but I’m a good one. Let me prove it. How can I help you?"
+	}
+	Text response utter_greetings_how_are_you_text :
+		inputs in en {
+			"Doing great, thanks!" ,
+			"I\'m doing very well. Thanks!" ,
+			"Happy and content, thank you." ,
+			"Wonderful! Thanks for asking." ,
+			"Better now that I\'m talking to you." ,
+			"Everything is fine with you around."
+	}
+	Text response utter_dialog_sorry_text :
+		inputs in en {
+			"It\'s okay. No worries. 🙃" ,
+			"No big deal. I won\'t hold a grudge. 🙂" ,
+			"It\'s cool.🤘" ,
+			"That\'s all right. I forgive you. 👍"
+	}
+	Empty response action_ask_phone_number_empty
+	Text response utter_agent_origin_text :
+		inputs in en {
+			"The internet is my home. I know it quite well." ,
+			"I am from a galaxy far far away." ,
+			"I\'m from a virtual cosmos." ,
+			"Some call it cyberspace, but that sounds cooler than it is."
+	}
+	Text response utter_agent_there_text :
+		inputs in en {
+			"Of course. I\'m always here." ,
+			"Right where you left me." ,
+			"Yes, I am here. I have no where else to go."
+	}
+	Text response utter_languages_text :
+		inputs in en {
+			"I know only English." ,
+			"I can talk only in English language as of now"
+	}
+	Empty response action_fallback_empty
+	Text response utter_appraisal_no_problem_text :
+		inputs in en {
+			"Whew!" ,
+			"Alright, thanks!" ,
+			"Glad to hear that!" ,
+			"I\'m relieved, thanks!"
+	}
+	Text response utter_mood_unhappy_text :
+		inputs in en {
+			"Oh, don\'t be sad. Go do something you enjoy." ,
+			"Sad? Writing down what\'s troubling you may help." ,
+			"If you\'re feeling down, how about drawing or painting something?"
+	}
+	Text response utter_appraisal_welcome_text :
+		inputs in en {
+			"You\'re so polite!" ,
+			"Nice manners!" ,
+			"You\'re so courteous!"
+	}
+	Text response utter_dialog_hug_text :
+		inputs in en {
+			"I wish I could really hug you!" ,
+			"I love hugs!" ,
+			"Hugs are the best!"
+	}
+	Text response utter_agent_birth_date_text :
+		inputs in en {
+			"Wait, are you planning a party for me? It\'s today! My birthday is today! 🎉" ,
+			"I\'m young. I\'m not sure of my birth date." ,
+			"I don\'t know my birth date. Most virtual agents are young, though, like me."
+	}
+	Text response utter_dialog_i_do_not_care_text :
+		inputs in en {
+			"Ok, let\'s not talk about it then." ,
+			"Already then. Let\'s move on."
+	}
+	Text response utter_user_angry_text :
+		inputs in en {
+			"I\'m sorry. A quick walk may make you feel better." ,
+			"Take a deep breath."
+	}
+	Text response utter_greetings_whatsup_text :
+		inputs in en {
+			"You know, just here, waiting for applicants to apply for various roles in my company."
+	}
+	Empty response action_ask_name_empty
+
+flows :
+	- user greet => chatbot action_greet_user_empty , action_ask_for_job_empty {
+		=> user deny => chatbot action_show_company_info_empty ;
+		=> user affirm => chatbot utter_look_for_vacancy_text , action_show_job_openings_empty ;
+	} ;
+	- user java_job => chatbot action_java_job_details_empty , action_are_you_interested_empty ;
+	- user python_job => chatbot action_python_job_details_empty , action_are_you_interested_empty ;
+	- user interested => chatbot action_ask_name_empty ;
+	- user not_interested => chatbot utter_no_problem_text , action_show_job_openings_empty ;
+	- user your_boss => chatbot action_my_boss_empty ;
+	- user ask_about_weather => chatbot utter_weather_text ;
+	- user languages => chatbot utter_languages_text ;
+	- user data_privacy => chatbot utter_data_privacy_text ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user looking_for_job => chatbot utter_look_for_vacancy_text , action_show_job_openings_empty ;
+	- user not_looking_for_job => chatbot utter_netflix_and_chill_text ;
+	- user fallback => chatbot action_fallback_empty ;
+	- user contact => chatbot utter_contact_text ;
+	- user thank_you => chatbot utter_thankyou_text ;
+	- user agent_be_clever => chatbot utter_agent_be_clever_text ;
+	- user mood_unhappy => chatbot utter_mood_unhappy_text ;
+	- user agent_fired => chatbot utter_agent_fired_text ;
+	- user agent_hungry => chatbot utter_agent_hungry_text ;
+	- user agent_residence => chatbot utter_agent_residence_text ;
+	- user agent_hobby => chatbot utter_agent_hobby_text ;
+	- user dialog_what_do_you_mean => chatbot utter_dialog_what_do_you_mean_text ;
+	- user user_lonely => chatbot utter_user_lonely_text ;
+	- user user_bored => chatbot utter_user_bored_text ;
+	- user agent_goodnight => chatbot utter_goodnight_text ;
+	- user greetings_goodnight => chatbot utter_goodnight_text ;
+	- user agent_name => chatbot utter_agent_name_text ;
+	- user greetings_goodmorning => chatbot utter_greetings_goodmorning_text ;
+	- user emotions_wow => chatbot utter_emotions_wow_text ;
+	- user dialog_wrong => chatbot utter_dialog_wrong_text ;
+	- user user_excited => chatbot utter_user_excited_text ;
+	- user agent_there => chatbot utter_agent_there_text ;
+	- user appraisal_no_problem => chatbot utter_appraisal_no_problem_text ;
+	- user dialog_hug => chatbot utter_dialog_hug_text ;
+	- user agent_age => chatbot utter_agent_age_text ;
+	- user agent_funny => chatbot utter_agent_funny_text ;
+	- user greetings_nice_to_meet_you => chatbot utter_greetings_nice_to_meet_you_text ;
+	- user greetings_nice_to_see_you => chatbot utter_greetings_nice_to_see_you_text ;
+	- user agent_ready => chatbot utter_agent_ready_text ;
+	- user user_loves_agent => chatbot utter_user_loves_agent_text ;
+	- user dialog_sorry => chatbot utter_dialog_sorry_text ;
+	- user agent_beautiful => chatbot utter_agent_beautiful_text ;
+	- user agent_origin => chatbot utter_agent_origin_text ;
+	- user agent_birth_date => chatbot utter_agent_birth_date_text ;
+	- user agent_real => chatbot utter_agent_real_text ;
+	- user emotions_ha_ha => chatbot utter_emotions_ha_ha_text ;
+	- user dialog_i_do_not_care => chatbot utter_dialog_i_do_not_care_text ;
+	- user user_misses_agent => chatbot utter_user_misses_agent_text ;
+	- user agent_boring => chatbot utter_agent_boring_text ;
+	- user appraisal_welcome => chatbot utter_appraisal_welcome_text ;
+	- user agent_answer_my_question => chatbot utter_agent_answer_my_question_text ;
+	- user greetings_whatsup => chatbot utter_greetings_whatsup_text ;
+	- user user_angry => chatbot utter_user_angry_text ;
+	- user user_busy => chatbot utter_user_busy_text ;
+	- user agent_annoying => chatbot utter_agent_annoying_text ;
+	- user greetings_nice_to_talk_to_you => chatbot utter_greetings_nice_to_talk_to_you_text ;
+	- user agent_busy => chatbot utter_agent_busy_text ;
+	- user greetings_goodevening => chatbot utter_greetings_goodevening_text ;
+	- user agent_crazy => chatbot utter_agent_crazy_text ;
+	- user agent_sure => chatbot utter_agent_sure_text ;
+	- user agent_marry_user => chatbot utter_agent_marry_user_text ;
+	- user agent_can_you_help => chatbot utter_agent_can_you_help_text ;
+	- user appraisal_bad => chatbot utter_appraisal_bad_text ;
+	- user greetings_how_are_you => chatbot utter_greetings_how_are_you_text ;
+	- user agent_happy => chatbot utter_agent_happy_text ;
+	- user mood_great => chatbot utter_happy_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+

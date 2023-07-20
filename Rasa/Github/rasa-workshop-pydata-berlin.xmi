@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="rasa-workshop-pydata-berlin">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="moin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey dude"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodmorning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodevening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good afternoon"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good by"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cee you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good afternoon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a nice day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="feeling like a king"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am going to save the world"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="super"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so so perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so perfect"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my day was horrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't feel very well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am disappointed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="super sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm so sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not so good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremly sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so saad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Quite bad - can I get a cute picture of a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="bird"/>
+        <tokens xsi:type="generator:Literal" text=", please?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Really bad and only "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="doggo"/>
+        <tokens xsi:type="generator:Literal" text=" pics and change that."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not good. The only thing that could make me fell better is a picture of a cute "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="kitten"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad. Only the picture of a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="puppy"/>
+        <tokens xsi:type="generator:Literal" text=" could make it better."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am very sad. I need a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="cat"/>
+        <tokens xsi:type="generator:Literal" text=" picture."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Extremely sad. Only the cute "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="doggo"/>
+        <tokens xsi:type="generator:Literal" text=" pics can make me feel better."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bad. Please show me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="bird"/>
+        <tokens xsi:type="generator:Literal" text=" pic!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Pretty bad to be honest. Can you show me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="puppy"/>
+        <tokens xsi:type="generator:Literal" text=" picture to make me fell better?"/>
+      </inputs>
+    </inputs>
+    <parameters name="group"/>
+  </intents>
+  <intents name="inform">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bird"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bird"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="bird"/>
+        <tokens xsi:type="generator:Literal" text=", please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="dog"/>
+        <tokens xsi:type="generator:Literal" text=", please"/>
+      </inputs>
+    </inputs>
+    <parameters name="group"/>
+  </intents>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_picture_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To cheer you up, I can show you a cute picture of a dog, cat or a bird. Which one do you choose?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="__main__.ApiAction_empty"/>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_unclear_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am not sure what you are aiming for."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.1">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.0">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.5 //@actions.6">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.4">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.3 //@actions.2">
+                          <outcoming intent="//@intents.6">
+                            <target actions="//@actions.2">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.3">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.5 //@actions.6">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.1">
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.3 //@actions.2">
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.2">
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.4">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.6"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.6">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.1">
+                              <outcoming intent="//@intents.5">
+                                <target actions="//@actions.3 //@actions.2">
+                                  <outcoming intent="//@intents.6">
+                                    <target actions="//@actions.2">
+                                      <outcoming intent="//@intents.3">
+                                        <target actions="//@actions.5 //@actions.6">
+                                          <outcoming intent="//@intents.0">
+                                            <target actions="//@actions.1">
+                                              <outcoming intent="//@intents.5">
+                                                <target actions="//@actions.3 //@actions.2">
+                                                  <outcoming intent="//@intents.6">
+                                                    <target actions="//@actions.2">
+                                                      <outcoming intent="//@intents.2">
+                                                        <target actions="//@actions.0"/>
+                                                      </outcoming>
+                                                      <outcoming intent="//@intents.3">
+                                                        <target actions="//@actions.5"/>
+                                                      </outcoming>
+                                                    </target>
+                                                  </outcoming>
+                                                  <outcoming intent="//@intents.2">
+                                                    <target actions="//@actions.0"/>
+                                                  </outcoming>
+                                                </target>
+                                              </outcoming>
+                                              <outcoming intent="//@intents.4">
+                                                <target actions="//@actions.0">
+                                                  <outcoming intent="//@intents.2">
+                                                    <target actions="//@actions.0">
+                                                      <outcoming intent="//@intents.2">
+                                                        <target actions="//@actions.5"/>
+                                                      </outcoming>
+                                                    </target>
+                                                  </outcoming>
+                                                </target>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.0">
+                                              <outcoming intent="//@intents.2">
+                                                <target actions="//@actions.6"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                          <outcoming intent="//@intents.1">
+                                            <target actions="//@actions.5"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.0"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.4">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.5"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.6"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.3 //@actions.2">
+          <outcoming intent="//@intents.6">
+            <target actions="//@actions.2">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.0 //@actions.6">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.4">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.3 //@actions.2">
+                          <outcoming intent="//@intents.6">
+                            <target actions="//@actions.2">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0 //@actions.6">
+                                  <outcoming intent="//@intents.0">
+                                    <target actions="//@actions.1">
+                                      <outcoming intent="//@intents.5">
+                                        <target actions="//@actions.2 //@actions.3">
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.0"/>
+                                          </outcoming>
+                                          <outcoming intent="//@intents.6">
+                                            <target actions="//@actions.2">
+                                              <outcoming intent="//@intents.3">
+                                                <target actions="//@actions.5"/>
+                                              </outcoming>
+                                              <outcoming intent="//@intents.2">
+                                                <target actions="//@actions.0"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                      <outcoming intent="//@intents.4">
+                                        <target actions="//@actions.0">
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.0">
+                                              <outcoming intent="//@intents.2">
+                                                <target actions="//@actions.5"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.1">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.6"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.3">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.6"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.5"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.3">
+                <target actions="//@actions.5 //@actions.6">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.2 //@actions.3">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.6">
+                            <target actions="//@actions.2">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.3">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.4">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.5 //@actions.6">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.6"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.1">
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.2 //@actions.3">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.2">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.4">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.6"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.0 //@actions.6">
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.1">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.3 //@actions.2">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.2">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0 //@actions.6">
+                              <outcoming intent="//@intents.0">
+                                <target actions="//@actions.1">
+                                  <outcoming intent="//@intents.5">
+                                    <target actions="//@actions.2 //@actions.3">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.0"/>
+                                      </outcoming>
+                                      <outcoming intent="//@intents.6">
+                                        <target actions="//@actions.2">
+                                          <outcoming intent="//@intents.3">
+                                            <target actions="//@actions.5"/>
+                                          </outcoming>
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.0"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.4">
+                                    <target actions="//@actions.0">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.0">
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.5"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.6"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.1">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.3">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.0">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.6">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.1">
+                          <outcoming intent="//@intents.4">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.3 //@actions.2">
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.2">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.6"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.1">
+                <target actions="//@actions.5"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.0">
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.6">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.1">
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.3 //@actions.2">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.2">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.5 //@actions.6">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.1">
+                              <outcoming intent="//@intents.5">
+                                <target actions="//@actions.2 //@actions.3">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0 //@actions.6">
+                                      <outcoming intent="//@intents.0">
+                                        <target actions="//@actions.1">
+                                          <outcoming intent="//@intents.4">
+                                            <target actions="//@actions.0">
+                                              <outcoming intent="//@intents.2">
+                                                <target actions="//@actions.0">
+                                                  <outcoming intent="//@intents.2">
+                                                    <target actions="//@actions.5"/>
+                                                  </outcoming>
+                                                </target>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                          <outcoming intent="//@intents.5">
+                                            <target actions="//@actions.3 //@actions.2">
+                                              <outcoming intent="//@intents.6">
+                                                <target actions="//@actions.2">
+                                                  <outcoming intent="//@intents.2">
+                                                    <target actions="//@actions.0"/>
+                                                  </outcoming>
+                                                  <outcoming intent="//@intents.3">
+                                                    <target actions="//@actions.5"/>
+                                                  </outcoming>
+                                                </target>
+                                              </outcoming>
+                                              <outcoming intent="//@intents.2">
+                                                <target actions="//@actions.0"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                      <outcoming intent="//@intents.1">
+                                        <target actions="//@actions.5"/>
+                                      </outcoming>
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.0">
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.6"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.6">
+                                    <target actions="//@actions.2">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.0"/>
+                                      </outcoming>
+                                      <outcoming intent="//@intents.3">
+                                        <target actions="//@actions.5"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.4">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0">
+                                      <outcoming intent="//@intents.2">
+                                        <target actions="//@actions.5"/>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.6"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.1">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.0">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.6">
+                  <outcoming intent="//@intents.0">
+                    <target actions="//@actions.1">
+                      <outcoming intent="//@intents.5">
+                        <target actions="//@actions.3 //@actions.2">
+                          <outcoming intent="//@intents.6">
+                            <target actions="//@actions.2">
+                              <outcoming intent="//@intents.3">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.4">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.5"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.6"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.1">
+                    <target actions="//@actions.5"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.5 //@actions.6">
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.1">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.3 //@actions.2">
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.2">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.3">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.1">
+                <target actions="//@actions.5"/>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.0">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.6"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.5 //@actions.6">
+      <outcoming intent="//@intents.0">
+        <target actions="//@actions.1">
+          <outcoming intent="//@intents.4">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.0">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.5 //@actions.6">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.1">
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.2 //@actions.3">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.2">
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.4">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.6"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.5">
+            <target actions="//@actions.3 //@actions.2">
+              <outcoming intent="//@intents.6">
+                <target actions="//@actions.2">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0 //@actions.6">
+                      <outcoming intent="//@intents.0">
+                        <target actions="//@actions.1">
+                          <outcoming intent="//@intents.4">
+                            <target actions="//@actions.0">
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                          <outcoming intent="//@intents.5">
+                            <target actions="//@actions.3 //@actions.2">
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.2">
+                                  <outcoming intent="//@intents.2">
+                                    <target actions="//@actions.0"/>
+                                  </outcoming>
+                                  <outcoming intent="//@intents.3">
+                                    <target actions="//@actions.5"/>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                              <outcoming intent="//@intents.2">
+                                <target actions="//@actions.0"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.6"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.1">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.3">
+                    <target actions="//@actions.5"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.0"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.5 //@actions.6">
+          <outcoming intent="//@intents.0">
+            <target actions="//@actions.1">
+              <outcoming intent="//@intents.5">
+                <target actions="//@actions.3 //@actions.2">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.2">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.4">
+                <target actions="//@actions.0">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.5"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.5 //@actions.6">
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.1">
+                  <outcoming intent="//@intents.5">
+                    <target actions="//@actions.2 //@actions.3">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.6">
+                        <target actions="//@actions.2">
+                          <outcoming intent="//@intents.3">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.0"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.4">
+                    <target actions="//@actions.0">
+                      <outcoming intent="//@intents.2">
+                        <target actions="//@actions.0">
+                          <outcoming intent="//@intents.2">
+                            <target actions="//@actions.5"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.1">
+                <target actions="//@actions.5"/>
+              </outcoming>
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.0">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.6"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.0">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.6"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.0">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.6"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

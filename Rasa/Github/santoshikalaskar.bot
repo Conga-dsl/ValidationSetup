@@ -1,0 +1,251 @@
+Chatbot santoshikalaskar language : en
+
+intents :
+
+bridgelabz :
+	inputs in en {
+		"what is bridgelabz?" ,
+		"Who is BridgeLabz?" ,
+		"bridgelabz is a company or constantly?" ,
+		"i need information about bridgelabz" ,
+		"How many employe are there in bridgelabz?" ,
+		"Are you a consultancy or education institute?" ,
+		"What exactly Bridgelabz do?" ,
+		"What was the work done in bridgelabz?"
+}
+
+info_cic :
+	inputs in en {
+		"i need information regarding codinclub?" ,
+		"i wan\'t to know about codinclub." ,
+		"what is codinclub?" ,
+		"may i know codinclub?" ,
+		"codinclub?" ,
+		"coding club?" ,
+		"what is 30 days bootcamp?" ,
+		"what is 21 days bootcamp?" ,
+		"what is 21 days online program?"
+}
+
+syllabus_cic :
+	inputs in en {
+		"what is syllabus for codinclub?" ,
+		"what is syllabus of codinclub?" ,
+		"codinclub syllabus?" ,
+		"codinclub topics?" ,
+		"codinclub content?" ,
+		"what is syllabus you going to be covered in codinclub?" ,
+		"what is syllabus for 21 days bootcamp?" ,
+		"what is syllabus for 30 days bootcamp?" ,
+		"which topic covered in codinclub?" ,
+		"which topic u have been covered in codinclub?" ,
+		"syllabus for bootcamp?"
+}
+
+reg_cic :
+	inputs in en {
+		"how to join codinclub?" ,
+		"how to register for codinclub?" ,
+		"how to enroll codinclub?" ,
+		"how to reg for 30 days bootcamp?" ,
+		"how to registered for 21 days bootcamp?" ,
+		"link for registration of codinclub?"
+}
+
+job_cic :
+	inputs in en {
+		"what is job guarantee after codingclub?" ,
+		"what is job guarantee" ,
+		"what is job guarantee after completion of codingclub?" ,
+		"what is job guarantee after completion of 30 days bootcamp?" ,
+		"have u give any job assurity after completion?"
+}
+
+fee_cic :
+	inputs in en {
+		"what is fee for codingclub?" ,
+		"what is fee for 30 days bootcamp?" ,
+		"what is fee for 21 days bootcamp?" ,
+		"what is fee?" ,
+		"Is it paid?" ,
+		"Is there any fee for this 30 days training?" ,
+		"how much i need to pay" ,
+		"is it free or i have to pay" ,
+		"how much i have to pay"
+}
+
+fellowship_program :
+	inputs in en {
+		"what is fellowship program?" ,
+		"what is bridgelabz fellowship program?" ,
+		"fellowship program?" ,
+		"i wan\'t to know what is fellowship?" ,
+		"fellowship?"
+}
+
+reg_fellowship :
+	inputs in en {
+		"how can i register with fellowship?" ,
+		"how to register for fellowship?" ,
+		"how can i join fellowship program?" ,
+		"i want to join fellowship" ,
+		"give me link to join fellowship" ,
+		"send me link to enroll with fellowship program"
+}
+
+technology_fellowship :
+	inputs in en {
+		"what is the syllabus of fellowship?" ,
+		"what is syllabus for fellowship?" ,
+		"what is syllabus for fellowship program?" ,
+		"which is the technology cover in 16 weeks?" ,
+		"What tools will fellowship engineer get a chance to work on?" ,
+		"which technology you going to tech us in fellowship program?" ,
+		"which topic u have been covered in fellowship?"
+}
+
+confusing_Ques_syllabus :
+	inputs in en {
+		"syllabus of that" ,
+		syllabus ,
+		"give me topic list which you going to be cover" ,
+		"topic list" ,
+		"which topic u have been covered?" ,
+		"syllabus to be covered" ,
+		"topic to be covered" ,
+		"give me topic / technology list to be covered in there" ,
+		"what is syllabus?" ,
+		"What do I get to learn here?" ,
+		"what is syllabus for that?"
+}
+
+confusing_Ques_registration :
+	inputs in en {
+		"i want to join" ,
+		"i want to enroll there" ,
+		"i want to register" ,
+		"i want to register there" ,
+		"send me link for registration" ,
+		"please, could you send me link for reg" ,
+		"how can i join with online program"
+}
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+ask_again :
+	inputs in en {
+		yes ,
+		"i want to ask a question" ,
+		"i want to ask couple of questions"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct ,
+		okay ,
+		fine ,
+		thanks
+}
+
+deny :
+	inputs in en {
+		^no ,
+		"no way" ,
+		"no thanks"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+greethellothere :
+
+mood_greatamazing :
+
+"goodbyebye-bye" :
+
+greethello :
+
+mood_unhappynotgood :
+
+affirmyes :
+
+denynotreally :
+
+greethi :
+
+mood_unhappyveryterrible :
+
+denyno :
+
+actions :
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text ;
+	- user affirm => chatbot DefaultEmptyAction ;
+	- user ask_again => chatbot DefaultEmptyAction ;
+	- user deny => chatbot utter_goodbye_text ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bridgelabz => chatbot DefaultEmptyAction ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user info_cic => chatbot DefaultEmptyAction ;
+	- user job_cic => chatbot DefaultEmptyAction ;
+	- user fee_cic => chatbot DefaultEmptyAction ;
+	- user fellowship_program => chatbot DefaultEmptyAction ;
+	- user syllabus_cic => chatbot DefaultEmptyAction ;
+	- user reg_cic => chatbot DefaultEmptyAction ;
+	- user reg_fellowship => chatbot DefaultEmptyAction ;
+	- user technology_fellowship => chatbot DefaultEmptyAction ;
+	- user confusing_Ques_syllabus => chatbot DefaultEmptyAction ;
+	- user confusing_Ques_registration => chatbot DefaultEmptyAction ;
+	- user greethellothere => chatbot utter_greet_text {
+		=> user mood_greatamazing => chatbot utter_happy_text , utter_cheer_up_img , utter_did_that_help_text { => user "goodbyebye-bye" => chatbot utter_goodbye_text , utter_happy_text ; } ;
+	} ;
+

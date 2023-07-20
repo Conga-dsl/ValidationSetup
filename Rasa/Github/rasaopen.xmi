@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="rasaopen">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="accept">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it is okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of cause"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ofcause"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="reject">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dont"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="start_assessment">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start assessment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm ready. start the assessments now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the assessments now."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="assessment start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lets start the assessment now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="covid assessment"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="begin_lead"/>
+  <intents name="begin_assessment"/>
+  <actions xsi:type="generator:Text" name="utter_ask_gender_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your birth gender? &#x1f447;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_bodyTemperature_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Now let's understand your current body temperature in degrees Fahrenheit. &#x1f912;&#xA; Remember Normal body temperature is &lt;b>98.6&#xb0;F or 37&#xb0;C.&lt;/b> &#x1f321;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_symptomChanges_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One last question and we are done. &#x1f64f;&#xA; How have your symptoms progressed over the last 48 hrs? &#x23f0;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_medicalHistory_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To understand your condition, we need more details about previous health conditions. &#x26d1;&#xA; Hope you understand. &#x1f64f; &#xA; Do you have a history of any of these conditions?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! &#x1f44b; I am COVID-19 Assessment Chatbot. I can help you by assessing your symptoms related to Covid-19."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_under_16_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please have a chat with your family first and come back. &#xA; I'm always here to help you.&#xA; You can start your assessment by entering 'start assessment' keywords. &#xA; However, you must maintain social distancing and regularly wash your hands and sanitize them. &#xA; #Stayhome. #Staysafe &#x1f642;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_symptoms1_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hmm...&#x1f914;&#xA; Are you experiencing any of the symptoms below? &#x1f912;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_symptoms2_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="And what about these ones. &#x1f447; &#xA; Please verify if you are experiencing any of the symptoms below. &#x270d;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ask_age_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great! So we're about to ask you a couple of questions to determine your health condition. &#xA; Let's start with the basics! &lt;b>How old are you?&lt;/b>"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_wrong_age_format_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please enter the valid age number."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_otherTime_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No problem. We can do your Covid-19 assessment anytime you need. I'm always here to help you.&#xA; You can start your assessment by entering 'start assessment' keywords. &#xA; However, you must maintain social distancing and regularly wash your hands and sanitize them. &#xA; #Stayhome. #Staysafe &#x1f642;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="utter_low_empty"/>
+  <actions xsi:type="generator:Text" name="utter_above_107_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Long and healthy live dear user. Please contact your family first and come back. &#xA; I'm always here to help you.&#xA; You can start your assessment by entering 'start assessment' keywords. &#xA; However, you must maintain social distancing and regularly wash your hands and sanitize them. &#xA; &lt;b>#Stayhome. #Staysafe&lt;/b> &#x1f642;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_start_conv_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, there &#x1f44b; We understand times are tough and everyone is panicking.&#xA; But we're here to help ease it out for you! &#xA; This medical conditions self-assessment is developed based on the World Health Organisation recommendations. &#xA; Can we proceed with your assessment now? &#x1f447;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="utter_high_empty"/>
+  <actions xsi:type="generator:Empty" name="action_reset_all_slots_empty"/>
+  <actions xsi:type="generator:Text" name="utter_ask_travelHistory_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I noted that &#x270d;&#xA; Please tell us about your &lt;b>travel&lt;/b> and exposure details. &#x2708;"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_bye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for connecting with me."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="utter_medium_empty"/>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.19 //@actions.4">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.19">
+          <outcoming intent="//@intents.1">
+            <target actions="//@actions.19"/>
+          </outcoming>
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.19"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.5">
+    <target actions="//@actions.17 //@actions.15"/>
+  </flows>
+  <flows intent="//@intents.2">
+    <target actions="//@actions.10 //@actions.17 //@actions.15"/>
+  </flows>
+  <flows intent="//@intents.3">
+    <target actions="//@actions.13">
+      <outcoming intent="//@intents.1">
+        <target actions="//@actions.17 //@actions.15"/>
+      </outcoming>
+      <outcoming intent="//@intents.2">
+        <target actions="//@actions.10 //@actions.17 //@actions.15"/>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>
