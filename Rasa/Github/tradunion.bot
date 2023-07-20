@@ -1,0 +1,349 @@
+Chatbot tradunion language : en
+
+intents :
+
+	greet :
+		inputs in en {
+			Hi ,
+			Hey ,
+			"Hi bot" ,
+			"Hey bot" ,
+			Hello ,
+			"Good morning" ,
+			"hi Mister" ,
+			hallo ,
+			heeey ,
+			"hi hi" ,
+			hey ,
+			"hey hey" ,
+			"hello there" ,
+			^hi ,
+			hello ,
+			yo ,
+			hola ,
+			"hi?" ,
+			"hello friend" ,
+			Bonjour ,
+			Salam ,
+			Salut ,
+			"Bonjour Madame" ,
+			Priviet
+	}
+
+	enter_age :
+		inputs in en {
+			"I\'m 30(age) years old" ,
+			"I\'m 44 years old" ,
+			"I\'m 66 years old" ,
+			"I\'m 61 years old"
+	}
+
+	inform_pain_yn :
+		inputs in en {
+			( yes ) [ pain_yn ] " pain" ,
+			( ^no ) [ pain_yn ] " no pain"
+		}
+		parameters :
+			pain_yn : entity text ;
+
+	inform_pain_level :
+		inputs in en {
+			( Low ) [ pain_level ] ,
+			( Medium ) [ pain_level ] ,
+			( High ) [ pain_level ]
+		}
+		parameters :
+			pain_level : entity text ;
+
+	request_consultation :
+		inputs in en {
+			"im looking for a [doctor](practitioner]" ,
+			"im looking for a [dentist](practitioner]" ,
+			"im looking for a [surgery](practitioner]" ,
+			"i would like a " ( consultation ) [ objective ] " with a [doctor](practitioner]" ,
+			"i would like a " ( consultation ) [ objective ] " with a [dentist](practitioner]" ,
+			"i would like a " ( "rendez-vous" ) [ objective ] " with a [doctor](practitioner]" ,
+			"i would like a " ( "rendez-vous" ) [ objective ] " with a [dentist](practitioner]" ,
+			"can i get " ( medical ) [ purpose ] ( consultation ) [ objective ] ,
+			"can i get " ( dental ) [ purpose ] ( consultation ) [ objective ] ,
+			"i want " ( medical ) [ purpose ] ( consultation ) [ objective ] ,
+			"i want " ( dental ) [ purpose ] ( consultation ) [ objective ] ,
+			"i need " ( medical ) [ purpose ] ( consultation ) [ objective ] ,
+			"i need " ( dental ) [ purpose ] ( consultation ) [ objective ] ,
+			"can i get " ( medical ) [ purpose ] ( "rendez-vous" ) [ objective ] ,
+			"can i get " ( dental ) [ purpose ] ( "rendez-vous" ) [ objective ] ,
+			"i want " ( consultation ) [ objective ] " for " ( medical ) [ purpose ] ,
+			"i want " ( consultation ) [ objective ] " for " ( dental ) [ purpose ] ,
+			"i need " ( "rendez-vous" ) [ objective ] " for " ( medical ) [ purpose ] ,
+			"i need " ( "rendez-vous" ) [ objective ] " for " ( dental ) [ purpose ] ,
+			"[doctor](practitioner] please" ,
+			"need [doctor](practitioner]" ,
+			"want to see [doctor](practitioner]" ,
+			"find me a [doctor](practitioner]" ,
+			"Jeg har ondt i tre mÃ¥neder."
+		}
+		parameters :
+			objective ,
+			purpose : entity text ;
+
+	affirm :
+		inputs in en {
+			"yes a " ( consultation ) [ objective ] " consultation with a [doctor](practitioner]" ,
+			"yes a " ( "rendez-vous" ) [ objective ] " rendez-vous for " ( medical ) [ purpose ] " purpose" ,
+			"yes a " ( consultation ) [ objective ] " consultation with a [dentist](practitioner]" ,
+			"yes a " ( "rendez-vous" ) [ objective ] " rendez-vous for " ( dental ) [ purpose ] " purpose" ,
+			( yes ) [ pain_yn ] " I feel pain" ,
+			( ^no ) [ pain_yn ] " I dont\'t feel pain" ,
+			correct ,
+			ye ,
+			"uh yes" ,
+			"let\'s do it" ,
+			yeah ,
+			"uh yes" ,
+			"um yes" ,
+			"yes knocking" ,
+			"that\'s correct" ,
+			"yes yes" ,
+			right ,
+			yea ,
+			yes ,
+			"yes right" ,
+			"yes and i dont care" ,
+			"right on" ,
+			oui ,
+			Oui ,
+			"balÃ©" ,
+			^da ,
+			Da ,
+			Ja ,
+			Si ,
+			"Grazie mille" ,
+			precisely
+		}
+		parameters :
+			objective ,
+			purpose ,
+			pain_yn : entity text ;
+
+	deny :
+		inputs in en {
+			^no ,
+			"no thanks" ,
+			"no thank you" ,
+			"uh no" ,
+			"breath no" ,
+			"do you have something else" ,
+			"no this does not work for me" ,
+			"absolutely not" ,
+			"not at all"
+	}
+
+	inform :
+		inputs in en {
+			( medical ) [ purpose ] ( consultation ) [ objective ] " with [doctor](practitioner] any possible" ,
+			( medical ) [ purpose ] ( consultation ) [ objective ] " with [doctor](practitioner] now" ,
+			( medical ) [ purpose ] ( consultation ) [ objective ] " with [doctor](practitioner]ASAP" ,
+			( medical ) [ purpose ] ( consultation ) [ objective ] " with [doctor](practitioner]today" ,
+			( medical ) [ purpose ] ( consultation ) [ objective ] " with [dentist](practitioner] any possible"
+		}
+		parameters :
+			purpose ,
+			objective : entity text ;
+
+	thankyou :
+		inputs in en {
+			"um thank you good bye" ,
+			"okay cool uh good bye thank you" ,
+			"okay thank you good bye" ,
+			"you rock" ,
+			"and thats all thank you and good bye" ,
+			"thank you and good bye" ,
+			"sorry about my mistakes thank you good bye" ,
+			"noise thank you good bye" ,
+			"thank you goodbye noise" ,
+			"okay thank you goodbye" ,
+			"uh thank you good bye" ,
+			"thank you goodbye" ,
+			"thank you goodbye noise thank you goodbye" ,
+			"breath thank you goodbye" ,
+			"thank you" ,
+			"okay thank you" ,
+			"thanks goodbye" ,
+			"ah thank you goodbye" ,
+			"thank you noise" ,
+			"thank you good bye" ,
+			"breath thank you very much goodbye" ,
+			thanks ,
+			"noise thank you goodbye" ,
+			"unintelligible thank you goodbye" ,
+			"uh okay thank you good bye" ,
+			"thank you bye" ,
+			"um okay thank you good bye"
+	}
+
+	chitchat :
+		inputs in en {
+			"can you share your boss with me?" ,
+			"i want to get to know your owner" ,
+			"i want to know the company which designed you" ,
+			"i want to know the company which generated you" ,
+			"i want to know the company which invented you" ,
+			"i want to know who invented you" ,
+			"May I ask who invented you?" ,
+			"please tell me the company who created you" ,
+			"please tell me who created you" ,
+			"tell me more about your creators" ,
+			"tell me more about your founders" ,
+			"Ahoy matey how are you?" ,
+			"are you alright" ,
+			"are you having a good day" ,
+			"Are you ok?" ,
+			"are you okay" ,
+			"Do you feel good?" ,
+			"how are things going" ,
+			"how are things with you?" ,
+			"How are things?" ,
+			"how are you" ,
+			"how are you doing" ,
+			"how are you doing this morning" ,
+			"how are you feeling" ,
+			"how are you today" ,
+			"How are you?" ,
+			"How is the weather today?" ,
+			"What\'s the weather like?" ,
+			"How is the weather?" ,
+			"What is the weather at your place?" ,
+			"Do you have good weather?" ,
+			"Is it raining?" ,
+			"What\'s it like out there?" ,
+			"Is it hot or cold?" ,
+			"Beautiful day, isn\'t it?" ,
+			"What\'s the weather forecast?" ,
+			"Is it quite breezy outside?"
+	}
+
+	stop :
+		inputs in en {
+			"ok then you cant help me" ,
+			"that was shit, you\'re not helping" ,
+			"you can\'t help me" ,
+			"you can\'t help me with what i need" ,
+			"i guess you can\'t help me then" ,
+			"ok i guess you can\'t help me" ,
+			"that\'s not what i want" ,
+			"ok, but that doesnt help me" ,
+			"this is leading to nothing" ,
+			"this conversation is not really helpful" ,
+			"you cannot help me with what I want" ,
+			"I think you cant help me" ,
+			"hm i don\'t think you can do what i want" ,
+			stop ,
+			"stop go back" ,
+			"do you get anything?" ,
+			"and you call yourself bot company? pff" ,
+			"and that\'s it?" ,
+			"nothing else?"
+	}
+
+	bot_challenge :
+		inputs in en {
+			"are you a bot?" ,
+			"are you a human?" ,
+			"am I talking to a bot?" ,
+			"am I talking to a human?"
+	}
+
+	FallbackIntent Fallback :
+
+entities :
+	Regex entity carplate :
+		inputs in en {
+			pattern : "[a-zA-Z]{1,3}-[a-zA-Z]{1,4}-[0-9]{1,4}"
+	}
+
+actions :
+	Text response utter_wrong_objective_text :
+		inputs in en {
+			"objective type is not in the database, please try again"
+	}
+	Text response utter_ask_purpose_text :
+		inputs in en {
+			"for which purpose?"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Bonjour! Hello! What brings you here today?"
+	}
+	Text response utter_noworries_text :
+		inputs in en {
+			"you are welcome :)"
+	}
+	Text response utter_ask_pain_yn_text :
+		inputs in en {
+			"are you in pain?"
+	}
+	Text response utter_chitchat_text :
+		inputs in en {
+			chitchat
+	}
+	Text response utter_ask_continue_text :
+		inputs in en {
+			"do you need anything else?"
+	}
+	Text response utter_ask_age_text :
+		inputs in en {
+			"how old are you?"
+	}
+	Text response utter_ask_objective_text :
+		inputs in en {
+			"for which objective?"
+	}
+	Text response utter_ask_family_name_text :
+		inputs in en {
+			"what is you name?"
+	}
+	Text response utter_slots_values_text :
+		inputs in en {
+			"I am going to run a file using the following parameters:\n - purpose: " [ "request_consultation.purpose" ] "\n - objective: " [ "request_consultation.objective" ] "\n - age : " age " \n - pain : " pain_yn " \n - pain_level : " pain_level
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, powered by Rasa."
+	}
+	Text response utter_ask_pain_level_text :
+		inputs in en {
+			"How do you rate the pain? (on a scale of 1 to 3)"
+	}
+	Text response utter_wrong_age_text :
+		inputs in en {
+			"age must be a numeric value, please try again"
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"sorry, I didn\'t understand you, please try input something else"
+	}
+	Text response utter_restart_text :
+		inputs in en {
+			restarted
+	}
+	Text response utter_wrong_purpose_text :
+		inputs in en {
+			"purpose type is not in the database, please try again"
+	}
+	Text response utter_wrong_pain_yn_text :
+		inputs in en {
+			"question must be answered by a boolean value (true/false), please try again"
+	}
+	Text response utter_submit_text :
+		inputs in en {
+			"All done!"
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user request_consultation => chatbot DefaultEmptyAction { => user thankyou => chatbot utter_noworries_text ; => user chitchat => chatbot utter_chitchat_text , utter_slots_values_text { => user thankyou => chatbot utter_noworries_text ; => user chitchat => chatbot utter_chitchat_text { => user chitchat => chatbot utter_chitchat_text , utter_slots_values_text { => user thankyou => chatbot DefaultEmptyAction ; } ; } ; } ; } ;
+	} ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user FallbackIntent ;
+

@@ -1,0 +1,228 @@
+Chatbot "Weather-Chatbot" language : en
+
+intents :
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+bot_functions :
+	inputs in en {
+		"what can you do" ,
+		"what are the things you can do" ,
+		"how can you help me" ,
+		"what are you function" ,
+		"help me finding weather" ,
+		"/bot_functions" ,
+		"/bot_functions" ,
+		"/bot_functions"
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later" ,
+		bye ,
+		bye ,
+		bye ,
+		bye ,
+		bye ,
+		bye ,
+		bye
+}
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there" ,
+		^hi ,
+		^hi ,
+		^hi ,
+		^hi
+}
+
+inform :
+	inputs in en {
+		"for " ( Delhi ) [ city ] ,
+		( Punjab ) [ city ] ,
+		"search for " ( Noida ) [ city ] ,
+		"search for " ( Noida ) [ city ] " location" ,
+		"city is " ( Nagpur ) [ city ] ,
+		"for " ( Pune ) [ city ] " location" ,
+		"I am looking for " ( Mumbai ) [ city ] ,
+		( Pune ) [ city ] ,
+		"search for " ( Mumbai ) [ city ] ,
+		( "GorkhÄ�" ) [ city ] ,
+		( Pune ) [ city ] ,
+		"for " ( Nagpur ) [ city ] ,
+		"temperature for " ( Nagpur ) [ city ] ,
+		( Mumbai ) [ city ] ,
+		( Lichtenrade ) [ city ] ,
+		( Mumbai ) [ city ] ,
+		"and for " ( Pune ) [ city ] ,
+		( Nagpur ) [ city ]
+	}
+	parameters :
+		city : entity text ;
+
+praise :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"you are perfect" ,
+		Thanks ,
+		"you made my day" ,
+		"you are amazing"
+}
+
+search_temperature :
+	inputs in en {
+		"what is current temperature" ,
+		"today\'s temprature for " ( Holubynka ) [ city ] ,
+		"current temperature of " ( Vinogradovo ) [ city ] ,
+		"is it hot today" ,
+		"is is cold today" ,
+		"today temperature" ,
+		"is " ( Lichtenrade ) [ city ] " today" ,
+		"current temperature for " ( Pune ) [ city ] ,
+		"temperature for " ( Nagpur ) [ city ] ,
+		"temperature for " ( Pune ) [ city ] ,
+		"what is current temperature" ,
+		"today temperature" ,
+		"what is current temperature" ,
+		"is it hot today"
+	}
+	parameters :
+		city : entity text ;
+
+search_weather :
+	inputs in en {
+		"what is the current weather" ,
+		"what is the weather for " ( Pune ) [ city ] ,
+		"what is current weather for " ( Patna ) [ city ] ,
+		"tell me weather for " ( Mumbai ) [ city ] ,
+		"weather for " ( Delhi ) [ city ] ,
+		"weather for " ( London ) [ city ] ,
+		"what is weather for " ( Pune ) [ city ] ,
+		"what is the weather for " ( Pune ) [ city ] ,
+		"current weather for " ( Pune ) [ city ] ,
+		"what is current weather for " ( London ) [ city ] ,
+		"what is current weather" ,
+		"what is current weather for " ( Nagpur ) [ city ] ,
+		"weather for " ( Pune ) [ city ] ,
+		"weather for " ( London ) [ city ]
+	}
+	parameters :
+		city : entity text ;
+
+stop :
+	inputs in en {
+		"/stop" ,
+		"/stop"
+}
+
+unhappy :
+	inputs in en {
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good"
+}
+
+forminform :
+
+actions :
+	Text response utter_unhappy_text :
+		inputs in en {
+			"Soory to hear that. I will improve myself" ,
+			"Seems I need more training" ,
+			"Thanks for your feedback. I will work on myself"
+	}
+	Text response utter_wrong_city_text :
+		inputs in en {
+			"City not found"
+	}
+	Text response utter_ask_city_text :
+		inputs in en {
+			"Which city"
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Hi! I am a weather bot.I can search for weather for you." ,
+			"Hello! What can I do for you?" ,
+			"Hi! What\'s up?"
+	}
+	Text response utter_bot_functions_text :
+		inputs in en {
+			"I can search weather for you."
+	}
+	Text response utter_praise_text :
+		inputs in en {
+			"Thanks you" ,
+			"Happy to help you" ,
+			"you are welcome"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_submit_text :
+		inputs in en {
+			"Submitting..."
+	}
+	Empty response DefaultEmptyAction
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user praise => chatbot utter_praise_text ;
+		=> user unhappy => chatbot utter_unhappy_text {
+			=> user goodbye => chatbot utter_goodbye_text ;
+		} ;
+		=> user bot_functions => chatbot utter_bot_functions_text {
+			=> user search_weather => chatbot DefaultEmptyAction { => user praise => chatbot utter_praise_text ; => user unhappy => chatbot utter_unhappy_text { => user goodbye => chatbot utter_goodbye_text { => user stop => chatbot utter_goodbye_text ; } ; } ; } ;
+		} ;
+		=> user search_temperature => chatbot DefaultEmptyAction {
+			=> user forminform => chatbot DefaultEmptyAction { => user inform => chatbot DefaultEmptyAction { => user search_temperature => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user praise => chatbot utter_praise_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user search_weather => chatbot DefaultEmptyAction {
+		=> user unhappy => chatbot utter_unhappy_text ;
+		=> user goodbye => chatbot utter_goodbye_text ;
+		=> user forminform => chatbot DefaultEmptyAction {
+			=> user inform => chatbot DefaultEmptyAction { => user search_weather => chatbot DefaultEmptyAction { => user praise => chatbot utter_praise_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ;
+		} ;
+		=> user search_temperature => chatbot DefaultEmptyAction {
+			=> user search_temperature => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user search_weather => chatbot DefaultEmptyAction { => user search_temperature => chatbot DefaultEmptyAction { => user forminform => chatbot DefaultEmptyAction { => user praise => chatbot utter_praise_text { => user goodbye => chatbot utter_goodbye_text ; } ; } ; } ; } ; } ; } ;
+		} ;
+	} ;
+	- user search_temperature => chatbot DefaultEmptyAction {
+		=> user forminform => chatbot DefaultEmptyAction { => user search_temperature => chatbot DefaultEmptyAction { => user praise => chatbot utter_praise_text ; } ; } ;
+	} ;
+

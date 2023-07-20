@@ -1,0 +1,137 @@
+Chatbot "Upgrad-Assignment" language : en
+
+intents :
+
+	affirm :
+		inputs in en {
+			yes ,
+			yep ,
+			yeah ,
+			indeed ,
+			"that\'s right" ,
+			ok ,
+			great ,
+			"right, thank you" ,
+			correct ,
+			"great choice" ,
+			"sounds really good" ,
+			thanks
+	}
+
+	goodbye :
+		inputs in en {
+			bye ,
+			goodbye ,
+			"good bye" ,
+			stop ,
+			end ,
+			farewell ,
+			"Bye bye" ,
+			"have a good one"
+	}
+
+	greetIntent :
+		inputs in en {
+			hey ,
+			howdy ,
+			"hey there" ,
+			hello ,
+			^hi ,
+			"good morning" ,
+			"good evening" ,
+			"dear sir"
+	}
+
+	restaurant_search :
+		inputs in en {
+			"i\'m looking for a place to eat" ,
+			"I want to grab lunch" ,
+			"I am searching for a dinner spot" ,
+			"I am looking for some restaurants in " ( Delhi ) [ location ] "." ,
+			"I am looking for some restaurants in " ( Bangalore ) [ location ] ,
+			"show me " ( chinese ) [ cuisine ] " restaurants" ,
+			"show me " ( chines ) [ cuisine ] " restaurants in the " ( "New Delhi" ) [ location ] ,
+			"show me a " ( mexican ) [ cuisine ] " place in the " ( centre ) [ location ] ,
+			"i am looking for an " ( indian ) [ cuisine ] " spot called olaolaolaolaolaola" ,
+			"search for restaurants" ,
+			"anywhere in the " ( west ) [ location ] ,
+			"I am looking for " ( "asian fusion" ) [ cuisine ] " food" ,
+			"I am looking a restaurant in " ( "294328" ) [ location ] ,
+			"in " ( Gurgaon ) [ location ] ,
+			( "South Indian" ) [ cuisine ] ,
+			( "North Indian" ) [ cuisine ] ,
+			( Italian ) [ cuisine ] ,
+			( Chinese ) [ cuisine ] ,
+			( chinese ) [ cuisine ] ,
+			( Lithuania ) [ location ] ,
+			"Oh, sorry, in " ( Italy ) [ location ] ,
+			"in " ( delhi ) [ location ] ,
+			"I am looking for some restaurants in " ( Mumbai ) [ location ] ,
+			"I am looking for " ( "mexican indian fusion" ) [ cuisine ] ,
+			"can you book a table in " ( rome ) [ location ] " in a " ( moderate ) [ price ] " price range with " ( british ) [ cuisine ] " food for " ( four ) [ people ] " people" ,
+			( central ) [ location ] ( indian ) [ cuisine ] " restaurant" ,
+			"please help me to find restaurants in " ( pune ) [ location ] ,
+			"Please find me a restaurantin " ( bangalore ) [ location ] ,
+			( mumbai ) [ location ] ,
+			"show me restaurants" ,
+			"please find me " ( chinese ) [ cuisine ] " restaurant in " ( delhi ) [ location ] ,
+			"can you find me a " ( chinese ) [ cuisine ] " restaurant" ,
+			( delhi ) [ location ] ,
+			"please find me a restaurant in " ( ahmedabad ) [ location ] ,
+			"please show me a few " ( italian ) [ cuisine ] " restaurants in " ( bangalore ) [ location ] ,
+			test
+		}
+		parameters :
+			location ,
+			cuisine ,
+			price ,
+			people : entity number ;
+
+	stop :
+
+entities :
+	Regex entity pincode :
+		inputs in en {
+			pattern : "[0-9]{6}"
+	}
+	Regex entity greet :
+		inputs in en {
+			pattern : "hey[^\\s]*"
+	}
+
+actions :
+	Empty response check_location_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"hey there! How may i help you" ,
+			"Hi, How can I help you!" ,
+			"Hey, How is it going How May I help you Today"
+	}
+	Text response utter_ask_cuisine_text :
+		inputs in en {
+			"what kind of cuisine would you like?"
+	}
+	Empty response action_search_restaurants_empty
+	Text response utter_ask_location_text :
+		inputs in en {
+			"In what location?"
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"Sorry! i cannot understand this one you try again."
+	}
+	Text response utter_ask_howcanhelp_text :
+		inputs in en {
+			"how can I help you?"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"goodbye :(" ,
+			"Bye-bye"
+	}
+
+flows :
+	- user greetIntent => chatbot utter_greet_text {
+		=> user restaurant_search => chatbot utter_ask_location_text , utter_ask_cuisine_text , action_search_restaurants_empty { => user restaurant_search => chatbot utter_ask_cuisine_text , action_search_restaurants_empty { => user restaurant_search => chatbot check_location_empty , action_search_restaurants_empty , utter_goodbye_text { => user goodbye => chatbot utter_goodbye_text ; } ; => user affirm => chatbot utter_goodbye_text ; => user stop ; } ; => user affirm => chatbot utter_goodbye_text ; } ;
+	} ;
+

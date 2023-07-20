@@ -1,0 +1,102 @@
+Chatbot "timezonebot-1" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+find_time_zone :
+	inputs in en {
+		"can you tell the time?" ,
+		"do you know how to tell the time?" ,
+		"i need to find a time zone" ,
+		"can you find me a time zone" ,
+		"what time is it?"
+}
+
+find_time_zone_for_location :
+	inputs in en {
+		"what is the time zone of " ( London ) [ city ] "?" ,
+		"do you know the time in " ( Sofia ) [ city ] ,
+		"what time is it in " ( Barcelona ) [ city ] "?" ,
+		( Porto ) [ city ] " time zone" ,
+		"time zone of " ( Warsaw ) [ city ] ,
+		"tell me the time of " ( Budapest ) [ city ] ,
+		"what is " ( Dublin ) [ city ] " time zone?"
+	}
+	parameters :
+		city : entity text ;
+
+city_info :
+	inputs in en {
+		( London ) [ city ] ,
+		( Berlin ) [ city ] ,
+		( Glasgow ) [ city ] ,
+		( Lisbon ) [ city ] ,
+		( Paris ) [ city ] ,
+		( Milan ) [ city ] ,
+		( Sofia ) [ city ] ,
+		( Madrid ) [ city ] ,
+		( Oslo ) [ city ]
+	}
+	parameters :
+		city : entity text ;
+
+thanks :
+	inputs in en {
+		"thank you" ,
+		thanks ,
+		"That\'s great, thanks"
+}
+
+actions :
+	Empty response action_find_and_show_time_zone_empty
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey!" ,
+			Hello
+	}
+	Text response utter_you_are_welcome_text :
+		inputs in en {
+			"I am happy to help!"
+	}
+	Text response utter_ask_location_text :
+		inputs in en {
+			"I can find the time zone for cities. Which city do you need the time zone of?"
+	}
+	Text response utter_finding_time_zone_text :
+		inputs in en {
+			"Ok, give me a second to look up the time zone of " [ "city_info.city" ]
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Bye!" ,
+			"Goodbye.."
+	}
+
+flows :
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user greet => chatbot utter_greet_text {
+		=> user find_time_zone => chatbot utter_ask_location_text {
+			=> user city_info => chatbot utter_finding_time_zone_text , action_find_and_show_time_zone_empty { => user thanks => chatbot utter_you_are_welcome_text , utter_goodbye_text ; } ;
+		} ;
+		=> user find_time_zone_for_location => chatbot utter_finding_time_zone_text , action_find_and_show_time_zone_empty {
+			=> user thanks => chatbot utter_you_are_welcome_text , utter_goodbye_text ;
+		} ;
+	} ;
+

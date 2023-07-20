@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="TheWitchat">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="get_lore">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="yennefer"/>
+        <tokens xsi:type="generator:Literal" text=" from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="vesemir"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="geralt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="ciri"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="ciri"/>
+        <tokens xsi:type="generator:Literal" text=" is related to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="the nifgaardian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="the witcher"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="kaer morhen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="kaer morhen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What happened at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="white orchard"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="kaer Morhen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="temeria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What happened in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="white orchard"/>
+      </inputs>
+    </inputs>
+    <parameters name="lore"/>
+  </intents>
+  <intents name="ask_quest_confirmation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Should we "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="follow the tracks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I need to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="follow the tracks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do we need to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="talk to villager"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Should I "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="talk to Tomira"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do we need to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="kill the griffon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Should I "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="kill the wild dogs"/>
+      </inputs>
+    </inputs>
+    <parameters name="action"/>
+  </intents>
+  <intents name="ask_help_quest">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not sure what we need to do now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do we need to do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I need to do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where should I go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where should we need to go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the point of the quest"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I need to do to complete the quest"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where should we go now"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="location">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where I am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are we"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is this place"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you know where we are"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm lost"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="inventory">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I have in the inventory"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I have in my bag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me what we have in our bag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do we have a lot of item"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is our bag full"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="craft_helper">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I craft the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Petri's Philter"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where do I find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Arenaria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can I do with a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Griffin mutagen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can we craft "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="White Honey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can i craft an "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Axeman's trousers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can i get "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Dark iron ingots"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How should we craft a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Thunderbolt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where can I pick "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Crow's Eye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where can I get "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Hop Umbels"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where should I gather "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Ribleaf"/>
+      </inputs>
+    </inputs>
+    <parameters name="ingredient"/>
+  </intents>
+  <intents name="combat_helper">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do we defeat a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="griffin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I kill a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="ghoul"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I kill a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="wolf"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="griffin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="this"/>
+        <tokens xsi:type="generator:Literal" text=" monster"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do I use to defeat "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="the griffin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the weaknesses of a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="griffin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where may i find the monster "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="devil by the well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Should i prepare before attempting to kill the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="devil by the well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where can I fight a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="griffin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="bear"/>
+      </inputs>
+    </inputs>
+    <parameters name="monster"/>
+  </intents>
+  <intents name="thanking">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:Image" name="utter_cheer_up_img" URL="https://i.imgur.com/nGF1K8f.jpg" caption="Here is something to cheer you up:"/>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! How are you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am a bot, powered by Rasa."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.1"/>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.0 //@actions.3">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.1"/>
+          </outcoming>
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.5"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.5"/>
+  </flows>
+  <flows intent="//@intents.6">
+    <target actions="//@actions.4"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="vardhaman-freshers">
+  <intents name="greet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you around"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you later"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="affirm">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="indeed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="correct"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="deny">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't like that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_great">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="amazing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wonderful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm good"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mood_unhappy">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="unhappy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="extremely sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="so sad"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="sug">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what suggestions do you have?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="new_college">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am new to college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="new to college need help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="need help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am new to college need help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am new to college want to learn more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more info"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="About"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="about the college"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="opening_ranks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the opening and closing ranks of College"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="opening and closing ranks of Vardhaman college of Engineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="opening and closing ranks of different departments."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ranks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="opening and closing ranks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cutoff ranks for vardhaman"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cut off ranks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cut off for college"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="fee_structure">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the fee structure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the fee structure of College"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the fee structure of Vardhaman college of Engineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fee structure"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="depar_college">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="departments"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the different departments"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the different departments in college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the different departments of vardhaman college of Engineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the departments in College"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what departments are present in the College"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="plac_college">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="placements"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what companies visit the college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the placements percentage in College"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are the placements in vardhaman college of Engineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are the placements good in vardhaman college of enigineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the companies visiting vardhaman college of Engineering"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="trans_college">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transport facility"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transport"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the transport available to reach the College"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the transport available to reach vardhaman college of enigineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is there any availablity of transport"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="dir_vardhaman">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to come to vardhaman college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to vardhaman college of Engineering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="vardhaman college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is vardhaman"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dir to vardhaman college"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="direc">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to college"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cse_it_admin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to cse block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to it block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to admin block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to cse and it block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to computer science block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to information technology block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="computer science block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="information technology block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cse block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="admin office"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to admin office"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to cse block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to it block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to cse and it block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="block 1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to block 1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to block 1"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ece_eee">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to ece block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to eee block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to ece and eee block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to electronics and communication block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to electrical and electronics block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="electronics and communication block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="electrical and electronics block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ece block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="eee block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to ece block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to eee block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to ece and eee block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="block 3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to block 3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to block 3"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="me_ce">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to mech block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to mech and civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to mechanical block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mechanical block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mechanical block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to mech block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to mech and civil block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to me block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direction to ce block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="block 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to block 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to block 2"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="main_audi">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to main auditorium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to main audi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to main auditorium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main auditorium"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mini_audi">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to mini auditorium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to mini audi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to mini auditorium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mini auditorium"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="canteen">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to canteen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to canteen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="canteen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="block 4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to block 4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to block 4"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="fresher">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to freshers block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to freshers block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="freshers block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="block 5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to block 5"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pat">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to placement training"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to placement training"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="placement training"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to pat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to pat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pat"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="hostel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to hostel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hostel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to hostel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to boys hostel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to girls hostel"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="library">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to library"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="library"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to library"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="cstad">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to cricket stadium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cricket stadium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to cricket stadium"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bte">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="btech"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="btech courses"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the btech courses"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the btech courses available in vardhaman college of engineering"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pg">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pg courses"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the pg courses"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the pg courses available in vardhaman college of engineering"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mba">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="directions to mba block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direct to mba block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to go to mba block"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mba block"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="know_more">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="know more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="website"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_challenge">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a bot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I talking to a human?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is your name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who made you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="other_questions">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is air"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="water"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="anything"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="vard_rules">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are phones allowed in the college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="phones allowed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are phones allowed in the vardhaman college"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="phones allowed in the vardhaman college"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="dress_code">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the dress code in Vardhaman"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the dress code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dress code"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="FallbackIntent" fallbackIntent="true"/>
+  <actions xsi:type="generator:Text" name="utter_mec_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [MECH/CIVIL](https://goo.gl/maps/HJxPmknFc1dshDQE7)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_cheer_up_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry for not being up to your expectations."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_greet_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome to Vardhaman College of Engineering. This is VBot,how can I help you?&#xA;&#xA;  Do Type suggestion to know what VBot has to offer"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_did_that_help_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did that help you?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_maud_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [MAIN AUDITORIUM](https://goo.gl/maps/taNzStMzc9i4Vpau6)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_cante_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [CANTEEN](https://goo.gl/maps/Qe4Qad4mGdr9kHFFA)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_fe_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [Fees Structure:](https://vardhaman.org/fee-structure/)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_rule_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Phones are strictly not allowed in Vardhaman college."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_link_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [Opening &amp; Closing Rank:](https://collegedunia.com/college/19133-vardhaman-college-of-engineering-vce-hyderabad/cutoff)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_cstade_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [CRICKET STADIUM]( https://goo.gl/maps/u7E3GLiFshNbiYZm9)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_fres_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [FRESHMAN/1ST YEAR/pat](https://goo.gl/maps/b5dcJwMfZHnfLkHS7)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_sugg_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can ask about: About college&#xA;&#xA; directions&#xA;&#xA; fee structure&#xA;&#xA; opening and closing ranks&#xA;&#xA;  departments&#xA;&#xA; transport&#xA;&#xA; placements&#xA;&#xA; know more"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_iamabot_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am VBOT, powered by MAPPPING IT SERVICES."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_web_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can ask about dress code and allowance of phone&#xA;&#xA; For more information please click link to continue: [College Website](https://vardhaman.org/)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_dep_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It offers graduate and post graduate courses to students. Which one would you like to know?"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_cs_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [CSE/IT/ADMIN BLOCK](https://goo.gl/maps/8E3exCHXTBm1Ji4E8)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_pla_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [Placements Info](https://vardhaman.org/placement-home/)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ec_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [ECE/EEE/MBA/STUDENT AFFAIRS/CAMPUS RADIO](https://goo.gl/maps/Lk8BxFEHfgNPYpag8)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_trans_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [TRANSPORT](https://vardhaman.org/transport/)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_dresscode_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Students are expected to behave with dignity and decorum and in conformity with the discipline of the Institution.&#xA;&#xA; Boys are expected to wear formal dress with tucked-in and formal shoe.&#xA;&#xA; Girl students are expected to wear salwar kurta with chunni.Jeans and sleeveless are not allowed. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_p_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The PG courses include:&#xA;&#xA; Wireless &amp; Mobile Communication&#xA;&#xA; Computer Science and Engineering&#xA;&#xA; Power Electronics and Drives &#xA;&#xA; Master of Business Administration"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_goodbye_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye. See you later."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_happy_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, carry on!"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_saud_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [MINI AUDITORIUM/LIBRARY](https://goo.gl/maps/rshrev7hjdTbWH2k6)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_direc_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where do you want V Bot to direct:"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_ho_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [COLLEGE HOSTEL](https://goo.gl/maps/cp3jbj7kb67rY9xG6)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_abt_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Vardhaman College of Engineering was established in the year 1999.&#xA;&#xA; It is affiliated with Jawaharlal Nehru Technological University, Hyderabad (JNTUH), and was approved by AICTE, New Delhi.&#xA;&#xA; It is accredited by National Board of Accreditation and also by National Assessment and Accreditation Council.Recently UGC, awarded autonomous status to the college for 6 years.&#xA;&#xA; The National Institutional Ranking Framework (NIRF) ranked it 143 among engineering colleges in 2020."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_default_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't understand ."/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_bt_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It offers B.Tech degrees in &#xA;&#xA; Computer Science Engineering&#xA;&#xA; Information technology&#xA;&#xA;  Mechanical Engineering&#xA;&#xA; Electrical and Electronics Engineering&#xA;&#xA; Civil Engineering&#xA;&#xA; Electronics and communication Engineering"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="utter_dv_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click link to continue: [Vardhaman College of Engineering](https://goo.gl/maps/XKut9ec5zZVxzeMW7)"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Empty" name="DefaultEmptyAction"/>
+  <actions xsi:type="generator:Text" name="action_default_fallback_text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I don't undestand you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0">
+    <target actions="//@actions.2">
+      <outcoming intent="//@intents.6">
+        <target actions="//@actions.11">
+          <outcoming intent="//@intents.14">
+            <target actions="//@actions.24">
+              <outcoming intent="//@intents.15">
+                <target actions="//@actions.9 //@actions.15 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.16">
+                <target actions="//@actions.17 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.17">
+                <target actions="//@actions.0 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.18">
+                <target actions="//@actions.4 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.19">
+                <target actions="//@actions.23 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.24">
+                <target actions="//@actions.23 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.22">
+                <target actions="//@actions.10 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.28">
+                <target actions="//@actions.17 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.21">
+                <target actions="//@actions.10 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.30">
+                          <outcoming intent="//@intents.0">
+                            <target actions="//@actions.2">
+                              <outcoming intent="//@intents.6">
+                                <target actions="//@actions.11">
+                                  <outcoming intent="//@intents.14">
+                                    <target actions="//@actions.24">
+                                      <outcoming intent="//@intents.23">
+                                        <target actions="//@actions.25 //@actions.3">
+                                          <outcoming intent="//@intents.2">
+                                            <target actions="//@actions.22">
+                                              <outcoming intent="//@intents.3">
+                                                <target actions="//@actions.1"/>
+                                              </outcoming>
+                                            </target>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.20">
+                <target actions="//@actions.5 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.25">
+                <target actions="//@actions.9 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.13">
+                <target actions="//@actions.29 //@actions.3">
+                  <outcoming intent="//@intents.2">
+                    <target actions="//@actions.22">
+                      <outcoming intent="//@intents.3">
+                        <target actions="//@actions.1"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.29">
+            <target actions="//@actions.13">
+              <outcoming intent="//@intents.32">
+                <target actions="//@actions.7"/>
+              </outcoming>
+              <outcoming intent="//@intents.33">
+                <target actions="//@actions.19"/>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.7">
+            <target actions="//@actions.26"/>
+          </outcoming>
+          <outcoming intent="//@intents.9">
+            <target actions="//@actions.6"/>
+          </outcoming>
+          <outcoming intent="//@intents.8">
+            <target actions="//@actions.8 //@actions.3">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.22">
+                  <outcoming intent="//@intents.3">
+                    <target actions="//@actions.1"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.12">
+            <target actions="//@actions.18 //@actions.3">
+              <outcoming intent="//@intents.2">
+                <target actions="//@actions.22">
+                  <outcoming intent="//@intents.3">
+                    <target actions="//@actions.1"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.11">
+            <target actions="//@actions.16"/>
+          </outcoming>
+          <outcoming intent="//@intents.10">
+            <target actions="//@actions.30">
+              <outcoming intent="//@intents.0">
+                <target actions="//@actions.2">
+                  <outcoming intent="//@intents.6">
+                    <target actions="//@actions.11">
+                      <outcoming intent="//@intents.10">
+                        <target actions="//@actions.14">
+                          <outcoming intent="//@intents.26">
+                            <target actions="//@actions.30">
+                              <outcoming intent="//@intents.0">
+                                <target actions="//@actions.2">
+                                  <outcoming intent="//@intents.6">
+                                    <target actions="//@actions.11">
+                                      <outcoming intent="//@intents.10">
+                                        <target actions="//@actions.14">
+                                          <outcoming intent="//@intents.27">
+                                            <target actions="//@actions.16 //@actions.20"/>
+                                          </outcoming>
+                                        </target>
+                                      </outcoming>
+                                    </target>
+                                  </outcoming>
+                                </target>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.31">
+            <target actions="//@actions.27"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.4">
+        <target actions="//@actions.22"/>
+      </outcoming>
+      <outcoming intent="//@intents.5">
+        <target actions="//@actions.1">
+          <outcoming intent="//@intents.2">
+            <target actions="//@actions.22"/>
+          </outcoming>
+          <outcoming intent="//@intents.3">
+            <target actions="//@actions.1"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1">
+    <target actions="//@actions.21"/>
+  </flows>
+  <flows intent="//@intents.30">
+    <target actions="//@actions.12"/>
+  </flows>
+  <flows intent="//@intents.34">
+    <target actions="//@actions.31"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

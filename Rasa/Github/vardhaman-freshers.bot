@@ -1,0 +1,546 @@
+Chatbot "vardhaman-freshers" language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+sug :
+	inputs in en {
+		suggestion ,
+		suggestions ,
+		"what suggestions do you have?"
+}
+
+new_college :
+	inputs in en {
+		"I am new to college" ,
+		"new to college need help" ,
+		"need help" ,
+		"I am new to college need help" ,
+		"I am new to college want to learn more" ,
+		"more info" ,
+		About ,
+		"about the college"
+}
+
+opening_ranks :
+	inputs in en {
+		"what are the opening and closing ranks of College" ,
+		"opening and closing ranks of Vardhaman college of Engineering" ,
+		"opening and closing ranks of different departments." ,
+		ranks ,
+		"opening and closing ranks" ,
+		"cutoff ranks for vardhaman" ,
+		"cut off ranks" ,
+		"cut off for college"
+}
+
+fee_structure :
+	inputs in en {
+		"what is the fee structure" ,
+		"what is the fee structure of College" ,
+		"what is the fee structure of Vardhaman college of Engineering" ,
+		"fee structure"
+}
+
+depar_college :
+	inputs in en {
+		departments ,
+		"what are the different departments" ,
+		"what are the different departments in college" ,
+		"what are the different departments of vardhaman college of Engineering" ,
+		"what are the departments in College" ,
+		"what departments are present in the College"
+}
+
+plac_college :
+	inputs in en {
+		placements ,
+		"what companies visit the college" ,
+		"what is the placements percentage in College" ,
+		"how are the placements in vardhaman college of Engineering" ,
+		"are the placements good in vardhaman college of enigineering" ,
+		"what are the companies visiting vardhaman college of Engineering"
+}
+
+trans_college :
+	inputs in en {
+		"transport facility" ,
+		transport ,
+		"what is the transport available to reach the College" ,
+		"what is the transport available to reach vardhaman college of enigineering" ,
+		"is there any availablity of transport"
+}
+
+dir_vardhaman :
+	inputs in en {
+		"how to come to vardhaman college" ,
+		"direction to vardhaman college of Engineering" ,
+		"vardhaman college" ,
+		"where is vardhaman" ,
+		"where is college" ,
+		"dir to vardhaman college"
+}
+
+direc :
+	inputs in en {
+		direction ,
+		directions ,
+		"directions to college"
+}
+
+cse_it_admin :
+	inputs in en {
+		"direction to cse block" ,
+		"direction to it block" ,
+		"direction to admin block" ,
+		"direction to cse and it block" ,
+		"direction to computer science block" ,
+		"direction to information technology block" ,
+		"computer science block" ,
+		"information technology block" ,
+		"cse block" ,
+		"it block" ,
+		"admin office" ,
+		"how to go to admin office" ,
+		"how to go to cse block" ,
+		"how to go to it block" ,
+		"how to go to cse and it block" ,
+		"block 1" ,
+		"directions to block 1" ,
+		"how to go to block 1"
+}
+
+ece_eee :
+	inputs in en {
+		"direction to ece block" ,
+		"direction to eee block" ,
+		"direction to ece and eee block" ,
+		"direction to electronics and communication block" ,
+		"direction to electrical and electronics block" ,
+		"electronics and communication block" ,
+		"electrical and electronics block" ,
+		"ece block" ,
+		"eee block" ,
+		"how to go to ece block" ,
+		"how to go to eee block" ,
+		"how to go to ece and eee block" ,
+		"block 3" ,
+		"directions to block 3" ,
+		"how to go to block 3"
+}
+
+me_ce :
+	inputs in en {
+		"direction to mech block" ,
+		"direction to civil block" ,
+		"direction to mech and civil block" ,
+		"direction to mechanical block" ,
+		"direction to civil block" ,
+		"mechanical block" ,
+		"civil block" ,
+		"mechanical block" ,
+		"civil block" ,
+		"how to go to mech block" ,
+		"how to go to civil block" ,
+		"how to go to mech and civil block" ,
+		"direction to me block" ,
+		"direction to ce block" ,
+		"block 2" ,
+		"directions to block 2" ,
+		"how to go to block 2"
+}
+
+main_audi :
+	inputs in en {
+		"directions to main auditorium" ,
+		"directions to main audi" ,
+		"how to go to main auditorium" ,
+		"main auditorium"
+}
+
+mini_audi :
+	inputs in en {
+		"directions to mini auditorium" ,
+		"directions to mini audi" ,
+		"how to go to mini auditorium" ,
+		"mini auditorium"
+}
+
+canteen :
+	inputs in en {
+		"directions to canteen" ,
+		"how to go to canteen" ,
+		canteen ,
+		"block 4" ,
+		"directions to block 4" ,
+		"how to go to block 4"
+}
+
+fresher :
+	inputs in en {
+		"directions to freshers block" ,
+		"how to go to freshers block" ,
+		"freshers block" ,
+		"block 5" ,
+		"how to go to block 5"
+}
+
+pat :
+	inputs in en {
+		"directions to placement training" ,
+		"how to go to placement training" ,
+		"placement training" ,
+		"directions to pat" ,
+		"how to go to pat" ,
+		pat
+}
+
+hostel :
+	inputs in en {
+		"directions to hostel" ,
+		hostel ,
+		"how to go to hostel" ,
+		"how to go to boys hostel" ,
+		"how to go to girls hostel"
+}
+
+library :
+	inputs in en {
+		"directions to library" ,
+		library ,
+		"how to go to library"
+}
+
+cstad :
+	inputs in en {
+		"directions to cricket stadium" ,
+		"cricket stadium" ,
+		"how to go to cricket stadium"
+}
+
+bte :
+	inputs in en {
+		btech ,
+		"btech courses" ,
+		"what are the btech courses" ,
+		"what are the btech courses available in vardhaman college of engineering"
+}
+
+pg :
+	inputs in en {
+		pg ,
+		"pg courses" ,
+		"what are the pg courses" ,
+		"what are the pg courses available in vardhaman college of engineering"
+}
+
+mba :
+	inputs in en {
+		"directions to mba block" ,
+		"direct to mba block" ,
+		"how to go to mba block" ,
+		"mba block"
+}
+
+know_more :
+	inputs in en {
+		"know more" ,
+		website
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?" ,
+		"what are you" ,
+		"what is you" ,
+		"who are you" ,
+		"what is your name" ,
+		"who made you"
+}
+
+other_questions :
+	inputs in en {
+		"where is water" ,
+		"where is air" ,
+		water ,
+		anything
+}
+
+vard_rules :
+	inputs in en {
+		"are phones allowed in the college" ,
+		"phones allowed" ,
+		"are phones allowed in the vardhaman college" ,
+		"phones allowed in the vardhaman college"
+}
+
+dress_code :
+	inputs in en {
+		"what is the dress code in Vardhaman" ,
+		"what is the dress code" ,
+		"dress code"
+}
+
+FallbackIntent Fallback :
+
+actions :
+	Text response utter_mec_text :
+		inputs in en {
+			"Please click link to continue: [MECH/CIVIL](https://goo.gl/maps/HJxPmknFc1dshDQE7)"
+	}
+	Text response utter_cheer_up_text :
+		inputs in en {
+			"Sorry for not being up to your expectations."
+	}
+	Text response utter_greet_text :
+		inputs in en {
+			"Welcome to Vardhaman College of Engineering. This is VBot,how can I help you?\n\n  Do Type suggestion to know what VBot has to offer"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_maud_text :
+		inputs in en {
+			"Please click link to continue: [MAIN AUDITORIUM](https://goo.gl/maps/taNzStMzc9i4Vpau6)"
+	}
+	Text response utter_cante_text :
+		inputs in en {
+			"Please click link to continue: [CANTEEN](https://goo.gl/maps/Qe4Qad4mGdr9kHFFA)"
+	}
+	Text response utter_fe_text :
+		inputs in en {
+			"Please click link to continue: [Fees Structure:](https://vardhaman.org/fee-structure/)"
+	}
+	Text response utter_rule_text :
+		inputs in en {
+			"Phones are strictly not allowed in Vardhaman college."
+	}
+	Text response utter_link_text :
+		inputs in en {
+			"Please click link to continue: [Opening & Closing Rank:](https://collegedunia.com/college/19133-vardhaman-college-of-engineering-vce-hyderabad/cutoff)"
+	}
+	Text response utter_cstade_text :
+		inputs in en {
+			"Please click link to continue: [CRICKET STADIUM]( https://goo.gl/maps/u7E3GLiFshNbiYZm9)"
+	}
+	Text response utter_fres_text :
+		inputs in en {
+			"Please click link to continue: [FRESHMAN/1ST YEAR/pat](https://goo.gl/maps/b5dcJwMfZHnfLkHS7)"
+	}
+	Text response utter_sugg_text :
+		inputs in en {
+			"You can ask about: About college\n\n directions\n\n fee structure\n\n opening and closing ranks\n\n  departments\n\n transport\n\n placements\n\n know more"
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am VBOT, powered by MAPPPING IT SERVICES."
+	}
+	Text response utter_web_text :
+		inputs in en {
+			"You can ask about dress code and allowance of phone\n\n For more information please click link to continue: [College Website](https://vardhaman.org/)"
+	}
+	Text response utter_dep_text :
+		inputs in en {
+			"It offers graduate and post graduate courses to students. Which one would you like to know?"
+	}
+	Text response utter_cs_text :
+		inputs in en {
+			"Please click link to continue: [CSE/IT/ADMIN BLOCK](https://goo.gl/maps/8E3exCHXTBm1Ji4E8)"
+	}
+	Text response utter_pla_text :
+		inputs in en {
+			"Please click link to continue: [Placements Info](https://vardhaman.org/placement-home/)"
+	}
+	Text response utter_ec_text :
+		inputs in en {
+			"Please click link to continue: [ECE/EEE/MBA/STUDENT AFFAIRS/CAMPUS RADIO](https://goo.gl/maps/Lk8BxFEHfgNPYpag8)"
+	}
+	Text response utter_trans_text :
+		inputs in en {
+			"Please click link to continue: [TRANSPORT](https://vardhaman.org/transport/)"
+	}
+	Text response utter_dresscode_text :
+		inputs in en {
+			"Students are expected to behave with dignity and decorum and in conformity with the discipline of the Institution.\n\n Boys are expected to wear formal dress with tucked-in and formal shoe.\n\n Girl students are expected to wear salwar kurta with chunni.Jeans and sleeveless are not allowed. "
+	}
+	Text response utter_p_text :
+		inputs in en {
+			"The PG courses include:\n\n Wireless & Mobile Communication\n\n Computer Science and Engineering\n\n Power Electronics and Drives \n\n Master of Business Administration"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			"Bye. See you later."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_saud_text :
+		inputs in en {
+			"Please click link to continue: [MINI AUDITORIUM/LIBRARY](https://goo.gl/maps/rshrev7hjdTbWH2k6)"
+	}
+	Text response utter_direc_text :
+		inputs in en {
+			"Where do you want V Bot to direct:"
+	}
+	Text response utter_ho_text :
+		inputs in en {
+			"Please click link to continue: [COLLEGE HOSTEL](https://goo.gl/maps/cp3jbj7kb67rY9xG6)"
+	}
+	Text response utter_abt_text :
+		inputs in en {
+			"Vardhaman College of Engineering was established in the year 1999.\n\n It is affiliated with Jawaharlal Nehru Technological University, Hyderabad (JNTUH), and was approved by AICTE, New Delhi.\n\n It is accredited by National Board of Accreditation and also by National Assessment and Accreditation Council.Recently UGC, awarded autonomous status to the college for 6 years.\n\n The National Institutional Ranking Framework (NIRF) ranked it 143 among engineering colleges in 2020."
+	}
+	Text response utter_default_text :
+		inputs in en {
+			"Sorry, I didn\'t understand ."
+	}
+	Text response utter_bt_text :
+		inputs in en {
+			"It offers B.Tech degrees in \n\n Computer Science Engineering\n\n Information technology\n\n  Mechanical Engineering\n\n Electrical and Electronics Engineering\n\n Civil Engineering\n\n Electronics and communication Engineering"
+	}
+	Text response utter_dv_text :
+		inputs in en {
+			"Please click link to continue: [Vardhaman College of Engineering](https://goo.gl/maps/XKut9ec5zZVxzeMW7)"
+	}
+	Empty response DefaultEmptyAction
+	Text response action_default_fallback_text :
+		inputs in en {
+			"Sorry, I don\'t undestand you "
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user sug => chatbot utter_sugg_text {
+			=> user direc => chatbot utter_direc_text {
+				=> user cse_it_admin => chatbot utter_cstade_text , utter_cs_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user ece_eee => chatbot utter_ec_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user me_ce => chatbot utter_mec_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user main_audi => chatbot utter_maud_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user mini_audi => chatbot utter_saud_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user library => chatbot utter_saud_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user pat => chatbot utter_fres_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user mba => chatbot utter_ec_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user fresher => chatbot utter_fres_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot DefaultEmptyAction { => user greet => chatbot utter_greet_text { => user sug => chatbot utter_sugg_text { => user direc => chatbot utter_direc_text { => user hostel => chatbot utter_ho_text , utter_did_that_help_text { => user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ; } ; } ; } ; } ; } ; } ;
+				} ;
+				=> user canteen => chatbot utter_cante_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user cstad => chatbot utter_cstade_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+				=> user dir_vardhaman => chatbot utter_dv_text , utter_did_that_help_text {
+					=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+				} ;
+			} ;
+			=> user know_more => chatbot utter_web_text {
+				=> user vard_rules => chatbot utter_rule_text ;
+				=> user dress_code => chatbot utter_dresscode_text ;
+			} ;
+			=> user new_college => chatbot utter_abt_text ;
+			=> user fee_structure => chatbot utter_fe_text ;
+			=> user opening_ranks => chatbot utter_link_text , utter_did_that_help_text {
+				=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+			} ;
+			=> user trans_college => chatbot utter_trans_text , utter_did_that_help_text {
+				=> user affirm => chatbot utter_happy_text { => user deny => chatbot utter_cheer_up_text ; } ;
+			} ;
+			=> user plac_college => chatbot utter_pla_text ;
+			=> user depar_college => chatbot DefaultEmptyAction {
+				=> user greet => chatbot utter_greet_text { => user sug => chatbot utter_sugg_text { => user depar_college => chatbot utter_dep_text { => user bte => chatbot DefaultEmptyAction { => user greet => chatbot utter_greet_text { => user sug => chatbot utter_sugg_text { => user depar_college => chatbot utter_dep_text { => user pg => chatbot utter_pla_text , utter_p_text ; } ; } ; } ; } ; } ; } ; } ;
+			} ;
+			=> user other_questions => chatbot utter_default_text ;
+		} ;
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_cheer_up_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user FallbackIntent => chatbot action_default_fallback_text ;
+

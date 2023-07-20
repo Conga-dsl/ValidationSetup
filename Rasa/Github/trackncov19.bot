@@ -1,0 +1,239 @@
+Chatbot trackncov19 language : en
+
+intents :
+
+greet :
+	inputs in en {
+		hey ,
+		hello ,
+		^hi ,
+		"good morning" ,
+		"good evening" ,
+		"hey there"
+}
+
+goodbye :
+	inputs in en {
+		bye ,
+		goodbye ,
+		"see you around" ,
+		"see you later"
+}
+
+affirm :
+	inputs in en {
+		yes ,
+		indeed ,
+		"of course" ,
+		"that sounds good" ,
+		correct
+}
+
+deny :
+	inputs in en {
+		^no ,
+		never ,
+		"I don\'t think so" ,
+		"don\'t like that" ,
+		"no way" ,
+		"not really"
+}
+
+mood_great :
+	inputs in en {
+		perfect ,
+		fine ,
+		"very good" ,
+		great ,
+		amazing ,
+		wonderful ,
+		"I am feeling very good" ,
+		"I am great" ,
+		"I\'m good"
+}
+
+mood_unhappy :
+	inputs in en {
+		sad ,
+		"very sad" ,
+		unhappy ,
+		bad ,
+		"very bad" ,
+		awful ,
+		terrible ,
+		"not very good" ,
+		"extremely sad" ,
+		"so sad"
+}
+
+bot_challenge :
+	inputs in en {
+		"are you a bot?" ,
+		"are you a human?" ,
+		"am I talking to a bot?" ,
+		"am I talking to a human?"
+}
+
+corona_intro :
+	inputs in en {
+		"What is corona virus" ,
+		"what is covid" ,
+		"what is a novel corona virus" ,
+		"what is covid-19" ,
+		"tell me about corona" ,
+		"can you tell me about covid"
+}
+
+corona_spread :
+	inputs in en {
+		"how does corona virus spread" ,
+		"how does the virus spread"
+}
+
+corona_food_spread :
+	inputs in en {
+		"Does corona spread from food" ,
+		"how will corona spread from food"
+}
+
+warm_weather :
+	inputs in en {
+		"will warm weather stop the spread" ,
+		"will it stop with warm weather"
+}
+
+high_risk :
+	inputs in en {
+		"who is at a higher risk of infection"
+}
+
+corona_symptoms :
+	inputs in en {
+		"Do i have corona virus?" ,
+		"Do i have Covid-19?" ,
+		"What are the symptoms of corona?"
+}
+
+helpline_numbers :
+	inputs in en {
+		"can you give me helpline numbers?" ,
+		"what are the helpline numbers for covid?" ,
+		"Helpline numbers"
+}
+
+corona_state :
+	inputs in en {
+		"what are the total number of cases in " ( india ) [ state ] ,
+		"what are the total number of cases in " ( maharashtra ) [ state ] ,
+		"what are the total number of cases in " ( "tamil nadu" ) [ state ] ,
+		"what are the total number of cases in " ( delhi ) [ state ] ,
+		"what are the total number of cases in " ( gujarat ) [ state ] ,
+		"what are the total number of cases in " ( "uttar pradesh" ) [ state ] ,
+		"what are the total number of cases in " ( rajasthan ) [ state ] ,
+		"what are the total number of cases in " ( "west bengal" ) [ state ] ,
+		"what are the total number of cases in " ( "madhya pradesh" ) [ state ] ,
+		"what are the total number of cases in " ( haryana ) [ state ] ,
+		"what are the total number of cases in " ( karnataka ) [ state ] ,
+		"what are the total number of cases in " ( "andhra pradesh" ) [ state ] ,
+		"what are the total number of cases in " ( bihar ) [ state ] ,
+		"what are the total number of cases in " ( telangana ) [ state ] ,
+		"what are the total number of cases in " ( "jammu and kashmir" ) [ state ] ,
+		"what are the total number of cases in " ( assam ) [ state ] ,
+		"what are the total number of cases in " ( odisha ) [ state ] ,
+		"what are the total number of cases in " ( punjab ) [ state ] ,
+		"what are the total number of cases in " ( kerala ) [ state ] ,
+		"what are the total number of cases in " ( uttarakhand ) [ state ] ,
+		"what are the total number of cases in " ( chattisgarh ) [ state ] ,
+		"what are the total number of cases in " ( jharkhand ) [ state ] ,
+		"what are the total number of cases in " ( tripura ) [ state ] ,
+		"what are the total number of cases in " ( ladakh ) [ state ] ,
+		"what are the total number of cases in " ( goa ) [ state ] ,
+		"what are the total number of cases in " ( "himachal pradesh" ) [ state ] ,
+		"what are the total number of cases in " ( manipur ) [ state ] ,
+		"what are the total number of cases in " ( chandigarh ) [ state ] ,
+		"what are the total number of cases in " ( puduchhery ) [ state ] ,
+		"what are the total number of cases in " ( nagaland ) [ state ] ,
+		"what are the total number of cases in " ( mizoram ) [ state ] ,
+		"what are the total number of cases in " ( "arunachal pradesh" ) [ state ] ,
+		"what are the total number of cases in " ( sikkim ) [ state ] ,
+		"what are the total number of cases in " ( "Dadra and Nagar Haveli and Daman and Diu" ) [ state ] ,
+		"what are the total number of cases in " ( "Andaman and Nicobar Islands" ) [ state ] ,
+		"what are the total number of cases in " ( Meghalaya ) [ state ] ,
+		"what are the total number of cases in " ( Lakshadweep ) [ state ]
+	}
+	parameters :
+		state : entity text ;
+
+actions :
+	Text response utter_corona_intro_text :
+		inputs in en {
+			"Coronaviruses are a group of related viruses that cause diseases in mammals and birds. In humans, coronaviruses cause respiratory tract infections that can be mild, such as some cases of the common cold (among other possible causes, predominantly rhinoviruses), and others that can be more fatal, such as SARS and COVID-19."
+	}
+	Empty response action_corona_tracker_empty
+	mage response utter_cheer_up_img :
+		URL : "https://i.imgur.com/nGF1K8f.jpg"
+		caption : "Here is something to cheer you up:"
+	Text response utter_greet_text :
+		inputs in en {
+			"Hey! How are you?"
+	}
+	Text response utter_did_that_help_text :
+		inputs in en {
+			"Did that help you?"
+	}
+	Text response utter_high_risk_text :
+		inputs in en {
+			"Older adults and people of any age who have serious underlying medical conditions may be at higher risk for more serious complications from COVID-19. These people who may be at higher risk of getting very sick from this illness, includes; Older adults, People who have serious underlying medical conditions like... Heart disease, Diabetes, Lung disease."
+	}
+	Text response utter_helpline_numbers_text :
+		inputs in en {
+			"National Helpline number Call :1921\nfor more help visit https://www.mygov.in/covid-19/"
+	}
+	Text response utter_goodbye_text :
+		inputs in en {
+			Bye
+	}
+	Text response utter_corona_spread_text :
+		inputs in en {
+			"This virus was first detected in Wuhan City, Hubei Province, China. The first infections were linked to a live animal market, but the virus is now spreading from person-to-person. It’s important to note that person-to-person spread can happen on a continuum. Some viruses are highly contagious (like measles), while other viruses are less so. The virus that causes COVID-19 is spreading from person-to-person and it is even Air Borne virus as well. Someone who is actively sick with COVID-19 can spread the illness to others. That is why we recommend that these patients be isolated either in the hospital or at home (depending on how sick they are) until they are better and no longer pose a risk of infecting others.\nHow long someone is actively sick can vary so the decision on when to release someone from isolation is made on a case-by-case basis in consultation with doctors, infection prevention and control experts, and public health officials and involves considering specifics of each situation including disease severity, illness signs and symptoms, and results of laboratory testing for that patient.\nThe virus that causes COVID-19 seems to be spreading easily and sustainably in the community (“community spread”) in some affected geographic areas. Community spread means people have been infected with the virus in an area, including some who are not sure how or where they became infected."
+	}
+	Text response utter_corona_symptoms_text :
+		inputs in en {
+			"Most common symptoms include;\n1) fever\n2) dry cough\n3) tiredness\nLess common symptoms include\n1) aches and pain\n2) sore throat\n3) diarrhoea\n4) conjunctivitis\n5) headache\n6) loss of taste or smell\n7) a rash on skin, or discolouration of fingers or toes.\nSerious symptoms include\n1) difficulty breathing or shortness of breath\n2) chest pain or pressure and\n3) loss of speech or movement.\nSeek immediate medical attention if you have serious symptoms.\nAlways call before visiting your doctor or health facility.\nPeople with mild symptoms who are otherwise healthy should manage their symptoms at home.\nOn average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days."
+	}
+	Text response utter_happy_text :
+		inputs in en {
+			"Great, carry on!"
+	}
+	Text response utter_corona_food_spread_text :
+		inputs in en {
+			"Coronaviruses are generally thought to be spread from person-to-person through respiratory droplets and it is also air borne according to WHO. Before preparing or eating food it is important to always wash your hands with soap and water for 20 seconds for general food safety. Throughout the day wash your hands after blowing your nose, coughing or sneezing, or going to the bathroom."
+	}
+	Text response utter_warm_weather_text :
+		inputs in en {
+			"It is not yet known whether weather and temperature impact the spread of COVID-19. Some other viruses, like the common cold and flu, spread more during cold weather months but that does not mean it is impossible to become sick with these viruses during other months.  At this time, it is not known whether the spread of COVID-19 will decrease when weather becomes warmer.  There is much more to learn about the transmissibility, severity, and other features associated with COVID-19 and investigations are ongoing."
+	}
+	Text response utter_iamabot_text :
+		inputs in en {
+			"I am a bot, programmed by Ishan, Biswadeep, Sourav and Joyeeta."
+	}
+
+flows :
+	- user greet => chatbot utter_greet_text {
+		=> user mood_great => chatbot utter_happy_text ;
+		=> user mood_unhappy => chatbot utter_cheer_up_img , utter_did_that_help_text {
+			=> user affirm => chatbot utter_happy_text ;
+			=> user deny => chatbot utter_goodbye_text ;
+		} ;
+	} ;
+	- user goodbye => chatbot utter_goodbye_text ;
+	- user bot_challenge => chatbot utter_iamabot_text ;
+	- user corona_intro => chatbot utter_corona_intro_text ;
+	- user corona_spread => chatbot utter_corona_spread_text ;
+	- user corona_food_spread => chatbot utter_corona_food_spread_text ;
+	- user warm_weather => chatbot utter_warm_weather_text ;
+	- user high_risk => chatbot utter_high_risk_text ;
+	- user corona_symptoms => chatbot utter_corona_symptoms_text ;
+	- user helpline_numbers => chatbot utter_helpline_numbers_text ;
+	- user corona_state => chatbot action_corona_tracker_empty ;
+
