@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Insurance_Bot">
+  <intents name="Home Insurance - Tenants - No">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not looking for this plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Insurance - YES">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Insurance policies we provide"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What insurance policies do you have?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Life Insurance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Life Insurance"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Home Insurance - Owners">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="For Owners"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Home Insurance - Tenants">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="For Tenants"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Life Insurance - Critical Illness benefit">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Critical illness benefit"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Home Insurance - Plan Details">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Home Insurance - Plan Details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Plan Details"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Life Insurance - Surgical Benefit">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Surgical Benefit"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Vehicle Insurance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Vehicle Insurance"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Home Insurance - Owners - Yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="alex@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" and phone number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.2" textReference="7655545321"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Got it, To get things &#x2714;&#xfe0f;started. Please let us know your name&#x1f60a;</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Thanks $given-name&#x1f60d;, Please provide us with your email address&#x1f4e7; &amp; mobile number&#x1f4f1; to get in touch with you later.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number" required="true"/>
+  </intents>
+  <intents name="Home Insurance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Home Insurance"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Home Insurance - Housing Society">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Housing Society"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Main Menu">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Main Menu"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Vehicle Insurance - Plan Details">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Vehicle Insurance - Plan Details"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Home Insurance - Tenants - Yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please provide us with some details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.1" textReference="alex@kommunicate.io"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.1" textReference="alex@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" and phone number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.2" textReference="7645576532"/>
+      </inputs>
+    </inputs>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Got it, To get things &#x2714;&#xfe0f;started. Please let us know your name&#x1f60a;</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Thanks $given-name&#x1f60d;, Please provide us with your email address&#x1f4e7; &amp; mobile number&#x1f4f1; to get in touch with you later.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number" required="true"/>
+  </intents>
+  <intents name="Life Insurance - Daily Hospital Benefit">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Daily Hospital Benefit"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Life Insurance - Plan details">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Life Insurance - Plan details"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - Tenants - NoTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool &#x1f642; You can explore the other plans &#x1f44d; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - Tenants - NoTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Life InsuranceTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f;Who needs it: Those with dependents&#xA;&#xA;&#x2714;&#xfe0f;What it is: &#xA;- In the event of death, a life insurance policy pays a beneficiary an agreed-upon amount of money to cover the expenses left by the deceased&#xA;&#xA;- A beneficiary is a person or entity named in a policy who receives benefits, such as a spouse "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - OwnersTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your &#x1f3e0;home is your soul. Protect it!&#xA;&#xA;&#x2714;&#xfe0f;Covers losses and damages to an individual's house and to assets in the house "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - TenantsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Even though you are at the rented place. The sweet memories, important occasions are still to be cherished &#x1f33c; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Life Insurance - Critical Illness benefitTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f;Critical Illness Insurance provides coverage against specific life threatening diseases&#xA;&#xA;&#x2714;&#xfe0f;Treating such critical illnesses may require multiple visits to the hospital over a long period of time&#xA;&#xA;&#x2714;&#xfe0f;In addition to the hospitalization cost, there will be other costs like doctor visits, medical expenses, etc "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - Plan DetailsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Choose any of the Home insurance plan &#x1f447;&#x1f3fc; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Life Insurance - Surgical BenefitTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f;Illness or accidental injuries resulting in the hospitalization can bring in some serious financial problems for any family&#xA; &#xA;&#x2714;&#xfe0f;To provide you with financial assistance in such circumstances we provide Surgical Protection Insurance "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Vehicle InsuranceTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Motor insurance policy covers the policyholder in case of financial losses, resulting from an accident or other damages sustained by the insured vehicle. &#xA;&#xA;What's included?&#xA;&#x2714;&#xfe0f; Accidents, Personal Accident Cover&#xA;&#x2714;&#xfe0f; Fire &amp; Explosion&#xA;&#x2714;&#xfe0f; Theft&#xA;&#x2714;&#xfe0f; Calamities&#xA;&#xA;What&#x2019;s not included?&#xA;&#x2714;&#xfe0f; Depreciation&#xA;&#x2714;&#xfe0f; Electrical &amp; Mechanical Breakdown&#xA;&#x2714;&#xfe0f; Illegal Driving "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - Owners - YesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.9/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="&#x1f603; for choosing the plan. &#xA;&#xA;One of our representatives will reach out to you as soon as possible and help you with further steps in the policy&#x1f44d; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home InsuranceTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x1f3e0;Home insurance covers the structure of house and the contents which include prized possessions against damage from natural calamities like floods, earthquake, storm and man made events like riots, arson etc. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home InsuranceTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2b50;Benefits and Features of &#x1f3e0;Home Insurance&#xA;&#x2714;&#xfe0f;Complete coverage for any damage to your home or it's contents from natural calamities and man made events&#xA;&#xA;&#x2714;&#xfe0f;Benefits like round the clock customer service, immediate access to the insurance experts and quick customer service. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey&#x1f44b; Thank you for showing interest in our insurance &#x1f60d; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - Housing SocietyTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your housing society is home to hundreds of family members.&#xA; &#xA;&#x1f3e0; We provide complete protection against multiple factors to keep your society safe and secure.&#xA;&#xA;&#x2714;&#xfe0f; Stay protected for a year&#xA;&#x2714;&#xfe0f; Covers common amenities&#xA;&#x2714;&#xfe0f; Bigger properties higher coverage&#xA;&#x2714;&#xfe0f; Big discounts&#xA;&#xA;This is a custom plan. For registration and more details, please go here &#x1f447;&#x1f3fb; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Home Insurance - Tenants - YesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.15/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="&#x1f603; for choosing the plan. &#xA;&#xA;One of our representatives will reach out to you as soon as possible and help you with further steps in the policy&#x1f44d; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Life Insurance - Daily Hospital BenefitTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f;Daily hospital benefit provides a sum amount daily in case of hospitalization and this amount can be used per the insured&#x2019;s need&#xA;&#xA;&#x2714;&#xfe0f;The money can be used for meeting additional expenses that are not covered by health insurance or for even compensating the loss of income during the period of hospitalization "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Life Insurance - Plan detailsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f;Premium: Rs. 1000 paid annually&#xA;&#x2714;&#xfe0f;Premium Payment Term: 6 Years (Regular)&#xA;&#x2714;&#xfe0f;Sum Assured: Rs 2,50,000&#xA;&#x2714;&#xfe0f;Plan Option: Daily hospital cash, surgical &amp; critical illness "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.2" name="user1">
+    <target actions="//@actions.4 //@actions.3" name="bot1">
+      <outcoming intent="//@intents.17" name="user2">
+        <target actions="//@actions.18 //@actions.3" name="bot2">
+          <outcoming intent="//@intents.5" name="user3">
+            <target actions="//@actions.7 //@actions.3" name="bot3"/>
+          </outcoming>
+          <outcoming intent="//@intents.7" name="user4">
+            <target actions="//@actions.9 //@actions.3" name="bot4"/>
+          </outcoming>
+          <outcoming intent="//@intents.16" name="user5">
+            <target actions="//@actions.17 //@actions.3" name="bot5"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.8" name="user6">
+    <target actions="//@actions.10 //@actions.3" name="bot6">
+      <outcoming intent="//@intents.14" name="user7">
+        <target actions="//@actions.3" name="bot7"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.10" name="user8">
+    <target actions="//@actions.12 //@actions.13 //@actions.3" name="bot8">
+      <outcoming intent="//@intents.6" name="user9">
+        <target actions="//@actions.8 //@actions.3" name="bot9">
+          <outcoming intent="//@intents.3" name="user10">
+            <target actions="//@actions.5 //@actions.3" name="bot18">
+              <outcoming intent="//@intents.9" name="user17">
+                <target actions="//@actions.11" name="bot19"/>
+              </outcoming>
+              <outcoming intent="//@intents.0" name="user18">
+                <target actions="//@actions.2 //@actions.3" name="bot21"/>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.4" name="user13">
+            <target actions="//@actions.6 //@actions.3" name="bot14">
+              <outcoming intent="//@intents.0" name="user14">
+                <target actions="//@actions.2 //@actions.3" name="bot15"/>
+              </outcoming>
+              <outcoming intent="//@intents.15" name="user15">
+                <target actions="//@actions.16" name="bot16"/>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.12" name="user16">
+            <target actions="//@actions.15 //@actions.3" name="bot22"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.11" name="user19">
+    <target actions="//@actions.14 //@actions.3" name="bot23">
+      <outcoming intent="//@intents.1" name="user20">
+        <target actions="//@actions.3" name="bot24"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.13" name="user21">
+    <target actions="//@actions.3" name="bot25"/>
+  </flows>
+  <flows intent="//@intents.18" name="user22">
+    <target actions="//@actions.19" name="bot26"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

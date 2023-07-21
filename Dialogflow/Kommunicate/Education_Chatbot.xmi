@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Education_Chatbot">
+  <intents name="Laptop Checkout">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Laptop Checkout"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Transfer Student">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Transfer Student"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Cost to Attend">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cost to Attend"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent - Admission - Sign Up for orientation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sign Up for orientation"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Download Software">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Download Software"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Knowledge base articles">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="knowledge base articles"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Freshman &amp; First-Time">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Freshman &amp; First-Time"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Support Bot">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="support"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to talk to support"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Veteran Admission">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Veteran Admission"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Virtual Labs">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Virtual Labs"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Main Menu">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Main Menu"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Transfer to Advise Bot">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Change my major"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Change of Major"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Grad Check"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Holds"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Technical Support">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Technical Support"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Admission Deadlines">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Admission Deadlines"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Laptop CheckoutTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, we have a lending program for that type of equipment, please visit the link below for more information.&#xA;&#xA;https://www.kommunicate.io/product/kompose-bot-builder/ "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Laptop CheckoutTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Cost to AttendTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f; Tuition and other college expenses are charged at varying rates depending on your unit enrollment, options, and degree type. &#xA;&#xA;&#x2714;&#xfe0f; Because of the number of variables involved in each specific case, there is no way to estimate your expenses or if financial aid, grants or scholarships will cover part or all costs. &#xA;&#xA;&#x2714;&#xfe0f; I recommend trying to estimate costs using the Net Price Calculator or starting an expenses spreadsheet while referencing the Tuition and Fees Site on the student financial services department website "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome Intent - Admission - Sign Up for orientationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In order to sign up for an orientation session please go to  University Portal&#xA;Login using your UniversityID found on your admissions letter Or Call Orientation and First-Year Experience at (907) 572-5122&#xA;Information regarding your webinar session will be sent to your University email address only. Please check that email account for your link and other details. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Knowledge base articlesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes we have many Knowledge Base Articles to help guide you through a variety of technology based subjects&#xA;&#xA;https://answers.kommunicate.io/ "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Freshman &amp; First-TimeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To apply as first time freshmen, you must meet the following requirements:&#xA; &#xA;&#x2714;&#xfe0f; Be high school graduate or equivalent&#xA; &#xA;&#x2714;&#xfe0f; Complete the fifteen-unit comprehensive A-G course pattern of college preparatory study with grades of 'C' or better.&#xA; &#xA;&#x2714;&#xfe0f; Meet the eligibility index (local area students held to minimum eligibility index. Non-local students are held to higher index).&#xA;&#xA;Please refer to our website https://www.kommunicate.io/ for further information regarding First-year Students admissions. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Support BotTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please click any of the option and proceed! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, I'm Admissions Chatbot &#x1f393;&#xA;&#xA;Let's talk about admissions. Use the below &#x1f447; options and proceed! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Veteran AdmissionTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please make an appointment with an Admission Veteran Liaison Counselor to get further information specific to you. &#xA;&#xA;General information about Veteran Admissions may be found on our website:  https://www.kommunicate.io/product/kompose-bot-builder/ "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Virtual LabsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="As an alternative to downloading and installing software on your own computer, find out more about our:&#xA;&#xA;https://www.kommunicate.io/blog/&#xA;&#xA;where you can use software like spss, ArcGIS, Matlab and more... using virtualization technology &#x1f916; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Main MenuTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Use the suggestions mentioned below and proceed "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Sign Up for orientationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2714;&#xfe0f; In order to sign up for an orientation session please go to  University Portal&#xA;&#xA;&#x2714;&#xfe0f; Login using your UniversityID found on your admissions letter Or Call Orientation and First-Year Experience at (907) 572-5122&#xA;&#xA;&#x2714;&#xfe0f; Information regarding your webinar session will be sent to your University email address only. &#xA;&#xA;&#x2714;&#xfe0f; Please check that email account for your link and other details. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Transfer to Advise BotTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You've asked a question that could be best handled by another bot &#x1f916; more focused on that subject, handing you off now &#x23e9; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Technical SupportTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The technical support center&#x1f5a5;&#xfe0f;  is located in the Library Wedge. It assists students, staff, and faculty with technology !!&#xA;&#x260e;&#xfe0f; Call us at:&#xA;(902)544-7234&#xA;&#xA;OR&#xA;&#xA;&#x1f4e7; Email Us At:&#xA;support@kommunicate.io "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Admission DeadlinesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Due to impaction, our University only accepts applications during its initial filing periods. The application filing periods for Fall are: October 1 &#x2013; November 30. &#xA;To complete your admissions application, you must submit:&#xA; &#xA;&#x2714;&#xfe0f; Your application a year prior to starting on Cal State Apply.&#xA;&#x2714;&#xfe0f; Application fee of "/>
+        <tokens xsi:type="generator:Literal" text="or fee waiver. This fee is nonrefundable and may not be transferred to another term.&#xA;&#x2714;&#xfe0f; Official high school transcripts or college transcripts&#xA;&#x2714;&#xfe0f; Residency Documents (if requested)&#xA;&#xA;For more information regarding Admissions and Enrollment deadlines, please refer to our website: http://kommunicate.io/blog "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2 //@actions.3" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4 //@actions.3" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.4" name="user4">
+    <target actions="//@actions.3" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.5" name="user5">
+    <target actions="//@actions.6 //@actions.3" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.6" name="user6">
+    <target actions="//@actions.7 //@actions.3" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.7" name="user7">
+    <target actions="//@actions.8 //@actions.3" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.8" name="user8">
+    <target actions="//@actions.9 //@actions.3" name="bot8">
+      <outcoming intent="//@intents.3" name="user9">
+        <target actions="//@actions.5 //@actions.3" name="bot9"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.10 //@actions.3" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.11 //@actions.3" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.12 //@actions.3" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.3" name="user13">
+    <target actions="//@actions.13 //@actions.3" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.12" name="user14">
+    <target actions="//@actions.14 //@actions.3" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.13" name="user15">
+    <target actions="//@actions.15 //@actions.3" name="bot15"/>
+  </flows>
+  <flows intent="//@intents.14" name="user16">
+    <target actions="//@actions.16 //@actions.3" name="bot16"/>
+  </flows>
+  <flows intent="//@intents.15" name="user17">
+    <target actions="//@actions.17" name="bot17"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Food_Ordering_Chatbot">
+  <intents name="Pizzas - Veg-Pizza">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Veg-Pizza"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - NonVeg-Pizza - size">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Gamberi Pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Jerk Chicken Pizza Now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Pepperoni Pizza"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Snacks Combo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Snacks Combo"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Accompaniments">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Accompaniments"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - NonVeg-Pizza - size - customise">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Medium Pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Regular Pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Large Pizza"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Buy Now">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Crumb-Fried Chicken"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Tangri Kebabs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Bhuna Chicken Wings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Cheese Balls"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Aloo Bonda"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Aloo Chaat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Mawa Cake"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Kalmi Vada"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Enchiladas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Chicken Biryani"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Red Snapper"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Sonoran Hot Dog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my address is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.4" textReference="897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Salted Caramel Martini"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Snickertini"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Dark 'n Fluffy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Banana Split Martini"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="alex@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" and number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.3" textReference="789675432"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.2" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="alex"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT"/>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Let me just take your info. May I know your name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fine, please provide your &#x1f4e7;email and &#x1f4f1;phone number for contacting</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number"/>
+    <parameters name="address" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Finally your &#x1f3e0;address to deliver the order!</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Dessert &amp; Drinks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Dessert &amp; Drinks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - NonVeg-Pizza">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="NonVeg-Pizza"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Toppings"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Pizzas"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - Veg-Pizza - Size - customise - Yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINAL">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="alex@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" and the number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="7678123456"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my address is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.4" textReference="897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Great! How many pizzas do you want?  
+
+For example, type 1 or 2, etc.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Got it, Let me just take your info. May I know your name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fine, please provide your email and phone number for contacting!</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number"/>
+    <parameters name="address" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Finally your &#x1f3e0;address to deliver the order!</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Starters">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Starters"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - Veg-Pizza - Size - customise - No">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="address is #"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.4" textReference="897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.3" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.2" textReference="7689912345"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Great! How many pizzas do you want?  
+
+For example, type 1 or 2, etc.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Got it, Let me just take your info. May I know your name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number"/>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fine, please provide your &#x1f4e7;email and &#x1f4f1;phone number for contacting!</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="address" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Finally your &#x1f3e0;address to deliver the order!</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Pizzas - Veg-Pizza - Size">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy Now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Fresh Tomato Pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Paneer Special Pizza"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy-Golden Corn Pizza"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Main course">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Main course"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - NonVeg-Pizza - size - customise - No">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.1" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.3" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.1" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.2" textReference="7689912345"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="address is #"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.4" textReference="897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="6"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Great! How many pizzas do you want?  
+
+For example, type 1 or 2, etc.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Got it, Let me just take your info. May I know your name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number"/>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fine, please provide your &#x1f4e7;email and &#x1f4f1;phone number for contacting!</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="address" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Finally your &#x1f3e0;address to deliver the order!</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Add More Items">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Add More Items"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Pizzas - Veg-Pizza - Size - customise - Yes - Toppings - FINAL">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my address is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.4" textReference="897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.2" textReference="alex@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" and number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.3" textReference="6789521344"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.1" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.1" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.2" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Onion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Mushroom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Crisp Capsicum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Black Olive"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Great! How many pizzas do you want?  
+
+For example, type 1 or 2, etc.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="given-name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Got it, Let me just take your info. May I know your name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fine, please provide your &#x1f4e7;email and &#x1f4f1;phone number for contacting!</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number">
+      <prompts language="ENGLISH">
+        <prompts>Finally your address to deliver.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="address" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Finally your &#x1f3e0;address to deliver the order!</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="sys.color">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Onion">
+        <values>Onion</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Pizzas - Veg-PizzaTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Pizzas - NonVeg-Pizza - size - customiseTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you want to customize your pizza toppings? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Buy NowTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome&#x1f603; Your order is booked. You'll get a confirmation message soon! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Pizzas - Veg-Pizza - Size - customise - YesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool, Select the Toppings option you want to change &#x1f447; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome&#x1f60d; Order &amp; enjoy the food!&#xA;&#xA;Please Pick a Food Category &#x1f447; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINALTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome&#x1f603; Your order is booked. You'll get a confirmation message soon. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Add More ItemsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please select the item you want! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.2" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.3" name="user2">
+    <target actions="//@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.5" name="user3">
+    <target actions="//@actions.4 //@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.6" name="user4">
+    <target actions="//@actions.2" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.9" name="user5">
+    <target actions="//@actions.2" name="bot5">
+      <outcoming intent="//@intents.0" name="user6">
+        <target actions="//@actions.2" name="bot6">
+          <outcoming intent="//@intents.15" name="user7">
+            <target actions="//@actions.2" name="bot7">
+              <outcoming intent="//@intents.4" name="user8">
+                <target actions="//@actions.3 //@actions.2" name="bot8">
+                  <outcoming intent="//@intents.10" name="user9">
+                    <target actions="//@actions.5 //@actions.2" name="bot9">
+                      <outcoming intent="//@intents.8" name="user10">
+                        <target actions="//@actions.2" name="bot10">
+                          <outcoming intent="//@intents.19" name="user11">
+                            <target actions="//@actions.7 //@actions.2" name="bot11"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.14" name="user12">
+                    <target actions="//@actions.7 //@actions.2" name="bot12"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.7" name="user13">
+        <target actions="//@actions.2" name="bot13">
+          <outcoming intent="//@intents.1" name="user14">
+            <target actions="//@actions.2" name="bot14">
+              <outcoming intent="//@intents.4" name="user15">
+                <target actions="//@actions.3 //@actions.2" name="bot15">
+                  <outcoming intent="//@intents.10" name="user16">
+                    <target actions="//@actions.2" name="bot16">
+                      <outcoming intent="//@intents.8" name="user17">
+                        <target actions="//@actions.2" name="bot17">
+                          <outcoming intent="//@intents.12" name="user18">
+                            <target actions="//@actions.7 //@actions.2" name="bot18"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.17" name="user19">
+                    <target actions="//@actions.7 //@actions.2" name="bot19"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.11" name="user20">
+    <target actions="//@actions.6 //@actions.2" name="bot20"/>
+  </flows>
+  <flows intent="//@intents.13" name="user21">
+    <target actions="//@actions.2" name="bot21"/>
+  </flows>
+  <flows intent="//@intents.16" name="user22">
+    <target actions="//@actions.2" name="bot22"/>
+  </flows>
+  <flows intent="//@intents.18" name="user23">
+    <target actions="//@actions.8 //@actions.2" name="bot23"/>
+  </flows>
+  <flows intent="//@intents.20" name="user24">
+    <target actions="//@actions.9" name="bot24"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,294 @@
+Chatbot Food_Ordering_Chatbot language : en
+
+intents :
+
+	"Pizzas - Veg-Pizza" :
+		inputs in en {
+			"Veg-Pizza"
+	}
+
+	"Pizzas - NonVeg-Pizza - size" :
+		inputs in en {
+			"Buy-Gamberi Pizza" ,
+			"Buy-Jerk Chicken Pizza Now" ,
+			"Buy-Pepperoni Pizza"
+	}
+
+	"Snacks Combo" :
+		inputs in en {
+			"Snacks Combo"
+	}
+
+	Accompaniments :
+		inputs in en {
+			Accompaniments
+	}
+
+	"Pizzas - NonVeg-Pizza - size - customise" :
+		inputs in en {
+			"Medium Pizza" ,
+			"Regular Pizza" ,
+			"Large Pizza"
+	}
+
+	"Buy Now" :
+		inputs in en {
+			"Buy-Crumb-Fried Chicken" ,
+			"Buy-Tangri Kebabs" ,
+			"Buy-Bhuna Chicken Wings" ,
+			"Buy-Cheese Balls" ,
+			"Buy-Aloo Bonda" ,
+			"Buy-Aloo Chaat" ,
+			"Buy-Mawa Cake" ,
+			"Buy-Kalmi Vada" ,
+			"Buy-Enchiladas" ,
+			"Buy-Chicken Biryani" ,
+			"Buy-Red Snapper" ,
+			"Buy-Sonoran Hot Dog" ,
+			( "1" ) [ ^number ] ,
+			"my address is " ( "897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru" ) [ address ] ,
+			"Buy-Salted Caramel Martini" ,
+			"Buy-Snickertini" ,
+			"Buy-Dark \'n Fluffy" ,
+			"Buy-Banana Split Martini" ,
+			"my email is " ( "alex@gmail.com" ) [ email ] " and number is " ( "789675432" ) [ "phone-number" ] ,
+			"my name is " ( alex ) [ "given-name" ] " and email is " ( "alex@gmail.com" ) [ email ] ,
+			"my name is " ( alex ) [ "given-name" ]
+		}
+		parameters :
+			^number : entity float ;
+			"given-name" : entity text , required , prompts in en [ "Let me just take your info. May I know your name?" ] ;
+			email : entity text , required , prompts in en [ "Fine, please provide your 📧email and 📱phone number for contacting" ] ;
+			"phone-number" ,
+			address : entity text , required , prompts in en [ "Finally your 🏠address to deliver the order!" ] ;
+
+	"Dessert & Drinks" :
+		inputs in en {
+			"Dessert & Drinks"
+	}
+
+	"Pizzas - NonVeg-Pizza" :
+		inputs in en {
+			"NonVeg-Pizza"
+	}
+
+	"Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings" :
+		inputs in en {
+			Toppings
+	}
+
+	Pizzas :
+		inputs in en {
+			Pizzas
+	}
+
+	"Pizzas - Veg-Pizza - Size - customise - Yes" :
+		inputs in en {
+			Yes
+	}
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	"Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINAL" :
+		inputs in en {
+			( "5" ) [ ^number ] ,
+			( "4" ) [ ^number ] ,
+			( "3" ) [ ^number ] ,
+			( "2" ) [ ^number ] ,
+			( "1" ) [ ^number ] ,
+			"my name is " ( alex ) [ "given-name" ] ,
+			"my email is " ( "alex@gmail.com" ) [ email ] " and the number is " ( "7678123456" ) [ "phone-number" ] ,
+			"my name is " ( alex ) [ "given-name" ] " and email is " ( "alex@gmail.com" ) [ email ] ,
+			"my address is " ( "897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru" ) [ address ]
+		}
+		parameters :
+			^number : entity float , required , prompts in en [ "Great! How many pizzas do you want?  \n\nFor example, type 1 or 2, etc." ] ;
+			"given-name" : entity text , required , prompts in en [ "Got it, Let me just take your info. May I know your name?" ] ;
+			email : entity text , required , prompts in en [ "Fine, please provide your email and phone number for contacting!" ] ;
+			"phone-number" ,
+			address : entity text , required , prompts in en [ "Finally your 🏠address to deliver the order!" ] ;
+
+	Starters :
+		inputs in en {
+			Starters
+	}
+
+	"Pizzas - Veg-Pizza - Size - customise - No" :
+		inputs in en {
+			( "5" ) [ ^number ] ,
+			( "4" ) [ ^number ] ,
+			( "3" ) [ ^number ] ,
+			( "2" ) [ ^number ] ,
+			( "1" ) [ ^number ] ,
+			"address is #" ( "897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru" ) [ address ] ,
+			"my email is " ( "alex@gmail.com" ) [ email ] ,
+			"my email is " ( alex ) [ "given-name" ] " and number is " ( "7689912345" ) [ "phone-number" ] ,
+			"my name is " ( alex ) [ "given-name" ] ,
+			No
+		}
+		parameters :
+			^number : entity float , required , prompts in en [ "Great! How many pizzas do you want?  \n\nFor example, type 1 or 2, etc." ] ;
+			"given-name" : entity text , required , prompts in en [ "Got it, Let me just take your info. May I know your name?" ] ;
+			"phone-number" ,
+			email : entity text , required , prompts in en [ "Fine, please provide your 📧email and 📱phone number for contacting!" ] ;
+			address : entity text , required , prompts in en [ "Finally your 🏠address to deliver the order!" ] ;
+
+	"Pizzas - Veg-Pizza - Size" :
+		inputs in en {
+			"Buy Now" ,
+			"Buy-Fresh Tomato Pizza" ,
+			"Buy-Paneer Special Pizza" ,
+			"Buy-Golden Corn Pizza"
+	}
+
+	"Main course" :
+		inputs in en {
+			"Main course"
+	}
+
+	"Pizzas - NonVeg-Pizza - size - customise - No" :
+		inputs in en {
+			"my name is " ( alex ) [ "given-name" ] ,
+			"my email is " ( "alex@gmail.com" ) [ email ] ,
+			"my email is " ( alex ) [ "given-name" ] " and number is " ( "7689912345" ) [ "phone-number" ] ,
+			"address is #" ( "897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru" ) [ address ] ,
+			( "6" ) [ ^number ] ,
+			( "5" ) [ ^number ] ,
+			( "4" ) [ ^number ] ,
+			( "3" ) [ ^number ] ,
+			( "2" ) [ ^number ] ,
+			( "1" ) [ ^number ] ,
+			No
+		}
+		parameters :
+			^number : entity float , required , prompts in en [ "Great! How many pizzas do you want?  \n\nFor example, type 1 or 2, etc." ] ;
+			"given-name" : entity text , required , prompts in en [ "Got it, Let me just take your info. May I know your name?" ] ;
+			"phone-number" ,
+			email : entity text , required , prompts in en [ "Fine, please provide your 📧email and 📱phone number for contacting!" ] ;
+			address : entity text , required , prompts in en [ "Finally your 🏠address to deliver the order!" ] ;
+
+	"Add More Items" :
+		inputs in en {
+			"more items" ,
+			"Add More Items"
+	}
+
+	"Pizzas - Veg-Pizza - Size - customise - Yes - Toppings - FINAL" :
+		inputs in en {
+			"my address is " ( "897, 4th Floor, 80 Feet Main Road, 6th Block, Koramangala, Bengaluru" ) [ address ] ,
+			"my email is " ( "alex@gmail.com" ) [ email ] " and number is " ( "6789521344" ) [ "phone-number" ] ,
+			"my name is " ( alex ) [ "given-name" ] ,
+			"my name is " ( alex ) [ "given-name" ] " and email is " ( "alex@gmail.com" ) [ email ] ,
+			( "3" ) [ ^number ] ,
+			( "2" ) [ ^number ] ,
+			( "1" ) [ ^number ] ,
+			Onion ,
+			Mushroom ,
+			"Crisp Capsicum" ,
+			"Black Olive"
+		}
+		parameters :
+			^number : entity float , required , prompts in en [ "Great! How many pizzas do you want?  \n\nFor example, type 1 or 2, etc." ] ;
+			"given-name" : entity text , required , prompts in en [ "Got it, Let me just take your info. May I know your name?" ] ;
+			email : entity text , required , prompts in en [ "Fine, please provide your 📧email and 📱phone number for contacting!" ] ;
+			"phone-number" : entity text , prompts in en [ "Finally your address to deliver." ] ;
+			address : entity text , required , prompts in en [ "Finally your 🏠address to deliver the order!" ] ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity "sys.color" :
+		inputs in en {
+			Onion synonyms Onion
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Pizzas - Veg-PizzaTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Pizzas - NonVeg-Pizza - size - customiseTxtResp1" :
+		inputs in en {
+			"Do you want to customize your pizza toppings? "
+	}
+	text response "Buy NowTxtResp1" :
+		inputs in en {
+			"Awesome😃 Your order is booked. You\'ll get a confirmation message soon! "
+	}
+	text response "Pizzas - Veg-Pizza - Size - customise - YesTxtResp1" :
+		inputs in en {
+			"Cool, Select the Toppings option you want to change 👇 "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Welcome😍 Order & enjoy the food!\n\nPlease Pick a Food Category 👇 "
+	}
+	text response "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINALTxtResp1" :
+		inputs in en {
+			"Awesome😃 Your order is booked. You\'ll get a confirmation message soon. "
+	}
+	text response "Add More ItemsTxtResp1" :
+		inputs in en {
+			"Please select the item you want! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Snacks Combo" => bot1 : chatbot "Pizzas - Veg-PizzaTxtResp1" ;
+	- user2 : user Accompaniments => bot2 : chatbot "Pizzas - Veg-PizzaTxtResp1" ;
+	- user3 : user "Buy Now" => bot3 : chatbot "Buy NowTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ;
+	- user4 : user "Dessert & Drinks" => bot4 : chatbot "Pizzas - Veg-PizzaTxtResp1" ;
+	- user5 : user Pizzas => bot5 : chatbot "Pizzas - Veg-PizzaTxtResp1" {
+		=> user6 : user "Pizzas - Veg-Pizza" => bot6 : chatbot "Pizzas - Veg-PizzaTxtResp1" {
+			=> user7 : user "Pizzas - Veg-Pizza - Size" => bot7 : chatbot "Pizzas - Veg-PizzaTxtResp1" { => user8 : user "Pizzas - NonVeg-Pizza - size - customise" => bot8 : chatbot "Pizzas - NonVeg-Pizza - size - customiseTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" { => user9 : user "Pizzas - Veg-Pizza - Size - customise - Yes" => bot9 : chatbot "Pizzas - Veg-Pizza - Size - customise - YesTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" { => user10 : user "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings" => bot10 : chatbot "Pizzas - Veg-PizzaTxtResp1" { => user11 : user "Pizzas - Veg-Pizza - Size - customise - Yes - Toppings - FINAL" => bot11 : chatbot "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINALTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ; } ; } ; => user12 : user "Pizzas - Veg-Pizza - Size - customise - No" => bot12 : chatbot "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINALTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ; } ; } ;
+		} ;
+		=> user13 : user "Pizzas - NonVeg-Pizza" => bot13 : chatbot "Pizzas - Veg-PizzaTxtResp1" {
+			=> user14 : user "Pizzas - NonVeg-Pizza - size" => bot14 : chatbot "Pizzas - Veg-PizzaTxtResp1" { => user15 : user "Pizzas - NonVeg-Pizza - size - customise" => bot15 : chatbot "Pizzas - NonVeg-Pizza - size - customiseTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" { => user16 : user "Pizzas - Veg-Pizza - Size - customise - Yes" => bot16 : chatbot "Pizzas - Veg-PizzaTxtResp1" { => user17 : user "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings" => bot17 : chatbot "Pizzas - Veg-PizzaTxtResp1" { => user18 : user "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINAL" => bot18 : chatbot "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINALTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ; } ; } ; => user19 : user "Pizzas - NonVeg-Pizza - size - customise - No" => bot19 : chatbot "Pizzas - NonVeg-Pizza - size - customise - Yes - Toppings - FINALTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ; } ; } ;
+		} ;
+	} ;
+	- user20 : user "Default Welcome Intent" => bot20 : chatbot "Default Welcome IntentTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ;
+	- user21 : user Starters => bot21 : chatbot "Pizzas - Veg-PizzaTxtResp1" ;
+	- user22 : user "Main course" => bot22 : chatbot "Pizzas - Veg-PizzaTxtResp1" ;
+	- user23 : user "Add More Items" => bot23 : chatbot "Add More ItemsTxtResp1" , "Pizzas - Veg-PizzaTxtResp1" ;
+	- user24 : user "Default Fallback Intent" => bot24 : chatbot "Default Fallback IntentTxtResp1" ;
+

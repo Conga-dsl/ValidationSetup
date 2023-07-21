@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Meeting-Booking-Bot">
+  <intents name="Meeting Booking Bot Intent - ReSchedule Meeting">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Re-Schedule Meeting&#x1f4dd;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Meeting Booking Bot Intent - Book meeting with Calendly">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Book Meeting with Calendly"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Meeting Booking Bot Intent - ReSchedule Meeting - continuation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Re-schedule the meeting to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="25th April 2020"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="5pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Re-schedule the meeting to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="April 25, 2020"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="5pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Kevin"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="kevin@kommunicate.io"/>
+      </inputs>
+    </inputs>
+    <parameters name="given-name"/>
+    <parameters name="email"/>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="time" defaultEntity="TIME"/>
+  </intents>
+  <intents name="Meeting Booking Bot Intent - Schedule Meeting">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set an appointment on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="25th April"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Set an appointment "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="on Friday"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.3" textReference="2pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Set meeting booking on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="3rd October"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.3" textReference="7 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to book a meeting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="book a meeting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="schedule a meeting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to schedule on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="April 25, 2020"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Samir"/>
+        <tokens xsi:type="generator:Literal" text=" and email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="test@kommunicate.io"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Schedule Meeting?&#x1f4c6;"/>
+      </inputs>
+    </inputs>
+    <parameters name="given-name">
+      <prompts language="ENGLISH">
+        <prompts>May I know your name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Could you please provide your name and email to proceed with the booking!</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="date" defaultEntity="DATE" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What date you would like to schedule the meeting?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="time" defaultEntity="TIME" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Also, please mention the time.</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Meeting Booking Bot Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Meeting Booking Bot Intent - ReSchedule MeetingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2611;&#xfe0f; Please mention the below details:&#xA;1. Name &#x1f935; :&#xA;2. Email &#x1f4e7; : &#xA;3. Mention the date &amp; time you would like to re-schedule to &#x1f4c5; : "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Meeting Booking Bot Intent - Book meeting with CalendlyTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If you are looking to schedule a meeting &#x1f91d;, please click on the link provided and book a slot &#x1f3af;&#xA;&#xA;https://calendly.com/kommunicate/ "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Meeting Booking Bot Intent - ReSchedule Meeting - continuationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="! You're all set and the appointment is re-scheduled on "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="at "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.3"/>
+        <tokens xsi:type="generator:Literal" text="&#x1f60d; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Meeting Booking Bot Intent - Schedule MeetingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="! You're all set and the appointment is scheduled on "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="at "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.3"/>
+        <tokens xsi:type="generator:Literal" text="&#x1f60d; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Meeting Booking Bot IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome to the Kommunicate Meeting &#x1f91d; Booking Scheduler&#x1f4c6; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Meeting Booking Bot IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.4" name="user1">
+    <target actions="//@actions.6 //@actions.7" name="bot1">
+      <outcoming intent="//@intents.0" name="user2">
+        <target actions="//@actions.2" name="bot2">
+          <outcoming intent="//@intents.2" name="user3">
+            <target actions="//@actions.4" name="bot3"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.1" name="user4">
+        <target actions="//@actions.3" name="bot4"/>
+      </outcoming>
+      <outcoming intent="//@intents.3" name="user5">
+        <target actions="//@actions.5" name="bot5"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.8" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

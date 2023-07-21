@@ -1,0 +1,125 @@
+Chatbot "Meeting-Booking-Bot" language : en
+
+intents :
+
+"Meeting Booking Bot Intent - ReSchedule Meeting" :
+	inputs in en {
+		"Re-Schedule Meeting📝"
+}
+
+"Meeting Booking Bot Intent - Book meeting with Calendly" :
+	inputs in en {
+		"Book Meeting with Calendly"
+}
+
+"Meeting Booking Bot Intent - ReSchedule Meeting - continuation" :
+	inputs in en {
+		"Re-schedule the meeting to " ( "25th April 2020" ) [ ^date ] " at " ( "5pm" ) [ ^time ] ,
+		"Re-schedule the meeting to " ( "April 25, 2020" ) [ ^date ] " at " ( "5pm" ) [ ^time ] ,
+		"My name is " ( Kevin ) [ "given-name" ] " and email is " ( "kevin@kommunicate.io" ) [ email ]
+	}
+	parameters :
+		"given-name" ,
+		email ,
+		^date : entity date ;
+		^time : entity time ;
+
+"Meeting Booking Bot Intent - Schedule Meeting" :
+	inputs in en {
+		"set an appointment on " ( "25th April" ) [ ^date ] ,
+		"Set an appointment " ( "on Friday" ) [ ^date ] " at " ( "2pm" ) [ ^time ] ,
+		"Set meeting booking on " ( "3rd October" ) [ ^date ] " at " ( "7 am" ) [ ^time ] ,
+		"I need to book a meeting" ,
+		"book a meeting" ,
+		"schedule a meeting" ,
+		"I would like to schedule on " ( "April 25, 2020" ) [ ^date ] ,
+		"My name is " ( Samir ) [ "given-name" ] " and email is " ( "test@kommunicate.io" ) [ email ] ,
+		"Schedule Meeting?📆"
+	}
+	parameters :
+		"given-name" : entity text , prompts in en [ "May I know your name?" ] ;
+		email : entity text , required , prompts in en [ "Could you please provide your name and email to proceed with the booking!" ] ;
+		^date : entity date , required , prompts in en [ "What date you would like to schedule the meeting?" ] ;
+		^time : entity time , required , prompts in en [ "Also, please mention the time." ] ;
+
+"Meeting Booking Bot Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Meeting Booking Bot Intent - ReSchedule MeetingTxtResp1" :
+		inputs in en {
+			"☑️ Please mention the below details:\n1. Name 🤵 :\n2. Email 📧 : \n3. Mention the date & time you would like to re-schedule to 📅 : "
+	}
+	text response "Meeting Booking Bot Intent - Book meeting with CalendlyTxtResp1" :
+		inputs in en {
+			"If you are looking to schedule a meeting 🤝, please click on the link provided and book a slot 🎯\n\nhttps://calendly.com/kommunicate/ "
+	}
+	text response "Meeting Booking Bot Intent - ReSchedule Meeting - continuationTxtResp1" :
+		inputs in en {
+			"Great " [ "Meeting Booking Bot Intent - ReSchedule Meeting - continuation.given-name" ] "! You\'re all set and the appointment is re-scheduled on " [ "Meeting Booking Bot Intent - ReSchedule Meeting - continuation.date" ] "at " [ "Meeting Booking Bot Intent - ReSchedule Meeting - continuation.time" ] "😍 "
+	}
+	text response "Meeting Booking Bot Intent - Schedule MeetingTxtResp1" :
+		inputs in en {
+			"Great " [ "Meeting Booking Bot Intent - Schedule Meeting.given-name" ] "! You\'re all set and the appointment is scheduled on " [ "Meeting Booking Bot Intent - Schedule Meeting.date" ] "at " [ "Meeting Booking Bot Intent - Schedule Meeting.time" ] "😍 "
+	}
+	text response "Meeting Booking Bot IntentTxtResp1" :
+		inputs in en {
+			"Welcome to the Kommunicate Meeting 🤝 Booking Scheduler📆 "
+	}
+	text response "Meeting Booking Bot IntentTxtResp2" :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Meeting Booking Bot Intent" => bot1 : chatbot "Meeting Booking Bot IntentTxtResp1" , "Meeting Booking Bot IntentTxtResp2" {
+		=> user2 : user "Meeting Booking Bot Intent - ReSchedule Meeting" => bot2 : chatbot "Meeting Booking Bot Intent - ReSchedule MeetingTxtResp1" {
+			=> user3 : user "Meeting Booking Bot Intent - ReSchedule Meeting - continuation" => bot3 : chatbot "Meeting Booking Bot Intent - ReSchedule Meeting - continuationTxtResp1" ;
+		} ;
+		=> user4 : user "Meeting Booking Bot Intent - Book meeting with Calendly" => bot4 : chatbot "Meeting Booking Bot Intent - Book meeting with CalendlyTxtResp1" ;
+		=> user5 : user "Meeting Booking Bot Intent - Schedule Meeting" => bot5 : chatbot "Meeting Booking Bot Intent - Schedule MeetingTxtResp1" ;
+	} ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot "Default Fallback IntentTxtResp1" ;
+

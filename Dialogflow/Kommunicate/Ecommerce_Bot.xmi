@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Ecommerce_Bot">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Cancel Order">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x1f5d9;Cancel Order"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cancel Order"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="All Products">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x1f6d2;All Products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="All Products"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Fashion">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the collections"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="One Product">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="T-Shirts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey, I'm looking for T-Shirts"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="All Collections">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="All Collections"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Earphones - List">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, I'm looking for headphones"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="General question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x2753;General question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="General question"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Exchange Item">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x1f4b1;Exchange Item"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Exchange Item"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Order Status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x1f4c3;Order Status"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Order Status"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for checking our Store &#x1f3ea; Choose an option &#x1f447; to continue! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Cancel OrderTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please provide us with the order number you'd like to cancel. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="General questionTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool. Let me see if I can help you out. If not I will fetch someone from the support team. What is your question about? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Exchange ItemTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can setup a return or exchange online. During the setup, we&#x2019;ll let you know which items are eligible to be returned and if there&#x2019;s any restocking fee.  &#xA;If you&#x2019;d like to exchange the item, please place a new order of similar cost within 15 days and the restocking fee will be credited back to you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Order StatusTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please provide us with the order number would you like to check the status. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2 //@actions.3" name="bot1">
+      <outcoming intent="//@intents.1" name="user2">
+        <target actions="//@actions.4" name="bot2"/>
+      </outcoming>
+      <outcoming intent="//@intents.2" name="user3">
+        <target actions="//@actions.3" name="bot3"/>
+      </outcoming>
+      <outcoming intent="//@intents.5" name="user4">
+        <target actions="//@actions.3" name="bot4"/>
+      </outcoming>
+      <outcoming intent="//@intents.7" name="user5">
+        <target actions="//@actions.5" name="bot5"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user6">
+        <target actions="//@actions.6" name="bot6"/>
+      </outcoming>
+      <outcoming intent="//@intents.9" name="user7">
+        <target actions="//@actions.7" name="bot7"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.3" name="user8">
+    <target actions="//@actions.3" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.4" name="user9">
+    <target actions="//@actions.3" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.6" name="user10">
+    <target actions="//@actions.3" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.8" name="bot11"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Lead_Collection_Bot">
+  <intents name="Default Welcome Intent"/>
+  <intents name="Welcome-Lead">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to develop a website for my real estate and mortgage business"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="grow my business"/>
+        <tokens xsi:type="generator:Literal" text=" and need "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="help in marketing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="develop a website"/>
+        <tokens xsi:type="generator:Literal" text=" for my real estate and mortgage business"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="alex@gmail.com"/>
+        <tokens xsi:type="generator:Literal" text=" and phone number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="7689678123"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Got it! Let's move "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="forward"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="samsung"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="kommunicate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure I can provide"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="alex"/>
+        <tokens xsi:type="generator:Literal" text=" and email id is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="alex@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="alex"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="tony"/>
+      </inputs>
+    </inputs>
+    <parameters name="given-name" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>May I know your Name&#x1f60a; please</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Thanks $given-name&#x1f60d;, Please provide us with your email address&#x1f4e7; &amp; mobile number&#x1f4f1; to get in touch with you later.
+
+Don't worry, all of these will be kept &#x1f510;confidential</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number"/>
+    <parameters name="business" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>That's great $given-name&#x1f60d; 
+
+What is your &#x1f3e2;Company name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="FinalStep" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Awesome&#x1f603; Let's move forward with the Final question&#x2753;
+
+What would you like to achieve&#x1f680; and how can we help you?
+Please provide us with the information.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="CustomerBusinessRequirement" entity="//@entities.1">
+      <prompts language="ENGLISH">
+        <prompts>That's all! Thank you, $given-name. We'll reach out to you as soon as possible&#x1f44d;
+
+&#x1f44b; Have a good day!</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="AppointmentType">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Demo meeting">
+        <values>Demo meeting</values>
+        <values>training</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sys.given-name">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="help&#xa0;in&#xa0;marketing">
+        <values>help&#xa0;in&#xa0;marketing</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="samsung">
+        <values>samsung</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="forward">
+        <values>forward</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="grow&#xa0;my&#xa0;business">
+        <values>grow&#xa0;my&#xa0;business</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="develop&#xa0;a&#xa0;website">
+        <values>develop&#xa0;a&#xa0;website</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="kommunicate">
+        <values>kommunicate</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x1f44b;&#x1f3fb;Hey there! Thanks for getting in touch with us!&#xA;&#xA;To get things &#x2714;&#xfe0f;started, Could you please provide us with some details. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Welcome-LeadTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That's all&#x2757; Thank you, "/>
+        <tokens xsi:type="generator:Literal" text="We'll reach out to you as soon as possible and help in growing your Business&#x1f44d;&#xA;&#xA;&#x1f44b; Have a good day! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Welcome-LeadTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3 //@actions.4" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.5" name="bot3"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

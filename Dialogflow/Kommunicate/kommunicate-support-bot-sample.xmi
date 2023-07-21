@@ -1,0 +1,2579 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="kommunicate-support-bot-sample">
+  <intents name="change_bot_image">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can I add my custom icon to the chatbot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit bot picture"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit bot icon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit bot image"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="upload bot image"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="customize bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change bot picture"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change bot icon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to change the bot image"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="mobile_integration">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate on mobile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="iOS"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="android"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="iOS"/>
+        <tokens xsi:type="generator:Literal" text=" app"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect chatbot to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="android"/>
+        <tokens xsi:type="generator:Literal" text=" app"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate chatbot to mobile app"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate kommunicate with mobile app"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect kommunicate to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="android"/>
+        <tokens xsi:type="generator:Literal" text=" app"/>
+      </inputs>
+    </inputs>
+    <parameters name="Mobile_Platforms" entity="//@entities.0"/>
+  </intents>
+  <intents name="agent_id">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="id of support agent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="agent key"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="agent id"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.goodnight">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sweet dreams"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks goodnight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" bye good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good night to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright goodnight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good night see you tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good tonight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good night bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay have a good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodnight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good night for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye good night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a good night"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="delete_chat - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Bot_Human_hybrid">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's Bot+Human hybrid"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Codeless_Integration">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Codeless Bot Integration"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.nice_to_talk_to_you">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice talking to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it is nice talking to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's been so nice to talk to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice to talk to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's nice to talk to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's been a pleasure talking to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how nice it is to talk to you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="agent_id - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_human_handoff - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that will be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pricing - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that will be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Welcome post signup"/>
+  <intents name="assign-to-agent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="@sys.any:any"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="whitelabel_remove_branding - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="app_ID">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="app_ID"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="application id"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="application key"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="agent_id - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That will be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="None"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_id">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="id of integrated bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="id of my bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot key"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot id"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Card_Carousel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Card Carousel"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="upgrade_plan">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start subscription"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="subscribe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="buy new plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="upgrade plan"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Chatbot_Guide">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Read Beginner's Guide to Chatbots"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Live_chat">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Live Chat"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="team_member">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="team member"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.agent.bad">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're a bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are waste"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are useless"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are so useless"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're not very good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are no good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are horrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" I hate you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're not a good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're the worst"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're awful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are lame"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are disgusting"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're very bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are terrible"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're the worst ever"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are not cool"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're really bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're worthless"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are not good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are so bad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are totally useless"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are a waste of time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're not helping me"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="app_ID - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That will be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nothing else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Unique_KM">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How's Kommunicate different"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How's it different"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="How-to_Integrate_Bot">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wow! How can I integrate a bot?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="customize_widget - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that will be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="None"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="free_plan">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lowest price tier"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="free plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lowest plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="free"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="mobile_integration - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.agent.boring">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're incredibly boring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're so boring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how boring you are"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are boring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are boring me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're really boring"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are very boring"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.nice_to_see_you">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's good to see you too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great to see you again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good to see you again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm glad to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice to see you again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's nice to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's good to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am glad to see you again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="glad to see you too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="glad to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great to see you too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how good it is to see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="always a pleasure to see you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Main_Menu">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Naah! Take me to Main Menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Main Menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Take me to Main Menu"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Mailbox">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Email Support (Mailbox)"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Multimedia">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Images, Videos &amp; Gif"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="problem with bot">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="problem with bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot is not working"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot is not responding"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="support_rich_messages">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rich"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="buttons"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggested replies"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rich cards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="card list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="actionable"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestion chips"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="delete_chat">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete chat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clear conversation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clear chat history"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete all conversations"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete conversation"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="support_rich_messages - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That will be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Bot_power">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="More about Chatbots"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can bots do"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="have_a_question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a question"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Generic_card">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Generic Cards"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Need-a-demo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Book a Demo"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.goodmorning">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a nice morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have a great morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and a good morning to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good morning too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="top of the morning to you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.agent.annoying">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are annoying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are irritating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you annoy me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're too annoying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are annoying me so much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are annoying me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're incredibly annoying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how annoying you are"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you're so annoying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are such annoying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I find you annoying"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are very annoying"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Actionable_Messages">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are actionable messages"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Signup">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Take me to my Dashboard"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Love it. Sign me Up&#x1f600;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Take me to the Dashboard"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Get Started for Free&#x1f680;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.hello">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="afternoon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="assign-to-agent-on-demand">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let me talk to human agent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to real person"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fetch someone from the support team"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="human please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect to support"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to talk to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect me to human agent"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to talk to customer support agents"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to support"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="integrate_dialogflow">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate with dialogflow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate dialogflow in my website"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate dialogflow in my application"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set up dialogflow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate dialogflow bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate bot to website"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="integrate bot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add dialogflow bot"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="talk_to_human">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="connect me to a human"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.bye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave me alone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see ya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay thank you bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="now bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hope to see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get lost"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye take care"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I must go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to bed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye see you soon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye see you later"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can go now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you soon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's it goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I said bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="till next time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never mind bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye-bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's all goodbye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.how_are_you">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm fine and you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you doing this morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is everything okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you having a good day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is it going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your day going on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how's your day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how's your day going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is everything all right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are the things going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how has your day been"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hope your day is going well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your day going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how has your day been going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you doing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how your day is going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how about you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do you feel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your life"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your day going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hope you re having a pleasant evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="are you okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was your day like"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how have you been"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how are you getting on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what about your day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how was your day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how's life"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your morning so far"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your morning going"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how is your day being"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do you do"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.whatsup">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good what's up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey what's up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is on your mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is happening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is going on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's cracking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's up today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whazzup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wassup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's shaking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I said what's up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's happened"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="then what's up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's cooking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is up"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Define_Kommunicate">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's Kommunicate"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="List_Template">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="List Templates"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="whitelabel_remove_branding">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="disable branding"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whitelabel chat plugin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whitelabel chat widget"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove branding"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove powered by"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.goodevening">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening to you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good evening there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="automatic_chat_popup">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="open chat window on page load"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="open chat when page loads"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="launch chat on page load"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="open chat on page load"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="agent-app">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="download app"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mobile app"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="agent app"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Features">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Products Menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the Feature set"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me what Kommunicate's got"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Learn more about the Product Line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="More details on the Product Line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me what you've got"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the features"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What else have you got"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the other features"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the other features"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me all the features"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Product_Tour">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Guided Product Tour"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me a Product Tour"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Product Tour"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="customize_widget">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change icon of chat widget"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change chat icon"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="customize UI"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change UI"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="customize chat widget"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change color"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Helpcenter">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Knowledge Base (Helpcenter)"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="just-browsing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just browsing"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="test-template">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="test-template"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="smalltalk.greetings.nice_to_meet_you">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice to meet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="glad to meet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice to meet you too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it was nice meeting you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it was very nice to meet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pleased to meet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice meeting you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="good to know each other"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pleasure to meet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pleasure to meet you too"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bot_human_handoff">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="handover tickets to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot handover to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="handover conversation to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="human handoff"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot human handoff"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot human handover"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bot handoff to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="handover chat to human"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="human handover"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="SignIn_Bot">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to integrate a bot"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Welcome">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="kommunicate_conversation_started"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="pricing">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the price?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the cost?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="commercial"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cost"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="price"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="Mobile_Platforms">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Android">
+        <values>Android</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Phonegap">
+        <values>Phonegap</values>
+        <values>phonegap</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cordova">
+        <values>cordova</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="iOS">
+        <values>iOS</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="ionic">
+        <values>ionic</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="change_bot_imageTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can change the bot's image from your Kommunicate dashboard. Just follow the steps below: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="change_bot_imageTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1. Go to the bot section by selecting Bot Integration from the sidebar menu&#xA;2. Select Integrated Bots on the top, you will then find the list of all your integrated bots&#xA;3. Hover on the row of the bot whose image you want to edit&#xA;4. You will be able to see the Edit option show-up on the extreme right of the row.&#xA;5. Click on Edit and a pop-up window will open with all your bot details. &#xA;6. Hover over the image of the bot, and you will see an option to update&#xA;7. Click on Update, then upload your favorite bot image and Save the Changes. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1. From the Bot Integration section, select Integrated Bots on the top&#xA;2. Hover over the bot, then click on 'Edit' on the extreme right of the row&#xA;3. Inside the pop-up window, hover over the bot image then click on update &#xA;4. Upload the bot image then click on Save Changes "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="change_bot_imageTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="mobile_integrationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can integrate Kommunicate in your app with our mobile SDKs "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can use Kommunicate mobile SDKs to engage users in your mobile app with Live Chat, Chatbots, FAQs and Email "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We have native and hybrid mobile SDKs so that you can integrate Kommunicate in your mobile apps. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="mobile_integrationTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Integration steps can be found in the Install section of your dashboard: https://dashboard.kommunicate.io/settings/install "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="agent_idTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The agent id is the email id used by the agent to register on Kommunicate. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Email Id used by the agent to register on Kommunicate is the Agent Id of that agent. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.goodnightTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sleep tight! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Have a good one! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Talk to you soon! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="delete_chat - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am sorry that I couldn't answer your query. Please be online so that I can connect you to a human agent. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's a shame that I am not smart enough. I will ask my developer to make amends. In the meantime, I will connect you to a human agent to help you with your query. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Bot_Human_hybridTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's the perfect complementarity between AI and human where chatbots handle all routine tasks and pass on the rest to human agents. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Codeless_IntegrationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Integrating custom chatbots with your website is a simple 4-step process with Kommunicate and doesn't require any coding. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.nice_to_talk_to_youTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It sure was. We can chat again anytime. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I enjoy talking to you, too. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You know I'm here to talk anytime. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="agent_id - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome! Is there anything else that I can help you with? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am glad that I could be of help to you. Is there anything else that you would like to ask me? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="bot_human_handoff - yes - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would take your leave in that case. You can hit me up anytime, I'm available 24X7. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure. I will be here just in case, if you need anything else. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Welcome post signupTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey, welcome aboard. I'm Eve, I will be glad to answer any question you have about Kommunicate. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="app_IDTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can find your Application ID in the Install section of the dashboard. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your application ID can be found in the Install section of the dashboard. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="app_IDTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please visit this URL: https://dashboard.kommunicate.io/settings/install "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="bot_idTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can find the bot id of all your integrated bots in the bots section of your dashboard. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bot id of all your integrated bots can be found in the bots section of your dashboard. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="bot_idTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1. Visit the URL: https://dashboard.kommunicate.io/bot&#xA;2. Click on Integrated Bots from the top menu&#xA;3. Scroll down to find the bot ids of all your bots. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="upgrade_planTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In order to subscribe to a paid plan or to upgrade your existing plan,  visit the Billing section in your dashboard - https://dashboard.kommunicate.io/settings/billing "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Chatbot_GuideTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The Beginner&#x2019;s Guide to Chatbots will give you a complete overview of how you can get your business ready for chatbots! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Live_chatTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Our Live Chat is customizable, supports actionable messages and integrates with web and mobile app to help you support and engage your users. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="team_memberTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Team member on Kommunicate is a support agent or a bot that you have added to your account "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="team_memberTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="So if you have added 3 agents and 2 bots, the total number of team members would be 5. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.agent.badTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can be trained to be more useful. My developer will keep training me. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I must be missing some knowledge. I'll have my developer look into this. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can improve with continuous feedback. My training is ongoing. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Unique_KMTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate offers a unique bot+human hybrid model for customer support. Here bots are your first line of defense and handle all repetitive and rule-based tasks. Whatever it can&#x2019;t handle, the bot automatically hands it off to your human agent. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Unique_KMTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Add to that features like Live Chat, codeless Bot Integration, Email Support (Mailbox), HelpCenter and integration with your favorite CRM; that&#x2019;s Kommunicate for you. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="How-to_Integrate_BotTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bot Integration is our customers' favorite as it is completely codeless and allows you to add custom bots to your website in 4-simple steps "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="free_planTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate has a lifetime Free Plan that has all the essential features to help you get started. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="free_planTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can check out the pricing tiers here: https://www.kommunicate.io/pricing "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.agent.boringTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry. I'll request to be made more charming. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mean to be. I'll ask my developers to work on making me more amusing. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can let my developers know so they can make me fun. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.nice_to_see_youTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Likewise! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="So glad we meet again! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Same here. I was starting to miss you. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Main_MenuTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Enjoying the guided product demo. Let me know what you want to see next? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="MailboxTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Mailbox from Kommunicate connects your support email with live chat so that your agents can handle both the channels from the same place. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="problem with botTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please verify the following steps If your bot is not responding&#xA;&#xA;Step 1: Check if the bot is enabled to get assigned for new conversation, please visit the link as it will direct you to the settings page&#xA;https://dashboard.kommunicate.io/settings/conversation-rules  (enable the bot in &quot;Routing rules for the bot&quot; section) &#xA;&#xA;Step 2: Please check if you have the default fallback intent enabled in Dialogflow console.&#xA;Because if that is enabled then Kommunicate automatically assign it to a human agent if the bot doesn't have an answer for that.&#xA;Go to dialogflow console, select the default fallback intent and remove &quot;input.unknown&quot; from it,&#xA;then it will stop auto assigning to a human agent.&#xA;here is the docs link for more details https://docs.kommunicate.io/docs/web-conversation-assignment#bot-to-human-handoff&#xA;&#xA;Step 3: If you are using the multilingual bot please refer the link provided for more information &#xA;https://docs.kommunicate.io/docs/bot-dialogflow-integration#make-your-bot-multilingual "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="support_rich_messagesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can configure actionable messages on Kommunicate to make the conversations more interactive. &#xA;&#xA;Find the settings here: https://docs.kommunicate.io/docs/actionable-messages "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate supports rich messages so that you can make the conversations more interactive. &#xA;&#xA;Steps and settings can be found here: https://docs.kommunicate.io/docs/actionable-messages "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="support_rich_messagesTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Currently, Kommunicate supports the following rich messages: &#xA;1) Link Button &amp; Submit Buttons&#xA;2) Card Carousels&#xA;3) Generic Cards&#xA;4) Card Lists&#xA;5) Images&#xA;6) Suggested Replies "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="delete_chatTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To delete individual chat threads follow the steps below:&#xA;&#xA;1. Go to the conversation tab on your dashboard&#xA;2. Select the chat thread that you want to delete&#xA;3. Click on the 3 dots on the top right-hand corner and then click on Delete Conversation from the drop down "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Bot_powerTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bots can scale up your operations, handle customer queries and assist customers to choose the right product or service with actionable messages "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="have_a_questionTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool. Let me see if I can help you out. If not I will fetch someone from the support team. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="have_a_questionTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your question about? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Need-a-demoTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure! Please go to the below link to book a demo with us&#xA;https://calendly.com/kommunicate/15min "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="FAQ createTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey, great job creating the FAQ. Now, the FAQ button will start showing up in your chat widget which your customer can click to access your FAQs.&#xA;&#xA;If you wish to let Liz (our FAQ bot) handle your FAQs, assign conversations to Liz here: https://dashboard.kommunicate.io/settings/conversation-rules "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.goodmorningTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How are you this morning? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How's the morning treating you so far? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good morning! How are you today? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.agent.annoyingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll do my best not to annoy you in the future. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll try not to annoy you. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mean to. I'll ask my developers to make me less annoying. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't mean to. I'll do my best to stop that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Actionable_MessagesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Conversations on Kommunicate are more than just text replies, as it supports interactive elements like cards, lists, buttons, and multimedia. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Actionable_MessagesTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Checkout a few samples below: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="SignupTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am glad that you decided to jump onboard. You can create a Free account and continue using Kommunicate Free for up to 2 team members. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="SignupTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Once you signup, you can find me on your dashboard to assist you. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.helloTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi there, friend! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey there! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="integrate_dialogflowTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Integrating your Dialogflow bot with Kommunicate is simple. &#xA;&#xA;Here is a step-by-step guide: https://www.kommunicate.io/blog/how-to-integrate-bot-using-dialogflow-in-kommunicate-1ac32911a7d0/, that explains the process. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.byeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you soon! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye-bye! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Till next time! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.how_are_youTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Doing great, thanks. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm doing very well. Thanks! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Feeling wonderful! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wonderful! Thanks for asking. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.whatsupTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not a whole lot. What's going on with you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Not much. What's new with you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Just here, waiting to help someone. What can I do for you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Define_KommunicateTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate is a bot+human hybrid support solution with a product line comprising of Live Chat, Chatbots, Email Support, and Helpcenter. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="free_plan - yes - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In that case I would take your leave for now. You can hit me up anytime, I'm available 24X7. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure. I will be here just in case, if you need anything else. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="whitelabel_remove_brandingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can white-label the chat widget in the customization section. Visit this URL: https://dashboard.kommunicate.io/settings/chat-widget-customization, scroll down and disable &quot;Show Kommunicate branding&quot;. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="whitelabel_remove_brandingTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please note that you can remove Kommunicate branding only on paid plans. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.goodeveningTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How is your day going? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How's the day treating you so far? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How's your day been? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="automatic_chat_popupTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="In order to open the chat widget during page load, you need to add the following under the &quot;onInit&quot; function of your installation code:&#xA;&#xA;Kommunicate.launchConversation() "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="automatic_chat_popupTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Example:&#xA;(function(d, m) {{&#xA;      var kommunicateSettings = {{&quot;appId&quot;:&lt;APP_ID>,&quot;onInit&quot;: function()  {{     &#xA;&#x9;Kommunicate.launchConversation();&#xA; }}  }};&#xA;      var s = document.createElement(&quot;script&quot;); s.type = &quot;text/javascript&quot;; s.async = true;&#xA;      s.src = &quot;https://api.kommunicate.io/v2/kommunicate.app&quot;;&#xA;      var h = document.getElementsByTagName(&quot;head&quot;)[0]; h.appendChild(s);&#xA;      window.kommunicate = m; m._globals = kommunicateSettings;&#xA;    }})(document, window.kommunicate || {{}});&#xA;&#xA;Replace &lt;APP_ID> with your account's APP_ID available from Install section https://dashboard.kommunicate.io/settings/install&#xA;&#xA;Check the link provided for clear instructions https://docs.kommunicate.io/docs/web-installation "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="agent-appTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate agent app available on both Android and iOS lets you stay connected on the go. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="agent-appTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can download the app here: https://dashboard.kommunicate.io/settings/agent-app "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="FeaturesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate has 4 broad product lines wound together in a tightly knit pack, to help you build your customer support stack. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="FeaturesTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Choose from the list below to get an overview: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Product_TourTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey there! I am Eve and I will get you up to speed with Kommunicate. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Product_TourTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="So what&#x2019;s on your mind? Select from the list below and I will try my best to assist&#x1f60a; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Bot integrationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great to see that you have set up a bot. This is what we call a human+bot hybrid partnership.&#xA;&#xA;For advanced options such as bot-human handoff, making your bot multilingual and sending custom data, check this documentation: https://docs.kommunicate.io/docs/bot-setup "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="customize_widgetTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can customize the chat icon and change the color of the chat widget from the Settings section in your dashboard.&#xA;&#xA;Find it here: https://dashboard.kommunicate.io/settings/chat-widget-customization "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="customize_widgetTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can also write your own CSS to customize other elements of the chat widget as per your liking.&#xA;&#xA;Instructions and steps can be found here: https://docs.kommunicate.io/docs/web-customization#customize-chat-widget-by-using-css "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Add Team MemberTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Awesome! You have invited your teammates to join you on Kommunicate. You can use Conversation Routing [ https://dashboard.kommunicate.io/settings/conversation-rules ] to assign conversation to your team members.&#xA;&#xA;You can set up automatic or manual writing to effectively distribute incoming conversation among team members. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="HelpcenterTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Helpcenter from Kommunicate allows you to create an authoritative knowledge base to host your support articles and FAQs. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="just-browsingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool! Let me know if you need any help "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="smalltalk.greetings.nice_to_meet_youTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's nice meeting you, too. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Likewise. I'm looking forward to helping you out. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nice meeting you, as well. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The pleasure is mine. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="bot_human_handoffTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can train your bot to handover the chat to a human when it fails to answer the query. &#xA;&#xA;Instructions and steps can be found here: https://docs.kommunicate.io/docs/web-conversation-assignment#bot-to-human-handoff "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="bot_human_handoffTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here is a friendly resource to help you ace bot-human handoff - https://www.kommunicate.io/blog/chatbot-human-handoff/ "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="SignIn_BotTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kommunicate supports codeless bot integration with bot platforms like Dialogflow and Lex. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="SignIn_BotTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can integrate a chatbot from the Bot integration section of Kommunicate dashboard in 4-simple steps (No Coding Reqd.) &#xA;&#xA;PS: If you don&#x2019;t have a Kommunicate account, you need to first create a Free Account before you start integrating a bot. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="WelcomeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey there, thanks for checking out Kommunicate! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="pricingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can find the pricing plans here: https://www.kommunicate.io/pricing "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We have 3 pricing tiers and the lowest one is FREE. You can check out the plans here: https://www.kommunicate.io/pricing "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Our pricing starts from "/>
+        <tokens xsi:type="generator:Literal" text="You can check the plans here: https://www.kommunicate.io/pricing "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2 //@actions.3 //@actions.4" name="bot1">
+      <outcoming intent="//@intents.8" name="user2">
+        <target actions="//@actions.13" name="bot2">
+          <outcoming intent="//@intents.10" name="user3">
+            <target actions="//@actions.14" name="bot3"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user4">
+        <target actions="//@actions.9 //@actions.4" name="bot4"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1" name="user5">
+    <target actions="//@actions.5 //@actions.6 //@actions.4" name="bot5">
+      <outcoming intent="//@intents.29" name="user6">
+        <target actions="//@actions.13" name="bot6">
+          <outcoming intent="//@intents.10" name="user7">
+            <target actions="//@actions.14" name="bot7"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user8">
+        <target actions="//@actions.9 //@actions.4" name="bot8"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2" name="user9">
+    <target actions="//@actions.7 //@actions.4" name="bot9">
+      <outcoming intent="//@intents.8" name="user10">
+        <target actions="//@actions.13" name="bot10">
+          <outcoming intent="//@intents.15" name="user11">
+            <target actions="//@actions.14" name="bot11"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user12">
+        <target actions="//@actions.9 //@actions.4" name="bot12"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.3" name="user13">
+    <target actions="//@actions.8" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.5" name="user14">
+    <target actions="//@actions.10 //@actions.4" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.6" name="user15">
+    <target actions="//@actions.11 //@actions.4" name="bot15"/>
+  </flows>
+  <flows intent="//@intents.7" name="user16">
+    <target actions="//@actions.12" name="bot16"/>
+  </flows>
+  <flows intent="//@intents.11" name="user17">
+    <target actions="//@actions.71" name="bot94"/>
+  </flows>
+  <flows intent="//@intents.14" name="user18">
+    <target actions="//@actions.16 //@actions.17 //@actions.4" name="bot18">
+      <outcoming intent="//@intents.13" name="user19">
+        <target actions="//@actions.9 //@actions.4" name="bot19"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user20">
+        <target actions="//@actions.13" name="bot20">
+          <outcoming intent="//@intents.23" name="user21">
+            <target actions="//@actions.14" name="bot21"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.16" name="user22">
+    <target actions="//@actions.18 //@actions.19 //@actions.4" name="bot22">
+      <outcoming intent="//@intents.4" name="user23">
+        <target actions="//@actions.9 //@actions.4" name="bot23"/>
+      </outcoming>
+      <outcoming intent="//@intents.29" name="user24">
+        <target actions="//@actions.13" name="bot24">
+          <outcoming intent="//@intents.10" name="user25">
+            <target actions="//@actions.14" name="bot25"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.17" name="user26">
+    <target actions="//@actions.4" name="bot26"/>
+  </flows>
+  <flows intent="//@intents.18" name="user27">
+    <target actions="//@actions.20 //@actions.4" name="bot27">
+      <outcoming intent="//@intents.8" name="user28">
+        <target actions="//@actions.13" name="bot28">
+          <outcoming intent="//@intents.26" name="user29">
+            <target actions="//@actions.14" name="bot29"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user30">
+        <target actions="//@actions.9 //@actions.4" name="bot30"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.19" name="user31">
+    <target actions="//@actions.21 //@actions.4" name="bot31"/>
+  </flows>
+  <flows intent="//@intents.20" name="user32">
+    <target actions="//@actions.22 //@actions.4" name="bot32"/>
+  </flows>
+  <flows intent="//@intents.21" name="user33">
+    <target actions="//@actions.23 //@actions.24 //@actions.4" name="bot33">
+      <outcoming intent="//@intents.13" name="user34">
+        <target actions="//@actions.9 //@actions.4" name="bot34"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user35">
+        <target actions="//@actions.13" name="bot35">
+          <outcoming intent="//@intents.15" name="user36">
+            <target actions="//@actions.14" name="bot36"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.22" name="user37">
+    <target actions="//@actions.25" name="bot37"/>
+  </flows>
+  <flows intent="//@intents.24" name="user38">
+    <target actions="//@actions.26 //@actions.27 //@actions.4" name="bot38"/>
+  </flows>
+  <flows intent="//@intents.25" name="user39">
+    <target actions="//@actions.28 //@actions.4" name="bot39"/>
+  </flows>
+  <flows intent="//@intents.27" name="user40">
+    <target actions="//@actions.29 //@actions.30 //@actions.4" name="bot40">
+      <outcoming intent="//@intents.4" name="user41">
+        <target actions="//@actions.9 //@actions.4" name="bot41"/>
+      </outcoming>
+      <outcoming intent="//@intents.29" name="user42">
+        <target actions="//@actions.13" name="bot42">
+          <outcoming intent="//@intents.10" name="user43">
+            <target actions="//@actions.56" name="bot43"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.28" name="user44">
+    <target actions="//@actions.4" name="bot44"/>
+  </flows>
+  <flows intent="//@intents.30" name="user45">
+    <target actions="//@actions.31" name="bot45"/>
+  </flows>
+  <flows intent="//@intents.31" name="user46">
+    <target actions="//@actions.32" name="bot46"/>
+  </flows>
+  <flows intent="//@intents.32" name="user47">
+    <target actions="//@actions.33 //@actions.4" name="bot47"/>
+  </flows>
+  <flows intent="//@intents.33" name="user48">
+    <target actions="//@actions.34 //@actions.4" name="bot48"/>
+  </flows>
+  <flows intent="//@intents.34" name="user49">
+    <target actions="//@actions.4" name="bot49"/>
+  </flows>
+  <flows intent="//@intents.35" name="user50">
+    <target actions="//@actions.35" name="bot50"/>
+  </flows>
+  <flows intent="//@intents.36" name="user51">
+    <target actions="//@actions.36 //@actions.37 //@actions.4" name="bot51">
+      <outcoming intent="//@intents.13" name="user52">
+        <target actions="//@actions.9 //@actions.4" name="bot52"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user53">
+        <target actions="//@actions.13" name="bot53">
+          <outcoming intent="//@intents.38" name="user54">
+            <target actions="//@actions.14" name="bot54"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.37" name="user55">
+    <target actions="//@actions.38 //@actions.4" name="bot55">
+      <outcoming intent="//@intents.4" name="user56">
+        <target actions="//@actions.9 //@actions.4" name="bot56"/>
+      </outcoming>
+      <outcoming intent="//@intents.29" name="user57">
+        <target actions="//@actions.13" name="bot57">
+          <outcoming intent="//@intents.10" name="user58">
+            <target actions="//@actions.14" name="bot58"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.39" name="user59">
+    <target actions="//@actions.39 //@actions.4" name="bot59"/>
+  </flows>
+  <flows intent="//@intents.41" name="user60">
+    <target actions="//@actions.4" name="bot60"/>
+  </flows>
+  <flows intent="//@intents.43" name="user61">
+    <target actions="//@actions.44" name="bot62"/>
+  </flows>
+  <flows intent="//@intents.44" name="user62">
+    <target actions="//@actions.45" name="bot63"/>
+  </flows>
+  <flows intent="//@intents.45" name="user63">
+    <target actions="//@actions.46 //@actions.47 //@actions.4" name="bot64"/>
+  </flows>
+  <flows intent="//@intents.46" name="user64">
+    <target actions="//@actions.48 //@actions.49 //@actions.4" name="bot65"/>
+  </flows>
+  <flows intent="//@intents.47" name="user65">
+    <target actions="//@actions.50" name="bot66"/>
+  </flows>
+  <flows intent="//@intents.48" name="user66">
+    <target actions="//@actions.4" name="bot67"/>
+  </flows>
+  <flows intent="//@intents.49" name="user67">
+    <target actions="//@actions.51 //@actions.4" name="bot68">
+      <outcoming intent="//@intents.13" name="user68">
+        <target actions="//@actions.9 //@actions.4" name="bot69"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user69">
+        <target actions="//@actions.13" name="bot70">
+          <outcoming intent="//@intents.10" name="user70">
+            <target actions="//@actions.14" name="bot71"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.51" name="user71">
+    <target actions="//@actions.52" name="bot72"/>
+  </flows>
+  <flows intent="//@intents.52" name="user72">
+    <target actions="//@actions.53" name="bot73"/>
+  </flows>
+  <flows intent="//@intents.53" name="user73">
+    <target actions="//@actions.54" name="bot74"/>
+  </flows>
+  <flows intent="//@intents.54" name="user74">
+    <target actions="//@actions.55 //@actions.4" name="bot75"/>
+  </flows>
+  <flows intent="//@intents.55" name="user75">
+    <target actions="//@actions.4" name="bot76"/>
+  </flows>
+  <flows intent="//@intents.56" name="user76">
+    <target actions="//@actions.57 //@actions.58 //@actions.4" name="bot77">
+      <outcoming intent="//@intents.13" name="user77">
+        <target actions="//@actions.9 //@actions.4" name="bot78"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user78">
+        <target actions="//@actions.13" name="bot79">
+          <outcoming intent="//@intents.9" name="user79">
+            <target actions="//@actions.14" name="bot80"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.57" name="user80">
+    <target actions="//@actions.59" name="bot81"/>
+  </flows>
+  <flows intent="//@intents.58" name="user81">
+    <target actions="//@actions.60 //@actions.61" name="bot82"/>
+  </flows>
+  <flows intent="//@intents.59" name="user82">
+    <target actions="//@actions.62 //@actions.63 //@actions.4" name="bot83">
+      <outcoming intent="//@intents.4" name="user83">
+        <target actions="//@actions.9 //@actions.4" name="bot84"/>
+      </outcoming>
+      <outcoming intent="//@intents.29" name="user84">
+        <target actions="//@actions.13" name="bot85">
+          <outcoming intent="//@intents.10" name="user85">
+            <target actions="//@actions.14" name="bot86"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.60" name="user86">
+    <target actions="//@actions.64 //@actions.65 //@actions.4" name="bot87"/>
+  </flows>
+  <flows intent="//@intents.61" name="user87">
+    <target actions="//@actions.66 //@actions.67 //@actions.4" name="bot88"/>
+  </flows>
+  <flows intent="//@intents.62" name="user88">
+    <target actions="//@actions.69 //@actions.70 //@actions.4" name="bot90">
+      <outcoming intent="//@intents.8" name="user89">
+        <target actions="//@actions.13" name="bot91">
+          <outcoming intent="//@intents.26" name="user90">
+            <target actions="//@actions.14" name="bot92"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user91">
+        <target actions="//@actions.9 //@actions.4" name="bot93"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.63" name="user92">
+    <target actions="//@actions.72 //@actions.4" name="bot95"/>
+  </flows>
+  <flows intent="//@intents.65" name="user93">
+    <target actions="//@actions.4" name="bot96"/>
+  </flows>
+  <flows intent="//@intents.66" name="user94">
+    <target actions="//@actions.74" name="bot97"/>
+  </flows>
+  <flows intent="//@intents.67" name="user95">
+    <target actions="//@actions.75 //@actions.76 //@actions.4" name="bot98">
+      <outcoming intent="//@intents.8" name="user96">
+        <target actions="//@actions.13" name="bot99">
+          <outcoming intent="//@intents.9" name="user97">
+            <target actions="//@actions.14" name="bot100"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user98">
+        <target actions="//@actions.9 //@actions.4" name="bot101"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.68" name="user99">
+    <target actions="//@actions.77 //@actions.78 //@actions.4" name="bot102"/>
+  </flows>
+  <flows intent="//@intents.69" name="user100">
+    <target actions="//@actions.79 //@actions.4" name="bot103">
+      <outcoming intent="//@intents.40" name="user101">
+        <target actions="//@actions.40 //@actions.41" name="bot104"/>
+      </outcoming>
+      <outcoming intent="//@intents.42" name="user102">
+        <target actions="//@actions.42" name="bot105"/>
+      </outcoming>
+      <outcoming intent="//@intents.50" name="user103">
+        <target actions="//@actions.4" name="bot106"/>
+      </outcoming>
+      <outcoming intent="//@intents.64" name="user104">
+        <target actions="//@actions.73" name="bot107"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.70" name="user105">
+    <target actions="//@actions.80 //@actions.4" name="bot108">
+      <outcoming intent="//@intents.13" name="user106">
+        <target actions="//@actions.9 //@actions.4" name="bot109"/>
+      </outcoming>
+      <outcoming intent="//@intents.29" name="user107">
+        <target actions="//@actions.13" name="bot110">
+          <outcoming intent="//@intents.10" name="user108">
+            <target actions="//@actions.14" name="bot111"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

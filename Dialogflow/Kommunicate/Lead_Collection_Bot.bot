@@ -1,0 +1,91 @@
+Chatbot Lead_Collection_Bot language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	"Welcome-Lead" :
+		inputs in en {
+			"I want to develop a website for my real estate and mortgage business" ,
+			"I want to " ( "grow my business" ) [ CustomerBusinessRequirement ] " and need " ( "help in marketing" ) [ CustomerBusinessRequirement ] ,
+			"I want to " ( "develop a website" ) [ CustomerBusinessRequirement ] " for my real estate and mortgage business" ,
+			"my email is " ( "alex@gmail.com" ) [ email ] " and phone number is " ( "7689678123" ) [ "phone-number" ] ,
+			"Got it! Let\'s move " ( forward ) [ FinalStep ] "." ,
+			( samsung ) [ business ] ,
+			( kommunicate ) [ FinalStep ] ,
+			"Sure I can provide" ,
+			Okay ,
+			Sure ,
+			"email is " ( "alex@gmail.com" ) [ email ] ,
+			"my name is " ( alex ) [ "given-name" ] " and email id is " ( "alex@gmail.com" ) [ email ] ,
+			( Alex ) [ "given-name" ] ,
+			"name is " ( alex ) [ "given-name" ] ,
+			"my name is " ( tony ) [ "given-name" ]
+		}
+		parameters :
+			"given-name" : entity "sys.given-name" , required , prompts in en [ "May I know your Name😊 please" ] ;
+			email : entity text , required , prompts in en [ "Thanks $given-name😍, Please provide us with your email address📧 & mobile number📱 to get in touch with you later.\n\nDon\'t worry, all of these will be kept 🔐confidential" ] ;
+			"phone-number" ,
+			business : entity "sys.given-name" , required , prompts in en [ "That\'s great $given-name😍 \n\nWhat is your 🏢Company name?" ] ;
+			FinalStep : entity "sys.given-name" , required , prompts in en [ "Awesome😃 Let\'s move forward with the Final question❓\n\nWhat would you like to achieve🚀 and how can we help you?\nPlease provide us with the information." ] ;
+			CustomerBusinessRequirement : entity "sys.given-name" , prompts in en [ "That\'s all! Thank you, $given-name. We\'ll reach out to you as soon as possible👍\n\n👋 Have a good day!" ] ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity AppointmentType :
+		inputs in en {
+			"Demo meeting" synonyms "Demo meeting" , training
+	}
+	Simple entity "sys.given-name" :
+		inputs in en {
+			"help in marketing" synonyms "help in marketing"
+			samsung synonyms samsung
+			forward synonyms forward
+			"grow my business" synonyms "grow my business"
+			"develop a website" synonyms "develop a website"
+			kommunicate synonyms kommunicate
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"👋🏻Hey there! Thanks for getting in touch with us!\n\nTo get things ✔️started, Could you please provide us with some details. "
+	}
+	text response "Welcome-LeadTxtResp1" :
+		inputs in en {
+			"That\'s all❗ Thank you, " "We\'ll reach out to you as soon as possible and help in growing your Business👍\n\n👋 Have a good day! "
+	}
+	text response "Welcome-LeadTxtResp2" :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "Welcome-Lead" => bot2 : chatbot "Welcome-LeadTxtResp1" , "Welcome-LeadTxtResp2" ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" ;
+

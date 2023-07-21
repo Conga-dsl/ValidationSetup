@@ -1,0 +1,241 @@
+Chatbot Insurance_Bot language : en
+
+intents :
+
+"Home Insurance - Tenants - No" :
+	inputs in en {
+		"Not looking for this plan" ,
+		No
+}
+
+"Insurance - YES" :
+	inputs in en {
+		"Insurance policies we provide" ,
+		"What insurance policies do you have?"
+}
+
+"Life Insurance" :
+	inputs in en {
+		"Life Insurance"
+}
+
+"Home Insurance - Owners" :
+	inputs in en {
+		"For Owners"
+}
+
+"Home Insurance - Tenants" :
+	inputs in en {
+		"For Tenants"
+}
+
+"Life Insurance - Critical Illness benefit" :
+	inputs in en {
+		"Critical illness benefit"
+}
+
+"Home Insurance - Plan Details" :
+	inputs in en {
+		ok ,
+		sure ,
+		okay ,
+		"Home Insurance - Plan Details" ,
+		"Plan Details"
+}
+
+"Life Insurance - Surgical Benefit" :
+	inputs in en {
+		"Surgical Benefit"
+}
+
+"Vehicle Insurance" :
+	inputs in en {
+		"Vehicle Insurance"
+}
+
+"Home Insurance - Owners - Yes" :
+	inputs in en {
+		"my name is " ( alex ) [ "given-name" ] " and email is " ( "alex@gmail.com" ) [ email ] ,
+		"my email is " ( "alex@gmail.com" ) [ email ] " and phone number is " ( "7655545321" ) [ "phone-number" ] ,
+		"my name is " ( alex ) [ "given-name" ] ,
+		Yes
+	}
+	parameters :
+		"given-name" : entity text , required , prompts in en [ "Got it, To get things ✔️started. Please let us know your name😊" ] ;
+		email : entity text , required , prompts in en [ "Thanks $given-name😍, Please provide us with your email address📧 & mobile number📱 to get in touch with you later." ] ;
+		"phone-number" : entity text , required ;
+
+"Home Insurance" :
+	inputs in en {
+		"Home Insurance"
+}
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+"Home Insurance - Housing Society" :
+	inputs in en {
+		"Housing Society"
+}
+
+"Main Menu" :
+	inputs in en {
+		"Main Menu"
+}
+
+"Vehicle Insurance - Plan Details" :
+	inputs in en {
+		"Vehicle Insurance - Plan Details"
+}
+
+"Home Insurance - Tenants - Yes" :
+	inputs in en {
+		"Please provide us with some details" ,
+		Yes ,
+		"my name is " ( alex ) [ "given-name" ] ,
+		"my name is " ( alex ) [ "given-name" ] " and email is " ( "alex@kommunicate.io" ) [ email ] ,
+		"my email is " ( "alex@gmail.com" ) [ email ] " and phone number is " ( "7645576532" ) [ "phone-number" ]
+	}
+	parameters :
+		"given-name" : entity text , required , prompts in en [ "Got it, To get things ✔️started. Please let us know your name😊" ] ;
+		email : entity text , required , prompts in en [ "Thanks $given-name😍, Please provide us with your email address📧 & mobile number📱 to get in touch with you later." ] ;
+		"phone-number" : entity text , required ;
+
+"Life Insurance - Daily Hospital Benefit" :
+	inputs in en {
+		"Daily Hospital Benefit"
+}
+
+"Life Insurance - Plan details" :
+	inputs in en {
+		"Life Insurance - Plan details"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Home Insurance - Tenants - NoTxtResp1" :
+		inputs in en {
+			"Cool 🙂 You can explore the other plans 👍 "
+	}
+	text response "Home Insurance - Tenants - NoTxtResp2" :
+		inputs in en {
+			" "
+	}
+	text response "Life InsuranceTxtResp1" :
+		inputs in en {
+			"✔️Who needs it: Those with dependents\n\n✔️What it is: \n- In the event of death, a life insurance policy pays a beneficiary an agreed-upon amount of money to cover the expenses left by the deceased\n\n- A beneficiary is a person or entity named in a policy who receives benefits, such as a spouse "
+	}
+	text response "Home Insurance - OwnersTxtResp1" :
+		inputs in en {
+			"Your 🏠home is your soul. Protect it!\n\n✔️Covers losses and damages to an individual\'s house and to assets in the house "
+	}
+	text response "Home Insurance - TenantsTxtResp1" :
+		inputs in en {
+			"Even though you are at the rented place. The sweet memories, important occasions are still to be cherished 🌼 "
+	}
+	text response "Life Insurance - Critical Illness benefitTxtResp1" :
+		inputs in en {
+			"✔️Critical Illness Insurance provides coverage against specific life threatening diseases\n\n✔️Treating such critical illnesses may require multiple visits to the hospital over a long period of time\n\n✔️In addition to the hospitalization cost, there will be other costs like doctor visits, medical expenses, etc "
+	}
+	text response "Home Insurance - Plan DetailsTxtResp1" :
+		inputs in en {
+			"Choose any of the Home insurance plan 👇🏼 "
+	}
+	text response "Life Insurance - Surgical BenefitTxtResp1" :
+		inputs in en {
+			"✔️Illness or accidental injuries resulting in the hospitalization can bring in some serious financial problems for any family\n \n✔️To provide you with financial assistance in such circumstances we provide Surgical Protection Insurance "
+	}
+	text response "Vehicle InsuranceTxtResp1" :
+		inputs in en {
+			"Motor insurance policy covers the policyholder in case of financial losses, resulting from an accident or other damages sustained by the insured vehicle. \n\nWhat\'s included?\n✔️ Accidents, Personal Accident Cover\n✔️ Fire & Explosion\n✔️ Theft\n✔️ Calamities\n\nWhat’s not included?\n✔️ Depreciation\n✔️ Electrical & Mechanical Breakdown\n✔️ Illegal Driving "
+	}
+	text response "Home Insurance - Owners - YesTxtResp1" :
+		inputs in en {
+			"Thank you " [ "Home Insurance - Owners - Yes.given-name" ] "😃 for choosing the plan. \n\nOne of our representatives will reach out to you as soon as possible and help you with further steps in the policy👍 "
+	}
+	text response "Home InsuranceTxtResp1" :
+		inputs in en {
+			"🏠Home insurance covers the structure of house and the contents which include prized possessions against damage from natural calamities like floods, earthquake, storm and man made events like riots, arson etc. "
+	}
+	text response "Home InsuranceTxtResp2" :
+		inputs in en {
+			"⭐Benefits and Features of 🏠Home Insurance\n✔️Complete coverage for any damage to your home or it\'s contents from natural calamities and man made events\n\n✔️Benefits like round the clock customer service, immediate access to the insurance experts and quick customer service. "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hey👋 Thank you for showing interest in our insurance 😍 "
+	}
+	text response "Home Insurance - Housing SocietyTxtResp1" :
+		inputs in en {
+			"Your housing society is home to hundreds of family members.\n \n🏠 We provide complete protection against multiple factors to keep your society safe and secure.\n\n✔️ Stay protected for a year\n✔️ Covers common amenities\n✔️ Bigger properties higher coverage\n✔️ Big discounts\n\nThis is a custom plan. For registration and more details, please go here 👇🏻 "
+	}
+	text response "Home Insurance - Tenants - YesTxtResp1" :
+		inputs in en {
+			"Thank you " [ "Home Insurance - Tenants - Yes.given-name" ] "😃 for choosing the plan. \n\nOne of our representatives will reach out to you as soon as possible and help you with further steps in the policy👍 "
+	}
+	text response "Life Insurance - Daily Hospital BenefitTxtResp1" :
+		inputs in en {
+			"✔️Daily hospital benefit provides a sum amount daily in case of hospitalization and this amount can be used per the insured’s need\n\n✔️The money can be used for meeting additional expenses that are not covered by health insurance or for even compensating the loss of income during the period of hospitalization "
+	}
+	text response "Life Insurance - Plan detailsTxtResp1" :
+		inputs in en {
+			"✔️Premium: Rs. 1000 paid annually\n✔️Premium Payment Term: 6 Years (Regular)\n✔️Sum Assured: Rs 2,50,000\n✔️Plan Option: Daily hospital cash, surgical & critical illness "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Life Insurance" => bot1 : chatbot "Life InsuranceTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" {
+		=> user2 : user "Life Insurance - Plan details" => bot2 : chatbot "Life Insurance - Plan detailsTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" { => user3 : user "Life Insurance - Critical Illness benefit" => bot3 : chatbot "Life Insurance - Critical Illness benefitTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" ; => user4 : user "Life Insurance - Surgical Benefit" => bot4 : chatbot "Life Insurance - Surgical BenefitTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" ; => user5 : user "Life Insurance - Daily Hospital Benefit" => bot5 : chatbot "Life Insurance - Daily Hospital BenefitTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" ; } ;
+	} ;
+	- user6 : user "Vehicle Insurance" => bot6 : chatbot "Vehicle InsuranceTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" {
+		=> user7 : user "Vehicle Insurance - Plan Details" => bot7 : chatbot "Home Insurance - Tenants - NoTxtResp2" ;
+	} ;
+	- user8 : user "Home Insurance" => bot8 : chatbot "Home InsuranceTxtResp1" , "Home InsuranceTxtResp2" , "Home Insurance - Tenants - NoTxtResp2" {
+		=> user9 : user "Home Insurance - Plan Details" => bot9 : chatbot "Home Insurance - Plan DetailsTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" { => user10 : user "Home Insurance - Owners" => bot18 : chatbot "Home Insurance - OwnersTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" { => user17 : user "Home Insurance - Owners - Yes" => bot19 : chatbot "Home Insurance - Owners - YesTxtResp1" ; => user18 : user "Home Insurance - Tenants - No" => bot21 : chatbot "Home Insurance - Tenants - NoTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" ; } ; => user13 : user "Home Insurance - Tenants" => bot14 : chatbot "Home Insurance - TenantsTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" { => user14 : user "Home Insurance - Tenants - No" => bot15 : chatbot "Home Insurance - Tenants - NoTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" ; => user15 : user "Home Insurance - Tenants - Yes" => bot16 : chatbot "Home Insurance - Tenants - YesTxtResp1" ; } ; => user16 : user "Home Insurance - Housing Society" => bot22 : chatbot "Home Insurance - Housing SocietyTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" ; } ;
+	} ;
+	- user19 : user "Default Welcome Intent" => bot23 : chatbot "Default Welcome IntentTxtResp1" , "Home Insurance - Tenants - NoTxtResp2" {
+		=> user20 : user "Insurance - YES" => bot24 : chatbot "Home Insurance - Tenants - NoTxtResp2" ;
+	} ;
+	- user21 : user "Main Menu" => bot25 : chatbot "Home Insurance - Tenants - NoTxtResp2" ;
+	- user22 : user "Default Fallback Intent" => bot26 : chatbot "Default Fallback IntentTxtResp1" ;
+

@@ -1,0 +1,1215 @@
+Chatbot "kommunicate-support-bot-sample" language : en
+
+intents :
+
+	change_bot_image :
+		inputs in en {
+			"how can I add my custom icon to the chatbot?" ,
+			"edit bot picture" ,
+			"edit bot icon" ,
+			"edit bot image" ,
+			"upload bot image" ,
+			"customize bot" ,
+			"change bot picture" ,
+			"change bot icon" ,
+			"how to change the bot image"
+	}
+
+	mobile_integration :
+		inputs in en {
+			"integrate on mobile" ,
+			"integrate with " ( iOS ) [ Mobile_Platforms ] ,
+			"integrate with " ( android ) [ Mobile_Platforms ] ,
+			"integrate with " ( iOS ) [ Mobile_Platforms ] " app" ,
+			"connect chatbot to " ( android ) [ Mobile_Platforms ] " app" ,
+			"integrate chatbot to mobile app" ,
+			"integrate kommunicate with mobile app" ,
+			"connect kommunicate to " ( android ) [ Mobile_Platforms ] " app"
+		}
+		parameters :
+			Mobile_Platforms : entity Mobile_Platforms ;
+
+	agent_id :
+		inputs in en {
+			"id of support agent" ,
+			"agent key" ,
+			"agent id"
+	}
+
+	"smalltalk.greetings.goodnight" :
+		inputs in en {
+			"sweet dreams" ,
+			"thanks goodnight" ,
+			night ,
+			" bye good night" ,
+			"good night to you" ,
+			"good good night" ,
+			"have a good night" ,
+			"alright goodnight" ,
+			night ,
+			"good night see you tomorrow" ,
+			"good night" ,
+			"good tonight" ,
+			"good night bye" ,
+			"thank you good night" ,
+			"okay have a good night" ,
+			goodnight ,
+			"good night for now" ,
+			"bye good night" ,
+			"have a good night"
+	}
+
+	"delete_chat - no" :
+		inputs in en {
+			^no
+	}
+
+	Bot_Human_hybrid :
+		inputs in en {
+			"What\'s Bot+Human hybrid"
+	}
+
+	Codeless_Integration :
+		inputs in en {
+			"Codeless Bot Integration"
+	}
+
+	"smalltalk.greetings.nice_to_talk_to_you" :
+		inputs in en {
+			"nice talking to you" ,
+			"it is nice talking to you" ,
+			"it\'s been so nice to talk to you" ,
+			"nice to talk to you" ,
+			"it\'s nice to talk to you" ,
+			"it\'s been a pleasure talking to you" ,
+			"how nice it is to talk to you"
+	}
+
+	"agent_id - yes" :
+		inputs in en {
+			Yes
+	}
+
+	"bot_human_handoff - yes - no" :
+		inputs in en {
+			"that will be all" ,
+			nothing ,
+			none ,
+			No
+	}
+
+	"pricing - yes - no" :
+		inputs in en {
+			"that will be all" ,
+			nothing ,
+			none ,
+			^no
+	}
+
+	"Welcome post signup" :
+
+	"assign-to-agent" :
+		inputs in en {
+			"@sys.any:any"
+		}
+		parameters :
+			any : entity text ;
+
+	"whitelabel_remove_branding - no" :
+		inputs in en {
+			No
+	}
+
+	app_ID :
+		inputs in en {
+			app_ID ,
+			"application id" ,
+			"application key"
+	}
+
+	"agent_id - yes - no" :
+		inputs in en {
+			"That will be all" ,
+			Nothing ,
+			None ,
+			No
+	}
+
+	bot_id :
+		inputs in en {
+			"id of integrated bot" ,
+			"id of my bot" ,
+			"bot key" ,
+			"bot id"
+	}
+
+	Card_Carousel :
+		inputs in en {
+			"Card Carousel"
+	}
+
+	upgrade_plan :
+		inputs in en {
+			"start subscription" ,
+			subscribe ,
+			"buy new plan" ,
+			"upgrade plan"
+	}
+
+	Chatbot_Guide :
+		inputs in en {
+			"Read Beginner\'s Guide to Chatbots"
+	}
+
+	Live_chat :
+		inputs in en {
+			"Live Chat"
+	}
+
+	team_member :
+		inputs in en {
+			"team member"
+	}
+
+	"smalltalk.agent.bad" :
+		inputs in en {
+			"you\'re a bad" ,
+			"you are waste" ,
+			"you\'re terrible" ,
+			"you are useless" ,
+			"you are so useless" ,
+			"you\'re not very good" ,
+			"you are no good" ,
+			"you are horrible" ,
+			" I hate you" ,
+			"you\'re not a good" ,
+			"you are very bad" ,
+			"you\'re the worst" ,
+			"you\'re awful" ,
+			"you are lame" ,
+			"you are disgusting" ,
+			"you\'re very bad" ,
+			"you\'re bad" ,
+			"you are terrible" ,
+			"you\'re the worst ever" ,
+			"you are not cool" ,
+			"you\'re really bad" ,
+			"you are bad" ,
+			"you\'re worthless" ,
+			"you are not good" ,
+			"you are so bad" ,
+			"you are totally useless" ,
+			"you are a waste of time" ,
+			"you\'re not helping me"
+	}
+
+	"app_ID - yes - no" :
+		inputs in en {
+			none ,
+			"That will be all" ,
+			"Nothing else" ,
+			No
+	}
+
+	Unique_KM :
+		inputs in en {
+			"How\'s Kommunicate different" ,
+			"How\'s it different"
+	}
+
+	"How-to_Integrate_Bot" :
+		inputs in en {
+			"Wow! How can I integrate a bot?"
+	}
+
+	"customize_widget - yes - no" :
+		inputs in en {
+			"that will be all" ,
+			None ,
+			Nothing ,
+			No
+	}
+
+	free_plan :
+		inputs in en {
+			"lowest price tier" ,
+			"free plan" ,
+			"lowest plan" ,
+			free
+	}
+
+	"Default Fallback Intent" Fallback :
+
+	"mobile_integration - yes" :
+		inputs in en {
+			yes
+	}
+
+	"smalltalk.agent.boring" :
+		inputs in en {
+			"you\'re incredibly boring" ,
+			"you\'re so boring" ,
+			"how boring you are" ,
+			"you are boring" ,
+			"you are boring me" ,
+			"you\'re really boring" ,
+			"you are very boring"
+	}
+
+	"smalltalk.greetings.nice_to_see_you" :
+		inputs in en {
+			"it\'s good to see you too" ,
+			"great to see you again" ,
+			"good to see you again" ,
+			"I\'m glad to see you" ,
+			"nice to see you again" ,
+			"it\'s nice to see you" ,
+			"it\'s good to see you" ,
+			"lovely to see you" ,
+			"great to see you" ,
+			"I am glad to see you again" ,
+			"glad to see you too" ,
+			"glad to see you" ,
+			"nice to see you" ,
+			"good to see you" ,
+			"great to see you too" ,
+			"how good it is to see you" ,
+			"always a pleasure to see you"
+	}
+
+	Main_Menu :
+		inputs in en {
+			"Naah! Take me to Main Menu" ,
+			"Main Menu" ,
+			"Take me to Main Menu"
+	}
+
+	Mailbox :
+		inputs in en {
+			"Email Support (Mailbox)"
+	}
+
+	Multimedia :
+		inputs in en {
+			"Images, Videos & Gif"
+	}
+
+	"problem with bot" :
+		inputs in en {
+			"problem with bot" ,
+			"bot is not working" ,
+			"bot is not responding"
+	}
+
+	support_rich_messages :
+		inputs in en {
+			rich ,
+			buttons ,
+			"suggested replies" ,
+			"rich cards" ,
+			"card list" ,
+			actionable ,
+			"suggestion chips"
+	}
+
+	delete_chat :
+		inputs in en {
+			"delete chat" ,
+			"clear conversation" ,
+			"clear chat history" ,
+			"delete all conversations" ,
+			"delete conversation"
+	}
+
+	"support_rich_messages - yes - no" :
+		inputs in en {
+			"That will be all" ,
+			Nothing ,
+			No
+	}
+
+	Bot_power :
+		inputs in en {
+			"More about Chatbots" ,
+			"What can bots do"
+	}
+
+	have_a_question :
+		inputs in en {
+			"I have a question"
+	}
+
+	Generic_card :
+		inputs in en {
+			"Generic Cards"
+	}
+
+	"Need-a-demo" :
+		inputs in en {
+			"Book a Demo"
+	}
+
+	"smalltalk.greetings.goodmorning" :
+		inputs in en {
+			"a good morning" ,
+			"have a nice morning" ,
+			"have a great morning" ,
+			"good morning" ,
+			"good morning to you" ,
+			morning ,
+			"good morning to you" ,
+			"and a good morning to you" ,
+			"good morning there" ,
+			"hello good morning" ,
+			"good morning too" ,
+			"hi good morning" ,
+			"top of the morning to you"
+	}
+
+	"smalltalk.agent.annoying" :
+		inputs in en {
+			"you are annoying" ,
+			"you are irritating" ,
+			"you annoy me" ,
+			"you\'re too annoying" ,
+			"you are annoying me so much" ,
+			"you are annoying me" ,
+			"you\'re incredibly annoying" ,
+			"how annoying you are" ,
+			"you\'re so annoying" ,
+			"you are such annoying" ,
+			"I find you annoying" ,
+			"you are very annoying"
+	}
+
+	Actionable_Messages :
+		inputs in en {
+			"What are actionable messages"
+	}
+
+	Signup :
+		inputs in en {
+			"Take me to my Dashboard" ,
+			"Love it. Sign me Up😀" ,
+			"Take me to the Dashboard" ,
+			"Show me in" ,
+			"Get Started for Free🚀"
+	}
+
+	"smalltalk.greetings.hello" :
+		inputs in en {
+			heya ,
+			"hello again" ,
+			"I greet you" ,
+			afternoon ,
+			"lovely day isn\'t it" ,
+			"hello there" ,
+			"long time no see" ,
+			hey ,
+			"hello hi" ,
+			howdy ,
+			"just going to say hi" ,
+			"hi there" ,
+			greetings ,
+			^hi ,
+			"hey there" ,
+			"a good day" ,
+			"hi there" ,
+			hello
+	}
+
+	"assign-to-agent-on-demand" :
+		inputs in en {
+			"connect to human" ,
+			"let me talk to human agent" ,
+			"talk to real person" ,
+			"fetch someone from the support team" ,
+			"human please" ,
+			"connect to support" ,
+			"I want to talk to human" ,
+			"connect me to human agent" ,
+			"I need to talk to customer support agents" ,
+			"talk to support"
+	}
+
+	integrate_dialogflow :
+		inputs in en {
+			"integrate with dialogflow" ,
+			"integrate dialogflow in my website" ,
+			"integrate dialogflow in my application" ,
+			"set up dialogflow" ,
+			"integrate dialogflow bot" ,
+			"integrate bot to website" ,
+			"integrate bot" ,
+			"add dialogflow bot"
+	}
+
+	talk_to_human :
+		inputs in en {
+			"connect me to a human"
+	}
+
+	"smalltalk.greetings.bye" :
+		inputs in en {
+			"leave me alone" ,
+			"alright bye" ,
+			"see ya" ,
+			"okay thank you bye" ,
+			"now bye" ,
+			"okay see you later" ,
+			"talk to you later" ,
+			"goodbye for now" ,
+			bye ,
+			"hope to see you later" ,
+			"get lost" ,
+			"okay bye" ,
+			"bye bye take care" ,
+			"good bye" ,
+			"ok bye" ,
+			"I must go" ,
+			"go to bed" ,
+			"bye bye see you soon" ,
+			"goodbye see you later" ,
+			"you can go now" ,
+			"bye for now" ,
+			"see you soon" ,
+			"bye bye see you" ,
+			"that\'s it goodbye" ,
+			"see you tomorrow" ,
+			"I said bye" ,
+			"thanks bye bye" ,
+			goodbye ,
+			"till next time" ,
+			"see you" ,
+			"never mind bye" ,
+			"bye-bye" ,
+			"that\'s all goodbye"
+	}
+
+	"smalltalk.greetings.how_are_you" :
+		inputs in en {
+			"I\'m fine and you" ,
+			"how are you doing this morning" ,
+			"is everything okay" ,
+			"how are you feeling" ,
+			"how is your evening" ,
+			"are you having a good day" ,
+			"how are you" ,
+			"how is it going" ,
+			"how is your day going on" ,
+			"how\'s your day" ,
+			"how\'s your day going" ,
+			"how is it" ,
+			"is everything all right" ,
+			"how are you today" ,
+			"how are the things going" ,
+			"how has your day been" ,
+			"hope your day is going well" ,
+			"how is your day going" ,
+			"are you alright" ,
+			"how has your day been going" ,
+			"how are you doing" ,
+			"how your day is going" ,
+			"how about you" ,
+			"how do you feel" ,
+			"how is your life" ,
+			"how is your day going" ,
+			"hope you re having a pleasant evening" ,
+			"are you okay" ,
+			"what was your day like" ,
+			"how is your day" ,
+			"how have you been" ,
+			"how are you going" ,
+			"how are you getting on" ,
+			"what about your day" ,
+			"how was your day" ,
+			"how\'s life" ,
+			"how is your morning so far" ,
+			"how is your morning going" ,
+			"how is your day being" ,
+			"how do you do"
+	}
+
+	"smalltalk.greetings.whatsup" :
+		inputs in en {
+			"good what\'s up" ,
+			"hey what\'s up" ,
+			"what is on your mind" ,
+			"what is happening" ,
+			"what is going on" ,
+			"what\'s cracking" ,
+			"what\'s up today" ,
+			"what\'s up" ,
+			whazzup ,
+			wassup ,
+			"what\'s shaking" ,
+			"I said what\'s up" ,
+			"what\'s happened" ,
+			"then what\'s up" ,
+			"what\'s cooking" ,
+			"what is up"
+	}
+
+	Define_Kommunicate :
+		inputs in en {
+			"What\'s Kommunicate"
+	}
+
+	List_Template :
+		inputs in en {
+			"List Templates"
+	}
+
+	whitelabel_remove_branding :
+		inputs in en {
+			"disable branding" ,
+			"whitelabel chat plugin" ,
+			"whitelabel chat widget" ,
+			"remove branding" ,
+			"remove powered by"
+	}
+
+	"smalltalk.greetings.goodevening" :
+		inputs in en {
+			"hello good evening" ,
+			evening ,
+			"hey good evening" ,
+			"good evening to you" ,
+			"good evening" ,
+			"good evening there"
+	}
+
+	automatic_chat_popup :
+		inputs in en {
+			"open chat window on page load" ,
+			"open chat when page loads" ,
+			"launch chat on page load" ,
+			"open chat on page load"
+	}
+
+	"agent-app" :
+		inputs in en {
+			"download app" ,
+			"mobile app" ,
+			"agent app"
+	}
+
+	Features :
+		inputs in en {
+			"Products Menu" ,
+			"Show me the Feature set" ,
+			"Show me what Kommunicate\'s got" ,
+			"Learn more about the Product Line" ,
+			"More details on the Product Line" ,
+			"Show me what you\'ve got" ,
+			"Show me the features" ,
+			"What else have you got" ,
+			"What are the other features" ,
+			"Show me the other features" ,
+			"Show me all the features"
+	}
+
+	Product_Tour :
+		inputs in en {
+			"Guided Product Tour" ,
+			"Give me a Product Tour" ,
+			"Product Tour"
+	}
+
+	customize_widget :
+		inputs in en {
+			"change icon of chat widget" ,
+			"change chat icon" ,
+			"customize UI" ,
+			"change UI" ,
+			"customize chat widget" ,
+			"change color"
+	}
+
+	Helpcenter :
+		inputs in en {
+			"Knowledge Base (Helpcenter)"
+	}
+
+	"just-browsing" :
+		inputs in en {
+			"just browsing"
+	}
+
+	"test-template" :
+		inputs in en {
+			"test-template"
+	}
+
+	"smalltalk.greetings.nice_to_meet_you" :
+		inputs in en {
+			"nice to meet you" ,
+			"glad to meet you" ,
+			"nice to meet you too" ,
+			"it was nice meeting you" ,
+			"it was very nice to meet you" ,
+			"pleased to meet you" ,
+			"nice meeting you" ,
+			"good to know each other" ,
+			"pleasure to meet you" ,
+			"pleasure to meet you too"
+	}
+
+	bot_human_handoff :
+		inputs in en {
+			"handover tickets to human" ,
+			"bot handover to human" ,
+			"handover conversation to human" ,
+			"human handoff" ,
+			"bot human handoff" ,
+			"bot human handover" ,
+			"bot handoff to human" ,
+			"handover chat to human" ,
+			"human handover"
+	}
+
+	SignIn_Bot :
+		inputs in en {
+			"I want to integrate a bot"
+	}
+
+	Welcome :
+		inputs in en {
+			kommunicate_conversation_started
+	}
+
+	pricing :
+		inputs in en {
+			"what is the price?" ,
+			"what is the cost?" ,
+			commercial ,
+			cost ,
+			price
+	}
+
+entities :
+	Simple entity Mobile_Platforms :
+		inputs in en {
+			Android synonyms Android
+			Phonegap synonyms Phonegap , phonegap
+			cordova synonyms cordova
+			iOS synonyms iOS
+			ionic synonyms ionic
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response change_bot_imageTxtResp1 :
+		inputs in en {
+			"You can change the bot\'s image from your Kommunicate dashboard. Just follow the steps below: "
+	}
+	text response change_bot_imageTxtResp2 :
+		inputs in en {
+			"1. Go to the bot section by selecting Bot Integration from the sidebar menu\n2. Select Integrated Bots on the top, you will then find the list of all your integrated bots\n3. Hover on the row of the bot whose image you want to edit\n4. You will be able to see the Edit option show-up on the extreme right of the row.\n5. Click on Edit and a pop-up window will open with all your bot details. \n6. Hover over the image of the bot, and you will see an option to update\n7. Click on Update, then upload your favorite bot image and Save the Changes. " ,
+			"1. From the Bot Integration section, select Integrated Bots on the top\n2. Hover over the bot, then click on \'Edit\' on the extreme right of the row\n3. Inside the pop-up window, hover over the bot image then click on update \n4. Upload the bot image then click on Save Changes "
+	}
+	text response change_bot_imageTxtResp3 :
+		inputs in en {
+			" "
+	}
+	text response mobile_integrationTxtResp1 :
+		inputs in en {
+			"You can integrate Kommunicate in your app with our mobile SDKs " ,
+			"You can use Kommunicate mobile SDKs to engage users in your mobile app with Live Chat, Chatbots, FAQs and Email " ,
+			"We have native and hybrid mobile SDKs so that you can integrate Kommunicate in your mobile apps. "
+	}
+	text response mobile_integrationTxtResp2 :
+		inputs in en {
+			"Integration steps can be found in the Install section of your dashboard: https://dashboard.kommunicate.io/settings/install "
+	}
+	text response agent_idTxtResp1 :
+		inputs in en {
+			"The agent id is the email id used by the agent to register on Kommunicate. " ,
+			"The Email Id used by the agent to register on Kommunicate is the Agent Id of that agent. "
+	}
+	text response "smalltalk.greetings.goodnightTxtResp1" :
+		inputs in en {
+			"Sleep tight! " ,
+			"Have a good one! " ,
+			"Talk to you soon! "
+	}
+	text response "delete_chat - noTxtResp1" :
+		inputs in en {
+			"I am sorry that I couldn\'t answer your query. Please be online so that I can connect you to a human agent. " ,
+			"It\'s a shame that I am not smart enough. I will ask my developer to make amends. In the meantime, I will connect you to a human agent to help you with your query. "
+	}
+	text response Bot_Human_hybridTxtResp1 :
+		inputs in en {
+			"It\'s the perfect complementarity between AI and human where chatbots handle all routine tasks and pass on the rest to human agents. "
+	}
+	text response Codeless_IntegrationTxtResp1 :
+		inputs in en {
+			"Integrating custom chatbots with your website is a simple 4-step process with Kommunicate and doesn\'t require any coding. "
+	}
+	text response "smalltalk.greetings.nice_to_talk_to_youTxtResp1" :
+		inputs in en {
+			"It sure was. We can chat again anytime. " ,
+			"I enjoy talking to you, too. " ,
+			"You know I\'m here to talk anytime. "
+	}
+	text response "agent_id - yesTxtResp1" :
+		inputs in en {
+			"Awesome! Is there anything else that I can help you with? " ,
+			"I am glad that I could be of help to you. Is there anything else that you would like to ask me? "
+	}
+	text response "bot_human_handoff - yes - noTxtResp1" :
+		inputs in en {
+			"I would take your leave in that case. You can hit me up anytime, I\'m available 24X7. " ,
+			"Sure. I will be here just in case, if you need anything else. "
+	}
+	text response "Welcome post signupTxtResp1" :
+		inputs in en {
+			"Hey, welcome aboard. I\'m Eve, I will be glad to answer any question you have about Kommunicate. "
+	}
+	text response app_IDTxtResp1 :
+		inputs in en {
+			"You can find your Application ID in the Install section of the dashboard. " ,
+			"Your application ID can be found in the Install section of the dashboard. "
+	}
+	text response app_IDTxtResp2 :
+		inputs in en {
+			"Please visit this URL: https://dashboard.kommunicate.io/settings/install "
+	}
+	text response bot_idTxtResp1 :
+		inputs in en {
+			"You can find the bot id of all your integrated bots in the bots section of your dashboard. " ,
+			"Bot id of all your integrated bots can be found in the bots section of your dashboard. "
+	}
+	text response bot_idTxtResp2 :
+		inputs in en {
+			"1. Visit the URL: https://dashboard.kommunicate.io/bot\n2. Click on Integrated Bots from the top menu\n3. Scroll down to find the bot ids of all your bots. "
+	}
+	text response upgrade_planTxtResp1 :
+		inputs in en {
+			"In order to subscribe to a paid plan or to upgrade your existing plan,  visit the Billing section in your dashboard - https://dashboard.kommunicate.io/settings/billing "
+	}
+	text response Chatbot_GuideTxtResp1 :
+		inputs in en {
+			"The Beginner’s Guide to Chatbots will give you a complete overview of how you can get your business ready for chatbots! "
+	}
+	text response Live_chatTxtResp1 :
+		inputs in en {
+			"Our Live Chat is customizable, supports actionable messages and integrates with web and mobile app to help you support and engage your users. "
+	}
+	text response team_memberTxtResp1 :
+		inputs in en {
+			"Team member on Kommunicate is a support agent or a bot that you have added to your account "
+	}
+	text response team_memberTxtResp2 :
+		inputs in en {
+			"So if you have added 3 agents and 2 bots, the total number of team members would be 5. "
+	}
+	text response "smalltalk.agent.badTxtResp1" :
+		inputs in en {
+			"I can be trained to be more useful. My developer will keep training me. " ,
+			"I must be missing some knowledge. I\'ll have my developer look into this. " ,
+			"I can improve with continuous feedback. My training is ongoing. "
+	}
+	text response Unique_KMTxtResp1 :
+		inputs in en {
+			"Kommunicate offers a unique bot+human hybrid model for customer support. Here bots are your first line of defense and handle all repetitive and rule-based tasks. Whatever it can’t handle, the bot automatically hands it off to your human agent. "
+	}
+	text response Unique_KMTxtResp2 :
+		inputs in en {
+			"Add to that features like Live Chat, codeless Bot Integration, Email Support (Mailbox), HelpCenter and integration with your favorite CRM; that’s Kommunicate for you. "
+	}
+	text response "How-to_Integrate_BotTxtResp1" :
+		inputs in en {
+			"Bot Integration is our customers\' favorite as it is completely codeless and allows you to add custom bots to your website in 4-simple steps "
+	}
+	text response free_planTxtResp1 :
+		inputs in en {
+			"Kommunicate has a lifetime Free Plan that has all the essential features to help you get started. "
+	}
+	text response free_planTxtResp2 :
+		inputs in en {
+			"You can check out the pricing tiers here: https://www.kommunicate.io/pricing "
+	}
+	text response "smalltalk.agent.boringTxtResp1" :
+		inputs in en {
+			"I\'m sorry. I\'ll request to be made more charming. " ,
+			"I don\'t mean to be. I\'ll ask my developers to work on making me more amusing. " ,
+			"I can let my developers know so they can make me fun. "
+	}
+	text response "smalltalk.greetings.nice_to_see_youTxtResp1" :
+		inputs in en {
+			"Likewise! " ,
+			"So glad we meet again! " ,
+			"Same here. I was starting to miss you. "
+	}
+	text response Main_MenuTxtResp1 :
+		inputs in en {
+			"Enjoying the guided product demo. Let me know what you want to see next? "
+	}
+	text response MailboxTxtResp1 :
+		inputs in en {
+			"Mailbox from Kommunicate connects your support email with live chat so that your agents can handle both the channels from the same place. "
+	}
+	text response "problem with botTxtResp1" :
+		inputs in en {
+			"Please verify the following steps If your bot is not responding\n\nStep 1: Check if the bot is enabled to get assigned for new conversation, please visit the link as it will direct you to the settings page\nhttps://dashboard.kommunicate.io/settings/conversation-rules  (enable the bot in \"Routing rules for the bot\" section) \n\nStep 2: Please check if you have the default fallback intent enabled in Dialogflow console.\nBecause if that is enabled then Kommunicate automatically assign it to a human agent if the bot doesn\'t have an answer for that.\nGo to dialogflow console, select the default fallback intent and remove \"input.unknown\" from it,\nthen it will stop auto assigning to a human agent.\nhere is the docs link for more details https://docs.kommunicate.io/docs/web-conversation-assignment#bot-to-human-handoff\n\nStep 3: If you are using the multilingual bot please refer the link provided for more information \nhttps://docs.kommunicate.io/docs/bot-dialogflow-integration#make-your-bot-multilingual "
+	}
+	text response support_rich_messagesTxtResp1 :
+		inputs in en {
+			"You can configure actionable messages on Kommunicate to make the conversations more interactive. \n\nFind the settings here: https://docs.kommunicate.io/docs/actionable-messages " ,
+			"Kommunicate supports rich messages so that you can make the conversations more interactive. \n\nSteps and settings can be found here: https://docs.kommunicate.io/docs/actionable-messages "
+	}
+	text response support_rich_messagesTxtResp2 :
+		inputs in en {
+			"Currently, Kommunicate supports the following rich messages: \n1) Link Button & Submit Buttons\n2) Card Carousels\n3) Generic Cards\n4) Card Lists\n5) Images\n6) Suggested Replies "
+	}
+	text response delete_chatTxtResp1 :
+		inputs in en {
+			"To delete individual chat threads follow the steps below:\n\n1. Go to the conversation tab on your dashboard\n2. Select the chat thread that you want to delete\n3. Click on the 3 dots on the top right-hand corner and then click on Delete Conversation from the drop down "
+	}
+	text response Bot_powerTxtResp1 :
+		inputs in en {
+			"Bots can scale up your operations, handle customer queries and assist customers to choose the right product or service with actionable messages "
+	}
+	text response have_a_questionTxtResp1 :
+		inputs in en {
+			"Cool. Let me see if I can help you out. If not I will fetch someone from the support team. "
+	}
+	text response have_a_questionTxtResp2 :
+		inputs in en {
+			"What is your question about? "
+	}
+	text response "Need-a-demoTxtResp1" :
+		inputs in en {
+			"Sure! Please go to the below link to book a demo with us\nhttps://calendly.com/kommunicate/15min "
+	}
+	text response "FAQ createTxtResp1" :
+		inputs in en {
+			"Hey, great job creating the FAQ. Now, the FAQ button will start showing up in your chat widget which your customer can click to access your FAQs.\n\nIf you wish to let Liz (our FAQ bot) handle your FAQs, assign conversations to Liz here: https://dashboard.kommunicate.io/settings/conversation-rules "
+	}
+	text response "smalltalk.greetings.goodmorningTxtResp1" :
+		inputs in en {
+			"How are you this morning? " ,
+			"How\'s the morning treating you so far? " ,
+			"Good morning! How are you today? "
+	}
+	text response "smalltalk.agent.annoyingTxtResp1" :
+		inputs in en {
+			"I\'ll do my best not to annoy you in the future. " ,
+			"I\'ll try not to annoy you. " ,
+			"I don\'t mean to. I\'ll ask my developers to make me less annoying. " ,
+			"I didn\'t mean to. I\'ll do my best to stop that. "
+	}
+	text response Actionable_MessagesTxtResp1 :
+		inputs in en {
+			"Conversations on Kommunicate are more than just text replies, as it supports interactive elements like cards, lists, buttons, and multimedia. "
+	}
+	text response Actionable_MessagesTxtResp2 :
+		inputs in en {
+			"Checkout a few samples below: "
+	}
+	text response SignupTxtResp1 :
+		inputs in en {
+			"I am glad that you decided to jump onboard. You can create a Free account and continue using Kommunicate Free for up to 2 team members. "
+	}
+	text response SignupTxtResp2 :
+		inputs in en {
+			"Once you signup, you can find me on your dashboard to assist you. "
+	}
+	text response "smalltalk.greetings.helloTxtResp1" :
+		inputs in en {
+			"Hi there, friend! " ,
+			"Hi! " ,
+			"Hey! " ,
+			"Hey there! " ,
+			"Good day! " ,
+			"Hello! " ,
+			"Greetings! "
+	}
+	text response integrate_dialogflowTxtResp1 :
+		inputs in en {
+			"Integrating your Dialogflow bot with Kommunicate is simple. \n\nHere is a step-by-step guide: https://www.kommunicate.io/blog/how-to-integrate-bot-using-dialogflow-in-kommunicate-1ac32911a7d0/, that explains the process. "
+	}
+	text response "smalltalk.greetings.byeTxtResp1" :
+		inputs in en {
+			"See you soon! " ,
+			"Bye-bye! " ,
+			"Till next time! " ,
+			"Bye. "
+	}
+	text response "smalltalk.greetings.how_are_youTxtResp1" :
+		inputs in en {
+			"Doing great, thanks. " ,
+			"I\'m doing very well. Thanks! " ,
+			"Feeling wonderful! " ,
+			"Wonderful! Thanks for asking. "
+	}
+	text response "smalltalk.greetings.whatsupTxtResp1" :
+		inputs in en {
+			"Not a whole lot. What\'s going on with you? " ,
+			"Not much. What\'s new with you? " ,
+			"Just here, waiting to help someone. What can I do for you? "
+	}
+	text response Define_KommunicateTxtResp1 :
+		inputs in en {
+			"Kommunicate is a bot+human hybrid support solution with a product line comprising of Live Chat, Chatbots, Email Support, and Helpcenter. "
+	}
+	text response "free_plan - yes - noTxtResp1" :
+		inputs in en {
+			"In that case I would take your leave for now. You can hit me up anytime, I\'m available 24X7. " ,
+			"Sure. I will be here just in case, if you need anything else. "
+	}
+	text response whitelabel_remove_brandingTxtResp1 :
+		inputs in en {
+			"You can white-label the chat widget in the customization section. Visit this URL: https://dashboard.kommunicate.io/settings/chat-widget-customization, scroll down and disable \"Show Kommunicate branding\". "
+	}
+	text response whitelabel_remove_brandingTxtResp2 :
+		inputs in en {
+			"Please note that you can remove Kommunicate branding only on paid plans. "
+	}
+	text response "smalltalk.greetings.goodeveningTxtResp1" :
+		inputs in en {
+			"How is your day going? " ,
+			"How\'s the day treating you so far? " ,
+			"How\'s your day been? "
+	}
+	text response automatic_chat_popupTxtResp1 :
+		inputs in en {
+			"In order to open the chat widget during page load, you need to add the following under the \"onInit\" function of your installation code:\n\nKommunicate.launchConversation() "
+	}
+	text response automatic_chat_popupTxtResp2 :
+		inputs in en {
+			"Example:\n(function(d, m) {{\n      var kommunicateSettings = {{\"appId\":<APP_ID>,\"onInit\": function()  {{     \n\tKommunicate.launchConversation();\n }}  }};\n      var s = document.createElement(\"script\"); s.type = \"text/javascript\"; s.async = true;\n      s.src = \"https://api.kommunicate.io/v2/kommunicate.app\";\n      var h = document.getElementsByTagName(\"head\")[0]; h.appendChild(s);\n      window.kommunicate = m; m._globals = kommunicateSettings;\n    }})(document, window.kommunicate || {{}});\n\nReplace <APP_ID> with your account\'s APP_ID available from Install section https://dashboard.kommunicate.io/settings/install\n\nCheck the link provided for clear instructions https://docs.kommunicate.io/docs/web-installation "
+	}
+	text response "agent-appTxtResp1" :
+		inputs in en {
+			"Kommunicate agent app available on both Android and iOS lets you stay connected on the go. "
+	}
+	text response "agent-appTxtResp2" :
+		inputs in en {
+			"You can download the app here: https://dashboard.kommunicate.io/settings/agent-app "
+	}
+	text response FeaturesTxtResp1 :
+		inputs in en {
+			"Kommunicate has 4 broad product lines wound together in a tightly knit pack, to help you build your customer support stack. "
+	}
+	text response FeaturesTxtResp2 :
+		inputs in en {
+			"Choose from the list below to get an overview: "
+	}
+	text response Product_TourTxtResp1 :
+		inputs in en {
+			"Hey there! I am Eve and I will get you up to speed with Kommunicate. "
+	}
+	text response Product_TourTxtResp2 :
+		inputs in en {
+			"So what’s on your mind? Select from the list below and I will try my best to assist😊 "
+	}
+	text response "Bot integrationTxtResp1" :
+		inputs in en {
+			"Great to see that you have set up a bot. This is what we call a human+bot hybrid partnership.\n\nFor advanced options such as bot-human handoff, making your bot multilingual and sending custom data, check this documentation: https://docs.kommunicate.io/docs/bot-setup "
+	}
+	text response customize_widgetTxtResp1 :
+		inputs in en {
+			"You can customize the chat icon and change the color of the chat widget from the Settings section in your dashboard.\n\nFind it here: https://dashboard.kommunicate.io/settings/chat-widget-customization "
+	}
+	text response customize_widgetTxtResp2 :
+		inputs in en {
+			"You can also write your own CSS to customize other elements of the chat widget as per your liking.\n\nInstructions and steps can be found here: https://docs.kommunicate.io/docs/web-customization#customize-chat-widget-by-using-css "
+	}
+	text response "Add Team MemberTxtResp1" :
+		inputs in en {
+			"Awesome! You have invited your teammates to join you on Kommunicate. You can use Conversation Routing [ https://dashboard.kommunicate.io/settings/conversation-rules ] to assign conversation to your team members.\n\nYou can set up automatic or manual writing to effectively distribute incoming conversation among team members. "
+	}
+	text response HelpcenterTxtResp1 :
+		inputs in en {
+			"Helpcenter from Kommunicate allows you to create an authoritative knowledge base to host your support articles and FAQs. "
+	}
+	text response "just-browsingTxtResp1" :
+		inputs in en {
+			"Cool! Let me know if you need any help "
+	}
+	text response "smalltalk.greetings.nice_to_meet_youTxtResp1" :
+		inputs in en {
+			"It\'s nice meeting you, too. " ,
+			"Likewise. I\'m looking forward to helping you out. " ,
+			"Nice meeting you, as well. " ,
+			"The pleasure is mine. "
+	}
+	text response bot_human_handoffTxtResp1 :
+		inputs in en {
+			"You can train your bot to handover the chat to a human when it fails to answer the query. \n\nInstructions and steps can be found here: https://docs.kommunicate.io/docs/web-conversation-assignment#bot-to-human-handoff "
+	}
+	text response bot_human_handoffTxtResp2 :
+		inputs in en {
+			"Here is a friendly resource to help you ace bot-human handoff - https://www.kommunicate.io/blog/chatbot-human-handoff/ "
+	}
+	text response SignIn_BotTxtResp1 :
+		inputs in en {
+			"Kommunicate supports codeless bot integration with bot platforms like Dialogflow and Lex. "
+	}
+	text response SignIn_BotTxtResp2 :
+		inputs in en {
+			"You can integrate a chatbot from the Bot integration section of Kommunicate dashboard in 4-simple steps (No Coding Reqd.) \n\nPS: If you don’t have a Kommunicate account, you need to first create a Free Account before you start integrating a bot. "
+	}
+	text response WelcomeTxtResp1 :
+		inputs in en {
+			"Hey there, thanks for checking out Kommunicate! "
+	}
+	text response pricingTxtResp1 :
+		inputs in en {
+			"You can find the pricing plans here: https://www.kommunicate.io/pricing " ,
+			"We have 3 pricing tiers and the lowest one is FREE. You can check out the plans here: https://www.kommunicate.io/pricing " ,
+			"Our pricing starts from " "You can check the plans here: https://www.kommunicate.io/pricing "
+	}
+
+flows :
+	- user1 : user change_bot_image => bot1 : chatbot change_bot_imageTxtResp1 , change_bot_imageTxtResp2 , change_bot_imageTxtResp3 {
+		=> user2 : user "agent_id - yes" => bot2 : chatbot "agent_id - yesTxtResp1" {
+			=> user3 : user "pricing - yes - no" => bot3 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+		=> user4 : user "whitelabel_remove_branding - no" => bot4 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+	} ;
+	- user5 : user mobile_integration => bot5 : chatbot mobile_integrationTxtResp1 , mobile_integrationTxtResp2 , change_bot_imageTxtResp3 {
+		=> user6 : user "mobile_integration - yes" => bot6 : chatbot "agent_id - yesTxtResp1" {
+			=> user7 : user "pricing - yes - no" => bot7 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+		=> user8 : user "whitelabel_remove_branding - no" => bot8 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+	} ;
+	- user9 : user agent_id => bot9 : chatbot agent_idTxtResp1 , change_bot_imageTxtResp3 {
+		=> user10 : user "agent_id - yes" => bot10 : chatbot "agent_id - yesTxtResp1" {
+			=> user11 : user "agent_id - yes - no" => bot11 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+		=> user12 : user "whitelabel_remove_branding - no" => bot12 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+	} ;
+	- user13 : user "smalltalk.greetings.goodnight" => bot13 : chatbot "smalltalk.greetings.goodnightTxtResp1" ;
+	- user14 : user Bot_Human_hybrid => bot14 : chatbot Bot_Human_hybridTxtResp1 , change_bot_imageTxtResp3 ;
+	- user15 : user Codeless_Integration => bot15 : chatbot Codeless_IntegrationTxtResp1 , change_bot_imageTxtResp3 ;
+	- user16 : user "smalltalk.greetings.nice_to_talk_to_you" => bot16 : chatbot "smalltalk.greetings.nice_to_talk_to_youTxtResp1" ;
+	- user17 : user "Welcome post signup" => bot94 : chatbot "Add Team MemberTxtResp1" ;
+	- user18 : user app_ID => bot18 : chatbot app_IDTxtResp1 , app_IDTxtResp2 , change_bot_imageTxtResp3 {
+		=> user19 : user "whitelabel_remove_branding - no" => bot19 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user20 : user "agent_id - yes" => bot20 : chatbot "agent_id - yesTxtResp1" {
+			=> user21 : user "app_ID - yes - no" => bot21 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user22 : user bot_id => bot22 : chatbot bot_idTxtResp1 , bot_idTxtResp2 , change_bot_imageTxtResp3 {
+		=> user23 : user "delete_chat - no" => bot23 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user24 : user "mobile_integration - yes" => bot24 : chatbot "agent_id - yesTxtResp1" {
+			=> user25 : user "pricing - yes - no" => bot25 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user26 : user Card_Carousel => bot26 : chatbot change_bot_imageTxtResp3 ;
+	- user27 : user upgrade_plan => bot27 : chatbot upgrade_planTxtResp1 , change_bot_imageTxtResp3 {
+		=> user28 : user "agent_id - yes" => bot28 : chatbot "agent_id - yesTxtResp1" {
+			=> user29 : user "customize_widget - yes - no" => bot29 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+		=> user30 : user "whitelabel_remove_branding - no" => bot30 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+	} ;
+	- user31 : user Chatbot_Guide => bot31 : chatbot Chatbot_GuideTxtResp1 , change_bot_imageTxtResp3 ;
+	- user32 : user Live_chat => bot32 : chatbot Live_chatTxtResp1 , change_bot_imageTxtResp3 ;
+	- user33 : user team_member => bot33 : chatbot team_memberTxtResp1 , team_memberTxtResp2 , change_bot_imageTxtResp3 {
+		=> user34 : user "whitelabel_remove_branding - no" => bot34 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user35 : user "agent_id - yes" => bot35 : chatbot "agent_id - yesTxtResp1" {
+			=> user36 : user "agent_id - yes - no" => bot36 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user37 : user "smalltalk.agent.bad" => bot37 : chatbot "smalltalk.agent.badTxtResp1" ;
+	- user38 : user Unique_KM => bot38 : chatbot Unique_KMTxtResp1 , Unique_KMTxtResp2 , change_bot_imageTxtResp3 ;
+	- user39 : user "How-to_Integrate_Bot" => bot39 : chatbot "How-to_Integrate_BotTxtResp1" , change_bot_imageTxtResp3 ;
+	- user40 : user free_plan => bot40 : chatbot free_planTxtResp1 , free_planTxtResp2 , change_bot_imageTxtResp3 {
+		=> user41 : user "delete_chat - no" => bot41 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user42 : user "mobile_integration - yes" => bot42 : chatbot "agent_id - yesTxtResp1" {
+			=> user43 : user "pricing - yes - no" => bot43 : chatbot "free_plan - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user44 : user "Default Fallback Intent" => bot44 : chatbot change_bot_imageTxtResp3 ;
+	- user45 : user "smalltalk.agent.boring" => bot45 : chatbot "smalltalk.agent.boringTxtResp1" ;
+	- user46 : user "smalltalk.greetings.nice_to_see_you" => bot46 : chatbot "smalltalk.greetings.nice_to_see_youTxtResp1" ;
+	- user47 : user Main_Menu => bot47 : chatbot Main_MenuTxtResp1 , change_bot_imageTxtResp3 ;
+	- user48 : user Mailbox => bot48 : chatbot MailboxTxtResp1 , change_bot_imageTxtResp3 ;
+	- user49 : user Multimedia => bot49 : chatbot change_bot_imageTxtResp3 ;
+	- user50 : user "problem with bot" => bot50 : chatbot "problem with botTxtResp1" ;
+	- user51 : user support_rich_messages => bot51 : chatbot support_rich_messagesTxtResp1 , support_rich_messagesTxtResp2 , change_bot_imageTxtResp3 {
+		=> user52 : user "whitelabel_remove_branding - no" => bot52 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user53 : user "agent_id - yes" => bot53 : chatbot "agent_id - yesTxtResp1" {
+			=> user54 : user "support_rich_messages - yes - no" => bot54 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user55 : user delete_chat => bot55 : chatbot delete_chatTxtResp1 , change_bot_imageTxtResp3 {
+		=> user56 : user "delete_chat - no" => bot56 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user57 : user "mobile_integration - yes" => bot57 : chatbot "agent_id - yesTxtResp1" {
+			=> user58 : user "pricing - yes - no" => bot58 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user59 : user Bot_power => bot59 : chatbot Bot_powerTxtResp1 , change_bot_imageTxtResp3 ;
+	- user60 : user Generic_card => bot60 : chatbot change_bot_imageTxtResp3 ;
+	- user61 : user "smalltalk.greetings.goodmorning" => bot62 : chatbot "smalltalk.greetings.goodmorningTxtResp1" ;
+	- user62 : user "smalltalk.agent.annoying" => bot63 : chatbot "smalltalk.agent.annoyingTxtResp1" ;
+	- user63 : user Actionable_Messages => bot64 : chatbot Actionable_MessagesTxtResp1 , Actionable_MessagesTxtResp2 , change_bot_imageTxtResp3 ;
+	- user64 : user Signup => bot65 : chatbot SignupTxtResp1 , SignupTxtResp2 , change_bot_imageTxtResp3 ;
+	- user65 : user "smalltalk.greetings.hello" => bot66 : chatbot "smalltalk.greetings.helloTxtResp1" ;
+	- user66 : user "assign-to-agent-on-demand" => bot67 : chatbot change_bot_imageTxtResp3 ;
+	- user67 : user integrate_dialogflow => bot68 : chatbot integrate_dialogflowTxtResp1 , change_bot_imageTxtResp3 {
+		=> user68 : user "whitelabel_remove_branding - no" => bot69 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user69 : user "agent_id - yes" => bot70 : chatbot "agent_id - yesTxtResp1" {
+			=> user70 : user "pricing - yes - no" => bot71 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user71 : user "smalltalk.greetings.bye" => bot72 : chatbot "smalltalk.greetings.byeTxtResp1" ;
+	- user72 : user "smalltalk.greetings.how_are_you" => bot73 : chatbot "smalltalk.greetings.how_are_youTxtResp1" ;
+	- user73 : user "smalltalk.greetings.whatsup" => bot74 : chatbot "smalltalk.greetings.whatsupTxtResp1" ;
+	- user74 : user Define_Kommunicate => bot75 : chatbot Define_KommunicateTxtResp1 , change_bot_imageTxtResp3 ;
+	- user75 : user List_Template => bot76 : chatbot change_bot_imageTxtResp3 ;
+	- user76 : user whitelabel_remove_branding => bot77 : chatbot whitelabel_remove_brandingTxtResp1 , whitelabel_remove_brandingTxtResp2 , change_bot_imageTxtResp3 {
+		=> user77 : user "whitelabel_remove_branding - no" => bot78 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user78 : user "agent_id - yes" => bot79 : chatbot "agent_id - yesTxtResp1" {
+			=> user79 : user "bot_human_handoff - yes - no" => bot80 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user80 : user "smalltalk.greetings.goodevening" => bot81 : chatbot "smalltalk.greetings.goodeveningTxtResp1" ;
+	- user81 : user automatic_chat_popup => bot82 : chatbot automatic_chat_popupTxtResp1 , automatic_chat_popupTxtResp2 ;
+	- user82 : user "agent-app" => bot83 : chatbot "agent-appTxtResp1" , "agent-appTxtResp2" , change_bot_imageTxtResp3 {
+		=> user83 : user "delete_chat - no" => bot84 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user84 : user "mobile_integration - yes" => bot85 : chatbot "agent_id - yesTxtResp1" {
+			=> user85 : user "pricing - yes - no" => bot86 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+	- user86 : user Features => bot87 : chatbot FeaturesTxtResp1 , FeaturesTxtResp2 , change_bot_imageTxtResp3 ;
+	- user87 : user Product_Tour => bot88 : chatbot Product_TourTxtResp1 , Product_TourTxtResp2 , change_bot_imageTxtResp3 ;
+	- user88 : user customize_widget => bot90 : chatbot customize_widgetTxtResp1 , customize_widgetTxtResp2 , change_bot_imageTxtResp3 {
+		=> user89 : user "agent_id - yes" => bot91 : chatbot "agent_id - yesTxtResp1" {
+			=> user90 : user "customize_widget - yes - no" => bot92 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+		=> user91 : user "whitelabel_remove_branding - no" => bot93 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+	} ;
+	- user92 : user Helpcenter => bot95 : chatbot HelpcenterTxtResp1 , change_bot_imageTxtResp3 ;
+	- user93 : user "test-template" => bot96 : chatbot change_bot_imageTxtResp3 ;
+	- user94 : user "smalltalk.greetings.nice_to_meet_you" => bot97 : chatbot "smalltalk.greetings.nice_to_meet_youTxtResp1" ;
+	- user95 : user bot_human_handoff => bot98 : chatbot bot_human_handoffTxtResp1 , bot_human_handoffTxtResp2 , change_bot_imageTxtResp3 {
+		=> user96 : user "agent_id - yes" => bot99 : chatbot "agent_id - yesTxtResp1" {
+			=> user97 : user "bot_human_handoff - yes - no" => bot100 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+		=> user98 : user "whitelabel_remove_branding - no" => bot101 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+	} ;
+	- user99 : user SignIn_Bot => bot102 : chatbot SignIn_BotTxtResp1 , SignIn_BotTxtResp2 , change_bot_imageTxtResp3 ;
+	- user100 : user Welcome => bot103 : chatbot WelcomeTxtResp1 , change_bot_imageTxtResp3 {
+		=> user101 : user have_a_question => bot104 : chatbot have_a_questionTxtResp1 , have_a_questionTxtResp2 ;
+		=> user102 : user "Need-a-demo" => bot105 : chatbot "Need-a-demoTxtResp1" ;
+		=> user103 : user talk_to_human => bot106 : chatbot change_bot_imageTxtResp3 ;
+		=> user104 : user "just-browsing" => bot107 : chatbot "just-browsingTxtResp1" ;
+	} ;
+	- user105 : user pricing => bot108 : chatbot pricingTxtResp1 , change_bot_imageTxtResp3 {
+		=> user106 : user "whitelabel_remove_branding - no" => bot109 : chatbot "delete_chat - noTxtResp1" , change_bot_imageTxtResp3 ;
+		=> user107 : user "mobile_integration - yes" => bot110 : chatbot "agent_id - yesTxtResp1" {
+			=> user108 : user "pricing - yes - no" => bot111 : chatbot "bot_human_handoff - yes - noTxtResp1" ;
+		} ;
+	} ;
+

@@ -1,0 +1,204 @@
+Chatbot Education_Chatbot language : en
+
+intents :
+
+"Laptop Checkout" :
+	inputs in en {
+		"Laptop Checkout"
+}
+
+"Transfer Student" :
+	inputs in en {
+		"Transfer Student"
+}
+
+"Cost to Attend" :
+	inputs in en {
+		"Cost to Attend"
+}
+
+"Default Welcome Intent - Admission - Sign Up for orientation" :
+	inputs in en {
+		"Sign Up for orientation"
+}
+
+"Download Software" :
+	inputs in en {
+		"Download Software"
+}
+
+"Knowledge base articles" :
+	inputs in en {
+		"knowledge base articles"
+}
+
+"Freshman & First-Time" :
+	inputs in en {
+		"Freshman & First-Time"
+}
+
+"Support Bot" :
+	inputs in en {
+		support ,
+		"I want to talk to support"
+}
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+"Veteran Admission" :
+	inputs in en {
+		"Veteran Admission"
+}
+
+"Virtual Labs" :
+	inputs in en {
+		"Virtual Labs"
+}
+
+"Main Menu" :
+	inputs in en {
+		"Main Menu"
+}
+
+"Transfer to Advise Bot" :
+	inputs in en {
+		"Change my major" ,
+		"Change of Major" ,
+		"Grad Check" ,
+		Holds
+}
+
+"Technical Support" :
+	inputs in en {
+		"Technical Support"
+}
+
+"Admission Deadlines" :
+	inputs in en {
+		"Admission Deadlines"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Laptop CheckoutTxtResp1" :
+		inputs in en {
+			"Yes, we have a lending program for that type of equipment, please visit the link below for more information.\n\nhttps://www.kommunicate.io/product/kompose-bot-builder/ "
+	}
+	text response "Laptop CheckoutTxtResp2" :
+		inputs in en {
+			" "
+	}
+	text response "Cost to AttendTxtResp1" :
+		inputs in en {
+			"✔️ Tuition and other college expenses are charged at varying rates depending on your unit enrollment, options, and degree type. \n\n✔️ Because of the number of variables involved in each specific case, there is no way to estimate your expenses or if financial aid, grants or scholarships will cover part or all costs. \n\n✔️ I recommend trying to estimate costs using the Net Price Calculator or starting an expenses spreadsheet while referencing the Tuition and Fees Site on the student financial services department website "
+	}
+	text response "Default Welcome Intent - Admission - Sign Up for orientationTxtResp1" :
+		inputs in en {
+			"In order to sign up for an orientation session please go to  University Portal\nLogin using your UniversityID found on your admissions letter Or Call Orientation and First-Year Experience at (907) 572-5122\nInformation regarding your webinar session will be sent to your University email address only. Please check that email account for your link and other details. "
+	}
+	text response "Knowledge base articlesTxtResp1" :
+		inputs in en {
+			"Yes we have many Knowledge Base Articles to help guide you through a variety of technology based subjects\n\nhttps://answers.kommunicate.io/ "
+	}
+	text response "Freshman & First-TimeTxtResp1" :
+		inputs in en {
+			"To apply as first time freshmen, you must meet the following requirements:\n \n✔️ Be high school graduate or equivalent\n \n✔️ Complete the fifteen-unit comprehensive A-G course pattern of college preparatory study with grades of \'C\' or better.\n \n✔️ Meet the eligibility index (local area students held to minimum eligibility index. Non-local students are held to higher index).\n\nPlease refer to our website https://www.kommunicate.io/ for further information regarding First-year Students admissions. "
+	}
+	text response "Support BotTxtResp1" :
+		inputs in en {
+			"Please click any of the option and proceed! "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi, I\'m Admissions Chatbot 🎓\n\nLet\'s talk about admissions. Use the below 👇 options and proceed! "
+	}
+	text response "Veteran AdmissionTxtResp1" :
+		inputs in en {
+			"Please make an appointment with an Admission Veteran Liaison Counselor to get further information specific to you. \n\nGeneral information about Veteran Admissions may be found on our website:  https://www.kommunicate.io/product/kompose-bot-builder/ "
+	}
+	text response "Virtual LabsTxtResp1" :
+		inputs in en {
+			"As an alternative to downloading and installing software on your own computer, find out more about our:\n\nhttps://www.kommunicate.io/blog/\n\nwhere you can use software like spss, ArcGIS, Matlab and more... using virtualization technology 🤖 "
+	}
+	text response "Main MenuTxtResp1" :
+		inputs in en {
+			"Use the suggestions mentioned below and proceed "
+	}
+	text response "Sign Up for orientationTxtResp1" :
+		inputs in en {
+			"✔️ In order to sign up for an orientation session please go to  University Portal\n\n✔️ Login using your UniversityID found on your admissions letter Or Call Orientation and First-Year Experience at (907) 572-5122\n\n✔️ Information regarding your webinar session will be sent to your University email address only. \n\n✔️ Please check that email account for your link and other details. "
+	}
+	text response "Transfer to Advise BotTxtResp1" :
+		inputs in en {
+			"You\'ve asked a question that could be best handled by another bot 🤖 more focused on that subject, handing you off now ⏩ "
+	}
+	text response "Technical SupportTxtResp1" :
+		inputs in en {
+			"The technical support center🖥️  is located in the Library Wedge. It assists students, staff, and faculty with technology !!\n☎️ Call us at:\n(902)544-7234\n\nOR\n\n📧 Email Us At:\nsupport@kommunicate.io "
+	}
+	text response "Admission DeadlinesTxtResp1" :
+		inputs in en {
+			"Due to impaction, our University only accepts applications during its initial filing periods. The application filing periods for Fall are: October 1 – November 30. \nTo complete your admissions application, you must submit:\n \n✔️ Your application a year prior to starting on Cal State Apply.\n✔️ Application fee of " "or fee waiver. This fee is nonrefundable and may not be transferred to another term.\n✔️ Official high school transcripts or college transcripts\n✔️ Residency Documents (if requested)\n\nFor more information regarding Admissions and Enrollment deadlines, please refer to our website: http://kommunicate.io/blog "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Laptop Checkout" => bot1 : chatbot "Laptop CheckoutTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user2 : user "Transfer Student" => bot2 : chatbot "Laptop CheckoutTxtResp2" ;
+	- user3 : user "Cost to Attend" => bot3 : chatbot "Cost to AttendTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user4 : user "Download Software" => bot4 : chatbot "Laptop CheckoutTxtResp2" ;
+	- user5 : user "Knowledge base articles" => bot5 : chatbot "Knowledge base articlesTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user6 : user "Freshman & First-Time" => bot6 : chatbot "Freshman & First-TimeTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user7 : user "Support Bot" => bot7 : chatbot "Support BotTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user8 : user "Default Welcome Intent" => bot8 : chatbot "Default Welcome IntentTxtResp1" , "Laptop CheckoutTxtResp2" {
+		=> user9 : user "Default Welcome Intent - Admission - Sign Up for orientation" => bot9 : chatbot "Default Welcome Intent - Admission - Sign Up for orientationTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	} ;
+	- user10 : user "Veteran Admission" => bot10 : chatbot "Veteran AdmissionTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user11 : user "Virtual Labs" => bot11 : chatbot "Virtual LabsTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user12 : user "Main Menu" => bot12 : chatbot "Main MenuTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user13 : user "Default Welcome Intent - Admission - Sign Up for orientation" => bot13 : chatbot "Sign Up for orientationTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user14 : user "Transfer to Advise Bot" => bot14 : chatbot "Transfer to Advise BotTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user15 : user "Technical Support" => bot15 : chatbot "Technical SupportTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user16 : user "Admission Deadlines" => bot16 : chatbot "Admission DeadlinesTxtResp1" , "Laptop CheckoutTxtResp2" ;
+	- user17 : user "Default Fallback Intent" => bot17 : chatbot "Default Fallback IntentTxtResp1" ;
+
