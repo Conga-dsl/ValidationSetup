@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="sir2019-group-1">
+  <intents name="reason"/>
+  <intents name="inhumanity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="confirmed" entity="//@entities.3"/>
+    <parameters name="denied" entity="//@entities.2"/>
+  </intents>
+  <intents name="origin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="germany"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I fled from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Saudi Arabia"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I grew up in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Palestine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Iranian"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I lived in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Afghanistan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="France"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Netherlands"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Syria"/>
+      </inputs>
+    </inputs>
+    <parameters name="geo-country" entity="//@entities.1"/>
+  </intents>
+  <intents name="exclusion">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="no"/>
+        <tokens xsi:type="generator:Literal" text=" i don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="yes"/>
+        <tokens xsi:type="generator:Literal" text=" i do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="confirmed" entity="//@entities.3">
+      <prompts language="ENGLISH">
+        <prompts>We need a yes or no answer</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="denied" entity="//@entities.2"/>
+  </intents>
+  <intents name="yesno">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="denied" entity="//@entities.2"/>
+    <parameters name="any"/>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="h&#xe9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hoi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="h&#xe9; hoi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="h&#xe9; hallo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="gegroet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ik begroet je"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lang niet gezien"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goeiedag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goedendag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hallo"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="route">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i traveled from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="germany"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="via "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="germany"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i came from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="belgium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="belgium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="this "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="country"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i first arrived "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="this"/>
+        <tokens xsi:type="generator:Literal" text=" is the first country"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i first arrived in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="austria"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="germany"/>
+      </inputs>
+    </inputs>
+    <parameters name="geo-country" entity="//@entities.1"/>
+  </intents>
+  <intents name="name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="steven"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="peter"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="mike"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="mike"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="mike"/>
+      </inputs>
+    </inputs>
+    <parameters name="person"/>
+  </intents>
+  <intents name="company1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i got here with my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="family"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i got here "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="alone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i got here "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="by myself"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i traveled with my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="parents"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="my bro's"/>
+        <tokens xsi:type="generator:Literal" text=" and me came together"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="just me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i came "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="alone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i came with my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="family"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="alone"/>
+      </inputs>
+    </inputs>
+    <parameters name="travel_company" entity="//@entities.0"/>
+  </intents>
+  <intents name="entrance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i came in by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="train"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="car"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i got in via the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="train"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i got into netherlands with the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="train"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="plane"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="drove"/>
+        <tokens xsi:type="generator:Literal" text=" here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="flew"/>
+        <tokens xsi:type="generator:Literal" text=" here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i took the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="train"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i came by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="train"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+    <parameters name="vehicle" entity="//@entities.4"/>
+  </intents>
+  <intents name="family1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="denied" entity="//@entities.2"/>
+    <parameters name="confirmed" entity="//@entities.3"/>
+  </intents>
+  <intents name="age">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="seven"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I just had my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.2" textReference="twenty-first"/>
+        <tokens xsi:type="generator:Literal" text=" birthday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="ten"/>
+        <tokens xsi:type="generator:Literal" text=" years old"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="eighteen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="twelve"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="eighty-four"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="81"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="23"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT"/>
+    <parameters name="age"/>
+    <parameters name="ordinal"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="conflict">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.1" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="confirmed" entity="//@entities.3"/>
+    <parameters name="denied" entity="//@entities.2"/>
+  </intents>
+  <entities name="travel_company">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="family">
+        <values>family</values>
+        <values>kids</values>
+        <values>children</values>
+        <values>parents</values>
+        <values>brother</values>
+        <values>brothers</values>
+        <values>sister</values>
+        <values>sisters</values>
+        <values>cousins</values>
+        <values>cousin</values>
+        <values>nephew</values>
+        <values>niece</values>
+        <values>mama</values>
+        <values>papa</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="alone">
+        <values>alone</values>
+        <values>myself</values>
+        <values>just me</values>
+        <values>yes</values>
+        <values>by myself</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="friends">
+        <values>friends</values>
+        <values>people i know</values>
+        <values>my bro's</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="company">
+        <values>company</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sys.geo-country">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="The Netherlands">
+        <values>The Netherlands</values>
+        <values>Here</values>
+        <values>This</values>
+        <values>This country</values>
+        <values>here</values>
+        <values>this</values>
+        <values>this country</values>
+        <values>country</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="denied">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="no">
+        <values>no</values>
+        <values>not true</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="confirmed">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="yes">
+        <values>yes</values>
+        <values>true</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="vehicle">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="car">
+        <values>car</values>
+        <values>drove</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="airplane">
+        <values>airplane</values>
+        <values>flew</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="reasonTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hallo! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goedendag! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik begrijp het niet. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik versta het niet. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.5" name="user1">
+    <target actions="//@actions.3 //@actions.4" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.12" name="user2">
+    <target actions="//@actions.5 //@actions.6" name="bot2"/>
+  </flows>
+  <languages>ENGLISH</languages>
+  <languages>DUTCH</languages>
+</generator:Bot>

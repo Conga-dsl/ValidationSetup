@@ -1,0 +1,303 @@
+Chatbot "libsample-advanced" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			^hi ,
+			"안녕" ,
+			"ㅋ.ㅋ" ,
+			hello ,
+			"헬로" ,
+			"뭐하냐" ,
+			"저기" ,
+			"야"
+	}
+
+	Cancel :
+		inputs in en {
+			"종료" ,
+			"나가기" ,
+			"취소" ,
+			Cancel ,
+			Exit ,
+			Quit
+	}
+
+	"Let me know MajorInfo" :
+		inputs in en {
+			"학과 정보 알려줘"
+	}
+
+	"Convert Rankine and Kelvin" :
+		inputs in en {
+			( Kelvin ) [ absoluteTempUnit ] ,
+			( Rankine ) [ absoluteTempUnit ] ,
+			( K ) [ absoluteTempUnit ] ,
+			( R ) [ absoluteTempUnit ]
+		}
+		parameters :
+			absoluteTempUnit : entity absoluteTempUnit , required , prompts in en [ "Rankine or Kelvin?" ] ;
+
+	"Let me know FutureJob" :
+		inputs in en {
+			"미래 예상 직업 정보" ,
+			( "연결" ) [ FutureJob_theme ] " 분야의 미래 직업 정보 알려줘" ,
+			"미래 직업 정보 알려줘" ,
+			"미래 직업 정보" ,
+			( "건강" ) [ FutureJob_theme ] " 분야 미래 직업 정보" ,
+			( "연결" ) [ FutureJob_theme ] " 분야 미래 직업들?" ,
+			( "놀이" ) [ FutureJob_theme ] " 관련 미래직업 리스트 좀" ,
+			"미래직업 리스트" ,
+			( "디자인" ) [ FutureJob_theme ] " 분야의 미래직업 좀 알려줘" ,
+			"미래 직업 알려줘" ,
+			( "연결" ) [ FutureJob_theme ] " 분야의 미래직업 뭐 있나" ,
+			"미래 직업 리스트" ,
+			( "디자인" ) [ FutureJob_theme ] " 분야의 미래직업은?"
+		}
+		parameters :
+			FutureJob_theme : entity FutureJob_theme , required ;
+
+	"Convert Fahrenheit and Celsius" :
+		inputs in en {
+			( "27" ) [ temperature ] "°" ,
+			( "30" ) [ temperature ] " degrees" ,
+			( "25" ) [ temperature ] ,
+			"How about " ( "45" ) [ temperature ] " degrees?" ,
+			( "27" ) [ temperature ] "° " ( Celsius ) [ unit ] ,
+			( "-40" ) [ temperature ] "° " ( Fahrenheit ) [ unit ] ,
+			( "45" ) [ temperature ] " degrees " ( Celsius ) [ unit ]
+		}
+		parameters :
+			temperature : entity float , required , prompts in en [ "What temperature would you like to convert?" ] ;
+			unit : entity unit , required , prompts in en [ "Fahrenheit or Celsius?" ] ;
+
+	"Let me show EmploymentTips" :
+		inputs in en {
+			( "이력서 작성법" ) [ Tip_type ] ,
+			"취업 가이드" ,
+			( "대상별취업가이드" ) [ Tip_type ] ,
+			"어떻게 하면 취업할 수 있지?" ,
+			"취업 하고 싶어" ,
+			"취업가이드가 필요해" ,
+			( "자소서 작성법" ) [ Tip_type ] " 좀 가르쳐줘" ,
+			( "이력서 작성법" ) [ Tip_type ] " 알려줘!"
+		}
+		parameters :
+			Tip_type : entity Tip_type ;
+
+	"Default Fallback Intent" Fallback :
+
+	"Let me know RecruitInfo" :
+		inputs in en {
+			"서울 지역 채용 정보 알려줘" ,
+			"채용 정보 알려줘"
+	}
+
+	"Let me know SchoolsInfo" :
+		inputs in en {
+			"학교 정보 알려줘"
+	}
+
+entities :
+	Simple entity LocationMain :
+		inputs in en {
+			"강원도" synonyms "강원" , "강원도"
+			"경기도" synonyms "경기" , "경기도"
+			"경상남도" synonyms "경남" , "경상남도"
+			"경상북도" synonyms "경북" , "경상북도"
+			"광주광역시" synonyms "광주" , "광주광역시" , "광주시"
+			"대구광역시" synonyms "대구" , "대구광역시" , "대구시"
+			"대전광역시" synonyms "대전" , "대전광역시" , "대전시"
+			"부산광역시" synonyms "부산" , "부산광역시" , "부산시"
+			"서울특별시" synonyms "서울" , "서울시" , "서울특별시"
+			"세종특별자치시" synonyms "세종" , "세종시" , "세종특별자치시"
+			"울산광역시" synonyms "울산" , "울산광역시" , "울산시"
+			"인천광역시" synonyms "인천" , "인천광역시" , "인천시"
+			"전라남도" synonyms "전남" , "전라남도"
+			"전라북도" synonyms "전라북도" , "전북"
+			"제주특별자치도" synonyms "제주" , "제주도" , "제주특별자치도"
+			"충청남도" synonyms "충남" , "충청남도"
+			"충청북도" synonyms "충북" , "충청북도"
+	}
+	Simple entity absoluteTempUnit :
+		inputs in en {
+			Kelvin synonyms K , Kelvin , kelvin
+			Rankine synonyms R , Rankine , rankine
+	}
+	Simple entity Occupation :
+		inputs in en {
+			"개인서비스관련직" synonyms "개인서비스" , "개인서비스관련직"
+			"건설관련직" synonyms "건설" , "건설관련직"
+			"경영 및 기획 관련직" synonyms "경영" , "경영 및 기획 관련직" , "기획"
+			"교육 및 연구관련직" synonyms "교육" , "교육 및 연구관련직" , "연구"
+			"금융 및 보험관련직" synonyms "금융" , "금융 및 보험관련직" , "보험"
+			"기계 및 재료관련직" synonyms "기계" , "기계 및 재료관련직" , "재료"
+			"디자인 및 방송관련직" synonyms "디자인" , "디자인 및 방송관련직" , "방송"
+			"문화예술관련직" synonyms "문화예술" , "문화예술관련직"
+			"법률 및 공공서비스 관련직" synonyms "공공서비스" , "법률" , "법률 및 공공서비스 관련직"
+			"사회복지관련직" synonyms "사회복지" , "사회복지관련직"
+			"식품가공 및 농림어업관련직" synonyms "농림어업" , "식품가공" , "식품가공 및 농림어업관련직"
+			"영업 및 판매관련직" synonyms "영업" , "영업 및 판매관련직" , "판매"
+			"운송 및 여행관련직" synonyms "여행" , "운송" , "운송 및 여행관련직"
+			"의료 및 보건관련직" synonyms "보건" , "의료" , "의료 및 보건관련직"
+			"전기/전자 및 정보통신관련직" synonyms "전기" , "전기/전자 및 정보통신관련직" , "전자" , "정보통신"
+			"화학/섬유 및 환경관리직" synonyms "섬유" , "화학" , "화학/섬유 및 환경관리직" , "환경관리"
+	}
+	Simple entity unit :
+		inputs in en {
+			Celsius synonyms C , Celsius , celsius
+			Fahrenheit synonyms F , Fahrenheit , fahrenheit
+	}
+	Simple entity Education_ :
+		inputs in en {
+			"고졸" synonyms "고졸"
+			"대졸-2~3년제" synonyms "대졸-2~3년제" , "전문대졸"
+			"대졸-4년제" synonyms "4년제" , "대졸-4년제"
+			"박사" synonyms "박사"
+			"석사" synonyms "석사"
+			"중졸" synonyms "중졸"
+			"초졸이하" synonyms "초졸" , "초졸이하"
+			"학력무관" synonyms "무관" , "학력무관"
+	}
+	Simple entity Education :
+		inputs in en {
+			"고졸" synonyms "고졸"
+			"대졸-2~3년" synonyms "2년제" , "3년제" , "대졸-2~3년" , "전문대졸"
+			"대졸-4년" synonyms "4년제" , "대졸-4년"
+			"박사" synonyms "박사"
+			"석사" synonyms "석사"
+			"중졸" synonyms "중졸"
+			"초졸이하" synonyms "초졸" , "초졸이하"
+			"학력무관" synonyms "무관" , "학력무관"
+	}
+	Simple entity SchoolLevel :
+		inputs in en {
+			"고등학교" synonyms "고등" , "고등 학교" , "고등학교" , "고딩"
+			"대안학교" synonyms "대안" , "대안 학교" , "대안학교" , "특수" , "특수 학교" , "특수학교"
+			"대학교" synonyms "대학" , "대학교"
+			"중학교" synonyms "중등" , "중등 학교" , "중학교"
+			"초등학교" synonyms "초등" , "초등 학교" , "초등학교" , "초딩"
+	}
+	Simple entity FutureJob_theme :
+		inputs in en {
+			"건강" synonyms "건강"
+			"놀이" synonyms "놀이"
+			"디자인" synonyms "디자인"
+			"로봇" synonyms "로봇"
+			"바이오" synonyms "바이오"
+			"안전" synonyms "안전"
+			"에너지" synonyms "에너지"
+			"연결" synonyms "연결"
+			"의식주" synonyms "의식주"
+	}
+	Simple entity LocationSub :
+		inputs in en {
+			"강남구" synonyms "강남" , "강남구"
+			"강동구" synonyms "강동" , "강동구"
+			"강북구" synonyms "강북" , "강북구"
+			"강서구" synonyms "강서" , "강서구"
+			"강화군" synonyms "강화군"
+			"계양구" synonyms "계양구"
+			"관악구" synonyms "관악" , "관악구"
+			"광산구" synonyms "광산구"
+			"광진구" synonyms "광진" , "광진구"
+			"구로구" synonyms "구로" , "구로구"
+			"금정구" synonyms "금정구"
+			"금천구" synonyms "금천" , "금천구"
+			"기장군" synonyms "기장군"
+			"남구" synonyms "남구"
+			"남동구" synonyms "남동구"
+			"노원구" synonyms "노원" , "노원구"
+			"달서구" synonyms "달서구"
+			"달성군" synonyms "달성군"
+			"대덕구" synonyms "대덕구"
+			"도봉구" synonyms "도봉" , "도봉구"
+			"동구" synonyms "동구"
+			"동대문구" synonyms "동대문" , "동대문구"
+			"동래구" synonyms "동래구"
+			"동작구" synonyms "동작" , "동작구"
+			"마포구" synonyms "마포" , "마포구"
+			"미추홀구" synonyms "미추홀구"
+			"부산진구" synonyms "부산진구"
+			"부평구" synonyms "부평구"
+			"북구" synonyms "북구"
+			"사상구" synonyms "사상구"
+			"사하구" synonyms "사하구"
+			"서구" synonyms "서구"
+			"서대문구" synonyms "서대문" , "서대문구"
+			"서초구" synonyms "서초" , "서초구"
+			"성동구" synonyms "성동" , "성동구"
+			"성북구" synonyms "성북" , "성북구"
+			"송파구" synonyms "송파" , "송파구"
+			"수성구" synonyms "수성구"
+			"수영구" synonyms "수영구"
+			"양천구" synonyms "양천" , "양천구"
+			"연수구" synonyms "연수구"
+			"연제구" synonyms "연제구"
+			"영도구" synonyms "영도구"
+			"영등포구" synonyms "영등포" , "영등포구"
+			"옹진군" synonyms "옹진군"
+			"용산구" synonyms "용산" , "용산구"
+			"울주군" synonyms "울주군"
+			"유성구" synonyms "유성구"
+			"은평구" synonyms "은평" , "은평구"
+			"종로구" synonyms "종로" , "종로구"
+			"중구" synonyms "중구"
+			"중랑구" synonyms "중랑" , "중랑구"
+			"해운대구" synonyms "해운대구"
+	}
+	Simple entity Tip_type :
+		inputs in en {
+			"대상별취업가이드" synonyms "대상별취업가이드"
+			"면접전략" synonyms "면접전략"
+			"블라인드채용" synonyms "블라인드 채용"
+			"이력서작성법" synonyms "이력서 작성법"
+			"입사서류발급안내" synonyms "입사서류 발급 안내"
+			"자소서작성법" synonyms "자소서 작성법"
+			"채용트렌드" synonyms "채용 트렌드"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-dialogflowsillynamemaker.cloudfunctions.net/knutConsultingBotFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"앗! 무언가 문제가 있는 것 같아요. 잠시 후에 다시 시도해주세요. "
+	}
+	text response CancelTxtResp1 :
+		inputs in en {
+			"Goodbye! "
+	}
+	text response "Let me know MajorInfoTxtResp1" :
+		inputs in en {
+			"어이쿠! 뭔가 잘못된 것 같아요. 잠시 후에 다시 시도해주세요. "
+	}
+	text response "Convert Rankine and KelvinTxtResp1" :
+		inputs in en {
+			"Webhook Failed "
+	}
+	text response "Let me know FutureJobTxtResp1" :
+		inputs in en {
+			"어이쿠, 뭔가 문제가 있는 것 같아요! 잠시 후 다시 시도해주시겠어요? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user2 : user Cancel => bot2 : chatbot HttpRequest , HttpResponse , CancelTxtResp1 ;
+	- user3 : user "Let me know MajorInfo" => bot3 : chatbot HttpRequest , HttpResponse , "Let me know MajorInfoTxtResp1" ;
+	- user4 : user "Let me know FutureJob" => bot4 : chatbot HttpRequest , HttpResponse , "Let me know FutureJobTxtResp1" ;
+	- user5 : user "Convert Fahrenheit and Celsius" => bot5 : chatbot HttpRequest , HttpResponse , "Convert Rankine and KelvinTxtResp1" {
+		=> user6 : user "Convert Rankine and Kelvin" => bot6 : chatbot HttpRequest , HttpResponse , "Convert Rankine and KelvinTxtResp1" ;
+	} ;
+	- user7 : user "Let me show EmploymentTips" => bot7 : chatbot HttpRequest , HttpResponse , "Let me know MajorInfoTxtResp1" ;
+	- user8 : user "Default Fallback Intent" => bot8 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user9 : user "Let me know RecruitInfo" => bot9 : chatbot HttpRequest , HttpResponse , "Let me know MajorInfoTxtResp1" ;
+	- user10 : user "Let me know SchoolsInfo" => bot10 : chatbot "Let me know MajorInfoTxtResp1" ;
+

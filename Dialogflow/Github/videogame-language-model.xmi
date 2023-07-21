@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="videogame-language-model">
+  <intents name="Default Welcome Intent"/>
+  <intents name="ItemDoubleIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fortnite "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fortnite "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="itemTypeOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="itemTypeTwo"/>
+      </inputs>
+    </inputs>
+    <parameters name="itemTypeOne" entity="//@entities.0"/>
+    <parameters name="itemTypeTwo" entity="//@entities.0"/>
+  </intents>
+  <intents name="ItemDoubleRarityIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fortnite "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fortnite "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="itemRarityOne"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="itemRarityTwo"/>
+      </inputs>
+    </inputs>
+    <parameters name="itemRarityOne"/>
+    <parameters name="itemRarityTwo"/>
+  </intents>
+  <intents name="MapVersionIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="version"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="version"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me season "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="version"/>
+        <tokens xsi:type="generator:Literal" text=" map"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="map season "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="version"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="map from fortnite season "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="version"/>
+      </inputs>
+    </inputs>
+    <parameters name="version" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="ItemTypeIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fortnite "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="itemType"/>
+      </inputs>
+    </inputs>
+    <parameters name="itemType" entity="//@entities.0"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="ItemTypeAndRarityIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fortnite "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+        <tokens xsi:type="generator:Literal" text=" items"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are all "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="itemRarity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="itemType"/>
+      </inputs>
+    </inputs>
+    <parameters name="itemType" entity="//@entities.0"/>
+    <parameters name="itemRarity"/>
+  </intents>
+  <entities name="itemType">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="explosives">
+        <values>explosives</values>
+        <values>explosive</values>
+        <values>bomb</values>
+        <values>bombs</values>
+        <values>dynamite</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="utility">
+        <values>utility</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="healing Items">
+        <values>healing Items</values>
+        <values>healing</values>
+        <values>health</values>
+        <values>energy</values>
+        <values>life</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="foraged healing items">
+        <values>foraged healing items</values>
+        <values>foraged healing</values>
+        <values>picked up healing</values>
+        <values>picked up</values>
+        <values>plants</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="traps">
+        <values>traps</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="camouflage">
+        <values>camouflage</values>
+        <values>hiding</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="mobility">
+        <values>mobility</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/c67c63d5-0dd3-4692-b674-5039070840b1" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1" name="bot7"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

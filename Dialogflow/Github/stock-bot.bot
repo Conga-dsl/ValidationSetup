@@ -1,0 +1,44 @@
+Chatbot "stock-bot" language : en
+
+intents :
+
+"Hello there" :
+	inputs in en {
+		"Hello there"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Hello thereTxtResp1" :
+		inputs in en {
+			"https://tenor.com/V1tn.gif "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Hello there" => bot1 : chatbot "Hello thereTxtResp1" ;
+	- user2 : user "Default Fallback Intent" => bot2 : chatbot "Default Fallback IntentTxtResp1" ;
+

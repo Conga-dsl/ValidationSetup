@@ -1,0 +1,281 @@
+Chatbot "qai-salesforce-int" language : en
+
+intents :
+
+	"deal_support_type - yes" :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"deal_support_type - no" :
+		inputs in en {
+			"thanks but no" ,
+			"no way" ,
+			^no ,
+			"no no don\'t" ,
+			na ,
+			"no it isn\'t" ,
+			"don\'t" ,
+			"nah I\'m good" ,
+			"no I cannot" ,
+			"I can\'t" ,
+			nothing ,
+			"no that\'s okay" ,
+			"no not really" ,
+			"nope not really" ,
+			nope ,
+			"thanks but not this time" ,
+			"I don\'t think so" ,
+			"I disagree" ,
+			"no maybe next time" ,
+			"not this time" ,
+			"no don\'t" ,
+			"no we are good" ,
+			"don\'t do it" ,
+			"no that\'s be all" ,
+			"not right now" ,
+			"nothing else thanks" ,
+			"no thanks" ,
+			"no that\'s ok" ,
+			"I don\'t want that" ,
+			"definitely not" ,
+			"nothing else" ,
+			not ,
+			"not at all" ,
+			"no never" ,
+			never ,
+			"no way no" ,
+			"not really" ,
+			nah ,
+			"I don\'t" ,
+			"I don\'t want" ,
+			"not today" ,
+			"not interested" ,
+			"no that\'s fine thank you" ,
+			"I\'m not"
+	}
+
+	"verify-name - custom - custom" :
+		inputs in en {
+			( opportunity ) [ opportunity ]
+		}
+		parameters :
+			opportunity : entity text ;
+
+	"verify-name" :
+		inputs in en {
+			( "correct name" ) [ customerName ]
+		}
+		parameters :
+			customerName : entity text ;
+
+	"deal_support_type - fallback" Fallback :
+
+	"open-opportunity" :
+		inputs in en {
+			( opportunity ) [ opportunity ]
+		}
+		parameters :
+			opportunity : entity text ;
+
+	"verify-name - yes" :
+		inputs in en {
+			Yes
+	}
+
+	deal_support_type :
+		inputs in en {
+			( support ) [ "support-type" ]
+		}
+		parameters :
+			"support-type" : entity "support-type" , prompts in en [ test ] ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	notes_new :
+		inputs in en {
+			( notes ) [ notes ]
+		}
+		parameters :
+			notes : entity text ;
+
+	"deal-support" :
+		inputs in en {
+			"I\'d like to request deal support" ,
+			"Could you help me in a deal support" ,
+			"deal support" ,
+			"Need some help with supporting my deal" ,
+			"Assistance required for closing a deal" ,
+			"In the middle of making a deal need some support" ,
+			"Request to give some kind of deal support" ,
+			"Tell me a little bit about supporting deals" ,
+			"Any idea on how to close a deal" ,
+			"Do you have functionalities for deal support" ,
+			"I need help with deal support"
+	}
+
+	"verify-name - custom" :
+		inputs in en {
+			( Name ) [ customerName ]
+		}
+		parameters :
+			customerName : entity text ;
+
+entities :
+	Simple entity "support-type" :
+		inputs in en {
+			"Competitive Support" synonyms "Competitive Support"
+			"Pricing Support" synonyms "Pricing Support"
+			"Legal Support" synonyms "Legal Support"
+			"Solution Engineering Support" synonyms "Solution Engineering Support"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-qai-salesforce-int.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "deal_support_type - yesTxtResp1" :
+		inputs in en {
+			"Type in your notes. "
+	}
+	text response "deal_support_type - noTxtResp1" :
+		inputs in en {
+			"Is this deal support request correct? "
+	}
+	text response "verify-name - custom - customTxtResp1" :
+		inputs in en {
+			"What type of deal support do you need? "
+	}
+	text response "verify-nameTxtResp1" :
+		inputs in en {
+			"Is this the correct name? "
+	}
+	text response "notes_new - noTxtResp1" :
+		inputs in en {
+			"Thank you. Your Case has been created. "
+	}
+	text response "deal_support_type - fallbackTxtResp1" :
+		inputs in en {
+			"Please choose one of the following. "
+	}
+	text response "open-opportunityTxtResp1" :
+		inputs in en {
+			"What kind of deal support do you need? "
+	}
+	text response "verify-name - yesTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response deal_support_typeTxtResp1 :
+		inputs in en {
+			"Okay. Any additional notes you would like to add? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "deal-supportTxtResp2" :
+		inputs in en {
+			"Of course. For which customer? " ,
+			"Absolutely. Would you please tell me the customer name? " ,
+			"Right away. Can you mention the customer name? "
+	}
+	text response "deal_support_type - no - yesTxtResp1" :
+		inputs in en {
+			"Thank you. Your request has been created. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "verify-name - customTxtResp1" :
+		inputs in en {
+			"You don\'t have opportunities listed with your Account "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "deal-support" => bot2 : chatbot "verify-name - yesTxtResp1" , "deal-supportTxtResp2" {
+		=> user3 : user "verify-name" => bot3 : chatbot HttpRequest , HttpResponse , "verify-nameTxtResp1" { => user4 : user "verify-name - yes" => bot4 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" { => user5 : user "open-opportunity" => bot5 : chatbot HttpRequest , HttpResponse , "open-opportunityTxtResp1" { => user6 : user "deal_support_type - yes" => bot6 : chatbot "deal_support_type - yesTxtResp1" { => user7 : user notes_new => bot7 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user8 : user "deal_support_type - no" => bot8 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user9 : user "deal_support_type - yes" => bot9 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user10 : user "deal_support_type - no" => bot10 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user11 : user "deal_support_type - no" => bot11 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user12 : user "deal_support_type - yes" => bot12 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => user13 : user "deal_support_type - fallback" => bot13 : chatbot HttpRequest , HttpResponse , "deal_support_type - fallbackTxtResp1" { => user14 : user "deal_support_type - yes" => bot14 : chatbot "deal_support_type - yesTxtResp1" { => user15 : user notes_new => bot15 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user16 : user "deal_support_type - no" => bot16 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user17 : user "deal_support_type - yes" => bot17 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user18 : user "deal_support_type - no" => bot18 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user19 : user "deal_support_type - no" => bot19 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user20 : user "deal_support_type - yes" => bot20 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => user21 : user deal_support_type => bot21 : chatbot HttpRequest , HttpResponse , deal_support_typeTxtResp1 { => user22 : user "deal_support_type - yes" => bot29 : chatbot "deal_support_type - yesTxtResp1" { => user29 : user notes_new => bot30 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user30 : user "deal_support_type - no" => bot31 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user31 : user "deal_support_type - yes" => bot32 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user26 : user "deal_support_type - no" => bot33 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user32 : user "deal_support_type - no" => bot34 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user33 : user "deal_support_type - yes" => bot35 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => back to user13 ; => back to user21 ; } ; => back to user13 ; } ; => user34 : user deal_support_type => bot36 : chatbot HttpRequest , HttpResponse , deal_support_typeTxtResp1 { => user35 : user "deal_support_type - yes" => bot52 : chatbot "deal_support_type - yesTxtResp1" { => user50 : user notes_new => bot53 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user51 : user "deal_support_type - no" => bot54 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user52 : user "deal_support_type - yes" => bot55 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user39 : user "deal_support_type - no" => bot56 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user53 : user "deal_support_type - no" => bot57 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user54 : user "deal_support_type - yes" => bot58 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => user42 : user "deal_support_type - fallback" => bot44 : chatbot HttpRequest , HttpResponse , "deal_support_type - fallbackTxtResp1" { => user43 : user "deal_support_type - yes" => bot45 : chatbot "deal_support_type - yesTxtResp1" { => user44 : user notes_new => bot46 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user45 : user "deal_support_type - no" => bot47 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user46 : user "deal_support_type - yes" => bot48 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user47 : user "deal_support_type - no" => bot49 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user48 : user "deal_support_type - no" => bot50 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user49 : user "deal_support_type - yes" => bot51 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => back to user42 ; => back to user34 ; } ; => back to user34 ; } ; } ; } ; => user55 : user "verify-name - custom" => bot59 : chatbot HttpRequest , HttpResponse , "verify-name - customTxtResp1" { => user56 : user "verify-name - custom - custom" => bot60 : chatbot HttpRequest , HttpResponse , "verify-name - custom - customTxtResp1" { => user57 : user "deal_support_type - yes" => bot61 : chatbot "deal_support_type - yesTxtResp1" { => user58 : user notes_new => bot62 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user59 : user "deal_support_type - no" => bot63 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user60 : user "deal_support_type - yes" => bot64 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user61 : user "deal_support_type - no" => bot65 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user62 : user "deal_support_type - no" => bot66 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user63 : user "deal_support_type - yes" => bot67 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => user64 : user "deal_support_type - fallback" => bot68 : chatbot HttpRequest , HttpResponse , "deal_support_type - fallbackTxtResp1" { => user65 : user "deal_support_type - yes" => bot69 : chatbot "deal_support_type - yesTxtResp1" { => user66 : user notes_new => bot70 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user67 : user "deal_support_type - no" => bot71 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user68 : user "deal_support_type - yes" => bot72 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user69 : user "deal_support_type - no" => bot73 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user70 : user "deal_support_type - no" => bot74 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user71 : user "deal_support_type - yes" => bot75 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => user72 : user deal_support_type => bot76 : chatbot HttpRequest , HttpResponse , deal_support_typeTxtResp1 { => user73 : user "deal_support_type - yes" => bot84 : chatbot "deal_support_type - yesTxtResp1" { => user80 : user notes_new => bot85 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user81 : user "deal_support_type - no" => bot86 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user82 : user "deal_support_type - yes" => bot87 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user77 : user "deal_support_type - no" => bot88 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user83 : user "deal_support_type - no" => bot89 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user84 : user "deal_support_type - yes" => bot90 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => back to user64 ; => back to user72 ; } ; => back to user64 ; } ; => user85 : user deal_support_type => bot91 : chatbot HttpRequest , HttpResponse , deal_support_typeTxtResp1 { => user86 : user "deal_support_type - yes" => bot107 : chatbot "deal_support_type - yesTxtResp1" { => user101 : user notes_new => bot108 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user102 : user "deal_support_type - no" => bot109 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user103 : user "deal_support_type - yes" => bot110 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user90 : user "deal_support_type - no" => bot111 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user104 : user "deal_support_type - no" => bot112 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user105 : user "deal_support_type - yes" => bot113 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => user93 : user "deal_support_type - fallback" => bot99 : chatbot HttpRequest , HttpResponse , "deal_support_type - fallbackTxtResp1" { => user94 : user "deal_support_type - yes" => bot100 : chatbot "deal_support_type - yesTxtResp1" { => user95 : user notes_new => bot101 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user96 : user "deal_support_type - no" => bot102 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; => user97 : user "deal_support_type - yes" => bot103 : chatbot HttpRequest , HttpResponse , "notes_new - noTxtResp1" ; } ; } ; => user98 : user "deal_support_type - no" => bot104 : chatbot HttpRequest , HttpResponse , "deal_support_type - noTxtResp1" { => user99 : user "deal_support_type - no" => bot105 : chatbot HttpRequest , HttpResponse , "verify-name - yesTxtResp1" ; => user100 : user "deal_support_type - yes" => bot106 : chatbot HttpRequest , HttpResponse , "deal_support_type - no - yesTxtResp1" ; } ; => back to user93 ; => back to user85 ; } ; => back to user85 ; } ; } ; } ; => back to user3 ; } ;
+	} ;
+	- user106 : user "deal_support_type - fallback" => bot114 : chatbot "Default Fallback IntentTxtResp1" ;
+

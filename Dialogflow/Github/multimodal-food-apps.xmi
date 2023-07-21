@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="multimodal-food-apps">
+  <intents name="JournalIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Food journal log "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="foodInfo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="foodInfo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="journal "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="foodInfo"/>
+      </inputs>
+    </inputs>
+    <parameters name="foodInfo"/>
+  </intents>
+  <intents name="YesIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="HelpIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="options"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="commands"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="SignInIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sign in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="participantId"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sign in user "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="participantId"/>
+      </inputs>
+    </inputs>
+    <parameters name="participantId" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="ReadIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="read my last log"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="read"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent"/>
+  <intents name="AccountInfoIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am I logged in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my current account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my current account"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="SignOutIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sign out"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="HelloWorldIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Talk to Food Journal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Food Journal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my food journal"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="NoIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="END">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exit"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="DeleteIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete my last log"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/3059c04e-1b8f-4e0b-98f4-fa60e93b1d27" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.0 //@actions.1" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.0 //@actions.1" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.0 //@actions.1" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.0 //@actions.1" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.0 //@actions.1" name="bot13"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

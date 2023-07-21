@@ -1,0 +1,162 @@
+Chatbot Magni language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	rotate :
+		inputs in en {
+			"rotate " ( right ) [ leftright ] " " ( "300 degrees" ) [ angle ]
+		}
+		parameters :
+			leftright : entity leftright ;
+			angle : entity angle ;
+
+	gotowaypoint :
+		inputs in en {
+			"go to the office" ,
+			"go to " ( "Bob\'s" ) [ waypointname ]
+		}
+		parameters :
+			waypointname : entity text ;
+
+	listwaypoints :
+		inputs in en {
+			"give me a list of the waypoints" ,
+			"list waypoints"
+	}
+
+	"user commands forward" :
+		inputs in en {
+			"ahead " ( "3 feet" ) [ "unit-length" ] ,
+			( "4 inches" ) [ "unit-length" ] " forward" ,
+			( "3 feet" ) [ "unit-length" ] " ahead" ,
+			"keep going " ( "3 feet" ) [ "unit-length" ] ,
+			"straight ahead " ( "3 feet" ) [ "unit-length" ] ,
+			( "199 miles" ) [ "unit-length" ] " forward" ,
+			"forward " ( "2 meters" ) [ "unit-length" ]
+		}
+		parameters :
+			"unit-length" : entity text ;
+
+	find :
+		inputs in en {
+			"I don\'t see a " ( mutt ) [ findable ] " here" ,
+			"look for a " ( bottle ) [ findable ] ,
+			"do you see a " ( cat ) [ findable ] "?" ,
+			"find a " ( bottle ) [ findable ]
+		}
+		parameters :
+			findable : entity findable ;
+
+	removewaypoint :
+		inputs in en {
+			"remove waypoint " ( kitchen ) [ waypointname ]
+		}
+		parameters :
+			waypointname : entity text , required ;
+
+	setwaypoint :
+		inputs in en {
+			"set waypoint " ( foo ) [ waypointname ] ,
+			"set a waypoint " ( office ) [ waypointname ]
+		}
+		parameters :
+			waypointname : entity text ;
+
+	turn :
+		inputs in en {
+			"turn " ( right ) [ turnmeasure ]
+		}
+		parameters :
+			turnmeasure : entity turnmeasure , required ;
+
+	"user commands backward" :
+		inputs in en {
+			"back up " ( "4 in" ) [ "unit-length" ] ,
+			"reverse " ( "4 feet" ) [ "unit-length" ] ,
+			^back ,
+			"backward " ( "3 miles" ) [ "unit-length" ] ,
+			backward
+		}
+		parameters :
+			"unit-length" : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Composite entity angle :
+		inputs in en {
+			composite : "@sys.number-integer"
+	}
+	Simple entity findable :
+		inputs in en {
+			aeroplane synonyms aeroplane , airplane
+			dog synonyms dog , mutt
+			bird synonyms bird
+			boat synonyms boat
+			bottle synonyms bottle
+			bus synonyms bus
+			car synonyms car , automobile
+			cat synonyms cat
+			chair synonyms chair
+			cow synonyms cow
+			"dining table" synonyms "dining table"
+			horse synonyms horse
+			motorbike synonyms motorbike , motorcycle
+			person synonyms person
+			"potted plant" synonyms "potted plant"
+			sheep synonyms sheep
+			",sofa" synonyms ",sofa"
+			train synonyms train
+			"tv monitor" synonyms tvmonitor , "tv screen"
+	}
+	Simple entity turnmeasure :
+		inputs in en {
+			left synonyms left
+			right synonyms right
+			around synonyms around , round
+	}
+	Simple entity leftright :
+		inputs in en {
+			left synonyms left
+			right synonyms right
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://<example>" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response rotateTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"“I didn’t understand that, I’m just a bot with a small vocabulary.”. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user rotate => bot2 : chatbot rotateTxtResp1 ;
+	- user3 : user gotowaypoint => bot3 : chatbot rotateTxtResp1 ;
+	- user4 : user listwaypoints => bot4 : chatbot rotateTxtResp1 ;
+	- user5 : user "user commands forward" => bot5 : chatbot rotateTxtResp1 ;
+	- user6 : user find => bot6 : chatbot rotateTxtResp1 ;
+	- user7 : user removewaypoint => bot7 : chatbot rotateTxtResp1 ;
+	- user8 : user setwaypoint => bot8 : chatbot rotateTxtResp1 ;
+	- user9 : user turn => bot9 : chatbot rotateTxtResp1 ;
+	- user10 : user "user commands backward" => bot10 : chatbot rotateTxtResp1 ;
+	- user11 : user "Default Fallback Intent" => bot11 : chatbot "Default Fallback IntentTxtResp1" ;
+

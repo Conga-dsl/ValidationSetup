@@ -1,0 +1,130 @@
+Chatbot "laptop-expert" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	need_laptop :
+		inputs in en {
+			( "1" ) [ Drive ] " TB drive" ,
+			( "500" ) [ Drive ] " GB drive" ,
+			"I want a laptop and mu budget is " ( "100$" ) [ "unit-currency" ] ,
+			"I need a laptop and my budget is " ( "100$" ) [ "unit-currency" ] ,
+			"I need a laptop my budget is " ( "100$" ) [ "unit-currency" ] ,
+			"I want " ( "500$" ) [ "unit-currency" ] " laptop and" ,
+			"I want " ( "500$" ) [ "unit-currency" ] " laptop with" ,
+			"I want " ( "500$" ) [ "unit-currency" ] " laptop" ,
+			"I want to spend " ( "500$" ) [ "unit-currency" ] " on laptop and" ,
+			"I want to spend " ( "500$" ) [ "unit-currency" ] " on laptop with" ,
+			"and " ( "1" ) [ Drive ] " TB of storage" ,
+			"I want to spend " ( "500$" ) [ "unit-currency" ] " on laptop" ,
+			"and " ( "500" ) [ Drive ] " GB of storage" ,
+			"and " ( intel ) [ Processor ] " processor" ,
+			"I need " ( "15" ) [ Screen_diagonal ] " inches in my laptop" ,
+			"I want " ( "16" ) [ Screen_diagonal ] "\'\' display" ,
+			"It should be " ( "13.3" ) [ Screen_diagonal ] "\'\' display" ,
+			"with " ( "5" ) [ Screen_diagonal ] " inch screen" ,
+			"It needs to have " ( "5" ) [ Screen_diagonal ] " inch screen" ,
+			"with " ( "5" ) [ Screen_diagonal ] " inch diagonal" ,
+			"with " ( "13\'\'" ) [ Screen_diagonal ] " screen" ,
+			"I need " ( "50" ) [ Ram ] " GB of RAM" ,
+			"and " ( AMD ) [ Processor ] " processor" ,
+			"and " ( "4" ) [ Ram ] " GB of RAM" ,
+			( "4" ) [ Ram ] " GB RAM" ,
+			"I want " ( "4" ) [ Ram ] " GB of RAM" ,
+			"It should have " ( "4" ) [ Ram ] " GB of RAM" ,
+			( "4" ) [ Ram ] " GB of RAM" ,
+			( "4" ) [ Ram ] " RAM" ,
+			( "4" ) [ Ram ] " GB of RAM" ,
+			( intel ) [ Processor ] ,
+			"I want " ( intel ) [ Processor ] " processor" ,
+			( intel ) [ Processor ] " processor" ,
+			"It needs to have an " ( intel ) [ Processor ] " processor" ,
+			"It should have an " ( intel ) [ Processor ] " processor" ,
+			"I want to spend less than " ( "323₴" ) [ "unit-currency" ] ,
+			"My budget is " ( "5000$" ) [ "unit-currency" ] ,
+			"The top price is " ( "1000$" ) [ "unit-currency" ] ,
+			"The top price for me is " ( "1000$" ) [ "unit-currency" ] ,
+			( "500" ) [ Drive ] " GB of HDD" ,
+			( "500" ) [ Drive ] " GB of storage" ,
+			( "500" ) [ Drive ] " GB" ,
+			"I need " ( "500" ) [ Drive ] " GB of storage" ,
+			"I want " ( "500" ) [ Drive ] " GB of storage" ,
+			"I want HDD with the capacity of " ( "500" ) [ Drive ] " GB" ,
+			"I want to store " ( "500" ) [ Drive ] " GB of data" ,
+			"I need to store " ( "500" ) [ Drive ] " GB of data" ,
+			"I need " ( "500" ) [ Drive ] " GB of storage capacity" ,
+			" It should have " ( "500" ) [ Drive ] " GB of storage capacity"
+		}
+		parameters :
+			Ram : entity Ram ;
+			"unit-currency" ,
+			Processor : entity Processor ;
+			Screen_diagonal : entity Screen_diagonal ;
+			Drive : entity Drive ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity Processor :
+		inputs in en {
+			Intel synonyms Intel , Core , Celeron , Xeon , Pentium
+			AMD synonyms AMD , A10 , A9
+	}
+	Composite entity Price :
+		inputs in en {
+			composite : "@sys.number:number"
+	}
+	Composite entity Screen_diagonal :
+		inputs in en {
+			composite : "@sys.number:number"
+	}
+	Composite entity Drive :
+		inputs in en {
+			composite : "@sys.number:number"
+	}
+	Composite entity Ram :
+		inputs in en {
+			composite : "@sys.number:number"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://<example>" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response need_laptopTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user need_laptop => bot2 : chatbot need_laptopTxtResp1 ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" ;
+

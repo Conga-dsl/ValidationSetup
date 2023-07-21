@@ -1,0 +1,42 @@
+Chatbot "Today-In-History" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+TellEvent :
+	inputs in en {
+		yes ,
+		"next event" ,
+		next ,
+		"tell me what happened today" ,
+		"what happened today" ,
+		"give me an event that happened today in history"
+}
+
+StopIntent :
+	inputs in en {
+		^no ,
+		stop ,
+		"no thanks" ,
+		"not today" ,
+		nope
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/851b966a-dc76-47c2-8d55-87148be31184" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user TellEvent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user StopIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+

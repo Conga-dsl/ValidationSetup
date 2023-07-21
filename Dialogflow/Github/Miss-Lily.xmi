@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Miss-Lily">
+  <intents name="cancel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Close the action"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no maybe next time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing for now"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="lead a healthy life - fitness plan - next">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="yoga"/>
+      </inputs>
+    </inputs>
+    <parameters name="fit" entity="//@entities.0"/>
+  </intents>
+  <intents name="implicit main menu">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to miss lily"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to ms lily"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="talk to ms. lily"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me get better"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back to main menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggest my diet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main menu"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="del acc - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no we are good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not interested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah I'm good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no maybe next time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="na"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no I cannot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no it isn't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but not this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's fine thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="emergency1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="in a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="emergency"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="emergency"/>
+      </inputs>
+    </inputs>
+    <parameters name="Emergency" entity="//@entities.6"/>
+  </intents>
+  <intents name="update profile - height and weight - next">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my height is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="60 cm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my weight is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="60 kg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="60 kg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="180 cm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my height is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="180 cm"/>
+        <tokens xsi:type="generator:Literal" text=" and weight is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="60 kg"/>
+      </inputs>
+    </inputs>
+    <parameters name="height" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Now please enter your height.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="weight" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Now please enter your weight.</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="new-eggs">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make me a burger"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find me a girlfriend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make me a sandwich"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make me a coffee"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="n"/>
+        <tokens xsi:type="generator:Literal" text=" by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="m"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fetch the ball"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="n"/>
+        <tokens xsi:type="generator:Literal" text=" plus "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="m"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set an alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="n"/>
+        <tokens xsi:type="generator:Literal" text=" minus "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="m"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="calculate"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make me coffee"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set an alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="n"/>
+        <tokens xsi:type="generator:Literal" text=" into "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="m"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT"/>
+    <parameters name="time" defaultEntity="TIME"/>
+  </intents>
+  <intents name="show all my saved plans - detail">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="situation"/>
+      </inputs>
+    </inputs>
+    <parameters name="finder" entity="//@entities.8"/>
+  </intents>
+  <intents name="lead a healthy life - diet plan - next">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="1"/>
+      </inputs>
+    </inputs>
+    <parameters name="scale" entity="//@entities.1"/>
+  </intents>
+  <intents name="nutrients1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="carbs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more on intake of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="proteins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="proteins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="carbs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="carb"/>
+        <tokens xsi:type="generator:Literal" text=" should i intake"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what contains "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="carbs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="know more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="carbs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="know more on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="proteins"/>
+      </inputs>
+    </inputs>
+    <parameters name="nutrients" entity="//@entities.9"/>
+  </intents>
+  <intents name="Default Welcome Intent"/>
+  <intents name="disease oriented - next - supplements">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Dietary Supplements for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="piles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Dietary Supplements"/>
+      </inputs>
+    </inputs>
+    <parameters name="diseases" entity="//@entities.4"/>
+  </intents>
+  <intents name="medicine scheduler">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="schedule my medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my medicine reminder"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="schedule my meds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="schedule my medicines"/>
+      </inputs>
+    </inputs>
+    <parameters name="medicine" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please tell me the name of the medicine you are going to have.</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="show all my saved plans - diseaseNextSurface">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="x"/>
+      </inputs>
+    </inputs>
+    <parameters name="xyz" entity="//@entities.3"/>
+  </intents>
+  <intents name="show all my saved plans - diseaseNextDeep">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="x"/>
+      </inputs>
+    </inputs>
+    <parameters name="xyz" entity="//@entities.3"/>
+  </intents>
+  <intents name="sed life">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="sad"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="depressed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am feeling "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="low"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I had a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="bad"/>
+        <tokens xsi:type="generator:Literal" text=" day"/>
+      </inputs>
+    </inputs>
+    <parameters name="sed-life" entity="//@entities.5"/>
+  </intents>
+  <intents name="update profile - age">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="age"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update age"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="update profile - bmi">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find my bmi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update bmi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="calculate bmi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="del acc - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes you can do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I can"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it looks perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="creator1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="creator"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who are your "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="creators"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="founded"/>
+        <tokens xsi:type="generator:Literal" text=" you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who are your "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="founders"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="made"/>
+        <tokens xsi:type="generator:Literal" text=" you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.19/@parameters.0" textReference="created"/>
+        <tokens xsi:type="generator:Literal" text=" you"/>
+      </inputs>
+    </inputs>
+    <parameters name="creator" entity="//@entities.2"/>
+  </intents>
+  <intents name="update profile - blood - next">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my blood group is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="B+"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="B+"/>
+      </inputs>
+    </inputs>
+    <parameters name="blood" entity="//@entities.7"/>
+  </intents>
+  <intents name="update profile">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update my record"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add age, height, weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add age"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add height"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update profile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update my profile"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="del acc">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete my account"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="profile">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my profile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="view my profile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show profile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="view profile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="profile"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my profile"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="update profile - blood">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="blood group"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update blood group"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="confirm medicine scheduler">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.25/@parameters.0" textReference="6:00 pm"/>
+      </inputs>
+    </inputs>
+    <parameters name="time" defaultEntity="TIME">
+      <prompts language="ENGLISH">
+        <prompts>When exactly do you take this medicine?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="lead a healthy life - diet plan">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should i eat to stay healthy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should be my diet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diet plan"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="setup fitness update">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send me a daily notification"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remind me daily to do exercise"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remind me daily to do yoga"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send me a daily reminder"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remind me daily"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="disease oriented - next - diet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my specific diet for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="piles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diet plan for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="diabetes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diet plan"/>
+      </inputs>
+    </inputs>
+    <parameters name="diseases" entity="//@entities.4"/>
+  </intents>
+  <intents name="disease oriented">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me help for my disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me help for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.29/@parameters.0" textReference="diabetes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cure my disease"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="common diseases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Get disease specific help"/>
+      </inputs>
+    </inputs>
+    <parameters name="diseases" entity="//@entities.4"/>
+  </intents>
+  <intents name="help">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can miss lily help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="know more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can you do"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="medicine timings">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my stored medicines"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i have my medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when should i have taken my medicine"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="lead a healthy life">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make me healthy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lead a healthy life to live long"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="maintain quality of life"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make my life healthy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="maintain healthy life"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lead a healthy life"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="update profile - height and weight">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update height and weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="height and weight"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="lead a healthy life - fitness plan">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what yoga should i do today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what exercise should i do today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what should be my fitness plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fitness plan"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="update profile - age - next">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.35/@parameters.0" textReference="21 years"/>
+      </inputs>
+    </inputs>
+    <parameters name="age"/>
+  </intents>
+  <intents name="save - disease">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="save my disease plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="save this disease plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="save disease plan"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="show all my saved plans">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="all my saved plans"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my plans"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my personalized plans"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my saved plans"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my recommended plan"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="disease oriented - next - exercise">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me tackle "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="piles"/>
+        <tokens xsi:type="generator:Literal" text=" by doing exercises"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Exercises for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="diabetes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Exercises"/>
+      </inputs>
+    </inputs>
+    <parameters name="diseases" entity="//@entities.4"/>
+  </intents>
+  <intents name="predict my disease">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what disease am I suffering from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Predict my Disease"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="save - diet">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Save my diet plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Save this diet plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="save this diet"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="fit">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="1">
+        <values>yoga</values>
+        <values>asan</values>
+        <values>posture</values>
+        <values>ramdev baba</values>
+        <values>Today's Yoga</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="2">
+        <values>exercise</values>
+        <values>free body exercise</values>
+        <values>cardio</values>
+        <values>Today's Exercise</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="fitnesss-scale">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="1">
+        <values>1</values>
+        <values>one</values>
+        <values>uno</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="2">
+        <values>2</values>
+        <values>duo</values>
+        <values>two</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="3">
+        <values>3</values>
+        <values>three</values>
+        <values>trio</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="creator">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="create">
+        <values>create</values>
+        <values>creator</values>
+        <values>created</values>
+        <values>developed</values>
+        <values>developers</values>
+        <values>founders</values>
+        <values>founder</values>
+        <values>made</values>
+        <values>founded</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="xyz">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="1">
+        <values>Diet Tips</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="2">
+        <values>Dietary Supplements</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="3">
+        <values>Exercises</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="diseases">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Piles">
+        <values>Piles</values>
+        <values>piles</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Diabetes mellitus">
+        <values>Diabetes Mellitus</values>
+        <values>Diabetes</values>
+        <values>high sugar</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Athritis">
+        <values>Athritis</values>
+        <values>joint pain</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Cataracts">
+        <values>Cataracts</values>
+        <values>cataract</values>
+        <values>blur vision</values>
+        <values>cloudy vision</values>
+        <values>blurred vision</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Constipation">
+        <values>Constipation</values>
+        <values>hard stool</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="High Blood Pressure">
+        <values>High Blood Pressure</values>
+        <values>hypertension</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Insomnia">
+        <values>Insomnia</values>
+        <values>sleepless</values>
+        <values>restless</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Low blood Pressure">
+        <values>Low blood Pressure</values>
+        <values>hypotension</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sed-life">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="depress">
+        <values>bad</values>
+        <values>depress</values>
+        <values>low</values>
+        <values>sad</values>
+        <values>unhappy</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Emergency">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="emergency">
+        <values>emergency</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="blood-group">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="A+">
+        <values>A positive</values>
+        <values>A+</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="A-">
+        <values>A negative</values>
+        <values>A-</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="AB+">
+        <values>AB positive</values>
+        <values>AB+</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="AB-">
+        <values>AB negative</values>
+        <values>AB-</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="B+">
+        <values>B positive</values>
+        <values>B+</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="B-">
+        <values>B negative</values>
+        <values>B-</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="O+">
+        <values>O positive</values>
+        <values>O+</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="O-">
+        <values>O negative</values>
+        <values>O-</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="finder">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="1">
+        <values>My Recommended Diet Plan</values>
+        <values>diet plan</values>
+        <values>Recommended Diet Plan</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="2">
+        <values>My Recommended Disease Plan</values>
+        <values>Disease Plan</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="nutrients">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="carbohydrates">
+        <values>carbohydrate</values>
+        <values>carbohydrates</values>
+        <values>carbs</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="fats">
+        <values>fat</values>
+        <values>fats</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="protein">
+        <values>protein</values>
+        <values>proteins</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-miss-lily-2e318.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancelTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you for using Ms. Lily. See you soon! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright. Glad to be of any help. See you soon! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool. Till next time then. Cheers! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="lead a healthy life - fitness plan - nextTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="implicit main menuTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="del acc - noTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cool. I see you have used that big brain of yours... I'm so glad to have you back. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="del acc - noTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Now, what can I do for you ? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="emergency1TxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm still learning how to do that. Once available I'll help you out with it for sure. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="emergency1TxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="For now I can help you lead a healthy life, or get help for specific diseases or even schedule your medicines. What can I help you with now? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! I am Miss Lily, your personal health-mate. I am here to assist you to lead a healthy life and even help you to fight with the diseases you're suffering from. You can schedule your medicines with my help and I will make sure you will take them on time and stay fit. Welcome aboard. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="sed lifeTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay so you had a bad day. Don't let it spiral you into a mindset of doom and gloom. Get back in your power. Remember you are who you choose to be. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Breathe... It's just a bad day not a bad life. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Trust the wait . Embrace the uncertainty. Enjoy the beauty of becoming. When nothing is certain anything is possible. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Remember &quot;No rain no flowers&quot;. I hope you understand . "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You know &quot;Smooth seas do not make skillful sailors&quot;. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Often what feels like a terrible change, is really just a challenging pathway to a far better place. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nothing is permanent in this world....... Not even our troubles . "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="update profile - ageTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mean to pry, but how old are you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="creator1TxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This action was made by Team B.B.K. . If you like our action , don't forget to drop a review in the action's directory. Thank you . "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Team B.B.K. loves you. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="update profileTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To give you a more personalized experience I need to know certain details about you such as your age, height and weight. You can be relaxed as they are completely secure with me. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="del accTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This is a confirmation to delete your account. Once done, it can't be reversed. So do you seriously wanna take that step ? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="update profile - bloodTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I do actually need to keep a record of your blood group, you know just in case of an emergency. So, what's your blood group? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="lead a healthy life - diet planTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To give a personalized daily calorie requirement for you, I need to know your current level of fitness. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="medicine timingsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Webhook Failed! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="update profile - height and weightTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need your height and weight to suggest you a customized fitness plan. Please enter your height and weight. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="lead a healthy life - fitness planTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A fit body leads to a fitter mind and a longer lifespan. Eyeing this, I will recommend you daily, a yoga and a free body exercise suitable to meet your fitness goals. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.2" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.4" name="user3">
+    <target actions="//@actions.3 //@actions.7 //@actions.8" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.6" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.9" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.10" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot82"/>
+  </flows>
+  <flows intent="//@intents.12" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot7">
+      <outcoming intent="//@intents.25" name="user8">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot8"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.15" name="user9">
+    <target actions="//@actions.3 //@actions.10" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.19" name="user10">
+    <target actions="//@actions.3 //@actions.12" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.21" name="user11">
+    <target actions="//@actions.3 //@actions.13" name="bot11">
+      <outcoming intent="//@intents.16" name="user12">
+        <target actions="//@actions.11" name="bot12">
+          <outcoming intent="//@intents.35" name="user13">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.0" name="bot13">
+              <outcoming intent="//@intents.17" name="user14">
+                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot14"/>
+              </outcoming>
+              <outcoming intent="//@intents.24" name="user15">
+                <target actions="//@actions.3 //@actions.15" name="bot15">
+                  <outcoming intent="//@intents.20" name="user16">
+                    <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.0 //@flows.9/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1" name="bot16">
+                      <outcoming intent="//@intents.17" name="user17">
+                        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot17"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.33" name="user18">
+                        <target actions="//@actions.18" name="bot18">
+                          <outcoming intent="//@intents.5" name="user19">
+                            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.0 //@flows.9/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1 //@flows.9/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1/@target/@outcoming.0/@target/@outcoming.1" name="bot19">
+                              <outcoming intent="//@intents.17" name="user20">
+                                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot20"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.33" name="user21">
+                <target actions="//@actions.18" name="bot21">
+                  <outcoming intent="//@intents.5" name="user22">
+                    <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.0 //@flows.9/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.2" name="bot22">
+                      <outcoming intent="//@intents.17" name="user23">
+                        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot23"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.24" name="user24">
+                        <target actions="//@actions.3 //@actions.15" name="bot24">
+                          <outcoming intent="//@intents.20" name="user25">
+                            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.0 //@flows.9/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.1 //@flows.9/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.2" name="bot25">
+                              <outcoming intent="//@intents.17" name="user26">
+                                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot26"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.17" name="user27">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot27"/>
+      </outcoming>
+      <outcoming intent="//@intents.24" name="user28">
+        <target actions="//@actions.3 //@actions.15" name="bot28">
+          <outcoming intent="//@intents.20" name="user29">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.2" name="bot29">
+              <outcoming intent="//@intents.16" name="user30">
+                <target actions="//@actions.11" name="bot30">
+                  <outcoming intent="//@intents.35" name="user31">
+                    <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.0 //@flows.9/@target/@outcoming.2" name="bot31">
+                      <outcoming intent="//@intents.17" name="user32">
+                        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot32"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.33" name="user33">
+                        <target actions="//@actions.18" name="bot33">
+                          <outcoming intent="//@intents.5" name="user34">
+                            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.0 //@flows.9/@target/@outcoming.2 //@flows.9/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1" name="bot34">
+                              <outcoming intent="//@intents.17" name="user35">
+                                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot35"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.17" name="user36">
+                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot36"/>
+              </outcoming>
+              <outcoming intent="//@intents.33" name="user37">
+                <target actions="//@actions.18" name="bot37">
+                  <outcoming intent="//@intents.5" name="user38">
+                    <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.2 //@flows.9/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.2" name="bot38">
+                      <outcoming intent="//@intents.16" name="user39">
+                        <target actions="//@actions.11" name="bot39">
+                          <outcoming intent="//@intents.35" name="user40">
+                            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.0 //@flows.9/@target/@outcoming.2 //@flows.9/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.2" name="bot40">
+                              <outcoming intent="//@intents.17" name="user41">
+                                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot41"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.17" name="user42">
+                        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot42"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.33" name="user43">
+        <target actions="//@actions.18" name="bot43">
+          <outcoming intent="//@intents.5" name="user44">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.3" name="bot44">
+              <outcoming intent="//@intents.16" name="user45">
+                <target actions="//@actions.11" name="bot45">
+                  <outcoming intent="//@intents.35" name="user46">
+                    <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.3/@target/@outcoming.0/@target/@outcoming.0 //@flows.9/@target/@outcoming.3" name="bot46">
+                      <outcoming intent="//@intents.17" name="user47">
+                        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot47"/>
+                      </outcoming>
+                      <outcoming intent="//@intents.24" name="user48">
+                        <target actions="//@actions.3 //@actions.15" name="bot48">
+                          <outcoming intent="//@intents.20" name="user49">
+                            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.3/@target/@outcoming.0/@target/@outcoming.0 //@flows.9/@target/@outcoming.3/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1 //@flows.9/@target/@outcoming.3" name="bot49">
+                              <outcoming intent="//@intents.17" name="user50">
+                                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot50"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.17" name="user51">
+                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot51"/>
+              </outcoming>
+              <outcoming intent="//@intents.24" name="user52">
+                <target actions="//@actions.3 //@actions.15" name="bot52">
+                  <outcoming intent="//@intents.20" name="user53">
+                    <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.3/@target/@outcoming.0/@target/@outcoming.2 //@flows.9/@target/@outcoming.3" name="bot53">
+                      <outcoming intent="//@intents.16" name="user54">
+                        <target actions="//@actions.11" name="bot54">
+                          <outcoming intent="//@intents.35" name="user55">
+                            <target actions="//@actions.0 //@actions.1 //@actions.3" backTo="//@flows.9/@target/@outcoming.3/@target/@outcoming.0/@target/@outcoming.2/@target/@outcoming.0/@target/@outcoming.0 //@flows.9/@target/@outcoming.3/@target/@outcoming.0/@target/@outcoming.2 //@flows.9/@target/@outcoming.3" name="bot55">
+                              <outcoming intent="//@intents.17" name="user56">
+                                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot56"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.17" name="user57">
+                        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot57"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.23" name="user58">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot58">
+      <outcoming intent="//@intents.22" name="user59">
+        <target actions="//@actions.3 //@actions.14" name="bot59">
+          <outcoming intent="//@intents.3" name="user60">
+            <target actions="//@actions.3 //@actions.5 //@actions.6" name="bot60"/>
+          </outcoming>
+          <outcoming intent="//@intents.18" name="user61">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot61"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.29" name="user62">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot62">
+      <outcoming intent="//@intents.10" name="user63">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot63">
+          <outcoming intent="//@intents.11" name="user64">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot64"/>
+          </outcoming>
+          <outcoming intent="//@intents.28" name="user65">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot65"/>
+          </outcoming>
+          <outcoming intent="//@intents.38" name="user66">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot66"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.30" name="user67">
+    <target actions="//@actions.3 //@actions.9" name="bot67"/>
+  </flows>
+  <flows intent="//@intents.31" name="user68">
+    <target actions="//@actions.0 //@actions.1 //@actions.17" name="bot68"/>
+  </flows>
+  <flows intent="//@intents.32" name="user69">
+    <target actions="//@actions.0 //@actions.1" name="bot69">
+      <outcoming intent="//@intents.26" name="user70">
+        <target actions="//@actions.3 //@actions.16" name="bot70">
+          <outcoming intent="//@intents.8" name="user71">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot71"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.34" name="user72">
+    <target actions="//@actions.3 //@actions.19" name="bot72">
+      <outcoming intent="//@intents.1" name="user73">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot73">
+          <outcoming intent="//@intents.27" name="user74">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot74">
+              <outcoming intent="//@intents.10" name="user75">
+                <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot75"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.36" name="user76">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot76"/>
+  </flows>
+  <flows intent="//@intents.37" name="user77">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot77">
+      <outcoming intent="//@intents.7" name="user78">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot78">
+          <outcoming intent="//@intents.14" name="user79">
+            <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot79"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user80">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot80"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.39" name="user81">
+    <target actions="//@actions.3 //@actions.7 //@actions.8" name="bot81"/>
+  </flows>
+  <flows intent="//@intents.40" name="user82">
+    <target actions="//@actions.20" name="bot83"/>
+  </flows>
+  <flows intent="//@intents.41" name="user83">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot84"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="libsample-advanced">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc548;&#xb155;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x314b;.&#x314b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd5ec;&#xb85c;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbb50;&#xd558;&#xb0d0;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc800;&#xae30;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc57c;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Cancel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc885;&#xb8cc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xb098;&#xac00;&#xae30;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xcde8;&#xc18c;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cancel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Quit"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Let me know MajorInfo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd559;&#xacfc; &#xc815;&#xbcf4; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Convert Rankine and Kelvin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Kelvin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Rankine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="K"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="R"/>
+      </inputs>
+    </inputs>
+    <parameters name="absoluteTempUnit" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Rankine or Kelvin?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Let me know FutureJob">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbbf8;&#xb798; &#xc608;&#xc0c1; &#xc9c1;&#xc5c5; &#xc815;&#xbcf4;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xc5f0;&#xacb0;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xbd84;&#xc57c;&#xc758; &#xbbf8;&#xb798; &#xc9c1;&#xc5c5; &#xc815;&#xbcf4; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbbf8;&#xb798; &#xc9c1;&#xc5c5; &#xc815;&#xbcf4; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbbf8;&#xb798; &#xc9c1;&#xc5c5; &#xc815;&#xbcf4;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xac74;&#xac15;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xbd84;&#xc57c; &#xbbf8;&#xb798; &#xc9c1;&#xc5c5; &#xc815;&#xbcf4;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xc5f0;&#xacb0;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xbd84;&#xc57c; &#xbbf8;&#xb798; &#xc9c1;&#xc5c5;&#xb4e4;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xb180;&#xc774;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xad00;&#xb828; &#xbbf8;&#xb798;&#xc9c1;&#xc5c5; &#xb9ac;&#xc2a4;&#xd2b8; &#xc880;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbbf8;&#xb798;&#xc9c1;&#xc5c5; &#xb9ac;&#xc2a4;&#xd2b8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xb514;&#xc790;&#xc778;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xbd84;&#xc57c;&#xc758; &#xbbf8;&#xb798;&#xc9c1;&#xc5c5; &#xc880; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbbf8;&#xb798; &#xc9c1;&#xc5c5; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xc5f0;&#xacb0;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xbd84;&#xc57c;&#xc758; &#xbbf8;&#xb798;&#xc9c1;&#xc5c5; &#xbb50; &#xc788;&#xb098;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xbbf8;&#xb798; &#xc9c1;&#xc5c5; &#xb9ac;&#xc2a4;&#xd2b8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="&#xb514;&#xc790;&#xc778;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xbd84;&#xc57c;&#xc758; &#xbbf8;&#xb798;&#xc9c1;&#xc5c5;&#xc740;?"/>
+      </inputs>
+    </inputs>
+    <parameters name="FutureJob_theme" entity="//@entities.7" required="true"/>
+  </intents>
+  <intents name="Convert Fahrenheit and Celsius">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="27"/>
+        <tokens xsi:type="generator:Literal" text="&#xb0;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="30"/>
+        <tokens xsi:type="generator:Literal" text=" degrees"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="25"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="45"/>
+        <tokens xsi:type="generator:Literal" text=" degrees?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="27"/>
+        <tokens xsi:type="generator:Literal" text="&#xb0; "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="Celsius"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="-40"/>
+        <tokens xsi:type="generator:Literal" text="&#xb0; "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="Fahrenheit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="45"/>
+        <tokens xsi:type="generator:Literal" text=" degrees "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="Celsius"/>
+      </inputs>
+    </inputs>
+    <parameters name="temperature" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What temperature would you like to convert?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="unit" entity="//@entities.3" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fahrenheit or Celsius?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Let me show EmploymentTips">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="&#xc774;&#xb825;&#xc11c; &#xc791;&#xc131;&#xbc95;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xcde8;&#xc5c5; &#xac00;&#xc774;&#xb4dc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="&#xb300;&#xc0c1;&#xbcc4;&#xcde8;&#xc5c5;&#xac00;&#xc774;&#xb4dc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc5b4;&#xb5bb;&#xac8c; &#xd558;&#xba74; &#xcde8;&#xc5c5;&#xd560; &#xc218; &#xc788;&#xc9c0;?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xcde8;&#xc5c5; &#xd558;&#xace0; &#xc2f6;&#xc5b4;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xcde8;&#xc5c5;&#xac00;&#xc774;&#xb4dc;&#xac00; &#xd544;&#xc694;&#xd574;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="&#xc790;&#xc18c;&#xc11c; &#xc791;&#xc131;&#xbc95;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xc880; &#xac00;&#xb974;&#xccd0;&#xc918;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="&#xc774;&#xb825;&#xc11c; &#xc791;&#xc131;&#xbc95;"/>
+        <tokens xsi:type="generator:Literal" text=" &#xc54c;&#xb824;&#xc918;!"/>
+      </inputs>
+    </inputs>
+    <parameters name="Tip_type" entity="//@entities.9"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="Let me know RecruitInfo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc11c;&#xc6b8; &#xc9c0;&#xc5ed; &#xcc44;&#xc6a9; &#xc815;&#xbcf4; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xcc44;&#xc6a9; &#xc815;&#xbcf4; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Let me know SchoolsInfo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xd559;&#xad50; &#xc815;&#xbcf4; &#xc54c;&#xb824;&#xc918;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="LocationMain">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xac15;&#xc6d0;&#xb3c4;">
+        <values>&#xac15;&#xc6d0;</values>
+        <values>&#xac15;&#xc6d0;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xacbd;&#xae30;&#xb3c4;">
+        <values>&#xacbd;&#xae30;</values>
+        <values>&#xacbd;&#xae30;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xacbd;&#xc0c1;&#xb0a8;&#xb3c4;">
+        <values>&#xacbd;&#xb0a8;</values>
+        <values>&#xacbd;&#xc0c1;&#xb0a8;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xacbd;&#xc0c1;&#xbd81;&#xb3c4;">
+        <values>&#xacbd;&#xbd81;</values>
+        <values>&#xacbd;&#xc0c1;&#xbd81;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xad11;&#xc8fc;&#xad11;&#xc5ed;&#xc2dc;">
+        <values>&#xad11;&#xc8fc;</values>
+        <values>&#xad11;&#xc8fc;&#xad11;&#xc5ed;&#xc2dc;</values>
+        <values>&#xad11;&#xc8fc;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xad6c;&#xad11;&#xc5ed;&#xc2dc;">
+        <values>&#xb300;&#xad6c;</values>
+        <values>&#xb300;&#xad6c;&#xad11;&#xc5ed;&#xc2dc;</values>
+        <values>&#xb300;&#xad6c;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc804;&#xad11;&#xc5ed;&#xc2dc;">
+        <values>&#xb300;&#xc804;</values>
+        <values>&#xb300;&#xc804;&#xad11;&#xc5ed;&#xc2dc;</values>
+        <values>&#xb300;&#xc804;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbd80;&#xc0b0;&#xad11;&#xc5ed;&#xc2dc;">
+        <values>&#xbd80;&#xc0b0;</values>
+        <values>&#xbd80;&#xc0b0;&#xad11;&#xc5ed;&#xc2dc;</values>
+        <values>&#xbd80;&#xc0b0;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc11c;&#xc6b8;&#xd2b9;&#xbcc4;&#xc2dc;">
+        <values>&#xc11c;&#xc6b8;</values>
+        <values>&#xc11c;&#xc6b8;&#xc2dc;</values>
+        <values>&#xc11c;&#xc6b8;&#xd2b9;&#xbcc4;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc138;&#xc885;&#xd2b9;&#xbcc4;&#xc790;&#xce58;&#xc2dc;">
+        <values>&#xc138;&#xc885;</values>
+        <values>&#xc138;&#xc885;&#xc2dc;</values>
+        <values>&#xc138;&#xc885;&#xd2b9;&#xbcc4;&#xc790;&#xce58;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc6b8;&#xc0b0;&#xad11;&#xc5ed;&#xc2dc;">
+        <values>&#xc6b8;&#xc0b0;</values>
+        <values>&#xc6b8;&#xc0b0;&#xad11;&#xc5ed;&#xc2dc;</values>
+        <values>&#xc6b8;&#xc0b0;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc778;&#xcc9c;&#xad11;&#xc5ed;&#xc2dc;">
+        <values>&#xc778;&#xcc9c;</values>
+        <values>&#xc778;&#xcc9c;&#xad11;&#xc5ed;&#xc2dc;</values>
+        <values>&#xc778;&#xcc9c;&#xc2dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc804;&#xb77c;&#xb0a8;&#xb3c4;">
+        <values>&#xc804;&#xb0a8;</values>
+        <values>&#xc804;&#xb77c;&#xb0a8;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc804;&#xb77c;&#xbd81;&#xb3c4;">
+        <values>&#xc804;&#xb77c;&#xbd81;&#xb3c4;</values>
+        <values>&#xc804;&#xbd81;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc81c;&#xc8fc;&#xd2b9;&#xbcc4;&#xc790;&#xce58;&#xb3c4;">
+        <values>&#xc81c;&#xc8fc;</values>
+        <values>&#xc81c;&#xc8fc;&#xb3c4;</values>
+        <values>&#xc81c;&#xc8fc;&#xd2b9;&#xbcc4;&#xc790;&#xce58;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xcda9;&#xccad;&#xb0a8;&#xb3c4;">
+        <values>&#xcda9;&#xb0a8;</values>
+        <values>&#xcda9;&#xccad;&#xb0a8;&#xb3c4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xcda9;&#xccad;&#xbd81;&#xb3c4;">
+        <values>&#xcda9;&#xbd81;</values>
+        <values>&#xcda9;&#xccad;&#xbd81;&#xb3c4;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="absoluteTempUnit">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Kelvin">
+        <values>K</values>
+        <values>Kelvin</values>
+        <values>kelvin</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Rankine">
+        <values>R</values>
+        <values>Rankine</values>
+        <values>rankine</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Occupation">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xac1c;&#xc778;&#xc11c;&#xbe44;&#xc2a4;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xac1c;&#xc778;&#xc11c;&#xbe44;&#xc2a4;</values>
+        <values>&#xac1c;&#xc778;&#xc11c;&#xbe44;&#xc2a4;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xac74;&#xc124;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xac74;&#xc124;</values>
+        <values>&#xac74;&#xc124;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xacbd;&#xc601; &#xbc0f; &#xae30;&#xd68d; &#xad00;&#xb828;&#xc9c1;">
+        <values>&#xacbd;&#xc601;</values>
+        <values>&#xacbd;&#xc601; &#xbc0f; &#xae30;&#xd68d; &#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xae30;&#xd68d;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xad50;&#xc721; &#xbc0f; &#xc5f0;&#xad6c;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xad50;&#xc721;</values>
+        <values>&#xad50;&#xc721; &#xbc0f; &#xc5f0;&#xad6c;&#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xc5f0;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xae08;&#xc735; &#xbc0f; &#xbcf4;&#xd5d8;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xae08;&#xc735;</values>
+        <values>&#xae08;&#xc735; &#xbc0f; &#xbcf4;&#xd5d8;&#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xbcf4;&#xd5d8;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xae30;&#xacc4; &#xbc0f; &#xc7ac;&#xb8cc;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xae30;&#xacc4;</values>
+        <values>&#xae30;&#xacc4; &#xbc0f; &#xc7ac;&#xb8cc;&#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xc7ac;&#xb8cc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb514;&#xc790;&#xc778; &#xbc0f; &#xbc29;&#xc1a1;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xb514;&#xc790;&#xc778;</values>
+        <values>&#xb514;&#xc790;&#xc778; &#xbc0f; &#xbc29;&#xc1a1;&#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xbc29;&#xc1a1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbb38;&#xd654;&#xc608;&#xc220;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xbb38;&#xd654;&#xc608;&#xc220;</values>
+        <values>&#xbb38;&#xd654;&#xc608;&#xc220;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbc95;&#xb960; &#xbc0f; &#xacf5;&#xacf5;&#xc11c;&#xbe44;&#xc2a4; &#xad00;&#xb828;&#xc9c1;">
+        <values>&#xacf5;&#xacf5;&#xc11c;&#xbe44;&#xc2a4;</values>
+        <values>&#xbc95;&#xb960;</values>
+        <values>&#xbc95;&#xb960; &#xbc0f; &#xacf5;&#xacf5;&#xc11c;&#xbe44;&#xc2a4; &#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc0ac;&#xd68c;&#xbcf5;&#xc9c0;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xc0ac;&#xd68c;&#xbcf5;&#xc9c0;</values>
+        <values>&#xc0ac;&#xd68c;&#xbcf5;&#xc9c0;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc2dd;&#xd488;&#xac00;&#xacf5; &#xbc0f; &#xb18d;&#xb9bc;&#xc5b4;&#xc5c5;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xb18d;&#xb9bc;&#xc5b4;&#xc5c5;</values>
+        <values>&#xc2dd;&#xd488;&#xac00;&#xacf5;</values>
+        <values>&#xc2dd;&#xd488;&#xac00;&#xacf5; &#xbc0f; &#xb18d;&#xb9bc;&#xc5b4;&#xc5c5;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc601;&#xc5c5; &#xbc0f; &#xd310;&#xb9e4;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xc601;&#xc5c5;</values>
+        <values>&#xc601;&#xc5c5; &#xbc0f; &#xd310;&#xb9e4;&#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xd310;&#xb9e4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc6b4;&#xc1a1; &#xbc0f; &#xc5ec;&#xd589;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xc5ec;&#xd589;</values>
+        <values>&#xc6b4;&#xc1a1;</values>
+        <values>&#xc6b4;&#xc1a1; &#xbc0f; &#xc5ec;&#xd589;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc758;&#xb8cc; &#xbc0f; &#xbcf4;&#xac74;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xbcf4;&#xac74;</values>
+        <values>&#xc758;&#xb8cc;</values>
+        <values>&#xc758;&#xb8cc; &#xbc0f; &#xbcf4;&#xac74;&#xad00;&#xb828;&#xc9c1;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc804;&#xae30;/&#xc804;&#xc790; &#xbc0f; &#xc815;&#xbcf4;&#xd1b5;&#xc2e0;&#xad00;&#xb828;&#xc9c1;">
+        <values>&#xc804;&#xae30;</values>
+        <values>&#xc804;&#xae30;/&#xc804;&#xc790; &#xbc0f; &#xc815;&#xbcf4;&#xd1b5;&#xc2e0;&#xad00;&#xb828;&#xc9c1;</values>
+        <values>&#xc804;&#xc790;</values>
+        <values>&#xc815;&#xbcf4;&#xd1b5;&#xc2e0;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xd654;&#xd559;/&#xc12c;&#xc720; &#xbc0f; &#xd658;&#xacbd;&#xad00;&#xb9ac;&#xc9c1;">
+        <values>&#xc12c;&#xc720;</values>
+        <values>&#xd654;&#xd559;</values>
+        <values>&#xd654;&#xd559;/&#xc12c;&#xc720; &#xbc0f; &#xd658;&#xacbd;&#xad00;&#xb9ac;&#xc9c1;</values>
+        <values>&#xd658;&#xacbd;&#xad00;&#xb9ac;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="unit">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Celsius">
+        <values>C</values>
+        <values>Celsius</values>
+        <values>celsius</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Fahrenheit">
+        <values>F</values>
+        <values>Fahrenheit</values>
+        <values>fahrenheit</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Education_">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xace0;&#xc878;">
+        <values>&#xace0;&#xc878;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc878;-2~3&#xb144;&#xc81c;">
+        <values>&#xb300;&#xc878;-2~3&#xb144;&#xc81c;</values>
+        <values>&#xc804;&#xbb38;&#xb300;&#xc878;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc878;-4&#xb144;&#xc81c;">
+        <values>4&#xb144;&#xc81c;</values>
+        <values>&#xb300;&#xc878;-4&#xb144;&#xc81c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbc15;&#xc0ac;">
+        <values>&#xbc15;&#xc0ac;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc11d;&#xc0ac;">
+        <values>&#xc11d;&#xc0ac;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc911;&#xc878;">
+        <values>&#xc911;&#xc878;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xcd08;&#xc878;&#xc774;&#xd558;">
+        <values>&#xcd08;&#xc878;</values>
+        <values>&#xcd08;&#xc878;&#xc774;&#xd558;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xd559;&#xb825;&#xbb34;&#xad00;">
+        <values>&#xbb34;&#xad00;</values>
+        <values>&#xd559;&#xb825;&#xbb34;&#xad00;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Education">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xace0;&#xc878;">
+        <values>&#xace0;&#xc878;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc878;-2~3&#xb144;">
+        <values>2&#xb144;&#xc81c;</values>
+        <values>3&#xb144;&#xc81c;</values>
+        <values>&#xb300;&#xc878;-2~3&#xb144;</values>
+        <values>&#xc804;&#xbb38;&#xb300;&#xc878;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc878;-4&#xb144;">
+        <values>4&#xb144;&#xc81c;</values>
+        <values>&#xb300;&#xc878;-4&#xb144;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbc15;&#xc0ac;">
+        <values>&#xbc15;&#xc0ac;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc11d;&#xc0ac;">
+        <values>&#xc11d;&#xc0ac;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc911;&#xc878;">
+        <values>&#xc911;&#xc878;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xcd08;&#xc878;&#xc774;&#xd558;">
+        <values>&#xcd08;&#xc878;</values>
+        <values>&#xcd08;&#xc878;&#xc774;&#xd558;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xd559;&#xb825;&#xbb34;&#xad00;">
+        <values>&#xbb34;&#xad00;</values>
+        <values>&#xd559;&#xb825;&#xbb34;&#xad00;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="SchoolLevel">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xace0;&#xb4f1;&#xd559;&#xad50;">
+        <values>&#xace0;&#xb4f1;</values>
+        <values>&#xace0;&#xb4f1; &#xd559;&#xad50;</values>
+        <values>&#xace0;&#xb4f1;&#xd559;&#xad50;</values>
+        <values>&#xace0;&#xb529;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc548;&#xd559;&#xad50;">
+        <values>&#xb300;&#xc548;</values>
+        <values>&#xb300;&#xc548; &#xd559;&#xad50;</values>
+        <values>&#xb300;&#xc548;&#xd559;&#xad50;</values>
+        <values>&#xd2b9;&#xc218;</values>
+        <values>&#xd2b9;&#xc218; &#xd559;&#xad50;</values>
+        <values>&#xd2b9;&#xc218;&#xd559;&#xad50;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xd559;&#xad50;">
+        <values>&#xb300;&#xd559;</values>
+        <values>&#xb300;&#xd559;&#xad50;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc911;&#xd559;&#xad50;">
+        <values>&#xc911;&#xb4f1;</values>
+        <values>&#xc911;&#xb4f1; &#xd559;&#xad50;</values>
+        <values>&#xc911;&#xd559;&#xad50;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xcd08;&#xb4f1;&#xd559;&#xad50;">
+        <values>&#xcd08;&#xb4f1;</values>
+        <values>&#xcd08;&#xb4f1; &#xd559;&#xad50;</values>
+        <values>&#xcd08;&#xb4f1;&#xd559;&#xad50;</values>
+        <values>&#xcd08;&#xb529;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="FutureJob_theme">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xac74;&#xac15;">
+        <values>&#xac74;&#xac15;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb180;&#xc774;">
+        <values>&#xb180;&#xc774;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb514;&#xc790;&#xc778;">
+        <values>&#xb514;&#xc790;&#xc778;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb85c;&#xbd07;">
+        <values>&#xb85c;&#xbd07;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbc14;&#xc774;&#xc624;">
+        <values>&#xbc14;&#xc774;&#xc624;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc548;&#xc804;">
+        <values>&#xc548;&#xc804;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc5d0;&#xb108;&#xc9c0;">
+        <values>&#xc5d0;&#xb108;&#xc9c0;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc5f0;&#xacb0;">
+        <values>&#xc5f0;&#xacb0;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc758;&#xc2dd;&#xc8fc;">
+        <values>&#xc758;&#xc2dd;&#xc8fc;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="LocationSub">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xac15;&#xb0a8;&#xad6c;">
+        <values>&#xac15;&#xb0a8;</values>
+        <values>&#xac15;&#xb0a8;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xac15;&#xb3d9;&#xad6c;">
+        <values>&#xac15;&#xb3d9;</values>
+        <values>&#xac15;&#xb3d9;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xac15;&#xbd81;&#xad6c;">
+        <values>&#xac15;&#xbd81;</values>
+        <values>&#xac15;&#xbd81;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xac15;&#xc11c;&#xad6c;">
+        <values>&#xac15;&#xc11c;</values>
+        <values>&#xac15;&#xc11c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xac15;&#xd654;&#xad70;">
+        <values>&#xac15;&#xd654;&#xad70;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xacc4;&#xc591;&#xad6c;">
+        <values>&#xacc4;&#xc591;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xad00;&#xc545;&#xad6c;">
+        <values>&#xad00;&#xc545;</values>
+        <values>&#xad00;&#xc545;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xad11;&#xc0b0;&#xad6c;">
+        <values>&#xad11;&#xc0b0;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xad11;&#xc9c4;&#xad6c;">
+        <values>&#xad11;&#xc9c4;</values>
+        <values>&#xad11;&#xc9c4;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xad6c;&#xb85c;&#xad6c;">
+        <values>&#xad6c;&#xb85c;</values>
+        <values>&#xad6c;&#xb85c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xae08;&#xc815;&#xad6c;">
+        <values>&#xae08;&#xc815;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xae08;&#xcc9c;&#xad6c;">
+        <values>&#xae08;&#xcc9c;</values>
+        <values>&#xae08;&#xcc9c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xae30;&#xc7a5;&#xad70;">
+        <values>&#xae30;&#xc7a5;&#xad70;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb0a8;&#xad6c;">
+        <values>&#xb0a8;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb0a8;&#xb3d9;&#xad6c;">
+        <values>&#xb0a8;&#xb3d9;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb178;&#xc6d0;&#xad6c;">
+        <values>&#xb178;&#xc6d0;</values>
+        <values>&#xb178;&#xc6d0;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb2ec;&#xc11c;&#xad6c;">
+        <values>&#xb2ec;&#xc11c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb2ec;&#xc131;&#xad70;">
+        <values>&#xb2ec;&#xc131;&#xad70;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xb355;&#xad6c;">
+        <values>&#xb300;&#xb355;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb3c4;&#xbd09;&#xad6c;">
+        <values>&#xb3c4;&#xbd09;</values>
+        <values>&#xb3c4;&#xbd09;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb3d9;&#xad6c;">
+        <values>&#xb3d9;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb3d9;&#xb300;&#xbb38;&#xad6c;">
+        <values>&#xb3d9;&#xb300;&#xbb38;</values>
+        <values>&#xb3d9;&#xb300;&#xbb38;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb3d9;&#xb798;&#xad6c;">
+        <values>&#xb3d9;&#xb798;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb3d9;&#xc791;&#xad6c;">
+        <values>&#xb3d9;&#xc791;</values>
+        <values>&#xb3d9;&#xc791;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xb9c8;&#xd3ec;&#xad6c;">
+        <values>&#xb9c8;&#xd3ec;</values>
+        <values>&#xb9c8;&#xd3ec;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbbf8;&#xcd94;&#xd640;&#xad6c;">
+        <values>&#xbbf8;&#xcd94;&#xd640;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbd80;&#xc0b0;&#xc9c4;&#xad6c;">
+        <values>&#xbd80;&#xc0b0;&#xc9c4;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbd80;&#xd3c9;&#xad6c;">
+        <values>&#xbd80;&#xd3c9;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbd81;&#xad6c;">
+        <values>&#xbd81;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc0ac;&#xc0c1;&#xad6c;">
+        <values>&#xc0ac;&#xc0c1;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc0ac;&#xd558;&#xad6c;">
+        <values>&#xc0ac;&#xd558;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc11c;&#xad6c;">
+        <values>&#xc11c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc11c;&#xb300;&#xbb38;&#xad6c;">
+        <values>&#xc11c;&#xb300;&#xbb38;</values>
+        <values>&#xc11c;&#xb300;&#xbb38;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc11c;&#xcd08;&#xad6c;">
+        <values>&#xc11c;&#xcd08;</values>
+        <values>&#xc11c;&#xcd08;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc131;&#xb3d9;&#xad6c;">
+        <values>&#xc131;&#xb3d9;</values>
+        <values>&#xc131;&#xb3d9;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc131;&#xbd81;&#xad6c;">
+        <values>&#xc131;&#xbd81;</values>
+        <values>&#xc131;&#xbd81;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc1a1;&#xd30c;&#xad6c;">
+        <values>&#xc1a1;&#xd30c;</values>
+        <values>&#xc1a1;&#xd30c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc218;&#xc131;&#xad6c;">
+        <values>&#xc218;&#xc131;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc218;&#xc601;&#xad6c;">
+        <values>&#xc218;&#xc601;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc591;&#xcc9c;&#xad6c;">
+        <values>&#xc591;&#xcc9c;</values>
+        <values>&#xc591;&#xcc9c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc5f0;&#xc218;&#xad6c;">
+        <values>&#xc5f0;&#xc218;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc5f0;&#xc81c;&#xad6c;">
+        <values>&#xc5f0;&#xc81c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc601;&#xb3c4;&#xad6c;">
+        <values>&#xc601;&#xb3c4;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc601;&#xb4f1;&#xd3ec;&#xad6c;">
+        <values>&#xc601;&#xb4f1;&#xd3ec;</values>
+        <values>&#xc601;&#xb4f1;&#xd3ec;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc639;&#xc9c4;&#xad70;">
+        <values>&#xc639;&#xc9c4;&#xad70;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc6a9;&#xc0b0;&#xad6c;">
+        <values>&#xc6a9;&#xc0b0;</values>
+        <values>&#xc6a9;&#xc0b0;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc6b8;&#xc8fc;&#xad70;">
+        <values>&#xc6b8;&#xc8fc;&#xad70;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc720;&#xc131;&#xad6c;">
+        <values>&#xc720;&#xc131;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc740;&#xd3c9;&#xad6c;">
+        <values>&#xc740;&#xd3c9;</values>
+        <values>&#xc740;&#xd3c9;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc885;&#xb85c;&#xad6c;">
+        <values>&#xc885;&#xb85c;</values>
+        <values>&#xc885;&#xb85c;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc911;&#xad6c;">
+        <values>&#xc911;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc911;&#xb791;&#xad6c;">
+        <values>&#xc911;&#xb791;</values>
+        <values>&#xc911;&#xb791;&#xad6c;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xd574;&#xc6b4;&#xb300;&#xad6c;">
+        <values>&#xd574;&#xc6b4;&#xb300;&#xad6c;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Tip_type">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xb300;&#xc0c1;&#xbcc4;&#xcde8;&#xc5c5;&#xac00;&#xc774;&#xb4dc;">
+        <values>&#xb300;&#xc0c1;&#xbcc4;&#xcde8;&#xc5c5;&#xac00;&#xc774;&#xb4dc;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xba74;&#xc811;&#xc804;&#xb7b5;">
+        <values>&#xba74;&#xc811;&#xc804;&#xb7b5;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xbe14;&#xb77c;&#xc778;&#xb4dc;&#xcc44;&#xc6a9;">
+        <values>&#xbe14;&#xb77c;&#xc778;&#xb4dc; &#xcc44;&#xc6a9;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc774;&#xb825;&#xc11c;&#xc791;&#xc131;&#xbc95;">
+        <values>&#xc774;&#xb825;&#xc11c; &#xc791;&#xc131;&#xbc95;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc785;&#xc0ac;&#xc11c;&#xb958;&#xbc1c;&#xae09;&#xc548;&#xb0b4;">
+        <values>&#xc785;&#xc0ac;&#xc11c;&#xb958; &#xbc1c;&#xae09; &#xc548;&#xb0b4;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xc790;&#xc18c;&#xc11c;&#xc791;&#xc131;&#xbc95;">
+        <values>&#xc790;&#xc18c;&#xc11c;&#xa0;&#xc791;&#xc131;&#xbc95;</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="&#xcc44;&#xc6a9;&#xd2b8;&#xb80c;&#xb4dc;">
+        <values>&#xcc44;&#xc6a9; &#xd2b8;&#xb80c;&#xb4dc;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-dialogflowsillynamemaker.cloudfunctions.net/knutConsultingBotFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc557;! &#xbb34;&#xc5b8;&#xac00; &#xbb38;&#xc81c;&#xac00; &#xc788;&#xb294; &#xac83; &#xac19;&#xc544;&#xc694;. &#xc7a0;&#xc2dc; &#xd6c4;&#xc5d0; &#xb2e4;&#xc2dc; &#xc2dc;&#xb3c4;&#xd574;&#xc8fc;&#xc138;&#xc694;. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="CancelTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Let me know MajorInfoTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc5b4;&#xc774;&#xcfe0;! &#xbb54;&#xac00; &#xc798;&#xbabb;&#xb41c; &#xac83; &#xac19;&#xc544;&#xc694;. &#xc7a0;&#xc2dc; &#xd6c4;&#xc5d0; &#xb2e4;&#xc2dc; &#xc2dc;&#xb3c4;&#xd574;&#xc8fc;&#xc138;&#xc694;. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Convert Rankine and KelvinTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Webhook Failed "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Let me know FutureJobTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#xc5b4;&#xc774;&#xcfe0;, &#xbb54;&#xac00; &#xbb38;&#xc81c;&#xac00; &#xc788;&#xb294; &#xac83; &#xac19;&#xc544;&#xc694;! &#xc7a0;&#xc2dc; &#xd6c4; &#xb2e4;&#xc2dc; &#xc2dc;&#xb3c4;&#xd574;&#xc8fc;&#xc2dc;&#xaca0;&#xc5b4;&#xc694;? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.4" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.6" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.5" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot5">
+      <outcoming intent="//@intents.3" name="user6">
+        <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.4" name="bot10"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

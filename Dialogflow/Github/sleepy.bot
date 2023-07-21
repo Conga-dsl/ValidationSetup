@@ -1,0 +1,178 @@
+Chatbot sleepy language : en
+
+intents :
+
+	answer_name :
+		inputs in en {
+			( name ) [ name ] " is my name" ,
+			"My name is " ( name ) [ name ] ,
+			"You can call me " ( name ) [ name ] ,
+			"I am " ( name ) [ name ] ,
+			( name ) [ name ]
+		}
+		parameters :
+			name : entity text ;
+
+	read_story :
+		inputs in en {
+			oke ,
+			( sure ) [ boolean ] ,
+			ok ,
+			( yeah ) [ boolean ] ,
+			( ^no ) [ boolean ] ,
+			( yes ) [ boolean ]
+		}
+		parameters :
+			boolean : entity boolean ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"hi there" ,
+			"a good day"
+	}
+
+	ask_read_story :
+		inputs in en {
+			ok ,
+			oke ,
+			( sure ) [ read_story ] ,
+			( yes ) [ read_story ] ", please" ,
+			( ^no ) [ read_story ] ,
+			( yes ) [ read_story ]
+		}
+		parameters :
+			read_story : entity boolean ;
+
+	continue_story :
+		inputs in en {
+			oke ,
+			( "yes, please" ) [ boolean ] ,
+			( ^no ) [ boolean ] ,
+			( yes ) [ boolean ]
+		}
+		parameters :
+			boolean : entity boolean ;
+
+	favorite_animal :
+		inputs in en {
+			"I like " ( gorilla ) [ animal ] ,
+			"the animal is " ( gorilla ) [ animal ] ,
+			( cat ) [ animal ] ,
+			"my favorite animal is " ( elephant ) [ animal ]
+		}
+		parameters :
+			animal : entity animal ;
+
+	which_story :
+		inputs in en {
+			"I want you to read " ( first ) [ sequence ] " story" ,
+			"I want you to read " ( second ) [ sequence ] " story" ,
+			( second ) [ sequence ] " story" ,
+			( first ) [ sequence ] " story" ,
+			( second ) [ sequence ] ,
+			( First ) [ sequence ]
+		}
+		parameters :
+			sequence : entity sequence ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity sequence :
+		inputs in en {
+			first synonyms first
+			second synonyms second
+			third synonyms third
+	}
+	Simple entity boolean :
+		inputs in en {
+			yes synonyms yes , "yes, please" , maybe , perhaps , sure , yeah , "yeah, sure" , yep , "why not" , "sounds good" , affirmative , amen , fine , good , okay , yea
+			^no synonyms ^no , never , nope , nay , not
+	}
+	Simple entity animal :
+		inputs in en {
+			cat synonyms cat , kitten , cheetah , lion , tiger , leopard , "snow leopard" , jaguar , serval , ocelot , bobcat , lynx , cougar
+			dog synonyms puppy , dog , dogs , wolf , buddy
+			bird synonyms bird , parrot , eagle
+			elephant synonyms elephant , dumbo , giraffe
+			reptiles synonyms reptiles , snake
+			fish synonyms fish , dolphin , shark , goldfish , whale , nemo , dory
+			gorilla synonyms gorilla , monkey , chimp , orangutan , chimpanzee
+			mouse synonyms mouse , hamster , rat
+			giraffe synonyms giraffe
+			rabbit synonyms rabbit , "bugs bunny"
+	}
+	Simple entity "sys.given-name" :
+		inputs in en {
+			name synonyms name
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response answer_nameTxtResp1 :
+		inputs in en {
+			"Hello " [ "answer_name.name" ]
+	}
+	text response read_storyTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response favorite_animalTxtResp1 :
+		inputs in en {
+			"Oh nice! my favorite animal is " [ "favorite_animal.animal" ] "too! "
+	}
+	text response which_storyTxtResp1 :
+		inputs in en {
+			"Ok, I am reading the " [ "which_story.sequence" ] "story "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user favorite_animal => bot2 : chatbot favorite_animalTxtResp1 ;
+	- user3 : user which_story => bot3 : chatbot which_storyTxtResp1 ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot "Default Fallback IntentTxtResp1" ;
+

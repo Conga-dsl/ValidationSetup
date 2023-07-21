@@ -1,0 +1,255 @@
+Chatbot "sir2019-group-1" language : en , nl
+
+intents :
+
+	reason :
+
+	inhumanity :
+		inputs in en {
+			( ^no ) [ denied ] ,
+			( yes ) [ confirmed ]
+		}
+		parameters :
+			confirmed : entity confirmed ;
+			denied : entity denied ;
+
+	origin :
+		inputs in en {
+			"i am from " ( germany ) [ "geo-country" ] ,
+			"I fled from " ( "Saudi Arabia" ) [ "geo-country" ] ,
+			"I grew up in " ( Palestine ) [ "geo-country" ] ,
+			"I am " ( Iranian ) [ "geo-country" ] ,
+			"I lived in " ( Afghanistan ) [ "geo-country" ] ,
+			( France ) [ "geo-country" ] ,
+			"The " ( Netherlands ) [ "geo-country" ] ,
+			"I am from " ( Syria ) [ "geo-country" ]
+		}
+		parameters :
+			"geo-country" : entity "sys.geo-country" ;
+
+	exclusion :
+		inputs in en {
+			( ^no ) [ denied ] " i don\'t" ,
+			( yes ) [ confirmed ] " i do" ,
+			( ^no ) [ denied ] ,
+			( yes ) [ confirmed ]
+		}
+		parameters :
+			confirmed : entity confirmed , prompts in en [ "We need a yes or no answer" ] ;
+			denied : entity denied ;
+
+	yesno :
+		inputs in en {
+			( ^no ) [ denied ] ,
+			( yes ) [ any ]
+		}
+		parameters :
+			denied : entity denied ;
+			any : entity text ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"hi there" ,
+			"a good day"
+		}
+		inputs in nl {
+			"hé" ,
+			hoi ,
+			"hé hoi" ,
+			"hé hallo" ,
+			gegroet ,
+			"ik begroet je" ,
+			"lang niet gezien" ,
+			goeiedag ,
+			goedendag ,
+			hallo
+	}
+
+	route :
+		inputs in en {
+			"i traveled from " ( germany ) [ "geo-country" ] ,
+			"via " ( germany ) [ "geo-country" ] ,
+			"i came from " ( belgium ) [ "geo-country" ] ,
+			"in " ( belgium ) [ "geo-country" ] ,
+			"this " ( country ) [ "geo-country" ] ,
+			"i first arrived " ( here ) [ "geo-country" ] ,
+			( this ) [ "geo-country" ] " is the first country" ,
+			"i first arrived in " ( austria ) [ "geo-country" ] ,
+			( germany ) [ "geo-country" ]
+		}
+		parameters :
+			"geo-country" : entity "sys.geo-country" ;
+
+	name :
+		inputs in en {
+			"call me " ( steven ) [ person ] ,
+			( peter ) [ person ] ,
+			"you can call " ( mike ) [ person ] ,
+			"i am " ( mike ) [ person ] ,
+			"my name is " ( mike ) [ person ]
+		}
+		parameters :
+			person : entity text ;
+
+	company1 :
+		inputs in en {
+			"i got here with my " ( family ) [ travel_company ] ,
+			"i got here " ( alone ) [ travel_company ] ,
+			"i got here " ( "by myself" ) [ travel_company ] ,
+			( yes ) [ travel_company ] ,
+			"i traveled with my " ( parents ) [ travel_company ] ,
+			( "my bro\'s" ) [ travel_company ] " and me came together" ,
+			"it\'s " ( "just me" ) [ travel_company ] ,
+			"i came " ( alone ) [ travel_company ] ,
+			"i came with my " ( family ) [ travel_company ] ,
+			( alone ) [ travel_company ]
+		}
+		parameters :
+			travel_company : entity travel_company ;
+
+	entrance :
+		inputs in en {
+			"i came in by " ( train ) [ any ] ,
+			( car ) [ any ] ,
+			"i got in via the " ( train ) [ any ] ,
+			"i got into netherlands with the " ( train ) [ any ] ,
+			"by " ( plane ) [ any ] ,
+			"i " ( drove ) [ vehicle ] " here" ,
+			"i " ( flew ) [ vehicle ] " here" ,
+			"i took the " ( train ) [ any ] ,
+			"i came by " ( train ) [ any ]
+		}
+		parameters :
+			any ,
+			vehicle : entity vehicle ;
+
+	family1 :
+		inputs in en {
+			( ^no ) [ denied ] ,
+			( yes ) [ confirmed ]
+		}
+		parameters :
+			denied : entity denied ;
+			confirmed : entity confirmed ;
+
+	age :
+		inputs in en {
+			"I am " ( seven ) [ ^number ] ,
+			"I just had my " ( "twenty-first" ) [ ordinal ] " birthday" ,
+			"I am " ( ten ) [ age ] " years old" ,
+			( eighteen ) [ age ] ,
+			( twelve ) [ age ] ,
+			( "eighty-four" ) [ ^number ] ,
+			( "81" ) [ ^number ] ,
+			( "23" ) [ ^number ]
+		}
+		parameters :
+			^number : entity float ;
+			age ,
+			ordinal : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+	conflict :
+		inputs in en {
+			( ^no ) [ denied ] ,
+			( yes ) [ confirmed ]
+		}
+		parameters :
+			confirmed : entity confirmed ;
+			denied : entity denied ;
+
+entities :
+	Simple entity travel_company :
+		inputs in en {
+			family synonyms family , kids , children , parents , brother , brothers , sister , sisters , cousins , cousin , nephew , niece , mama , papa
+			alone synonyms alone , myself , "just me" , yes , "by myself"
+			friends synonyms friends , "people i know" , "my bro\'s"
+			company synonyms company
+	}
+	Simple entity "sys.geo-country" :
+		inputs in en {
+			"The Netherlands" synonyms "The Netherlands" , Here , This , "This country" , here , this , "this country" , country
+	}
+	Simple entity denied :
+		inputs in en {
+			^no synonyms ^no , "not true"
+	}
+	Simple entity confirmed :
+		inputs in en {
+			yes synonyms yes , ^true
+	}
+	Simple entity vehicle :
+		inputs in en {
+			car synonyms car , drove
+			airplane synonyms airplane , flew
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in nl {
+			request. text
+	}
+	text response reasonTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in nl {
+			"Hallo! " ,
+			"Goedendag! "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in nl {
+			"Ik begrijp het niet. " ,
+			"Ik versta het niet. "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user2 : user "Default Fallback Intent" => bot2 : chatbot "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" ;
+

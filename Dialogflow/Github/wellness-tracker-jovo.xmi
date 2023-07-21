@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="wellness-tracker-jovo">
+  <intents name="Default Welcome Intent"/>
+  <intents name="GetExerciseDurationIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long have i worked out "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many minutes did i work out "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much did i workout "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much time did i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="exerciseType"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how long did i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="exerciseType"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="exerciseType"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="exerciseType"/>
+        <tokens xsi:type="generator:Literal" text=" i did "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="timeframe"/>
+      </inputs>
+    </inputs>
+    <parameters name="timeframe" defaultEntity="DATE"/>
+    <parameters name="exerciseType"/>
+  </intents>
+  <intents name="LogWeightIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="weight"/>
+        <tokens xsi:type="generator:Literal" text=" pounds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please log my weight at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="weight"/>
+        <tokens xsi:type="generator:Literal" text=" pounds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i weigh "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="weight"/>
+        <tokens xsi:type="generator:Literal" text=" pounds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log my weight "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="weight"/>
+        <tokens xsi:type="generator:Literal" text=" pounds"/>
+      </inputs>
+    </inputs>
+    <parameters name="weight" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="GetLastExerciseIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was my last exercise"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about my latest exercise"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about my latest workout"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was the last exercise i logged"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was the last workout i logged"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about my last workout"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was the latest workout i logged"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was my last exercise"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was my last workout"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="LogHeightIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+        <tokens xsi:type="generator:Literal" text=" inches"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" foot "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" foot "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+        <tokens xsi:type="generator:Literal" text=" tall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet tall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+        <tokens xsi:type="generator:Literal" text=" inches tall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet tall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+        <tokens xsi:type="generator:Literal" text=" inches tall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" feet tall"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my height"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my height at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="feet"/>
+        <tokens xsi:type="generator:Literal" text=" foot "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+        <tokens xsi:type="generator:Literal" text=" inches"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my height at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="inches"/>
+        <tokens xsi:type="generator:Literal" text=" inches"/>
+      </inputs>
+    </inputs>
+    <parameters name="feet" defaultEntity="FLOAT"/>
+    <parameters name="inches" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="LogExerciseIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="duration"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="exerciseType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i did "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="duration"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="exerciseType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="duration"/>
+        <tokens xsi:type="generator:Literal" text=" of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="exerciseType"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="exerciseType"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="duration"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.1" textReference="exerciseType"/>
+      </inputs>
+    </inputs>
+    <parameters name="duration"/>
+    <parameters name="exerciseType"/>
+  </intents>
+  <intents name="GetExerciseCountIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many times did i work out "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i worked out how many times "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many workouts did i log "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was my activity "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did i crush it "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="timeframe"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much did i workout "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="timeframe"/>
+      </inputs>
+    </inputs>
+    <parameters name="timeframe" defaultEntity="DATE"/>
+    <parameters name="exerciseType"/>
+  </intents>
+  <intents name="WelcomeIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="GetLastWeightIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much do i weigh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much did i weigh"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was my last weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what was my last logged weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="weight"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's my current weight"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="GetHeightIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how tall am i"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's my height"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what height did i log"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what height did i store"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my height"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="height"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's my current height"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my current height"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/6560ab7e-b772-4487-90d9-e4cefe8af64f" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.0 //@actions.1" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.0 //@actions.1" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.0 //@actions.1" name="bot11"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

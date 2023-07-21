@@ -1,0 +1,123 @@
+Chatbot "mobile-app-shopping-assistant" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	"Check Money Flow in Category" :
+		inputs in en {
+			"How much money do I have for " ( games ) [ "custom-category" ] "?" ,
+			"How much can I spend in " ( games ) [ "custom-category" ] "?" ,
+			"Should I buy this " ( dress ) [ "custom-category" ] " for " ( "£25" ) [ "unit-currency" ] "?" ,
+			"Should i buy this " ( book ) [ "custom-category" ] " for " ( "$10" ) [ "unit-currency" ] "?" ,
+			"How much did I spend in " ( clothes ) [ "custom-category" ] " this month?"
+		}
+		parameters :
+			"custom-category" : entity "custom-category" , required , prompts in en [ "In which category?" ] ;
+			"unit-currency" : entity text ;
+
+	"Check fabric" :
+		inputs in en {
+			"I will purchase this " ( dress ) [ "custom-category" ] ,
+			"I want to buy this " ( dress ) [ "custom-category" ]
+		}
+		parameters :
+			"custom-category" : entity "custom-category" ;
+
+	"Check Money Flow" :
+		inputs in en {
+			"How much money do I have left?" ,
+			"How is my budget " ( "this month" ) [ "date-period" ] "?"
+		}
+		parameters :
+			"date-period" : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+	"Goodbye intent" :
+		inputs in en {
+			"Okay, thank you!" ,
+			"Thank you"
+	}
+
+entities :
+	Simple entity "custom-category" :
+		inputs in en {
+			clothes synonyms fashion , clothes , hat , jacket , dress , shoes
+			games synonyms entertainment , games , concert , cinema , movie
+			school synonyms school , books , notebooks , "school supplies"
+			donation synonyms donation , gift
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-mybudgetbuddy-jxlk.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello! I\'m your budget buddy. How can I help you? "
+	}
+	text response "Check Money Flow in CategoryTxtResp1" :
+		inputs in en {
+			"Which money? "
+	}
+	text response "Check fabricTxtResp1" :
+		inputs in en {
+			"Ok. Can you check what fabric it is made of? "
+	}
+	text response "Check Money FlowTxtResp1" :
+		inputs in en {
+			"I couldnt find. Please try again later. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "Goodbye intentTxtResp1" :
+		inputs in en {
+			"I am glad I was able to help. Have a great day.. " ,
+			"Always a pleasure. Have a great day. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "Check Money Flow in Category" => bot2 : chatbot HttpRequest , HttpResponse , "Check Money Flow in CategoryTxtResp1" ;
+	- user3 : user "Check fabric" => bot3 : chatbot "Check fabricTxtResp1" ;
+	- user4 : user "Check Money Flow" => bot4 : chatbot HttpRequest , HttpResponse , "Check Money FlowTxtResp1" ;
+	- user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user6 : user "Goodbye intent" => bot6 : chatbot "Goodbye intentTxtResp1" ;
+

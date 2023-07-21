@@ -1,0 +1,105 @@
+Chatbot "name-that-tune" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+Year :
+	inputs in en {
+		"What year did it come out?" ,
+		"What year was it released?" ,
+		"What year was this released?" ,
+		"What year did this come out?" ,
+		"When did it come out?" ,
+		"When was it released?" ,
+		"When did this come out?" ,
+		"When was this released?" ,
+		"What is the year?" ,
+		Year ,
+		"What year?"
+}
+
+Hint :
+	inputs in en {
+		"Give us a hint" ,
+		"Can we have a hint?" ,
+		"Can I have a hint?" ,
+		"Hint me" ,
+		"Give me a hint" ,
+		Hint
+}
+
+Next :
+	inputs in en {
+		"Play next song please" ,
+		"Play the next song please" ,
+		"Next song please" ,
+		"Next please" ,
+		"Play the next song" ,
+		"Play next song" ,
+		"Next song" ,
+		Next
+}
+
+Guess :
+	inputs in en {
+		( name ) [ name ] " please" ,
+		( name ) [ name ] ,
+		"is " ( name ) [ name ] "?" ,
+		"this " ( name ) [ name ] ,
+		"This is " ( name ) [ name ] ,
+		"Is this " ( name ) [ name ] "?"
+	}
+	parameters :
+		name : entity text ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://e864a5f6.ngrok.io/intent" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response YearTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response GuessTxtResp1 :
+		inputs in en {
+			"I don\'t know "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user Year => bot2 : chatbot HttpRequest , HttpResponse , YearTxtResp1 ;
+	- user3 : user Hint => bot3 : chatbot HttpRequest , HttpResponse , YearTxtResp1 ;
+	- user4 : user Next => bot4 : chatbot HttpRequest , HttpResponse , YearTxtResp1 ;
+	- user5 : user Guess => bot5 : chatbot HttpRequest , HttpResponse , GuessTxtResp1 ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot "Default Fallback IntentTxtResp1" ;
+

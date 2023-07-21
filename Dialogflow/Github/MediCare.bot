@@ -1,0 +1,2411 @@
+Chatbot MediCare language : en
+
+intents :
+
+	"fatigue-causes" :
+		inputs in en {
+			"give some reasons for fatigue" ,
+			"causes of fatigue" ,
+			"what are the reasons for fatigue"
+	}
+
+	"obesity-causes" :
+		inputs in en {
+			"Reasons for obesity" ,
+			"what cause obesity" ,
+			"mention causes of obesity" ,
+			"give me causes of obesity" ,
+			"What are the causes of obesity"
+	}
+
+	"gingivitis-kids" :
+		inputs in en {
+			"do kids get gingivitis" ,
+			"Can kids get gum disease?"
+	}
+
+	"Type 2 Diabetes Treatment" :
+		inputs in en {
+			"I have " ( "type two" ) [ type_diabetes ] " diabetes" ,
+			"mention some treatments for " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			" treatments for " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"how to cure " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"how to treat " ( "type 2" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"hbp-tips" :
+
+	"typhoid-spread-prevent" :
+		inputs in en {
+			"prevent typhoid" ,
+			"prevention of typhoid" ,
+			"how do I prevent typhoid?"
+	}
+
+	"high-fever1" :
+		inputs in en {
+			"body temperature is high" ,
+			"my fever is high" ,
+			"high fever" ,
+			fever ,
+			"I have fever"
+	}
+
+	"symptoms-of-diabetes" :
+		inputs in en {
+			"give symptoms of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"give symptoms of diabetes " ( "type two" ) [ type_diabetes ] ,
+			"how to know if a person has diabetes" ,
+			"show signs of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"give signs of diabetes " ( "type two" ) [ type_diabetes ] ,
+			"give signs of diabetes type one" ,
+			"give signs of diabetes" ,
+			"what are signs of  diabetes" ,
+			"What are symptoms of diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"reminders.get - next" :
+		inputs in en {
+			"go forward" ,
+			"go to the next page" ,
+			"following result" ,
+			"next page" ,
+			"show me next" ,
+			"switch to the next" ,
+			"show me the next page" ,
+			"anything else" ,
+			"read the next results" ,
+			next ,
+			"show me the following results"
+	}
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	"reminders - context:reminders - comment: date-time" :
+		inputs in en {
+			"and for " ( Friday ) [ "date-time" ] ,
+			"now the one for " ( "next Friday" ) [ "date-time" ] ,
+			"for " ( tomorrow ) [ "date-time" ] " also" ,
+			"another one for " ( tomorrow ) [ "date-time" ] ,
+			"new one for " ( today ) [ "date-time" ] ,
+			"add one more for " ( "next Tuesday" ) [ "date-time" ] ,
+			"one more for " ( tomorrow ) [ "date-time" ] ,
+			"and another for " ( today ) [ "date-time" ] ,
+			"for " ( today ) [ "date-time" ] " now" ,
+			"a new one for " ( today ) [ "date-time" ] " please" ,
+			"for " ( tomorrow ) [ "date-time" ] " as well" ,
+			"another one for " ( today ) [ "date-time" ] ,
+			"one more for " ( "7 pm" ) [ "date-time" ]
+		}
+		parameters :
+			"date-time" : entity text ;
+
+	"type-of-diabetes" :
+		inputs in en {
+			"give me types of diabetes" ,
+			"tell me types of diabetes" ,
+			"what are classes of diabetes" ,
+			"What are types of diabetes"
+	}
+
+	"type-two-diabetes-causes" :
+		inputs in en {
+			"What are causes of " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"reasons for " ( "type two" ) [ type_diabetes ] " diabetes" ,
+			"reasons for " ( "type 2" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"type-of-headache" :
+		inputs in en {
+			"headache type?" ,
+			"headache and its types?" ,
+			"Headache types?" ,
+			"Types of headache?" ,
+			"how many types of headches are there?" ,
+			"what are the types of headache?"
+	}
+
+	"neurological-disorder" :
+		inputs in en {
+			"headache type " ( "neurological disorder" ) [ headache_type ] ,
+			"can you tell me what is " ( "neurological  disorder" ) [ headache_type ] " headache" ,
+			" define " ( "neurological disorder" ) [ headache_type ] " headache" ,
+			"what are symptoms of " ( "neurological disorder" ) [ headache_type ] ,
+			"what are " ( "neurological disorder" ) [ headache_type ] ,
+			( "neurological disorder" ) [ headache_type ] ,
+			"what is " ( "neurological disorder" ) [ headache_type ]
+		}
+		parameters :
+			headache_type : entity headache_type ;
+
+	"How can you prevent obesity?" :
+		inputs in en {
+			"avoidances of obesity" ,
+			"How to avoid obesity" ,
+			"Preventions of obesity" ,
+			"How to prevent obesity"
+	}
+
+	"hbp-symptoms" :
+		inputs in en {
+			"i am having high blood pressure." ,
+			"how do I get to know if I have high bp" ,
+			"do i have high bp?" ,
+			"high blood pressure symptoms" ,
+			"hypertension symptoms" ,
+			"high bp symptoms" ,
+			"how do I know that I have high blood pressure?" ,
+			"how do I know that I have high blood-pressure?" ,
+			"how do I know that I have high bp?"
+	}
+
+	"typetwo-diabetes-prevention" :
+		inputs in en {
+			"How to prevent " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"preventions of type 2 diabetes" ,
+			"how to avoid type 2 diabetes" ,
+			"avoidances of type 2 diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"causes-of-diabetes" :
+		inputs in en {
+			"Tell me what are cause of diabetes" ,
+			"What are causes of diabetes" ,
+			"reasons for diabetes" ,
+			"causes for diabetes" ,
+			"give me causes of diabetes"
+	}
+
+	"reminders.get - back" :
+		inputs in en {
+			"previous results" ,
+			"return to the previous" ,
+			"go to the previous page" ,
+			"go back to previous results" ,
+			^back ,
+			"previous page" ,
+			"read out the previous results" ,
+			"return to previous page" ,
+			previous ,
+			"go back"
+	}
+
+	"hbp-blood-pressure" :
+		inputs in en {
+			"blood pressures" ,
+			"systolic diastolic" ,
+			"Systolic and Diastolic" ,
+			"types of blood pressure" ,
+			"What Is Systolic and Diastolic Blood Pressure?"
+	}
+
+	Obesity :
+		inputs in en {
+			"Information about obesity" ,
+			"Obesity?" ,
+			"tell me what is obesity" ,
+			"What is obesity"
+	}
+
+	"hbp-health-problems" :
+		inputs in en {
+			" Health Problems Are Associated With High Blood Pressure?" ,
+			" Health Problems Associated With High BP?" ,
+			"What Health Problems Are Associated With High Blood Pressure?"
+	}
+
+	"type-one-diabetes-causes" :
+		inputs in en {
+			"What are causes of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"give me causes of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"reasons for " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"reasons for diabetes " ( "type one" ) [ type_diabetes ]
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"reminders.location_based.add" :
+		inputs in en {
+			"don\'t let me forget to " ( "buy eggs" ) [ name ] " when I\'m at the " ( "grocery store" ) [ location ] ,
+			"remind me to " ( "call mom" ) [ name ] " every time I\'m at " ( home ) [ location ] ,
+			"remind me to " ( "visit my friend" ) [ name ] " when I\'m at " ( "Waverley Street Palo Alto" ) [ location ] ,
+			"remind me to " ( "call Tom" ) [ name ] " at " ( "8 am" ) [ "date-time" ] " " ( "every Friday" ) [ recurrence ] " when I\'m at the " ( office ) [ location ] ,
+			"remind me to " ( "call Tom" ) [ name ] " when I get to the " ( office ) [ location ] ,
+			"remind me to " ( "buy milk" ) [ name ] " every time at the " ( "grocery store" ) [ location ] ,
+			"remind me when I\'m at the " ( office ) [ location ] " to " ( "text Sara" ) [ name ] ,
+			"remind me to " ( "walk my dog" ) [ name ] " when I get " ( home ) [ location ] ,
+			"remind me when I get " ( home ) [ location ] " to " ( "send an email to John" ) [ name ] ,
+			"remind me to " ( "feed the cat" ) [ name ] " when I\'m at " ( home ) [ location ] ,
+			"remind me to " ( "buy fresh veggies" ) [ name ] " every time at the " ( "grocery store" ) [ location ]
+		}
+		parameters :
+			name : entity text , required , prompts in en [ "Tell me the name for this reminder please." ] ;
+			location : entity text , required , prompts in en [ "Where do you want to be reminded about this?" ] ;
+			recurrence : entity recurrence ;
+			"date-time" : entity text ;
+
+	"Type 2 Diabetes Diagnosis and Tests" :
+		inputs in en {
+			"diagnosis of " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"exam tests for " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"what are tests for " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"how to diagnose " ( "type 2" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"gingivitis-symptoms" :
+		inputs in en {
+			"do i have gingivitis?" ,
+			"How do I know if I have gum disease" ,
+			"How do i know if I have gingivitis?" ,
+			"symptoms of gum disease" ,
+			"gingivitis symptoms" ,
+			"symptoms for gingivitis" ,
+			"Some Common symptoms for Gingivitis?"
+	}
+
+	"Treatment of Type 1 Diabetes" :
+		inputs in en {
+			"I have " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"How to cure " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"treatments for " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"treatment for " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"How to treat " ( "type 1" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"reminders.rename" :
+		inputs in en {
+			"change reminder\'s title" ,
+			"change name for reminder about " ( "visiting my parents" ) [ "old-name" ] ,
+			"I don\'t like the name of this reminder" ,
+			"change the name" ,
+			"change the name of my reminder" ,
+			"rename the reminder " ( "wash my flat" ) [ "old-name" ] " to " ( "wash my car" ) [ name ] ,
+			"I want call my reminder differently" ,
+			"reminder about " ( running ) [ "old-name" ] " should be renamed to " ( yoga ) [ name ] ,
+			rename ,
+			"change reminder titled " ( "feed the dog" ) [ "old-name" ] " to " ( "cat\'s food" ) [ name ] ,
+			"please change name for the reminder" ,
+			"rename my reminder about " ( cats ) [ "old-name" ] ,
+			"rename reminder about " ( pills ) [ "old-name" ] " to " ( "eat apples" ) [ name ] ,
+			"rename reminder" ,
+			"edit reminder with the title pills" ,
+			"rename my reminder"
+		}
+		parameters :
+			"old-name" : entity text , required , prompts in en [ "What\'s the name of the reminder you want to change?" ] ;
+			name : entity text , required , prompts in en [ "What\'s the new name?" ] ;
+
+	"cold-prevention" :
+		inputs in en {
+			"what are the causes of cold" ,
+			"cold avoidances" ,
+			"cold avoidness" ,
+			"cold prevention" ,
+			"how should i prevent cold" ,
+			"how can i prevent cold"
+	}
+
+	"hbp-curable" :
+		inputs in en {
+			"is there a cure for high bloodpressure?" ,
+			"is there a cure for high blood pressure?" ,
+			"is there a cure for hypertension" ,
+			"is high blood pressure curable?" ,
+			"high bp curable" ,
+			"Is hypertension curable?"
+	}
+
+	"healthy-lifestyle" :
+		inputs in en {
+			"tips for healthy lifestyle" ,
+			"what to do to stay healthy" ,
+			"hoe to maintain good lifestyle" ,
+			"what things to consider for a healthy lifestyle" ,
+			"what are the things one should do to achieve a healthy life" ,
+			"things to do to achieve good health" ,
+			"things to do to achieve good lifestyle" ,
+			"healthy lifestyle" ,
+			"how to make lifestyle healthy" ,
+			"how to achieve a healthy lifestyle" ,
+			"what to do for a healthy lifestyle"
+	}
+
+	"types-of-stomachache" :
+		inputs in en {
+			"what are type of stomachache" ,
+			"Could you tell me type of stomachache" ,
+			"type of stomachache" ,
+			"Can you tell me types of stomachache" ,
+			"can you give me types of stomachache" ,
+			" Stomachache and its types?" ,
+			"Stomachache types?" ,
+			" Types of Stomachache" ,
+			"how many types of Stomachaches are there?" ,
+			" what are the types of Stomachache?"
+	}
+
+	"cold-treatment" :
+		inputs in en {
+			( cold ) [ "high-cold" ] " treatment" ,
+			"treat " ( cold ) [ "high-cold" ] ,
+			"how to treat " ( cold ) [ "high-cold" ] ,
+			"how to " ( "handle cold" ) [ "high-cold" ] ,
+			"what are measures for " ( "handling cold" ) [ "high-cold" ] ,
+			"how to " ( "prevent cold" ) [ "high-cold" ] ,
+			"How could I " ( "overcome cold" ) [ "high-cold" ]
+		}
+		parameters :
+			"high-cold" : entity "high-cold" ;
+
+	"risks in gestational diabetes" :
+		inputs in en {
+			"give some risks of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"What are risks in " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"risks in gestational diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"classes-of-gestational-diabetes" :
+		inputs in en {
+			"types of " ( "gestational diabetes" ) [ type_diabetes ] ,
+			"Classes of " ( "gestational diabetes" ) [ type_diabetes ] ,
+			"classes in " ( "gestational diabetes" ) [ type_diabetes ] ,
+			"What are classes of " ( "gestational diabetes" ) [ type_diabetes ]
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"treatment-of-diabetes" :
+		inputs in en {
+			"I have diabetes" ,
+			"How to cure  diabetes" ,
+			"treatments for  diabetes" ,
+			"treatment for  diabetes" ,
+			"How to treat diabetes"
+	}
+
+	"Gestational Diabetes Tests and Diagnosis" :
+		inputs in en {
+			"how to diagnose " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"diagnosis for " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"exam tests for gestational diabetes" ,
+			"tests for " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"what are tests for " ( gestational ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"typhoid-symptoms" :
+		inputs in en {
+			"what are typhoid symptoms?" ,
+			"how do i know that I know that I have typhoid" ,
+			"can I get typhoid" ,
+			"typhoid symptoms" ,
+			"Do I have typhoid?"
+	}
+
+	"reminders.get" :
+		inputs in en {
+			"check my reminders" ,
+			"show " ( all ) [ all ] " reminders" ,
+			"show me my reminders list" ,
+			"bring up reminders" ,
+			"are you supposed to remind me about something at " ( "7 am" ) [ "date-time" ] ,
+			"show me reminders for " ( "last Saturday" ) [ "date-time" ] ,
+			"do I have a reminder set for " ( "Luca\'s party" ) [ name ] ,
+			"read that reminder" ,
+			"get reminders with name " ( pills ) [ name ] ,
+			"show reminders for " ( "grocery store" ) [ location ] ,
+			"are there any reminders for " ( today ) [ "date-time" ] ,
+			"do I have any reminders scheduled" ,
+			"do I have any reminders scheduled for " ( weekdays ) [ recurrence ] ,
+			"look my reminders" ,
+			"what reminders do I have for " ( tomorrow ) [ "date-time" ] ,
+			"what\'s on my reminder list" ,
+			"show me " ( all ) [ all ] " my reminders" ,
+			"how many reminders do I have" ,
+			"so my reminder" ,
+			"any reminder" ,
+			"do I have any reminders " ( tomorrow ) [ "date-time" ] ,
+			"show me reminders for " ( today ) [ "date-time" ] ,
+			"are you supposed to remind me about something on " ( "November 11" ) [ "date-time" ] ,
+			"show my " ( morning ) [ "date-time" ] " reminders" ,
+			"list of my reminders" ,
+			"open my reminders" ,
+			"read " ( all ) [ all ] " my reminders about " ( "walking my dog" ) [ name ] ,
+			"show reminders" ,
+			"reminders scheduled for " ( tomorrow ) [ "date-time" ] ,
+			"get reminders" ,
+			"do you have any reminders for me" ,
+			"any reminders " ( today ) [ "date-time" ] ,
+			"show me my reminders" ,
+			"show me the reminder" ,
+			"so my reminders" ,
+			"remind me to buy some milk" ,
+			"search for my reminders" ,
+			"my reminders" ,
+			"what reminders do I have set" ,
+			"show me the reminders" ,
+			"show me a reminder" ,
+			"my reminder" ,
+			"show me the reminder list" ,
+			"are you planning to remind me about " ( milk ) [ name ] ,
+			"go to reminders list" ,
+			"show my reminders for " ( tomorrow ) [ "date-time" ] ,
+			"read " ( all ) [ all ] " my reminders" ,
+			"what\'s on my reminders list" ,
+			"find " ( all ) [ all ] " reminders" ,
+			"can you show me " ( all ) [ all ] " my reminders" ,
+			"any reminder for me" ,
+			"what reminders do I have" ,
+			"view reminders" ,
+			"do i have any reminders for " ( tomorrow ) [ "date-time" ] ,
+			"read my reminders" ,
+			"what reminders do I have for " ( "this week" ) [ "date-time" ] ,
+			"are there any reminders for " ( jogging ) [ name ] " for " ( "this morning" ) [ "date-time" ] ,
+			"when will you remind me" ,
+			"show my reminders about " ( cat ) [ name ] ,
+			"the reminder" ,
+			"show me reminder" ,
+			"any reminders for " ( today ) [ "date-time" ] ,
+			"go to my reminders" ,
+			( all ) [ all ] " reminders" ,
+			"reminders for " ( "8 am" ) [ "date-time" ] ,
+			"show " ( daily ) [ recurrence ] " reminders" ,
+			"search reminders for " ( "next Tuesday" ) [ "date-time" ] ,
+			"show me my reminder" ,
+			"what reminders do I have for " ( today ) [ "date-time" ] ,
+			"are you supposed to remind me about something at " ( "9 am" ) [ "date-time" ] ,
+			"show my reminders" ,
+			"show my reminders for " ( "this week" ) [ "date-time" ] ,
+			"show me my " ( todays ) [ "date-time" ] " reminders" ,
+			"any reminders for " ( "this month" ) [ "date-time" ] ,
+			"give me a reminder" ,
+			"what time is my reminder" ,
+			"can you give me a reminder" ,
+			"what are my reminders for " ( tomorrow ) [ "date-time" ] ,
+			"list my reminders" ,
+			"show me reminder list" ,
+			"reminders " ( "this weekend" ) [ "date-time" ] ,
+			"do I have any reminders about " ( dog ) [ name ] ,
+			"show " ( all ) [ all ] " reminders planned for " ( work ) [ location ] ,
+			"show reminder" ,
+			"show me on my reminders" ,
+			"let me see my reminders" ,
+			"do I have a reminder " ( today ) [ "date-time" ] ,
+			"what about reminders" ,
+			"any reminders" ,
+			"go to reminders" ,
+			"any reminders for location " ( "443 Waverley Street Palo Alto" ) [ location ] ,
+			"can you show me my reminders" ,
+			"show me my reminders please" ,
+			"show me a list of my reminders" ,
+			"get reminders called " ( dog ) [ name ] ,
+			"get me my " ( evening ) [ "date-time" ] " reminders" ,
+			"check reminder" ,
+			"check reminders" ,
+			"what are my reminders" ,
+			"reminders for " ( tomorrow ) [ "date-time" ] ,
+			"please show me my reminders" ,
+			"show me my reminders\' list" ,
+			"what are the reminders" ,
+			"are you supposed to remind me about something " ( "every Thursday" ) [ recurrence ] ,
+			"read reminders" ,
+			"tell me my reminders" ,
+			"display reminders" ,
+			"do you have a reminder for me" ,
+			"show me " ( all ) [ all ] " the reminders" ,
+			"show me " ( "today\'s" ) [ "date-time" ] " reminders" ,
+			"what time will you remind me" ,
+			"when is my reminder" ,
+			"read reminder" ,
+			"find reminder" ,
+			"reminders scheduled for " ( "10 October" ) [ "date-time" ] ,
+			"read reminder out loud" ,
+			"open reminders" ,
+			"show " ( all ) [ all ] " reminders about " ( fitness ) [ name ] ,
+			"do you have any reminders for me for " ( today ) [ "date-time" ] ,
+			"review reminders" ,
+			"open reminder" ,
+			"what\'s the reminder" ,
+			"show my reminders list" ,
+			"pull up my reminders" ,
+			"reminders scheduled for when i come " ( home ) [ location ] ,
+			"what are my reminders" ,
+			"are there any reminders" ,
+			"any reminders for " ( tomorrow ) [ "date-time" ] ,
+			"can you show my reminders" ,
+			"reminders with title " ( dog ) [ name ] " for " ( tomorrow ) [ "date-time" ]
+		}
+		parameters :
+			"date-time" ,
+			name ,
+			location ,
+			recurrence : entity recurrence ;
+			all : entity all ;
+
+	"Default Fallback Intent" Fallback :
+
+	"what-migraine" :
+		inputs in en {
+			"Can you answer me what is " ( migraine ) [ headache_type ] ,
+			"can you tell me something about " ( migraine ) [ headache_type ] ,
+			"Could you tell me about " ( migraine ) [ headache_type ] ,
+			"What is the " ( migraine ) [ headache_type ] ,
+			( Migraine ) [ headache_type ] ,
+			"Can you tell me what is " ( migraine ) [ headache_type ] ,
+			"What is " ( migraine ) [ headache_type ]
+		}
+		parameters :
+			headache_type : entity headache_type ;
+
+	"typhoid-curable" :
+		inputs in en {
+			"can I treat typhoid?" ,
+			"is typhoid curable?"
+	}
+
+	"diagnosis-of-fatigue" :
+		inputs in en {
+			"what are tests for fatigue" ,
+			"exam tests for fatigue" ,
+			"tests for fatigue" ,
+			"how to diagnose fatigue" ,
+			"What are diagnosis  of fatigue"
+	}
+
+	gingivitis :
+		inputs in en {
+			"Gum disease" ,
+			"Gingivitis disease" ,
+			gingivitis ,
+			"What is Gingivitis?"
+	}
+
+	"How is obesity treated?" :
+		inputs in en {
+			"I have obesity" ,
+			"I am suffering from obesity" ,
+			"How can I treat obesity" ,
+			"cures for obesity" ,
+			"how to treat obesity" ,
+			"Treatments for obesity"
+	}
+
+	"reminders - context:reminders - comment: name" :
+		inputs in en {
+			"and one more for " ( cat ) [ name ] " please" ,
+			"and about " ( cat ) [ name ] " too" ,
+			"another one about " ( cat ) [ name ] " please" ,
+			"do the same for the one with title " ( drugs ) [ name ] ,
+			"to " ( "call mum" ) [ name ] ,
+			"do the same for " ( pills ) [ name ] ,
+			"about " ( "buying milk" ) [ name ] ,
+			"now the one about " ( shopping ) [ name ] " please" ,
+			"one more for " ( shopping ) [ name ] " please" ,
+			"and about " ( dog ) [ name ] ,
+			"now about " ( cats ) [ name ] ,
+			"and about " ( shopping ) [ name ] ,
+			"can you do the same for the one with title " ( drugs ) [ name ]
+		}
+		parameters :
+			name : entity text ;
+
+	"Target Blood Sugar Levels for Women During Pregnancy" :
+		inputs in en {
+			"What are target blood sugar levels for women during pregnancy" ,
+			"what must be sugar level for women during pregnancy" ,
+			"What are blood sugar levels for women during pregnancy"
+	}
+
+	"Obesity Symptoms" :
+		inputs in en {
+			"what are signs for obesity" ,
+			"show signs for obesity" ,
+			"give signs for obesity" ,
+			"give some symptoms of obesity" ,
+			"mention symptoms of obesity" ,
+			"Obesity symptoms" ,
+			"symptoms of obesity?" ,
+			"What are symptoms of obesity?"
+	}
+
+	"Gestational Diabetes Prevention" :
+		inputs in en {
+			"How to prevent gestational diabetes" ,
+			"how to avoid gestational diabetes" ,
+			"preventions of gestational diabetes" ,
+			"avoidances of gestational diabetes"
+	}
+
+	"gingivitis-type" :
+		inputs in en {
+			"Disease type of gingivitis" ,
+			"Types of gingivitis disease" ,
+			"Type of gingivitis" ,
+			"any type of gingivitis" ,
+			"gingivitis types" ,
+			"Is there any type of gingivitisgingivitis"
+	}
+
+	"tension-type-headaches" :
+		inputs in en {
+			( tension ) [ headache_type ] " type headaches" ,
+			"what are the symptoms of " ( tension ) [ headache_type ] " type headache" ,
+			( tension ) [ headache_type ] " headache" ,
+			"what is " ( tension ) [ headache_type ] " type headache"
+		}
+		parameters :
+			headache_type : entity headache_type ;
+
+	cold1 :
+		inputs in en {
+			"common " ( cold ) [ "high-cold" ] ,
+			cold ,
+			"what is cold" ,
+			"tell me about common cold"
+		}
+		parameters :
+			"high-cold" : entity "high-cold" ;
+
+	"type1-complications" :
+		inputs in en {
+			"consequences of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"worst effects of diabetes" ,
+			"bad effects of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"ill effects of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"complications of " ( "type 1" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"gingivitis-contagious" :
+		inputs in en {
+			"are gum diseases contagious" ,
+			"gum disease contagious" ,
+			"gingivitis contagious" ,
+			"can I get gingivitis from a person infected" ,
+			"can gingivitis spread from person to person" ,
+			"is gingivitis contagious"
+	}
+
+	"hbp-normal-bp" :
+		inputs in en {
+			"normal bp values" ,
+			"normal bp" ,
+			"what are normal blood pressure values?" ,
+			"normal blood pressure" ,
+			"normal bloodpressure" ,
+			"what is the normal blood pressure"
+	}
+
+	"Diet and Exercise for Gestational Diabetes" :
+		inputs in en {
+			"diets and exercise for " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"exercise for " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"What are diets for " ( gestational ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"reminders.get.past" :
+		inputs in en {
+			"show my old reminders" ,
+			"past reminders for " ( "7 am" ) [ "date-time" ] " " ( "every Friday" ) [ recurrence ] " about " ( yoga ) [ name ] ,
+			"my old reminders" ,
+			"open the list of my " ( "last week" ) [ "date-time" ] " reminders about " ( holidays ) [ name ] ,
+			"show me old reminder about " ( "doctor\'s appointment" ) [ name ] ,
+			"enlist my past reminders for " ( "yesterdays morning" ) [ "date-time" ] ,
+			"past reminders" ,
+			"show my past reminders scheduled for " ( "every Wednesday" ) [ recurrence ] " " ( "6 am" ) [ "date-time" ] ,
+			"list of old reminders" ,
+			"enlist my past reminders" ,
+			"past reminders about " ( walking ) [ name ] ,
+			"look for old reminders for " ( "watering my flowers" ) [ name ] ,
+			"give me the list of past reminders about " ( shopping ) [ name ] ,
+			"show my past reminders for " ( "business call" ) [ name ] ,
+			"show " ( all ) [ all ] " reminders about " ( fitness ) [ name ] " for " ( "last weekend" ) [ "date-time" ] ,
+			"give me the list of past reminders" ,
+			"give me the list of the " ( "last year" ) [ "date-time" ] " reminders" ,
+			"old reminders" ,
+			"show my past reminders for " ( "every Friday" ) [ recurrence ] ,
+			"old reminders with location " ( home ) [ location ] ,
+			"old reminders for " ( work ) [ location ] ,
+			"past reminder " ( "for 6 am" ) [ "date-time" ] ,
+			"past reminders for " ( weekdays ) [ recurrence ] ,
+			"past reminders about " ( coffee ) [ name ] " in " ( London ) [ location ] ,
+			"I need you to search for my " ( "yesterday\'s" ) [ "date-time" ] " reminders" ,
+			"show past reminders" ,
+			"past reminders scheduled for address " ( "443 Waverley Street Palo Alto" ) [ location ] ,
+			"show my old " ( work ) [ location ] " related reminders" ,
+			"show me my past reminders about " ( yoga ) [ name ] " from " ( "last week" ) [ "date-time" ] ,
+			"show " ( all ) [ all ] " reminders from " ( "last week" ) [ "date-time" ] ,
+			"list of past reminders" ,
+			"search for old reminders about " ( jogging ) [ name ] " scheduled for " ( "every day" ) [ recurrence ] ,
+			"search past reminders" ,
+			"show me past reminders for " ( "last week" ) [ "date-time" ] ,
+			"where are my old reminders" ,
+			"bring up the list of " ( all ) [ all ] " my past reminders" ,
+			"show past reminders about " ( "visiting my parents" ) [ name ]
+		}
+		parameters :
+			name ,
+			"date-time" ,
+			recurrence : entity recurrence ;
+			location ,
+			all : entity all ;
+
+	"Type 2 Diabetes Complications" :
+		inputs in en {
+			"give complications for " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"complexities in " ( "type 2" ) [ type_diabetes ] " diabetes" ,
+			"what are complications in " ( "type 2" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	diabetes_2 :
+		inputs in en {
+			"inform me about type " ( "2" ) [ ^number ] " diabetes" ,
+			"tell me something about type " ( "2" ) [ ^number ] " diabetes" ,
+			"type " ( two ) [ ^number ] " diabetes?" ,
+			"type " ( "2" ) [ ^number ] " diabetes?" ,
+			"What is type " ( "2" ) [ ^number ] " diabetes"
+		}
+		parameters :
+			^number : entity float ;
+
+	"prevention-of-diabetes" :
+		inputs in en {
+			"Can you tell me how to prevent diabetes" ,
+			"How one can prevent diabetes" ,
+			"How diabetes can be preventes" ,
+			"How can I prevent Diabetes" ,
+			"how to prevent diabetes" ,
+			"prevention of diabetes" ,
+			"give me how to prevent diabetes" ,
+			"Tell me how to prevent diabetes"
+	}
+
+	"gestational diabetes" :
+		inputs in en {
+			"tell me about " ( gestational ) [ type_diabetes ] " diabetes" ,
+			( Gestational ) [ type_diabetes ] " diabetes?" ,
+			"What is " ( gestational ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"Test and Diagnosis of type 1" :
+		inputs in en {
+			"exam tests for " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"give diagnosis for " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"how to diagnose " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"What are tests for " ( "type 1" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	diabetes_1 :
+		inputs in en {
+			"What is type 1 diabetes" ,
+			"type one diabetes" ,
+			"Give information about type 1 diabetes?" ,
+			"Tell me about type 1 diabetes?" ,
+			"type 1 diabetes" ,
+			"What is type 1 of diabetes?"
+	}
+
+	"Prevention of Fatigue" :
+		inputs in en {
+			"how can I prevent fatigue" ,
+			"How to prevent fatigue" ,
+			"avoidances of fatigue" ,
+			"how to avoid fatigue" ,
+			"preventions of fatigue"
+	}
+
+	"reminders.reschedule" :
+		inputs in en {
+			"reschedule my " ( "7 am" ) [ "date-time" ] " reminder" ,
+			"schedule new time for my reminder" ,
+			"move my " ( "6 am" ) [ "date-time" ] " reminder to " ( "7 in the evening" ) [ "date-time-new" ] ,
+			"move my reminder from " ( "7" ) [ "date-time" ] " to " ( "8" ) [ "date-time-new" ] ,
+			"can you reschedule my reminder" ,
+			"reschedule my " ( "7 am" ) [ "date-time" ] " reminder to " ( "15 am" ) [ "date-time-new" ] ,
+			"reschedule reminder" ,
+			"change reminder time" ,
+			"new time for my reminder for " ( "11:00" ) [ "date-time" ] ,
+			"new time for my reminder" ,
+			"move my " ( "5 pm" ) [ "date-time" ] " reminder to " ( "7 pm" ) [ "date-time-new" ] ,
+			"reschedule " ( today ) [ "date-time" ] " reminder for " ( tomorrow ) [ "date-time-new" ]
+		}
+		parameters :
+			"date-time" : entity text , required , prompts in en [ "For what time was it scheduled?" ] ;
+			"date-time-new" : entity text , required , prompts in en [ "What\'s the new time?" ] ;
+
+	"typhoid-bacteria" :
+		inputs in en {
+			"tyhpoid bacteria" ,
+			"where is typhoid bacteria found?" ,
+			"what are typhoid and paratyphoid bacteria?" ,
+			"what is typhoid bacteria?"
+	}
+
+	"typhoid-through-animals" :
+		inputs in en {
+			"Can animals spread typhoid fever or paratyphoid fever to people?" ,
+			"typhoid in animals?" ,
+			"does typhoid spread through animals?"
+	}
+
+	"reminders - context:reminders - comment: recurrence" :
+		inputs in en {
+			"now the one for " ( "each weekend" ) [ recurrence ] ,
+			"for " ( "every Tuesday" ) [ recurrence ] " too" ,
+			"and for " ( "every Friday" ) [ recurrence ] ,
+			"the one for " ( "every day" ) [ recurrence ] ,
+			"one scheduled " ( weekly ) [ recurrence ] " as well" ,
+			"and another one for " ( Wednesdays ) [ recurrence ] ,
+			"and one more for " ( "every weekday" ) [ recurrence ] ,
+			"plus one for " ( mondays ) [ recurrence ] ,
+			"one more for " ( Sundays ) [ recurrence ] ,
+			"and scheduled for " ( Fridays ) [ recurrence ] ,
+			"and the one sheduled for " ( "every day" ) [ recurrence ]
+		}
+		parameters :
+			recurrence : entity recurrence ;
+
+	"cluster-headache" :
+		inputs in en {
+			"definition of " ( "cluster headache" ) [ headache_type ] ,
+			"what is the meaning of " ( "cluster headache" ) [ headache_type ] ,
+			( "cluster headache" ) [ headache_type ] " meaning" ,
+			( "cluster headache" ) [ headache_type ] ,
+			"what are the symptoms of " ( "cluster headache" ) [ headache_type ] ,
+			"meaning of " ( "cluster headache" ) [ headache_type ] ,
+			"what does " ( "cluster headache" ) [ headache_type ] " means" ,
+			( "cluster headache" ) [ headache_type ] " definition" ,
+			"what is " ( "cluster headache" ) [ headache_type ]
+		}
+		parameters :
+			headache_type : entity headache_type ;
+
+	"Gestational Diabetes Treatment" :
+		inputs in en {
+			"I have " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"how to treat " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"tell me cures for " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"how to cure " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"What is treatment of " ( gestational ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"reminders.add" :
+		inputs in en {
+			"remind me to " ( "have a dinner" ) [ name ] " " ( "every sunday" ) [ recurrence ] " at " ( "8 am" ) [ "date-time" ] ,
+			"set reminder for " ( "7 am tomorrow" ) [ "date-time" ] " about " ( dinner ) [ name ] " please" ,
+			"can you add a reminder" ,
+			"add to reminder" ,
+			"create reminder" ,
+			"I need you to set a reminder for me" ,
+			"I would like to set a reminder" ,
+			"remind me for " ( tomorrow ) [ "date-time" ] ,
+			"not now remind me later" ,
+			"remind about " ( running ) [ name ] " " ( "every day" ) [ recurrence ] " at " ( "6 am" ) [ "date-time" ] ,
+			"remind me at" ,
+			"remind me to " ( study ) [ name ] " " ( tomorrow ) [ "date-time" ] ,
+			"remind me of my " ( "doctors appointment" ) [ name ] ,
+			"remind me to " ( "wake up" ) [ name ] " at " ( "6 am" ) [ "date-time" ] ,
+			"schedule reminders" ,
+			"remind me " ( "from monday till wednesday" ) [ "date-time" ] ,
+			"setup a reminder" ,
+			"send me a reminder to " ( "leave for work" ) [ name ] " " ( "in 10 minutes" ) [ "date-time" ] ,
+			"remind me on the " ( "27th of August" ) [ "date-time" ] " " ( "Tomy flight" ) [ name ] ,
+			"remind me about " ( dinner ) [ name ] " at " ( "15pm" ) [ "date-time" ] ,
+			"remind me at " ( "7pm on November 11" ) [ "date-time" ] " to " ( "do homework" ) [ name ] ,
+			"can you put a reminder" ,
+			"can you do a reminder for me" ,
+			"I\'d like to set a reminder" ,
+			"I want to add a reminder" ,
+			"please add reminder" ,
+			"remind me to " ( "turn the lights on" ) [ name ] " at " ( "8 pm" ) [ "date-time" ] ,
+			"remind me " ( tomorrow ) [ "date-time" ] " to " ( call ) [ name ] ,
+			"set reminder for " ( "tomorrow morning" ) [ "date-time" ] ,
+			"will you set a reminder for me" ,
+			"remind me at " ( "2:35 p.m. tomorrow" ) [ "date-time" ] " to " ( "not park in the back parking lot" ) [ name ] ,
+			"remind me to " ( "deliver to Saint Barbara Catholic Church" ) [ name ] " on " ( "Friday 9 to 9:30" ) [ "date-time" ] ,
+			"remind me to " ( "go to bed" ) [ name ] " " ( "in 5 minutes" ) [ "date-time" ] ,
+			"set up reminders" ,
+			"can you remind me of something " ( tomorrow ) [ "date-time" ] ,
+			"remind me to " ( "pick up Joe" ) [ name ] " " ( "in 30 minutes" ) [ "date-time" ] ,
+			"remind me to " ( "brush my teeth" ) [ name ] ,
+			"set a new reminder" ,
+			"set my reminders" ,
+			"remind me about " ( dinner ) [ name ] " " ( "in 1m" ) [ "date-time" ] ,
+			"remind me to " ( "go to work" ) [ name ] " the " ( "19th of August" ) [ "date-time" ] ,
+			"remind me at " ( "1 p.m." ) [ "date-time" ] " that " ( "I have to eat" ) [ name ] ,
+			"add a new reminder" ,
+			"reminder for " ( "4.15 pm today" ) [ "date-time" ] " " ( "visit grandma" ) [ name ] " please" ,
+			"set a reminder for me please" ,
+			"set reminder for " ( "every day" ) [ recurrence ] ,
+			"add reminder" ,
+			"make a new reminder" ,
+			"can you remind me of an " ( appointment ) [ name ] ,
+			"can you set reminders" ,
+			"I need to set up a reminder" ,
+			"make reminder" ,
+			"remind me at " ( "12 o\'clock" ) [ "date-time" ] ,
+			"remind me " ( Friday ) [ "date-time" ] ,
+			"remind me " ( tomorrow ) [ "date-time" ] " to" ,
+			"remind me of a " ( meeting ) [ name ] " on the " ( "27th of August" ) [ "date-time" ] ,
+			"remind me to " ( "charge my phone" ) [ name ] " " ( everyday ) [ recurrence ] " at " ( "11:00 pm" ) [ "date-time" ] ,
+			"remind me to " ( "call someone" ) [ name ] " " ( everyday ) [ recurrence ] " at " ( "4 p.m." ) [ "date-time" ] ,
+			"remind me to " ( "turn off my phone" ) [ name ] " " ( "every day" ) [ recurrence ] " at " ( "11 pm" ) [ "date-time" ] ,
+			"I need a reminder for " ( today ) [ "date-time" ] ,
+			"add a reminder for " ( tomorrow ) [ "date-time" ] ,
+			"remind me later" ,
+			"remind me to " ( "work out" ) [ name ] ,
+			"remind me to " ( "wake up" ) [ name ] " " ( tomorrow ) [ "date-time" ] ,
+			"remind me " ( tomorrow ) [ "date-time" ] ,
+			"yes please remind me" ,
+			"setup reminder" ,
+			"remind " ( flight ) [ name ] " at " ( "6 am" ) [ "date-time" ] ,
+			"set reminder " ( "buy milk" ) [ name ] " for " ( "every Monday and Wednesday" ) [ recurrence ] " at " ( "5 pm" ) [ "date-time" ] ,
+			"help me remind me to " ( "call Bae" ) [ name ] " " ( "tomorrow at 9" ) [ "date-time" ] ,
+			"new reminder " ( "eat an apple" ) [ name ] " " ( "every day" ) [ recurrence ] " at " ( "9 am" ) [ "date-time" ] ,
+			"don\'t let me forget to " ( "pick up milk" ) [ name ] " " ( today ) [ "date-time" ] ,
+			"I want to make a reminder" ,
+			"make a reminder for me" ,
+			"can you remind" ,
+			"I would like to set up a reminder" ,
+			"remind me " ( everyday ) [ recurrence ] ,
+			"remind me of " ( appointment ) [ name ] ,
+			"set a reminder please" ,
+			"remind me to " ( "wear green on st. patrick’s day" ) [ name ] ,
+			"remind me to " ( "buy bread" ) [ name ] " " ( "at 11 am tomorrow" ) [ "date-time" ] ,
+			"new reminder for " ( "every day" ) [ recurrence ] ,
+			"add reminder " ( "feed a cat" ) [ name ] " " ( "in 3 min" ) [ "date-time" ] ,
+			"can you remind me to " ( "read my book wash dishes and sweep the floor" ) [ name ] ,
+			"reminder to " ( "play with my cat" ) [ name ] " " ( "every workday" ) [ recurrence ] " at " ( "7 pm" ) [ "date-time" ] ,
+			"I want a reminder" ,
+			"remind me to " ( "wash my car" ) [ name ] ,
+			"can you make a reminder" ,
+			"can you remind me to" ,
+			"I need a reminder " ( tomorrow ) [ "date-time" ] ,
+			"can you set up a reminder for me" ,
+			"can you set me a reminder" ,
+			"need to set a reminder" ,
+			"remind me at " ( noon ) [ "date-time" ] ,
+			"remind me " ( "on weekend" ) [ "date-time" ] ,
+			"remind me to " ( "take medicine" ) [ name ] ,
+			"set a reminder " ( "for Thursday" ) [ "date-time" ] ,
+			"reminder for me" ,
+			"set a reminder " ( "for 1 hour" ) [ "date-time" ] ,
+			"remind me to " ( "boil water" ) [ name ] " " ( "every morning" ) [ recurrence ] " by " ( "7 a.m." ) [ "date-time" ] ,
+			"set reminder for " ( "7 am tomorrow" ) [ "date-time" ] " " ( yoga ) [ name ] ,
+			"add reminder for me" ,
+			"new reminder about " ( fitness ) [ name ] ,
+			"can you remind me" ,
+			"can you remind me something " ( tomorrow ) [ "date-time" ] ,
+			"can I set a reminder" ,
+			"can you remind me to " ( call ) [ name ] ,
+			"don\'t forget to remind me" ,
+			"I need you to remind me something" ,
+			"I want you to remind me something" ,
+			"can you set a reminder for me " ( tomorrow ) [ "date-time" ] ,
+			"I would like to add a reminder" ,
+			"okay remind me" ,
+			"put a reminder" ,
+			"ok remind me" ,
+			"one more reminder" ,
+			"remind me of " ( "blood brothers" ) [ name ] ,
+			"remind me I have a " ( "doctor\'s appointment" ) [ name ] ,
+			"sam I need a reminder" ,
+			"set reminder " ( "buy milk" ) [ name ] " on " ( "November 11 at 5 pm" ) [ "date-time" ] ,
+			"remind me to " ( "see the table" ) [ name ] " " ( "in 5 minutes" ) [ "date-time" ] ,
+			"remind me to " ( "check my computer" ) [ name ] ,
+			reminder ,
+			"make me a reminder" ,
+			"make another reminder" ,
+			"can I add a reminder" ,
+			"I need to add a reminder" ,
+			"remind me to " ( "go to sleep" ) [ name ] ,
+			"remind me to " ( "pay my credit card bill" ) [ name ] ,
+			"remind me I have a " ( meeting ) [ name ] ,
+			"remind me " ( "the day before" ) [ "date-time" ] ,
+			"schedule reminder" ,
+			"set reminder " ( "for 5 minutes" ) [ "date-time" ] ,
+			"remind me about " ( dinner ) [ name ] " " ( "in 1hour" ) [ "date-time" ] ,
+			"set reminder about " ( "washing car" ) [ name ] ,
+			"remind me " ( "in 15 minutes" ) [ "date-time" ] " to " ( "go to the bar" ) [ name ] ,
+			"new reminder" ,
+			"remind me to " ( "buy movie tickets" ) [ name ] " for " ( "Friday evening" ) [ "date-time" ] ,
+			"remind me " ( "on weekdays" ) [ recurrence ] ,
+			"reminder for " ( today ) [ "date-time" ] ,
+			"I need a reminder" ,
+			"set reminder for " ( "dinner with Tom" ) [ name ] " please" ,
+			"add new reminder" ,
+			"I need a reminder set" ,
+			"can you set up a reminder" ,
+			"I need you to remind me" ,
+			"please remind me to" ,
+			"remind me about something" ,
+			"remind me on" ,
+			"remind me to " ( "call dad" ) [ name ] ,
+			"remind me to " ( watch ) [ name ] ,
+			"remind me about " ( dinner ) [ name ] " " ( "in 1minute" ) [ "date-time" ] ,
+			"remind me to " ( "visit my family" ) [ name ] " on " ( "Thanksgiving day" ) [ "date-time" ] ,
+			"remind me about the " ( "teacher meeting" ) [ name ] " on " ( Friday ) [ "date-time" ] ,
+			"remind me " ( "nutrition research" ) [ name ] " " ( "tomorrow at 8am" ) [ "date-time" ] ,
+			"remind me " ( "every day except Sundays" ) [ recurrence ] ,
+			"remind about " ( "business meeting" ) [ name ] " " ( "every monday" ) [ recurrence ] " at " ( "4 pm" ) [ "date-time" ] ,
+			"remind me that I have a " ( "doctor\'s appointment" ) [ name ] ,
+			"set reminder" ,
+			"can you make me a reminder" ,
+			"can you please remind me" ,
+			"I need to set another reminder" ,
+			"remind me at " ( "11 o\'clock in the morning" ) [ "date-time" ] ,
+			"remind about " ( running ) [ name ] " at " ( "6 am on 7 december" ) [ "date-time" ] ,
+			"remind me to " ( "wake up" ) [ name ] " at " ( "7 am" ) [ "date-time" ] ,
+			"remind me " ( today ) [ "date-time" ] ,
+			"remind me to " ( "book a parking spot for my Carnival Cruise" ) [ name ] ,
+			"remind me to " ( "call Jose" ) [ name ] " " ( tomorrow ) [ "date-time" ] ,
+			"remind me to " ( "do homework" ) [ name ] " on " ( "November 11 at 7pm" ) [ "date-time" ] ,
+			"can you please remind me to " ( "take my medication" ) [ name ] " " ( "every morning" ) [ recurrence ] " at " ( "7:00" ) [ "date-time" ] ,
+			"remind about " ( party ) [ name ] " at " ( "12 pm on Friday" ) [ "date-time" ] ,
+			"can you remind me later" ,
+			"I need to schedule a reminder" ,
+			"set a reminder for " ( "8 am" ) [ "date-time" ] ,
+			"set a reminder for" ,
+			"remind us" ,
+			"set up a reminder" ,
+			"remind me to " ( "call mom" ) [ name ] " on " ( Christmas ) [ "date-time" ] ,
+			"remind me to " ( "call my brother" ) [ name ] " on " ( "Veterans day" ) [ "date-time" ] ,
+			"remind me of " ( video ) [ name ] " " ( "every day" ) [ recurrence ] " at " ( noon ) [ "date-time" ] ,
+			"new reminder about " ( "washing car" ) [ name ] ,
+			"remind me about the " ( "parent/teacher meeting" ) [ name ] " on " ( Friday ) [ "date-time" ] ,
+			"make a reminder" ,
+			"new reminder please" ,
+			"send me a reminder" ,
+			"please make a reminder" ,
+			"remind me of my " ( appointment ) [ name ] ,
+			"set reminder for me" ,
+			"set new reminder" ,
+			"set reminder set reminder" ,
+			"remind me about " ( exams ) [ name ] " " ( "every Friday" ) [ recurrence ] " at " ( "7 pm" ) [ "date-time" ] ,
+			"remind me to " ( "drink some water" ) [ name ] " " ( "in 5 minutes" ) [ "date-time" ] ,
+			"set reminder for " ( tomorrow ) [ "date-time" ] ,
+			"remind me to " ( "go running" ) [ name ] " at " ( "6 AM" ) [ "date-time" ] ,
+			"set reminder about " ( "dog walking" ) [ name ] " repeat it " ( "every day" ) [ recurrence ] " at " ( "9 am" ) [ "date-time" ] ,
+			"add a reminder" ,
+			"add another reminder" ,
+			"can I make a reminder" ,
+			"can you set reminder" ,
+			"remind me " ( "on Thursday" ) [ "date-time" ] ,
+			"reminder " ( "for this evening" ) [ "date-time" ] ,
+			"set reminder " ( "for 2 pm" ) [ "date-time" ] ,
+			"remind me to " ( exercise ) [ name ] " " ( tonight ) [ "date-time" ] ,
+			"remind me once about " ( running ) [ name ] ,
+			"set reminder for " ( "25th November" ) [ "date-time" ] ,
+			"remind me to " ( "wash the car" ) [ name ] ,
+			"remind me " ( "10:30 pm" ) [ "date-time" ] " to " ( "close the restaurant" ) [ name ] ,
+			"remind me " ( everyday ) [ recurrence ] " to " ( "read a book" ) [ name ] " at " ( "6PM" ) [ "date-time" ] ,
+			"remind about " ( "holidays one day before" ) [ name ] ,
+			"remind me" ,
+			"do not let me forget to " ( "water flowers" ) [ name ] " at " ( "7 am tomorrow" ) [ "date-time" ] ,
+			"remind me to " ( "feed my cat" ) [ name ] " please" ,
+			"schedule a reminder" ,
+			"can you set a reminder for me" ,
+			"create a reminder for me" ,
+			remind ,
+			"please set reminder" ,
+			"please remind me to " ( call ) [ name ] ,
+			"remind me to " ( "buy milk" ) [ name ] " on " ( "Tuesday at 8 pm" ) [ "date-time" ] ,
+			"remind me to" ,
+			"reminder set" ,
+			"reminder " ( "for today" ) [ "date-time" ] ,
+			"set the reminder" ,
+			"set reminder to " ( "5 pm" ) [ "date-time" ] ,
+			"Send me a reminder to " ( "pay the cable bill" ) [ name ] " on " ( "March 3" ) [ "date-time" ] ,
+			"remind me about " ( dinner ) [ name ] " at " ( "15.23" ) [ "date-time" ] ,
+			"add reminder with title " ( "washing car" ) [ name ] ,
+			"remind me to " ( "buy shoes in Paris" ) [ name ] ,
+			"I would like a reminder" ,
+			"could you remind me" ,
+			"can you set reminders for me" ,
+			"remind me to " ( "go to the doctor" ) [ name ] ,
+			"remind me " ( "tomorrow at 9 am" ) [ "date-time" ] ,
+			"set up reminder" ,
+			"remind me to " ( "vitamin D" ) [ name ] " at " ( "7 pm" ) [ "date-time" ] " " ( "every day" ) [ recurrence ] ,
+			"add reminder for " ( meeting ) [ name ] ,
+			"remind me to " ( "wash the car" ) [ name ] " " ( "in 4 hours" ) [ "date-time" ]
+		}
+		parameters :
+			name : entity text , required , prompts in en [ "How should I name this reminder?" , "Tell me the name for this reminder." ] ;
+			"date-time" : entity text , required , prompts in en [ "When should I remind you?" ] ;
+			recurrence : entity recurrence ;
+
+	"gestational-diabetes-complications" :
+		inputs in en {
+			"worst effects of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"consequences of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"bad effects of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"ill effects of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"harsh effects of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"complications of " ( gestational ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"gestational-diabetes-causes" :
+		inputs in en {
+			"What are reasons  of " ( gestational ) [ type_diabetes ] " diabetes\'" ,
+			"What are causes of " ( gestational ) [ type_diabetes ] " diabetes\'" ,
+			"give me causes of " ( gestational ) [ type_diabetes ] " diabetes" ,
+			"say me about " ( gestational ) [ type_diabetes ] " diabetes reasons"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	stomachache :
+		inputs in en {
+			"something to do to cure Stomachache?" ,
+			"tell me somethinig to do to overcome Stomachache?" ,
+			"treatment for Stomachache?" ,
+			"cure for Stomachache?" ,
+			"i am getting Stomachache what to do?" ,
+			"what to do to cure my stomachache?" ,
+			"how do i cure my stomach pain?" ,
+			"how to cure my Stomachache?" ,
+			"How do i treat my Stomach pain?" ,
+			"how to treat Stomachache?" ,
+			"Symptoms of Stomachache?" ,
+			"Why is my Stomach paining?" ,
+			"What are the Symptoms of Stomachache?" ,
+			"Stomach in my head ?" ,
+			"My stomach pains" ,
+			"My stomach is paining what should i do?" ,
+			"My stomach is paining?" ,
+			"what caused me stomachache?" ,
+			"What is the reason for stomachache?" ,
+			"Why am i having Stomachache?" ,
+			" I have stomachache what should i do?" ,
+			"I have Stomachache?"
+	}
+
+	"reminders.snooze" :
+		inputs in en {
+			"snooze reminder" ,
+			"remind me later" ,
+			"move reminder" ,
+			"reschedule it" ,
+			"remind me " ( tomorrow ) [ "date-time" ] ,
+			"reschedule my reminder for " ( "next Monday" ) [ "date-time" ] ,
+			"can you remind me about it " ( "in 30 minutes" ) [ "date-time" ] ,
+			"snooze for " ( "7 minutes" ) [ "date-time" ] ,
+			"remind me " ( "in 2 hours" ) [ "date-time" ] " please" ,
+			"reschedule my reminder" ,
+			"snooze it" ,
+			snooze
+		}
+		parameters :
+			"date-time" : entity text , required , prompts in en [ "When should I remind you again?" ] ;
+
+	"What is chronic fatigue syndrome?" :
+		inputs in en {
+			"define fatigue" ,
+			"tell me about fatigue" ,
+			"explain fatigue" ,
+			"What is fatigue"
+	}
+
+	"risks in type1" :
+		inputs in en {
+			"tell me risks in type " ( "1" ) [ ^number ] " of diabetes" ,
+			"What are the risks in type " ( "1" ) [ ^number ] " of diabetes"
+		}
+		parameters :
+			^number : entity float ;
+
+	Doctor :
+		inputs in en {
+			"need doctor for cold" ,
+			"need doctor for headaches" ,
+			"i need a doctor for diabetes" ,
+			"book appointments" ,
+			"i want to book an appointment with the doctor" ,
+			"i need a dcotor" ,
+			doctor ,
+			"can u suggest me a doctor" ,
+			"i need to speak to an expert" ,
+			"i want a doctor" ,
+			"could you recommend me a doctor"
+	}
+
+	"risk in type 2" :
+		inputs in en {
+			"do you know more about type " ( "2" ) [ ^number ] " risks" ,
+			"More risks in type " ( "2" ) [ ^number ] ,
+			"Give some risks of type " ( "2" ) [ ^number ] ,
+			"tell me risks of type " ( "2" ) [ ^number ] " diabetes" ,
+			"what are risks in type " ( "2" ) [ ^number ] "?" ,
+			"risks in " ( type2 ) [ type_diabetes ] "?"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+			^number : entity float ;
+
+	"typhoid-fever" :
+		inputs in en {
+			"types of typhoid" ,
+			"what is typhoid and paratyphoid" ,
+			"what is typhoid" ,
+			"What are typhoid"
+		}
+		parameters :
+			typhoid : entity typhoid , required , prompts in en [ "Typhoid fever is a life-threatening illness caused by Salmonella Typhi bacteria. Paratyphoid fever is a life-threatening illness caused by Salmonella Paratyphi bacteria." ] ;
+
+	"fatigue-treatment" :
+		inputs in en {
+			"how to cure fatigue" ,
+			"treatments for fatigue" ,
+			"I have fatigue" ,
+			"how to treat fatigue"
+	}
+
+	"reminders.get.past - next" :
+		inputs in en {
+			"show me next" ,
+			"show me the next page" ,
+			"switch to the next" ,
+			"read the next results" ,
+			next ,
+			"go forward" ,
+			"go to the next page" ,
+			"next page" ,
+			"following result" ,
+			"show me the following results"
+	}
+
+	"reminders.remove" :
+		inputs in en {
+			"remove the reminder about " ( "my yoga classes" ) [ name ] ,
+			"remove reminder planned for " ( today ) [ "date-time" ] ,
+			"erase a reminder for " ( "going to the store" ) [ name ] " " ( tonight ) [ "date-time" ] ,
+			"erase all reminders" ,
+			"forget " ( all ) [ all ] " reminders" ,
+			"erase my reminders please" ,
+			"reminders off" ,
+			"cancel reminder " ( milk ) [ name ] ,
+			"I want to delete reminder" ,
+			"can you delete my reminder" ,
+			"cancel all reminders for " ( today ) [ "date-time" ] ,
+			"delete all reminders for " ( tomorrow ) [ "date-time" ] ,
+			"remove reminder " ( yoga ) [ name ] ,
+			"cancel the reminder" ,
+			"remove " ( all ) [ all ] " reminders" ,
+			"stop reminding me" ,
+			"get rid of " ( all ) [ all ] " my reminders" ,
+			"delete the last reminder" ,
+			"remove " ( "the whole list" ) [ all ] " of reminders" ,
+			"remove my " ( weekly ) [ recurrence ] " reminders" ,
+			"delete the reminder about " ( jogging ) [ name ] ,
+			"get rid of my reminder" ,
+			"remove reminders for " ( today ) [ "date-time" ] ,
+			"please erase " ( all ) [ all ] " reminders" ,
+			"remove all reminders for " ( "this week" ) [ "date-time" ] ,
+			"do not remind me" ,
+			"dismiss " ( "airport pick up" ) [ name ] " reminder" ,
+			"delete " ( all ) [ all ] " reminders for " ( tomorrow ) [ "date-time" ] ,
+			"cancel this reminder" ,
+			"remove reminder titled " ( dog ) [ name ] ,
+			"reminder delete" ,
+			"cancel reminders for " ( "8 am" ) [ "date-time" ] ,
+			"please cancel the reminder" ,
+			"move reminder about " ( fitness ) [ name ] " to trash" ,
+			"erase scheduled reminder" ,
+			"stop reminding me about " ( jogging ) [ name ] " " ( "every day" ) [ recurrence ] ,
+			"erase reminder for " ( "walking with my dog" ) [ name ] ,
+			"delete " ( all ) [ all ] " reminders" ,
+			"remove reminders scheduled for when I come " ( home ) [ location ] ,
+			"remove reminders with title " ( "dinner party" ) [ name ] " for " ( tomorrow ) [ "date-time" ] ,
+			"erase " ( all ) [ all ] " reminders please" ,
+			"erase reminder for " ( "call you" ) [ name ] ,
+			"delete one of my reminders" ,
+			"get rid of my reminders" ,
+			"don\'t remind me anymore" ,
+			"remove the notification about " ( milk ) [ name ] ,
+			"remove " ( all ) [ all ] " my reminders" ,
+			"erase " ( all ) [ all ] " of my reminders" ,
+			"cancel the " ( "5 pm" ) [ "date-time" ] " reminder" ,
+			"remove reminder scheduled for when I\'m at " ( "Waverley Street Palo Alto" ) [ location ] ,
+			"please remove a reminder" ,
+			"move reminder to trash" ,
+			"turn off reminder" ,
+			"remove reminder with name " ( "business call" ) [ name ] ,
+			"cancel reminder" ,
+			"can you cancel my reminder" ,
+			"remove my reminder" ,
+			"cancel " ( all ) [ all ] " reminders" ,
+			"remove reminder " ( milk ) [ name ] ,
+			"remove my reminders" ,
+			"do not remind me about " ( "going to sleep" ) [ name ] ,
+			"please clear " ( all ) [ all ] " reminders that deliver" ,
+			"remove reminders scheduled for when I come " ( home ) [ location ] ,
+			"remove reminder" ,
+			"remove reminders for " ( tomorrow ) [ "date-time" ] ,
+			"remove reminder titled " ( "doctor\'s appointment" ) [ name ] ,
+			"get rid of " ( all ) [ all ] " my reminders" ,
+			"remove reminders set for " ( tomorrow ) [ "date-time" ] ,
+			"remove reminders" ,
+			"delete another reminder" ,
+			"delete " ( "today\'s" ) [ "date-time" ] " reminder" ,
+			"delete reminder" ,
+			"remove reminders for " ( "1 am" ) [ "date-time" ] ,
+			"remove a reminder" ,
+			"remove my " ( "every day" ) [ recurrence ] " reminders" ,
+			"don t remind me about " ( "meeting with john" ) [ name ] ,
+			"delete this reminder" ,
+			"remove reminders with title " ( dog ) [ name ] " for " ( tomorrow ) [ "date-time" ] ,
+			"erase " ( all ) [ all ] " of my reminders" ,
+			"erase my reminder"
+		}
+		parameters :
+			name : entity text , prompts in en [ "What reminder do you want to remove?" ] ;
+			"date-time" ,
+			recurrence : entity recurrence ;
+			location ,
+			all : entity all ;
+
+	"Risk factors for CFS" :
+		inputs in en {
+			"risk factors in fatigue" ,
+			"risk in fatigue" ,
+			"Risks in fatigue" ,
+			"Tell me risks in fatigue"
+	}
+
+	"symptoms of CFS" :
+		inputs in en {
+			"give some symptoms of fatigue" ,
+			" what are symptoms of fatigue" ,
+			" what are signs of fatigue" ,
+			"show signs of fatigue" ,
+			"show symptoms of fatigue"
+	}
+
+	"How is obesity diagnosed?" :
+		inputs in en {
+			"exam tests for obesity" ,
+			"how to diagnose  obesity" ,
+			"diagnosis of obesity" ,
+			"Tests for obesity"
+	}
+
+	"high-bp-hypertension" :
+		inputs in en {
+			"high bp hypertension" ,
+			"difference between high blood pressure and hypertension" ,
+			"high blood pressure and hypertension" ,
+			"Are high blood pressure and hypertension same?" ,
+			"Are high BP and Hypertension the same?"
+	}
+
+	"obesity-complications" :
+		inputs in en {
+			"complexity of obesity" ,
+			"effects of obesity" ,
+			"consequences of obesity" ,
+			"worst effects of obesity" ,
+			"bad effects of obesity" ,
+			"ill effects of obesity" ,
+			"complications of obesity"
+	}
+
+	headache :
+		inputs in en {
+			"My head hurts" ,
+			"something to do to cure a headache?" ,
+			" tell me something to do to overcome a headache?" ,
+			"treatment for a headache?" ,
+			"what to do to cure my headache?" ,
+			"  How do I treat my head pain?" ,
+			" What to do when head is paining?" ,
+			"  Symptoms of headache?" ,
+			"  how to treat headache?" ,
+			"Why is my head paining?" ,
+			"What are the Symptoms of Headache?" ,
+			"  Pain in my head what to do?" ,
+			"  Pain in my head ?" ,
+			" My head pains" ,
+			" My head is paining?" ,
+			"  My head is paining what should i do?" ,
+			"  what caused me Headcahe?" ,
+			" What is the reason for headache?" ,
+			"Why am i having headache?" ,
+			" I have headache what should i do?" ,
+			" I have headache?"
+	}
+
+	diabetes :
+		inputs in en {
+			"give information regarding diabetes" ,
+			"give information about diabetes" ,
+			"tell me something about diabetes" ,
+			"what is diabetes"
+	}
+
+	hypertension :
+		inputs in en {
+			Hypertension ,
+			"What Causes High Blood Pressure?" ,
+			"What is Hypertension?"
+	}
+
+	"type-one-diabetes-prevention" :
+		inputs in en {
+			"How to prevent diabetes " ( "type 1" ) [ type_diabetes ] ,
+			"Preventions of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"avoidances of " ( "type 1" ) [ type_diabetes ] " diabetes" ,
+			"how to avoid " ( "type 1" ) [ type_diabetes ] " diabetes"
+		}
+		parameters :
+			type_diabetes : entity type_diabetes ;
+
+	"Complications of Fatigue" :
+		inputs in en {
+			"worst effects of fatigue" ,
+			"harsh effects of fatigue" ,
+			"bad effects of fatigue" ,
+			"ill effects of fatigue" ,
+			"consequences of fatigue" ,
+			"effects of fatigue" ,
+			"complications of fatigue" ,
+			"what are problems in fatigue"
+	}
+
+entities :
+	Simple entity all :
+		inputs in en {
+			^true synonyms all , "all of" , each , every , everything , everywhere , "the whole list"
+	}
+	Simple entity recurrence :
+		inputs in en {
+			Daily synonyms daily , "each weekend" , "each morning" , "every day" , "every morning" , everyday
+			Fridays synonyms Fridays , "each Friday" , "every Friday"
+			Mondays synonyms Mondays , "each Monday" , "every Monday" , monday
+			"Mondays, Tuesdays" synonyms "Mondays, Tuesdays" , "every Monday and Tuesday" , "every Monday and every Tuesday" , "on Mondays and Tuesdays"
+			"Mondays, Tuesdays, Wednesdays" synonyms "Mondays, Tuesdays, Wednesdays" , "every Monday, Tuesday and Wednesday" , "on Mondays, Tuesdays and Wednesdays"
+			"Mondays, Tuesdays, Wednesdays, Thursdays" synonyms "Mondays, Tuesdays, Wednesdays, Thursdays" , "every Monday, Tuesday, Wednesday and Thursday" , "on Mondays, Tuesdays, Wednesdays and Thursdays"
+			"Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays" synonyms "Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays" , "every day except Sundays"
+			Monthly synonyms Monthly , "every month"
+			Saturdays synonyms Saturdays , "each Saturday" , "every Saturday" , "for saturdays"
+			Sundays synonyms Sundays , "each Sunday" , "every Sunday"
+			Thursdays synonyms Thursdays , "each Thursday" , "every Thursday"
+			Tuesdays synonyms Tuesdays , "each Tuesday" , "every Tuesday"
+			Wednesdays synonyms Wednesdays , "each Wednesday" , "every Wednesday"
+			Weekdays synonyms Weekdays , "every weekday" , "every workday" , "monday to friday" , "on weekdays" , "only on weeekdays" , "week days" , "work days" , workday , workdays , "working days"
+			Weekends synonyms Weekends , "every weekend" , "only on weekends"
+			Weekly synonyms weekly
+	}
+	Simple entity headache_type :
+		inputs in en {
+			Migraine synonyms Migraine , "cephalalgia." , "hemicrania." , "megrim." , "misery in the head." , "sinus headache." , "splitting headache"
+			Tension synonyms Tension , tightness , tautness , tenseness , rigidity , pressure , stress , strain
+			"Neurological Disorder" synonyms "Neurological Disorder" , "audiovisual." , "auditory." , "olfactory." , "sensual."
+			"Cluster Headaches" synonyms "Cluster Headaches" , "histamine headache"
+	}
+	Simple entity "high-cold" :
+		inputs in en {
+			cold synonyms cold , "high cold" , "high-cold"
+	}
+	Simple entity typhoid :
+		inputs in en {
+			"paratyphoid fever" synonyms "paratyphoid fever"
+	}
+	Simple entity "high-fever" :
+		inputs in en {
+			"high fever" synonyms "high fever" , "high body temperature" , "high temp"
+	}
+	Simple entity type_diabetes :
+		inputs in en {
+			type1 synonyms type1 , "type 1" , "type one" , t1 , "t 1"
+			type2 synonyms type2 , "type 2" , "type two" , typetwo , t2 , "t 2"
+			gestational synonyms gestational
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://30be3deb.ngrok.io/post" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "fatigue-causesTxtResp1" :
+		inputs in en {
+			"The cause of CFS (Chronic Fatigue Syndrome) is unknown. Researchers speculate that contributing factors may include:\n\nviruses\na weakened immune system\nstress\nhormonal imbalances\nIt’s also possible that some people are genetically predisposed to develop CFS. " ,
+			"Though CFS (Chronic Fatigue Syndrome) can sometimes develop after a viral infection, no single type of infection has been found to cause CFS. Some viral infections that have been studied in relation to CFS include:\n\nEpstein-Barr virus (EBV)\nhuman herpesvirus 6\nRoss River virus (RRV)\nrubella "
+	}
+	text response "obesity-causesTxtResp1" :
+		inputs in en {
+			"Common specific causes of obesity include:\n\neating a poor diet of foods high in fats and calories\nhaving a sedentary (inactive) lifestyle\nnot sleeping enough, which can lead to hormonal changes that make you feel hungrier and crave certain high-calorie foods\ngenetics, which can affect how your body processes food into energy and how fat is stored\ngrowing older, which can lead to less muscle mass and a slower metabolic rate, making it easier to gain weight\npregnancy (weight gained during pregnancy can be difficult to lose and may eventually lead to obesity) " ,
+			"Medical conditions may also lead to weight gain. These include:\n\npolycystic ovary syndrome (PCOS): a condition that causes an imbalance of female reproductive hormones\nPrader-Willi syndrome: a rare condition that an individual is born with which causes excessive hunger\nCushing syndrome: a condition caused by having an excessive amount of the hormone cortisol in your system\nhypothyroidism (underactive thyroid): a condition in which the thyroid gland doesn’t produce enough of certain important hormones\nosteoarthritis (and other conditions that cause pain that may lead to inactivity) "
+	}
+	text response "gingivitis-kidsTxtResp1" :
+		inputs in en {
+			"Periodontal disease can range from mild to severe. Most children with gum disease have the mildest form, called gingivitis. It causes the gums to become red, swollen, and sore. More advanced cases of gum disease are not common in children. "
+	}
+	text response "Type 2 Diabetes TreatmentTxtResp1" :
+		inputs in en {
+			"Weight loss. Dropping extra pounds can help. While losing 5% to 10% of your body weight is good, losing 7% and keeping it off seems to be ideal. " ,
+			"Healthy eating . There’s no specific diet for type 2 diabetes. A registered dietitian can teach you about carbs and help you make a meal plan you can stick with. Focus on:\nEating fewer calories\nCutting back on refined carbs, especially sweets\nAdding veggies and fruits to your diet\nGetting more fiber " ,
+			"Exercise. Try to get 30 to 60 minutes of physical activity every day. You can walk, bike, swim, or do anything else that gets your heart rate up. Pair that with strength training, like yoga or weightlifting. If you take a medication that lowers your blood sugar, you might need a snack before a workout. " ,
+			"Watch your blood sugar levels: Depending on your treatment, especially if you’re on insulin, your doctor will tell you if you need to test your blood sugar levels and how often to do it. " ,
+			"If lifestyle changes don’t get you to your target blood sugar levels, you may need medication. Some of the most common for type 2 diabetes include:\n\nMetformin  (Fortamet, Glucophage, Glumetza, Riomet). This is usually the first medication used to treat type 2 diabetes. It lowers the amount of glucose your liver makes and helps your body respond better to the insulin it does make.\nSulfonylureas. This group of drugs helps your body make more insulin. They include glimepiride (Amaryl), glipizide (Glucotrol, Metaglip), and glyburide (DiaBeta, Micronase).\nMeglitinides. They help your body make more insulin, and they work faster than sulfonylureas. You might take nateglinide (Starlix) or repaglinide (Prandin).\nThiazolidinediones. Like metformin, they make you more sensitive to insulin. You could get pioglitazone (Actos) or rosiglitazone (Avandia). But they also raise your risk of heart problems, so they aren’t usually a first choice for treatment.\nDPP-4 inhibitors. These medications -- linagliptin (Tradjenta), saxagliptin (Onglyza), and sitagliptin (Januvia) -- help lower your blood sugar levels, but they can also cause joint pain and could inflame your pancreas.\nGLP-1 receptor agonists. You take these medications with a needle to slow digestion and lower blood sugar levels. Some of the most common ones are exenatide (Byetta, Bydureon), liraglutide (Victoza), and semaglutide (Ozempic).\nSGLT2 inhibitors. These help your kidneys filter out more glucose. You might get canagliflozin (Invokana), dapagliflozin (Farxiga), or empagliflozin (Jardiance).\nInsulin. You might take long-lasting shots at night, such as insulin detemir (Levemir) or insulin glargine (Lantus). "
+	}
+	text response "hbp-tipsTxtResp1" :
+		inputs in en {
+			"Here are 10 lifestyle changes you can make to lower your blood pressure and keep it down.\n> Lose extra pounds and watch your waistline.\n> Exercise regularly. \n> Eat a healthy diet. \n> Reduce sodium in your diet. \n> Limit the amount of alcohol you drink. \n> Quit smoking. \n> Cut back on caffeine. \n> Reduce your stress. "
+	}
+	text response "typhoid-spread-preventTxtResp1" :
+		inputs in en {
+			"Prevention:\n1) Wash your hands. Frequent hand-washing in hot, soapy water is the best way to control infection. \n2) Avoid drinking untreated water. Contaminated drinking water is a particular problem in areas where typhoid fever is endemic. \n3) Avoid raw fruits and vegetables. \n4) Choose hot foods. "
+	}
+	text response "high-fever1TxtResp1" :
+		inputs in en {
+			"fever-tipsSome Tips to treat fever. "
+	}
+	text response "high-fever1TxtResp2" :
+		inputs in en {
+			"Fever is when a human\'s body temperature goes above the normal range of 36–37° Centigrade (98–100° Fahrenheit). It is a common medical sign. Other terms for a fever include pyrexia and controlled hyperthermia. "
+	}
+	text response "symptoms-of-diabetesTxtResp1" :
+		inputs in en {
+			"There are three types of Diabetes and each of them have their own symptoms "
+	}
+	text response "symptoms-of-diabetesTxtResp2" :
+		inputs in en {
+			"Symptoms of Type 1 DiabetesType 1 diabetes signs and symptoms can appear relatively suddenly and may include:  Increased thirst Frequent urination Bed-wetting in children who previously didn\'t wet the bed during the night Extreme hunger Unintended weight loss Irritability and other mood changes Fatigue and weakness Blurred vision "
+	}
+	text response "symptoms-of-diabetesTxtResp3" :
+		inputs in en {
+			"Symptoms of Type 2 DiabetesThe symptoms of type 2 diabetes can be so mild that you don\'t notice them. About 8 million people who have it don\'t know it. Symptoms include:  Being very thirsty Peeing a lot Blurry vision Being cranky Tingling or numbness in your hands or feet Fatigue/feeling worn out Wounds that don\'t heal Yeast infections that keep coming back Hunger Weight loss without trying Getting more infections Dark rashes around your neck or armpits (called acanthosis nigricans) that are often a sign of insulin resistance "
+	}
+	text response "symptoms-of-diabetesTxtResp4" :
+		inputs in en {
+			"Symptoms of Gestational diabetesWomen with gestational diabetes don’t usually have symptoms or may chalk them up to pregnancy. Most find out that they have it during a routine screening.  You may notice that:  You’re thirstier than usual You’re hungrier and eat more than usual You pee more than usual "
+	}
+	text response "symptoms-of-diabetesTxtResp5" :
+		inputs in en {
+			"Symptoms of diabetes are:Excessive thirst and hunger.\n\nFrequent urination (from urinary tract infections or kidney problems)\nWeight loss or gain.\nFatigue.\nIrritability.\nBlurred vision.\nSlow-healing wounds.\nNausea. "
+	}
+	text response "reminders.get - nextTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "reminders - context:reminders - comment: date-timeTxtResp1" :
+		inputs in en {
+			"Scheduled. "
+	}
+	text response "type-of-diabetesTxtResp1" :
+		inputs in en {
+			"Type 1Type 1 diabetes, once known as juvenile diabetes or insulin-dependent diabetes, is a chronic condition in which the pancreas produces little or no insulin. "
+	}
+	text response "type-of-diabetesTxtResp2" :
+		inputs in en {
+			"Type 2The type in which the beta cells of the pancreas produce insulin but the body is unable to use it effectively because the cells of the body are resistant to the action of insulin. "
+	}
+	text response "type-of-diabetesTxtResp3" :
+		inputs in en {
+			"GestationalGestational diabetes is formally defined as \"any degree of glucose intolerance with onset or first recognition during pregnancy "
+	}
+	text response "type-of-diabetesTxtResp4" :
+		inputs in en {
+			"There are three types of diabetes\n1. Type 1 - Type 1 diabetes, once known as juvenile diabetes or insulin-dependent diabetes, is a chronic condition in which the pancreas produces little or no insulin. \n2. Type 2 -The type in which the beta cells of the pancreas produce insulin but the body is unable to use it effectively because the cells of the body are resistant to the action of insulin.\n3. Gestational -Gestational diabetes is formally defined as \"any degree of glucose intolerance with onset or first recognition during pregnancy "
+	}
+	text response "type-two-diabetes-causesTxtResp1" :
+		inputs in en {
+			"Genes. Scientists have found different bits of DNA that affect how your body makes insulin.\nExtra  weight . Being overweight or obese can cause insulin resistance, especially if you carry your extra pounds around your middle. " ,
+			"Metabolic syndrome . People with insulin resistance often have a group of conditions including high blood sugar, extra fat around the waist, high blood pressure, and high cholesterol and triglycerides. " ,
+			"Too much glucose from your  liver . When your blood sugar is low, your liver makes and sends out glucose. After you eat, your blood sugar goes up, and your liver will usually slow down and store its glucose for later. But some people\'s livers don\'t. They keep cranking out sugar. " ,
+			"Bad communication between cells. Sometimes, cells send the wrong signals or don\'t pick up messages correctly. When these problems affect how your cells make and use insulin or glucose, a chain reaction can lead to diabetes. " ,
+			"Broken beta cells. If the cells that make insulin send out the wrong amount of insulin at the wrong time, your blood sugar gets thrown off. High blood sugar can damage these cells, too. "
+	}
+	text response "type-of-headacheTxtResp1" :
+		inputs in en {
+			"Here are some types of Headache\n1. Migraine.\n2. Tension-type headaches.\n3. Headache disorder.\n4. Neurological disorder.\n5. Cluster headaches. "
+	}
+	text response "neurological-disorderTxtResp1" :
+		inputs in en {
+			"A neurological disorder is any disorder of the nervous system. "
+	}
+	text response "How can you prevent obesity?TxtResp1" :
+		inputs in en {
+			"Help prevent weight gain by making good lifestyle choices. Aim for moderate exercise (walking, swimming, biking) for 20 to 30 minutes every day.\n\nEat well by choosing nutritious foods like fruits, vegetables, whole grains, and lean protein. Eat high-fat, high-calorie foods in moderation. "
+	}
+	text response "hbp-symptomsTxtResp1" :
+		inputs in en {
+			"High blood pressure is a common condition in which the long-term force of the blood against your artery walls. Some of the symptoms are: "
+	}
+	text response "hbp-symptomsTxtResp2" :
+		inputs in en {
+			"1. Fatigue or confusion. "
+	}
+	text response "hbp-symptomsTxtResp3" :
+		inputs in en {
+			"2. Vision problems. "
+	}
+	text response "hbp-symptomsTxtResp4" :
+		inputs in en {
+			"3.Chest pain. "
+	}
+	text response "hbp-symptomsTxtResp5" :
+		inputs in en {
+			"4.Difficulty breathing. "
+	}
+	text response "hbp-symptomsTxtResp6" :
+		inputs in en {
+			"5.Irregular heartbeat. "
+	}
+	text response "hbp-symptomsTxtResp7" :
+		inputs in en {
+			"6.Blood in the urine. "
+	}
+	text response "typetwo-diabetes-preventionTxtResp1" :
+		inputs in en {
+			"Adopting a healthy lifestyle can help you lower your risk of diabetes.\n\nLose weight . Dropping just 7% to 10% of your weight can cut your risk of type 2 diabetes in half.\nGet active. Thirty minutes of brisk walking a day will cut your risk by almost a third.\nEat right. Avoid highly processed carbs, sugary drinks, and trans and saturated fats. Limit red and processed meats.\nQuit smoking . Work with your doctor to keep from gaining weight after you quit, so you don\'t create one problem by solving another. "
+	}
+	text response "causes-of-diabetesTxtResp2" :
+		inputs in en {
+			"Causes of Type 1 diabetesThe exact cause of type 1 diabetes is unknown. Usually, the body\'s own immune system — which normally fights harmful bacteria and viruses — mistakenly destroys the insulin-producing (islet, or islets of Langerhans) cells in the pancreas. Other possible causes include:  Genetics Exposure to viruses and other environment "
+	}
+	text response "causes-of-diabetesTxtResp3" :
+		inputs in en {
+			"Causes of Type 2 diabetesGenes. Scientists have found different bits of DNA that affect how your body makes insulin. Extra weight . ... Metabolic syndrome . ... Too much glucose from your liver . ... Bad communication between cells. ... Broken beta cells. "
+	}
+	text response "causes-of-diabetesTxtResp4" :
+		inputs in en {
+			"Causes of gestational diabetesWhen you eat, your pancreas releases insulin, a hormone that helps move a sugar called glucose from your blood to your cells, which use it for energy..During pregnancy, your placenta makes hormones that cause glucose to build up in your blood. Usually, your pancreas can send out enough insulin to handle it. But if your body can’t make enough insulin or stops using insulin like it should, your blood sugar levels rise, and you get gestational diabetes. "
+	}
+	text response "causes-of-diabetesTxtResp5" :
+		inputs in en {
+			"Causes of diabetes are :\nExtreme thirst\nFrequent urination\nBlurry vision\nExtreme hunger\nIncreased tiredness\nUnusual weight loss "
+	}
+	text response "hbp-blood-pressureTxtResp1" :
+		inputs in en {
+			"The blood pressure reading is measured in millimeters of mercury (mmHg) and is written as systolic pressure, the force of the blood against the artery walls as your heart beats, over diastolic pressure, the blood pressure between heartbeats. "
+	}
+	text response ObesityTxtResp1 :
+		inputs in en {
+			"Obesity is defined as having a body mass index (BMI) of 30 or more. BMI is a calculation that takes a person’s weight and height into account. However, BMI does have some limitations. "
+	}
+	text response "hbp-health-problemsTxtResp1" :
+		inputs in en {
+			"Several potentially serious health conditions are linked to high blood pressure, \nincluding: Atherosclerosis, Heart Disease, Kidney Disease ,Stroke, Eye disease. "
+	}
+	text response "type-one-diabetes-causesTxtResp1" :
+		inputs in en {
+			"The exact cause of type 1 diabetes is unknown. Usually, the body\'s own immune system — which normally fights harmful bacteria and viruses — mistakenly destroys the insulin-producing (islet, or islets of Langerhans) cells in the pancreas. Other possible causes include:\n\nGenetics\nExposure to viruses and other environmental factors "
+	}
+	text response "Type 2 Diabetes Diagnosis and TestsTxtResp1" :
+		inputs in en {
+			"A1c. It\'s like an average of your blood glucose over the past 2 or 3 months.\nFasting plasma glucose. This is also known as a fasting blood sugar test. It measures your blood sugar on an empty stomach. You won\'t be able to eat or drink anything except water for 8 hours before the test.\nOral glucose tolerance test (OGTT). This checks your blood glucose before and 2 hours after you drink something sweet to see how your body handles the sugar. "
+	}
+	text response "gingivitis-symptomsTxtResp1" :
+		inputs in en {
+			"Signs and symptoms of gingivitis might include:\n1. Bright red or purple gums.\n2. Bleeding from the gums when brushing or flossing.\n3. Halitosis, or bad breath.\n4. Inflammation, or swollen gums.\n5. Receding gums.\n6. Soft gums "
+	}
+	text response "Treatment of Type 1 DiabetesTxtResp1" :
+		inputs in en {
+			"Treatment for type 1 diabetes includes:\n\nTaking insulin\nCarbohydrate, fat and protein counting\nFrequent blood sugar monitoring\nEating healthy foods\nExercising regularly and maintaining a healthy weight "
+	}
+	text response "reminders.renameTxtResp1" :
+		inputs in en {
+			"Done! "
+	}
+	text response "cold-preventionTxtResp1" :
+		inputs in en {
+			"Tips to Prevent Common Cold\n1.Use Disposable items if someone in your family is infected\n2.Don\'t Smoke\n3.Avoid Touching your face,especially the nose.mouth and eye areas\n4.Wash Your Hands Often "
+	}
+	text response "hbp-curableTxtResp1" :
+		inputs in en {
+			"Hypertension is a chronic disease. It can be controlled with medication, but it cannot be cured. Therefore, patients need to continue with the treatment and lifestyle modifications as advised by their doctor, and attend regular medical follow up, usually for life. "
+	}
+	text response "healthy-lifestyleTxtResp1" :
+		inputs in en {
+			"Tips for healthy lifestyleHere are some Healthy lifestyle tips:- Eat a variety of foods. Base your diet on plenty of foods rich in carbohydrates. Replace saturated with unsaturated fat. Enjoy plenty of fruits and vegetables. Reduce salt and sugar intake. Eat regularly, control the portion size. Drink plenty of fluids. Maintain a healthy body weight "
+	}
+	text response "healthy-lifestyleTxtResp2" :
+		inputs in en {
+			"Here are some Healthy lifestyle tips:\n1.Eat a variety of foods.\n2.Base your diet on plenty of foods rich in carbohydrates.\n3.Replace saturated with unsaturated fat.\n4.Enjoy plenty of fruits and vegetables.\n5.Reduce salt and sugar intake.\n6.Eat regularly, control the portion size.\n7.Drink plenty of fluids.\n8.Maintain a healthy body weight "
+	}
+	text response "types-of-stomachacheTxtResp1" :
+		inputs in en {
+			"1.Constipationnull "
+	}
+	text response "types-of-stomachacheTxtResp2" :
+		inputs in en {
+			"2.Appendicitis.null "
+	}
+	text response "types-of-stomachacheTxtResp3" :
+		inputs in en {
+			"3. Irritable Bowel Syndrome (IBS).null "
+	}
+	text response "types-of-stomachacheTxtResp4" :
+		inputs in en {
+			"4.Lactose intolerancenull "
+	}
+	text response "types-of-stomachacheTxtResp5" :
+		inputs in en {
+			"5. Ulcerative colitisnull "
+	}
+	text response "types-of-stomachacheTxtResp6" :
+		inputs in en {
+			"Stomachache is pain in or in the region of the stomach. Types of stomachache are:\n1.Constipation.\n2.Appendicitis.\n3. Irritable Bowel Syndrome (IBS).\n4.Lactose intolerance.\n5. Ulcerative colitis. "
+	}
+	text response "cold-treatmentTxtResp1" :
+		inputs in en {
+			"> 𝐆𝐚𝐫𝐠𝐥𝐢𝐧𝐠, This old-school remedy can ease a sore throat, which is often one of the first symptoms of a cold. People can choose from a variety of saltwater gargle recipes, including gargling with 1 teaspoon of salt mixed in a cup of warm water\n> 𝐒𝐢𝐩𝐩𝐢𝐧𝐠 𝐟𝐥𝐮𝐢𝐝𝐬, Drinking plenty of fluids can help prevent dehydration and may thin mucus. Water is the best bet when it comes to staying well hydrated. Other liquids such as juice are also acceptable. People who have a cold should avoid alcohol, which can contribute to dehydration. "
+	}
+	text response "risks in gestational diabetesTxtResp1" :
+		inputs in en {
+			"You’re more likely to get gestational diabetes if you:\n\nWere overweight before you got pregnant\nAre African-American, Asian, Hispanic, or Native American\nHave blood sugar levels that are higher than they should be but not high enough to be diabetes (this is called prediabetes)\nHave a family member with diabetes\nHave had gestational diabetes before\nHave high blood pressure or other medical complications\nHave given birth to a large baby (weighing more than 9 pounds)\nHave given birth to a baby who was stillborn or had certain birth defects\nAre older than 25 "
+	}
+	text response "classes-of-gestational-diabetesTxtResp1" :
+		inputs in en {
+			"There are two classes of gestational diabetes. Women with class A1 can manage it through diet and exercise. Those who have class A2 need to take insulin or other medications. "
+	}
+	text response "treatment-of-diabetesTxtResp1" :
+		inputs in en {
+			"type 1 treatmentTaking insulin. Carbohydrate, fat and protein counting. Frequent blood sugar monitoring. Eating healthy foods. Exercising regularly and maintaining a healthy weight. "
+	}
+	text response "treatment-of-diabetesTxtResp2" :
+		inputs in en {
+			"type 2 treatmentManagement of type 2 diabetes includes:  Weight loss Healthy eating Regular exercise Possibly, diabetes medication or insulin therapy Blood sugar monitoring "
+	}
+	text response "treatment-of-diabetesTxtResp3" :
+		inputs in en {
+			"Gestational diabetes treatmentMonitoring your blood sugar.Healthy diet. Medication. If diet and exercise aren\'t enough, you may need insulin injections to lower your blood sugar.Exercise. Regular physical activity plays a key role in every woman\'s wellness plan before, during and after pregnancy.Eating the right kinds of food in healthy portions is one of the best ways to control your blood sugar and prevent too much weight gain, which can put you at higher risk of complications. "
+	}
+	text response "treatment-of-diabetesTxtResp4" :
+		inputs in en {
+			"Treatment for diabetes requires keeping close watch over your blood sugar levels (and keeping them at a goal set by your doctor) with a combination of medications, exercise, and diet. By paying close attention to what and when you eat, you can minimize or avoid the \"seesaw effect\" of rapidly changing blood sugar levels, which can require quick changes in medication dosages, especially insulin "
+	}
+	text response "Gestational Diabetes Tests and DiagnosisTxtResp1" :
+		inputs in en {
+			"Gestational diabetes usually happens in the second half of pregnancy. Your doctor will check for it between weeks 24 and 28 or sooner if you\'re at high risk. Your doctor will give you a glucose challenge or glucose screening test. You’ll drink something sweet to raise your blood sugar. An hour later, you’ll take a blood test to see how your body handled all that sugar. If the results show that your blood sugar is higher than a certain level, usually around 200 milligrams per deciliter (mg/dL), you’ll need an oral glucose tolerance test. This means checking your blood sugar after going without food and having a 3-hour glucose test.\n\nIf you’re at high risk but your test results are normal, your doctor might test you again later in your pregnancy to make sure you still don’t have it "
+	}
+	text response "typhoid-symptomsTxtResp1" :
+		inputs in en {
+			"Typhoid symptoms include prolonged high fever, fatigue, headache, nausea, abdominal pain, and constipation or diarrhoea. Some patients may have a rash. Severe cases may lead to serious complications or even death. " ,
+			"Diagnosis of typhoid fever is made when the Salmonella bacteria is detected with a stool culture. Antibiotics treat typhoid fever.\nTyphoid fever symptoms are\n1) poor appetite,\n2) headaches,\n3) diarrhea,\n4) generalized aches and pains,\n5) fever\n6) lethargy. "
+	}
+	text response "reminders.getTxtResp1" :
+		inputs in en {
+			"Your reminders: [connect webhook to get a list of scheduled reminders] "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "what-migraineTxtResp1" :
+		inputs in en {
+			"Migraine headaches, also known as migraines, are a special type of headache that can cause debilitating pain.Symptoms are:\n1.Loss of appetite.\n2.Pale skin.\n3.Feeling very warm or cold\n4.Fatigue. "
+	}
+	text response "typhoid-curableTxtResp1" :
+		inputs in en {
+			"Several antibiotics are effective for the treatment of typhoid fever. " ,
+			"If typhoid is caught early, it can be successfully treated with antibiotics; if it is not treated, typhoid can be fatal. "
+	}
+	text response "diagnosis-of-fatigueTxtResp1" :
+		inputs in en {
+			"There are no medical tests to screen for CFS(Chronic Fatigue Syndrome). Its symptoms are similar to many other conditions. Many people with CFS don’t “look sick,” so doctors may not recognize that they indeed have a health condition.\n\nIn order to receive a CFS diagnosis, your doctor will rule out other potential causes and review your medical history with you.\n\nThey’ll confirm that you at least have the core symptoms previously mentioned. They’ll also ask about the duration and severity of your unexplained fatigue.\n\nRuling out other potential causes of your fatigue is a key part of the diagnosis process "
+	}
+	text response gingivitisTxtResp1 :
+		inputs in en {
+			"Gingivitis means inflammation of the gums, or gingiva. It commonly occurs because a film of plaque, or bacteria, accumulates on the teeth. "
+	}
+	text response "How is obesity treated?TxtResp1" :
+		inputs in en {
+			"If you’re obese and haven’t been able to lose weight on your own, medical help is available. Start with your family physician who may be able to refer you to a weight specialist in your area. " ,
+			"Lifestyle and behavior changes\nYour healthcare team can educate you on better food choices and help develop a healthy eating plan that works for you. A structured exercise program and increased daily activity — up to 300 minutes a week — will help build up your strength, endurance, and metabolism. " ,
+			"Medical weight loss\nMedications are usually prescribed only if other methods of weight loss haven’t worked and if you have a BMI of 27 or more in addition to obesity-related health issues.\n\nPrescription weight loss medications either prevent the absorption of fat or suppress appetite. These drugs can have unpleasant side effects. For example, the drug orlistat (Xenical) can lead to oily and frequent bowel movements, bowel urgency, and gas. Your doctor will monitor you closely while you’re taking these medications. " ,
+			"Weight loss surgery                                                                                                                                                      \n gastric bypass surgery, which creates a small pouch at the top of your stomach that connects directly to your small intestine. Food and liquids go through the pouch and into the intestine, bypassing most of the stomach.\nlaparoscopic adjustable gastric banding (LAGB), which separates your stomach into two pouches using a band\ngastric sleeve, which removes part of your stomach\nbiliopancreatic diversion with duodenal switch, which removes most of your stomach "
+	}
+	text response "Target Blood Sugar Levels for Women During PregnancyTxtResp1" :
+		inputs in en {
+			"The American Diabetes Association recommends these targets for pregnant women who test their blood sugar:\n\nBefore a meal: 95 mg/dL or less\nAn hour after a meal: 140 mg/dL or less\nTwo hours after a meal: 120 mg/dL or less "
+	}
+	text response "Obesity SymptomsTxtResp1" :
+		inputs in en {
+			"breathlessness.\nincreased sweating.\nsnoring.\ninability to cope with sudden physical activity.\nfeeling very tired every day.\nback and joint pains.\nlow confidence and self esteem.\nfeeling isolated. "
+	}
+	text response "Gestational Diabetes PreventionTxtResp1" :
+		inputs in en {
+			"You can lower your risk before you get pregnant by:\n\nEating a healthy diet\nStaying active\nLosing extra weight " ,
+			"Eat healthy foods. Choose foods high in fiber and low in fat and calories. Focus on fruits, vegetables and whole grains. Strive for variety to help you achieve your goals without compromising taste or nutrition. Watch portion sizes. " ,
+			"Keep active. Exercising before and during pregnancy can help protect you from developing gestational diabetes. Aim for 30 minutes of moderate activity on most days of the week. Take a brisk daily walk. Ride your bike. Swim laps. "
+	}
+	text response "gingivitis-typeTxtResp1" :
+		inputs in en {
+			"There are two main categories of gingival diseases:\n1. Dental plaque-induced gingival disease: This can be caused by plaque, systemic factors, medications, or malnutrition.\n2. Non-plaque induced gingival lesions: This can be caused by a specific bacterium, virus, or fungus "
+	}
+	text response "tension-type-headachesTxtResp1" :
+		inputs in en {
+			"Tension type headache is  a mild to moderate pain often described as feeling like a tight band around the head.\nSome of the symptoms are:\n1. Headache.\n2.Muscle pain\n3.Photophobia. "
+	}
+	text response cold1TxtResp1 :
+		inputs in en {
+			"The common cold, also known simply as a cold, is a viral infectious disease of the upper respiratory tract that primarily affects the nose. "
+	}
+	text response cold1TxtResp2 :
+		inputs in en {
+			"Cold is a self-limited disease that can generally be managed at home.\nThe common cold has no cure, and there is no available vaccine😄 "
+	}
+	text response "type1-complicationsTxtResp1" :
+		inputs in en {
+			"Heart and blood vessel disease. Diabetes dramatically increases your risk of various cardiovascular problems, including coronary artery disease with chest pain (angina), heart attack, stroke, narrowing of the arteries (atherosclerosis) and high blood pressure. " ,
+			"Nerve damage (neuropathy). Excess sugar can injure the walls of the tiny blood vessels (capillaries) that nourish your nerves, especially in the legs. This can cause tingling, numbness, burning or pain that usually begins at the tips of the toes or fingers and gradually spreads upward. Poorly controlled blood sugar could cause you to eventually lose all sense of feeling in the affected limbs.\n\nDamage to the nerves that affect the gastrointestinal tract can cause problems with nausea, vomiting, diarrhea or constipation. For men, erectile dysfunction may be an issue. " ,
+			"Kidney damage (nephropathy). The kidneys contain millions of tiny blood vessel clusters that filter waste from your blood. Diabetes can damage this delicate filtering system. Severe damage can lead to kidney failure or irreversible end-stage kidney disease, which requires dialysis or a kidney transplant. " ,
+			"Eye damage. Diabetes can damage the blood vessels of the retina (diabetic retinopathy), potentially causing blindness. Diabetes also increases the risk of other serious vision conditions, such as cataracts and glaucoma. " ,
+			"Foot damage. Nerve damage in the feet or poor blood flow to the feet increases the risk of various foot complications. Left untreated, cuts and blisters can become serious infections that may ultimately require toe, foot or leg amputation. " ,
+			"Skin and mouth conditions. Diabetes may leave you more susceptible to infections of the skin and mouth, including bacterial and fungal infections. Gum disease and dry mouth also are more likely. " ,
+			"Pregnancy complications. High blood sugar levels can be dangerous for both the mother and the baby. The risk of miscarriage, stillbirth and birth defects increases when diabetes isn\'t well-controlled. For the mother, diabetes increases the risk of diabetic ketoacidosis, diabetic eye problems (retinopathy), pregnancy-induced high blood pressure and preeclampsia. "
+	}
+	text response "gingivitis-contagiousTxtResp1" :
+		inputs in en {
+			"Research has shown that periodontal disease is caused by the inflammatory reaction to bacteria under the gums, so periodontal disease technically may not be contagious. However, the bacteria that cause the inflammatory reaction can be spread through saliva. "
+	}
+	text response "hbp-normal-bpTxtResp1" :
+		inputs in en {
+			"Normal blood pressure is systolic pressure less than 120 and diastolic pressure less than 80 mmHg.\n> Elevated is systolic pressure of 120-129 and diastolic pressure less than 80 mmHg.\n> Stage 1 Hypertension is systolic pressure of 130-139 or diastolic pressure of 80-89 mmHg.\n> Stage 2 Hypertension is systolic pressure of 140 or greater o rdiastolic pressure of 90 or greater. "
+	}
+	text response "Diet and Exercise for Gestational DiabetesTxtResp1" :
+		inputs in en {
+			"Take these simple steps to stay healthy:\n\nEat a healthy, low-sugar diet. Follow a meal plan made for someone with diabetes. Talk to your doctor to be sure you’re getting the nutrition you need. Trade sugary snacks like cookies, candy, and ice cream for natural sugars like fruits, carrots, and raisins. Add vegetables and whole grains, and watch your portion sizes.\nExercise throughout your pregnancy. Get active as soon as possible. Aim for 30 minutes of moderate activity most days of the week. Running, walking, swimming, and biking are all good options. "
+	}
+	text response "risk for obesityTxtResp1" :
+		inputs in en {
+			"Genetics\nSome people possess genetic factors that make it difficult for them to lose weight. " ,
+			"Environment and community\nYour environment at home, at school, and in your community, can all influence how and what you eat and how active you are. Maybe you haven’t learned to cook healthy meals or don’t think you can afford healthier foods. " ,
+			"Depression can sometimes lead to weight gain, as people turn to food for emotional comfort. Certain antidepressants can also increase risk of weight gain " ,
+			"It’s a good thing to quit smoking, but quitting can also lead to weight gain. For that reason, it’s important to focus on diet and exercise while you’re quitting. " ,
+			"Medications such as steroids or birth control pills can also put you at greater risk for weight gain. "
+	}
+	text response "Type 2 Diabetes ComplicationsTxtResp1" :
+		inputs in en {
+			"Over time, high blood sugar can damage and cause problems with your:\n\nHeart and blood vessels. You’re up to five times more likely to get heart disease or have a stroke. You’re also at high risk of blocked blood vessels (atherosclerosis) and chest pain (angina).\nKidneys . If your kidneys are damaged or you have kidney failure, you could need dialysis or a kidney replacement. \nEyes . High blood sugar can damage the tiny blood vessels in the backs of your eyes (retinopathy). If this isn’t treated, it can cause blindness.\nNerves. This can lead to trouble with digestion, the feeling in your feet, and your sexual response.\nSkin. Your blood doesn’t circulate as well, so wounds heal slower and can become infected.\nPregnancy. Women with diabetes are more likely to have a miscarriage, a stillbirth, or a baby with a birth defect.\nSleep. You might develop sleep apnea, a condition in which your breathing stops and starts while you sleep.\nHearing. You’re more likely to have hearing problems, but it’s not clear why.\nBrain. High blood sugar can damage your brain and might put you at higher risk of Alzheimer’s disease. "
+	}
+	text response diabetes_2TxtResp1 :
+		inputs in en {
+			"Type 2 diabetes is when your body doesn’t use insulin properly. In type 2 diabetes, some people are insulin resistant, meaning that their body produces a lot of insulin but can’t use it effectively. Some people with type 2 diabetes don’t produce enough insulin. Type 2 is different from type 1 diabetes because in type 1, your body doesn’t produce any insulin at all. "
+	}
+	text response "prevention-of-diabetesTxtResp1" :
+		inputs in en {
+			"There are three main types of diabetes – type 1, type 2 and gestational. "
+	}
+	text response "prevention-of-diabetesTxtResp2" :
+		inputs in en {
+			"Type 1 DiabetesThere\'s no known way to prevent type 1 diabetes. But researchers are working on preventing the disease or further destruction of the islet cells in people who are newly diagnosed.  Ask your doctor if you might be eligible for one of these clinical trials, but carefully weigh the risks and benefits of any treatment available in a trial. "
+	}
+	text response "prevention-of-diabetesTxtResp3" :
+		inputs in en {
+			"Type 2 DiabetesAdopting a healthy lifestyle can help you lower your risk of diabetes.  Lose weight . Dropping just 7% to 10% of your weight can cut your risk of type 2 diabetes in half. Get active. Thirty minutes of brisk walking a day will cut your risk by almost a third. Eat right. Avoid highly processed carbs, sugary drinks, and trans and saturated fats. Limit red and processed meats. Quit smoking . Work with your doctor to keep from gaining weight after you quit, so you don\'t create one problem by solving another. "
+	}
+	text response "prevention-of-diabetesTxtResp4" :
+		inputs in en {
+			"Gestational DiabetesEat healthy foods. Choose foods high in fiber and low in fat and calories. Focus on fruits, vegetables and whole grains. Strive for variety to help you achieve your goals without compromising taste or nutrition. Watch portion sizes. "
+	}
+	text response "gestational diabetesTxtResp1" :
+		inputs in en {
+			"Gestational diabetes is a condition in which your blood sugar levels become high during pregnancy. It affects up to 10% of women who are pregnant in the U.S. each year. There are two classes of gestational diabetes. Women with class A1 can manage it through diet and exercise. "
+	}
+	text response "Test and Diagnosis of type 1TxtResp1" :
+		inputs in en {
+			"Glycated hemoglobin (A1C) test. This blood test indicates your average blood sugar level for the past two to three months. It measures the percentage of blood sugar attached to the oxygen-carrying protein in red blood cells (hemoglobin). The higher your blood sugar levels, the more hemoglobin you\'ll have with sugar attached. An A1C level of 6.5 percent or higher on two separate tests indicates diabetes If the A1C test isn\'t available, or if you have certain conditions that can make the A1C test inaccurate — such as pregnancy or an uncommon form of hemoglobin (hemoglobin variant) — your doctor may use these tests: " ,
+			"Random blood sugar test. A blood sample will be taken at a random time and may be confirmed by repeat testing. Blood sugar values are expressed in milligrams per deciliter (mg/dL) or millimoles per liter (mmol/L). Regardless of when you last ate, a random blood sugar level of 200 mg/dL (11.1 mmol/L) or higher suggests diabetes, especially when coupled with any of the signs and symptoms of diabetes, such as frequent urination and extreme thirst. " ,
+			"Fasting blood sugar test. A blood sample will be taken after an overnight fast. A fasting blood sugar level less than 100 mg/dL (5.6 mmol/L) is normal. A fasting blood sugar level from 100 to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it\'s 126 mg/dL (7 mmol/L) or higher on two separate tests, you have diabetes. "
+	}
+	text response diabetes_1TxtResp1 :
+		inputs in en {
+			"Type 1 diabetes, once known as juvenile diabetes or insulin-dependent diabetes, is a chronic condition in which the pancreas produces little or no insulin. Insulin is a hormone needed to allow sugar (glucose) to enter cells to produce energy. "
+	}
+	text response "Prevention of FatigueTxtResp1" :
+		inputs in en {
+			"Manage stress and practice relaxation techniques.\nGet exercise, but begin slowly and check with your health care practitioner before beginning any exercise program. Find a good time to exercise and develop a habit of exercise.\nCheck your medications with a health care practitioner or pharmacists to see if some medications could be responsible for fatigue. " ,
+			"Improve your diet and eat a good breakfast (whole grain cereal, fruit, milk). Add more fruits and vegetables.\nStop any excessive caffeine consumption.\nStop smoking.\nHave sex with your spouse or partner. " ,
+			"Get enough sleep and have a good and consistent sleep routine (sleep hygiene). Go to bed at the same time every night.\nAvoid coffee, tea, or caffeinated drinks after 6 pm.\nDo not drink alcohol after dinner, and decrease the total amount of alcohol consumed. (Alcohol interferes with sleep patterns.)\nPeople with underlying medical conditions (for example, diabetes, COPD, anxiety) can reduce symptoms of their disease, including fatigue, by working with their health care practitioners to optimize the treatment of the underlying problems "
+	}
+	text response "reminders.rescheduleTxtResp1" :
+		inputs in en {
+			"The reminder is edited. "
+	}
+	text response "typhoid-bacteriaTxtResp1" :
+		inputs in en {
+			"Salmonella Typhi or Salmonella Paratyphi are bacterias causing tyhpoid and paratyphoid respectively. The bacterium lives in the intestines and bloodstream of humans. It spreads between individuals by direct contact with the feces of an infected person. "
+	}
+	text response "typhoid-through-animalsTxtResp1" :
+		inputs in en {
+			"No. Salmonella Typhi and Salmonella Paratyphi live only in humans. "
+	}
+	text response "cluster-headacheTxtResp1" :
+		inputs in en {
+			"Cluster Headachenull "
+	}
+	text response "cluster-headacheTxtResp2" :
+		inputs in en {
+			"Headaches that occur in pattern of clusters. Some symptoms of cluster headache are:\n1.Headache.\n2.Puffy eyes.\n3.Dysautonomia "
+	}
+	text response "Gestational Diabetes TreatmentTxtResp1" :
+		inputs in en {
+			"If you have gestational diabetes, you’ll need treatment as soon as possible to keep yourself and your baby healthy during your pregnancy and delivery. Your doctor will ask you to:\n\nCheck your blood sugar levels four or more times a day\nCheck your urine for ketones, chemicals that mean that your diabetes isn’t under control\nEat a healthy diet\nMake exercise a habit.\nYour doctor will keep track of your weight and your baby’s development. They might give you insulin or another medicine to keep your blood sugar under control. "
+	}
+	text response "reminders.addTxtResp1" :
+		inputs in en {
+			"Your reminder has been scheduled! "
+	}
+	text response "gestational-diabetes-complicationsTxtResp1" :
+		inputs in en {
+			"Excessive birth weight. Extra glucose in your bloodstream crosses the placenta, which triggers your baby\'s pancreas to make extra insulin. This can cause your baby to grow too large (macrosomia). Very large babies — those that weigh 9 pounds or more — are more likely to become wedged in the birth canal, sustain birth injuries or require a C-section birth. " ,
+			"High blood pressure and preeclampsia. Gestational diabetes raises your risk of high blood pressure, as well as preeclampsia — a serious complication of pregnancy that causes high blood pressure and other symptoms that can threaten the lives of both mother and baby. " ,
+			"Future diabetes. If you have gestational diabetes, you\'re more likely to get it again during a future pregnancy. You\'re also more likely to develop type 2 diabetes as you get older. However, making healthy lifestyle choices such as eating healthy foods and exercising can help reduce the risk of future type 2 diabetes. "
+	}
+	text response "gestational-diabetes-causesTxtResp1" :
+		inputs in en {
+			"When you eat, your pancreas releases insulin, a hormone that helps move a sugar called glucose from your blood to your cells, which use it for energy. " ,
+			"During pregnancy, your placenta makes hormones that cause glucose to build up in your blood. Usually, your pancreas can send out enough insulin to handle it. But if your body can’t make enough insulin or stops using insulin like it should, your blood sugar levels rise, and you get gestational diabetes. "
+	}
+	text response stomachacheTxtResp1 :
+		inputs in en {
+			"Stomachache is pain in or region of the stomach Here are some tips to relief stomachache.\n1.Reduce your intake of coffee, tea, and alcohol as these can make the pain worse\n2.Drink plenty of clear fluids such as water.\n3.Soak in a warm bath. Take care not to scald yourself.\n4. Place a hot water bottle or heated wheat bag on your abdomen. "
+	}
+	text response "reminders.snoozeTxtResp1" :
+		inputs in en {
+			"Will do! "
+	}
+	text response "What is chronic fatigue syndrome?TxtResp1" :
+		inputs in en {
+			"Chronic fatigue syndrome (CFS) is a disorder characterized by extreme fatigue or tiredness that doesn’t go away with rest and can’t be explained by an underlying medical condition. "
+	}
+	text response "risks in type1TxtResp1" :
+		inputs in en {
+			"If a sibling has type 1 diabetes, the risk is 5-6%; however, if the sibling has identical MHC (Major Histocompatibility Complex) haplotypes, the risk increases. When one identical twin has diabetes, the risk of the other twin developing diabetes traditionally has been thought to be about 40%. Recent research suggests that the number may be much higher. "
+	}
+	Button response DoctorButtonResp1 : inputs in en { text: - "Doctors & Experts\n " buttons: - value: "Book an Appointment" action: "https://www.practo.com/doctors" }
+	text response "risk in type 2TxtResp1" :
+		inputs in en {
+			"You are more likely to develop type 2 diabetes if you\n\nare overweight or obese\nare age 45 or older\nhave a family history of diabetes\nare African American, Alaska Native, American Indian, Asian American, Hispanic/Latino, Native Hawaiian, or Pacific Islander " ,
+			"You are more likely to develop type 2 diabetes if you        have high blood pressure\nhave a low level of HDL (“good”) cholesterol, or a high level of triglycerides\nhave a history of gestational diabetes or gave birth to a baby weighing 9 pounds or more\nare not physically active\nhave a history of heart disease or stroke\nhave depression NIH external link " ,
+			"You are more likely to develop type 2 diabetes if you          \nhave polycystic ovary syndrome NIH external link, also called PCOS\nhave acanthosis nigricans—dark, thick, and velvety skin around your neck or armpits\nYou can also take the Diabetes Risk Test to learn about your risk for type 2 diabetes. "
+	}
+	text response "typhoid-feverTxtResp1" :
+		inputs in en {
+			"Typhoid fever is a systemic infection caused by Salmonella Typhi, usually through the ingestion of contaminated food or water. " ,
+			"y "
+	}
+	text response "fatigue-treatmentTxtResp1" :
+		inputs in en {
+			"The treatment for fatigue depends upon the cause. Some treatments for conditions that cause fatigue include medications, antibiotics, vitamins, and exercise. Medical treatment of fatigue depends on the treatment of its underlying cause(s). " ,
+			"Fortunately, many causes of fatigue may be treated with medications, for example, iron supplements for anemia, medications and machines to help sleep apnea, medications to control blood sugar, medications to regulate thyroid function, antibiotics to treat infection, vitamins, and/or recommendations for dietary changes and a sensible exercise program. "
+	}
+	text response "reminders.removeTxtResp1" :
+		inputs in en {
+			"Removed it. "
+	}
+	text response "Risk factors for CFSTxtResp1" :
+		inputs in en {
+			"CFS(Chronic Fatigue Syndrome) is most commonly seen among people in their 40s and 50s.\n\nSex also plays an important role in CFS, as women are two to four timesTrusted Source more likely to be diagnosed with CFS than men.\n\nOther factors that may increase your risk for CFS include:\n\ngenetic predisposition\nallergies\nstress\nenvironmental factors "
+	}
+	text response "symptoms of CFSTxtResp1" :
+		inputs in en {
+			"CFS (Chronic Fatigue Syndrome) can also introduce sleep problems, such as:\n\nfeeling unrefreshed after a night’s sleep\nchronic insomnia\nother sleep disorders " ,
+			"loss of memory\nreduced concentration\northostatic intolerance (going from lying or seated to standing positions makes you lightheaded, dizzy, or faint) " ,
+			"Physical symptoms of CFS may include:\n\nmuscle pain\nfrequent headaches\nmulti-joint pain without redness or swelling\nfrequent sore throat\ntender and swollen lymph nodes in your neck and armpits "
+	}
+	text response "How is obesity diagnosed?TxtResp1" :
+		inputs in en {
+			"more accurate measures of body fat and body fat distribution include skinfold thickness, waist-to-hip comparisons, and screening tests such as ultrasound, computed tomography (CT), and magnetic resonance imaging (MRI) scans. " ,
+			"Your doctor may also order certain tests to help diagnose obesity as well as obesity-related health risks. These may include blood tests to examine cholesterol and glucose levels, liver function tests, diabetes screen, thyroid tests, and heart tests, such as an electrocardiogram.\n\nA measurement of the fat around your waist is also a good predictor of risk for obesity-related diseases. "
+	}
+	text response "high-bp-hypertensionTxtResp1" :
+		inputs in en {
+			"Hypertension is the medical term for high blood pressure. Both terms mean \nthe same thing. "
+	}
+	text response "obesity-complicationsTxtResp1" :
+		inputs in en {
+			"Here are the complications: \n> type 2 diabetes\n> heart disease\n> high blood pressure\n> certain cancers (breast, colon, and endometrial)\n> stroke\n> gallbladder disease\n> fatty liver disease\n> high cholesterol\n> sleep apnea and other breathing problems "
+	}
+	text response headacheTxtResp1 :
+		inputs in en {
+			"Headache is a  painful sensation in any part of the head that can be a sign of stress or emotional distress that may occur with other symptoms. Here are some tips for Headache Relief:\n1. Close your eyes and rest.\n2. Massage your neck and temples.\n3. Warm-up your neck.\n4. Try putting a heating pad or a warm cloth around your neck and the base skull to ease tension headaches.\n5. Minimize Stress. "
+	}
+	text response diabetesTxtResp1 :
+		inputs in en {
+			"Diabetes is a chronic disease that occurs when the pancreas is no longer able to make insulin, or when the body cannot make good use of the insulin it produces. "
+	}
+	text response hypertensionTxtResp1 :
+		inputs in en {
+			"Hypertension is another name for high blood pressure. It can lead to severe health complications and increase the risk of heart disease, stroke, and sometimes death. "
+	}
+	text response "type-one-diabetes-preventionTxtResp1" :
+		inputs in en {
+			"There\'s no known way to prevent type 1 diabetes. But researchers are working on preventing the disease or further destruction of the islet cells in people who are newly diagnosed.\n\nAsk your doctor if you might be eligible for one of these clinical trials, but carefully weigh the risks and benefits of any treatment available in a trial. "
+	}
+	text response "Complications of FatigueTxtResp1" :
+		inputs in en {
+			"There are a few complications that may develop from chronic fatigue syndrome, these include:\n\nDepression\nLifestyle restrictions\nIncreased amount of leave/sick days from work\nSocial isolation "
+	}
+
+flows :
+	- user1 : user "fatigue-causes" => bot1 : chatbot HttpRequest , HttpResponse , "fatigue-causesTxtResp1" ;
+	- user2 : user "obesity-causes" => bot2 : chatbot HttpRequest , HttpResponse , "obesity-causesTxtResp1" ;
+	- user3 : user "gingivitis-kids" => bot3 : chatbot HttpRequest , HttpResponse , "gingivitis-kidsTxtResp1" ;
+	- user4 : user "Type 2 Diabetes Treatment" => bot4 : chatbot HttpRequest , HttpResponse , "Type 2 Diabetes TreatmentTxtResp1" ;
+	- user5 : user "hbp-tips" => bot146 : chatbot HttpRequest , HttpResponse , "risk for obesityTxtResp1" ;
+	- user6 : user "typhoid-spread-prevent" => bot6 : chatbot HttpRequest , HttpResponse , "typhoid-spread-preventTxtResp1" ;
+	- user7 : user "high-fever1" => bot7 : chatbot HttpRequest , HttpResponse , "high-fever1TxtResp1" , "high-fever1TxtResp2" ;
+	- user8 : user "symptoms-of-diabetes" => bot8 : chatbot HttpRequest , HttpResponse , "symptoms-of-diabetesTxtResp1" , "symptoms-of-diabetesTxtResp2" , "symptoms-of-diabetesTxtResp3" , "symptoms-of-diabetesTxtResp4" , "symptoms-of-diabetesTxtResp5" ;
+	- user9 : user "Default Welcome Intent" => bot9 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user10 : user "type-of-diabetes" => bot10 : chatbot HttpRequest , HttpResponse , "type-of-diabetesTxtResp1" , "type-of-diabetesTxtResp2" , "type-of-diabetesTxtResp3" , "type-of-diabetesTxtResp4" ;
+	- user11 : user "type-two-diabetes-causes" => bot11 : chatbot HttpRequest , HttpResponse , "type-two-diabetes-causesTxtResp1" ;
+	- user12 : user "type-of-headache" => bot12 : chatbot HttpRequest , HttpResponse , "type-of-headacheTxtResp1" ;
+	- user13 : user "neurological-disorder" => bot13 : chatbot HttpRequest , HttpResponse , "neurological-disorderTxtResp1" ;
+	- user14 : user "How can you prevent obesity?" => bot14 : chatbot HttpRequest , HttpResponse , "How can you prevent obesity?TxtResp1" ;
+	- user15 : user "hbp-symptoms" => bot15 : chatbot HttpRequest , HttpResponse , "hbp-symptomsTxtResp1" , "hbp-symptomsTxtResp2" , "hbp-symptomsTxtResp3" , "hbp-symptomsTxtResp4" , "hbp-symptomsTxtResp5" , "hbp-symptomsTxtResp6" , "hbp-symptomsTxtResp7" ;
+	- user16 : user "typetwo-diabetes-prevention" => bot16 : chatbot HttpRequest , HttpResponse , "typetwo-diabetes-preventionTxtResp1" ;
+	- user17 : user "causes-of-diabetes" => bot17 : chatbot HttpRequest , HttpResponse , "reminders.get - nextTxtResp1" , "causes-of-diabetesTxtResp2" , "causes-of-diabetesTxtResp3" , "causes-of-diabetesTxtResp4" , "causes-of-diabetesTxtResp5" ;
+	- user18 : user "hbp-blood-pressure" => bot18 : chatbot HttpRequest , HttpResponse , "hbp-blood-pressureTxtResp1" ;
+	- user19 : user Obesity => bot19 : chatbot HttpRequest , HttpResponse , ObesityTxtResp1 ;
+	- user20 : user "hbp-health-problems" => bot20 : chatbot "hbp-health-problemsTxtResp1" ;
+	- user21 : user "type-one-diabetes-causes" => bot21 : chatbot "type-one-diabetes-causesTxtResp1" ;
+	- user22 : user "reminders.location_based.add" => bot22 : chatbot HttpRequest , HttpResponse {
+		=> user23 : user "reminders.get - next" => bot23 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user24 : user "reminders - context:reminders - comment: date-time" => bot24 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user25 : user "reminders.get - next" => bot25 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user26 : user "reminders.get - back" => bot35 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user27 : user "reminders - context:reminders - comment: name" => bot27 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user28 : user "reminders.get - next" => bot28 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user29 : user "reminders.get - back" => bot32 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user30 : user "reminders - context:reminders - comment: recurrence" => bot30 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user31 : user "reminders.get.past - next" => bot31 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user24 ;
+				=> back to user27 ;
+			} ;
+			=> user32 : user "reminders - context:reminders - comment: recurrence" => bot33 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user33 : user "reminders.get.past - next" => bot34 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user24 ;
+		} ;
+		=> user34 : user "reminders.get - back" => bot51 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user35 : user "reminders - context:reminders - comment: name" => bot37 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user36 : user "reminders.get - next" => bot38 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user37 : user "reminders - context:reminders - comment: date-time" => bot39 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user38 : user "reminders.get - next" => bot40 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user39 : user "reminders.get - back" => bot44 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user40 : user "reminders - context:reminders - comment: recurrence" => bot42 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user41 : user "reminders.get.past - next" => bot43 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user37 ;
+				=> back to user35 ;
+			} ;
+			=> user42 : user "reminders.get - back" => bot48 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user43 : user "reminders - context:reminders - comment: recurrence" => bot46 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user44 : user "reminders.get.past - next" => bot47 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user35 ;
+		} ;
+		=> user45 : user "reminders - context:reminders - comment: recurrence" => bot49 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+		=> user46 : user "reminders.get.past - next" => bot50 : chatbot "reminders.get - nextTxtResp1" ;
+	} ;
+	- user47 : user "Type 2 Diabetes Diagnosis and Tests" => bot52 : chatbot HttpRequest , HttpResponse , "Type 2 Diabetes Diagnosis and TestsTxtResp1" ;
+	- user48 : user "gingivitis-symptoms" => bot53 : chatbot HttpRequest , HttpResponse , "gingivitis-symptomsTxtResp1" ;
+	- user49 : user "Treatment of Type 1 Diabetes" => bot54 : chatbot HttpRequest , HttpResponse , "Treatment of Type 1 DiabetesTxtResp1" ;
+	- user50 : user "reminders.rename" => bot55 : chatbot "reminders.renameTxtResp1" ;
+	- user51 : user "cold-prevention" => bot56 : chatbot HttpRequest , HttpResponse , "cold-preventionTxtResp1" ;
+	- user52 : user "hbp-curable" => bot57 : chatbot "hbp-curableTxtResp1" ;
+	- user53 : user "healthy-lifestyle" => bot58 : chatbot HttpRequest , HttpResponse , "healthy-lifestyleTxtResp1" , "healthy-lifestyleTxtResp2" ;
+	- user54 : user "types-of-stomachache" => bot59 : chatbot HttpRequest , HttpResponse , "types-of-stomachacheTxtResp1" , "types-of-stomachacheTxtResp2" , "types-of-stomachacheTxtResp3" , "types-of-stomachacheTxtResp4" , "types-of-stomachacheTxtResp5" , "types-of-stomachacheTxtResp6" ;
+	- user55 : user "cold-treatment" => bot60 : chatbot HttpRequest , HttpResponse , "cold-treatmentTxtResp1" , "reminders.get - nextTxtResp1" ;
+	- user56 : user "risks in gestational diabetes" => bot61 : chatbot HttpRequest , HttpResponse , "risks in gestational diabetesTxtResp1" ;
+	- user57 : user "classes-of-gestational-diabetes" => bot62 : chatbot HttpRequest , HttpResponse , "classes-of-gestational-diabetesTxtResp1" ;
+	- user58 : user "treatment-of-diabetes" => bot63 : chatbot HttpRequest , HttpResponse , "treatment-of-diabetesTxtResp1" , "treatment-of-diabetesTxtResp2" , "treatment-of-diabetesTxtResp3" , "treatment-of-diabetesTxtResp4" ;
+	- user59 : user "Gestational Diabetes Tests and Diagnosis" => bot64 : chatbot "Gestational Diabetes Tests and DiagnosisTxtResp1" ;
+	- user60 : user "typhoid-symptoms" => bot65 : chatbot HttpRequest , HttpResponse , "typhoid-symptomsTxtResp1" ;
+	- user61 : user "reminders.get" => bot66 : chatbot HttpRequest , HttpResponse , "reminders.getTxtResp1" {
+		=> user62 : user "reminders.get - next" => bot96 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user63 : user "reminders - context:reminders - comment: date-time" => bot68 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user64 : user "reminders.get - next" => bot69 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user65 : user "reminders.get - back" => bot79 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user66 : user "reminders - context:reminders - comment: name" => bot71 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user67 : user "reminders.get - next" => bot72 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user68 : user "reminders.get - back" => bot76 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user69 : user "reminders - context:reminders - comment: recurrence" => bot74 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user70 : user "reminders.get.past - next" => bot75 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user63 ;
+				=> back to user66 ;
+			} ;
+			=> user71 : user "reminders - context:reminders - comment: recurrence" => bot77 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user72 : user "reminders.get.past - next" => bot78 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user63 ;
+		} ;
+		=> user73 : user "reminders.get - back" => bot97 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user74 : user "reminders - context:reminders - comment: name" => bot81 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user75 : user "reminders.get - next" => bot82 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user76 : user "reminders - context:reminders - comment: date-time" => bot83 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user77 : user "reminders.get - next" => bot84 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user78 : user "reminders.get - back" => bot88 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user79 : user "reminders - context:reminders - comment: recurrence" => bot86 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user80 : user "reminders.get.past - next" => bot87 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user76 ;
+				=> back to user74 ;
+			} ;
+			=> user81 : user "reminders.get - back" => bot92 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user82 : user "reminders - context:reminders - comment: recurrence" => bot90 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user83 : user "reminders.get.past - next" => bot91 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user74 ;
+		} ;
+		=> user84 : user "reminders - context:reminders - comment: recurrence" => bot93 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+		=> user85 : user "reminders.get.past - next" => bot94 : chatbot "reminders.get - nextTxtResp1" ;
+	} ;
+	- user86 : user "Default Fallback Intent" => bot98 : chatbot HttpRequest , HttpResponse , "Default Fallback IntentTxtResp1" ;
+	- user87 : user "what-migraine" => bot99 : chatbot HttpRequest , HttpResponse , "what-migraineTxtResp1" ;
+	- user88 : user "typhoid-curable" => bot100 : chatbot HttpRequest , HttpResponse , "typhoid-curableTxtResp1" ;
+	- user89 : user "diagnosis-of-fatigue" => bot101 : chatbot HttpRequest , HttpResponse , "diagnosis-of-fatigueTxtResp1" ;
+	- user90 : user gingivitis => bot102 : chatbot HttpRequest , HttpResponse , gingivitisTxtResp1 ;
+	- user91 : user "How is obesity treated?" => bot103 : chatbot HttpRequest , HttpResponse , "How is obesity treated?TxtResp1" ;
+	- user92 : user "Target Blood Sugar Levels for Women During Pregnancy" => bot104 : chatbot HttpRequest , HttpResponse , "Target Blood Sugar Levels for Women During PregnancyTxtResp1" ;
+	- user93 : user "Obesity Symptoms" => bot105 : chatbot "Obesity SymptomsTxtResp1" ;
+	- user94 : user "Gestational Diabetes Prevention" => bot106 : chatbot HttpRequest , HttpResponse , "Gestational Diabetes PreventionTxtResp1" ;
+	- user95 : user "gingivitis-type" => bot107 : chatbot HttpRequest , HttpResponse , "gingivitis-typeTxtResp1" ;
+	- user96 : user "tension-type-headaches" => bot108 : chatbot HttpRequest , HttpResponse , "tension-type-headachesTxtResp1" ;
+	- user97 : user cold1 => bot109 : chatbot HttpRequest , HttpResponse , cold1TxtResp1 , cold1TxtResp2 ;
+	- user98 : user "type1-complications" => bot110 : chatbot HttpRequest , HttpResponse , "type1-complicationsTxtResp1" ;
+	- user99 : user "gingivitis-contagious" => bot111 : chatbot HttpRequest , HttpResponse , "gingivitis-contagiousTxtResp1" ;
+	- user100 : user "hbp-normal-bp" => bot112 : chatbot HttpRequest , HttpResponse , "hbp-normal-bpTxtResp1" ;
+	- user101 : user "Diet and Exercise for Gestational Diabetes" => bot113 : chatbot HttpRequest , HttpResponse , "Diet and Exercise for Gestational DiabetesTxtResp1" ;
+	- user102 : user "reminders.get.past" => bot114 : chatbot HttpRequest , HttpResponse , "reminders.get - nextTxtResp1" {
+		=> user103 : user "reminders.get - next" => bot115 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user104 : user "reminders - context:reminders - comment: date-time" => bot116 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user105 : user "reminders.get - next" => bot117 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user106 : user "reminders.get - back" => bot127 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user107 : user "reminders - context:reminders - comment: name" => bot119 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user108 : user "reminders.get - next" => bot120 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user109 : user "reminders.get - back" => bot124 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user110 : user "reminders - context:reminders - comment: recurrence" => bot122 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user111 : user "reminders.get.past - next" => bot123 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user104 ;
+				=> back to user107 ;
+			} ;
+			=> user112 : user "reminders - context:reminders - comment: recurrence" => bot125 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user113 : user "reminders.get.past - next" => bot126 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user104 ;
+		} ;
+		=> user114 : user "reminders.get - back" => bot145 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user115 : user "reminders - context:reminders - comment: name" => bot129 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user116 : user "reminders.get - next" => bot130 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user117 : user "reminders - context:reminders - comment: date-time" => bot131 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user118 : user "reminders.get - next" => bot132 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user119 : user "reminders.get - back" => bot136 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user120 : user "reminders - context:reminders - comment: recurrence" => bot134 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user121 : user "reminders.get.past - next" => bot135 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user117 ;
+				=> back to user115 ;
+			} ;
+			=> user122 : user "reminders.get - back" => bot140 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user123 : user "reminders - context:reminders - comment: recurrence" => bot138 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user124 : user "reminders.get.past - next" => bot139 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user115 ;
+		} ;
+		=> user125 : user "reminders - context:reminders - comment: recurrence" => bot141 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+		=> user126 : user "reminders.get.past - next" => bot144 : chatbot "reminders.get - nextTxtResp1" ;
+	} ;
+	- user127 : user "Type 2 Diabetes Complications" => bot147 : chatbot HttpRequest , HttpResponse , "Type 2 Diabetes ComplicationsTxtResp1" ;
+	- user128 : user diabetes_2 => bot148 : chatbot HttpRequest , HttpResponse , diabetes_2TxtResp1 ;
+	- user129 : user "prevention-of-diabetes" => bot149 : chatbot HttpRequest , HttpResponse , "prevention-of-diabetesTxtResp1" , "prevention-of-diabetesTxtResp2" , "prevention-of-diabetesTxtResp3" , "prevention-of-diabetesTxtResp4" ;
+	- user130 : user "gestational diabetes" => bot150 : chatbot "gestational diabetesTxtResp1" ;
+	- user131 : user "Test and Diagnosis of type 1" => bot151 : chatbot HttpRequest , HttpResponse , "Test and Diagnosis of type 1TxtResp1" ;
+	- user132 : user diabetes_1 => bot152 : chatbot HttpRequest , HttpResponse , diabetes_1TxtResp1 ;
+	- user133 : user "Prevention of Fatigue" => bot153 : chatbot HttpRequest , HttpResponse , "Prevention of FatigueTxtResp1" ;
+	- user134 : user "reminders.reschedule" => bot154 : chatbot HttpRequest , HttpResponse , "reminders.rescheduleTxtResp1" {
+		=> user135 : user "reminders.get - next" => bot155 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user136 : user "reminders - context:reminders - comment: date-time" => bot156 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user137 : user "reminders.get - next" => bot157 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user138 : user "reminders.get - back" => bot167 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user139 : user "reminders - context:reminders - comment: name" => bot159 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user140 : user "reminders.get - next" => bot160 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user141 : user "reminders.get - back" => bot164 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user142 : user "reminders - context:reminders - comment: recurrence" => bot162 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user143 : user "reminders.get.past - next" => bot163 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user136 ;
+				=> back to user139 ;
+			} ;
+			=> user144 : user "reminders - context:reminders - comment: recurrence" => bot165 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user145 : user "reminders.get.past - next" => bot166 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user136 ;
+		} ;
+		=> user146 : user "reminders.get - back" => bot183 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user147 : user "reminders - context:reminders - comment: name" => bot169 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user148 : user "reminders.get - next" => bot170 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user149 : user "reminders - context:reminders - comment: date-time" => bot171 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user150 : user "reminders.get - next" => bot172 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user151 : user "reminders.get - back" => bot176 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user152 : user "reminders - context:reminders - comment: recurrence" => bot174 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user153 : user "reminders.get.past - next" => bot175 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user149 ;
+				=> back to user147 ;
+			} ;
+			=> user154 : user "reminders.get - back" => bot180 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user155 : user "reminders - context:reminders - comment: recurrence" => bot178 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user156 : user "reminders.get.past - next" => bot179 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user147 ;
+		} ;
+		=> user157 : user "reminders - context:reminders - comment: recurrence" => bot181 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+		=> user158 : user "reminders.get.past - next" => bot182 : chatbot "reminders.get - nextTxtResp1" ;
+	} ;
+	- user159 : user "typhoid-bacteria" => bot184 : chatbot HttpRequest , HttpResponse , "typhoid-bacteriaTxtResp1" ;
+	- user160 : user "typhoid-through-animals" => bot185 : chatbot HttpRequest , HttpResponse , "typhoid-through-animalsTxtResp1" ;
+	- user161 : user "cluster-headache" => bot186 : chatbot HttpRequest , HttpResponse , "cluster-headacheTxtResp1" , "cluster-headacheTxtResp2" ;
+	- user162 : user "Gestational Diabetes Treatment" => bot187 : chatbot HttpRequest , HttpResponse , "Gestational Diabetes TreatmentTxtResp1" ;
+	- user163 : user "reminders.add" => bot188 : chatbot HttpRequest , HttpResponse , "reminders.addTxtResp1" {
+		=> user164 : user "reminders.get - next" => bot189 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user165 : user "reminders - context:reminders - comment: date-time" => bot190 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user166 : user "reminders.get - next" => bot191 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user167 : user "reminders.get - back" => bot201 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user168 : user "reminders - context:reminders - comment: name" => bot193 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user169 : user "reminders.get - next" => bot194 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user170 : user "reminders.get - back" => bot198 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user171 : user "reminders - context:reminders - comment: recurrence" => bot196 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user172 : user "reminders.get.past - next" => bot197 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user165 ;
+				=> back to user168 ;
+			} ;
+			=> user173 : user "reminders - context:reminders - comment: recurrence" => bot199 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user174 : user "reminders.get.past - next" => bot200 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user165 ;
+		} ;
+		=> user175 : user "reminders.get - back" => bot217 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user176 : user "reminders - context:reminders - comment: name" => bot203 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user177 : user "reminders.get - next" => bot204 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user178 : user "reminders - context:reminders - comment: date-time" => bot205 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user179 : user "reminders.get - next" => bot206 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user180 : user "reminders.get - back" => bot210 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user181 : user "reminders - context:reminders - comment: recurrence" => bot208 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user182 : user "reminders.get.past - next" => bot209 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user178 ;
+				=> back to user176 ;
+			} ;
+			=> user183 : user "reminders.get - back" => bot214 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user184 : user "reminders - context:reminders - comment: recurrence" => bot212 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user185 : user "reminders.get.past - next" => bot213 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user176 ;
+		} ;
+		=> user186 : user "reminders - context:reminders - comment: recurrence" => bot215 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+		=> user187 : user "reminders.get.past - next" => bot216 : chatbot "reminders.get - nextTxtResp1" ;
+	} ;
+	- user188 : user "gestational-diabetes-complications" => bot218 : chatbot HttpRequest , HttpResponse , "gestational-diabetes-complicationsTxtResp1" ;
+	- user189 : user "gestational-diabetes-causes" => bot219 : chatbot HttpRequest , HttpResponse , "gestational-diabetes-causesTxtResp1" ;
+	- user190 : user stomachache => bot220 : chatbot HttpRequest , HttpResponse , stomachacheTxtResp1 ;
+	- user191 : user "reminders.snooze" => bot221 : chatbot HttpRequest , HttpResponse , "reminders.snoozeTxtResp1" ;
+	- user192 : user "What is chronic fatigue syndrome?" => bot222 : chatbot HttpRequest , HttpResponse , "What is chronic fatigue syndrome?TxtResp1" ;
+	- user193 : user Doctor => bot223 : chatbot HttpRequest , HttpResponse , DoctorButtonResp1 , "reminders.get - nextTxtResp1" ;
+	- user194 : user "risk in type 2" => bot224 : chatbot HttpRequest , HttpResponse , "risk in type 2TxtResp1" ;
+	- user195 : user "typhoid-fever" => bot225 : chatbot HttpRequest , HttpResponse , "typhoid-feverTxtResp1" ;
+	- user196 : user "fatigue-treatment" => bot226 : chatbot HttpRequest , HttpResponse , "fatigue-treatmentTxtResp1" ;
+	- user197 : user "reminders.remove" => bot227 : chatbot HttpRequest , HttpResponse , "reminders.removeTxtResp1" {
+		=> user198 : user "reminders.get - next" => bot228 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user199 : user "reminders - context:reminders - comment: date-time" => bot229 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user200 : user "reminders.get - next" => bot230 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user201 : user "reminders.get - back" => bot240 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user202 : user "reminders - context:reminders - comment: name" => bot232 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user203 : user "reminders.get - next" => bot233 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user204 : user "reminders.get - back" => bot237 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user205 : user "reminders - context:reminders - comment: recurrence" => bot235 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user206 : user "reminders.get.past - next" => bot236 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user199 ;
+				=> back to user202 ;
+			} ;
+			=> user207 : user "reminders - context:reminders - comment: recurrence" => bot238 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user208 : user "reminders.get.past - next" => bot239 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user199 ;
+		} ;
+		=> user209 : user "reminders.get - back" => bot256 : chatbot "reminders.get - nextTxtResp1" ;
+		=> user210 : user "reminders - context:reminders - comment: name" => bot242 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+			=> user211 : user "reminders.get - next" => bot243 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user212 : user "reminders - context:reminders - comment: date-time" => bot244 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" {
+				=> user213 : user "reminders.get - next" => bot245 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user214 : user "reminders.get - back" => bot249 : chatbot "reminders.get - nextTxtResp1" ;
+				=> user215 : user "reminders - context:reminders - comment: recurrence" => bot247 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+				=> user216 : user "reminders.get.past - next" => bot248 : chatbot "reminders.get - nextTxtResp1" ;
+				=> back to user212 ;
+				=> back to user210 ;
+			} ;
+			=> user217 : user "reminders.get - back" => bot253 : chatbot "reminders.get - nextTxtResp1" ;
+			=> user218 : user "reminders - context:reminders - comment: recurrence" => bot251 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+			=> user219 : user "reminders.get.past - next" => bot252 : chatbot "reminders.get - nextTxtResp1" ;
+			=> back to user210 ;
+		} ;
+		=> user220 : user "reminders - context:reminders - comment: recurrence" => bot254 : chatbot HttpRequest , HttpResponse , "reminders - context:reminders - comment: date-timeTxtResp1" ;
+		=> user221 : user "reminders.get.past - next" => bot255 : chatbot "reminders.get - nextTxtResp1" ;
+	} ;
+	- user222 : user "Risk factors for CFS" => bot257 : chatbot HttpRequest , HttpResponse , "Risk factors for CFSTxtResp1" ;
+	- user223 : user "symptoms of CFS" => bot258 : chatbot HttpRequest , HttpResponse , "symptoms of CFSTxtResp1" ;
+	- user224 : user "How is obesity diagnosed?" => bot259 : chatbot HttpRequest , HttpResponse , "How is obesity diagnosed?TxtResp1" ;
+	- user225 : user "high-bp-hypertension" => bot260 : chatbot HttpRequest , HttpResponse , "high-bp-hypertensionTxtResp1" ;
+	- user226 : user "obesity-complications" => bot261 : chatbot "obesity-complicationsTxtResp1" ;
+	- user227 : user headache => bot262 : chatbot HttpRequest , HttpResponse , headacheTxtResp1 ;
+	- user228 : user diabetes => bot263 : chatbot HttpRequest , HttpResponse , diabetesTxtResp1 ;
+	- user229 : user hypertension => bot264 : chatbot HttpRequest , HttpResponse , hypertensionTxtResp1 ;
+	- user230 : user "type-one-diabetes-prevention" => bot265 : chatbot HttpRequest , HttpResponse , "type-one-diabetes-preventionTxtResp1" ;
+	- user231 : user "Complications of Fatigue" => bot266 : chatbot HttpRequest , HttpResponse , "Complications of FatigueTxtResp1" ;
+

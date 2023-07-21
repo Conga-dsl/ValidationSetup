@@ -1,0 +1,72 @@
+Chatbot VoiceClues language : en
+
+intents :
+
+AnswerIsIntent :
+	inputs in en {
+		"option " ( option ) [ option ] ,
+		( option ) [ option ] ,
+		"option " ( option ) [ option ] ,
+		( option ) [ option ]
+	}
+	parameters :
+		option : entity float ;
+
+"Default Welcome Intent" :
+
+StartQuizIntent :
+	inputs in en {
+		"start the quiz" ,
+		"start the game" ,
+		start ,
+		"start the quiz" ,
+		"start the game" ,
+		start
+}
+
+RepeatIntent :
+	inputs in en {
+		"repeat the question" ,
+		repeat ,
+		"repeat the question" ,
+		repeat
+}
+
+HelpIntent :
+	inputs in en {
+		help ,
+		"i need help" ,
+		help ,
+		"i need help"
+}
+
+"Default Fallback Intent" Fallback :
+
+ScoreCardIntent :
+	inputs in en {
+		"show my score card" ,
+		"whats my lifetime points" ,
+		"score card" ,
+		"show my score card" ,
+		"whats my lifetime points" ,
+		"score card"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "arn:aws:lambda:us-east-1:290139081510:function:GuessWho" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user AnswerIsIntent => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user "Default Welcome Intent" => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user StartQuizIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user RepeatIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user HelpIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user ScoreCardIntent => bot7 : chatbot HttpRequest , HttpResponse ;
+

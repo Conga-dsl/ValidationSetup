@@ -1,0 +1,660 @@
+Chatbot "Miss-Lily" language : en
+
+intents :
+
+	cancel :
+		inputs in en {
+			"Close the action" ,
+			Goodbye ,
+			cancel ,
+			"no maybe next time" ,
+			"nothing for now"
+	}
+
+	"lead a healthy life - fitness plan - next" :
+		inputs in en {
+			( yoga ) [ fit ]
+		}
+		parameters :
+			fit : entity fit ;
+
+	"implicit main menu" :
+		inputs in en {
+			"talk to miss lily" ,
+			"talk to ms lily" ,
+			"talk to ms. lily" ,
+			"help me get better" ,
+			"back to main menu" ,
+			"suggest my diet" ,
+			"main menu"
+	}
+
+	"del acc - no" :
+		inputs in en {
+			"don\'t" ,
+			"nope not really" ,
+			"no that\'s be all" ,
+			"not right now" ,
+			"thanks but no" ,
+			not ,
+			"no we are good" ,
+			"nothing else" ,
+			"not interested" ,
+			"nah I\'m good" ,
+			"definitely not" ,
+			"no never" ,
+			never ,
+			nah ,
+			nothing ,
+			"no maybe next time" ,
+			"I don\'t want that" ,
+			"no not really" ,
+			"no that\'s ok" ,
+			"no no don\'t" ,
+			na ,
+			"no way no" ,
+			"I can\'t" ,
+			"no thanks" ,
+			"not at all" ,
+			"not really" ,
+			"I don\'t" ,
+			"no I cannot" ,
+			"no that\'s okay" ,
+			nope ,
+			"I don\'t think so" ,
+			"no it isn\'t" ,
+			"thanks but not this time" ,
+			"no that\'s fine thank you" ,
+			"no don\'t" ,
+			"don\'t do it" ,
+			"I don\'t want" ,
+			"not today" ,
+			"I\'m not" ,
+			"no way" ,
+			^no ,
+			"I disagree" ,
+			"not this time" ,
+			"nothing else thanks"
+	}
+
+	emergency1 :
+		inputs in en {
+			"in a " ( emergency ) [ Emergency ] ,
+			( emergency ) [ Emergency ]
+		}
+		parameters :
+			Emergency : entity Emergency ;
+
+	"update profile - height and weight - next" :
+		inputs in en {
+			"my height is " ( "60 cm" ) [ height ] ,
+			"my weight is " ( "60 kg" ) [ weight ] ,
+			( "60 kg" ) [ weight ] ,
+			( "180 cm" ) [ height ] ,
+			"my height is " ( "180 cm" ) [ height ] " and weight is " ( "60 kg" ) [ weight ]
+		}
+		parameters :
+			height : entity text , required , prompts in en [ "Now please enter your height." ] ;
+			weight : entity text , required , prompts in en [ "Now please enter your weight." ] ;
+
+	"new-eggs" :
+		inputs in en {
+			"make me a burger" ,
+			"find me a girlfriend" ,
+			"make me a sandwich" ,
+			"wake me up" ,
+			"make me a coffee" ,
+			"how much is " ( n ) [ ^number ] " by " ( m ) [ ^number ] ,
+			"fetch the ball" ,
+			"how much is " ( n ) [ ^number ] " plus " ( m ) [ ^number ] ,
+			"set an alarm for " ( ^time ) [ ^time ] ,
+			"how much is " ( n ) [ ^number ] " minus " ( m ) [ ^number ] ,
+			calculate ,
+			"make me coffee" ,
+			"wake me up at " ( ^time ) [ ^time ] ,
+			"set an alarm" ,
+			"how much is " ( n ) [ ^number ] " into " ( m ) [ ^number ]
+		}
+		parameters :
+			^number : entity float ;
+			^time : entity time ;
+
+	"show all my saved plans - detail" :
+		inputs in en {
+			( situation ) [ finder ]
+		}
+		parameters :
+			finder : entity finder ;
+
+	"lead a healthy life - diet plan - next" :
+		inputs in en {
+			( "1" ) [ scale ]
+		}
+		parameters :
+			scale : entity "fitnesss-scale" ;
+
+	nutrients1 :
+		inputs in en {
+			"more on " ( carbs ) [ nutrients ] ,
+			"more on intake of " ( proteins ) [ nutrients ] ,
+			"more on " ( proteins ) [ nutrients ] ,
+			"tell me more about " ( carbs ) [ nutrients ] ,
+			"how much " ( carb ) [ nutrients ] " should i intake" ,
+			"what contains " ( carbs ) [ nutrients ] ,
+			"know more about " ( carbs ) [ nutrients ] ,
+			"know more on " ( proteins ) [ nutrients ]
+		}
+		parameters :
+			nutrients : entity nutrients ;
+
+	"Default Welcome Intent" :
+
+	"disease oriented - next - supplements" :
+		inputs in en {
+			"Dietary Supplements for " ( piles ) [ diseases ] ,
+			"Dietary Supplements"
+		}
+		parameters :
+			diseases : entity diseases ;
+
+	"medicine scheduler" :
+		inputs in en {
+			"schedule my medicine" ,
+			"my medicine reminder" ,
+			"schedule my meds" ,
+			"schedule my medicines"
+		}
+		parameters :
+			medicine : entity text , required , prompts in en [ "Please tell me the name of the medicine you are going to have." ] ;
+
+	"show all my saved plans - diseaseNextSurface" :
+		inputs in en {
+			( x ) [ xyz ]
+		}
+		parameters :
+			xyz : entity xyz ;
+
+	"show all my saved plans - diseaseNextDeep" :
+		inputs in en {
+			( x ) [ xyz ]
+		}
+		parameters :
+			xyz : entity xyz ;
+
+	"sed life" :
+		inputs in en {
+			( sad ) [ "sed-life" ] ,
+			"i am " ( depressed ) [ "sed-life" ] ,
+			"I am feeling " ( low ) [ "sed-life" ] ,
+			"I had a " ( bad ) [ "sed-life" ] " day"
+		}
+		parameters :
+			"sed-life" : entity "sed-life" ;
+
+	"update profile - age" :
+		inputs in en {
+			age ,
+			"update age"
+	}
+
+	"update profile - bmi" :
+		inputs in en {
+			"find my bmi" ,
+			"update bmi" ,
+			"calculate bmi"
+	}
+
+	"del acc - yes" :
+		inputs in en {
+			sure ,
+			okay ,
+			"sounds correct" ,
+			"that works" ,
+			"yep that\'s ok" ,
+			"yes that\'s alright" ,
+			"I think so" ,
+			sg ,
+			"yes I agree" ,
+			"I don\'t mind" ,
+			"I agree" ,
+			"yes I do" ,
+			"for sure" ,
+			ok ,
+			"yes that\'t ok" ,
+			"that one works" ,
+			"yes you can do it" ,
+			perfect ,
+			yes ,
+			"why not" ,
+			"of course" ,
+			"yep that\'s right" ,
+			"okay I will" ,
+			exactly ,
+			"sure why not" ,
+			absolutely ,
+			"it\'s okay" ,
+			"it\'s fine" ,
+			"go ahead" ,
+			confirm ,
+			"sounds good" ,
+			alright ,
+			yeah ,
+			yup ,
+			"yes please" ,
+			"do it" ,
+			"yes I can" ,
+			"it looks perfect" ,
+			"that\'s correct" ,
+			right ,
+			"alright why not" ,
+			yep
+	}
+
+	creator1 :
+		inputs in en {
+			( creator ) [ creator ] ,
+			"who are your " ( creators ) [ creator ] ,
+			"who " ( founded ) [ creator ] " you" ,
+			"who are your " ( founders ) [ creator ] ,
+			"who " ( made ) [ creator ] " you" ,
+			"who " ( created ) [ creator ] " you"
+		}
+		parameters :
+			creator : entity creator ;
+
+	"update profile - blood - next" :
+		inputs in en {
+			"my blood group is " ( "B+" ) [ blood ] ,
+			( "B+" ) [ blood ]
+		}
+		parameters :
+			blood : entity "blood-group" ;
+
+	"update profile" :
+		inputs in en {
+			"update my record" ,
+			"add age, height, weight" ,
+			"add age" ,
+			"add weight" ,
+			"add height" ,
+			"update profile" ,
+			"update my profile"
+	}
+
+	"del acc" :
+		inputs in en {
+			"remove my account" ,
+			"remove account" ,
+			"delete account" ,
+			"delete my account"
+	}
+
+	profile :
+		inputs in en {
+			"show my profile" ,
+			"view my profile" ,
+			"show profile" ,
+			"view profile" ,
+			profile ,
+			"my profile"
+	}
+
+	"update profile - blood" :
+		inputs in en {
+			"blood group" ,
+			"update blood group"
+	}
+
+	"confirm medicine scheduler" :
+		inputs in en {
+			( "6:00 pm" ) [ ^time ]
+		}
+		parameters :
+			^time : entity time , prompts in en [ "When exactly do you take this medicine?" ] ;
+
+	"lead a healthy life - diet plan" :
+		inputs in en {
+			"what should i eat to stay healthy" ,
+			"what should be my diet" ,
+			"diet plan"
+	}
+
+	"setup fitness update" :
+		inputs in en {
+			"send me a daily notification" ,
+			"remind me daily to do exercise" ,
+			"remind me daily to do yoga" ,
+			"send me a daily reminder" ,
+			"remind me daily"
+	}
+
+	"disease oriented - next - diet" :
+		inputs in en {
+			"my specific diet for " ( piles ) [ diseases ] ,
+			"diet plan for " ( diabetes ) [ diseases ] ,
+			"diet plan"
+		}
+		parameters :
+			diseases : entity diseases ;
+
+	"disease oriented" :
+		inputs in en {
+			"get me help for my disease" ,
+			"get me help for " ( diabetes ) [ diseases ] ,
+			"cure my disease" ,
+			"common diseases" ,
+			"Get disease specific help"
+		}
+		parameters :
+			diseases : entity diseases ;
+
+	help :
+		inputs in en {
+			"what do you do" ,
+			"how can miss lily help me" ,
+			"know more" ,
+			help ,
+			"what can you do"
+	}
+
+	"medicine timings" :
+		inputs in en {
+			"my stored medicines" ,
+			"when should i have my medicine" ,
+			"when should i have taken my medicine"
+	}
+
+	"lead a healthy life" :
+		inputs in en {
+			"make me healthy" ,
+			"lead a healthy life to live long" ,
+			"maintain quality of life" ,
+			"make my life healthy" ,
+			"maintain healthy life" ,
+			"lead a healthy life"
+	}
+
+	"update profile - height and weight" :
+		inputs in en {
+			"update height and weight" ,
+			"height and weight"
+	}
+
+	"lead a healthy life - fitness plan" :
+		inputs in en {
+			"what yoga should i do today" ,
+			"what exercise should i do today" ,
+			"what should be my fitness plan" ,
+			"fitness plan"
+	}
+
+	"update profile - age - next" :
+		inputs in en {
+			( "21 years" ) [ age ]
+		}
+		parameters :
+			age : entity text ;
+
+	"save - disease" :
+		inputs in en {
+			"save my disease plan" ,
+			"save this disease plan" ,
+			"save disease plan"
+	}
+
+	"show all my saved plans" :
+		inputs in en {
+			"all my saved plans" ,
+			"my plans" ,
+			"my personalized plans" ,
+			"my saved plans" ,
+			"my recommended plan"
+	}
+
+	"disease oriented - next - exercise" :
+		inputs in en {
+			"help me tackle " ( piles ) [ diseases ] " by doing exercises" ,
+			"Exercises for " ( diabetes ) [ diseases ] ,
+			Exercises
+		}
+		parameters :
+			diseases : entity diseases ;
+
+	"predict my disease" :
+		inputs in en {
+			"what disease am I suffering from" ,
+			"Predict my Disease"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+	"save - diet" :
+		inputs in en {
+			"Save my diet plan" ,
+			"Save this diet plan" ,
+			"save this diet"
+	}
+
+entities :
+	Simple entity fit :
+		inputs in en {
+			"1" synonyms yoga , asan , posture , "ramdev baba" , "Today\'s Yoga"
+			"2" synonyms exercise , "free body exercise" , cardio , "Today\'s Exercise"
+	}
+	Simple entity "fitnesss-scale" :
+		inputs in en {
+			"1" synonyms "1" , one , uno
+			"2" synonyms "2" , duo , two
+			"3" synonyms "3" , three , trio
+	}
+	Simple entity creator :
+		inputs in en {
+			create synonyms create , creator , created , developed , developers , founders , founder , made , founded
+	}
+	Simple entity xyz :
+		inputs in en {
+			"1" synonyms "Diet Tips"
+			"2" synonyms "Dietary Supplements"
+			"3" synonyms Exercises
+	}
+	Simple entity diseases :
+		inputs in en {
+			Piles synonyms Piles , piles
+			"Diabetes mellitus" synonyms "Diabetes Mellitus" , Diabetes , "high sugar"
+			Athritis synonyms Athritis , "joint pain"
+			Cataracts synonyms Cataracts , cataract , "blur vision" , "cloudy vision" , "blurred vision"
+			Constipation synonyms Constipation , "hard stool"
+			"High Blood Pressure" synonyms "High Blood Pressure" , hypertension
+			Insomnia synonyms Insomnia , sleepless , restless
+			"Low blood Pressure" synonyms "Low blood Pressure" , hypotension
+	}
+	Simple entity "sed-life" :
+		inputs in en {
+			depress synonyms bad , depress , low , sad , unhappy
+	}
+	Simple entity Emergency :
+		inputs in en {
+			emergency synonyms emergency
+	}
+	Simple entity "blood-group" :
+		inputs in en {
+			"A+" synonyms "A positive" , "A+"
+			"A-" synonyms "A negative" , "A-"
+			"AB+" synonyms "AB positive" , "AB+"
+			"AB-" synonyms "AB negative" , "AB-"
+			"B+" synonyms "B positive" , "B+"
+			"B-" synonyms "B negative" , "B-"
+			"O+" synonyms "O positive" , "O+"
+			"O-" synonyms "O negative" , "O-"
+	}
+	Simple entity finder :
+		inputs in en {
+			"1" synonyms "My Recommended Diet Plan" , "diet plan" , "Recommended Diet Plan"
+			"2" synonyms "My Recommended Disease Plan" , "Disease Plan"
+	}
+	Simple entity nutrients :
+		inputs in en {
+			carbohydrates synonyms carbohydrate , carbohydrates , carbs
+			fats synonyms fat , fats
+			protein synonyms protein , proteins
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-miss-lily-2e318.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response cancelTxtResp1 :
+		inputs in en {
+			"Thank you for using Ms. Lily. See you soon! " ,
+			"Alright. Glad to be of any help. See you soon! " ,
+			"Cool. Till next time then. Cheers! "
+	}
+	text response "lead a healthy life - fitness plan - nextTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "implicit main menuTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "del acc - noTxtResp2" :
+		inputs in en {
+			"Cool. I see you have used that big brain of yours... I\'m so glad to have you back. "
+	}
+	text response "del acc - noTxtResp3" :
+		inputs in en {
+			"Now, what can I do for you ? "
+	}
+	text response emergency1TxtResp2 :
+		inputs in en {
+			"I\'m still learning how to do that. Once available I\'ll help you out with it for sure. "
+	}
+	text response emergency1TxtResp3 :
+		inputs in en {
+			"For now I can help you lead a healthy life, or get help for specific diseases or even schedule your medicines. What can I help you with now? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello! I am Miss Lily, your personal health-mate. I am here to assist you to lead a healthy life and even help you to fight with the diseases you\'re suffering from. You can schedule your medicines with my help and I will make sure you will take them on time and stay fit. Welcome aboard. "
+	}
+	text response "sed lifeTxtResp3" :
+		inputs in en {
+			"Okay so you had a bad day. Don\'t let it spiral you into a mindset of doom and gloom. Get back in your power. Remember you are who you choose to be. " ,
+			"Breathe... It\'s just a bad day not a bad life. " ,
+			"Trust the wait . Embrace the uncertainty. Enjoy the beauty of becoming. When nothing is certain anything is possible. " ,
+			"Remember \"No rain no flowers\". I hope you understand . " ,
+			"You know \"Smooth seas do not make skillful sailors\". " ,
+			"Often what feels like a terrible change, is really just a challenging pathway to a far better place. " ,
+			"Nothing is permanent in this world....... Not even our troubles . "
+	}
+	text response "update profile - ageTxtResp1" :
+		inputs in en {
+			"I don\'t mean to pry, but how old are you? "
+	}
+	text response creator1TxtResp2 :
+		inputs in en {
+			"This action was made by Team B.B.K. . If you like our action , don\'t forget to drop a review in the action\'s directory. Thank you . " ,
+			"Team B.B.K. loves you. "
+	}
+	text response "update profileTxtResp3" :
+		inputs in en {
+			"To give you a more personalized experience I need to know certain details about you such as your age, height and weight. You can be relaxed as they are completely secure with me. "
+	}
+	text response "del accTxtResp2" :
+		inputs in en {
+			"This is a confirmation to delete your account. Once done, it can\'t be reversed. So do you seriously wanna take that step ? "
+	}
+	text response "update profile - bloodTxtResp2" :
+		inputs in en {
+			"I do actually need to keep a record of your blood group, you know just in case of an emergency. So, what\'s your blood group? "
+	}
+	text response "lead a healthy life - diet planTxtResp4" :
+		inputs in en {
+			"To give a personalized daily calorie requirement for you, I need to know your current level of fitness. "
+	}
+	text response "medicine timingsTxtResp1" :
+		inputs in en {
+			"Webhook Failed! "
+	}
+	text response "update profile - height and weightTxtResp1" :
+		inputs in en {
+			"I need your height and weight to suggest you a customized fitness plan. Please enter your height and weight. "
+	}
+	text response "lead a healthy life - fitness planTxtResp3" :
+		inputs in en {
+			"A fit body leads to a fitter mind and a longer lifespan. Eyeing this, I will recommend you daily, a yoga and a free body exercise suitable to meet your fitness goals. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user cancel => bot1 : chatbot cancelTxtResp1 ;
+	- user2 : user "implicit main menu" => bot2 : chatbot HttpRequest , HttpResponse , "implicit main menuTxtResp1" ;
+	- user3 : user emergency1 => bot3 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , emergency1TxtResp2 , emergency1TxtResp3 ;
+	- user4 : user "new-eggs" => bot4 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+	- user5 : user nutrients1 => bot5 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+	- user6 : user "Default Welcome Intent" => bot82 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+	- user7 : user "medicine scheduler" => bot7 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" {
+		=> user8 : user "confirm medicine scheduler" => bot8 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+	} ;
+	- user9 : user "sed life" => bot9 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "sed lifeTxtResp3" ;
+	- user10 : user creator1 => bot10 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , creator1TxtResp2 ;
+	- user11 : user "update profile" => bot11 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "update profileTxtResp3" {
+		=> user12 : user "update profile - age" => bot12 : chatbot "update profile - ageTxtResp1" {
+			=> user13 : user "update profile - age - next" => bot13 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user14 : user "update profile - bmi" => bot14 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user15 : user "update profile - blood" => bot15 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "update profile - bloodTxtResp2" { => user16 : user "update profile - blood - next" => bot16 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user17 : user "update profile - bmi" => bot17 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user18 : user "update profile - height and weight" => bot18 : chatbot "update profile - height and weightTxtResp1" { => user19 : user "update profile - height and weight - next" => bot19 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user20 : user "update profile - bmi" => bot20 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user12 ; => back to user15 ; => back to user18 ; } ; } ; => back to user12 ; => back to user15 ; } ; } ; => user21 : user "update profile - height and weight" => bot21 : chatbot "update profile - height and weightTxtResp1" { => user22 : user "update profile - height and weight - next" => bot22 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user23 : user "update profile - bmi" => bot23 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user24 : user "update profile - blood" => bot24 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "update profile - bloodTxtResp2" { => user25 : user "update profile - blood - next" => bot25 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user26 : user "update profile - bmi" => bot26 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user12 ; => back to user24 ; => back to user21 ; } ; } ; => back to user12 ; => back to user21 ; } ; } ; => back to user12 ; } ;
+		} ;
+		=> user27 : user "update profile - bmi" => bot27 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+		=> user28 : user "update profile - blood" => bot28 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "update profile - bloodTxtResp2" {
+			=> user29 : user "update profile - blood - next" => bot29 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user30 : user "update profile - age" => bot30 : chatbot "update profile - ageTxtResp1" { => user31 : user "update profile - age - next" => bot31 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user32 : user "update profile - bmi" => bot32 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user33 : user "update profile - height and weight" => bot33 : chatbot "update profile - height and weightTxtResp1" { => user34 : user "update profile - height and weight - next" => bot34 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user35 : user "update profile - bmi" => bot35 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user30 ; => back to user28 ; => back to user33 ; } ; } ; => back to user30 ; => back to user28 ; } ; } ; => user36 : user "update profile - bmi" => bot36 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user37 : user "update profile - height and weight" => bot37 : chatbot "update profile - height and weightTxtResp1" { => user38 : user "update profile - height and weight - next" => bot38 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user39 : user "update profile - age" => bot39 : chatbot "update profile - ageTxtResp1" { => user40 : user "update profile - age - next" => bot40 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user41 : user "update profile - bmi" => bot41 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user39 ; => back to user28 ; => back to user37 ; } ; } ; => user42 : user "update profile - bmi" => bot42 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user28 ; => back to user37 ; } ; } ; => back to user28 ; } ;
+		} ;
+		=> user43 : user "update profile - height and weight" => bot43 : chatbot "update profile - height and weightTxtResp1" {
+			=> user44 : user "update profile - height and weight - next" => bot44 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user45 : user "update profile - age" => bot45 : chatbot "update profile - ageTxtResp1" { => user46 : user "update profile - age - next" => bot46 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user47 : user "update profile - bmi" => bot47 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user48 : user "update profile - blood" => bot48 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "update profile - bloodTxtResp2" { => user49 : user "update profile - blood - next" => bot49 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user50 : user "update profile - bmi" => bot50 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user45 ; => back to user48 ; => back to user43 ; } ; } ; => back to user45 ; => back to user43 ; } ; } ; => user51 : user "update profile - bmi" => bot51 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user52 : user "update profile - blood" => bot52 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "update profile - bloodTxtResp2" { => user53 : user "update profile - blood - next" => bot53 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user54 : user "update profile - age" => bot54 : chatbot "update profile - ageTxtResp1" { => user55 : user "update profile - age - next" => bot55 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user56 : user "update profile - bmi" => bot56 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user54 ; => back to user52 ; => back to user43 ; } ; } ; => user57 : user "update profile - bmi" => bot57 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => back to user52 ; => back to user43 ; } ; } ; => back to user43 ; } ;
+		} ;
+	} ;
+	- user58 : user profile => bot58 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" {
+		=> user59 : user "del acc" => bot59 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "del accTxtResp2" { => user60 : user "del acc - no" => bot60 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "del acc - noTxtResp2" , "del acc - noTxtResp3" ; => user61 : user "del acc - yes" => bot61 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; } ;
+	} ;
+	- user62 : user "disease oriented" => bot62 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" {
+		=> user63 : user "Default Welcome Intent" => bot63 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user64 : user "disease oriented - next - supplements" => bot64 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user65 : user "disease oriented - next - diet" => bot65 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; => user66 : user "disease oriented - next - exercise" => bot66 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; } ;
+	} ;
+	- user67 : user help => bot67 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "Default Welcome IntentTxtResp1" ;
+	- user68 : user "medicine timings" => bot68 : chatbot HttpRequest , HttpResponse , "medicine timingsTxtResp1" ;
+	- user69 : user "lead a healthy life" => bot69 : chatbot HttpRequest , HttpResponse {
+		=> user70 : user "lead a healthy life - diet plan" => bot70 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "lead a healthy life - diet planTxtResp4" { => user71 : user "lead a healthy life - diet plan - next" => bot71 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; } ;
+	} ;
+	- user72 : user "lead a healthy life - fitness plan" => bot72 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , "lead a healthy life - fitness planTxtResp3" {
+		=> user73 : user "lead a healthy life - fitness plan - next" => bot73 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user74 : user "setup fitness update" => bot74 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" { => user75 : user "Default Welcome Intent" => bot75 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ; } ; } ;
+	} ;
+	- user76 : user "save - disease" => bot76 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+	- user77 : user "show all my saved plans" => bot77 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" {
+		=> user78 : user "show all my saved plans - detail" => bot78 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" {
+			=> user79 : user "show all my saved plans - diseaseNextDeep" => bot79 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+		} ;
+		=> user80 : user "show all my saved plans - diseaseNextSurface" => bot80 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+	} ;
+	- user81 : user "predict my disease" => bot81 : chatbot "lead a healthy life - fitness plan - nextTxtResp1" , emergency1TxtResp2 , emergency1TxtResp3 ;
+	- user82 : user "Default Fallback Intent" => bot83 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user83 : user "save - diet" => bot84 : chatbot HttpRequest , HttpResponse , "lead a healthy life - fitness plan - nextTxtResp1" ;
+

@@ -1,0 +1,107 @@
+Chatbot voicecommerce language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+GetNewestProductsIntent :
+	inputs in en {
+		"what are " ( quantity ) [ quantity ] " newest products" ,
+		"what are " ( quantity ) [ quantity ] " new products" ,
+		"what is " ( quantity ) [ quantity ] " newest product" ,
+		"what is " ( quantity ) [ quantity ] " new product" ,
+		"list " ( quantity ) [ quantity ] " newest products" ,
+		"list " ( quantity ) [ quantity ] " new products" ,
+		( quantity ) [ quantity ] " new products" ,
+		( quantity ) [ quantity ] " newest products"
+	}
+	parameters :
+		quantity : entity number ;
+
+GetProductsUnder :
+	inputs in en {
+		"what are " ( quantity ) [ quantity ] " products under " ( amount ) [ amount ] ,
+		"what are " ( quantity ) [ quantity ] " products below " ( amount ) [ amount ] ,
+		"what is " ( quantity ) [ quantity ] " product under " ( amount ) [ amount ] ,
+		"what is " ( quantity ) [ quantity ] " product below " ( amount ) [ amount ] ,
+		"what are " ( quantity ) [ quantity ] " products under " ( amount ) [ amount ] " USD" ,
+		"what are " ( quantity ) [ quantity ] " products below " ( amount ) [ amount ] " USD" ,
+		"what is " ( quantity ) [ quantity ] " product under " ( amount ) [ amount ] " USD" ,
+		"what is " ( quantity ) [ quantity ] " product below " ( amount ) [ amount ] " USD" ,
+		( quantity ) [ quantity ] " products below " ( amount ) [ amount ] ,
+		( quantity ) [ quantity ] " product below " ( amount ) [ amount ] ,
+		( quantity ) [ quantity ] " products under " ( amount ) [ amount ] ,
+		( quantity ) [ quantity ] " product under " ( amount ) [ amount ] ,
+		( quantity ) [ quantity ] " products below " ( amount ) [ amount ] " USD" ,
+		( quantity ) [ quantity ] " product below " ( amount ) [ amount ] " USD" ,
+		( quantity ) [ quantity ] " products under " ( amount ) [ amount ] " USD" ,
+		( quantity ) [ quantity ] " product under " ( amount ) [ amount ] " USD" ,
+		"list " ( quantity ) [ quantity ] " products below " ( amount ) [ amount ] ,
+		"list " ( quantity ) [ quantity ] " product below " ( amount ) [ amount ] ,
+		"list " ( quantity ) [ quantity ] " products under " ( amount ) [ amount ] ,
+		"list " ( quantity ) [ quantity ] " product under " ( amount ) [ amount ] ,
+		"list " ( quantity ) [ quantity ] " products below " ( amount ) [ amount ] " USD" ,
+		"list " ( quantity ) [ quantity ] " product below " ( amount ) [ amount ] " USD" ,
+		"list " ( quantity ) [ quantity ] " products under " ( amount ) [ amount ] " USD" ,
+		"list " ( quantity ) [ quantity ] " product under " ( amount ) [ amount ] " USD"
+	}
+	parameters :
+		quantity : entity number ;
+		amount : entity number ;
+
+GetCategoryProducts :
+	inputs in en {
+		"what are " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"what are " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"what is " ( quantity ) [ quantity ] "  " ( category ) [ category ] " product" ,
+		"what is " ( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		"what are " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"what are " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"what is " ( quantity ) [ quantity ] "  " ( category ) [ category ] " product" ,
+		"what is " ( quantity ) [ quantity ] "  " ( category ) [ category ] " product" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " product" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " products" ,
+		"list " ( quantity ) [ quantity ] " " ( category ) [ category ] " product"
+	}
+	parameters :
+		quantity : entity number ;
+		category : entity text ;
+
+HelloWorldIntent :
+	inputs in en {
+		hello ,
+		^hi
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/979e0d2c-0348-40f2-a86c-d1b9681e8aa6" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user GetNewestProductsIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user GetProductsUnder => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user GetCategoryProducts => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user HelloWorldIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse ;
+

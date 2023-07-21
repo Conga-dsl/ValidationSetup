@@ -1,0 +1,682 @@
+Chatbot RobotCommander language : en
+
+intents :
+
+	"smalltalk.confirmation.no" :
+		inputs in en {
+			"don\'t" ,
+			"no incorrect" ,
+			"sorry no" ,
+			"no need" ,
+			"actually no" ,
+			"I don\'t want to" ,
+			never ,
+			"no never" ,
+			"not needed" ,
+			"not at this time" ,
+			"let \'s not" ,
+			"I say no" ,
+			"no that\'s fine thank you" ,
+			"not exactly" ,
+			"no but thank you" ,
+			"no sorry" ,
+			"absolutely not" ,
+			"I disagree" ,
+			"I think no" ,
+			"no it\'s not" ,
+			"I said no" ,
+			"no it isn\'t" ,
+			"no that\'s wrong" ,
+			"not really" ,
+			"no thank you though" ,
+			"thanks but no thanks" ,
+			nah ,
+			"of course not" ,
+			"no thank you not right now" ,
+			"don t have a sense" ,
+			"definitely not" ,
+			"no thank you very much" ,
+			"no need thanks" ,
+			"how about no" ,
+			"not this time" ,
+			na ,
+			"no I don\'t" ,
+			"no just no" ,
+			"no thanks" ,
+			"don\'t" ,
+			"no I would not" ,
+			disagree ,
+			"no way" ,
+			"no leave it" ,
+			nope ,
+			"nope sorry" ,
+			"no don\'t do that" ,
+			^no ,
+			"not really no" ,
+			"not this" ,
+			"absolutely no" ,
+			"do not" ,
+			"I don\'t think so" ,
+			"no forget" ,
+			"not today" ,
+			"no do not" ,
+			"no thanks not right now" ,
+			"I\'m not" ,
+			"no don\'t" ,
+			"I don\'t want" ,
+			"apparently not" ,
+			"I don\'t want that" ,
+			"not interested" ,
+			"no actually" ,
+			"not that" ,
+			nooo ,
+			"not right now thanks" ,
+			"no tanks"
+	}
+
+	"command backward" :
+		inputs in en {
+			"back up" ,
+			"back up " ( "4 in" ) [ "unit-length" ] ,
+			^back ,
+			"go backward" ,
+			"reverse " ( "4 feet" ) [ "unit-length" ] ,
+			"go back" ,
+			"backward " ( "3 miles" ) [ "unit-length" ] ,
+			backward
+		}
+		parameters :
+			"unit-length" : entity text ;
+
+	"command turn" :
+		inputs in en {
+			"bear " ( right ) [ turnmeasure ] ,
+			"turn " ( left ) [ turnmeasure ] ,
+			"bear left" ,
+			"turn " ( around ) [ turnmeasure ] ,
+			( right ) [ turnmeasure ] " turn" ,
+			"turn toward the " ( right ) [ turnmeasure ] ,
+			"turn " ( right ) [ turnmeasure ]
+		}
+		parameters :
+			turnmeasure : entity turnmeasure , required ;
+
+	"Default Welcome Intent" :
+
+	"command faster" :
+		inputs in en {
+			"speed up" ,
+			"speed up a bit" ,
+			"a bit faster" ,
+			faster ,
+			"go faster"
+	}
+
+	"smalltalk.confirmation.yes" :
+		inputs in en {
+			obviously ,
+			"okay that\'s fine" ,
+			"that is ok" ,
+			certainly ,
+			okay ,
+			"go for it" ,
+			ok ,
+			absolutely ,
+			"yeah that\'s right" ,
+			ye ,
+			"why not" ,
+			"yes correct" ,
+			"of course" ,
+			"yeah right" ,
+			"yeah go ahead" ,
+			yea ,
+			yep ,
+			"I guess" ,
+			"yes indeed" ,
+			okey ,
+			"ok yes" ,
+			"okie dokie" ,
+			"sure why not" ,
+			"yeah exactly" ,
+			"sure is" ,
+			"okay sounds good" ,
+			"I agree" ,
+			ya ,
+			"I do" ,
+			"yes this is correct" ,
+			yeh ,
+			"ok sure" ,
+			"sure thing" ,
+			"ok thank you" ,
+			"yes it is" ,
+			right ,
+			"ok go ahead" ,
+			yes ,
+			"yes right" ,
+			"yes I would like to" ,
+			"yes definitely" ,
+			confirm ,
+			yap ,
+			"do it" ,
+			yup ,
+			"yes I do" ,
+			"of course why not" ,
+			"sounds good" ,
+			"nevermind its okay" ,
+			"okay then" ,
+			correct ,
+			"go ahead" ,
+			"yes I agree" ,
+			"yes it is correct" ,
+			"yes for sure" ,
+			"that\'s correct" ,
+			"yes you may" ,
+			"yes sure" ,
+			"this is correct" ,
+			"yeah sure" ,
+			alrighty ,
+			"all right" ,
+			sure ,
+			definitely ,
+			"ok you can" ,
+			"please do" ,
+			"oh yes" ,
+			"looks good" ,
+			k ,
+			"I don\'t mind" ,
+			"it\'s fine" ,
+			"yes that\'s fine" ,
+			affirmative ,
+			"yeah I\'m sure" ,
+			"I think so" ,
+			"that s okay" ,
+			exactly ,
+			yeah ,
+			confirmed ,
+			"yeah of course" ,
+			"yes of course" ,
+			"yes thank you"
+	}
+
+	"command again" :
+		inputs in en {
+			"do it again" ,
+			"repeat the last move" ,
+			repeat ,
+			again ,
+			"repeat that" ,
+			"do that again"
+	}
+
+	"command stop" :
+		inputs in en {
+			stop ,
+			halt
+	}
+
+	"command gotowaypoint" :
+		inputs in en {
+			"go to the " ( office ) [ waypointname ] " waypoint" ,
+			"go to the " ( kitchen ) [ waypointname ] ,
+			"go to the waypoint called " ( office ) [ waypointname ] ,
+			"go to waypoint " ( office ) [ waypointname ] ,
+			"go to waypoint " ( "Bob\'s" ) [ waypointname ]
+		}
+		parameters :
+			waypointname : entity text ;
+
+	"command slower" :
+		inputs in en {
+			"slow down" ,
+			"slow up" ,
+			slower ,
+			"go slower"
+	}
+
+	"command forward" :
+		inputs in en {
+			( "199 miles" ) [ "unit-length" ] " forward" ,
+			"straight ahead " ( "3 feet" ) [ "unit-length" ] ,
+			"how about going forward" ,
+			( "3 feet" ) [ "unit-length" ] " ahead" ,
+			"go forward" ,
+			"ahead " ( "3 feet" ) [ "unit-length" ] ,
+			"keep going " ( "3 feet" ) [ "unit-length" ] ,
+			"forward " ( "2 meters" ) [ "unit-length" ] ,
+			proceed ,
+			( "4 inches" ) [ "unit-length" ] " forward"
+		}
+		parameters :
+			"unit-length" : entity text ;
+
+	"smalltalk.agent.chatbot" :
+		inputs in en {
+			"you\'re a robot" ,
+			"you are a bot" ,
+			"are you a program" ,
+			"are you a chatbot" ,
+			"are you a robot" ,
+			"are you just a bot" ,
+			"are you a bot" ,
+			"you are chatbot"
+	}
+
+	"command listwaypoints" :
+		inputs in en {
+			"tell me the waypoints" ,
+			"give me a list of the waypoints" ,
+			"list waypoints"
+	}
+
+	"smalltalk.confirmation.cancel" :
+		inputs in en {
+			"cancel that one" ,
+			annul ,
+			"sorry cancel" ,
+			"cancel everything" ,
+			"cancel that cancel that" ,
+			"i would like to cancel" ,
+			cancel ,
+			"cancel all this" ,
+			"no cancel this" ,
+			"just forget" ,
+			"nevermind forget about it" ,
+			"cancel it" ,
+			"no stop" ,
+			"stop it" ,
+			dismissed ,
+			forget ,
+			"nothing just forget it" ,
+			"forget about it" ,
+			"can you cancel that" ,
+			"cancel it" ,
+			"now cancel" ,
+			cancelled ,
+			disregard ,
+			"so cancel" ,
+			abort ,
+			stop ,
+			"just forget about it" ,
+			dismiss ,
+			"cancel all" ,
+			"i want to cancel it" ,
+			"forget this" ,
+			"but can you cancel it" ,
+			"nothing cancel" ,
+			"cancel now" ,
+			"don\'t do that" ,
+			"i said cancel it" ,
+			"forget about that" ,
+			discard ,
+			"just stop it" ,
+			"cancel request" ,
+			"no just cancel" ,
+			"i want to cancel" ,
+			"no cancel everything" ,
+			"no just cancel it" ,
+			"cancel it cancel it" ,
+			"no cancel cancel" ,
+			"do nothing" ,
+			"I said cancel cancel" ,
+			"just cancel it" ,
+			"cancel my request" ,
+			"skip it" ,
+			"just forget it" ,
+			"skip skip skip" ,
+			"cancel this request" ,
+			skip ,
+			"forget that" ,
+			"i said forget it" ,
+			"cancel the whole thing" ,
+			"disregard that" ,
+			"forget it nevermind" ,
+			"cancel all that" ,
+			"i said cancel" ,
+			"can you cancel it"
+	}
+
+	"smalltalk.agent.ready" :
+		inputs in en {
+			"are you ready" ,
+			"were you ready" ,
+			"are you ready today" ,
+			"are you ready now" ,
+			"are you ready right now" ,
+			"have you been ready" ,
+			"are you ready tonight"
+	}
+
+	"smalltalk.agent.right" :
+		inputs in en {
+			"you are right" ,
+			"you\'re not wrong" ,
+			"what you say is true" ,
+			"you are so right" ,
+			"that\'s so true" ,
+			"it\'s right" ,
+			"you\'re telling the truth" ,
+			^true ,
+			"you\'re right about that" ,
+			"that\'s correct" ,
+			"that is true" ,
+			"it\'s the truth" ,
+			"that is right" ,
+			"that\'s true" ,
+			"it is true" ,
+			"that is very true" ,
+			"you are correct" ,
+			"you\'re absolutely right" ,
+			"you\'re definitely right" ,
+			"that is correct" ,
+			"I know that\'s right" ,
+			"it\'s true"
+	}
+
+	"command help" :
+		inputs in en {
+			help
+	}
+
+	"smalltalk.greetings.hello" :
+		inputs in en {
+			"a good day" ,
+			"long time no see" ,
+			"hello there" ,
+			"hi there" ,
+			"hi there" ,
+			^hi ,
+			greetings ,
+			"just going to say hi" ,
+			"lovely day isn\'t it" ,
+			"hello again" ,
+			"hello hi" ,
+			"hey there" ,
+			hey ,
+			heya ,
+			afternoon ,
+			"I greet you" ,
+			howdy ,
+			hello
+	}
+
+	"command setwaypoint" :
+		inputs in en {
+			"set up a waypoint " ( office ) [ waypointname ] ,
+			"set a waypoint to be called " ( kitchen ) [ waypointname ] ,
+			"set a waypoint " ( office ) [ waypointname ] ,
+			"set waypoint " ( foo ) [ waypointname ]
+		}
+		parameters :
+			waypointname : entity text ;
+
+	"command find" :
+		inputs in en {
+			"find a " ( bottle ) [ findable ] ,
+			"I don\'t see a " ( mutt ) [ findable ] " here" ,
+			"look for a " ( bottle ) [ findable ] ,
+			"do you see a " ( cat ) [ findable ] "?" ,
+			"look around for a " ( bottle ) [ findable ]
+		}
+		parameters :
+			findable : entity findable ;
+
+	"smalltalk.agent.there" :
+		inputs in en {
+			"are you here" ,
+			"you are there" ,
+			"are you still here" ,
+			"are you near me" ,
+			"are you there" ,
+			"are you still there" ,
+			"you are here" ,
+			"you still there"
+	}
+
+	"smalltalk.greetings.how_are_you" :
+		inputs in en {
+			"are you having a good day" ,
+			"what about your day" ,
+			"how is your morning going" ,
+			"is everything okay" ,
+			"how are you" ,
+			"are you okay" ,
+			"how\'s your day" ,
+			"how are you feeling" ,
+			"how your day is going" ,
+			"hope you re having a pleasant evening" ,
+			"hope your day is going well" ,
+			"how do you feel" ,
+			"how are you doing" ,
+			"how is it going" ,
+			"how is your day" ,
+			"how\'s life" ,
+			"what was your day like" ,
+			"how has your day been going" ,
+			"how are you today" ,
+			"how is your day going" ,
+			"how are you getting on" ,
+			"how do you do" ,
+			"how was your day" ,
+			"how has your day been" ,
+			"how is your day going on" ,
+			"how is your evening" ,
+			"I\'m fine and you" ,
+			"how about you" ,
+			"how is it" ,
+			"how is your day going" ,
+			"how\'s your day going" ,
+			"are you alright" ,
+			"is everything all right" ,
+			"how is your morning so far" ,
+			"how are you going" ,
+			"how have you been" ,
+			"how are the things going" ,
+			"how is your life" ,
+			"how are you doing this morning" ,
+			"how is your day being"
+	}
+
+	"smalltalk.greetings.whatsup" :
+		inputs in en {
+			"then what\'s up" ,
+			"what is happening" ,
+			"what is on your mind" ,
+			"what is going on" ,
+			"what\'s cracking" ,
+			"good what\'s up" ,
+			"I said what\'s up" ,
+			"what is up" ,
+			wassup ,
+			"what\'s happened" ,
+			"what\'s up today" ,
+			"what\'s up" ,
+			"what\'s shaking" ,
+			"what\'s cooking" ,
+			"hey what\'s up" ,
+			whazzup
+	}
+
+	"command rotate" :
+		inputs in en {
+			( "90" ) [ angle ] " " ( degrees ) [ angleunit ] " " ( left ) [ leftright ] " rotation" ,
+			"rotate to the " ( left ) [ leftright ] ,
+			"rotate " ( left ) [ leftright ] " around " ( "40" ) [ angle ] " " ( degrees ) [ angleunit ] ,
+			"rotate " ( right ) [ leftright ] " " ( "300" ) [ angle ] " " ( degrees ) [ angleunit ] ,
+			"rotate " ( left ) [ leftright ]
+		}
+		parameters :
+			leftright : entity leftright , required , prompts in en [ "Left or right?" ] ;
+			angle : entity angle ;
+			angleunit : entity angleunit ;
+
+	"command removewaypoint" :
+		inputs in en {
+			"remove the waypoint " ( office ) [ waypointname ] ,
+			"remove waypoint " ( kitchen ) [ waypointname ] ,
+			"kill the waypoint " ( office ) [ waypointname ] ,
+			"erase the waypoint " ( garage ) [ waypointname ]
+		}
+		parameters :
+			waypointname : entity text , required ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Composite entity angleunit :
+		inputs in en {
+			composite : radians
+			composite : degrees
+	}
+	Composite entity angle :
+		inputs in en {
+			composite : "@sys.number-integer"
+	}
+	Simple entity findable :
+		inputs in en {
+			"dining table" synonyms "dining table"
+			"tv monitor" synonyms tvmonitor , "tv screen"
+			car synonyms car , automobile
+			bottle synonyms bottle
+			dog synonyms dog , mutt
+			horse synonyms horse
+			bus synonyms bus
+			chair synonyms chair
+			motorbike synonyms motorbike , motorcycle
+			",sofa" synonyms ",sofa"
+			person synonyms person
+			sheep synonyms sheep
+			cat synonyms cat
+			"potted plant" synonyms "potted plant"
+			cow synonyms cow
+			aeroplane synonyms aeroplane , airplane
+			bird synonyms bird
+			train synonyms train
+			boat synonyms boat
+	}
+	Simple entity turnmeasure :
+		inputs in en {
+			around synonyms around , round
+			right synonyms right
+			left synonyms left
+	}
+	Simple entity leftright :
+		inputs in en {
+			right synonyms right
+			left synonyms left
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://<example>" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "smalltalk.confirmation.noTxtResp1" :
+		inputs in en {
+			"Understood. " ,
+			"Okay. " ,
+			"I see. " ,
+			"I understand. " ,
+			"Okay then. "
+	}
+	text response "command backwardTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response "smalltalk.confirmation.yesTxtResp1" :
+		inputs in en {
+			"Great! " ,
+			"All right! " ,
+			"Good! "
+	}
+	text response "smalltalk.agent.chatbotTxtResp1" :
+		inputs in en {
+			"That\'s me. I chat, therefore I am. " ,
+			"Indeed I am. I\'ll be here whenever you need me. "
+	}
+	text response "smalltalk.confirmation.cancelTxtResp1" :
+		inputs in en {
+			"That\'s forgotten. What next? " ,
+			"Okay, cancelled. What next? " ,
+			"Cancelled! What would you like to do next? "
+	}
+	text response "smalltalk.agent.readyTxtResp1" :
+		inputs in en {
+			"Always! " ,
+			"Sure! What can I do for you? "
+	}
+	text response "smalltalk.agent.rightTxtResp1" :
+		inputs in en {
+			"That\'s my job. " ,
+			"Of course I am. "
+	}
+	text response "smalltalk.greetings.helloTxtResp1" :
+		inputs in en {
+			"Hi there, friend! " ,
+			"Hi! " ,
+			"Hey! " ,
+			"Hey there! " ,
+			"Good day! " ,
+			"Hello! " ,
+			"Greetings! "
+	}
+	text response "smalltalk.agent.thereTxtResp1" :
+		inputs in en {
+			"Of course. I\'m always here. " ,
+			"Right where you left me. "
+	}
+	text response "smalltalk.greetings.how_are_youTxtResp1" :
+		inputs in en {
+			"Doing great, thanks. " ,
+			"I\'m doing very well. Thanks! " ,
+			"Feeling wonderful! " ,
+			"Wonderful! Thanks for asking. "
+	}
+	text response "smalltalk.greetings.whatsupTxtResp1" :
+		inputs in en {
+			"Not a whole lot. What\'s going on with you? " ,
+			"Not much. What\'s new with you? " ,
+			"You know, just here, waiting to help someone. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"“I didn’t understand that, I’m just a bot with a small vocabulary.”. "
+	}
+
+flows :
+	- user1 : user "smalltalk.confirmation.no" => bot1 : chatbot "smalltalk.confirmation.noTxtResp1" ;
+	- user2 : user "command backward" => bot2 : chatbot "command backwardTxtResp1" ;
+	- user3 : user "command turn" => bot3 : chatbot "command backwardTxtResp1" ;
+	- user4 : user "Default Welcome Intent" => bot4 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user5 : user "command faster" => bot5 : chatbot "command backwardTxtResp1" ;
+	- user6 : user "smalltalk.confirmation.yes" => bot6 : chatbot "smalltalk.confirmation.yesTxtResp1" ;
+	- user7 : user "command again" => bot7 : chatbot "command backwardTxtResp1" ;
+	- user8 : user "command stop" => bot8 : chatbot "command backwardTxtResp1" ;
+	- user9 : user "command gotowaypoint" => bot9 : chatbot "command backwardTxtResp1" ;
+	- user10 : user "command slower" => bot10 : chatbot "command backwardTxtResp1" ;
+	- user11 : user "command forward" => bot11 : chatbot "command backwardTxtResp1" ;
+	- user12 : user "smalltalk.agent.chatbot" => bot12 : chatbot "smalltalk.agent.chatbotTxtResp1" ;
+	- user13 : user "command listwaypoints" => bot13 : chatbot "command backwardTxtResp1" ;
+	- user14 : user "smalltalk.confirmation.cancel" => bot14 : chatbot "smalltalk.confirmation.cancelTxtResp1" ;
+	- user15 : user "smalltalk.agent.ready" => bot15 : chatbot "smalltalk.agent.readyTxtResp1" ;
+	- user16 : user "smalltalk.agent.right" => bot16 : chatbot "smalltalk.agent.rightTxtResp1" ;
+	- user17 : user "command help" => bot17 : chatbot "command backwardTxtResp1" ;
+	- user18 : user "smalltalk.greetings.hello" => bot18 : chatbot "smalltalk.greetings.helloTxtResp1" ;
+	- user19 : user "command setwaypoint" => bot19 : chatbot "command backwardTxtResp1" ;
+	- user20 : user "command find" => bot20 : chatbot "command backwardTxtResp1" ;
+	- user21 : user "smalltalk.agent.there" => bot21 : chatbot "smalltalk.agent.thereTxtResp1" ;
+	- user22 : user "smalltalk.greetings.how_are_you" => bot22 : chatbot "smalltalk.greetings.how_are_youTxtResp1" ;
+	- user23 : user "smalltalk.greetings.whatsup" => bot23 : chatbot "smalltalk.greetings.whatsupTxtResp1" ;
+	- user24 : user "command rotate" => bot24 : chatbot "command backwardTxtResp1" ;
+	- user25 : user "command removewaypoint" => bot25 : chatbot "command backwardTxtResp1" ;
+	- user26 : user "Default Fallback Intent" => bot26 : chatbot "Default Fallback IntentTxtResp1" ;
+

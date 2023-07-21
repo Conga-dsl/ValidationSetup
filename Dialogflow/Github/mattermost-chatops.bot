@@ -1,0 +1,218 @@
+Chatbot "mattermost-chatops" language : en
+
+intents :
+
+	"search instance intent" :
+		inputs in en {
+			"search " ( "abc-xyz" ) [ any ] ,
+			"search " ( abc ) [ any ] ,
+			"instance name with " ( "m3a.small" ) [ any ] ,
+			"instance name with " ( pqr ) [ any ] ,
+			"related instance " ( "m2.nano" ) [ any ] ,
+			"related instance " ( xyz ) [ any ] ,
+			"search instance " ( "t1.medium" ) [ any ] ,
+			"search instance " ( abc ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"start_instance intent" :
+		inputs in en {
+			"start " ( "xyz-abc" ) [ any ] ,
+			"start " ( abc ) [ any ] ,
+			"start instance " ( "aws.abc" ) [ any ] ,
+			"please start instance " ( oplk ) [ any ] ,
+			"start instance " ( k1 ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"last build intent" :
+		inputs in en {
+			"last build on " ( "abc-1" ) [ any ] ,
+			"tell me info of last build on " ( "abc-xyz" ) [ any ] ,
+			"give me information of last build on " ( abc ) [ any ] ,
+			"tell me about last deployment on " ( xyz ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"commit intent" :
+		inputs in en {
+			"is my commit " ( "8bae17ddb53176740d57c09c6fe26cf382aa1668" ) [ commit ] " on " ( "abc-xyz" ) [ any ] " deployed ?" ,
+			"is my commit " ( "8bae17ddb53176740d57c09c6fe26cf382aa1668" ) [ commit ] " on " ( "abc-123" ) [ any ] " deployed?" ,
+			"is my commit " ( "8bae17ddb53176740d57c09c6fe26cf382aa1668" ) [ commit ] " on " ( "abc-1" ) [ any ] " deployed?" ,
+			"commit " ( "8bae17ddb53176740d57c09c6fe26cf382aa1668" ) [ commit ] " on " ( "abc-1" ) [ any ] ,
+			"commit " ( "8bae17ddb53176740d57c09c6fe26cf382aa1668" ) [ commit ] " on " ( "abc-123" ) [ any ] ,
+			"commit " ( "8bae17ddb53176740d57c09c6fe26cf382aa1668" ) [ commit ] " on " ( "abc-xyz" ) [ any ]
+		}
+		parameters :
+			commit : entity commit ;
+			any : entity text ;
+
+	"list instance intent" :
+		inputs in en {
+			"list instances" ,
+			"all instances" ,
+			"list of all instances" ,
+			"list of instances" ,
+			"tell me all instance names" ,
+			"give all instances" ,
+			"give me a list of instances" ,
+			"list instance"
+	}
+
+	"last failed build intent" :
+		inputs in en {
+			"last failed build on " ( "abc-xyz" ) [ any ] ,
+			"give me info of last failed build on " ( "xyz-1" ) [ any ] ,
+			"tell me about last failed build on " ( abc ) [ any ] ,
+			"give me information of last failed deployment on " ( xyz ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			help ,
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	status_intent :
+		inputs in en {
+			"status of " ( xyz ) [ any ] ,
+			"status of " ( "abc-xyz" ) [ any ] ,
+			"tell me status of " ( "z1.small" ) [ any ] ,
+			"info of " ( abc ) [ any ] ,
+			"tell me stats of " ( abc ) [ any ] " instance" ,
+			"give me status of " ( "t2.large" ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"last successful build intent" :
+		inputs in en {
+			"last successful build on " ( "xyz-abc" ) [ any ] ,
+			"give me information of last successful deployment on " ( abc ) [ any ] ,
+			"tell me about last successful deployment on " ( "xyz-1" ) [ any ] ,
+			"give me info of last successful build on " ( xyz ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"reboot_instance intent" :
+		inputs in en {
+			"reboot " ( xyz ) [ any ] ,
+			"reboot " ( "abc-xyz" ) [ any ] ,
+			"reboot instance " ( "xyz.abc" ) [ any ] ,
+			"please reboot instance " ( "abc.xyz" ) [ any ] ,
+			"reboot instance " ( abc ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	"stop_instance intent" :
+		inputs in en {
+			"stop " ( xyz ) [ any ] ,
+			"stop " ( "abc-xyz" ) [ any ] ,
+			"stop instance " ( "abc.xyz" ) [ any ] ,
+			"please stop instance " ( "aws.abc" ) [ any ] ,
+			"stop instance " ( xyz ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	scale_intent :
+		inputs in en {
+			"scale " ( abc ) [ any ] " to " ( "t1.nano" ) [ any1 ] ,
+			"scale intance " ( abc ) [ any ] " to " ( "z15.medium" ) [ any1 ] ,
+			"scale " ( abc ) [ any ] " to " ( "a1.xlarge" ) [ any1 ] ,
+			"scale instance " ( abc ) [ any ] " to " ( "z1.small" ) [ any1 ] ,
+			"transfer instance " ( abc ) [ any ] " to " ( "b2.small" ) [ any1 ]
+		}
+		parameters :
+			any ,
+			any1 : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity car :
+		inputs in en {
+			honda synonyms honda
+			tata synonyms tata
+			ford synonyms ford
+			hundai synonyms hundai
+			jaguar synonyms jaguar
+	}
+	Regex entity commit :
+		inputs in en {
+			pattern : "\\b[0-9a-f]{5,40}\\b"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "search instance intentTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "search instance intent" => bot1 : chatbot "search instance intentTxtResp1" ;
+	- user2 : user "start_instance intent" => bot2 : chatbot "search instance intentTxtResp1" ;
+	- user3 : user "last build intent" => bot3 : chatbot "search instance intentTxtResp1" ;
+	- user4 : user "commit intent" => bot4 : chatbot "search instance intentTxtResp1" ;
+	- user5 : user "list instance intent" => bot5 : chatbot "search instance intentTxtResp1" ;
+	- user6 : user "last failed build intent" => bot6 : chatbot "search instance intentTxtResp1" ;
+	- user7 : user "Default Welcome Intent" => bot7 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user8 : user status_intent => bot8 : chatbot "search instance intentTxtResp1" ;
+	- user9 : user "last successful build intent" => bot9 : chatbot "search instance intentTxtResp1" ;
+	- user10 : user "reboot_instance intent" => bot10 : chatbot "search instance intentTxtResp1" ;
+	- user11 : user "stop_instance intent" => bot11 : chatbot "search instance intentTxtResp1" ;
+	- user12 : user scale_intent => bot12 : chatbot "search instance intentTxtResp1" ;
+	- user13 : user "Default Fallback Intent" => bot13 : chatbot "Default Fallback IntentTxtResp1" ;
+

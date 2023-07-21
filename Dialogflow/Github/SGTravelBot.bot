@@ -1,0 +1,1525 @@
+Chatbot SGTravelBot language : en
+
+intents :
+
+	GetAttrInfoIntent :
+		inputs in en {
+			"what is the " ( operation ) [ attrentity ] " time of " ( "gardens bay" ) [ attrname ] " on " ( "2 Sep" ) [ ^date ] ,
+			"what is the " ( operation ) [ attrentity ] " time of " ( "gardens bay" ) [ attrname ] " " ( tomorrow ) [ ^date ] ,
+			( operation ) [ attrentity ] " time" ,
+			"what is the " ( introduction ) [ attrentity ] " of " ( "gardens bay" ) [ attrname ] ,
+			"what is the " ( operation ) [ attrentity ] " time of " ( "gardens bay" ) [ attrname ] ,
+			"what is the " ( weather ) [ attrentity ] " " ( tomorrow ) [ ^date ] ,
+			( direction ) [ attrentity ] ,
+			( duration ) [ attrentity ] ,
+			( address ) [ attrentity ] ,
+			( introduction ) [ attrentity ] ,
+			( info ) [ attrentity ] " of " ( "gardens by the bay" ) [ attrname ] ,
+			( "something about" ) [ attrentity ] " " ( "gardens by the bay" ) [ attrname ] ,
+			"what is the " ( introduction ) [ attrentity ] " of " ( "Gardens by the bay" ) [ attrname ] "?" ,
+			"tell me " ( about ) [ attrentity ] " " ( "gardens by the bay" ) [ attrname ] ,
+			"what is the " ( introduction ) [ attrentity ] " of " ( "Gardens by the bay" ) [ attrname ] ,
+			"can I have the " ( introduction ) [ attrentity ] " of " ( "Gardens by the bay" ) [ attrname ] ,
+			"WIll it be " ( sunny ) [ attrentity ] " " ( tomorrow ) [ ^date ] ,
+			"is it expected to " ( rain ) [ attrentity ] " " ( tomorrow ) [ ^date ] ,
+			"what is the " ( direction ) [ attrentity ] " to " ( "singapore zoo" ) [ destination ] ,
+			"Where is " ( "gardens by the bay" ) [ attrname ] " " ( located ) [ attrentity ] ,
+			"what is the " ( operation ) [ attrentity ] " time of " ( "Gardens by the Bay" ) [ attrname ] " " ( tomorrow ) [ ^date ] ,
+			"what is the " ( direction ) [ attrentity ] " from " ( "Gardens by the bay" ) [ origin ] " to " ( "Universal Studios" ) [ destination ] ,
+			"When will " ( "Gardens by the Bay" ) [ attrname ] " " ( open ) [ attrentity ] " " ( tomorrow ) [ ^date ] "?" ,
+			"what is the " ( operation ) [ attrentity ] " time of " ( "Gardens by the Bay" ) [ attrname ] "?" ,
+			"what is the " ( weather ) [ attrentity ] " " ( tomorrow ) [ ^date ] "?" ,
+			"what is the " ( direction ) [ attrentity ] " to " ( "the Intan" ) [ destination ] "?" ,
+			( "Travel Duration" ) [ attrentity ] ,
+			"what is the " ( direction ) [ attrentity ] " from " ( "Gardens by the bay" ) [ origin ] " to " ( "the Intan" ) [ destination ] "?" ,
+			"What is the " ( weather ) [ attrentity ] " forecast for " ( tomorrow ) [ ^date ] ,
+			"how can I " ( "get to" ) [ attrentity ] " " ( "gardens by the bay" ) [ destination ] ,
+			"What is the " ( address ) [ attrentity ] " of " ( "Gardens by the Bay" ) [ attrname ] "?" ,
+			"What is the " ( opening ) [ attrentity ] " time of " ( "Singapore Zoo" ) [ attrname ] " " ( tomorrow ) [ ^date ] "?" ,
+			" When will " ( "Gardens by the bay" ) [ attrname ] " " ( open ) [ attrentity ] " " ( tomorrow ) [ ^date ] ,
+			"tell me the " ( opening ) [ attrentity ] " time of " ( "the Intan" ) [ attrname ] " " ( tomorrow ) [ ^date ] ,
+			"tell me the " ( operation ) [ attrentity ] " time of " ( "the Intan" ) [ attrname ] " " ( tomorrow ) [ ^date ] ,
+			"What is the " ( opening ) [ attrentity ] " time of " ( "Gardens by the bay" ) [ attrname ] " " ( tomorrow ) [ ^date ] "?" ,
+			"What is the recommended travel " ( duration ) [ attrentity ] " of " ( "Gardens by the bay" ) [ attrname ] "?" ,
+			"What is the " ( operation ) [ attrentity ] " hours of " ( "Gardens by the bay" ) [ attrname ] " " ( tomorrow ) [ ^date ] "?"
+		}
+		parameters :
+			attrentity : entity InfoType ;
+			^date : entity date ;
+			attrname ,
+			origin ,
+			destination : entity text ;
+
+	UserInfo :
+
+	CategoryIntent :
+		inputs in en {
+			"I would like to go to " ( museums ) [ category ] " and " ( "nature parks" ) [ category ] ,
+			( museums ) [ category ] " and " ( "water parks" ) [ category ] ,
+			"I like " ( museums ) [ category ] " and " ( "nature parks" ) [ category ] ,
+			"I like to visit " ( museums ) [ category ]
+		}
+		parameters :
+			category : entity category ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"hi there" ,
+			"a good day"
+	}
+
+	RecommendationIntent :
+		inputs in en {
+			"Recommend me a " ( church ) [ category ] " in " ( Singapore ) [ location ] ,
+			" " ( nightlife ) [ keywords ] " places in " ( Singapore ) [ location ] ,
+			"places for " ( "night life" ) [ keywords ] " in " ( Singapore ) [ location ] ,
+			"Show me some " ( beaches ) [ keywords ] " in " ( Singapore ) [ location ] ,
+			"Tell me some " ( beaches ) [ keywords ] " to " ( Singapore ) [ location ] ,
+			"Are there any nice " ( beaches ) [ keywords ] " to visit in " ( Singapore ) [ location ] ,
+			"good " ( beaches ) [ keywords ] " to visit in " ( Singapore ) [ location ] ,
+			( beaches ) [ keywords ] " to relax in " ( Singapore ) [ location ] ,
+			"Recommend me some " ( "art galleries" ) [ keywords ] " in " ( Singapore ) [ location ] ,
+			"Recommend me " ( "art galleries" ) [ keywords ] " in " ( Singapore ) [ location ] ,
+			"Recommend me " ( beaches ) [ keywords ] " " ( "near me" ) [ location ] ,
+			"Recommend me " ( museums ) [ category ] " to visit in " ( Singapore ) [ location ] ,
+			"Recommend me " ( nature ) [ category ] " parks in " ( Singapore ) [ location ] ,
+			( "art galleries" ) [ keywords ] " " ( "near me" ) [ location ] ,
+			"Suggest " ( "nature parks" ) [ category ] " near " ( "Bukit Timah" ) [ location ] " for " ( families ) [ travellerType ] ,
+			"Suggest " ( "nature parks" ) [ category ] " near " ( "Marina Bay" ) [ location ] ,
+			"Recommend me " ( museums ) [ category ] " " ( "near me" ) [ location ] ,
+			( Shopping ) [ category ] " steets and " ( museums ) [ category ] " in " ( Singapore ) [ location ] ,
+			"Places to visit in " ( Singapore ) [ location ] ,
+			"Places to visit " ( "near me" ) [ location ] ,
+			( shopping ) [ category ] " streets of " ( Singapore ) [ location ] ,
+			"Places for " ( shopping ) [ category ] " in " ( Singapore ) [ location ] ,
+			( Museums ) [ category ] " in " ( Singapore ) [ location ] ,
+			"Things to do for " ( families ) [ travellerType ] " in " ( Singapore ) [ location ] ,
+			( "Things to do" ) [ keylabel ] " in " ( Singapore ) [ location ]
+		}
+		parameters :
+			travellerType : entity travellerType , prompts in en [ "Are you travelling as a family, couple, friends or by yourself?" ] ;
+			category : entity category , prompts in en [ "What kind of places do you like to visit?\nMuseums, Shopping streets, popular sights and landmarks, Nature parks or Amusement parks?" ] ;
+			location : entity location ;
+			keywords : entity keywords ;
+			keylabel : entity keylabel ;
+
+	Search :
+		inputs in en {
+			"Search " ( "Gardens by the bay" ) [ attrname ]
+		}
+		parameters :
+			attrname : entity text ;
+
+	TravellerTypeIntent :
+		inputs in en {
+			"with my " ( girlfriend ) [ travellerType ] ,
+			"my " ( girlfriend ) [ travellerType ] ,
+			"my " ( friends ) [ travellerType ] ,
+			"I am with my " ( friends ) [ travellerType ] ,
+			"I am travelling as a " ( couple ) [ travellerType ] ,
+			"I am with " ( friends ) [ travellerType ] ,
+			"I am travelling with " ( family ) [ travellerType ]
+		}
+		parameters :
+			travellerType : entity travellerType ;
+
+	GetEventIntent :
+		inputs in en {
+			( what ) [ interrogative ] " is " ( "art in society" ) [ "events-name" ] ,
+			( When ) [ interrogative ] " is " ( "Vesak Day" ) [ "events-name" ] ,
+			"Is there anything interesting " ( "in July" ) [ "date-period" ] ,
+			"Are there any events " ( "in July" ) [ "date-period" ] ,
+			"events " ( "in July" ) [ "date-period" ]
+		}
+		parameters :
+			"date-period" ,
+			"events-name" ,
+			interrogative : entity text ;
+
+	EventDurationIntent :
+		inputs in en {
+			( July ) [ "date-period" ]
+		}
+		parameters :
+			"date-period" : entity text ;
+
+	GetPromotionsIntent :
+		inputs in en {
+			promotion ,
+			promotions ,
+			"promotion for " ( "Gardens by the bay" ) [ attrname ] ,
+			( "The Intan" ) [ attrname ] " promotion" ,
+			"best deals for " ( "Resort World Sentosa" ) [ attrname ] ,
+			( "Botanical Gardens" ) [ attrname ] " cheap ticket" ,
+			( Sentosa ) [ attrname ] " cheap tickets" ,
+			"any cheap tickets for " ( "Universal Studio Singapore" ) [ attrname ] "?" ,
+			"any promotion bundles for " ( "Gardens by the Bay" ) [ attrname ] "?" ,
+			"any promotion bundles?" ,
+			"any cheap bundles?" ,
+			"any promo bundles?" ,
+			"any tickets on sale?" ,
+			"Any cheap tickets?" ,
+			"Any ongoing discounts?" ,
+			"What are the promotions today?"
+		}
+		parameters :
+			^date : entity date ;
+			attrname : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+	RecomTypeIntent :
+		inputs in en {
+			"I prefer " ( events ) [ TypeThings ] ,
+			( attractions ) [ TypeThings ] ,
+			( events ) [ TypeThings ]
+		}
+		parameters :
+			TypeThings : entity TypeThings ;
+
+entities :
+	Simple entity TypeThings :
+		inputs in en {
+			attractions synonyms attraction , attractions , "famous places" , "places of interesting"
+			events synonyms event , events
+	}
+	Composite entity keywords :
+		inputs in en {
+			composite : "8pm"
+			composite : "9pm"
+			composite : a lot of fun
+			composite : a small swimming pool
+			composite : abdul rahman
+			composite : above ground
+			composite : acting
+			composite : active place
+			composite : actors
+			composite : actress
+			composite : admission fee
+			composite : adventure
+			composite : adventure cove water park
+			composite : afraid of heights
+			composite : air conditioned
+			composite : air conditioning
+			composite : alexandra arch
+			composite : all ages
+			composite : allied forces
+			composite : amazing animals
+			composite : amazing architecture
+			composite : amazing shopping
+			composite : amazing waterfall
+			composite : amazon flooded forest
+			composite : amoy street
+			composite : ample toilets
+			composite : an interesting place ^to visit
+			composite : an oasis of tranquility
+			composite : ancestors
+			composite : ancient egypt
+			composite : anglican
+			composite : animal shows
+			composite : animals seem
+			composite : anthony bourdain
+			composite : app
+			composite : aquatic
+			composite : aquatic animals
+			composite : ^ar
+			composite : arab street
+			composite : arcade games
+			composite : archaeological dig
+			composite : architectural buildings
+			composite : architectural style
+			composite : architecture
+			composite : arenas "&" stadiums
+			composite : art education
+			composite : art gallery
+			composite : art museums
+			composite : art pieces
+			composite : art science
+			composite : art science museum
+			composite : asian art
+			composite : asian food
+			composite : atlas bar
+			composite : avatar
+			composite : aviaries
+			composite : aw boon
+			composite : awesome views
+			composite : backgrounds
+			composite : bak kut teh
+			composite : bakso
+			composite : baobab
+			composite : bargain hunting
+			composite : bargains
+			composite : baroque architecture
+			composite : basement level
+			composite : basement levels
+			composite : battle box
+			composite : battlestar galactica
+			composite : bay
+			composite : bay restaurant
+			composite : beach station
+			composite : beach volleyball
+			composite : beaches
+			composite : beautiful at night
+			composite : beautiful building
+			composite : beautiful church
+			composite : beautiful garden
+			composite : beautiful mall
+			composite : beautiful mosque
+			composite : beautiful orchids
+			composite : beautiful park
+			composite : beautiful plants
+			composite : beautiful statues
+			composite : beautiful walk
+			composite : beauty
+			composite : bee hoon
+			composite : beef chicken
+			composite : between flights
+			composite : big area
+			composite : big brands
+			composite : big mall
+			composite : big shopping
+			composite : bike
+			composite : bike ride
+			composite : bikini bar
+			composite : billabong
+			composite : bird park
+			composite : bird watching
+			composite : biryani
+			composite : board walk
+			composite : boat quay
+			composite : boat ride
+			composite : boating
+			composite : boats
+			composite : bodhi tree
+			composite : bodies of water
+			composite : body boarding
+			composite : bollywood veggies
+			composite : bonsai garden
+			composite : boon
+			composite : boon tat street
+			composite : botanic
+			composite : botanical gardens
+			composite : both sides
+			composite : boutique shops
+			composite : brad pitt
+			composite : brand shops
+			composite : branded goods
+			composite : bread talk
+			composite : breathtaking views
+			composite : bridge
+			composite : bridges
+			composite : bring plenty of water
+			composite : bring water
+			composite : british army
+			composite : bronze
+			composite : bucket list
+			composite : buddha tooth relic temple
+			composite : buddhist
+			composite : buddhist culture
+			composite : budget shopping
+			composite : bugis
+			composite : bugis junction
+			composite : bugis station
+			composite : bukit chandu
+			composite : bukit timah
+			composite : bum
+			composite : buried here
+			composite : business district
+			composite : busy city
+			composite : butterfly
+			composite : butterfly area
+			composite : buy tickets
+			composite : cable car
+			composite : cable car station
+			composite : cactus
+			composite : cage
+			composite : calendar
+			composite : camera
+			composite : canopy flyer
+			composite : canopy park
+			composite : capsule
+			composite : cargo ships
+			composite : carlton hotel
+			composite : carriage
+			composite : carrot cake
+			composite : cars
+			composite : catholic
+			composite : cbd
+			composite : celebrities
+			composite : cemeteries
+			composite : cemetery
+			composite : centrepoint shopping mall
+			composite : century
+			composite : chair lift
+			composite : changi airport
+			composite : changi museum
+			composite : cheap eats
+			composite : cheap food
+			composite : cheap price
+			composite : cheap souvenirs
+			composite : cheapest package
+			composite : children and adults
+			composite : "children\'s" garden
+			composite : "children\'s" museums
+			composite : chilli crab
+			composite : china towns
+			composite : chinatown
+			composite : chinatown area
+			composite : chinatown district
+			composite : chinatown mrt station
+			composite : chinese
+			composite : chinese food
+			composite : chinese mythology
+			composite : chinese new year
+			composite : chinese temple
+			composite : chinese zodiac
+			composite : choose food
+			composite : christmas island
+			composite : christmas lights
+			composite : churches "&" cathedrals
+			composite : cinema
+			composite : circle line
+			composite : city area
+			composite : city hall
+			composite : city hall mrt station
+			composite : city life
+			composite : city lights
+			composite : city view
+			composite : clarke quay
+			composite : clean water
+			composite : click pictures
+			composite : climate
+			composite : climate change
+			composite : close ^to nature
+			composite : closer look
+			composite : clothing
+			composite : cloud forest
+			composite : coach outlet
+			composite : coast guard
+			composite : coastal park
+			composite : coastal trail
+			composite : coin
+			composite : cold storage
+			composite : colonial history
+			composite : columbarium
+			composite : comes alive at night
+			composite : command centre
+			composite : commentary
+			composite : concept
+			composite : concert
+			composite : concerts "&" shows
+			composite : concrete jungle
+			composite : conservation
+			composite : conservation area
+			composite : container ships
+			composite : contemplation
+			composite : continental asia
+			composite : converted convent
+			composite : cool house
+			composite : cool shops
+			composite : couple of hours
+			composite : court
+			composite : crossing
+			composite : crown jewel
+			composite : cruise
+			composite : crystal jade
+			composite : cultural experience
+			composite : culture
+			composite : cycling paths
+			composite : cycling track
+			composite : cyclists
+			composite : daily life
+			composite : dairy farm
+			composite : dam
+			composite : dawn service
+			composite : daylight
+			composite : daytime
+			composite : degree view
+			composite : deities
+			composite : dense jungle
+			composite : department store
+			composite : departmental store
+			composite : designer shops
+			composite : devotees
+			composite : dhoby ghaut mrt station
+			composite : different cuisines
+			composite : different cultures
+			composite : different levels
+			composite : different parts of the world
+			composite : different perspective
+			composite : different routes
+			composite : different species
+			composite : different varieties
+			composite : digital photos
+			composite : dining options
+			composite : dinosaur fossils
+			composite : dirt cheap
+			composite : display
+			composite : dna
+			composite : dolphin experience
+			composite : dolphin show
+			composite : dolphin trainer
+			composite : domes
+			composite : donation
+			composite : dont miss
+			composite : download
+			composite : downtown line
+			composite : "dragon\'s" teeth
+			composite : dravidian style
+			composite : drawing
+			composite : during weekends
+			composite : during wwii
+			composite : dusk
+			composite : duxton hill
+			composite : early check
+			composite : early immigrants
+			composite : east coast park
+			composite : east coast road
+			composite : east west line
+			composite : eating places
+			composite : edible garden
+			composite : electronic goods
+			composite : elevated walkway
+			composite : elevator takes
+			composite : emotional experience
+			composite : enchanted airways
+			composite : enclosures
+			composite : enjoy the scenery
+			composite : entire city
+			composite : entrance fee
+			composite : entry fee
+			composite : equator
+			composite : era
+			composite : escalator
+			composite : evening stroll
+			composite : events leading up
+			composite : evolution garden
+			composite : excellent museum
+			composite : excellent shopping
+			composite : excellent tour
+			composite : exercise
+			composite : exhibition
+			composite : exhibits
+			composite : expats
+			composite : expensive shops
+			composite : express pass
+			composite : eye view
+			composite : ez link card
+			composite : f b
+			composite : faber point
+			composite : fabric shops
+			composite : facade
+			composite : fair price supermarket
+			composite : fairmont hotel
+			composite : fallen heroes
+			composite : family beach
+			composite : family outing
+			composite : famous personalities
+			composite : farrer park
+			composite : farrer park mrt
+			composite : fascinating insight
+			composite : fast pass
+			composite : fasting month
+			composite : fat duck
+			composite : fear of heights
+			composite : feeding times
+			composite : ferris wheel
+			composite : ferry ride
+			composite : few hours
+			composite : field
+			composite : fire show
+			composite : fire tornado
+			composite : fire walking ceremony
+			composite : fishing
+			composite : fishing village
+			composite : fitting tribute
+			composite : flamingos
+			composite : flash photography
+			composite : flea "&" street markets
+			composite : flea market
+			composite : flood control
+			composite : flora
+			composite : flora and fauna
+			composite : flower dome
+			composite : flower lovers
+			composite : flowers
+			composite : flowers and plants
+			composite : food centre
+			composite : food court
+			composite : food hall
+			composite : food opera
+			composite : food outlets
+			composite : food republic
+			composite : food stalls
+			composite : food street
+			composite : food vendors
+			composite : for sale
+			composite : foreign exchange
+			composite : forest
+			composite : forest valley
+			composite : forest walk
+			composite : fort canning park
+			composite : fountain
+			composite : fountains
+			composite : fourth floor
+			composite : free admission
+			composite : free attraction
+			composite : free entrance
+			composite : free entry
+			composite : free tour
+			composite : free walk
+			composite : freshwater
+			composite : fritters
+			composite : fullerton hotel
+			composite : fun "&" games
+			composite : fun experience
+			composite : fun pass
+			composite : fun ride
+			composite : future world
+			composite : galleries
+			composite : game "&" entertainment centres
+			composite : garden rhapsody
+			composite : gardeners
+			composite : gardens
+			composite : gargoyles
+			composite : genki sushi
+			composite : geographical location
+			composite : getting wet
+			composite : giant pandas
+			composite : giant supermarket
+			composite : giant trees
+			composite : gift shop
+			composite : ginger tea
+			composite : global warming
+			composite : goddess
+			composite : gold coin
+			composite : gold jewellery
+			composite : golden dome
+			composite : golden village
+			composite : gondola ride
+			composite : gotham city
+			composite : gothic style
+			composite : graffiti
+			composite : great architecture
+			composite : great collection
+			composite : great for kids
+			composite : great fun
+			composite : great hike
+			composite : great insight
+			composite : great mall
+			composite : great place for kids
+			composite : great place ^to shop
+			composite : great place ^to visit
+			composite : great shopping
+			composite : great view
+			composite : great walk
+			composite : green line
+			composite : green oasis
+			composite : green space
+			composite : greenery
+			composite : greenhouse
+			composite : ground level
+			composite : gst refund
+			composite : guided tour
+			composite : guinness book of records
+			composite : gun emplacements
+			composite : hai di lao
+			composite : hainanese chicken rice
+			composite : haji lane
+			composite : half lion
+			composite : hand signals
+			composite : hands on activities
+			composite : harbour front
+			composite : harbourfront
+			composite : harbourfront mrt
+			composite : harbourfront mrt station
+			composite : harbourfront station
+			composite : hard copies
+			composite : hari raya
+			composite : harry potter
+			composite : hawk
+			composite : hawker centre
+			composite : hawker food
+			composite : hawkers
+			composite : healing
+			composite : heat
+			composite : heat and humidity
+			composite : helix bridge
+			composite : henderson waves
+			composite : heritage
+			composite : heritage area
+			composite : herons
+			composite : high court
+			composite : high end
+			composite : high flyers show
+			composite : high street brands
+			composite : highest hill
+			composite : highest peak
+			composite : highest point
+			composite : hiking trails
+			composite : hill top
+			composite : hindu
+			composite : hindu gods
+			composite : historic sites
+			composite : historic walking areas
+			composite : history
+			composite : history
+			composite : history lesson
+			composite : history museums
+			composite : holding cells
+			composite : hollywood stars
+			composite : holy infant
+			composite : holy water
+			composite : hooters
+			composite : hop on hop off bus
+			composite : horseshoe crabs
+			composite : hort park
+			composite : hot and spicy
+			composite : hotel guests
+			composite : hours shopping
+			composite : household items
+			composite : housing
+			composite : housing estate
+			composite : hsbc
+			composite : huge mall
+			composite : human body
+			composite : hush puppies
+			composite : hybrid
+			composite : icon
+			composite : icon
+			composite : iconic statue
+			composite : imbiah lookout
+			composite : imbiah station
+			composite : imposing building
+			composite : impressive art
+			composite : ^in south east asia
+			composite : indian
+			composite : indian clothes
+			composite : indian culture
+			composite : indian food
+			composite : indian state
+			composite : indochine
+			composite : indoor waterfall
+			composite : infinity pool
+			composite : information provided
+			composite : insect repellent
+			composite : insects
+			composite : insight
+			composite : interactive displays
+			composite : interactive exhibits
+			composite : intercontinental hotel
+			composite : interesting area
+			composite : interesting building
+			composite : interesting design
+			composite : interesting exhibits
+			composite : interesting history
+			composite : interesting market
+			composite : interesting place
+			composite : interesting shops
+			composite : interesting visit
+			composite : international brands
+			composite : intricate carvings
+			composite : iskender
+			composite : island
+			composite : islands
+			composite : japanese forces
+			composite : japanese invasion
+			composite : japanese occupation
+			composite : jelutong tower
+			composite : jewel box
+			composite : jewelry
+			composite : jia jia
+			composite : jog
+			composite : "john\'s" island
+			composite : johor bahru
+			composite : jollibee
+			composite : joo chiat rd
+			composite : joss sticks
+			composite : journey
+			composite : juan luna
+			composite : jungle trail
+			composite : jurassic park
+			composite : jurong
+			composite : jurong bird park
+			composite : jurong east
+			composite : kallang
+			composite : kampong glam
+			composite : kate spade
+			composite : kayak
+			composite : kent ridge
+			composite : kent ridge park
+			composite : keppel bay
+			composite : keychain
+			composite : kfc
+			composite : kids and adults
+			composite : kids will love
+			composite : kinetic garden
+			composite : kitchener road
+			composite : kite flyers
+			composite : kite flying
+			composite : knees and shoulders
+			composite : knowledgeable guide
+			composite : kranji mrt station
+			composite : kranji station
+			composite : laksa
+			composite : large tank
+			composite : laser show
+			composite : latest attraction
+			composite : lau pa sat
+			composite : lazy river
+			composite : leash
+			composite : lee kuan yew
+			composite : legend
+			composite : lei garden
+			composite : life jackets
+			composite : light incense
+			composite : light show
+			composite : lightshow
+			composite : lim bo seng memorial
+			composite : lions
+			composite : lit up at night
+			composite : little india
+			composite : living organisms
+			composite : local artists
+			composite : local food
+			composite : located ^in china town
+			composite : london eye
+			composite : long queue
+			composite : lookout tower
+			composite : lookouts
+			composite : lorry loft
+			composite : lory loft
+			composite : lost world
+			composite : lots of fun
+			composite : lots of shops
+			composite : lots of water
+			composite : louis vuitton
+			composite : love nature
+			composite : low tide
+			composite : lucky plaza
+			composite : luge
+			composite : lunar
+			composite : luxury brands
+			composite : luxury shopping
+			composite : machine gun
+			composite : madame
+			composite : madame tussauds
+			composite : main bridge
+			composite : main deity
+			composite : main hall
+			composite : main path
+			composite : main tank
+			composite : main zoo
+			composite : malay heritage
+			composite : malay heritage centre
+			composite : malaysia
+			composite : man made beach
+			composite : management office
+			composite : mangrove trail
+			composite : mangroves
+			composite : marang trail
+			composite : marina barrage
+			composite : marina bay
+			composite : marina bay sands
+			composite : marina south pier
+			composite : marinas
+			composite : marine cove
+			composite : marine life
+			composite : maritime museum
+			composite : market stalls
+			composite : marks and spencer
+			composite : marks spencer
+			composite : mass
+			composite : material
+			composite : mbs
+			composite : meditation
+			composite : men and women
+			composite : merlion park
+			composite : merlion statue
+			composite : middle eastern food
+			composite : migratory birds
+			composite : military history
+			composite : military museums
+			composite : milk tea
+			composite : misting
+			composite : misty
+			composite : mixed plate
+			composite : modern architecture
+			composite : modern shopping
+			composite : modern shopping mall
+			composite : money changer
+			composite : money exchange
+			composite : monitor lizards
+			composite : monk
+			composite : monkey nuts
+			composite : monks chanting
+			composite : monorail
+			composite : monuments "&" statues
+			composite : mountain biking
+			composite : mouth
+			composite : movement
+			composite : moving place
+			composite : mrt
+			composite : mrt station
+			composite : mt faber
+			composite : mud skippers
+			composite : multiple levels
+			composite : mummy returns
+			composite : murtabak
+			composite : museums
+			composite : mushroom cafe
+			composite : music box
+			composite : muslim community
+			composite : muslim quarter
+			composite : must visit place
+			composite : mustafa centre
+			composite : naan
+			composite : nam nam
+			composite : nasi
+			composite : nation
+			composite : national gallery
+			composite : national monument
+			composite : national museum
+			composite : national university of singapore
+			composite : natural habitat
+			composite : natural history museums
+			composite : nature
+			composite : nature "&" parks
+			composite : nature "&" wildlife areas
+			composite : nature lovers
+			composite : nature reserve
+			composite : nature trail
+			composite : nearest mrt station
+			composite : neighbourhoods
+			composite : nesting
+			composite : ngee ann city
+			composite : nice architecture
+			composite : nice beach
+			composite : nice hike
+			composite : nice mall
+			composite : nice park
+			composite : nice pictures
+			composite : nice place ^to visit
+			composite : nice scenery
+			composite : nice walk
+			composite : night safari
+			composite : night view
+			composite : nocturnal animals
+			composite : non muslims
+			composite : non residents
+			composite : north bridge road
+			composite : ntuc fairprice
+			composite : nus
+			composite : observation deck
+			composite : observation decks "&" towers
+			composite : observatories
+			composite : observatories "&" planetariums
+			composite : obstacle course
+			composite : ocbc skyway
+			composite : office workers
+			composite : old church
+			composite : old quarry
+			composite : old trees
+			composite : olden days
+			composite : omni theatre
+			composite : on display
+			composite : once ^in a lifetime
+			composite : one stop shop
+			composite : open hours
+			composite : open ocean
+			composite : open ^to the public
+			composite : optical illusion
+			composite : orangutans
+			composite : orchard
+			composite : orchard road
+			composite : orchid garden
+			composite : orchid lovers
+			composite : original sin
+			composite : ornate
+			composite : orphanage
+			composite : ostrich
+			composite : other attractions
+			composite : outdoor activities
+			composite : outdoor water
+			composite : outram park
+			composite : padang
+			composite : pagoda street
+			composite : paintings
+			composite : palawan beach
+			composite : panda exhibit
+			composite : parishioners
+			composite : park
+			composite : park hopper
+			composite : park royal hotel
+			composite : parts
+			composite : pasir panjang
+			composite : path
+			composite : paths
+			composite : patronised
+			composite : paved road
+			composite : pay respect
+			composite : peaceful beach
+			composite : peaceful feeling
+			composite : peaceful place
+			composite : peanut sauce
+			composite : peanuts
+			composite : pedestrian bridge
+			composite : penguin coast
+			composite : penguin feeding
+			composite : "people\'s" park
+			composite : per adult
+			composite : per ride
+			composite : peranakan culture
+			composite : peranakan food
+			composite : peranakan style
+			composite : permanent collection
+			composite : permanent exhibition
+			composite : personal stories
+			composite : pew
+			composite : photo opportunities
+			composite : photo opportunity
+			composite : photo ops
+			composite : photo package
+			composite : photo pass
+			composite : photogenic
+			composite : photographers dream
+			composite : photos
+			composite : photos taken
+			composite : picnic
+			composite : picnic mat
+			composite : piers "&" boardwalks
+			composite : pilgrimage
+			composite : pirate
+			composite : pirate ship
+			composite : plant life
+			composite : plants
+			composite : plants and flowers
+			composite : plants and trees
+			composite : plaques
+			composite : plastic furniture
+			composite : playground
+			composite : pleasant breeze
+			composite : pleasant walk
+			composite : points of interest "&" landmarks
+			composite : polar bear
+			composite : pollen
+			composite : popular rides
+			composite : popular tourist destination
+			composite : porridge
+			composite : poulet
+			composite : prayer
+			composite : prayer hall
+			composite : prayer times
+			composite : praying
+			composite : pre war
+			composite : primary rainforest
+			composite : prive
+			composite : professional photographer
+			composite : prosperity
+			composite : ps cafe
+			composite : public housing
+			composite : public library
+			composite : public transport
+			composite : pulau ubin
+			composite : purple line
+			composite : quest ride
+			composite : queue
+			composite : races
+			composite : raffles city
+			composite : raffles hospital
+			composite : rainbow reef
+			composite : rainy day
+			composite : ramadhan
+			composite : ranger station
+			composite : ravens
+			composite : red panda
+			composite : refreshing swim
+			composite : religious place
+			composite : remove your shoes
+			composite : rent a bike
+			composite : replica
+			composite : reservoir
+			composite : resorts world
+			composite : resting place
+			composite : restored
+			composite : retail outlets
+			composite : reverse bungee
+			composite : rice cake
+			composite : rice dumplings
+			composite : ride
+			composite : rides "&" activities
+			composite : riptide rocket
+			composite : ritual
+			composite : river cruise
+			composite : river safari
+			composite : riverside walk
+			composite : robinsons department store
+			composite : rojak
+			composite : roller blades
+			composite : roller coaster
+			composite : rollerblading
+			composite : roof garden
+			composite : rooftop
+			composite : rooftop bar
+			composite : rooftop garden
+			composite : rope
+			composite : rope bridge
+			composite : rotating
+			composite : rotunda
+			composite : route
+			composite : rows
+			composite : rugby sevens
+			composite : running shoes
+			composite : sachin tendulkar
+			composite : sacred "&" religious sites
+			composite : sailing club
+			composite : salvador dali
+			composite : sanctuary
+			composite : satay
+			composite : satisfy your hunger
+			composite : scenes
+			composite : scenic walking areas
+			composite : school
+			composite : school holidays
+			composite : sci ^fi city
+			composite : science museums
+			composite : science park
+			composite : se asia
+			composite : sea aquarium
+			composite : sea creatures
+			composite : sea cucumbers
+			composite : sea goddess
+			composite : sea world
+			composite : second world war
+			composite : secondary forest
+			composite : seek blessings
+			composite : self guided
+			composite : self guided tour
+			composite : selfie
+			composite : selling fresh
+			composite : sentosa
+			composite : sentosa express
+			composite : sentosa island
+			composite : serangoon road
+			composite : sesame street
+			composite : session
+			composite : sg
+			composite : sgd
+			composite : shangri la sentosa
+			composite : shaped building
+			composite : shapes
+			composite : shark tank
+			composite : shells on the floor
+			composite : ship
+			composite : ships
+			composite : shoes
+			composite : shop houses
+			composite : shop till you drop
+			composite : shophouse
+			composite : shoppers paradise
+			composite : shopping
+			composite : shopping arcade
+			composite : shopping centre
+			composite : shopping experience
+			composite : shopping heaven
+			composite : shopping mall
+			composite : shopping malls
+			composite : shopping street
+			composite : shops and cafes
+			composite : shops selling
+			composite : shore
+			composite : short street
+			composite : short video
+			composite : shrine
+			composite : sight ^to behold
+			composite : sights
+			composite : sights "&" landmarks
+			composite : silk route
+			composite : siloso beach
+			composite : sin
+			composite : singapore flyer
+			composite : singapore river
+			composite : singapore sling
+			composite : single nail
+			composite : sir stamford raffles
+			composite : skate
+			composite : skating rink
+			composite : sketch
+			composite : ski lift
+			composite : skills
+			composite : sky garden
+			composite : sky park
+			composite : sky ride
+			composite : sky walk
+			composite : skyline
+			composite : skyline
+			composite : skyscrapers
+			composite : small bridge
+			composite : small fee
+			composite : smith street
+			composite : snow city
+			composite : soaring
+			composite : soft copies
+			composite : solemn place
+			composite : somerset station
+			composite : south bridge road
+			composite : south east asia
+			composite : south view
+			composite : southern china
+			composite : southern point
+			composite : southern ridges
+			composite : southernmost point
+			composite : souvenir shop
+			composite : souvenir shopping
+			composite : souvenirs
+			composite : special effects
+			composite : special exhibit
+			composite : special exhibition
+			composite : speciality museums
+			composite : species
+			composite : spectators
+			composite : sperm
+			composite : spice garden
+			composite : spiral
+			composite : spiritual
+			composite : spoilt for choice
+			composite : squirrels
+			composite : stage
+			composite : stall holders
+			composite : stalls
+			composite : stalls selling
+			composite : star fish
+			composite : starting point
+			composite : statue
+			composite : statue of liberty
+			composite : statues
+			composite : statues depicting
+			composite : steep steps
+			composite : step ^back ^in ^time
+			composite : stingrays
+			composite : stone boat
+			composite : stone lanterns
+			composite : stone steps
+			composite : storey pagoda
+			composite : strait
+			composite : street art
+			composite : street sellers
+			composite : stroll
+			composite : structure
+			composite : stuffed animals
+			composite : sugar cane juice
+			composite : sultan mosque
+			composite : sun block
+			composite : sunny day
+			composite : suntec city
+			composite : super tree grove
+			composite : super trees
+			composite : supertree grove
+			composite : supreme court
+			composite : surf
+			composite : suspension bridge
+			composite : swan lake
+			composite : swimming with dolphins
+			composite : swimwear
+			composite : symbol
+			composite : t shirts
+			composite : takashimaya
+			composite : take photos
+			composite : take pictures
+			composite : take your ^time
+			composite : taking photos
+			composite : taking pictures
+			composite : tamarind hill
+			composite : tamil nadu
+			composite : tang dynasty
+			composite : tanjung
+			composite : tapioca
+			composite : tapir
+			composite : taxi stand
+			composite : taxis
+			composite : technology
+			composite : telok ayer
+			composite : telok blangah
+			composite : telok blangah hill park
+			composite : terrace houses
+			composite : tesla coil
+			composite : textiles
+			composite : the cable car ride
+			composite : the central business district
+			composite : the dragon
+			composite : the main attraction
+			composite : the stained glass windows
+			composite : theatres
+			composite : their lives
+			composite : their natural habitat
+			composite : theme park
+			composite : theme parks
+			composite : themed gardens
+			composite : through immigration
+			composite : tian tian
+			composite : tickets
+			composite : tiger
+			composite : tiger balm
+			composite : tiger beer
+			composite : tiger sky tower
+			composite : tiny island
+			composite : tissue paper
+			composite : toast box
+			composite : toilet facilities
+			composite : tom cruise
+			composite : tortoise sanctuary
+			composite : touch pool
+			composite : touching
+			composite : tourist stop
+			composite : tourists
+			composite : tower
+			composite : track
+			composite : trade routes
+			composite : trail
+			composite : tram ride
+			composite : tranquil place
+			composite : transformers ride
+			composite : transportation
+			composite : travel card
+			composite : travelator
+			composite : tree canopy
+			composite : trees
+			composite : trees provide
+			composite : treetop walk
+			composite : trek
+			composite : tropical fish
+			composite : tua pek kong temple
+			composite : turkish food
+			composite : turn left and walk
+			composite : turtle museum
+			composite : turtles
+			composite : tussauds
+			composite : typhoon theatre
+			composite : ue square
+			composite : ultimate sacrifice
+			composite : under one roof
+			composite : underground bunker
+			composite : underground tunnel
+			composite : unforgettable experience
+			composite : unique bridge
+			composite : unique building
+			composite : unique design
+			composite : unique experience
+			composite : unity
+			composite : universal studios
+			composite : up market
+			composite : upmarket
+			composite : urban jungle
+			composite : venus drive
+			composite : victoria street
+			composite : viewing
+			composite : viewing gallery
+			composite : viewing platform
+			composite : views are amazing
+			composite : visit at night
+			composite : visited holland
+			composite : visiting chinatown
+			composite : visiting hours
+			composite : visitor center
+			composite : visitors
+			composite : vivo city
+			composite : wading pool
+			composite : walk around
+			composite : walk up
+			composite : walking shoes
+			composite : walking tour
+			composite : walking trails
+			composite : wander around
+			composite : war relics
+			composite : watches
+			composite : water "&" amusement parks
+			composite : water fun
+			composite : water monitors
+			composite : water park
+			composite : water parks
+			composite : water quality
+			composite : water reservoir
+			composite : water show
+			composite : water world show
+			composite : waterfall
+			composite : waterfall aviary
+			composite : waterloo street
+			composite : wave machine
+			composite : wave pool
+			composite : wax figures
+			composite : wax hand
+			composite : wax museum
+			composite : wax works
+			composite : wearing shorts
+			composite : weekday
+			composite : weekends
+			composite : well worth the visit
+			composite : wet market
+			composite : wet suits
+			composite : wet wipes
+			composite : wetland centre
+			composite : whale bones
+			composite : wheel
+			composite : wheelock place
+			composite : white church
+			composite : white sand
+			composite : white snake
+			composite : white tiger
+			composite : wild monkeys
+			composite : wildlife
+			composite : window shop
+			composite : window shopping
+			composite : windy
+			composite : wings
+			composite : wisma atria
+			composite : wonderful building
+			composite : world leaders
+			composite : world war
+			composite : world war ii
+			composite : worship
+			composite : worshippers
+			composite : worth a quick stop
+			composite : worth a stop
+			composite : worth a visit
+			composite : worth the wait
+			composite : year olds
+			composite : young kids
+			composite : zip line
+			composite : zoo
+			composite : zoo experience
+			composite : zoos
+			composite : zoos "&" aquariums
+	}
+	Simple entity keylabel :
+		inputs in en {
+			"things to do" synonyms "things to do"
+	}
+	Composite entity location :
+		inputs in en {
+			composite : "@sys.location:location"
+			composite : around me
+			composite : near me
+			composite : nearby
+	}
+	Simple entity category :
+		inputs in en {
+			AmusementPark synonyms "adventure park" , "amusement park" , "theme park" , "water park"
+			Landmark synonyms "City Landmarks" , landmark , sights , sightseeing
+			Museum synonyms museum , museums
+			NaturePark synonyms "Nature and Parks" , garden , gardens , nature , "nature park" , "nature parks" , park , parks
+			Shopping synonyms malls , markets , shopping
+			aquarium synonyms aquarium , water
+			art_gallery synonyms "art gallery" , galleries , gallery
+			church synonyms church , churches
+			hindu_temple synonyms hindu_temple , temple , temples
+			mosque synonyms mosque , mosques
+			zoo synonyms zoo , zoos
+	}
+	Simple entity InfoType :
+		inputs in en {
+			address synonyms address , locate , located , location
+			direction synonyms direction , "get to" , "go to"
+			duration synonyms "Travel Duration" , duration , "recommended duration" , "recommended travel duration" , "travel duration"
+			introduction synonyms intro , introduction , "the info" , "the introduction"
+			open synonyms close , closing , open , opening , operating , operation
+			something synonyms about , something , sth
+			weather synonyms rain , raining , sunny , umbrella , weather
+	}
+	Simple entity travellerType :
+		inputs in en {
+			business synonyms "Office colleagues" , business
+			couple synonyms boyfriend , couple , couples , girlfriend , husband , partner , spouse , wife
+			family synonyms families , family
+			friends synonyms friends
+			solo synonyms alone , backpacker , individual , myself , "no one" , solo
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://094bd77f.ngrok.io" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response GetAttrInfoIntentTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response RecommendationIntentTxtResp1 :
+		inputs in en {
+			"I am the response "
+	}
+	text response GetPromotionsIntentTxtResp1 :
+		inputs in en {
+			"I dont have any promotions for this location. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user GetAttrInfoIntent => bot1 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+	- user2 : user UserInfo => bot2 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+	- user3 : user "Default Welcome Intent" => bot3 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user4 : user RecommendationIntent => bot4 : chatbot HttpRequest , HttpResponse , RecommendationIntentTxtResp1 {
+		=> user5 : user CategoryIntent => bot5 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+		=> user6 : user TravellerTypeIntent => bot6 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 {
+			=> user7 : user CategoryIntent => bot7 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+			=> user8 : user EventDurationIntent => bot8 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+			=> back to user6 ;
+		} ;
+		=> user9 : user EventDurationIntent => bot9 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+	} ;
+	- user10 : user Search => bot10 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+	- user11 : user GetEventIntent => bot11 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 {
+		=> user12 : user UserInfo => bot12 : chatbot GetAttrInfoIntentTxtResp1 { => user13 : user UserInfo => bot13 : chatbot GetAttrInfoIntentTxtResp1 { => user14 : user UserInfo => bot14 : chatbot GetAttrInfoIntentTxtResp1 ; } ; } ;
+	} ;
+	- user15 : user GetPromotionsIntent => bot15 : chatbot HttpRequest , HttpResponse , GetPromotionsIntentTxtResp1 ;
+	- user16 : user "Default Fallback Intent" => bot16 : chatbot HttpRequest , HttpResponse , "Default Fallback IntentTxtResp1" ;
+	- user17 : user RecomTypeIntent => bot17 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 {
+		=> user18 : user CategoryIntent => bot18 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+		=> user19 : user TravellerTypeIntent => bot19 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 {
+			=> user20 : user CategoryIntent => bot20 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+			=> user21 : user EventDurationIntent => bot21 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+			=> back to user19 ;
+		} ;
+		=> user22 : user EventDurationIntent => bot22 : chatbot HttpRequest , HttpResponse , GetAttrInfoIntentTxtResp1 ;
+	} ;
+

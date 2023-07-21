@@ -1,0 +1,148 @@
+Chatbot TPCarBot language : en , es
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			howdy ,
+			"a good day" ,
+			^hi ,
+			heya ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"hello again" ,
+			"hello there" ,
+			"just going to say hi" ,
+			"hey there" ,
+			"hello hi" ,
+			"lovely day isn\'t it" ,
+			hello ,
+			"I greet you" ,
+			"long time no see"
+		}
+		inputs in es {
+			saludos ,
+			"hey ho" ,
+			hola ,
+			chao
+	}
+
+	"understand invoice" :
+		inputs in en {
+			"please help me with my bill" ,
+			"I don\'t understand my invoice" ,
+			"can you explain my bill" ,
+			"explain my invoice" ,
+			"I would like to understand my bill"
+	}
+
+	"Schedule Appointment" :
+		inputs in en {
+			"set appointment for " ( "3pm" ) [ ^time ] " " ( "on Monday" ) [ ^date ] " for " ( license ) [ AppointmentType ] ,
+			"Need an appointment for " ( "4pm" ) [ ^time ] " " ( tomorrow ) [ ^date ] ,
+			( "vehicle registration" ) [ AppointmentType ] " appointment for " ( monday ) [ ^date ] ,
+			"set an appointment for " ( "drivers license" ) [ AppointmentType ] " " ( "at 3pm" ) [ ^time ] " " ( tomorrow ) [ ^date ] ,
+			"I would like to set an appointment for " ( "3pm" ) [ ^time ] " " ( "on Tuesday" ) [ ^date ] ,
+			"Set an appointment " ( "on Wednesday" ) [ ^date ] " " ( "at 2pm" ) [ ^time ]
+		}
+		parameters :
+			^time : entity time , required , prompts in en [ "What time would you like to come in?" ] ;
+			^date : entity date , required , prompts in en [ "What date?" ] ;
+			AppointmentType : entity AppointmentType , required , prompts in en [ "What services are you looking to get? DMV offers Driver license and vehicle registration services." ] ;
+
+	file_upload :
+		inputs in en {
+			"file is " ( test1 ) [ filename ] ,
+			"file is " ( "text.jpg" ) [ filename ] ,
+			"file is " ( "sample.png" ) [ filename ] ,
+			"file is " ( "test.png" ) [ filename ] ,
+			"file is " ( "sample.jpeg" ) [ filename ] ,
+			"file upload"
+		}
+		parameters :
+			filename : entity filename ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity AppointmentType :
+		inputs in en {
+			"Vehicle registration" synonyms "Vehicle registration" , registration , "car registration" , register
+			"Drivers License" synonyms "Drivers License" , DL , license , test , "driving test" , "real ID"
+	}
+	Simple entity filename :
+		inputs in en {
+			"sample.jpeg" synonyms "sample.jpeg"
+			"text.jpg" synonyms "text.jpg"
+			"test.jpeg" synonyms "test.jpeg"
+			"test.jpg" synonyms "test.jpg"
+			"test.png" synonyms "test.png"
+			"sample_invoice.png" synonyms "sample_invoice.png"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-as-testing-7e213.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in es {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello! I can help you set appointment and understand your invoice. How can I help you today? " ,
+			"Greetings! I can help you set appointment and understand your invoice. How can I assist? "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in es {
+			"¡Hola! " ,
+			"¡Hey! " ,
+			"¡Buenos días! "
+	}
+	text response "understand invoiceTxtResp1" :
+		inputs in en {
+			"Sure, please upload the image of your invoice and I will do my best to explain. "
+	}
+	text response "Schedule AppointmentTxtResp1" :
+		inputs in en {
+			"You are all set for you " [ "Schedule Appointment.AppointmentType" ] "on " [ "Schedule Appointment.date" ] "at " "see you then! "
+	}
+	text response file_uploadTxtResp1 :
+		inputs in en {
+			"Assessing your file. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in es {
+			"Ups, no he entendido a que te refieres. " ,
+			"¿Podrías repetirlo, por favor? " ,
+			"¿Disculpa? " ,
+			"¿Decías? " ,
+			"¿Cómo? "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user2 : user "understand invoice" => bot2 : chatbot "understand invoiceTxtResp1" ;
+	- user3 : user "Schedule Appointment" => bot3 : chatbot HttpRequest , HttpResponse , "Schedule AppointmentTxtResp1" ;
+	- user4 : user file_upload => bot4 : chatbot HttpRequest , HttpResponse , file_uploadTxtResp1 ;
+	- user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" ;
+

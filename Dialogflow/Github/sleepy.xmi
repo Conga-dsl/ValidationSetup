@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="sleepy">
+  <intents name="answer_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="name"/>
+        <tokens xsi:type="generator:Literal" text=" is my name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="name"/>
+      </inputs>
+    </inputs>
+    <parameters name="name"/>
+  </intents>
+  <intents name="read_story">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="oke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="boolean" entity="//@entities.1"/>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ask_read_story">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="oke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="yes"/>
+        <tokens xsi:type="generator:Literal" text=", please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="read_story" entity="//@entities.1"/>
+  </intents>
+  <intents name="continue_story">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="oke"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="yes, please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="yes"/>
+      </inputs>
+    </inputs>
+    <parameters name="boolean" entity="//@entities.1"/>
+  </intents>
+  <intents name="favorite_animal">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="gorilla"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the animal is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="gorilla"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="cat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my favorite animal is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="elephant"/>
+      </inputs>
+    </inputs>
+    <parameters name="animal" entity="//@entities.2"/>
+  </intents>
+  <intents name="which_story">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want you to read "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="first"/>
+        <tokens xsi:type="generator:Literal" text=" story"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want you to read "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="second"/>
+        <tokens xsi:type="generator:Literal" text=" story"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="second"/>
+        <tokens xsi:type="generator:Literal" text=" story"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="first"/>
+        <tokens xsi:type="generator:Literal" text=" story"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="second"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="First"/>
+      </inputs>
+    </inputs>
+    <parameters name="sequence" entity="//@entities.0"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="sequence">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="first">
+        <values>first</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="second">
+        <values>second</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="third">
+        <values>third</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="boolean">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="yes">
+        <values>yes</values>
+        <values>yes, please</values>
+        <values>maybe</values>
+        <values>perhaps</values>
+        <values>sure</values>
+        <values>yeah</values>
+        <values>yeah, sure</values>
+        <values>yep</values>
+        <values>why not</values>
+        <values>sounds good</values>
+        <values>affirmative</values>
+        <values>amen</values>
+        <values>fine</values>
+        <values>good</values>
+        <values>okay</values>
+        <values>yea</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="no">
+        <values>no</values>
+        <values>never</values>
+        <values>nope</values>
+        <values>nay</values>
+        <values>not</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="animal">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="cat">
+        <values>cat</values>
+        <values>kitten</values>
+        <values>cheetah</values>
+        <values>lion</values>
+        <values>tiger</values>
+        <values>leopard</values>
+        <values>snow leopard</values>
+        <values>jaguar</values>
+        <values>serval</values>
+        <values>ocelot</values>
+        <values>bobcat</values>
+        <values>lynx</values>
+        <values>cougar</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="dog">
+        <values>puppy</values>
+        <values>dog</values>
+        <values>dogs</values>
+        <values>wolf</values>
+        <values>buddy</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bird">
+        <values>bird</values>
+        <values>parrot</values>
+        <values>eagle</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="elephant">
+        <values>elephant</values>
+        <values>dumbo</values>
+        <values>giraffe</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="reptiles">
+        <values>reptiles</values>
+        <values>snake</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="fish">
+        <values>fish</values>
+        <values>dolphin</values>
+        <values>shark</values>
+        <values>goldfish</values>
+        <values>whale</values>
+        <values>nemo</values>
+        <values>dory</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="gorilla">
+        <values>gorilla</values>
+        <values>monkey</values>
+        <values>chimp</values>
+        <values>orangutan</values>
+        <values>chimpanzee</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="mouse">
+        <values>mouse</values>
+        <values>hamster</values>
+        <values>rat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="giraffe">
+        <values>giraffe</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="rabbit">
+        <values>rabbit</values>
+        <values>bugs bunny</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sys.given-name">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="name">
+        <values>name</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="answer_nameTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.0/@parameters.0"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="read_storyTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="favorite_animalTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh nice! my favorite animal is "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.5/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="too! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="which_storyTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, I am reading the "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.6/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="story "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.2" name="user1">
+    <target actions="//@actions.4" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.5" name="user2">
+    <target actions="//@actions.5" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.6" name="user3">
+    <target actions="//@actions.6" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.7" name="user4">
+    <target actions="//@actions.7" name="bot4"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

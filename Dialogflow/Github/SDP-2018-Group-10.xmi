@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="SDP-2018-Group-10">
+  <intents name="Connection Status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are the bricks connected ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the connection status?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are you connected to the robot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is the robot connected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is it connected?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is the robot on?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Help">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you help me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can I ask?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can I do?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Stop">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Stop moving"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Don't move"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Stop the robot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Stop"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Notifications - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not interested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do it"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Quit">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye Bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to talk to Google."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm done"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Back to Google."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Quit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That's all"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Desk Query">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know where someone works."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="Russel"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where can I find "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="Russel"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="Russel"/>
+        <tokens xsi:type="generator:Literal" text="'s desk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where does "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="Russel"/>
+        <tokens xsi:type="generator:Literal" text=" work?"/>
+      </inputs>
+    </inputs>
+    <parameters name="user" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Who would you like to know ?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Notifications - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Location Status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are you trying to get to ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the robot's location?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's your location?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where's the robot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are you ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are you going ?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Parcel Quantity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many parcels were delivered?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Quantity of parcels delivered"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many parcels did you deliver already ?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent"/>
+  <intents name="Callback">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Return to base"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Make Spam return to base"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Return to the reception"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Come back to reception"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Come back"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Deliver Mail">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start delivery with a parcel for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="Russel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start delivery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Go deliver with parcel for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="Russel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Go deliver"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start delivering with parcel for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="Russel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start delivering"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There's a parcel for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="Russel"/>
+        <tokens xsi:type="generator:Literal" text=" and ready to go"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Spam is ready and there's a parcel for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="Russel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Spam is ready to go"/>
+      </inputs>
+    </inputs>
+    <parameters name="user" entity="//@entities.1"/>
+  </intents>
+  <intents name="Battery">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="battery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How's the battery ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How are the battery levels ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How are the batteries"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the battery status?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I need to charge the robot?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="User Query">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who works in a desk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know who works in a desk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="List who works in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Thundercracker"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who can I find in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Thundercracker"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Who works in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Thundercracker"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="desk" entity="//@entities.0" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which desk would you like to know ?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Notifications">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Read my notifications"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many notifications do I have ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is there any problem ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Any problem reported ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Any notification on the robot ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Any updates on the robot?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are my new notifications?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I have notifications ?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="Resume">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start the robot again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Start again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Resume"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Resume operations"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Robot State">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the robot doing ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What state is the robot in ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are you doing ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What state are you on?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="desk">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Desk Megatron">
+        <values>Desk Megatron</values>
+        <values>Megatron</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Starscream">
+        <values>Desk Starscream</values>
+        <values>Starscream</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Soundwave">
+        <values>Desk Soundwave</values>
+        <values>Soundwave</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Shockwave">
+        <values>Desk Shockwave</values>
+        <values>Shockwave</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Knockout">
+        <values>Desk Knockout</values>
+        <values>Knockout</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Galvatron">
+        <values>Desk Galvatron</values>
+        <values>Galvatron</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Skywarp">
+        <values>Desk Skywarp</values>
+        <values>Skywarp</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Desk Thundercracker">
+        <values>Desk Thundercracker</values>
+        <values>Thundercracker</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="user">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Russell Clay">
+        <values>Russell Clay</values>
+        <values>Russel</values>
+        <values>Clay</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Jack Darby">
+        <values>Jack Darby</values>
+        <values>Jack</values>
+        <values>Darby</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Peter Cullen">
+        <values>Peter Cullen</values>
+        <values>Peter</values>
+        <values>Cullen</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Vince Dicola">
+        <values>Vince Dicola</values>
+        <values>Vince</values>
+        <values>Dicola</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Edgar Arkeville">
+        <values>Edgar Arkeville</values>
+        <values>Edgar</values>
+        <values>Arkeville</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Carlos Lopez">
+        <values>Carlos Lopez</values>
+        <values>Carlos</values>
+        <values>Lopez</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Frank Welker">
+        <values>Frank Welker</values>
+        <values>Frank</values>
+        <values>Welker</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Tobias Hawk">
+        <values>Tobias Hawk</values>
+        <values>Tobias</values>
+        <values>Hawk</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Walter Barnet">
+        <values>Walter Barnet</values>
+        <values>Walter</values>
+        <values>Barnet</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Dylan Gould">
+        <values>Dylan Gould</values>
+        <values>Dylan</values>
+        <values>Gould</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mickaela Banes">
+        <values>Mickaela Banes</values>
+        <values>Mickaela</values>
+        <values>Banes</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Joshua Joyce">
+        <values>Joshua Joyce</values>
+        <values>Joshua</values>
+        <values>Joyce</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://spamrobot.ml/fulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Connection StatusTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="HelpTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can tell me to do many things, including checking the state of the robot, send emergency commands, and ask information about users, desks, and notifications. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Notifications - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, I won't read them. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="QuitTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good bye, back to Google Assistant "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Deliver Mail - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, I won't start delivering. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! I'm Spam. Ask me for help if you need. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Deliver MailTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are you sure you want to start delivery? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again please. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.4" name="user4">
+    <target actions="//@actions.5" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.5" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.7" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.8" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.9" name="user8">
+    <target actions="//@actions.7" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.10" name="user9">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.11" name="user10">
+    <target actions="//@actions.8" name="bot10">
+      <outcoming intent="//@intents.3" name="user11">
+        <target actions="//@actions.6" name="bot11"/>
+      </outcoming>
+      <outcoming intent="//@intents.6" name="user12">
+        <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot12"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.0 //@actions.1" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.13" name="user14">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.14" name="user15">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot15">
+      <outcoming intent="//@intents.3" name="user16">
+        <target actions="//@actions.4" name="bot16"/>
+      </outcoming>
+      <outcoming intent="//@intents.6" name="user17">
+        <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot17"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.15" name="user18">
+    <target actions="//@actions.9" name="bot18"/>
+  </flows>
+  <flows intent="//@intents.16" name="user19">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot19"/>
+  </flows>
+  <flows intent="//@intents.17" name="user20">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot20"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

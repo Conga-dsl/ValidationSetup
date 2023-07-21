@@ -1,0 +1,279 @@
+Chatbot "Talk-to-Spam-Robot" language : en
+
+intents :
+
+	"Connection Status" :
+		inputs in en {
+			"Are the bricks connected ?" ,
+			"What\'s the connection status?" ,
+			"Are you connected to the robot?" ,
+			"Is the robot connected?" ,
+			"Is it connected?" ,
+			"Is the robot on?"
+	}
+
+	Help :
+		inputs in en {
+			Help ,
+			"Can you help me?" ,
+			"What can I ask?" ,
+			"What can I do?"
+	}
+
+	Stop :
+		inputs in en {
+			"Stop moving" ,
+			"Don\'t move" ,
+			"Stop the robot" ,
+			Stop
+	}
+
+	"Notifications - no" :
+		inputs in en {
+			"not really" ,
+			"I don\'t think so" ,
+			"not interested" ,
+			"definitely not" ,
+			"I don\'t want that" ,
+			^no ,
+			"I disagree" ,
+			"don\'t do it"
+	}
+
+	Quit :
+		inputs in en {
+			"See you" ,
+			Goodbye ,
+			"Bye Bye" ,
+			"I want to talk to Google." ,
+			"I\'m done" ,
+			"Back to Google." ,
+			Quit ,
+			Exit ,
+			"That\'s all"
+	}
+
+	"Desk Query" :
+		inputs in en {
+			"I want to know where someone works." ,
+			"Where\'s " ( Russel ) [ ^user ] "?" ,
+			"Where can I find " ( Russel ) [ ^user ] "?" ,
+			"What is " ( Russel ) [ ^user ] "\'s desk" ,
+			"Where does " ( Russel ) [ ^user ] " work?"
+		}
+		parameters :
+			^user : entity ^user , required , prompts in en [ "Who would you like to know ?" ] ;
+
+	"Notifications - yes" :
+		inputs in en {
+			"that\'s correct" ,
+			"of course" ,
+			"I don\'t mind" ,
+			"I agree" ,
+			"sounds good" ,
+			exactly ,
+			yes ,
+			"do it" ,
+			ok ,
+			confirm ,
+			sure ,
+			okay
+	}
+
+	"Location Status" :
+		inputs in en {
+			"Where are you trying to get to ?" ,
+			"What\'s the robot\'s location?" ,
+			"What\'s your location?" ,
+			"Where\'s the robot?" ,
+			"Where are you ?" ,
+			"Where are you going ?"
+	}
+
+	"Parcel Quantity" :
+		inputs in en {
+			"How many parcels were delivered?" ,
+			"Quantity of parcels delivered" ,
+			"How many parcels did you deliver already ?"
+	}
+
+	"Default Welcome Intent" :
+
+	Callback :
+		inputs in en {
+			"Return to base" ,
+			"Make Spam return to base" ,
+			"Return to the reception" ,
+			"Come back to reception" ,
+			"Come back"
+	}
+
+	"Deliver Mail" :
+		inputs in en {
+			"Start delivery with a parcel for " ( Russel ) [ ^user ] ,
+			"Start delivery" ,
+			"Go deliver with parcel for " ( Russel ) [ ^user ] ,
+			"Go deliver" ,
+			"Start delivering with parcel for " ( Russel ) [ ^user ] ,
+			"Start delivering" ,
+			"There\'s a parcel for " ( Russel ) [ ^user ] " and ready to go" ,
+			"Spam is ready and there\'s a parcel for " ( Russel ) [ ^user ] ,
+			"Spam is ready to go"
+		}
+		parameters :
+			^user : entity ^user ;
+
+	Battery :
+		inputs in en {
+			battery ,
+			"How\'s the battery ?" ,
+			"How are the battery levels ?" ,
+			"How are the batteries" ,
+			"What\'s the battery status?" ,
+			"Do I need to charge the robot?"
+	}
+
+	"User Query" :
+		inputs in en {
+			"Who works in a desk" ,
+			"I want to know who works in a desk" ,
+			"List who works in " ( Thundercracker ) [ desk ] ,
+			"Who can I find in " ( Thundercracker ) [ desk ] "?" ,
+			"Who works in " ( Thundercracker ) [ desk ] "?"
+		}
+		parameters :
+			desk : entity desk , required , prompts in en [ "Which desk would you like to know ?" ] ;
+
+	Notifications :
+		inputs in en {
+			"Read my notifications" ,
+			"How many notifications do I have ?" ,
+			"Is there any problem ?" ,
+			"Any problem reported ?" ,
+			"Any notification on the robot ?" ,
+			"Any updates on the robot?" ,
+			"What are my new notifications?" ,
+			"Do I have notifications ?"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+	Resume :
+		inputs in en {
+			"Start the robot again" ,
+			"Start again" ,
+			Resume ,
+			"Resume operations"
+	}
+
+	"Robot State" :
+		inputs in en {
+			"What is the robot doing ?" ,
+			"What state is the robot in ?" ,
+			"What are you doing ?" ,
+			"What state are you on?"
+	}
+
+entities :
+	Simple entity desk :
+		inputs in en {
+			"Desk Megatron" synonyms "Desk Megatron" , Megatron
+			"Desk Starscream" synonyms "Desk Starscream" , Starscream
+			"Desk Soundwave" synonyms "Desk Soundwave" , Soundwave
+			"Desk Shockwave" synonyms "Desk Shockwave" , Shockwave
+			"Desk Knockout" synonyms "Desk Knockout" , Knockout
+			"Desk Galvatron" synonyms "Desk Galvatron" , Galvatron
+			"Desk Skywarp" synonyms "Desk Skywarp" , Skywarp
+			"Desk Thundercracker" synonyms "Desk Thundercracker" , Thundercracker
+	}
+	Simple entity ^user :
+		inputs in en {
+			"Russell Clay" synonyms "Russell Clay" , Russel , Clay
+			"Jack Darby" synonyms "Jack Darby" , Jack , Darby
+			"Peter Cullen" synonyms "Peter Cullen" , Peter , Cullen
+			"Vince Dicola" synonyms "Vince Dicola" , Vince , Dicola
+			"Edgar Arkeville" synonyms "Edgar Arkeville" , Edgar , Arkeville
+			"Carlos Lopez" synonyms "Carlos Lopez" , Carlos , Lopez
+			"Frank Welker" synonyms "Frank Welker" , Frank , Welker
+			"Tobias Hawk" synonyms "Tobias Hawk" , Tobias , Hawk
+			"Walter Barnet" synonyms "Walter Barnet" , Walter , Barnet
+			"Dylan Gould" synonyms "Dylan Gould" , Dylan , Gould
+			"Mickaela Banes" synonyms "Mickaela Banes" , Mickaela , Banes
+			"Joshua Joyce" synonyms "Joshua Joyce" , Joshua , Joyce
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://spamrobot.ml/fulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Connection StatusTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response HelpTxtResp1 :
+		inputs in en {
+			"You can tell me to do many things, including checking the state of the robot, send emergency commands, and ask information about users, desks, and notifications. "
+	}
+	text response "Notifications - noTxtResp1" :
+		inputs in en {
+			"Ok, I won\'t read them. "
+	}
+	text response QuitTxtResp1 :
+		inputs in en {
+			"Good bye, back to Google Assistant "
+	}
+	text response "Deliver Mail - noTxtResp1" :
+		inputs in en {
+			"Ok, I won\'t start delivering. "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello! I\'m Spam. Ask me for help if you need. "
+	}
+	text response "Deliver MailTxtResp1" :
+		inputs in en {
+			"Are you sure you want to start delivery? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"Say that again please. " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "Connection Status" => bot1 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user2 : user Help => bot2 : chatbot HelpTxtResp1 ;
+	- user3 : user Stop => bot3 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user4 : user Quit => bot4 : chatbot QuitTxtResp1 ;
+	- user5 : user "Desk Query" => bot5 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user6 : user "Location Status" => bot6 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user7 : user "Parcel Quantity" => bot7 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user8 : user "Default Welcome Intent" => bot8 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user9 : user Callback => bot9 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user10 : user "Deliver Mail" => bot10 : chatbot "Deliver MailTxtResp1" {
+		=> user11 : user "Notifications - no" => bot11 : chatbot "Deliver Mail - noTxtResp1" ;
+		=> user12 : user "Notifications - yes" => bot12 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	} ;
+	- user13 : user Battery => bot13 : chatbot HttpRequest , HttpResponse ;
+	- user14 : user "User Query" => bot14 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user15 : user Notifications => bot15 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" {
+		=> user16 : user "Notifications - no" => bot16 : chatbot "Notifications - noTxtResp1" ;
+		=> user17 : user "Notifications - yes" => bot17 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	} ;
+	- user18 : user "Default Fallback Intent" => bot18 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user19 : user Resume => bot19 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+	- user20 : user "Robot State" => bot20 : chatbot HttpRequest , HttpResponse , "Connection StatusTxtResp1" ;
+

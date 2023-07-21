@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="voicecommerce">
+  <intents name="Default Welcome Intent"/>
+  <intents name="GetNewestProductsIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" newest products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" new products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" newest product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" new product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" newest products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" new products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" new products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" newest products"/>
+      </inputs>
+    </inputs>
+    <parameters name="quantity" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="GetProductsUnder">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product below "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" products under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" product under "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="amount"/>
+        <tokens xsi:type="generator:Literal" text=" USD"/>
+      </inputs>
+    </inputs>
+    <parameters name="quantity" defaultEntity="NUMBER"/>
+    <parameters name="amount" defaultEntity="NUMBER"/>
+  </intents>
+  <intents name="GetCategoryProducts">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text="  "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text="  "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text="  "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="quantity"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="category"/>
+        <tokens xsi:type="generator:Literal" text=" product"/>
+      </inputs>
+    </inputs>
+    <parameters name="quantity" defaultEntity="NUMBER"/>
+    <parameters name="category"/>
+  </intents>
+  <intents name="HelloWorldIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/979e0d2c-0348-40f2-a86c-d1b9681e8aa6" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

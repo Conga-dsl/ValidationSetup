@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="marysbikeshop">
+  <intents name="Yes I want to know more">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to ask another one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you answer one more?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have another question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Fallback Intent" fallbackIntent="true"/>
+  <intents name="Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Where/When is Next?">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when is it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="conference dates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Next dates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dates of Next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dates"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when is Next?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="conference location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cloud next location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do I get to Next?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where is Next?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="No, I'm done">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="done"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="quit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go away"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No more questions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't have any more questions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Yes I want to know moreTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your question? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry. I didn't get that. Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry. I didn't get that. You can ask me questions about Cloud Next.  Would you like to try again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whoops! I didn't get that. Would you like to try again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, I can answer your questions about Cloud Next.  What would you like to know? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Where/When is Next?TxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Next &#x2019;18 is taking over the Moscone Center in San Francisco from July 24th to July 26th. The Moscone Center is located at 748 Howard Street in San Francisco. Do you have any more questions about Cloud Next? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Where/When is Next?TxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="No, I'm doneTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok! Enjoy Cloud Next! Goodbye "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.5 //@actions.6" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.6 //@actions.7" name="bot5"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

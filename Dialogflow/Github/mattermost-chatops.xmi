@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="mattermost-chatops">
+  <intents name="search instance intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="abc-xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="instance name with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="m3a.small"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="instance name with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="pqr"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="related instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="m2.nano"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="related instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="t1.medium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="search instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="abc"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="start_instance intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="xyz-abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="aws.abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please start instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="oplk"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="k1"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="last build intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="abc-1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me info of last build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="abc-xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me information of last build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about last deployment on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="xyz"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="commit intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my commit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="8bae17ddb53176740d57c09c6fe26cf382aa1668"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="abc-xyz"/>
+        <tokens xsi:type="generator:Literal" text=" deployed ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my commit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="8bae17ddb53176740d57c09c6fe26cf382aa1668"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="abc-123"/>
+        <tokens xsi:type="generator:Literal" text=" deployed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my commit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="8bae17ddb53176740d57c09c6fe26cf382aa1668"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="abc-1"/>
+        <tokens xsi:type="generator:Literal" text=" deployed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="commit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="8bae17ddb53176740d57c09c6fe26cf382aa1668"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="abc-1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="commit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="8bae17ddb53176740d57c09c6fe26cf382aa1668"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="abc-123"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="commit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="8bae17ddb53176740d57c09c6fe26cf382aa1668"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="abc-xyz"/>
+      </inputs>
+    </inputs>
+    <parameters name="commit" entity="//@entities.1"/>
+    <parameters name="any"/>
+  </intents>
+  <intents name="list instance intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list instances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="all instances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list of all instances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list of instances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me all instance names"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give all instances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me a list of instances"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list instance"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="last failed build intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last failed build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="abc-xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me info of last failed build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="xyz-1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about last failed build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me information of last failed deployment on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="xyz"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="status_intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="status of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="status of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="abc-xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me status of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="z1.small"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="info of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me stats of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="abc"/>
+        <tokens xsi:type="generator:Literal" text=" instance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me status of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="t2.large"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="last successful build intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last successful build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="xyz-abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me information of last successful deployment on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me about last successful deployment on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="xyz-1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me info of last successful build on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="xyz"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="reboot_instance intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reboot "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reboot "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="abc-xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reboot instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="xyz.abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please reboot instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="abc.xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reboot instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="abc"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="stop_instance intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="abc-xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="abc.xyz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please stop instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="aws.abc"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="xyz"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="scale_intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="scale "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="abc"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="t1.nano"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="scale intance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="abc"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="z15.medium"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="scale "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="abc"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="a1.xlarge"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="scale instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="abc"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="z1.small"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer instance "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="abc"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.1" textReference="b2.small"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+    <parameters name="any1"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="car">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="honda">
+        <values>honda</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="tata">
+        <values>tata</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="ford">
+        <values>ford</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="hundai">
+        <values>hundai</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="jaguar">
+        <values>jaguar</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="commit">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="\b[0-9a-f]{5,40}\b"/>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="search instance intentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.2" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.2" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.2" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.3" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.2" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.2" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.2" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.4" name="bot13"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,128 @@
+Chatbot "videogame-language-model" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	ItemDoubleIntent :
+		inputs in en {
+			( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"show me " ( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			"show me " ( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"fortnite " ( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"fortnite " ( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"give me " ( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			"give me " ( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			"what are all " ( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"what are all " ( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"what is " ( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"what is " ( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ] " items" ,
+			"give " ( itemTypeOne ) [ itemTypeOne ] " " ( itemTypeTwo ) [ itemTypeTwo ] ,
+			"give " ( itemTypeOne ) [ itemTypeOne ] " and " ( itemTypeTwo ) [ itemTypeTwo ]
+		}
+		parameters :
+			itemTypeOne : entity itemType ;
+			itemTypeTwo : entity itemType ;
+
+	ItemDoubleRarityIntent :
+		inputs in en {
+			( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"show me " ( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			"show me " ( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"fortnite " ( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"fortnite " ( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"give me " ( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			"give me " ( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			"what are all " ( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"what are all " ( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"what is " ( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"what is " ( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ] " items" ,
+			"give " ( itemRarityOne ) [ itemRarityOne ] " " ( itemRarityTwo ) [ itemRarityTwo ] ,
+			"give " ( itemRarityOne ) [ itemRarityOne ] " and " ( itemRarityTwo ) [ itemRarityTwo ]
+		}
+		parameters :
+			itemRarityOne ,
+			itemRarityTwo : entity text ;
+
+	MapVersionIntent :
+		inputs in en {
+			( version ) [ version ] ,
+			"show me " ( version ) [ version ] ,
+			"show me season " ( version ) [ version ] " map" ,
+			"map season " ( version ) [ version ] ,
+			"map from fortnite season " ( version ) [ version ]
+		}
+		parameters :
+			version : entity float ;
+
+	ItemTypeIntent :
+		inputs in en {
+			( itemType ) [ itemType ] ,
+			"show me " ( itemType ) [ itemType ] ,
+			( itemType ) [ itemType ] " items" ,
+			"fortnite " ( itemType ) [ itemType ] " items" ,
+			"give me " ( itemType ) [ itemType ] ,
+			"what are all " ( itemType ) [ itemType ] ,
+			"what is " ( itemType ) [ itemType ] ,
+			"give " ( itemType ) [ itemType ]
+		}
+		parameters :
+			itemType : entity itemType ;
+
+	"Default Fallback Intent" Fallback :
+
+	ItemTypeAndRarityIntent :
+		inputs in en {
+			( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] ,
+			"show me " ( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] ,
+			( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] " items" ,
+			"fortnite " ( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] " items" ,
+			"give me " ( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] ,
+			"what are all " ( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] ,
+			"what is " ( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ] ,
+			"give " ( itemRarity ) [ itemRarity ] " " ( itemType ) [ itemType ]
+		}
+		parameters :
+			itemType : entity itemType ;
+			itemRarity : entity text ;
+
+entities :
+	Simple entity itemType :
+		inputs in en {
+			explosives synonyms explosives , explosive , bomb , bombs , dynamite
+			utility synonyms utility
+			"healing Items" synonyms "healing Items" , healing , health , energy , life
+			"foraged healing items" synonyms "foraged healing items" , "foraged healing" , "picked up healing" , "picked up" , plants
+			traps synonyms traps
+			camouflage synonyms camouflage , hiding
+			mobility synonyms mobility
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/c67c63d5-0dd3-4692-b674-5039070840b1" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user ItemDoubleIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user ItemDoubleRarityIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user MapVersionIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user ItemTypeIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user ItemTypeAndRarityIntent => bot7 : chatbot HttpRequest , HttpResponse ;
+

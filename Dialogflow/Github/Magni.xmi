@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Magni">
+  <intents name="Default Welcome Intent"/>
+  <intents name="rotate">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rotate "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="right"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="300 degrees"/>
+      </inputs>
+    </inputs>
+    <parameters name="leftright" entity="//@entities.3"/>
+    <parameters name="angle" entity="//@entities.0"/>
+  </intents>
+  <intents name="gotowaypoint">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to the office"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Bob's"/>
+      </inputs>
+    </inputs>
+    <parameters name="waypointname"/>
+  </intents>
+  <intents name="listwaypoints">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me a list of the waypoints"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list waypoints"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="user commands forward">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ahead "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="3 feet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="4 inches"/>
+        <tokens xsi:type="generator:Literal" text=" forward"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="3 feet"/>
+        <tokens xsi:type="generator:Literal" text=" ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="keep going "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="3 feet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="straight ahead "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="3 feet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="199 miles"/>
+        <tokens xsi:type="generator:Literal" text=" forward"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="forward "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="2 meters"/>
+      </inputs>
+    </inputs>
+    <parameters name="unit-length"/>
+  </intents>
+  <intents name="find">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't see a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="mutt"/>
+        <tokens xsi:type="generator:Literal" text=" here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="look for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="bottle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you see a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="cat"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="find a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="bottle"/>
+      </inputs>
+    </inputs>
+    <parameters name="findable" entity="//@entities.1"/>
+  </intents>
+  <intents name="removewaypoint">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove waypoint "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="kitchen"/>
+      </inputs>
+    </inputs>
+    <parameters name="waypointname" required="true"/>
+  </intents>
+  <intents name="setwaypoint">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set waypoint "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="foo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set a waypoint "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="office"/>
+      </inputs>
+    </inputs>
+    <parameters name="waypointname"/>
+  </intents>
+  <intents name="turn">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="right"/>
+      </inputs>
+    </inputs>
+    <parameters name="turnmeasure" entity="//@entities.2" required="true"/>
+  </intents>
+  <intents name="user commands backward">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back up "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="4 in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reverse "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="4 feet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="backward "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="3 miles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="backward"/>
+      </inputs>
+    </inputs>
+    <parameters name="unit-length"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="angle">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="@sys.number-integer"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="findable">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="aeroplane">
+        <values>aeroplane</values>
+        <values>airplane</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="dog">
+        <values>dog</values>
+        <values>mutt</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bird">
+        <values>bird</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="boat">
+        <values>boat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bottle">
+        <values>bottle</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bus">
+        <values>bus</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="car">
+        <values>car</values>
+        <values>automobile</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cat">
+        <values>cat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="chair">
+        <values>chair</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cow">
+        <values>cow</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="dining table">
+        <values>dining table</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="horse">
+        <values>horse</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="motorbike">
+        <values>motorbike</values>
+        <values>motorcycle</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="person">
+        <values>person</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="potted plant">
+        <values>potted plant</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="sheep">
+        <values>sheep</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name=",sofa">
+        <values>,sofa</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="train">
+        <values>train</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="tv monitor">
+        <values>tvmonitor</values>
+        <values>tv screen</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="turnmeasure">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="left">
+        <values>left</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="right">
+        <values>right</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="around">
+        <values>around</values>
+        <values>round</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="leftright">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="left">
+        <values>left</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="right">
+        <values>right</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://&lt;example>" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="rotateTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x201c;I didn&#x2019;t understand that, I&#x2019;m just a bot with a small vocabulary.&#x201d;. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.3" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.3" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.3" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.3" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.3" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.3" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.3" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.3" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.4" name="bot11"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,101 @@
+Chatbot "multimodal-food-apps" language : en
+
+intents :
+
+JournalIntent :
+	inputs in en {
+		"Food journal log " ( foodInfo ) [ foodInfo ] ,
+		"log " ( foodInfo ) [ foodInfo ] ,
+		"journal " ( foodInfo ) [ foodInfo ]
+	}
+	parameters :
+		foodInfo : entity text ;
+
+YesIntent :
+	inputs in en {
+		yes
+}
+
+HelpIntent :
+	inputs in en {
+		options ,
+		commands
+}
+
+SignInIntent :
+	inputs in en {
+		"Sign in " ( participantId ) [ participantId ] ,
+		"Sign in user " ( participantId ) [ participantId ]
+	}
+	parameters :
+		participantId : entity number ;
+
+ReadIntent :
+	inputs in en {
+		"read my last log" ,
+		read
+}
+
+"Default Welcome Intent" :
+
+AccountInfoIntent :
+	inputs in en {
+		"am I logged in" ,
+		"my current account" ,
+		"what is my current account"
+}
+
+SignOutIntent :
+	inputs in en {
+		"sign out"
+}
+
+HelloWorldIntent :
+	inputs in en {
+		"Talk to Food Journal" ,
+		"Food Journal" ,
+		"my food journal"
+}
+
+NoIntent :
+	inputs in en {
+		^no
+}
+
+END :
+	inputs in en {
+		exit
+}
+
+"Default Fallback Intent" Fallback :
+
+DeleteIntent :
+	inputs in en {
+		delete ,
+		"delete my last log"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/3059c04e-1b8f-4e0b-98f4-fa60e93b1d27" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user JournalIntent => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user YesIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user HelpIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user SignInIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user ReadIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user "Default Welcome Intent" => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user AccountInfoIntent => bot7 : chatbot HttpRequest , HttpResponse ;
+	- user8 : user SignOutIntent => bot8 : chatbot HttpRequest , HttpResponse ;
+	- user9 : user HelloWorldIntent => bot9 : chatbot HttpRequest , HttpResponse ;
+	- user10 : user NoIntent => bot10 : chatbot HttpRequest , HttpResponse ;
+	- user11 : user END => bot11 : chatbot HttpRequest , HttpResponse ;
+	- user12 : user "Default Fallback Intent" => bot12 : chatbot HttpRequest , HttpResponse ;
+	- user13 : user DeleteIntent => bot13 : chatbot HttpRequest , HttpResponse ;
+

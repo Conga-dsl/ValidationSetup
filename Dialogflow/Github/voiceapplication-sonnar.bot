@@ -1,0 +1,176 @@
+Chatbot "voiceapplication-sonnar" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+YesIntent :
+	inputs in en {
+		kay ,
+		yes ,
+		k ,
+		okay ,
+		ok ,
+		"yes please" ,
+		yas ,
+		yu ,
+		yup ,
+		yea ,
+		yah ,
+		yep ,
+		yass ,
+		"yass queen" ,
+		"queen yass" ,
+		"queen yes"
+}
+
+NoIntent :
+	inputs in en {
+		none ,
+		nope ,
+		noor ,
+		nah ,
+		"nah thanks" ,
+		"no thanks" ,
+		^no ,
+		nein ,
+		nu ,
+		"no, fuck off"
+}
+
+ExitIntent :
+	inputs in en {
+		exit ,
+		"exit please" ,
+		"please exit the game" ,
+		quit ,
+		"leave the game" ,
+		"quit now" ,
+		"quit please" ,
+		"please escape" ,
+		escape ,
+		leave ,
+		"please leave" ,
+		"close please" ,
+		close ,
+		"force close"
+}
+
+HelpIntent :
+	inputs in en {
+		"help please" ,
+		help ,
+		"help me" ,
+		"help me please" ,
+		assist ,
+		"assist me" ,
+		"assist me please" ,
+		"I need help" ,
+		tutorial ,
+		"tutorial please" ,
+		"please give me information"
+}
+
+PlayIntent :
+	inputs in en {
+		Play ,
+		"play please" ,
+		start ,
+		"start please" ,
+		"start the game" ,
+		"start game" ,
+		"play the game" ,
+		"play game" ,
+		go
+}
+
+"Default Fallback Intent" Fallback :
+
+RankIntent :
+	inputs in en {
+		"what is my highest score" ,
+		"what is my score" ,
+		score ,
+		rank ,
+		"rank please" ,
+		"score please" ,
+		scoreboard ,
+		"rank list" ,
+		"ranking tiers" ,
+		ranks ,
+		"what is my rank" ,
+		"what is my highest rank" ,
+		ranking ,
+		"what is my best score" ,
+		"what is my best rank"
+}
+
+BackToMenuIntent :
+	inputs in en {
+		"go back" ,
+		"back to menu" ,
+		"back to main menu" ,
+		"please go to menu" ,
+		"back please" ,
+		"go back to menu" ,
+		"go back to main menu" ,
+		"please go back" ,
+		"please go back to menu" ,
+		"please go back to main menu" ,
+		"please menu" ,
+		menu ,
+		"menu please" ,
+		"main menu please" ,
+		"main menu please" ,
+		"main menu"
+}
+
+BoxIntent :
+	inputs in en {
+		( boxNumberSelected ) [ boxNumberSelected ] ,
+		( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"I will choose " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"I will choose " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"I\'ll go for " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"I\'ll go for " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"I\'ll select " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"I\'ll select " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"My selection will be " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"My selection will be " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"box " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"box " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"box number " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"box number " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"number " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"number " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"sound " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"sound " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"sound number " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"sound number " ( boxNumberSelected ) [ boxNumberSelected ] " please" ,
+		"I choose " ( boxNumberSelected ) [ boxNumberSelected ] ,
+		"I choose " ( boxNumberSelected ) [ boxNumberSelected ] " please"
+	}
+	parameters :
+		boxNumberSelected : entity float ;
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/c67c63d5-0dd3-4692-b674-5039070840b1" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user YesIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user NoIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user ExitIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user HelpIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user PlayIntent => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user "Default Fallback Intent" => bot7 : chatbot HttpRequest , HttpResponse ;
+	- user8 : user RankIntent => bot8 : chatbot HttpRequest , HttpResponse ;
+	- user9 : user BackToMenuIntent => bot9 : chatbot HttpRequest , HttpResponse ;
+	- user10 : user BoxIntent => bot10 : chatbot HttpRequest , HttpResponse ;
+

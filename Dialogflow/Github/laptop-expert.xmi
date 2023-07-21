@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="laptop-expert">
+  <intents name="Default Welcome Intent"/>
+  <intents name="need_laptop">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" TB drive"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB drive"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want a laptop and mu budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="100$"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need a laptop and my budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="100$"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need a laptop my budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="100$"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="500$"/>
+        <tokens xsi:type="generator:Literal" text=" laptop and"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="500$"/>
+        <tokens xsi:type="generator:Literal" text=" laptop with"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="500$"/>
+        <tokens xsi:type="generator:Literal" text=" laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to spend "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="500$"/>
+        <tokens xsi:type="generator:Literal" text=" on laptop and"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to spend "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="500$"/>
+        <tokens xsi:type="generator:Literal" text=" on laptop with"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" TB of storage"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to spend "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="500$"/>
+        <tokens xsi:type="generator:Literal" text=" on laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of storage"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="intel"/>
+        <tokens xsi:type="generator:Literal" text=" processor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="15"/>
+        <tokens xsi:type="generator:Literal" text=" inches in my laptop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="16"/>
+        <tokens xsi:type="generator:Literal" text="'' display"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It should be "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="13.3"/>
+        <tokens xsi:type="generator:Literal" text="'' display"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" inch screen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It needs to have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" inch screen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" inch diagonal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="13''"/>
+        <tokens xsi:type="generator:Literal" text=" screen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="50"/>
+        <tokens xsi:type="generator:Literal" text=" GB of RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="AMD"/>
+        <tokens xsi:type="generator:Literal" text=" processor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" GB of RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" GB RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" GB of RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It should have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" GB of RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" GB of RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="4"/>
+        <tokens xsi:type="generator:Literal" text=" GB of RAM"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="intel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="intel"/>
+        <tokens xsi:type="generator:Literal" text=" processor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="intel"/>
+        <tokens xsi:type="generator:Literal" text=" processor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It needs to have an "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="intel"/>
+        <tokens xsi:type="generator:Literal" text=" processor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It should have an "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="intel"/>
+        <tokens xsi:type="generator:Literal" text=" processor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to spend less than "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="323&#x20b4;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My budget is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="5000$"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The top price is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="1000$"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The top price for me is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="1000$"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of HDD"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of storage"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of storage"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of storage"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want HDD with the capacity of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to store "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of data"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to store "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of data"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of storage capacity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" It should have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="500"/>
+        <tokens xsi:type="generator:Literal" text=" GB of storage capacity"/>
+      </inputs>
+    </inputs>
+    <parameters name="Ram" entity="//@entities.4"/>
+    <parameters name="unit-currency"/>
+    <parameters name="Processor" entity="//@entities.0"/>
+    <parameters name="Screen_diagonal" entity="//@entities.2"/>
+    <parameters name="Drive" entity="//@entities.3"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="Processor">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Intel">
+        <values>Intel</values>
+        <values>Core</values>
+        <values>Celeron</values>
+        <values>Xeon</values>
+        <values>Pentium</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="AMD">
+        <values>AMD</values>
+        <values>A10</values>
+        <values>A9</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Price">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="@sys.number:number"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Screen_diagonal">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="@sys.number:number"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Drive">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="@sys.number:number"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Ram">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="@sys.number:number"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://&lt;example>" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="need_laptopTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4" name="bot3"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

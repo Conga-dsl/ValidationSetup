@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="your_song">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bonjour?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thank you"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="goodbye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Genre_english">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recommend me some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="jazz"/>
+        <tokens xsi:type="generator:Literal" text=" musics by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Adele"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recommend me some musics of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="jazz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="rap"/>
+        <tokens xsi:type="generator:Literal" text=" music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="rock"/>
+        <tokens xsi:type="generator:Literal" text=" musics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recommend me some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="jazz"/>
+        <tokens xsi:type="generator:Literal" text=" musics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="rap"/>
+        <tokens xsi:type="generator:Literal" text=" music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recommend me some music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recommend me music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I NEED  "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="JAZZ"/>
+        <tokens xsi:type="generator:Literal" text=" music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="POP"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Disco"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="R&amp;"/>
+        <tokens xsi:type="generator:Literal" text="B"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="some music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="R&amp;B"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="popular"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="popular"/>
+        <tokens xsi:type="generator:Literal" text=" musics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="classical"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="folks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="hiphop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Taylor Swift"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="rap"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="rock"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'm little bit boring. can you recommend me some music?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="fine. can you recommend me some musics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="recommend me some musics"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you recommend me some "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="rock"/>
+        <tokens xsi:type="generator:Literal" text=" musics by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="linkin park"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you recommend me some musics by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="linkin park"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you recommend me some musics?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Popular"/>
+      </inputs>
+    </inputs>
+    <parameters name="genre" entity="//@entities.2" required="true">
+      <prompts language="ENGLISH">
+        <prompts>what genre do you want</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="music-artist"/>
+  </intents>
+  <intents name="song_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you recommend me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="10"/>
+        <tokens xsi:type="generator:Literal" text=" musics similar to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="IN THE END"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Why not try "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Hotel California"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I WANT TO LISTEN &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="do you hear people sing"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="see you again"/>
+        <tokens xsi:type="generator:Literal" text="&quot;califo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to listen to ALL RISE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to listen to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="ALL RISE"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="In The End"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="See You Again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like The "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Smile Song"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="The Smile Song"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="The Smile Song"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like Best "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="of You"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="yellow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="We Are The World."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="We Are The World"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no. I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="THE LOVE SONG"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="This Is Me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no. i like something similar to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="we are the world"/>
+      </inputs>
+    </inputs>
+    <parameters name="music_name" entity="//@entities.1" required="true"/>
+    <parameters name="number" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="Default Welcome Intent - custom"/>
+  <intents name="Default Fallback Intent" fallbackIntent="true">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rhi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e0a;&#x53e5;&#x8bdd;&#x548b;&#x6ca1;&#x4e86;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="artist">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="artist">
+        <values>artist</values>
+        <values>musician</values>
+        <values>&#x6b4c;&#x624b;</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="music_name">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#x6b4c;&#x540d;">
+        <values>&#x6b4c;&#x540d;</values>
+        <values>&#x6b4c;&#x66f2;&#x540d;&#x5b57;</values>
+        <values>music name</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Genre">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Genre">
+        <values>Genre</values>
+        <values>music style</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://b02b-137-132-219-30.ngrok.io" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+    <inputs language="CHINESE">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="goodbyeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you next time "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Genre_englishTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok  I will recommend you some "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=" musics "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="song_nameTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey&#xff0c;I can recommend you some musics. You just need to tell me what genre of music you like "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1">
+      <outcoming intent="//@intents.4" name="user2">
+        <target actions="//@actions.5" name="bot2"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.2" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.3" name="user5">
+    <target actions="//@actions.5" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.6" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+  <languages>CHINESE</languages>
+</generator:Bot>

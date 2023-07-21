@@ -1,0 +1,99 @@
+Chatbot marysbikeshop language : en
+
+intents :
+
+"Yes I want to know more" :
+	inputs in en {
+		"i want to ask another one" ,
+		"I do" ,
+		"of course" ,
+		yeah ,
+		"I have a question" ,
+		"Yes I do" ,
+		"Can you answer one more?" ,
+		"I have another question" ,
+		"I want to know more" ,
+		yes
+}
+
+"Fallback Intent" Fallback :
+
+"Welcome Intent" :
+	inputs in en {
+		^hi ,
+		hello
+}
+
+"Where/When is Next?" :
+	inputs in en {
+		"where is it?" ,
+		"when is it?" ,
+		"conference dates" ,
+		"Next dates" ,
+		"dates of Next" ,
+		dates ,
+		"when is Next?" ,
+		"conference location" ,
+		"next location" ,
+		"Cloud next location" ,
+		"how do I get to Next?" ,
+		location ,
+		"where is Next?"
+}
+
+"No, I\'m done" :
+	inputs in en {
+		stop ,
+		done ,
+		quit ,
+		"go away" ,
+		"No more questions" ,
+		"I don\'t" ,
+		nope ,
+		"I don\'t have any more questions" ,
+		^no
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Yes I want to know moreTxtResp1" :
+		inputs in en {
+			"What is your question? "
+	}
+	text response "Fallback IntentTxtResp1" :
+		inputs in en {
+			"Sorry. I didn\'t get that. Can you say that again? " ,
+			"Sorry. I didn\'t get that. You can ask me questions about Cloud Next.  Would you like to try again? " ,
+			"Whoops! I didn\'t get that. Would you like to try again? "
+	}
+	text response "Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi, I can answer your questions about Cloud Next.  What would you like to know? "
+	}
+	text response "Where/When is Next?TxtResp1" :
+		inputs in en {
+			"Next ’18 is taking over the Moscone Center in San Francisco from July 24th to July 26th. The Moscone Center is located at 748 Howard Street in San Francisco. Do you have any more questions about Cloud Next? "
+	}
+	text response "Where/When is Next?TxtResp2" :
+		inputs in en {
+			" "
+	}
+	text response "No, I\'m doneTxtResp2" :
+		inputs in en {
+			"Ok! Enjoy Cloud Next! Goodbye "
+	}
+
+flows :
+	- user1 : user "Yes I want to know more" => bot1 : chatbot "Yes I want to know moreTxtResp1" ;
+	- user2 : user "Fallback Intent" => bot2 : chatbot "Fallback IntentTxtResp1" ;
+	- user3 : user "Welcome Intent" => bot3 : chatbot "Welcome IntentTxtResp1" ;
+	- user4 : user "Where/When is Next?" => bot4 : chatbot "Where/When is Next?TxtResp1" , "Where/When is Next?TxtResp2" ;
+	- user5 : user "No, I\'m done" => bot5 : chatbot "Where/When is Next?TxtResp2" , "No, I\'m doneTxtResp2" ;
+

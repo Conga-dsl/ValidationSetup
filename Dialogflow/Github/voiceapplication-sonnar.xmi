@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="voiceapplication-sonnar">
+  <intents name="Default Welcome Intent"/>
+  <intents name="YesIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="kay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="k"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yass"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yass queen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="queen yass"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="queen yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="NoIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="none"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="noor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nein"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no, fuck off"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ExitIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exit please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please exit the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="quit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="quit now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="quit please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please escape"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="escape"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="leave"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please leave"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="close please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="close"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="force close"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="HelpIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="assist"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="assist me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="assist me please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tutorial"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tutorial please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please give me information"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="PlayIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Play"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="RankIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my highest score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rank"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rank please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="score please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="scoreboard"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rank list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ranking tiers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ranks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my rank"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my highest rank"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ranking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my best score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my best rank"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="BackToMenuIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back to menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back to main menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please go to menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go back to menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go back to main menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please go back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please go back to menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please go back to main menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="menu"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="menu please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main menu please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main menu please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main menu"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="BoxIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I will choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I will choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll go for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll go for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll select "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll select "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My selection will be "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My selection will be "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="box "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="box "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="box number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="box number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sound "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sound "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sound number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sound number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="boxNumberSelected"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+    </inputs>
+    <parameters name="boxNumberSelected" defaultEntity="FLOAT"/>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/c67c63d5-0dd3-4692-b674-5039070840b1" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.0 //@actions.1" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.0 //@actions.1" name="bot10"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

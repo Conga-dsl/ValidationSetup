@@ -1,0 +1,139 @@
+Chatbot "wellness-tracker-jovo" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+GetExerciseDurationIntent :
+	inputs in en {
+		"how long have i worked out " ( timeframe ) [ timeframe ] ,
+		"how many minutes did i work out " ( timeframe ) [ timeframe ] ,
+		"how much did i workout " ( timeframe ) [ timeframe ] ,
+		"how much time did i " ( exerciseType ) [ exerciseType ] " " ( timeframe ) [ timeframe ] ,
+		"how long did i " ( exerciseType ) [ exerciseType ] " " ( timeframe ) [ timeframe ] ,
+		"how much i " ( exerciseType ) [ exerciseType ] " " ( timeframe ) [ timeframe ] ,
+		"how much " ( exerciseType ) [ exerciseType ] " i did " ( timeframe ) [ timeframe ]
+	}
+	parameters :
+		timeframe : entity date ;
+		exerciseType : entity text ;
+
+LogWeightIntent :
+	inputs in en {
+		( weight ) [ weight ] " pounds" ,
+		"please log my weight at " ( weight ) [ weight ] " pounds" ,
+		"i weigh " ( weight ) [ weight ] " pounds" ,
+		"log my weight " ( weight ) [ weight ] " pounds"
+	}
+	parameters :
+		weight : entity float ;
+
+GetLastExerciseIntent :
+	inputs in en {
+		"what was my last exercise" ,
+		"tell me about my latest exercise" ,
+		"tell me about my latest workout" ,
+		"what was the last exercise i logged" ,
+		"what was the last workout i logged" ,
+		"tell me about my last workout" ,
+		"what was the latest workout i logged" ,
+		"what was my last exercise" ,
+		"what was my last workout"
+}
+
+LogHeightIntent :
+	inputs in en {
+		( feet ) [ feet ] " feet " ( inches ) [ inches ] " inches" ,
+		( feet ) [ feet ] " foot " ( inches ) [ inches ] ,
+		( feet ) [ feet ] " foot " ( inches ) [ inches ] " tall" ,
+		( feet ) [ feet ] " feet" ,
+		( feet ) [ feet ] " feet tall" ,
+		"i am " ( feet ) [ feet ] " feet " ( inches ) [ inches ] " inches tall" ,
+		"i am " ( feet ) [ feet ] " feet tall" ,
+		"i\'m " ( feet ) [ feet ] " feet " ( inches ) [ inches ] " inches tall" ,
+		"i\'m " ( feet ) [ feet ] " feet tall" ,
+		"set my height" ,
+		"set my height at " ( feet ) [ feet ] " foot " ( inches ) [ inches ] " inches" ,
+		"set my height at " ( inches ) [ inches ] " inches"
+	}
+	parameters :
+		feet : entity float ;
+		inches : entity float ;
+
+LogExerciseIntent :
+	inputs in en {
+		"log " ( duration ) [ duration ] " of " ( exerciseType ) [ exerciseType ] ,
+		"i did " ( duration ) [ duration ] " of " ( exerciseType ) [ exerciseType ] ,
+		( duration ) [ duration ] " of " ( exerciseType ) [ exerciseType ] ,
+		"i " ( exerciseType ) [ exerciseType ] " for " ( duration ) [ duration ] ,
+		"log a " ( exerciseType ) [ exerciseType ]
+	}
+	parameters :
+		duration ,
+		exerciseType : entity text ;
+
+GetExerciseCountIntent :
+	inputs in en {
+		"how many times did i work out " ( timeframe ) [ timeframe ] ,
+		"i worked out how many times " ( timeframe ) [ timeframe ] ,
+		"how many workouts did i log " ( timeframe ) [ timeframe ] ,
+		"what was my activity " ( timeframe ) [ timeframe ] ,
+		"did i crush it " ( timeframe ) [ timeframe ] ,
+		"how much did i workout " ( timeframe ) [ timeframe ]
+	}
+	parameters :
+		timeframe : entity date ;
+		exerciseType : entity text ;
+
+WelcomeIntent :
+	inputs in en {
+		hello
+}
+
+"Default Fallback Intent" Fallback :
+
+GetLastWeightIntent :
+	inputs in en {
+		"how much do i weigh" ,
+		"how much did i weigh" ,
+		"what was my last weight" ,
+		"what was my last logged weight" ,
+		"what is my weight" ,
+		weight ,
+		"what\'s my current weight"
+}
+
+GetHeightIntent :
+	inputs in en {
+		"how tall am i" ,
+		"what\'s my height" ,
+		"what height did i log" ,
+		"what height did i store" ,
+		"what is my height" ,
+		height ,
+		"what\'s my current height" ,
+		"what is my current height"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/6560ab7e-b772-4487-90d9-e4cefe8af64f" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user GetExerciseDurationIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user LogWeightIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user GetLastExerciseIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user LogHeightIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user LogExerciseIntent => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user GetExerciseCountIntent => bot7 : chatbot HttpRequest , HttpResponse ;
+	- user8 : user WelcomeIntent => bot8 : chatbot HttpRequest , HttpResponse ;
+	- user9 : user "Default Fallback Intent" => bot9 : chatbot HttpRequest , HttpResponse ;
+	- user10 : user GetLastWeightIntent => bot10 : chatbot HttpRequest , HttpResponse ;
+	- user11 : user GetHeightIntent => bot11 : chatbot HttpRequest , HttpResponse ;
+

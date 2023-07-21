@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="VoiceClues">
+  <intents name="AnswerIsIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="option "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="option"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="option"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="option "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="option"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="option"/>
+      </inputs>
+    </inputs>
+    <parameters name="option" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="Default Welcome Intent"/>
+  <intents name="StartQuizIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the quiz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the quiz"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="RepeatIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat the question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat the question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="HelpIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need help"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="ScoreCardIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my score card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats my lifetime points"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="score card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my score card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whats my lifetime points"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="score card"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="arn:aws:lambda:us-east-1:290139081510:function:GuessWho" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1" name="bot7"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>
