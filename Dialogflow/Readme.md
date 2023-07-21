@@ -9,7 +9,7 @@ This folder contains 140 Dialogflow chatbots conform to CONGA model and the CONG
 Here below, there is a table with the results of the evaluation of the dialogflow chatbots. The table has the name of the chatbot, the number of issues per chatbot, and the number of rules among which the issues are divided. 
 This table is also found in the Dialogflow_results.xlsx document. The file Dialogflow_errors.xlsx contains the specific issues for each chatbot, the severity of the issue (error or warning) and the line in the DSL file where the issue is found.
 
-| Source      | Name                               | #RULES | #ISSUES |
+| Source      | Name                               | #Rules | #Issues |
 |-------------|------------------------------------|--------|---------|
 | Prebuild    | Agent-Name                         | 0      | 0       |
 | Prebuild    | Alarm                              | 1      | 6       |
