@@ -1,0 +1,82 @@
+Chatbot foodfinder language : en
+
+intents :
+
+LocationIntent :
+	inputs in en {
+		"consider " ( location ) [ location ] " as my preferred location" ,
+		( location ) [ location ] ,
+		( location ) [ location ] " is my preferred location" ,
+		"please search in this " ( location ) [ location ] ,
+		"I would like to search in this " ( location ) [ location ]
+	}
+	parameters :
+		location : entity text ;
+
+NewSearchIntent :
+	inputs in en {
+		"begin a new search" ,
+		"search again" ,
+		"search please" ,
+		"go for next search"
+}
+
+HearDetails :
+	inputs in en {
+		"love to hear this " ( restaurant ) [ restaurant ] " details" ,
+		"I would like to hear the details on this " ( restaurant ) [ restaurant ] ,
+		( restaurant ) [ restaurant ] " details" ,
+		"tell me more about this " ( restaurant ) [ restaurant ] ,
+		"Hear details" ,
+		"Hear the details"
+	}
+	parameters :
+		restaurant : entity text ;
+
+MoreIntent :
+	inputs in en {
+		"more details" ,
+		"more details please" ,
+		more
+}
+
+NextIntent :
+	inputs in en {
+		next ,
+		"next please" ,
+		"go for next" ,
+		"next restaurant please" ,
+		"next one" ,
+		"next one please" ,
+		"another restaurant"
+}
+
+BusinessSearchIntent :
+	inputs in en {
+		( recipe ) [ recipe ] ,
+		"place an order for this " ( recipe ) [ recipe ] ,
+		"where can i get this " ( recipe ) [ recipe ] ,
+		"I want " ( recipe ) [ recipe ] ,
+		"where can I get " ( recipe ) [ recipe ]
+	}
+	parameters :
+		recipe ,
+		restaurant : entity text ;
+
+actions :
+	Request post HttpRequest :
+		URL : "https://bjj3d7kqul.execute-api.eu-west-1.amazonaws.com/dev" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user LocationIntent => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user NewSearchIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user HearDetails => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user MoreIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user NextIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user BusinessSearchIntent => bot6 : chatbot HttpRequest , HttpResponse ;
+

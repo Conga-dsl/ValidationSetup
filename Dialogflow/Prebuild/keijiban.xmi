@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="keijiban">
+  <intents name="overview.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="overview"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="summary"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8981;&#x70b9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b5;&#x30de;&#x30ea;&#x30fc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8981;&#x7d04;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a73;&#x7d30;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="announcements.list.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="notice"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="notices"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="announcements"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me my announcements"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="announcements please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="any announcements?"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x77e5;&#x3089;&#x305b;&#x306f;&#x3042;&#x308b;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x77e5;&#x3089;&#x305b;&#x306f;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6848;&#x5185;&#x306f;&#x3042;&#x308b;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x77e5;&#x3089;&#x305b;&#x3092;&#x6559;&#x3048;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x77e5;&#x3089;&#x305b;&#x3092;&#x77e5;&#x308a;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30a2;&#x30ca;&#x30a6;&#x30f3;&#x30b9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x77e5;&#x3089;&#x305b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x3057;&#x3089;&#x305b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x77e5;&#x3089;&#x305b;&#x3092;&#x304a;&#x306d;&#x304c;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6848;&#x5185;&#x3092;&#x77e5;&#x308a;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6848;&#x5185;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x77e5;&#x3089;&#x305b;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="events.last.intent"/>
+  <intents name="cancel.schedule.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove invite"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel invite"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel schedule"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3069;&#x304b;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3068;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3081;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x53d6;&#x308a;&#x6d88;&#x3057;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x53d6;&#x308a;&#x6d88;&#x3057;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e0d;&#x53c2;&#x52a0;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b20;&#x5e2d;&#x3057;&#x307e;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b20;&#x5e2d;&#x306b;&#x3057;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b20;&#x5e2d;&#x306b;&#x3059;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b20;&#x5e2d;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x30ad;&#x30e3;&#x30f3;&#x30bb;&#x30eb;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x62db;&#x5f85;&#x3092;&#x30ad;&#x30e3;&#x30f3;&#x30bb;&#x30eb;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="default.cancel.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nevermind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exit"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x7d42;&#x4e86;&#x306b;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x7d42;&#x308f;&#x308a;&#x306b;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x51fa;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x9000;&#x51fa;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x7d42;&#x4e86;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30ad;&#x30e3;&#x30f3;&#x30bb;&#x30eb;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30ad;&#x30e3;&#x30f3;&#x30bb;&#x30eb;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30ad;&#x30e3;&#x30f3;&#x30bb;&#x30eb;&#x3059;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3081;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3081;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30c8;&#x30c3;&#x30d7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6c17;&#x306b;&#x3057;&#x306a;&#x3044;&#x3067;&#x304f;&#x3060;&#x3055;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6c17;&#x306b;&#x3057;&#x306a;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6c17;&#x306b;&#x3057;&#x306a;&#x3044;&#x3067;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3054;&#x304d;&#x3052;&#x3093;&#x3088;&#x3046;&#x3002;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3055;&#x3088;&#x3046;&#x306a;&#x3089;&#x3002;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x7d42;&#x308f;&#x308a;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x3057;&#x307e;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3058;&#x3083;&#x3042;&#x306d;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x307e;&#x305f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3055;&#x3088;&#x3046;&#x306a;&#x3089;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="default.fallback.intent" fallbackIntent="true"/>
+  <intents name="decline.event.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pass"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3060;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3044;&#x3044;&#x3048;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30d1;&#x30b9;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3081;&#x308b;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="attend.event.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hear more please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hear more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="more"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="details"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x53c2;&#x52a0;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30af;&#x30e9;&#x30b9;&#x306b;&#x51fa;&#x5e2d;&#x3057;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3067;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x306d;&#x304c;&#x3044;&#x3057;&#x307e;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x805e;&#x304f;&#x308f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x805e;&#x304b;&#x305b;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x805e;&#x304d;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x805e;&#x304d;&#x305f;&#x3044;&#x3088;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x805e;&#x304d;&#x305f;&#x3044;&#x306a;&#x3042;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30af;&#x30e9;&#x30b9;&#x306b;&#x53c2;&#x52a0;&#x3057;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3044;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3044;&#x3044;&#x3088;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3061;&#x308d;&#x3093;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30aa;&#x30fc;&#x30b1;&#x30fc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30aa;&#x30c3;&#x30b1;&#x30fc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="OK"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a73;&#x7d30;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a73;&#x7d30;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a73;&#x3057;&#x304f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x51fa;&#x5e2d;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x51fa;&#x5e2d;&#x3057;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x51fa;&#x5e2d;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x308f;&#x304b;&#x3063;&#x305f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x6559;&#x3048;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x8a73;&#x3057;&#x304f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x77e5;&#x308a;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;&#x805e;&#x304d;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x306f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="schedules.list.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="schedule"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="schedule please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me my schedule"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's my schedule like?"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306f;&#x3069;&#x3093;&#x306a;&#x611f;&#x3058;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x77e5;&#x308a;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x6559;&#x3048;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306f;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e88;&#x5b9a;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306f;&#x3069;&#x3046;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x79c1;&#x306e;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306f;&#xff1f;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="sign.in.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sign in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="login"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="authenticate"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a3c;&#x660e;&#x66f8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a3c;&#x660e;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a8d;&#x8a3c;&#x3059;&#x308b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" &#x30b5;&#x30a4;&#x30f3;&#x30a4;&#x30f3;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30ed;&#x30b0;&#x30a4;&#x30f3;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="event.skip.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no next invite"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no go to next event"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next event"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x3078;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30ad;&#x30c3;&#x30d7;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x98db;&#x3070;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x98db;&#x3070;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306e;&#x306b;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306b;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306e;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3044;&#x3044;&#x3048;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b9;&#x30ad;&#x30c3;&#x30d7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="signal.id.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my signal ID"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="signal ID?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's my signal ID?"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x767b;&#x9332;&#x3057;&#x305f;&#x756a;&#x53f7;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x767b;&#x9332;&#x306e;&#x756a;&#x53f7;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x767b;&#x9332;&#x756a;&#x53f7;&#x3092;&#x77e5;&#x308a;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x767b;&#x9332;&#x756a;&#x53f7;&#x3092;&#x6559;&#x3048;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x767b;&#x9332;&#x756a;&#x53f7;&#xff1f;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="events.list.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="things to do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="events"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get list of events"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30ea;&#x30b9;&#x30c8;&#x3092;&#x51fa;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x308b;&#x3079;&#x304d;&#x3053;&#x3068;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306e;&#x30ea;&#x30b9;&#x30c8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x62db;&#x5f85;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30a4;&#x30d9;&#x30f3;&#x30c8;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x308b;&#x3053;&#x3068;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="repeat.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="say the same again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you repeat that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="come again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="say it again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat what you've just said"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat these results"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please repeat that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you say that again?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sorry?"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x30fc;&#x56de;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#xff11;&#x5ea6;&#x304a;&#x306d;&#x304c;&#x3044;&#x3057;&#x307e;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x307e;&#x305f;&#x6765;&#x3066;&#x306d;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x307e;&#x305f;&#x6765;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x307e;&#x305f;&#x6765;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x56de;&#x8a00;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x7e70;&#x308a;&#x8fd4;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304f;&#x308a;&#x304b;&#x3048;&#x3057;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x540c;&#x3058;&#x3053;&#x3068;&#x3092;&#x8a00;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x56de;&#x8a00;&#x3063;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x56de;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x306a;&#x3093;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4eca;&#x8a00;&#x3063;&#x305f;&#x3053;&#x3068;&#x3092;&#x3082;&#x3046;&#x4e00;&#x56de;&#x7e70;&#x308a;&#x8fd4;&#x3057;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4eca;&#x8a00;&#x3063;&#x305f;&#x3053;&#x3068;&#x3092;&#x3082;&#x3046;&#x4e00;&#x56de;&#x8a00;&#x3063;&#x3066;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4eca;&#x306e;&#x3082;&#x3046;&#x4e00;&#x56de;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x306a;&#x3093;&#x3066;&#x8a00;&#x3063;&#x305f;&#x306e;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x9858;&#x3044;&#x3057;&#x307e;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4f55;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x305d;&#x308c;&#x3092;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x8a00;&#x3063;&#x3066;&#x4e0b;&#x3055;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x56de;&#x8a00;&#x3063;&#x3066;&#x304f;&#x308c;&#x307e;&#x305b;&#x3093;&#x304b;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x8a00;&#x3063;&#x3066;&#x304f;&#x308c;&#x307e;&#x305b;&#x3093;&#x304b;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x8a00;&#x3063;&#x3066;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="event.details.intent">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x8a73;&#x7d30;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3063;&#x3068;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="help.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can i do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30d8;&#x30eb;&#x30d7;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x52a9;&#x3051;&#x3057;&#x307e;&#x3057;&#x3087;&#x3046;&#x304b;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3069;&#x3046;&#x3057;&#x307e;&#x3057;&#x3087;&#x3046;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x79c1;&#x306b;&#x4f55;&#x304c;&#x3067;&#x304d;&#x308b;&#xff1f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x52a9;&#x3051;&#x3066;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="default.welcome.intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30cf;&#x30ed;&#x30fc;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x3072;&#x3055;&#x3057;&#x3076;&#x308a;&#x3067;&#x3059;&#x306d;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6328;&#x62f6;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x306d;&#x3048;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e45;&#x3057;&#x3076;&#x308a;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4eca;&#x65e5;&#x306f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3053;&#x3093;&#x306b;&#x3061;&#x306f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3069;&#x3046;&#x3082;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3042;&#x3001;&#x541b;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3084;&#x3042;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3054;&#x6328;&#x62f6;&#x3057;&#x307e;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x306f;&#x3044;&#x3001;&#x3053;&#x3093;&#x306b;&#x3061;&#x306f;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x304a;&#x3072;&#x3055;&#x3057;&#x3076;&#x308a;&#x3067;&#x3059;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3054;&#x6328;&#x62f6;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x7686;&#x3055;&#x3093;&#x3001;&#x3053;&#x3093;&#x306b;&#x3061;&#x306f;"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-wakabadai-noticeboard.cloudfunctions.net/dialogflowWebhook" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="overview.intentTxtResp1">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="overview.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="{name}&#x3055;&#x3093;{greetings}&#x3002; &#x65b0;&#x3057;&#x3044;&#x304a;&#x77e5;&#x3089;&#x305b;&#x304c;{announcements_count}&#x4ef6;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x305d;&#x308c;&#x304b;&#x3089; {events_count}&#x4ef6;&#x306e;&#x65b0;&#x3057;&#x3044;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="overview.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="{greetings}, {name}. You have {announcements_count} new notices and {events_count} new invitations. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="announcements.list.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3053;&#x3061;&#x3089;&#x304c;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3067;&#x3059;&#x3002;{notices_list}&#x3002;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304b;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x78ba;&#x8a8d;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="announcements.list.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="here's your notices. {notices_list}. Would you like to check your invites or schedule? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="events.last.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3053;&#x3061;&#x3089;&#x304c;&#x6700;&#x5f8c;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3067;&#x3059;&#x3002;{event_start}&#x306b; {event_name}&#x304c;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306b;&#x3064;&#x3044;&#x3066;&#x8a73;&#x3057;&#x304f;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x78ba;&#x8a8d;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x3082;&#x3057;&#x304f;&#x306f;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="events.last.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last event, {event_name} on {event_start}. Wanna hear more or do you want to review your schedule or check out your notices? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancel.schedule.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x308f;&#x304b;&#x308a;&#x307e;&#x3057;&#x305f;&#x3002;&#x305d;&#x3046;&#x3044;&#x305f;&#x3057;&#x307e;&#x3059;&#x3002;&#x3082;&#x3057;&#x304a;&#x6c17;&#x6301;&#x3061;&#x304c;&#x5909;&#x308f;&#x3063;&#x3066;&#x3082;&#x3001;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x6700;&#x521d;&#x304b;&#x3089;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x767b;&#x9332;&#x3057;&#x306a;&#x3051;&#x308c;&#x3070;&#x306a;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x672c;&#x5f53;&#x306b;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x6b20;&#x5e2d;&#x306b;&#x3057;&#x307e;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancel.schedule.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay, I can do that. But you&#x2019;ll have to re-register for the event if you change your mind. So, are you sure you want me to remove it? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="announcements.middle.intentTxtResp1">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306e;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3067;&#x3059;&#x3002;{announcement_name}. {announcement_description}&#x3002;&#x6b21;&#x306e;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="announcements.middle.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next notice, {announcement_name}. {announcement_description}. Do you want to hear next one? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="default.cancel.intentTxtResp1">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x307e;&#x305f;&#x304a;&#x4f1a;&#x3044;&#x3057;&#x307e;&#x3057;&#x3087;&#x3046;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="default.cancel.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you soon "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="default.fallback.intentTxtResp1">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3059;&#x307f;&#x307e;&#x305b;&#x3093;&#x3002;&#x3088;&#x304f;&#x5206;&#x304b;&#x308a;&#x307e;&#x305b;&#x3093;&#x3067;&#x3057;&#x305f;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4eca;&#x306e;&#x306f;&#x5c11;&#x3057;&#x308f;&#x304b;&#x308a;&#x306b;&#x304f;&#x304b;&#x3063;&#x305f;&#x3067;&#x3059;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x5c11;&#x3057;&#x8a00;&#x3044;&#x63db;&#x3048;&#x3066;&#x3044;&#x305f;&#x3060;&#x3051;&#x307e;&#x305b;&#x3093;&#x304b;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x5931;&#x793c;&#x3067;&#x3059;&#x304c;&#x3001;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x306d;&#x304c;&#x3044;&#x3057;&#x307e;&#x3059;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3061;&#x3087;&#x3063;&#x3068;&#x5206;&#x304b;&#x308a;&#x307e;&#x305b;&#x3093;&#x3067;&#x3057;&#x305f;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4eca;&#x3001;&#x306a;&#x3093;&#x3066;&#x304a;&#x3063;&#x3057;&#x3083;&#x3044;&#x307e;&#x3057;&#x305f;&#x304b;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x308f;&#x304b;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x3063;&#x3057;&#x3083;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x805e;&#x304d;&#x53d6;&#x308c;&#x307e;&#x305b;&#x3093;&#x3067;&#x3057;&#x305f;&#x3002;&#x306a;&#x3093;&#x3066;&#x304a;&#x3063;&#x3057;&#x3083;&#x3044;&#x307e;&#x3057;&#x305f;&#x304b;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3059;&#x3044;&#x307e;&#x305b;&#x3093;&#x3002;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x3063;&#x3057;&#x3083;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x307e;&#x305b;&#x3093;&#x304b;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3059;&#x3044;&#x307e;&#x305b;&#x3093;&#x3002;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x3063;&#x3057;&#x3083;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x8a00;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3059;&#x3044;&#x307e;&#x305b;&#x3093;&#x3002;&#x308f;&#x304b;&#x308a;&#x307e;&#x305b;&#x3093;&#x3067;&#x3057;&#x305f;&#x3002;&#x8a00;&#x3044;&#x63db;&#x3048;&#x3066;&#x304f;&#x308c;&#x307e;&#x305b;&#x3093;&#x304b;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3059;&#x3044;&#x307e;&#x305b;&#x3093;&#x3002;&#x306a;&#x3093;&#x3066;&#x304a;&#x3063;&#x3057;&#x3083;&#x3063;&#x3044;&#x307e;&#x3057;&#x305f;&#x304b;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x306d;&#x304c;&#x3044;&#x3057;&#x307e;&#x3059;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x8a00;&#x3063;&#x3066;&#x304f;&#x308c;&#x307e;&#x305b;&#x3093;&#x304b;&#xff1f; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x308f;&#x304b;&#x308a;&#x307e;&#x305b;&#x3093;&#x3067;&#x3057;&#x305f;&#x3002;&#x7e70;&#x308a;&#x8fd4;&#x3057;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x308f;&#x304b;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x3082;&#x3046;&#x4e00;&#x56de;&#x304a;&#x306d;&#x304c;&#x3044;&#x3057;&#x307e;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="default.fallback.intentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="decline.event.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e86;&#x89e3;&#x3067;&#x3059;&#x3002;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306b;&#x8ffd;&#x52a0;&#x3044;&#x305f;&#x3057;&#x307e;&#x305b;&#x3093;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="decline.event.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay, not adding this to your schedule "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="problem.intentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We are having some problems with your request, please try again later or contact our system administrator "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="problem.intentTxtResp3">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30ea;&#x30af;&#x30a8;&#x30b9;&#x30c8;&#x306b;&#x304a;&#x7b54;&#x3048;&#x3059;&#x308b;&#x3053;&#x3068;&#x304c;&#x3067;&#x304d;&#x307e;&#x305b;&#x3093;&#x3002;&#x306a;&#x306b;&#x304b;&#x554f;&#x984c;&#x304c;&#x3042;&#x308b;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;&#x5f8c;&#x307b;&#x3069;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x8a66;&#x3057;&#x3044;&#x305f;&#x3060;&#x304f;&#x304b;&#x3001;&#x30b7;&#x30b9;&#x30c6;&#x30e0;&#x7ba1;&#x7406;&#x8005;&#x306b;&#x304a;&#x5c0b;&#x306d;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancel.schedule.confirmed.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e86;&#x89e3;&#x3067;&#x3059;&#x3002;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x304b;&#x3089;&#x53d6;&#x308a;&#x9664;&#x304d;&#x307e;&#x3057;&#x305f;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancel.schedule.confirmed.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright, it&#x2019;s been removed from your schedule. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="last.announcements.intentTxtResp1">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3053;&#x3061;&#x3089;&#x304c;&#x6700;&#x5f8c;&#x306e;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3067;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="last.announcements.intentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that was the last notice "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.last.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6700;&#x5f8c;&#x306e;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3067;&#x3059;&#x3002;{schedule_name}&#x304c;&#x3001; {schedule_location}&#x3067; {schedule_start}&#x306b;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x3082;&#x3063;&#x3068;&#x8a73;&#x3057;&#x304f;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x3053;&#x3061;&#x3089;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x6b20;&#x5e2d;&#x306b;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.last.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last scheduled event, {schedule_name}. at {schedule_location} on {schedule_start}. Would you like to hear more, or remove it? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="attend.event.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e86;&#x89e3;&#x3067;&#x3059;&#x3002;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306b;&#x8ffd;&#x52a0;&#x3057;&#x307e;&#x3057;&#x305f;&#x3002;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x59cb;&#x307e;&#x308b;&#xff11;&#x6642;&#x9593;&#x524d;&#x306b;&#x78ba;&#x8a8d;&#x306e;&#x5408;&#x56f3;&#x3092;&#x304a;&#x9001;&#x308a;&#x3057;&#x307e;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="attend.event.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure it&#x2019;s been added to your schedule. We will send you a reminder an hour before the event starts. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.list.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="{schedules_count} &#x4ef6;&#x306e;&#x767b;&#x9332;&#x3057;&#x305f;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x6700;&#x521d;&#x306b;&#x3001; {schedule_name}&#x304c;&#x3001; {schedule_location}&#x3067; {schedule_start}&#x306b;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x3053;&#x308c;&#x306b;&#x3064;&#x3044;&#x3066;&#x8a73;&#x3057;&#x304f;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x3001;&#x3053;&#x3061;&#x3089;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x6b20;&#x5e2d;&#x306b;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;[&#x305d;&#x308c;&#x3068;&#x3082;&#x3001;&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;] "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.list.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You have {schedules_count} upcoming events. first item,  {schedule_name}. at {schedule_location} on {schedule_start}. Would you like to hear more, remove the invite[ or go on to the next one]? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.schedules.intentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There are no upcoming scheduled events, please check again later. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.schedules.intentTxtResp3">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e88;&#x5b9a;&#x3055;&#x308c;&#x305f;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306f;&#x3042;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x307e;&#x305f;&#x3054;&#x78ba;&#x8a8d;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002;&#x4f55;&#x304b;&#x3054;&#x7528;&#x306f;&#x3042;&#x308a;&#x307e;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="events.middle.intentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next invite, on {event_start}, there will be an {event_name}. Wanna hear more or would you like to check out the next invite? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="events.middle.intentTxtResp4">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306f;&#x3001;{event_start}&#x306b; {event_name}&#x304c;&#x884c;&#x308f;&#x308c;&#x307e;&#x3059;&#x3002;&#x3053;&#x308c;&#x306b;&#x3064;&#x3044;&#x3066;&#x8a73;&#x3057;&#x304f;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306b;&#x3064;&#x3044;&#x3066;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.events.intentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There are no new events, please check again later. anything else i can help you with? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.events.intentTxtResp3">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x3042;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x307e;&#x305f;&#x3054;&#x78ba;&#x8a8d;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002;&#x305d;&#x306e;&#x4ed6;&#x3001;&#x4f55;&#x304b;&#x3054;&#x7528;&#x306f;&#x3042;&#x308a;&#x307e;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="problem.login.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b5;&#x30a4;&#x30f3;&#x30a4;&#x30f3;&#x3059;&#x308b;&#x969b;&#x306b;&#x4f55;&#x304b;&#x554f;&#x984c;&#x304c;&#x3042;&#x308b;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;&#x6545;&#x610f;&#x306e;&#x5834;&#x5408;&#x306f;&#x7121;&#x8996;&#x3057;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002;&#x305d;&#x3046;&#x3067;&#x306a;&#x3044;&#x5834;&#x5408;&#x306f;&#x8a2d;&#x5b9a;&#x306e;&#x30d1;&#x30fc;&#x30bd;&#x30ca;&#x30e9;&#x30a4;&#x30ba;&#x691c;&#x7d22;&#x3092;&#x30aa;&#x30f3;&#x306b;&#x3057;&#x3066;&#x518d;&#x8a66;&#x884c;&#x3057;&#x3066;&#x4e0b;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="problem.login.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We encountered a problem signing you in, if this is intended, please ignore. Otherwise please enable &quot;Personal Results&quot; in your device settings, and try again. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.middle.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306e;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3067;&#x3059;&#x3002;{schedule_name}&#x304c;&#x3001; {schedule_location}&#x3067; {schedule_start}&#x306b;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306b;&#x3064;&#x3044;&#x3066;&#x8a73;&#x3057;&#x304f;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x3053;&#x3061;&#x3089;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x6b20;&#x5e2d;&#x306b;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.middle.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next event, {schedule_name}. at {schedule_location} on {schedule_start}. Would you like to hear more, remove the event or hear the next one? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancel.schedule.declined.intentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright, you can always change your schedule later. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="cancel.schedule.declined.intentTxtResp4">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e86;&#x89e3;&#x3067;&#x3059;&#x3002;&#x3044;&#x3064;&#x3067;&#x3082;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x5909;&#x66f4;&#x3059;&#x308b;&#x3053;&#x3068;&#x304c;&#x3067;&#x304d;&#x307e;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="event.skip.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x308f;&#x304b;&#x308a;&#x307e;&#x3057;&#x305f;&#x3002;&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3067;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="event.skip.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright, "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="signal.id.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3042;&#x306a;&#x305f;&#x306e;ID&#x306f; {signal_id}&#x3067;&#x3059;&#x3002;&#x6b21;&#x306b;&#x4f55;&#x3092;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="signal.id.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="your signal ID is {signal_id} "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="announcements.last.intentTxtResp1">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6700;&#x5f8c;&#x306e;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3067;&#x3059;&#x3002; {announcement_name}&#x3002;{announcement_description}&#x3002;&#x4ed6;&#x306b;&#x4f55;&#x304b;&#x3054;&#x7528;&#x306f;&#x3042;&#x308a;&#x307e;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="announcements.last.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last notice, {announcement_name}. {announcement_description}. That's all i have now, what do you want to do next? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="events.list.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="{events_count} &#x4ef6;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x6700;&#x521d;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306f;{event_start}&#x306b; {event_name} &#x304c;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306b;&#x3064;&#x3044;&#x3066;&#x8a73;&#x3057;&#x304f;&#x77e5;&#x308a;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="events.list.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You have {events_count} invites. First invite, {event_name} on {event_start}. Do you want to hear more about that event[, or go on to the next one]? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="repeat.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3059;&#x3044;&#x307e;&#x305b;&#x3093;&#x3002;&#x3082;&#x3046;&#x4e00;&#x5ea6;&#x304a;&#x3063;&#x3057;&#x3083;&#x3063;&#x3066;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="repeat.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I said "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Let me repeat that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedule.details.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x4e86;&#x89e3;&#x3067;&#x3059;&#x3002;&#x3053;&#x3061;&#x3089;&#x3067;&#x3059;&#x3002;{event_description}&#x3002;{event_start}&#x306b; {event_location}&#x3067;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x7e70;&#x308a;&#x8fd4;&#x3057;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;&#x305d;&#x308c;&#x3068;&#x3082;&#x3053;&#x3061;&#x3089;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x6b20;&#x5e2d;&#x306b;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;[&#x305d;&#x308c;&#x3068;&#x3082;&#x6b21;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3092;&#x805e;&#x304d;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f;] "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedule.details.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure. Here&#x2019;s what it&#x2019;s about. {event_description}. It&#x2019;ll be held on the {event_start}, at {event_location}. Do you want to repeat that, or remove the invite[ or go to the next one]? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="event.details.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x3053;&#x3061;&#x3089;&#x304c;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306e;&#x8a73;&#x7d30;&#x3067;&#x3059;&#x3002;{event_description}&#x3002;{event_start}&#x306b;{event_location}&#x3067;&#x884c;&#x308f;&#x308c;&#x307e;&#x3059;&#x3002;&#x3053;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306b;&#x51fa;&#x5e2d;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="event.details.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That&#x2019;s a great event! Here&#x2019;s what it&#x2019;s about. {event_description}. It'll be held on {event_start} at {event_location}. Now, would you like to join? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here&#x2019;s what it&#x2019;s about. {event_description}. It'll be held on {event_start} at {event_location}. Now, would you like to join? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.overview.intentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey {name}, you&#x2019;re all caught up. We&#x2019;ll alert you once you&#x2019;ve received a new notice or invite. Thank you for checking in and have a great day ahead "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.overview.intentTxtResp4">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="{name}&#x3055;&#x3093;&#x3001;&#x73fe;&#x5728;&#x3001;&#x65b0;&#x3057;&#x3044;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3068;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306f;&#x3042;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x65b0;&#x3057;&#x3044;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3068;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x3042;&#x308a;&#x307e;&#x3057;&#x305f;&#x3089;&#x3001;&#x3059;&#x3050;&#x306b;&#x304a;&#x4f1d;&#x3048;&#x3057;&#x307e;&#x3059;&#x3002;&#x3054;&#x78ba;&#x8a8d;&#x3042;&#x308a;&#x304c;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307e;&#x3059;&#x3002;&#x3069;&#x3046;&#x305e;&#x826f;&#x3044;&#xff11;&#x65e5;&#x3092;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="signed.in.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x6b21;&#x306b;&#x4f55;&#x3092;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="signed.in.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you want to do next? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="help.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x63b2;&#x793a; &#x677f;&#x30b3;&#x30df;&#x30e5;&#x30cb;&#x30c6;&#x30a3;&#x30fc;&#x6848;&#x5185;&#x3078;&#x3088;&#x3046;&#x3053;&#x305d;&#x3002;&#x6700;&#x65b0;&#x306e;&#x304a;&#x77e5;&#x3089;&#x305b;&#x3068;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x3001;&#x3042;&#x306a;&#x305f;&#x306e;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x3092;&#x3054;&#x6848;&#x5185;&#x3044;&#x305f;&#x3057;&#x307e;&#x3059;&#x3002;&#x3044;&#x304b;&#x304c;&#x306a;&#x3055;&#x3044;&#x307e;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="help.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Consider me your guide. I am a community tool that can provide you with latest notices and event information. So, which would you like? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.list.overview.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x65b0;&#x3057;&#x3044;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x306f;&#x3042;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x30b9;&#x30b1;&#x30b8;&#x30e5;&#x30fc;&#x30eb;&#x306b;&#x306f; {total_schedules} &#x4ef6;&#x306e;&#x30a4;&#x30d9;&#x30f3;&#x30c8;&#x304c;&#x3042;&#x308a;&#x307e;&#x3059;&#x3002;&#x78ba;&#x8a8d;&#x3057;&#x305f;&#x3044;&#x3067;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="schedules.list.overview.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There are no more new invites. You have {total_schedules} scheduled events. Would you like to review them? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="default.welcome.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x30b3;&#x30df;&#x30e5;&#x30cb;&#x30c6;&#x30a3;&#x63b2;&#x793a;&#x677f;&#x3078;&#x3088;&#x3046;&#x3053;&#x305d;&#x3002;&#x79c1;&#x304c;&#x3054;&#x6848;&#x5185;&#x3044;&#x305f;&#x3057;&#x307e;&#x3059;&#x3002; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="default.welcome.intentTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome to Wakabadai, consider me your guide. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.announcements.intentTxtResp2">
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x65b0;&#x3057;&#x3044;&#x304a;&#x77e5;&#x3089;&#x305b;&#x306f;&#x3042;&#x308a;&#x307e;&#x305b;&#x3093;&#x3002;&#x307e;&#x305f;&#x3054;&#x78ba;&#x8a8d;&#x304f;&#x3060;&#x3055;&#x3044;&#x3002;&#x4ed6;&#x306b;&#x4f55;&#x304b;&#x3054;&#x7528;&#x306f;&#x3042;&#x308a;&#x307e;&#x3059;&#x304b;&#xff1f; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="no.announcements.intentTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There is no new notices. Please check again later. Anything else I can help you with? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.3 //@actions.4" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.5 //@actions.6" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.67 //@actions.68" name="bot34"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.9 //@actions.10" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.13 //@actions.2 //@actions.14" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.15 //@actions.16" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.17 //@actions.18" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.27 //@actions.28" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.29 //@actions.30" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot19"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.43 //@actions.44" name="bot22"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.45 //@actions.46" name="bot23"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.49 //@actions.50" name="bot25"/>
+  </flows>
+  <flows intent="//@intents.13" name="user14">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.51 //@actions.52" name="bot26"/>
+  </flows>
+  <flows intent="//@intents.14" name="user15">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.55 //@actions.56" name="bot28"/>
+  </flows>
+  <flows intent="//@intents.15" name="user16">
+    <target actions="//@actions.2 //@actions.61 //@actions.62" name="bot31"/>
+  </flows>
+  <flows intent="//@intents.16" name="user17">
+    <target actions="//@actions.0 //@actions.1 //@actions.2 //@actions.65 //@actions.66" name="bot33"/>
+  </flows>
+  <languages>ENGLISH</languages>
+  <languages>JAPANESE</languages>
+</generator:Bot>

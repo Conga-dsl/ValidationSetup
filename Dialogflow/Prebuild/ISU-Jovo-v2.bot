@@ -1,0 +1,186 @@
+Chatbot "ISU-Jovo-v2" language : en
+
+intents :
+
+	ISUTechProblemsIntent :
+		inputs in en {
+			"I\'m having computer problems" ,
+			"my laptop is not working" ,
+			"where can i get tech support" ,
+			"I need tech support"
+	}
+
+	DeclinePinIntent :
+		inputs in en {
+			reset
+	}
+
+	ISUMensTennisIntent :
+		inputs in en {
+			"men\'s tennis"
+	}
+
+	ISUBaseballIntent :
+		inputs in en {
+			baseball
+	}
+
+	PinCodeIntent :
+		inputs in en {
+			( pin ) [ pin ]
+		}
+		parameters :
+			pin : entity text ;
+
+	YesIntent :
+		inputs in en {
+			Yes ,
+			yes
+	}
+
+	ISUSoftballIntent :
+		inputs in en {
+			softball
+	}
+
+	ISURedbirdCardIntent :
+		inputs in en {
+			"What is my redbird card balance" ,
+			"how much is on my redbird card" ,
+			"How much money is on my redbird card" ,
+			"redbird card balance" ,
+			"my redbird card balance"
+		}
+		parameters :
+			pin : entity text ;
+
+	ISUMensGolfIntent :
+		inputs in en {
+			"men\'s golf"
+	}
+
+	"Default Welcome Intent" :
+
+	ISUEventsIntent :
+		inputs in en {
+			"what is going on today"
+	}
+
+	FinancialAidIntent :
+		inputs in en {
+			"financial aid" ,
+			"contact financial aid" ,
+			"how can I contact financial aid"
+	}
+
+	ISUFactIntent :
+		inputs in en {
+			"tell me about i.s.u" ,
+			"give me a fact about i.s.u" ,
+			"give me a fact" ,
+			"tell me something I don\'t know" ,
+			"tell me a fact"
+	}
+
+	ISUITHelpIntent :
+		inputs in en {
+			"I.T Help" ,
+			"i.t help" ,
+			"tell me about i.t help" ,
+			"how do i contact i.t help"
+	}
+
+	ISUResNetIntent :
+		inputs in en {
+			"Res Net" ,
+			resnet ,
+			"tell me about res net" ,
+			"how do i contact res net"
+	}
+
+	ISUSportsIntent :
+		inputs in en {
+			"tell me about sports" ,
+			"tell me about sports " ( period ) [ period ] ,
+			"tell me about i.s.u sports" ,
+			"tell me about i.s.u sports " ( period ) [ period ] ,
+			"tell me about Illinois State Sports" ,
+			"tell me about Illinois State Sports " ( period ) [ period ]
+		}
+		parameters :
+			period : entity period ;
+
+	NoIntent :
+		inputs in en {
+			No ,
+			^no
+	}
+
+	FinancialAidAdvisorIntent :
+		inputs in en {
+			"financial aid advisor" ,
+			"Who is my finanical aid advisor"
+	}
+
+	ISUTechZoneIntent :
+		inputs in en {
+			"tech zone" ,
+			techzone ,
+			"tell me about tech zone" ,
+			"how do i contact tech zone"
+	}
+
+	ConfirmPinIntent :
+		inputs in en {
+			correct
+	}
+
+	ISUStudyIntent :
+		inputs in en {
+			"I want to study for " ( duration ) [ duration ]
+		}
+		parameters :
+			duration : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity period :
+		inputs in en {
+			"this week" synonyms "this week"
+			today synonyms today
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/a9ebbeb5-ea6a-44a1-9ebf-27afebe1291a" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user ISUTechProblemsIntent => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user DeclinePinIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user ISUMensTennisIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user ISUBaseballIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user PinCodeIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user YesIntent => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user ISUSoftballIntent => bot7 : chatbot HttpRequest , HttpResponse ;
+	- user8 : user ISURedbirdCardIntent => bot8 : chatbot HttpRequest , HttpResponse ;
+	- user9 : user ISUMensGolfIntent => bot9 : chatbot HttpRequest , HttpResponse ;
+	- user10 : user "Default Welcome Intent" => bot10 : chatbot HttpRequest , HttpResponse ;
+	- user11 : user ISUEventsIntent => bot11 : chatbot HttpRequest , HttpResponse ;
+	- user12 : user FinancialAidIntent => bot12 : chatbot HttpRequest , HttpResponse ;
+	- user13 : user ISUFactIntent => bot13 : chatbot HttpRequest , HttpResponse ;
+	- user14 : user ISUITHelpIntent => bot14 : chatbot HttpRequest , HttpResponse ;
+	- user15 : user ISUResNetIntent => bot15 : chatbot HttpRequest , HttpResponse ;
+	- user16 : user ISUSportsIntent => bot16 : chatbot HttpRequest , HttpResponse ;
+	- user17 : user NoIntent => bot17 : chatbot HttpRequest , HttpResponse ;
+	- user18 : user FinancialAidAdvisorIntent => bot18 : chatbot HttpRequest , HttpResponse ;
+	- user19 : user ISUTechZoneIntent => bot19 : chatbot HttpRequest , HttpResponse ;
+	- user20 : user ConfirmPinIntent => bot20 : chatbot HttpRequest , HttpResponse ;
+	- user21 : user ISUStudyIntent => bot21 : chatbot HttpRequest , HttpResponse ;
+	- user22 : user "Default Fallback Intent" => bot22 : chatbot HttpRequest , HttpResponse ;
+

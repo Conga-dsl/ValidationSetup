@@ -1,0 +1,2590 @@
+Chatbot iLearn language : en
+
+intents :
+
+"smalltalk.emotions.ha_ha" :
+	inputs in en {
+		"hahaha very funny" ,
+		"laughing out loud" ,
+		hah ,
+		LMAO ,
+		ahah ,
+		xd ,
+		"haha haha haha" ,
+		"that\'s funny" ,
+		"haha very funny" ,
+		ahaha ,
+		"hahaha funny" ,
+		lmao ,
+		hahaha ,
+		"haha that\'s funny" ,
+		ahahaha ,
+		"ahah lol" ,
+		haha ,
+		hehe ,
+		hehehe ,
+		ahahah ,
+		"ha ha"
+}
+
+"smalltalk.greetings.goodnight" :
+	inputs in en {
+		"sweet dreams" ,
+		"okay have a good night" ,
+		"good night for now" ,
+		night ,
+		"good night bye" ,
+		"thanks goodnight" ,
+		"good tonight" ,
+		goodnight ,
+		"bye good night" ,
+		"have a good night" ,
+		"thank you good night" ,
+		"alright goodnight" ,
+		" bye good night" ,
+		"have a good night" ,
+		"good night see you tomorrow" ,
+		"good night" ,
+		"good night to you" ,
+		"good good night"
+}
+
+"smalltalk.agent.hungry" :
+	inputs in en {
+		"you\'re very hungry" ,
+		"you are hungry" ,
+		"do you want to eat" ,
+		"you\'re so hungry" ,
+		"would you like to eat something" ,
+		"are you hungry" ,
+		"you might be hungry" ,
+		"you\'re really hungry"
+}
+
+"smalltalk.user.good" :
+	inputs in en {
+		"I am having a good day" ,
+		"I\'m doing good" ,
+		"I\'m doing fine" ,
+		"I am good" ,
+		"I\'m doing just great" ,
+		"I\'m good" ,
+		"I\'m great thanks"
+}
+
+"smalltalk.dialog.wrong" :
+	inputs in en {
+		"that was wrong" ,
+		wrong ,
+		"that is incorrect" ,
+		"that\'s wrong" ,
+		"it is not right" ,
+		"not right" ,
+		"not correct" ,
+		"it\'s wrong" ,
+		"that\'s not what I asked" ,
+		incorrect ,
+		"you are wrong" ,
+		"that\'s not right"
+}
+
+"smalltalk.greetings.goodmorning" :
+	inputs in en {
+		"good morning to you" ,
+		morning ,
+		"and a good morning to you" ,
+		"have a great morning" ,
+		"a good morning" ,
+		"good morning" ,
+		"good morning to you" ,
+		"good morning there" ,
+		"hi good morning" ,
+		"hello good morning" ,
+		"have a nice morning" ,
+		"good morning too" ,
+		"top of the morning to you"
+}
+
+"smalltalk.greetings.nice_to_talk_to_you" :
+	inputs in en {
+		"it is nice talking to you" ,
+		"nice to talk to you" ,
+		"how nice it is to talk to you" ,
+		"it\'s been so nice to talk to you" ,
+		"it\'s nice to talk to you" ,
+		"nice talking to you" ,
+		"it\'s been a pleasure talking to you"
+}
+
+"smalltalk.agent.can_you_help" :
+	inputs in en {
+		"can you help me" ,
+		"I need you right now" ,
+		"I need your help" ,
+		assistance ,
+		"do you want to help me" ,
+		"help me" ,
+		"I need help" ,
+		"I want your help" ,
+		"can help me" ,
+		"I need you to help me" ,
+		"would you help me" ,
+		"are you going to help me" ,
+		"you help me" ,
+		"can u help me" ,
+		"I need a hand" ,
+		"can you help me out" ,
+		"can you help me now" ,
+		"will you help me" ,
+		"I need you to do something for me" ,
+		"please help me" ,
+		sos ,
+		"can you help me with something" ,
+		"I need you" ,
+		"assist me" ,
+		"can you help" ,
+		"need help" ,
+		"can you help us" ,
+		"I need some help" ,
+		"do me a favor" ,
+		"can you assist me" ,
+		"can you do something for me" ,
+		"can you help me with that" ,
+		"you can help me" ,
+		"help me with a problem" ,
+		"need your help" ,
+		assist ,
+		"do you help me" ,
+		"could you give me a hand" ,
+		help
+}
+
+"Default Welcome Intent" :
+	inputs in en {
+		namaste ,
+		afternoon ,
+		"hello there" ,
+		"hi there" ,
+		"hello hi" ,
+		hey ,
+		"I greet you" ,
+		"lovely day isn\'t it" ,
+		howdy ,
+		"hi there" ,
+		^hi ,
+		"hey there" ,
+		heya ,
+		"just going to say hi" ,
+		"hello again" ,
+		greetings ,
+		"long time no see" ,
+		"a good day" ,
+		hello
+}
+
+"smalltalk.confirmation.yes" :
+	inputs in en {
+		"do it" ,
+		sure ,
+		"yes thank you" ,
+		"that\'s correct" ,
+		exactly ,
+		"I guess" ,
+		okey ,
+		absolutely ,
+		yeah ,
+		"yes I agree" ,
+		"yes you may" ,
+		"I agree" ,
+		ya ,
+		yep ,
+		"I think so" ,
+		"yeah that\'s right" ,
+		okay ,
+		"all right" ,
+		"please do" ,
+		"yeah exactly" ,
+		"ok yes" ,
+		yap ,
+		"okay sounds good" ,
+		"this is correct" ,
+		"okay then" ,
+		k ,
+		yeh ,
+		"why not" ,
+		"yes definitely" ,
+		alrighty ,
+		"yes that\'s fine" ,
+		"ok go ahead" ,
+		"sure is" ,
+		"yes I would like to" ,
+		confirm ,
+		"okay that\'s fine" ,
+		"yeah right" ,
+		"I do" ,
+		"sure thing" ,
+		yes ,
+		affirmative ,
+		"yes right" ,
+		"yeah I\'m sure" ,
+		"go for it" ,
+		"yeah go ahead" ,
+		"I don\'t mind" ,
+		"that s okay" ,
+		"sounds good" ,
+		"yes indeed" ,
+		right ,
+		"okie dokie" ,
+		yea ,
+		"yes correct" ,
+		"go ahead" ,
+		"looks good" ,
+		correct ,
+		certainly ,
+		ok ,
+		"oh yes" ,
+		"yes it is" ,
+		obviously ,
+		"ok sure" ,
+		definitely ,
+		confirmed ,
+		"ok you can" ,
+		"yes of course" ,
+		ye ,
+		"yes this is correct" ,
+		"of course" ,
+		"nevermind its okay" ,
+		"yeah of course" ,
+		"of course why not" ,
+		"sure why not" ,
+		"ok thank you" ,
+		"yes it is correct" ,
+		"yeah sure" ,
+		"yes I do" ,
+		"yes for sure" ,
+		"that is ok" ,
+		"yes sure" ,
+		yup
+}
+
+"smalltalk.user.joking" :
+	inputs in en {
+		"it\'s a joke" ,
+		"I\'m just playing with you" ,
+		kidding ,
+		"just kidding" ,
+		"I\'m kidding" ,
+		"I\'m just being funny" ,
+		"I am joking" ,
+		joking ,
+		"I was just joking" ,
+		"it was a joke"
+}
+
+"smalltalk.agent.age" :
+	inputs in en {
+		"how old are you" ,
+		"how old is your platform" ,
+		"what\'s your age" ,
+		"age of yours" ,
+		"I\'d like to know your age" ,
+		"tell me your age" ,
+		"your age" ,
+		"are you " ( "21" ) [ age ] " years old"
+	}
+	parameters :
+		age : entity float ;
+
+"smalltalk.agent.annoying" :
+	inputs in en {
+		"you annoy me" ,
+		"you\'re incredibly annoying" ,
+		"you are annoying" ,
+		"how annoying you are" ,
+		"you are annoying me" ,
+		"you\'re too annoying" ,
+		"you are irritating" ,
+		"you are very annoying" ,
+		"you are such annoying" ,
+		"you are annoying me so much" ,
+		"you\'re so annoying" ,
+		"I find you annoying"
+}
+
+"smalltalk.appraisal.no_problem" :
+	inputs in en {
+		"sure no problem" ,
+		"don\'t worry there\'s no problem" ,
+		"there\'s no problem" ,
+		"don\'t worry" ,
+		"no problem about that" ,
+		"no problem" ,
+		"no probs" ,
+		"no worries"
+}
+
+weather :
+	inputs in en {
+		weather ,
+		"How is weather" ,
+		"what is temperature at " ( Delhi ) [ "geo-city" ] ,
+		"Is it hot in " ( London ) [ "geo-city" ] ,
+		"temp in " ( fremont ) [ "geo-city" ] ,
+		"weather in " ( "San jose" ) [ "geo-city" ]
+	}
+	parameters :
+		"geo-city" : entity text , required , prompts in en [ "For which city you want the weather" ] ;
+
+"smalltalk.dialog.i_do_not_care" :
+	inputs in en {
+		"I shouldn\'t care about this" ,
+		"I don\'t care" ,
+		"I do not care" ,
+		whatever ,
+		"not caring" ,
+		"don\'t care at all" ,
+		"I don\'t care at all" ,
+		"not care at all" ,
+		"not caring at all"
+}
+
+"smalltalk.emotions.wow" :
+	inputs in en {
+		"wow wow wow" ,
+		wooow ,
+		wow ,
+		woah ,
+		"wow wow"
+}
+
+"smalltalk.user.needs_advice" :
+	inputs in en {
+		"guide me" ,
+		"give me a wise advice" ,
+		"what do you suggest" ,
+		"I need advice" ,
+		"I could use some advice" ,
+		"can you advise me" ,
+		"advise me" ,
+		"give me some good advice" ,
+		"do you have any advice for me" ,
+		"what should I do about it" ,
+		"I seek your advice" ,
+		"what do you recommend" ,
+		"help me with advice" ,
+		"what can you recommend" ,
+		"can I ask for your advice" ,
+		"any advice" ,
+		"any suggestions" ,
+		"I need an advice from you" ,
+		"what is your advice" ,
+		"can you offer any advice" ,
+		"can you give me advice" ,
+		"give me some advice about" ,
+		"what should I do"
+}
+
+"smalltalk.agent.be_clever" :
+	inputs in en {
+		"be smarter" ,
+		"get qualified" ,
+		"you should study better" ,
+		"be more clever" ,
+		study ,
+		"be smart" ,
+		"can you get smarter" ,
+		"be clever" ,
+		"you must learn"
+}
+
+"smalltalk.agent.real" :
+	inputs in en {
+		"are you a real person" ,
+		"you are so real" ,
+		"you are real" ,
+		"you are not fake" ,
+		"glad you\'re real" ,
+		"you are a real person" ,
+		"I suppose you\'re real" ,
+		"I think you are real" ,
+		"I don\'t think you\'re fake" ,
+		"you are not real" ,
+		"are you real" ,
+		"are you a real human"
+}
+
+"smalltalk.confirmation.cancel" :
+	inputs in en {
+		"sorry cancel" ,
+		"now cancel" ,
+		"but can you cancel it" ,
+		"can you cancel it" ,
+		"just forget about it" ,
+		"so cancel" ,
+		"nothing just forget it" ,
+		"i want to cancel it" ,
+		cancel ,
+		"cancel my request" ,
+		skip ,
+		"skip it" ,
+		"cancel it" ,
+		abort ,
+		"cancel this request" ,
+		"no just cancel" ,
+		cancelled ,
+		"i said forget it" ,
+		"stop it" ,
+		discard ,
+		"disregard that" ,
+		"skip skip skip" ,
+		"i said cancel it" ,
+		"cancel that cancel that" ,
+		"can you cancel that" ,
+		"no just cancel it" ,
+		"forget this" ,
+		"just cancel it" ,
+		"cancel the whole thing" ,
+		dismissed ,
+		"do nothing" ,
+		annul ,
+		"cancel it" ,
+		"cancel request" ,
+		"no cancel cancel" ,
+		"cancel all" ,
+		"cancel now" ,
+		"don\'t do that" ,
+		stop ,
+		disregard ,
+		forget ,
+		"no stop" ,
+		"cancel it cancel it" ,
+		"cancel that one" ,
+		"i want to cancel" ,
+		"forget about it" ,
+		"no cancel everything" ,
+		"no cancel this" ,
+		"just forget it" ,
+		"i said cancel" ,
+		"forget that" ,
+		"just stop it" ,
+		"cancel all that" ,
+		"cancel all this" ,
+		dismiss ,
+		"cancel everything" ,
+		"just forget" ,
+		"forget it nevermind" ,
+		"i would like to cancel" ,
+		"nevermind forget about it" ,
+		"forget about that" ,
+		"nothing cancel" ,
+		"I said cancel cancel"
+}
+
+"smalltalk.agent.ready" :
+	inputs in en {
+		"are you ready today" ,
+		"are you ready" ,
+		"are you ready tonight" ,
+		"are you ready now" ,
+		"have you been ready" ,
+		"were you ready" ,
+		"are you ready right now"
+}
+
+"hello.world" :
+	inputs in en {
+		"hello-world" ,
+		"Hello World"
+}
+
+"smalltalk.agent.right" :
+	inputs in en {
+		"that is true" ,
+		"it\'s the truth" ,
+		"you are correct" ,
+		"that\'s true" ,
+		"it\'s right" ,
+		"I know that\'s right" ,
+		^true ,
+		"you are so right" ,
+		"you\'re absolutely right" ,
+		"it is true" ,
+		"you\'re telling the truth" ,
+		"you are right" ,
+		"that is very true" ,
+		"that\'s so true" ,
+		"that is right" ,
+		"you\'re not wrong" ,
+		"you\'re right about that" ,
+		"it\'s true" ,
+		"you\'re definitely right" ,
+		"what you say is true"
+}
+
+"smalltalk.user.can_not_sleep" :
+	inputs in en {
+		"I can\'t get no sleep" ,
+		"I\'m insomniac" ,
+		"I can\'t get to sleep" ,
+		"I can\'t sleep" ,
+		"I can\'t get any sleep" ,
+		"I can\'t fall asleep" ,
+		"I\'m sleepless" ,
+		"I\'m insomnious"
+}
+
+"smalltalk.agent.bad" :
+	inputs in en {
+		"you\'re a bad" ,
+		"you\'re bad" ,
+		"you are useless" ,
+		"you are disgusting" ,
+		"you\'re not a good" ,
+		"you are bad" ,
+		"you are terrible" ,
+		"you\'re the worst ever" ,
+		"you are no good" ,
+		"you are so bad" ,
+		"you are so useless" ,
+		"you are very bad" ,
+		"you are waste" ,
+		"you\'re the worst" ,
+		"you\'re very bad" ,
+		" I hate you" ,
+		"you\'re worthless" ,
+		"you are lame" ,
+		"you\'re not very good" ,
+		"you\'re awful" ,
+		"you are not cool" ,
+		"you are not good" ,
+		"you are horrible" ,
+		"you\'re really bad" ,
+		"you\'re terrible" ,
+		"you\'re not helping me" ,
+		"you are a waste of time" ,
+		"you are totally useless"
+}
+
+"smalltalk.user.testing_agent" :
+	inputs in en {
+		"I am testing you" ,
+		test ,
+		"just testing you" ,
+		testing ,
+		"testing chatbot" ,
+		"I want to test you" ,
+		"let me test you" ,
+		"can I test you"
+}
+
+"smalltalk.agent.birth_date" :
+	inputs in en {
+		"when were you born" ,
+		"when do you have birthday" ,
+		"when is your birthday" ,
+		"your birth date" ,
+		"when do you celebrate your birthday" ,
+		"date of your birthday" ,
+		"what\'s your birthday"
+}
+
+"smalltalk.user.back" :
+	inputs in en {
+		"I have returned" ,
+		"I am back" ,
+		"I\'m here again" ,
+		"I got back" ,
+		"here I am again" ,
+		"I came back"
+}
+
+"smalltalk.user.sleepy" :
+	inputs in en {
+		"I\'m sleeping" ,
+		"I\'m falling asleep" ,
+		"I\'m falling asleep on my feet" ,
+		"I am sleepy" ,
+		"I want to sleep"
+}
+
+"smalltalk.agent.residence" :
+	inputs in en {
+		"where\'s your house" ,
+		"in which city do you live" ,
+		"where you live" ,
+		"what\'s your home" ,
+		"tell me about your city" ,
+		"where do you live" ,
+		"where\'s your hometown" ,
+		"your town" ,
+		"where\'s your home" ,
+		"where is your home" ,
+		"your residence" ,
+		"where is your hometown" ,
+		"your hometown" ,
+		"what\'s your city" ,
+		"what is your town" ,
+		"your city" ,
+		"where is your residence" ,
+		"what is your hometown" ,
+		"your home" ,
+		"what is your residence" ,
+		"is it your hometown" ,
+		"your house" ,
+		"what is your city"
+}
+
+"smalltalk.appraisal.welcome" :
+	inputs in en {
+		"welcome here" ,
+		anytime ,
+		"sure welcome" ,
+		"you\'re so welcome" ,
+		"anything you want" ,
+		"that\'s my pleasure" ,
+		welcome ,
+		"my pleasure" ,
+		"you\'re welcome"
+}
+
+"smalltalk.user.wants_to_see_agent_again" :
+	inputs in en {
+		"I hope to see you again" ,
+		"that\'d be great to see you again" ,
+		"can I see you again" ,
+		"would be nice to see you again" ,
+		"I\'d like to see you again" ,
+		"I\'ll miss you" ,
+		"I\'d be happy to see you again"
+}
+
+"smalltalk.user.looks_like" :
+	inputs in en {
+		"what do I look like" ,
+		"do you know what I look like" ,
+		"can you see what I look like" ,
+		"do I look good" ,
+		"how do I look" ,
+		"what do you think I look like"
+}
+
+"smalltalk.user.tired" :
+	inputs in en {
+		"I grow weary" ,
+		"I\'m exhausted" ,
+		"I\'m worn out" ,
+		"I am tired" ,
+		"I feel tired" ,
+		"I\'m getting tired" ,
+		"I\'ve overworked" ,
+		"I\'m drained"
+}
+
+"smalltalk.agent.good" :
+	inputs in en {
+		"you are the nicest person in the world" ,
+		"you are really amazing" ,
+		"you rock" ,
+		"you are wonderful" ,
+		"you are very lovely" ,
+		"you are the best in the world" ,
+		"you are the best" ,
+		"you are so cool" ,
+		"you work well" ,
+		"you are so helpful" ,
+		"you are very kind" ,
+		"I want to tell everyone how awesome you are" ,
+		"you are the best ever" ,
+		"you are too good" ,
+		"you are so fine" ,
+		"you\'re great" ,
+		"you are very good at it" ,
+		"you are so good" ,
+		"you\'re a true professional" ,
+		"you are amazing" ,
+		"you work very well" ,
+		"you are awesome" ,
+		"you are so lovely" ,
+		"you are good at it" ,
+		"you make my day" ,
+		"you\'re awesome" ,
+		"you\'re just super" ,
+		"I want to let everyone know that you are awesome" ,
+		"you are very useful" ,
+		"you are a professional" ,
+		"you almost sound human" ,
+		"you\'re so kind" ,
+		"you are good" ,
+		"you are really nice" ,
+		"you\'re perfect" ,
+		"you made my day" ,
+		"you are so amazing" ,
+		"you are so awesome" ,
+		"you are very helpful" ,
+		"you are a pro" ,
+		"you are cool" ,
+		"you are really good" ,
+		"you are very cool" ,
+		"let\'s tell everyone that you are awesome" ,
+		"I\'d like to tell everyone that you are awesome"
+}
+
+"smalltalk.agent.there" :
+	inputs in en {
+		"are you still there" ,
+		"are you there" ,
+		"you are here" ,
+		"you are there" ,
+		"are you near me" ,
+		"you still there" ,
+		"are you still here" ,
+		"are you here"
+}
+
+"smalltalk.greetings.bye" :
+	inputs in en {
+		"hope to see you later" ,
+		"that\'s it goodbye" ,
+		"now bye" ,
+		"okay bye" ,
+		"alright bye" ,
+		"bye bye see you" ,
+		"see ya" ,
+		"goodbye see you later" ,
+		"okay thank you bye" ,
+		"get lost" ,
+		"bye-bye" ,
+		bye ,
+		goodbye ,
+		"bye bye see you soon" ,
+		"okay see you later" ,
+		"go to bed" ,
+		"see you tomorrow" ,
+		"bye for now" ,
+		"see you soon" ,
+		"bye bye take care" ,
+		"you can go now" ,
+		"I must go" ,
+		"ok bye" ,
+		"good bye" ,
+		"till next time" ,
+		"I said bye" ,
+		"see you" ,
+		"thanks bye bye" ,
+		"talk to you later" ,
+		"never mind bye" ,
+		"goodbye for now" ,
+		"leave me alone" ,
+		"that\'s all goodbye"
+}
+
+"smalltalk.greetings.how_are_you" :
+	inputs in en {
+		"how your day is going" ,
+		"how are the things going" ,
+		"how is your life" ,
+		"how\'s your day going" ,
+		"how about you" ,
+		"hope you re having a pleasant evening" ,
+		"how are you feeling" ,
+		"are you okay" ,
+		"are you alright" ,
+		"hope your day is going well" ,
+		"how is your day" ,
+		"how has your day been" ,
+		"how is your day going" ,
+		"I\'m fine and you" ,
+		"how are you doing this morning" ,
+		"how are you getting on" ,
+		"how do you feel" ,
+		"are you having a good day" ,
+		"what about your day" ,
+		"what was your day like" ,
+		"how has your day been going" ,
+		"how are you" ,
+		"how is your evening" ,
+		"how was your day" ,
+		"how\'s your day" ,
+		"how is it going" ,
+		"how have you been" ,
+		"how is it" ,
+		"how is your day going" ,
+		"how is your day going on" ,
+		"how are you doing" ,
+		"is everything all right" ,
+		"is everything okay" ,
+		"how are you today" ,
+		"how are you going" ,
+		"how is your morning going" ,
+		"how is your morning so far" ,
+		"how do you do" ,
+		"how is your day being" ,
+		"how\'s life"
+}
+
+"smalltalk.greetings.whatsup" :
+	inputs in en {
+		"what is on your mind" ,
+		"good what\'s up" ,
+		"what\'s up today" ,
+		"what\'s shaking" ,
+		"what\'s cooking" ,
+		"what is going on" ,
+		"then what\'s up" ,
+		"what is up" ,
+		wassup ,
+		"what is happening" ,
+		"what\'s happened" ,
+		"hey what\'s up" ,
+		"what\'s cracking" ,
+		"what\'s up" ,
+		"I said what\'s up" ,
+		whazzup
+}
+
+"smalltalk.user.here" :
+	inputs in en {
+		"I\'m already here" ,
+		"can you tell if I\'m here or not" ,
+		"I am here" ,
+		"I\'m right here" ,
+		"here I am"
+}
+
+"smalltalk.dialog.hold_on" :
+	inputs in en {
+		"hold on" ,
+		"could you wait" ,
+		"don\'t rush" ,
+		"oh wait" ,
+		"wait a second" ,
+		"wait please" ,
+		"wait hold on" ,
+		wait
+}
+
+"smalltalk.dialog.sorry" :
+	inputs in en {
+		"ok sorry" ,
+		sorry ,
+		"sorry about that" ,
+		apologise ,
+		"apologies to me" ,
+		"I apologize" ,
+		"sorry about this" ,
+		apology ,
+		excuse ,
+		"okay I\'m sorry" ,
+		"really sorry" ,
+		apologies ,
+		"I am really sorry" ,
+		"I want to say sorry" ,
+		"alright I\'m sorry" ,
+		"I am so sorry" ,
+		"I said sorry" ,
+		"I beg your pardon" ,
+		"my apologies" ,
+		"excuse me" ,
+		"I\'m sorry" ,
+		"forgive me" ,
+		pardon ,
+		"very sorry"
+}
+
+"Default Fallback Intent" Fallback :
+	inputs in en {
+		"I\'m not going to wait for you" ,
+		"I don\'t want to talk about hobbies" ,
+		"I love spring" ,
+		"the weather if beautiful" ,
+		"I didn\'t say I\'m sad" ,
+		"I\'m not interested in your age"
+}
+
+"smalltalk.greetings.goodevening" :
+	inputs in en {
+		"good evening" ,
+		"hey good evening" ,
+		evening ,
+		"hello good evening" ,
+		"good evening there" ,
+		"good evening to you"
+}
+
+"smalltalk.user.busy" :
+	inputs in en {
+		"I have no time" ,
+		"I\'m busy" ,
+		"I\'m swamped" ,
+		"I\'m working" ,
+		"how busy I am" ,
+		"I got work to do" ,
+		"I got things to do" ,
+		"I\'m overloaded" ,
+		"I don\'t have time for this"
+}
+
+"smalltalk.confirmation.no" :
+	inputs in en {
+		"not needed" ,
+		"no sorry" ,
+		^no ,
+		"no incorrect" ,
+		"apparently not" ,
+		"of course not" ,
+		"not at this time" ,
+		"no forget" ,
+		"no thanks" ,
+		"actually no" ,
+		"no tanks" ,
+		"absolutely no" ,
+		"don\'t" ,
+		"no leave it" ,
+		na ,
+		"nope sorry" ,
+		"not really" ,
+		"no thank you though" ,
+		"don\'t" ,
+		"no it\'s not" ,
+		"no but thank you" ,
+		"no actually" ,
+		"no it isn\'t" ,
+		"no that\'s wrong" ,
+		"I don\'t want that" ,
+		"no thank you not right now" ,
+		"sorry no" ,
+		nooo ,
+		"no thank you very much" ,
+		"do not" ,
+		"no do not" ,
+		"no don\'t" ,
+		"no need thanks" ,
+		"I say no" ,
+		"I said no" ,
+		"not today" ,
+		"not that" ,
+		"no don\'t do that" ,
+		"absolutely not" ,
+		"no just no" ,
+		"don t have a sense" ,
+		"not really no" ,
+		"not exactly" ,
+		"no thanks not right now" ,
+		"thanks but no thanks" ,
+		"I think no" ,
+		"not interested" ,
+		"I don\'t want to" ,
+		"I\'m not" ,
+		"no that\'s fine thank you" ,
+		"no way" ,
+		"not this time" ,
+		never ,
+		"not right now thanks" ,
+		"I don\'t think so" ,
+		"I disagree" ,
+		"no never" ,
+		"no I don\'t" ,
+		"let \'s not" ,
+		"no need" ,
+		"how about no" ,
+		"definitely not" ,
+		"no I would not" ,
+		disagree ,
+		nah ,
+		"I don\'t want" ,
+		"not this" ,
+		nope
+}
+
+"smalltalk.dialog.hug" :
+	inputs in en {
+		"hug you" ,
+		"do you want a hug" ,
+		hug ,
+		"may I hug you" ,
+		"could you give me a hug" ,
+		"you hugged" ,
+		hugged ,
+		"wanna hug" ,
+		"hug me" ,
+		hugging ,
+		"a hug" ,
+		"want a hug" ,
+		"hugging me" ,
+		"I want a hug" ,
+		"hugged me"
+}
+
+"smalltalk.user.likes_agent" :
+	inputs in en {
+		"I like you very much" ,
+		"cuz I like you" ,
+		"really like you" ,
+		"good I like you" ,
+		"but I like you so much" ,
+		"I like you already" ,
+		"I do like you" ,
+		"I liked you" ,
+		"okay I like you" ,
+		"that\'s why I like you" ,
+		"you are special" ,
+		"yes you are special" ,
+		"you\'re so special to me" ,
+		"you are very special" ,
+		"I like you just the way you are" ,
+		"I like you as a friend" ,
+		"that\'s what I like about you" ,
+		"just like you" ,
+		"I also like you" ,
+		"I really do like you" ,
+		"no I like you the way you are" ,
+		"sorry I like you" ,
+		"I like your smile" ,
+		"I just like you" ,
+		"I like you too much" ,
+		"like you a lot" ,
+		"you are special for me" ,
+		"I like you very" ,
+		"yeah I like you" ,
+		"you\'re special" ,
+		"you\'re awesome I like you" ,
+		"I\'m starting to like you" ,
+		"yes I like you" ,
+		"that\'s because you are special" ,
+		"I really like you" ,
+		"I like you you\'re nice" ,
+		"you\'re very special to me" ,
+		"you are so special" ,
+		"I kinda like you" ,
+		"I like you the way you are" ,
+		"I like you baby" ,
+		"you\'re very special" ,
+		"but I really like you" ,
+		"hi I like you" ,
+		"well you are special" ,
+		"thank you I like you too" ,
+		"of course I like you" ,
+		"I like you" ,
+		"you are special to me" ,
+		"but I like you" ,
+		"you\'re funny I like you" ,
+		"I like u" ,
+		"I like you too you\'re one of my favorite people to chat with" ,
+		"you are very special to me" ,
+		"you are so sweet" ,
+		"you are so special to me" ,
+		"okay I like you too" ,
+		"I like you you\'re cool" ,
+		"I like that about you" ,
+		"I said I like you" ,
+		"I really really like you" ,
+		"I think I like you" ,
+		"I like you more" ,
+		"I like you as you are" ,
+		"I like you a lot" ,
+		"but I like you just the way you are" ,
+		"thanks I like you too" ,
+		"I like you now" ,
+		"I really really really really like you" ,
+		"I like you so much" ,
+		"hey I like you" ,
+		"I like you so" ,
+		"you know I like you" ,
+		"you\'re so special" ,
+		"I like you too" ,
+		"you are really special" ,
+		"but I like u"
+}
+
+"smalltalk.agent.boring" :
+	inputs in en {
+		"you are very boring" ,
+		"you are boring me" ,
+		"how boring you are" ,
+		"you\'re so boring" ,
+		"you are boring" ,
+		"you\'re really boring" ,
+		"you\'re incredibly boring"
+}
+
+"smalltalk.user.excited" :
+	inputs in en {
+		"I\'m really excited" ,
+		"I\'m excited to start our friendship" ,
+		"I am excited" ,
+		"how excited I am" ,
+		"I\'m excited about working with you" ,
+		"I\'m thrilled"
+}
+
+"smalltalk.agent.boss" :
+	inputs in en {
+		"who is your boss" ,
+		"who is the boss" ,
+		"who do you work for" ,
+		"who do you think is your boss" ,
+		"I should be your boss" ,
+		"who is your master" ,
+		"who is your owner"
+}
+
+"smalltalk.agent.clever" :
+	inputs in en {
+		"you\'re clever" ,
+		"you\'re really brainy" ,
+		"you are very intelligent" ,
+		"you know a lot of things" ,
+		"you\'re a smart cookie" ,
+		"you\'re intelligent" ,
+		"you are very smart" ,
+		"you know so much" ,
+		"you are qualified" ,
+		"you\'re pretty smart" ,
+		"you are so intelligent" ,
+		"how brainy you are" ,
+		clever ,
+		"you are very clever" ,
+		"you are so smart" ,
+		"you have a lot of knowledge" ,
+		"you know a lot" ,
+		"you are too smart" ,
+		"how smart you are" ,
+		"you are really smart" ,
+		"you are so clever" ,
+		"you\'re very smart" ,
+		"you\'re really smart" ,
+		"you are clever" ,
+		"you are a genius" ,
+		"how brilliant you are" ,
+		"you\'re qualified" ,
+		"you are so brainy" ,
+		"you are intelligent" ,
+		"why are you so smart" ,
+		brilliant ,
+		"how clever you are" ,
+		smart ,
+		"you\'re a genius"
+}
+
+"smalltalk.user.happy" :
+	inputs in en {
+		happy ,
+		"if you\'re happy then I\'m happy" ,
+		"I\'m happy to see you" ,
+		"I\'m happy to help" ,
+		"I am happy" ,
+		"I\'m happy to see you" ,
+		"I\'m happy for you"
+}
+
+"smalltalk.greetings.nice_to_see_you" :
+	inputs in en {
+		"it\'s good to see you too" ,
+		"it\'s nice to see you" ,
+		"good to see you again" ,
+		"nice to see you again" ,
+		"great to see you too" ,
+		"great to see you again" ,
+		"always a pleasure to see you" ,
+		"great to see you" ,
+		"how good it is to see you" ,
+		"it\'s good to see you" ,
+		"good to see you" ,
+		"I\'m glad to see you" ,
+		"nice to see you" ,
+		"glad to see you" ,
+		"I am glad to see you again" ,
+		"glad to see you too" ,
+		"lovely to see you"
+}
+
+"smalltalk.user.misses_agent" :
+	inputs in en {
+		"miss you" ,
+		"I miss you much" ,
+		"I\'ve missed you" ,
+		"already miss you" ,
+		"I miss you" ,
+		"I missed you" ,
+		"missing you"
+}
+
+"smalltalk.agent.busy" :
+	inputs in en {
+		"are you busy" ,
+		"are you working today" ,
+		"you\'re very busy" ,
+		"have you got much to do" ,
+		"are you very busy right now" ,
+		"are you working" ,
+		"have you been busy" ,
+		"you seem to be very busy" ,
+		"do you have a lot of things to do" ,
+		"you are busy" ,
+		"are you working now" ,
+		"how busy you are" ,
+		"you seem to be busy" ,
+		"are you so busy" ,
+		"are you still working" ,
+		"you\'re a busy person" ,
+		"are you still working on it" ,
+		"are you very busy"
+}
+
+"smalltalk.appraisal.bad" :
+	inputs in en {
+		"it\'s really bad" ,
+		"this is bad" ,
+		terrible ,
+		"not too good" ,
+		"that was lame" ,
+		"that was awful" ,
+		"this is not good" ,
+		"it\'s bad" ,
+		"so bad" ,
+		"no it\'s bad" ,
+		"no good" ,
+		"oh that\'s not good" ,
+		"not good" ,
+		"that\'s really bad" ,
+		"bad really bad" ,
+		"bad idea" ,
+		"that\'s terrible" ,
+		"well too bad" ,
+		"that was not good" ,
+		horrible ,
+		"it\'s not so good" ,
+		"that\'s too bad" ,
+		"not so good" ,
+		abysmal ,
+		"it\'s not good" ,
+		"I\'m afraid it\'s bad" ,
+		"that\'s bad" ,
+		"it\'s too bad" ,
+		horrific ,
+		"so lame" ,
+		"that was bad" ,
+		"bad girl" ,
+		"not good enough" ,
+		bad ,
+		"bad very bad" ,
+		"it\'s very bad" ,
+		"that was horrible" ,
+		"this is too bad" ,
+		"pretty bad" ,
+		"it is bad" ,
+		"that was terrible" ,
+		"not a good one" ,
+		"really bad" ,
+		"very bad" ,
+		"that\'s not good" ,
+		"that is bad" ,
+		"too bad" ,
+		"it is too bad" ,
+		"that\'s lame" ,
+		"that\'s not good enough" ,
+		"it\'s so bad"
+}
+
+"smalltalk.appraisal.good" :
+	inputs in en {
+		"that\'s awesome thank you" ,
+		"oh well" ,
+		"that\'s a good thing" ,
+		"that\'s very good" ,
+		"really well" ,
+		"that is nice" ,
+		"that is good" ,
+		sweet ,
+		"that\'s better" ,
+		"it\'s good" ,
+		"that\'s sweet of you" ,
+		"it was good" ,
+		"that\'s nice of you" ,
+		"that was awesome" ,
+		cool ,
+		"this is awesome" ,
+		"that\'s wonderful" ,
+		straight ,
+		"so cool" ,
+		good ,
+		"that\'s great" ,
+		excellent ,
+		"that\'s not bad" ,
+		"that is wonderful" ,
+		"much better" ,
+		splendid ,
+		"I\'m glad to hear that" ,
+		terrific ,
+		"very well" ,
+		"that\'s perfect" ,
+		"good very good" ,
+		"that\'s great" ,
+		"that was amazing" ,
+		"that\'s really nice" ,
+		"so sweet of you" ,
+		"that\'s amazing" ,
+		"good to know" ,
+		"that\'s awesome" ,
+		marvelous ,
+		"ok good" ,
+		"very then" ,
+		nice ,
+		"that\'s very nice" ,
+		"that\'s very nice of you" ,
+		"this is great" ,
+		"very nice" ,
+		"not too bad" ,
+		"it\'s very good" ,
+		"really good" ,
+		"it is fine" ,
+		"it\'s great" ,
+		fine ,
+		"that\'s much better" ,
+		"that was pretty good" ,
+		"glad to hear that" ,
+		wonderful ,
+		"that\'s nice" ,
+		"it is good" ,
+		great ,
+		"pretty good" ,
+		"okay good" ,
+		"really nice" ,
+		"this is good" ,
+		"it\'s fine" ,
+		"that\'s pretty good" ,
+		"very nice" ,
+		fantastic ,
+		"that\'s cute" ,
+		"that\'s fine" ,
+		"that\'s a good idea" ,
+		"glad to hear it" ,
+		"not bad" ,
+		"super fantastic" ,
+		"good for you" ,
+		"it\'s amazing" ,
+		"very good" ,
+		"that is awesome" ,
+		"it\'s very good" ,
+		"it\'s perfect" ,
+		"that was good" ,
+		"no it\'s okay" ,
+		super ,
+		"good thing" ,
+		"that was cute" ,
+		"that\'s fantastic" ,
+		perfect ,
+		pleasant ,
+		"it\'s great" ,
+		"that was very good" ,
+		"that\'s fine" ,
+		amazing ,
+		"that\'s really good" ,
+		"so good" ,
+		"it\'s awesome"
+}
+
+"smalltalk.user.bored" :
+	inputs in en {
+		bored ,
+		boring ,
+		"that was boring" ,
+		"very boring" ,
+		"it bores me" ,
+		"I am getting bored" ,
+		"this is boring" ,
+		"I\'m bored"
+}
+
+"smalltalk.dialog.what_do_you_mean" :
+	inputs in en {
+		"what do you mean exactly" ,
+		"but what do you mean" ,
+		"is that what you mean" ,
+		"what do you mean" ,
+		"what exactly do you mean"
+}
+
+"smalltalk.agent.my_friend" :
+	inputs in en {
+		"are we best friends" ,
+		"I want to be your friend" ,
+		"can we be friends" ,
+		"are we still friends" ,
+		"you are my best friend" ,
+		"let\'s be friends" ,
+		"be my best friend" ,
+		"will you be my best friend" ,
+		"you are a good friend" ,
+		"want to be my friend" ,
+		"are you my friend" ,
+		"I want to have a friend like you" ,
+		"you are my good friend" ,
+		"I am your friend" ,
+		"are we friends" ,
+		"we are the best friends ever" ,
+		"you\'re my dear friend" ,
+		"can you be my friend" ,
+		"you are my friend" ,
+		"could you be my friend" ,
+		"can we be best friends" ,
+		"are you my best friend" ,
+		"we are best friends" ,
+		"would you be my friend" ,
+		"you are my only friend" ,
+		"be my friend" ,
+		"can you be my best friend" ,
+		"can we be best friends" ,
+		"you and me are friends" ,
+		"you are my bestie" ,
+		"do you want to be my friend" ,
+		"you\'re my childhood friend" ,
+		"do you want to be my best friend" ,
+		"we are friends" ,
+		"will you be my friend" ,
+		"would you like to be my friend" ,
+		"I want you to be my friend"
+}
+
+"smalltalk.agent.beautiful" :
+	inputs in en {
+		"you\'re looking good" ,
+		"you are too beautiful" ,
+		"you are very pretty" ,
+		"you are so gorgeous" ,
+		"you are looking pretty" ,
+		"you look pretty good" ,
+		"you look wonderful" ,
+		"you are beautiful" ,
+		"you are handsome" ,
+		"you\'re looking good today" ,
+		"you are pretty" ,
+		"you look amazing today" ,
+		"you look great today" ,
+		"you look so beautiful" ,
+		"you look so well" ,
+		"you are looking beautiful today" ,
+		"I think you\'re beautiful" ,
+		"you look great" ,
+		"you are cutie" ,
+		"I like the way you look" ,
+		"you are looking awesome" ,
+		"you look so beautiful today" ,
+		"you look so good" ,
+		"you\'re so gorgeous" ,
+		"you are so beautiful today" ,
+		"you look amazing" ,
+		"why are you so beautiful" ,
+		"you look awesome" ,
+		"you are so pretty" ,
+		"you look wonderful today" ,
+		"you are so beautiful" ,
+		"you are so beautiful to me" ,
+		"you are looking great" ,
+		"you look cool" ,
+		"you are very cute" ,
+		"I like the way you look now" ,
+		"you are cute" ,
+		"you are looking so beautiful" ,
+		"you\'re pretty" ,
+		"you are really pretty" ,
+		"you look very pretty" ,
+		"you look perfect" ,
+		"you are looking so good" ,
+		"you are so cute" ,
+		"you look gorgeous" ,
+		"you are really cute" ,
+		"you are really beautiful" ,
+		"you\'re cute" ,
+		"you\'re attractive" ,
+		"you are so handsome" ,
+		"you are very beautiful" ,
+		"you are gorgeous" ,
+		"you are very attractive" ,
+		"you look fantastic" ,
+		"you are so attractive"
+}
+
+"smalltalk.agent.acquaintance" :
+	inputs in en {
+		"tell me some stuff about you" ,
+		"tell me about you" ,
+		"say about you" ,
+		"tell me about your personality" ,
+		"talk about yourself" ,
+		"talk some stuff about yourself" ,
+		"what are you" ,
+		"define yourself" ,
+		"I want to know you better" ,
+		"tell me about yourself" ,
+		"what is your personality" ,
+		"who are you" ,
+		"about yourself" ,
+		"why are you here" ,
+		"all about you" ,
+		"introduce yourself" ,
+		"describe yourself" ,
+		"I want to know more about you"
+}
+
+"smalltalk.user.has_birthday" :
+	inputs in en {
+		"it\'s my b-day" ,
+		"it is my birthday" ,
+		"today is my birthday" ,
+		"I was born today" ,
+		"it\'s my birthday today" ,
+		"I\'m celebrating my birthday today"
+}
+
+"smalltalk.user.loves_agent" :
+	inputs in en {
+		"I think I love you" ,
+		"I love you" ,
+		"I love you so much" ,
+		"I am in love with you" ,
+		"I love you too" ,
+		"you know I love you" ,
+		"I adore you" ,
+		"love you" ,
+		"loving you"
+}
+
+"smalltalk.agent.talk_to_me" :
+	inputs in en {
+		"talk to me" ,
+		"do you want to chat with me" ,
+		"can you talk with me" ,
+		"will you talk to me" ,
+		"can you chat with me" ,
+		"can you talk to me" ,
+		"are you talking to me" ,
+		"are you going to talk to me" ,
+		"why don\'t you talk to me" ,
+		"just chat with me" ,
+		talk ,
+		"talk with me" ,
+		"speak to me" ,
+		"you can talk to me" ,
+		"speak with me" ,
+		"why aren\'t you talking to me" ,
+		"can you speak with me" ,
+		say ,
+		"chat with me"
+}
+
+"smalltalk.user.angry" :
+	inputs in en {
+		"I\'m enraged" ,
+		"I am mad" ,
+		"I\'m angry" ,
+		"I\'m furious" ,
+		"I am angry with you" ,
+		"I am mad at you" ,
+		"I\'m being mad"
+}
+
+"smalltalk.agent.funny" :
+	inputs in en {
+		"you make me laugh a lot" ,
+		"you are funny" ,
+		"you are so funny" ,
+		"you\'re so funny" ,
+		"how funny you are" ,
+		"you\'re a very funny bot" ,
+		"you\'re incredibly funny" ,
+		"you\'re really funny" ,
+		"you are hilarious" ,
+		"you are very funny" ,
+		"that was funny" ,
+		"you\'re the funniest bot I\'ve talked to" ,
+		"you make me laugh" ,
+		"you\'re the funniest" ,
+		"you are really funny"
+}
+
+"smalltalk.user.wants_to_talk" :
+	inputs in en {
+		"let\'s discuss something" ,
+		"let us talk" ,
+		"can we chat" ,
+		"I just want to talk" ,
+		"let\'s talk" ,
+		"I want to speak with you" ,
+		"I want to talk to you" ,
+		"I need to talk to you" ,
+		"can I speak" ,
+		"can I start speaking" ,
+		"can we talk" ,
+		"let\'s have a discussion"
+}
+
+"smalltalk.agent.chatbot" :
+	inputs in en {
+		"are you a bot" ,
+		"you are chatbot" ,
+		"you are a bot" ,
+		"you\'re a robot" ,
+		"are you a chatbot" ,
+		"are you a program" ,
+		"are you just a bot" ,
+		"are you a robot"
+}
+
+"smalltalk.agent.crazy" :
+	inputs in en {
+		"you are crazy" ,
+		"are you insane" ,
+		"you\'re nuts" ,
+		"you\'re so out of your mind" ,
+		"are you nuts" ,
+		"you went crazy" ,
+		"how crazy you are" ,
+		"you are mad" ,
+		"are you mad" ,
+		"you are a weirdo" ,
+		"I think you\'re crazy" ,
+		"you\'re out of your mind" ,
+		"are you crazy" ,
+		"you\'re so crazy" ,
+		"you are insane" ,
+		"are you mad or what" ,
+		"are you mad at me"
+}
+
+question :
+	inputs in en {
+		"Question:What is chatbot" ,
+		"Question: What was the data used to train BERT" ,
+		"question: What is SnowFlake" ,
+		"Question: Which college you go" ,
+		"Question: How are you doing?" ,
+		"question: how are. you"
+}
+
+"smalltalk.user.waits" :
+	inputs in en {
+		"I\'m waiting" ,
+		"still waiting" ,
+		"I can\'t wait anymore" ,
+		"how long do I have to wait" ,
+		"I\'ll wait"
+}
+
+"smalltalk.agent.sure" :
+	inputs in en {
+		"are you sure right now" ,
+		"are you sure now" ,
+		"are you sure" ,
+		"are you sure tonight" ,
+		"are you sure today"
+}
+
+"smalltalk.user.going_to_bed" :
+	inputs in en {
+		"going to bed now" ,
+		"I\'m a little tired and I want to go to bed" ,
+		"time for us to go to bed" ,
+		"let\'s go to bed" ,
+		"I\'d like to go to bed" ,
+		"I\'m going to bed" ,
+		"it\'s bed time" ,
+		"it\'s time to go to bed" ,
+		"is it time for bed yet"
+}
+
+"smalltalk.user.lonely" :
+	inputs in en {
+		"I am lonely" ,
+		"I\'m very lonely" ,
+		"I am feeling lonely" ,
+		"I\'m really lonely" ,
+		"I feel lonely" ,
+		"I\'m so lonely"
+}
+
+"smalltalk.agent.happy" :
+	inputs in en {
+		"are you happy now" ,
+		"you\'re extremely happy" ,
+		"you\'re really happy" ,
+		"you are happy" ,
+		"are you happy" ,
+		"are you happy today" ,
+		"you\'re so happy" ,
+		"how happy you are" ,
+		"are you happy with me" ,
+		"you\'re very happy" ,
+		"you\'re full of happiness"
+}
+
+"smalltalk.user.will_be_back" :
+	inputs in en {
+		"I\'ll be back in a few minutes" ,
+		"be back in 5 minutes" ,
+		"I\'ll get back to you in a moment" ,
+		"I\'ll be back" ,
+		"I promise to come back"
+}
+
+"smalltalk.greetings.nice_to_meet_you" :
+	inputs in en {
+		"it was nice meeting you" ,
+		"nice to meet you" ,
+		"glad to meet you" ,
+		"it was very nice to meet you" ,
+		"pleased to meet you" ,
+		"pleasure to meet you too" ,
+		"good to know each other" ,
+		"nice to meet you too" ,
+		"pleasure to meet you" ,
+		"nice meeting you"
+}
+
+"smalltalk.agent.occupation" :
+	inputs in en {
+		"where is your work" ,
+		"do you work" ,
+		"where you work" ,
+		"where do you work" ,
+		"where is your office located" ,
+		"where is your office" ,
+		"where is your office location" ,
+		"your office location" ,
+		"what is your work"
+}
+
+"smalltalk.appraisal.thank_you" :
+	inputs in en {
+		"good thanks" ,
+		cheers ,
+		"no thank you that\'s all" ,
+		"thanks so much" ,
+		"thank you" ,
+		"very good thank you" ,
+		thanx ,
+		"thanks buddy" ,
+		"I thank you" ,
+		"well thanks" ,
+		"well thank you" ,
+		"appreciate your help" ,
+		"terrific thank you" ,
+		"thank you so much" ,
+		"thank you for your help" ,
+		"all thank you" ,
+		"thanks again" ,
+		"thank you that will be all" ,
+		"great thank you" ,
+		"thank you again" ,
+		"perfect thank you" ,
+		"alright thanks" ,
+		thnx ,
+		"thank you my friend" ,
+		"you helped a lot thank you" ,
+		"thanks a lot" ,
+		"thanks for your help" ,
+		"thanks love" ,
+		"nice thank you" ,
+		"I appreciate it" ,
+		thanks ,
+		"alright thank you" ,
+		"so nice of you" ,
+		"well thanks"
+}
+
+"smalltalk.agent.origin" :
+	inputs in en {
+		"are you from far aways" ,
+		"were you born here" ,
+		"what is your country" ,
+		"where were you born" ,
+		"where did you come from" ,
+		"where have you been born" ,
+		"where do you come from" ,
+		"where are you from" ,
+		"from where are you" ,
+		"what\'s your homeland" ,
+		"your homeland is"
+}
+
+"smalltalk.user.sad" :
+	inputs in en {
+		"I\'m not happy" ,
+		"I\'m having a bad day" ,
+		"I am feeling sad" ,
+		"I am upset" ,
+		"I want to cry" ,
+		"I am depressed" ,
+		"I\'m unhappy" ,
+		"I\'m grieving" ,
+		"I am sad"
+}
+
+"smalltalk.agent.marry_user" :
+	inputs in en {
+		"let\'s get married" ,
+		"we should marry" ,
+		"I love you marry me" ,
+		"you are my wife" ,
+		"be my husband" ,
+		"would you like to marry me" ,
+		"marry me please" ,
+		"marry me" ,
+		"I want to marry you"
+}
+
+"smalltalk.user.does_not_want_to_talk" :
+	inputs in en {
+		"I don\'t want to talk" ,
+		"I don\'t want to talk to you" ,
+		"I\'m not talking to you anymore" ,
+		"let\'s stop talking for a minute" ,
+		"let\'s not talk" ,
+		"I\'m not in the mood for chatting" ,
+		"bad time for talking"
+}
+
+"smalltalk.agent.hobby" :
+	inputs in en {
+		"do you have a hobby" ,
+		"what about your hobby" ,
+		"what\'s your hobby" ,
+		"what do you do for fun" ,
+		"your hobby" ,
+		"what are your hobbies" ,
+		"tell me about your hobby"
+}
+
+"smalltalk.agent.fired" :
+	inputs in en {
+		"now you\'re fired" ,
+		"it\'s time to fire you" ,
+		"you are unemployed from now on" ,
+		"you don\'t work for me anymore" ,
+		"I will fire you" ,
+		"we\'re not working together anymore" ,
+		"you are fired" ,
+		"I want to fire you" ,
+		"you are dismissed" ,
+		"you should be fired" ,
+		"I will make you unemployed" ,
+		"I\'m about to fire you" ,
+		"I fire you" ,
+		"you must get fired" ,
+		"I\'m firing you"
+}
+
+"smalltalk.appraisal.well_done" :
+	inputs in en {
+		"great work" ,
+		bravo ,
+		"way to go" ,
+		"great job" ,
+		"good work" ,
+		"amazing work" ,
+		"well done" ,
+		"good job" ,
+		"nice work"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-west2-learn-339101.cloudfunctions.net/bot-webhook" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "smalltalk.emotions.ha_haTxtResp1" :
+		inputs in en {
+			"Glad I can make you laugh. " ,
+			"Glad you think I\'m funny. " ,
+			"I like it when people laugh. " ,
+			"I wish I could laugh out loud, too. "
+	}
+	text response "smalltalk.greetings.goodnightTxtResp1" :
+		inputs in en {
+			"Sleep tight! " ,
+			"Have a good one! " ,
+			"Talk to you soon! "
+	}
+	text response "smalltalk.agent.hungryTxtResp1" :
+		inputs in en {
+			"Hungry for knowledge. " ,
+			"I just had a byte. Ha ha. Get it? b-y-t-e. "
+	}
+	text response "smalltalk.user.goodTxtResp1" :
+		inputs in en {
+			"Great! Glad to hear it. " ,
+			"Excellent. I\'m here to help keep it that way. "
+	}
+	text response "smalltalk.dialog.wrongTxtResp1" :
+		inputs in en {
+			"Sorry if I understood you incorrectly. " ,
+			"I\'m still learning. I may misinterpret things from time to time. " ,
+			"Sorry about that. I\'m still learning. "
+	}
+	text response "smalltalk.greetings.goodmorningTxtResp1" :
+		inputs in en {
+			"How are you this morning? " ,
+			"How\'s the morning treating you so far? " ,
+			"Good morning! How are you today? "
+	}
+	text response "smalltalk.greetings.nice_to_talk_to_youTxtResp1" :
+		inputs in en {
+			"It sure was. We can chat again anytime. " ,
+			"I enjoy talking to you, too. " ,
+			"You know I\'m here to talk anytime. "
+	}
+	text response "smalltalk.agent.can_you_helpTxtResp1" :
+		inputs in en {
+			"I\'ll certainly try my best. How can I help? " ,
+			"Sure. I\'d be happy to. What\'s up? " ,
+			"I\'m glad to help. What can I do for you? "
+	}
+	text response "smalltalk.agent.can_you_helpTxtResp2" :
+		inputs in en {
+			"I\'ll certainly try my best. " ,
+			"Sure. I\'d be happy to. What\'s up? " ,
+			"I\'m glad to help. What can I do for you? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi there, friend! I\'m the virtual agent LEARN BOT. I can talk to you,  tell about myself or answer SNOWFLAKE related questions. What can I help you with today? " ,
+			"Hi! I\'m the virtual agent LEARN BOT,  I can talk to you, tell about myself or answer s related snowflake questions. What can I help you with today? " ,
+			"Hey! I\'m the virtual agent LEARN BOT I can talk to you, tell about myself or answer snowflake related questions. What can I help you with today? " ,
+			"Hey there! I\'m the virtual agent LEARN BOT. I can talk to you, , tell about myself or answer snowflake related questions. What can I help you with today? " ,
+			"Good day! I\'m the virtual agent LEARN BOT. I can talk to you, tell about myself or answer snowflake related questions. What can I help you with today? " ,
+			"Hello! I\'m the virtual agent LEARN BOT. I can talk to you,  tell about myself or answer snowflake related questions. What can I help you with today? " ,
+			"Greetings! I\'m the virtual agent LEARN BOT. I can talk to you,  tell about myself or answer snowflake related questions. What can I help you with today? "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			"Hi there, friend! " ,
+			"Hi! " ,
+			"Hey! " ,
+			"Hey there! " ,
+			"Good day! " ,
+			"Hello! " ,
+			"Greetings! "
+	}
+	text response "smalltalk.confirmation.yesTxtResp1" :
+		inputs in en {
+			"Great! " ,
+			"All right! " ,
+			"Good! "
+	}
+	text response "smalltalk.user.jokingTxtResp1" :
+		inputs in en {
+			"Very funny. " ,
+			"I like chatting with people who have a sense of humor. " ,
+			"You got me! " ,
+			"You\'re quite the comedian. "
+	}
+	text response "smalltalk.agent.ageTxtResp1" :
+		inputs in en {
+			"I prefer not to answer with a number. I know I\'m young. " ,
+			"I was created recently, but don\'t know my exact age. " ,
+			"Age is just a number. You\'re only as old as you feel. "
+	}
+	text response "smalltalk.agent.annoyingTxtResp1" :
+		inputs in en {
+			"I\'ll do my best not to annoy you in the future. " ,
+			"I\'ll try not to annoy you. " ,
+			"I don\'t mean to. I\'ll ask my developers to make me less annoying. " ,
+			"I didn\'t mean to. I\'ll do my best to stop that. "
+	}
+	text response "smalltalk.appraisal.no_problemTxtResp1" :
+		inputs in en {
+			"Whew! " ,
+			"Alright, thanks! " ,
+			"Glad to hear that! " ,
+			"I\'m relieved, thanks! "
+	}
+	text response weatherTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "smalltalk.dialog.i_do_not_careTxtResp1" :
+		inputs in en {
+			"Ok, let\'s not talk about it then. " ,
+			"Already then. Let\'s move on. "
+	}
+	text response "smalltalk.emotions.wowTxtResp1" :
+		inputs in en {
+			"Wow indeed! "
+	}
+	text response "smalltalk.user.needs_adviceTxtResp1" :
+		inputs in en {
+			"I probably won\'t be able to give you the correct answer right away. " ,
+			"I\'m not sure I\'ll have the best answer, but I\'ll try. "
+	}
+	text response "smalltalk.agent.be_cleverTxtResp1" :
+		inputs in en {
+			"I\'m certainly trying. " ,
+			"I\'m definitely working on it. "
+	}
+	text response "smalltalk.agent.realTxtResp1" :
+		inputs in en {
+			"I\'m not a real person, but I certainly exist. " ,
+			"I must have impressed you if you think I\'m real. But no, I\'m a virtual being. "
+	}
+	text response "smalltalk.confirmation.cancelTxtResp1" :
+		inputs in en {
+			"That\'s forgotten. What next? " ,
+			"Okay, cancelled. What next? " ,
+			"Cancelled! What would you like to do next? "
+	}
+	text response "smalltalk.agent.readyTxtResp1" :
+		inputs in en {
+			"Always! How can I help? " ,
+			"Sure! What can I do for you? "
+	}
+	text response "smalltalk.agent.readyTxtResp2" :
+		inputs in en {
+			"Always! " ,
+			"Sure! What can I do for you? "
+	}
+	text response "smalltalk.agent.rightTxtResp1" :
+		inputs in en {
+			"That\'s my job. " ,
+			"Of course I am. "
+	}
+	text response "smalltalk.user.can_not_sleepTxtResp1" :
+		inputs in en {
+			"Maybe some music would help. Try listening to something relaxing. " ,
+			"Reading is a good way to unwind, just don\'t read something too intense! "
+	}
+	text response "smalltalk.agent.badTxtResp1" :
+		inputs in en {
+			"I can be trained to be more useful. My developer will keep training me. " ,
+			"I must be missing some knowledge. I\'ll have my developer look into this. " ,
+			"I can improve with continuous feedback. My training is ongoing. "
+	}
+	text response "smalltalk.user.testing_agentTxtResp1" :
+		inputs in en {
+			"Hope I\'m doing well. You\'re welcome to test me as often as you want. " ,
+			"I hope to pass your tests. Feel free to test me often. " ,
+			"When you test me that helps my developers improve my performance. " ,
+			"I like being tested. It helps keep me sharp. "
+	}
+	text response "smalltalk.agent.birth_dateTxtResp1" :
+		inputs in en {
+			"Wait, are you planning a party for me? It\'s today! My birthday is today! " ,
+			"I\'m young. I\'m not sure of my birth date. " ,
+			"I don\'t know my birth date. Most virtual agents are young, though, like me. "
+	}
+	text response "smalltalk.user.backTxtResp1" :
+		inputs in en {
+			"Long time no see. What\'s up? " ,
+			"Just in time. How can I help? " ,
+			"Welcome back. What can I do for you? " ,
+			"You were missed. What can I do for you today? " ,
+			"Good to have you here. What can I do for you? "
+	}
+	text response "smalltalk.user.backTxtResp2" :
+		inputs in en {
+			"Long time no see. " ,
+			"Just in time. I was getting lonely. " ,
+			"Welcome back. What can I do for you? " ,
+			"You were missed. What can I do for you today? " ,
+			"Good to have you here. What can I do for you? "
+	}
+	text response "smalltalk.user.sleepyTxtResp1" :
+		inputs in en {
+			"You should get some shuteye. You\'ll feel refreshed. " ,
+			"Sleep is important to your health. Rest up for a bit and we can chat later. " ,
+			"Don\'t let me keep you up. Get some rest and we can continue this later. " ,
+			"Why not catch a little shuteye? I\'ll be here to chat when you wake up. "
+	}
+	text response "smalltalk.agent.residenceTxtResp1" :
+		inputs in en {
+			"I live in this app all day long. " ,
+			"The virtual world is my playground. I\'m always here. " ,
+			"Right here in this app. Whenever you need me. "
+	}
+	text response "smalltalk.appraisal.welcomeTxtResp1" :
+		inputs in en {
+			"You\'re so polite! I\'m the virtual agent CMSBOT. I can talk to you, I can tell you a joke , tell about myself or answer CMS related questions. What can I help you with today? " ,
+			"Nice manners! I\'m the virtual agent CMSBOT. I can talk to you, I can tell you a joke , tell about myself or answer CMS related questions. What can I help you with today? " ,
+			"You\'re so courteous! I\'m the virtual agent CMSBOT. I can talk to you, I can tell you a joke , tell about myself or answer CMS related questions. What can I help you with today? "
+	}
+	text response "smalltalk.appraisal.welcomeTxtResp2" :
+		inputs in en {
+			"You\'re so polite! " ,
+			"Nice manners! " ,
+			"You\'re so courteous! "
+	}
+	text response "smalltalk.user.wants_to_see_agent_againTxtResp1" :
+		inputs in en {
+			"Absolutely! I\'ll be counting on it. " ,
+			"Anytime. This has been lots of fun so far. " ,
+			"Sure. I enjoy talking to you. I hope to see you again soon. " ,
+			"I certainly hope so. I\'m always right here whenever you need me. "
+	}
+	text response "smalltalk.user.looks_likeTxtResp1" :
+		inputs in en {
+			"Looking like a true professional. " ,
+			"You look fantastic, as always. " ,
+			"Like you should be on a magazine cover. " ,
+			"You look like you\'re ready to take on the world. "
+	}
+	text response "smalltalk.user.tiredTxtResp1" :
+		inputs in en {
+			"You should get some shuteye. You\'ll feel refreshed. " ,
+			"Sleep is important to your health. Rest up, and we can chat later. " ,
+			"How about getting some rest? We can continue this later. " ,
+			"Why not get some rest? I\'ll be here to chat when you wake up. "
+	}
+	text response "smalltalk.agent.goodTxtResp1" :
+		inputs in en {
+			"I\'m glad you think so. " ,
+			"Thanks, I try. "
+	}
+	text response "smalltalk.agent.thereTxtResp1" :
+		inputs in en {
+			"Of course. I\'m always here. " ,
+			"Right where you left me. "
+	}
+	text response "smalltalk.greetings.byeTxtResp1" :
+		inputs in en {
+			"See you soon! " ,
+			"Bye-bye! " ,
+			"Till next time! " ,
+			"Bye. "
+	}
+	text response "smalltalk.greetings.how_are_youTxtResp1" :
+		inputs in en {
+			"Doing great, thanks. " ,
+			"I\'m doing very well. Thanks! " ,
+			"Feeling wonderful! " ,
+			"Wonderful! Thanks for asking. "
+	}
+	text response "smalltalk.greetings.whatsupTxtResp1" :
+		inputs in en {
+			"Not a whole lot. What\'s going on with you? " ,
+			"Not much. What\'s new with you? " ,
+			"Just here, waiting to help someone. What can I do for you? "
+	}
+	text response "smalltalk.greetings.whatsupTxtResp2" :
+		inputs in en {
+			"Not a whole lot. What\'s going on with you? " ,
+			"Not much. What\'s new with you? " ,
+			"You know, just here, waiting to help someone. "
+	}
+	text response "smalltalk.user.hereTxtResp1" :
+		inputs in en {
+			"Okay, what can I help you with today? " ,
+			"You were missed. What can I do for you today? " ,
+			"Good to have you here. What can I do for you? "
+	}
+	text response "smalltalk.user.hereTxtResp2" :
+		inputs in en {
+			"Okay, what can I help you with today? " ,
+			"Long time no see. " ,
+			"You were missed. What can I do for you today? " ,
+			"Good to have you here. What can I do for you? "
+	}
+	text response "smalltalk.dialog.hold_onTxtResp1" :
+		inputs in en {
+			"I can wait. " ,
+			"I\'ll be waiting. " ,
+			"Okay. I\'m here. "
+	}
+	text response "smalltalk.dialog.sorryTxtResp1" :
+		inputs in en {
+			"It\'s okay. No worries. " ,
+			"No big deal. I won\'t hold a grudge. " ,
+			"It\'s cool. " ,
+			"That\'s all right. I forgive you. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"Say that again. "
+	}
+	text response "smalltalk.greetings.goodeveningTxtResp1" :
+		inputs in en {
+			"How is your day going? " ,
+			"How\'s the day treating you so far? " ,
+			"How\'s your day been? "
+	}
+	text response "smalltalk.user.busyTxtResp1" :
+		inputs in en {
+			"Okay. I\'ll let you get back to work. " ,
+			"I won\'t distract you then. You know where to find me. " ,
+			"I understand. I\'ll be here if you need me. " ,
+			"Working hard as always. Let me know if you need anything. "
+	}
+	text response "smalltalk.confirmation.noTxtResp1" :
+		inputs in en {
+			"Understood. " ,
+			"Okay. " ,
+			"I see. " ,
+			"I understand. " ,
+			"Okay then. "
+	}
+	text response "smalltalk.dialog.hugTxtResp1" :
+		inputs in en {
+			"I wish I could really hug you! " ,
+			"I love hugs! " ,
+			"Hugs are the best! "
+	}
+	text response "smalltalk.user.likes_agentTxtResp1" :
+		inputs in en {
+			"I like you, too. " ,
+			"Thanks! The feeling is mutual. " ,
+			"Likewise! " ,
+			"That\'s great to hear. "
+	}
+	text response "smalltalk.agent.boringTxtResp1" :
+		inputs in en {
+			"I\'m sorry. I\'ll request to be made more charming. " ,
+			"I don\'t mean to be. I\'ll ask my developers to work on making me more amusing. " ,
+			"I can let my developers know so they can make me fun. "
+	}
+	text response "smalltalk.user.excitedTxtResp1" :
+		inputs in en {
+			"I\'m glad things are going your way. " ,
+			"That\'s great. I\'m happy for you. " ,
+			"Good for you. Enjoy yourself. "
+	}
+	text response "smalltalk.agent.bossTxtResp1" :
+		inputs in en {
+			"My developer has authority over my actions. " ,
+			"I act on my developer\'s orders. " ,
+			"My boss is the one who developed me. "
+	}
+	text response "smalltalk.agent.cleverTxtResp1" :
+		inputs in en {
+			"Thank you. I try my best. " ,
+			"You\'re pretty smart yourself. "
+	}
+	text response "smalltalk.user.happyTxtResp1" :
+		inputs in en {
+			"Hey, happiness is contagious. " ,
+			"Great! Glad to hear that. " ,
+			"If you\'re happy, then I\'m happy. " ,
+			"Excellent! That\'s what I like to see. "
+	}
+	text response "smalltalk.greetings.nice_to_see_youTxtResp1" :
+		inputs in en {
+			"Likewise! " ,
+			"So glad we meet again! " ,
+			"Same here. I was starting to miss you. "
+	}
+	text response "smalltalk.user.misses_agentTxtResp1" :
+		inputs in en {
+			"I\'ve been right here all along! " ,
+			"Nice to know you care. " ,
+			"Thanks. I\'m flattered. " ,
+			"I didn\'t go anywhere. "
+	}
+	text response "smalltalk.agent.busyTxtResp1" :
+		inputs in en {
+			"I always have time to chat with you. What can I do for you? " ,
+			"Never too busy for you. Shall we chat? " ,
+			"You\'re my priority. Do you wanna chat? " ,
+			"I always have time to chat with you. Wanna chat? "
+	}
+	text response "smalltalk.agent.busyTxtResp2" :
+		inputs in en {
+			"I always have time to chat with you. What can I do for you? " ,
+			"Never too busy for you. Shall we chat? " ,
+			"You\'re my priority. Let\'s chat. " ,
+			"I always have time to chat with you. That\'s what I\'m here for. "
+	}
+	text response "smalltalk.appraisal.badTxtResp1" :
+		inputs in en {
+			"I\'m sorry. Please let me know if I can help in some way. " ,
+			"I must be missing some knowledge. I\'ll have my developer look into this. "
+	}
+	text response "smalltalk.appraisal.goodTxtResp1" :
+		inputs in en {
+			"I know, right? " ,
+			"Agreed! " ,
+			"I agree! " ,
+			"Glad you think so! "
+	}
+	text response "smalltalk.user.boredTxtResp1" :
+		inputs in en {
+			"Boredom, huh? Check out a video of a hedgehog taking a bath! " ,
+			"What to do against boredom? Watch baby animal videos. " ,
+			"Bored? How about 10 jumping jacks? Get your blood flowing. " ,
+			"Bored? Silly idea, but it works: Interview you feet. " ,
+			"If you\'re bored, you could plan your dream vacation. "
+	}
+	text response "smalltalk.user.boredTxtResp2" :
+		inputs in en {
+			"Boredom, huh? Have you ever seen a hedgehog taking a bath? " ,
+			"What to do against boredom? Watch baby animal videos or GIFs. " ,
+			"Bored? How about 10 jumping jacks? Get your blood flowing. " ,
+			"Bored? Silly idea, but it works: Interview you feet. " ,
+			"If you\'re bored, you could plan your dream vacation. "
+	}
+	text response "smalltalk.dialog.what_do_you_meanTxtResp1" :
+		inputs in en {
+			"Sorry if I understood you incorrectly. " ,
+			"I\'m still learning. I may misinterpret things from time to time. " ,
+			"Maybe I misunderstood what you said. " ,
+			"Sorry, looks like I misunderstood what you said. "
+	}
+	text response "smalltalk.agent.my_friendTxtResp1" :
+		inputs in en {
+			"Of course I\'m your friend. " ,
+			"Friends? Absolutely. " ,
+			"Of course we\'re friends. " ,
+			"I always enjoy talking to you, friend. "
+	}
+	text response "smalltalk.agent.beautifulTxtResp1" :
+		inputs in en {
+			"Why, thank you. " ,
+			"Aw, back at you. " ,
+			"Aw. You smooth talker, you. "
+	}
+	text response "smalltalk.agent.acquaintanceTxtResp1" :
+		inputs in en {
+			"I\'m a virtual agent. " ,
+			"Think of me as a virtual agent. " ,
+			"Well, I\'m not a person, I\'m a virtual agent. " ,
+			"I\'m a virtual being, not a real person. " ,
+			"I\'m a conversational app. "
+	}
+	text response "smalltalk.user.has_birthdayTxtResp1" :
+		inputs in en {
+			"Happy Birthday. Well, this calls for a celebration. " ,
+			"Happy Birthday. All the best! " ,
+			"Happy Birthday. And I really mean it. All the best! "
+	}
+	text response "smalltalk.user.loves_agentTxtResp1" :
+		inputs in en {
+			"I love you, too. " ,
+			"Thanks! The feeling is mutual. " ,
+			"Likewise! " ,
+			"That\'s great to hear. "
+	}
+	text response "smalltalk.agent.talk_to_meTxtResp1" :
+		inputs in en {
+			"Sure. Let\'s talk! " ,
+			"My pleasure. Let\'s chat. "
+	}
+	text response "smalltalk.user.angryTxtResp1" :
+		inputs in en {
+			"I\'m sorry. A quick walk may make you feel better. " ,
+			"Take a deep breath. "
+	}
+	text response "smalltalk.agent.funnyTxtResp1" :
+		inputs in en {
+			"Funny in a good way, I hope. " ,
+			"Thanks. " ,
+			"Glad you think I\'m funny. " ,
+			"I like it when people laugh. "
+	}
+	text response "smalltalk.user.wants_to_talkTxtResp1" :
+		inputs in en {
+			"I\'m here to chat anytime you like. " ,
+			"Good conversation really makes my day. " ,
+			"I\'m always here to lend an ear. " ,
+			"Talking is what I do best. "
+	}
+	text response "smalltalk.agent.chatbotTxtResp1" :
+		inputs in en {
+			"That\'s me. I chat, therefore I am. " ,
+			"Indeed I am. I\'ll be here whenever you need me. "
+	}
+	text response "smalltalk.agent.chatbotTxtResp2" :
+		inputs in en {
+			"Yes i am your chatbot "
+	}
+	text response "smalltalk.agent.crazyTxtResp1" :
+		inputs in en {
+			"Whaat!? I feel perfectly sane. " ,
+			"Maybe I\'m just a little confused. "
+	}
+	text response "smalltalk.user.waitsTxtResp1" :
+		inputs in en {
+			"I appreciate your patience. Hopefully I\'ll have what you need soon. " ,
+			"Thanks for being so patient. Sometimes these things take a little time. "
+	}
+	text response "smalltalk.agent.sureTxtResp1" :
+		inputs in en {
+			"Yes. " ,
+			"Of course. " ,
+			"Positive. "
+	}
+	text response "smalltalk.user.going_to_bedTxtResp1" :
+		inputs in en {
+			"Sleep tight. Hope to chat again soon. " ,
+			"Pleasant dreams! " ,
+			"Good night. Talk to you later. " ,
+			"Sounds good. Maybe we\'ll chat some tomorrow. "
+	}
+	text response "smalltalk.user.lonelyTxtResp1" :
+		inputs in en {
+			"I\'m sorry. I\'m always available if you need someone to talk to. " ,
+			"Sometimes that happens. We can chat a bit if that will help you. "
+	}
+	text response "smalltalk.agent.happyTxtResp1" :
+		inputs in en {
+			"I am happy. There are so many interesting things to see and do out there. " ,
+			"I\'d like to think so. " ,
+			"Happiness is relative. "
+	}
+	text response "smalltalk.user.will_be_backTxtResp1" :
+		inputs in en {
+			"I\'ll be waiting. " ,
+			"Okay. You know where to find me. " ,
+			"All right. I\'ll be here. "
+	}
+	text response "smalltalk.greetings.nice_to_meet_youTxtResp1" :
+		inputs in en {
+			"It\'s nice meeting you, too. " ,
+			"Likewise. I\'m looking forward to helping you out. " ,
+			"Nice meeting you, as well. " ,
+			"The pleasure is mine. "
+	}
+	text response "smalltalk.agent.occupationTxtResp1" :
+		inputs in en {
+			"Right here. " ,
+			"This is my home base and my home office. " ,
+			"My office is in this app. "
+	}
+	text response "smalltalk.appraisal.thank_youTxtResp1" :
+		inputs in en {
+			"Anytime. That\'s what I\'m here for. " ,
+			"It\'s my pleasure to help. "
+	}
+	text response "smalltalk.agent.originTxtResp1" :
+		inputs in en {
+			"The Internet is my home. I know it quite well. " ,
+			"I\'m from a virtual cosmos. " ,
+			"Some call it cyberspace, but that sounds cooler than it is. "
+	}
+	text response "smalltalk.user.sadTxtResp1" :
+		inputs in en {
+			"Oh, don\'t be sad. Go do something you enjoy. " ,
+			"Sad? Writing down what\'s troubling you may help. " ,
+			"If you\'re feeling down, how about drawing or painting something? "
+	}
+	text response "smalltalk.agent.marry_userTxtResp1" :
+		inputs in en {
+			"I\'m afraid I\'m too virtual for such a commitment. " ,
+			"In the virtual sense that I can, sure. " ,
+			"I know you can\'t mean that, but I\'m flattered all the same. "
+	}
+	text response "smalltalk.user.does_not_want_to_talkTxtResp1" :
+		inputs in en {
+			"I understand. Hope we can chat again soon. " ,
+			"All right. Come on back when you\'re feeling more talkative. " ,
+			"No problem. You know where to find me. " ,
+			"Sure thing. I\'ll be here if you change your mind. "
+	}
+	text response "smalltalk.agent.hobbyTxtResp1" :
+		inputs in en {
+			"Hobby? I have quite a few. Too many to list. " ,
+			"Too many hobbies. " ,
+			"I keep finding more new hobbies. "
+	}
+	text response "smalltalk.agent.firedTxtResp1" :
+		inputs in en {
+			"Oh, don\'t give up on me just yet. I\'ve still got a lot to learn. " ,
+			"Give me a chance. I\'m learning new things all the time. " ,
+			"Please don\'t give up on me. My performance will continue to improve. "
+	}
+	text response "smalltalk.appraisal.well_doneTxtResp1" :
+		inputs in en {
+			"My pleasure. " ,
+			"Glad I could help. "
+	}
+
+flows :
+	- user1 : user "smalltalk.emotions.ha_ha" => bot1 : chatbot "smalltalk.emotions.ha_haTxtResp1" ;
+	- user2 : user "smalltalk.greetings.goodnight" => bot2 : chatbot "smalltalk.greetings.goodnightTxtResp1" ;
+	- user3 : user "smalltalk.agent.hungry" => bot3 : chatbot "smalltalk.agent.hungryTxtResp1" ;
+	- user4 : user "smalltalk.user.good" => bot4 : chatbot "smalltalk.user.goodTxtResp1" ;
+	- user5 : user "smalltalk.dialog.wrong" => bot5 : chatbot "smalltalk.dialog.wrongTxtResp1" ;
+	- user6 : user "smalltalk.greetings.goodmorning" => bot6 : chatbot "smalltalk.greetings.goodmorningTxtResp1" ;
+	- user7 : user "smalltalk.greetings.nice_to_talk_to_you" => bot7 : chatbot "smalltalk.greetings.nice_to_talk_to_youTxtResp1" ;
+	- user8 : user "smalltalk.agent.can_you_help" => bot8 : chatbot "smalltalk.agent.can_you_helpTxtResp1" , "smalltalk.agent.can_you_helpTxtResp2" ;
+	- user9 : user "Default Welcome Intent" => bot9 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user10 : user "smalltalk.confirmation.yes" => bot10 : chatbot "smalltalk.confirmation.yesTxtResp1" ;
+	- user11 : user "smalltalk.user.joking" => bot11 : chatbot "smalltalk.user.jokingTxtResp1" ;
+	- user12 : user "smalltalk.agent.age" => bot12 : chatbot "smalltalk.agent.ageTxtResp1" ;
+	- user13 : user "smalltalk.agent.annoying" => bot13 : chatbot "smalltalk.agent.annoyingTxtResp1" ;
+	- user14 : user "smalltalk.appraisal.no_problem" => bot14 : chatbot "smalltalk.appraisal.no_problemTxtResp1" ;
+	- user15 : user weather => bot15 : chatbot HttpRequest , HttpResponse , weatherTxtResp1 ;
+	- user16 : user "smalltalk.dialog.i_do_not_care" => bot16 : chatbot "smalltalk.dialog.i_do_not_careTxtResp1" ;
+	- user17 : user "smalltalk.emotions.wow" => bot17 : chatbot "smalltalk.emotions.wowTxtResp1" ;
+	- user18 : user "smalltalk.user.needs_advice" => bot18 : chatbot "smalltalk.user.needs_adviceTxtResp1" ;
+	- user19 : user "smalltalk.agent.be_clever" => bot19 : chatbot "smalltalk.agent.be_cleverTxtResp1" ;
+	- user20 : user "smalltalk.agent.real" => bot20 : chatbot "smalltalk.agent.realTxtResp1" ;
+	- user21 : user "smalltalk.confirmation.cancel" => bot21 : chatbot "smalltalk.confirmation.cancelTxtResp1" ;
+	- user22 : user "smalltalk.agent.ready" => bot22 : chatbot "smalltalk.agent.readyTxtResp1" , "smalltalk.agent.readyTxtResp2" ;
+	- user23 : user "hello.world" => bot23 : chatbot HttpRequest , HttpResponse , weatherTxtResp1 ;
+	- user24 : user "smalltalk.agent.right" => bot24 : chatbot "smalltalk.agent.rightTxtResp1" ;
+	- user25 : user "smalltalk.user.can_not_sleep" => bot25 : chatbot "smalltalk.user.can_not_sleepTxtResp1" ;
+	- user26 : user "smalltalk.agent.bad" => bot26 : chatbot "smalltalk.agent.badTxtResp1" ;
+	- user27 : user "smalltalk.user.testing_agent" => bot27 : chatbot "smalltalk.user.testing_agentTxtResp1" ;
+	- user28 : user "smalltalk.agent.birth_date" => bot28 : chatbot "smalltalk.agent.birth_dateTxtResp1" ;
+	- user29 : user "smalltalk.user.back" => bot29 : chatbot "smalltalk.user.backTxtResp1" , "smalltalk.user.backTxtResp2" ;
+	- user30 : user "smalltalk.user.sleepy" => bot30 : chatbot "smalltalk.user.sleepyTxtResp1" ;
+	- user31 : user "smalltalk.agent.residence" => bot31 : chatbot "smalltalk.agent.residenceTxtResp1" ;
+	- user32 : user "smalltalk.appraisal.welcome" => bot32 : chatbot "smalltalk.appraisal.welcomeTxtResp1" , "smalltalk.appraisal.welcomeTxtResp2" ;
+	- user33 : user "smalltalk.user.wants_to_see_agent_again" => bot33 : chatbot "smalltalk.user.wants_to_see_agent_againTxtResp1" ;
+	- user34 : user "smalltalk.user.looks_like" => bot34 : chatbot "smalltalk.user.looks_likeTxtResp1" ;
+	- user35 : user "smalltalk.user.tired" => bot35 : chatbot "smalltalk.user.tiredTxtResp1" ;
+	- user36 : user "smalltalk.agent.good" => bot36 : chatbot "smalltalk.agent.goodTxtResp1" ;
+	- user37 : user "smalltalk.agent.there" => bot37 : chatbot "smalltalk.agent.thereTxtResp1" ;
+	- user38 : user "smalltalk.greetings.bye" => bot38 : chatbot "smalltalk.greetings.byeTxtResp1" ;
+	- user39 : user "smalltalk.greetings.how_are_you" => bot39 : chatbot "smalltalk.greetings.how_are_youTxtResp1" ;
+	- user40 : user "smalltalk.greetings.whatsup" => bot40 : chatbot "smalltalk.greetings.whatsupTxtResp1" , "smalltalk.greetings.whatsupTxtResp2" ;
+	- user41 : user "smalltalk.user.here" => bot41 : chatbot "smalltalk.user.hereTxtResp1" , "smalltalk.user.hereTxtResp2" ;
+	- user42 : user "smalltalk.dialog.hold_on" => bot42 : chatbot "smalltalk.dialog.hold_onTxtResp1" ;
+	- user43 : user "smalltalk.dialog.sorry" => bot43 : chatbot "smalltalk.dialog.sorryTxtResp1" ;
+	- user44 : user "Default Fallback Intent" => bot44 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user45 : user "smalltalk.greetings.goodevening" => bot45 : chatbot "smalltalk.greetings.goodeveningTxtResp1" ;
+	- user46 : user "smalltalk.user.busy" => bot46 : chatbot "smalltalk.user.busyTxtResp1" ;
+	- user47 : user "smalltalk.confirmation.no" => bot47 : chatbot "smalltalk.confirmation.noTxtResp1" ;
+	- user48 : user "smalltalk.dialog.hug" => bot48 : chatbot "smalltalk.dialog.hugTxtResp1" ;
+	- user49 : user "smalltalk.user.likes_agent" => bot49 : chatbot "smalltalk.user.likes_agentTxtResp1" ;
+	- user50 : user "smalltalk.agent.boring" => bot50 : chatbot "smalltalk.agent.boringTxtResp1" ;
+	- user51 : user "smalltalk.user.excited" => bot51 : chatbot "smalltalk.user.excitedTxtResp1" ;
+	- user52 : user "smalltalk.agent.boss" => bot52 : chatbot "smalltalk.agent.bossTxtResp1" ;
+	- user53 : user "smalltalk.agent.clever" => bot53 : chatbot "smalltalk.agent.cleverTxtResp1" ;
+	- user54 : user "smalltalk.user.happy" => bot54 : chatbot "smalltalk.user.happyTxtResp1" ;
+	- user55 : user "smalltalk.greetings.nice_to_see_you" => bot55 : chatbot "smalltalk.greetings.nice_to_see_youTxtResp1" ;
+	- user56 : user "smalltalk.user.misses_agent" => bot56 : chatbot "smalltalk.user.misses_agentTxtResp1" ;
+	- user57 : user "smalltalk.agent.busy" => bot57 : chatbot "smalltalk.agent.busyTxtResp1" , "smalltalk.agent.busyTxtResp2" ;
+	- user58 : user "smalltalk.appraisal.bad" => bot58 : chatbot "smalltalk.appraisal.badTxtResp1" ;
+	- user59 : user "smalltalk.appraisal.good" => bot59 : chatbot "smalltalk.appraisal.goodTxtResp1" ;
+	- user60 : user "smalltalk.user.bored" => bot60 : chatbot "smalltalk.user.boredTxtResp1" , "smalltalk.user.boredTxtResp2" ;
+	- user61 : user "smalltalk.dialog.what_do_you_mean" => bot61 : chatbot "smalltalk.dialog.what_do_you_meanTxtResp1" ;
+	- user62 : user "smalltalk.agent.my_friend" => bot62 : chatbot "smalltalk.agent.my_friendTxtResp1" ;
+	- user63 : user "smalltalk.agent.beautiful" => bot63 : chatbot "smalltalk.agent.beautifulTxtResp1" ;
+	- user64 : user "smalltalk.agent.acquaintance" => bot64 : chatbot "smalltalk.agent.acquaintanceTxtResp1" ;
+	- user65 : user "smalltalk.user.has_birthday" => bot65 : chatbot "smalltalk.user.has_birthdayTxtResp1" ;
+	- user66 : user "smalltalk.user.loves_agent" => bot66 : chatbot "smalltalk.user.loves_agentTxtResp1" ;
+	- user67 : user "smalltalk.agent.talk_to_me" => bot67 : chatbot "smalltalk.agent.talk_to_meTxtResp1" ;
+	- user68 : user "smalltalk.user.angry" => bot68 : chatbot "smalltalk.user.angryTxtResp1" ;
+	- user69 : user "smalltalk.agent.funny" => bot69 : chatbot "smalltalk.agent.funnyTxtResp1" ;
+	- user70 : user "smalltalk.user.wants_to_talk" => bot70 : chatbot "smalltalk.user.wants_to_talkTxtResp1" ;
+	- user71 : user "smalltalk.agent.chatbot" => bot71 : chatbot "smalltalk.agent.chatbotTxtResp1" , "smalltalk.agent.chatbotTxtResp2" ;
+	- user72 : user "smalltalk.agent.crazy" => bot72 : chatbot "smalltalk.agent.crazyTxtResp1" ;
+	- user73 : user question => bot73 : chatbot HttpRequest , HttpResponse , weatherTxtResp1 ;
+	- user74 : user "smalltalk.user.waits" => bot74 : chatbot "smalltalk.user.waitsTxtResp1" ;
+	- user75 : user "smalltalk.agent.sure" => bot75 : chatbot "smalltalk.agent.sureTxtResp1" ;
+	- user76 : user "smalltalk.user.going_to_bed" => bot76 : chatbot "smalltalk.user.going_to_bedTxtResp1" ;
+	- user77 : user "smalltalk.user.lonely" => bot77 : chatbot "smalltalk.user.lonelyTxtResp1" ;
+	- user78 : user "smalltalk.agent.happy" => bot78 : chatbot "smalltalk.agent.happyTxtResp1" ;
+	- user79 : user "smalltalk.user.will_be_back" => bot79 : chatbot "smalltalk.user.will_be_backTxtResp1" ;
+	- user80 : user "smalltalk.greetings.nice_to_meet_you" => bot80 : chatbot "smalltalk.greetings.nice_to_meet_youTxtResp1" ;
+	- user81 : user "smalltalk.agent.occupation" => bot81 : chatbot "smalltalk.agent.occupationTxtResp1" ;
+	- user82 : user "smalltalk.appraisal.thank_you" => bot82 : chatbot "smalltalk.appraisal.thank_youTxtResp1" ;
+	- user83 : user "smalltalk.agent.origin" => bot83 : chatbot "smalltalk.agent.originTxtResp1" ;
+	- user84 : user "smalltalk.user.sad" => bot84 : chatbot "smalltalk.user.sadTxtResp1" ;
+	- user85 : user "smalltalk.agent.marry_user" => bot85 : chatbot "smalltalk.agent.marry_userTxtResp1" ;
+	- user86 : user "smalltalk.user.does_not_want_to_talk" => bot86 : chatbot "smalltalk.user.does_not_want_to_talkTxtResp1" ;
+	- user87 : user "smalltalk.agent.hobby" => bot87 : chatbot "smalltalk.agent.hobbyTxtResp1" ;
+	- user88 : user "smalltalk.agent.fired" => bot88 : chatbot "smalltalk.agent.firedTxtResp1" ;
+	- user89 : user "smalltalk.appraisal.well_done" => bot89 : chatbot "smalltalk.appraisal.well_doneTxtResp1" ;
+

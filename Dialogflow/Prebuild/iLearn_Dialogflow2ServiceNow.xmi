@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="iLearn_Dialogflow2ServiceNow">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="incident.status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check on status of my ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like status on my incident"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the status of my ticket"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="incident.status.number">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my ticket number is INC"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="0010029"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my ticket # is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="59"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the ticket number is INC"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="0010060"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my ticket number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="30"/>
+      </inputs>
+    </inputs>
+    <parameters name="number" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="incident.create.details">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Bud Richardson"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="my mobile phone will not turn on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Margaret Grey"/>
+        <tokens xsi:type="generator:Literal" text=", my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="laptop has a blue screen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="David Miller"/>
+        <tokens xsi:type="generator:Literal" text=" and need to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="reset my password"/>
+      </inputs>
+    </inputs>
+    <parameters name="username"/>
+    <parameters name="description"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="incident.create">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="helpdesk support"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create an incident"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to open a ticket"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://instance.service-now.com/api/path/post" method="POST">
+    <basicAuth key="admin">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="content-type">
+      <value xsi:type="generator:Literal" text="application/json"/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="incident.statusTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay, please provide your ticket number. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="incident.status.numberTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="incident.createTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please provide your user name and short description of the issue. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2">
+      <outcoming intent="//@intents.2" name="user3">
+        <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot3"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4" name="user4">
+    <target actions="//@actions.5" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.5" name="user5">
+    <target actions="//@actions.6" name="bot5">
+      <outcoming intent="//@intents.3" name="user6">
+        <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

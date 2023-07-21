@@ -1,0 +1,575 @@
+Chatbot "HOTEL-BOOKING-AGENT2" language : en , da , de , es , fr , hi , it , ko , pt , ru , tr , zh
+
+intents :
+
+	countBookings :
+		inputs in en {
+			"show reservations" ,
+			( password ) [ password ] ,
+			"show bookings I have" ,
+			"Show all bookings" ,
+			"show me my bookings"
+		}
+		parameters :
+			password : entity password , required , prompts in en [ "Please enter a password to see all bookings" ] ;
+
+	feedback1 :
+		inputs in en {
+			feedback ,
+			suggestions ,
+			complain ,
+			"I want to add " ( modifications ) [ feedBack ] ,
+			"I\'ve a " ( complain ) [ feedBack ] ,
+			"I\'ve a " ( suggestion ) [ feedBack ] ,
+			"I want to do complain" ,
+			"I want to add a suggestions"
+		}
+		parameters :
+			feedBack : entity feedback , required , prompts in en [ "I\'ll be very happy with your feedback . Please tell me which type to feed back do you want to give a COMPLAIN or SUGGESTIONS ?" ] ;
+			subject : entity text , required , prompts in en [ "let me know the subject" ] ;
+			bodyText : entity text , required , prompts in en [ "Type description here" ] ;
+
+	"Default Welcome Intent" :
+		inputs in da {
+			eftermiddag ,
+			"hej med dig" ,
+			hejsan ,
+			"en god dag" ,
+			"hallo hej" ,
+			hej ,
+			hilsner ,
+			hejsa ,
+			"jeg ville bare sige hej" ,
+			"jeg hilser på dig" ,
+			"hej igen" ,
+			"det er længe siden" ,
+			"dejlig dag synes du ikke" ,
+			davs
+		}
+		inputs in de {
+			"ja hallo" ,
+			"ich grüße dich" ,
+			"hallöchen" ,
+			"hallo Schatzi" ,
+			"hallo Schatz" ,
+			"hallo hallo" ,
+			hallo ,
+			"grüß dich"
+		}
+		inputs in en {
+			^hi ,
+			"hey there" ,
+			greetings ,
+			hello ,
+			"hy!" ,
+			hye ,
+			"lovely day isn\'t it" ,
+			"hello again" ,
+			"just going to say hi" ,
+			howdy ,
+			hey ,
+			"hello hi" ,
+			"long time no see" ,
+			"hi there" ,
+			"I greet you" ,
+			"hello there" ,
+			"a good day" ,
+			heya
+		}
+		inputs in es {
+			hola ,
+			saludos ,
+			"hey ho" ,
+			chao
+		}
+		inputs in fr {
+			salutations ,
+			rebonjour ,
+			"bonjour à toi" ,
+			"re bonjour" ,
+			allo ,
+			coucou ,
+			"hé" ,
+			resalut ,
+			salut ,
+			"re salut" ,
+			"salut à tous" ,
+			bonjour
+		}
+		inputs in hi {
+			"काफ़ी दिनों से बात नहीं हुई" ,
+			"नमस्कार" ,
+			"नमस्ते" ,
+			"क्या हाल है" ,
+			"सुनो, क्या हाल है" ,
+			"मेरी तरफ़ से नमस्ते"
+		}
+		inputs in it {
+			ciao ,
+			"ciao ciao" ,
+			"ciao bello" ,
+			"ciao bella" ,
+			"ciao caro" ,
+			"ciao cara" ,
+			salve ,
+			ehi
+		}
+		inputs in ko {
+			"오랜만이야" ,
+			"안녕" ,
+			"저기" ,
+			"잘 있었어" ,
+			"반가워" ,
+			"오랜만" ,
+			"어떻게 지냈어" ,
+			"잘 지냈니" ,
+			"오늘 어때"
+		}
+		inputs in pt {
+			"há quanto tempo" ,
+			oi ,
+			opa ,
+			"fala aí" ,
+			fala ,
+			"oi tudo bem" ,
+			"e aí" ,
+			eae ,
+			"há muito que não o vejo" ,
+			"olá" ,
+			"que tal" ,
+			"como vai" ,
+			"saudações" ,
+			"saúdo-o"
+		}
+		inputs in ru {
+			"привет привет" ,
+			"здравствуй" ,
+			"привет" ,
+			"приветствую" ,
+			"всем привет" ,
+			"хей" ,
+			"чао" ,
+			"приветствую тебя" ,
+			"приветик" ,
+			"и снова здравствуйте" ,
+			"здравствуйте" ,
+			"давно не виделись" ,
+			"просто хотел поздороваться" ,
+			"хотелось бы тебя поприветствовать" ,
+			"хочу сказать тебе привет"
+		}
+		inputs in tr {
+			selam ,
+			"ne güzel bir gün değil mi" ,
+			"selam naber" ,
+			merhaba ,
+			"selam dostum" ,
+			"tünaydın" ,
+			"seni selamlıyorum" ,
+			"yüzünü gören cennetlik" ,
+			"merhaba naber" ,
+			"iyi günler" ,
+			selamlar ,
+			"selam sana" ,
+			"tekrar merhaba" ,
+			"selam merhaba" ,
+			naber ,
+			"merhaba demek istedim" ,
+			merhabalar
+		}
+		inputs in zh {
+			"你好" ,
+			"喂" ,
+			"嗨" ,
+			"哈啰" ,
+			"嘿" ,
+			"嗨 你好" ,
+			"嗨寶貝" ,
+			"嗨蜜糖" ,
+			"嗨美女" ,
+			"嗨甜心" ,
+			"嗨飛飛" ,
+			"嗨老婆" ,
+			"嗨愛人" ,
+			"嗨可愛的" ,
+			"嗨 親愛的" ,
+			"嗨你好朋友" ,
+			"哈啰老婆" ,
+			"哈啰飛飛" ,
+			"哈啰寶貝" ,
+			"哈啰美女" ,
+			"哈啰甜心" ,
+			"哈啰朋友" ,
+			"哈啰你好" ,
+			"哈啰我親愛的" ,
+			"嘿 你好" ,
+			"嘿老婆" ,
+			"嘿飛飛" ,
+			"嘿美女" ,
+			"嘿夥伴" ,
+			"嘿女孩" ,
+			"嘿助手" ,
+			"嘿可愛的" ,
+			"只想給你打個招呼" ,
+			"美好的一天對吧" ,
+			"再一次問好" ,
+			"好久不見" ,
+			"哈喽" ,
+			"你好啊" ,
+			"嘿嘿"
+	}
+
+	Hotel_booking :
+		inputs in en {
+			"book room" ,
+			"book hotel" ,
+			"my email is " ( "abcabc@abc.com" ) [ email ] ,
+			"i want a " ( vip ) [ roomType ] " room" ,
+			"I want reserve a hotel room" ,
+			"I want to book a hotel room for " ( "3" ) [ persons ] " persons" ,
+			"I want to book a room" ,
+			"My name is " ( john ) [ name ] ,
+			"I want a room" ,
+			"I need a room"
+		}
+		parameters :
+			name : entity text , prompts in en [ "May I have your name please" , "Let me know your name" ] ;
+			persons : entity float , prompts in en [ "Book room for how many persons?" , "For how many people you want to book a hotel room ?" , "How many people you are ?" ] ;
+			email : entity text , prompts in en [ "Kindly send me your email for furthur contact" , "let me know your email address" ] ;
+			roomType : entity RoomType , prompts in en [ "What type of room would you like to book (economic or standard or luxury)" ] ;
+
+	showBookings :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity feedback :
+		inputs in en {
+			complain synonyms complain
+			modification synonyms modification
+			suggestions synonyms suggestions
+	}
+	Simple entity password :
+		inputs in en {
+			admin synonyms admin
+	}
+	Simple entity RoomType :
+		inputs in en {
+			Economic synonyms Economic , casual , chepest , "low cost" , cheap
+			luxury synonyms "business class" , luxury , vip
+			standard synonyms moderate , simple , standard
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-hotel-booking-agent2-exqblh.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in da {
+			request. text
+		}
+		inputs in de {
+			request. text
+		}
+		inputs in es {
+			request. text
+		}
+		inputs in fr {
+			request. text
+		}
+		inputs in hi {
+			request. text
+		}
+		inputs in it {
+			request. text
+		}
+		inputs in ko {
+			request. text
+		}
+		inputs in pt {
+			request. text
+		}
+		inputs in ru {
+			request. text
+		}
+		inputs in tr {
+			request. text
+		}
+		inputs in zh {
+			request. text
+	}
+	text response countBookingsTxtResp1 :
+		inputs in en {
+			"something went wrong "
+	}
+	text response feedback1TxtResp1 :
+		inputs in en {
+			"Complainnull "
+	}
+	text response feedback1TxtResp2 :
+		inputs in en {
+			"Suggestionsnull "
+	}
+	text response feedback1TxtResp3 :
+		inputs in en {
+			" "
+	}
+	text response feedback1TxtResp4 :
+		inputs in en {
+			"Something went wrong "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in tr {
+			"Merhaba! " ,
+			"Selam! " ,
+			"İyi günler! " ,
+			"Selamlar! "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in da {
+			"Hej! " ,
+			"Dav! " ,
+			"Goddag! " ,
+			"Hejsa! "
+	}
+	text response "Default Welcome IntentTxtResp3" :
+		inputs in es {
+			"¡Hola! " ,
+			"¡Hey! " ,
+			"¡Buenos días! "
+	}
+	text response "Default Welcome IntentTxtResp4" :
+		inputs in fr {
+			"Salut ! " ,
+			"Bonjour ! " ,
+			"Salutations ! " ,
+			"Bienvenue ! "
+	}
+	text response "Default Welcome IntentTxtResp5" :
+		inputs in it {
+			"Ciao! " ,
+			"Buongiorno! "
+	}
+	text response "Default Welcome IntentTxtResp9" :
+		inputs in en {
+			"Hy! I\'m Hotel Booking agent , I can book your hotel and  can show you all bookings "
+	}
+	text response "Default Welcome IntentTxtResp10" :
+		inputs in pt {
+			"Olá! " ,
+			"Oi! "
+	}
+	text response "Default Welcome IntentTxtResp11" :
+		inputs in zh {
+			"嘿！ " ,
+			"你好！ " ,
+			"嘿！ 好久不見！ " ,
+			"歡迎歸來。 " ,
+			"嘿！歡迎你回來。 "
+	}
+	text response "Default Welcome IntentTxtResp12" :
+		inputs in pt {
+			"Olá! "
+	}
+	text response "Default Welcome IntentTxtResp13" :
+		inputs in ko {
+			"안녕! " ,
+			"안녕하세요! "
+	}
+	text response "Default Welcome IntentTxtResp14" :
+		inputs in ru {
+			"Привет! " ,
+			"Здравствуй! " ,
+			"Добрый день! "
+	}
+	text response "Default Welcome IntentTxtResp15" :
+		inputs in hi {
+			"नमस्ते! " ,
+			"नमस्कार! " ,
+			"आपका दिन शुभ हो! "
+	}
+	text response "Default Welcome IntentTxtResp16" :
+		inputs in de {
+			"Hallo! " ,
+			"Guten Tag! " ,
+			"Ich grüße dich! "
+	}
+	text response Hotel_bookingTxtResp3 :
+		inputs in en {
+			"something went wrong. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in tr {
+			"Anlayamadım. Tekrar söyleyebilir misin? " ,
+			"Ne dediğini duyamadım. Tekrar söyler misin? " ,
+			"Pardon, tekrar eder misin? " ,
+			"Pardon, tekrar söyleyebilir misin? " ,
+			"Tekrar söyleyebilir misin? " ,
+			"Maalesef, anlayamadım. " ,
+			"Pardon, ne demiştin? " ,
+			"Bir daha söyler misin? " ,
+			"Ne dedin? " ,
+			"Tekrar eder misin? " ,
+			"Anlayamadım. " ,
+			"Duyamadım. "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in da {
+			"Det forstod jeg ikke. Prøv at sige det igen. " ,
+			"Det fik jeg ikke fat i. Prøv at sige det igen. " ,
+			"Det forstod jeg ikke. Prøv at gentage det. " ,
+			"Det hørte jeg ikke. Prøv at sige det igen. " ,
+			"Prøv at sige det igen. " ,
+			"Det forstod jeg ikke. " ,
+			"Det hørte jeg ikke. Hvad sagde du? " ,
+			"Vil du gentage det? " ,
+			"Hvad sagde du? " ,
+			"Prøv at sige det igen. " ,
+			"Det forstod jeg ikke. " ,
+			"Det fik jeg ikke fat i. "
+	}
+	text response "Default Fallback IntentTxtResp3" :
+		inputs in es {
+			"Ups, no he entendido a que te refieres. " ,
+			"¿Podrías repetirlo, por favor? " ,
+			"¿Disculpa? " ,
+			"¿Decías? " ,
+			"¿Cómo? "
+	}
+	text response "Default Fallback IntentTxtResp4" :
+		inputs in fr {
+			"J\'ai du mal à comprendre cette question. " ,
+			"J\'ai mal compris votre demande. " ,
+			"Je n\'ai pas saisi ce que vous avez dit. " ,
+			"Je crois que je ne vous suis pas. " ,
+			"Je ne comprends pas de quoi vous me parlez. "
+	}
+	text response "Default Fallback IntentTxtResp5" :
+		inputs in it {
+			"Non penso di seguirti. Potresti ripetere? " ,
+			"Potresti dirlo ancora una volta? " ,
+			"Potresti essere più specifico? " ,
+			"Non ho capito bene. Potresti ripetere? " ,
+			"Non ti ho sentito bene. Puoi ripetere? "
+	}
+	text response "Default Fallback IntentTxtResp7" :
+		inputs in pt {
+			"Lamento, mas não compreendi. " ,
+			"Desculpe, mas não compreendi. " ,
+			"Infelizmente, não captei o que deseja. " ,
+			"Não consegui compreender, desculpe. "
+	}
+	text response "Default Fallback IntentTxtResp8" :
+		inputs in zh {
+			"對唔住，我聽唔明你嘅問題。 " ,
+			"我好似誤解咗你嘅說話。 " ,
+			"我唔係聽得好清楚你講嘅最後幾隻字。 " ,
+			"我搞唔清你嘅意思。 " ,
+			"我聽唔明你嘅說話。 "
+	}
+	text response "Default Fallback IntentTxtResp9" :
+		inputs in pt {
+			"Vai-me desculpar, mas não percebi a pergunta. " ,
+			"Peço desculpa, mas não percebi muito bem a sua pergunta. " ,
+			"Infelizmente, essa foi uma pergunta que não percebi bem. " ,
+			"Desculpe, mas não entendi a sua questão. "
+	}
+	text response "Default Fallback IntentTxtResp10" :
+		inputs in ko {
+			"마지막에 말씀을 잘 못 이해 한것 같아요. " ,
+			"방금 하신 말씀을 잘 못 알아들었어요. " ,
+			"죄송해요. 다시 들려 주실래요? " ,
+			"제가 제대로 이해하고 있는지 잘 모르겠어요. " ,
+			"제가 제대로 이해하지 못한것 같아요. 죄송해요. " ,
+			"조금 헷갈리는데요. "
+	}
+	text response "Default Fallback IntentTxtResp11" :
+		inputs in ru {
+			"Не совсем понимаю, о чём ты. " ,
+			"Вот эта последняя фраза мне не ясна. " ,
+			"А вот это не совсем понятно. " ,
+			"Можешь сказать то же самое другими словами? " ,
+			"Вот сейчас я тебя совсем не понимаю. " ,
+			"Попробуй, пожалуйста, выразить свою мысль по-другому. "
+	}
+	text response "Default Fallback IntentTxtResp12" :
+		inputs in hi {
+			"मुझे समझ नहीं आया. क्या आप अपनी बात दोहरा सकते हैं? " ,
+			"आपने क्या कहा, मुझे समझ नहीं आया. फिर से कहें? " ,
+			"माफ़ करें, क्या आप अपनी बात दोहरा सकते हैं? " ,
+			"माफ़ करें, क्या आप अपनी बात फिर से कह सकते हैं? " ,
+			"क्या आप अपनी बात दोहरा सकते हैं? " ,
+			"माफ़ करें, मुझे समझ नहीं आया| " ,
+			"माफ़ करें, क्या कहा आपने? " ,
+			"एक बार फिर से कह सकते हैं? " ,
+			"क्या कहा आपने? " ,
+			"एक बार फिर से कहिए? " ,
+			"मुझे समझ नहीं आया| "
+	}
+	text response "Default Fallback IntentTxtResp13" :
+		inputs in de {
+			"Ich verstehe deine Frage leider nicht. " ,
+			"Entschuldige bitte, ich habe deine Frage nicht verstanden. " ,
+			"Ich bin nicht so sicher, ob ich dich richtig verstanden habe. " ,
+			"Leider kann ich nicht verstehen, was du von mir möchtest. " ,
+			"Kannst du das noch mal anders formulieren? "
+	}
+
+flows :
+	- user1 : user countBookings => bot1 : chatbot HttpRequest , HttpResponse , countBookingsTxtResp1 {
+		=> user2 : user showBookings => bot2 : chatbot HttpRequest , HttpResponse , feedback1TxtResp3 ;
+	} ;
+	- user3 : user feedback1 => bot3 : chatbot HttpRequest , HttpResponse , feedback1TxtResp1 , feedback1TxtResp2 , feedback1TxtResp3 , feedback1TxtResp4 ;
+	- user4 : user "Default Welcome Intent" => bot4 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" , "Default Welcome IntentTxtResp3" , "Default Welcome IntentTxtResp4" , "Default Welcome IntentTxtResp5" , feedback1TxtResp3 , "Default Welcome IntentTxtResp9" , "Default Welcome IntentTxtResp10" , "Default Welcome IntentTxtResp11" , "Default Welcome IntentTxtResp12" , "Default Welcome IntentTxtResp13" , "Default Welcome IntentTxtResp14" , "Default Welcome IntentTxtResp15" , "Default Welcome IntentTxtResp16" ;
+	- user5 : user Hotel_booking => bot5 : chatbot HttpRequest , HttpResponse , feedback1TxtResp3 , Hotel_bookingTxtResp3 ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse , "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" , "Default Fallback IntentTxtResp3" , "Default Fallback IntentTxtResp4" , "Default Fallback IntentTxtResp5" , feedback1TxtResp4 , "Default Fallback IntentTxtResp7" , "Default Fallback IntentTxtResp8" , "Default Fallback IntentTxtResp9" , "Default Fallback IntentTxtResp10" , "Default Fallback IntentTxtResp11" , "Default Fallback IntentTxtResp12" , "Default Fallback IntentTxtResp13" ;
+

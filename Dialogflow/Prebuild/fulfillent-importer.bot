@@ -1,0 +1,26 @@
+Chatbot "fulfillent-importer" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-api-ai-samples.cloudfunctions.net/popularVideos" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			" "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse ;
+

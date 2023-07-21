@@ -1,0 +1,39 @@
+Chatbot "fulfillment-multi-locale" language : en , fr
+
+intents :
+
+"Default Welcome Intent" :
+	inputs in en {
+		^hi
+	}
+	inputs in fr {
+		salut
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in fr {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in fr {
+			"webhook a échoué "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			"Webhook Failed "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user2 : user "Default Fallback Intent" => bot2 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+

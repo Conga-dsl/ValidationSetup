@@ -1,0 +1,40 @@
+Chatbot "Jovo-BusinessApp" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+MyNameIsIntent :
+	inputs in en {
+		( name ) [ name ] ,
+		"my name is " ( name ) [ name ] ,
+		"i am " ( name ) [ name ] ,
+		"you can call me " ( name ) [ name ]
+	}
+	parameters :
+		name : entity text ;
+
+HelloWorldIntent :
+	inputs in en {
+		hello ,
+		"say hello" ,
+		"say hello world"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/6cf661d2-b784-42f3-8b91-8143b940a1aa" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user MyNameIsIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user HelloWorldIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+

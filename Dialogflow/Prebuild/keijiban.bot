@@ -1,0 +1,677 @@
+Chatbot keijiban language : en , ja
+
+intents :
+
+"overview.intent" :
+	inputs in en {
+		overview ,
+		summary
+	}
+	inputs in ja {
+		"要点" ,
+		"サマリー" ,
+		"要約" ,
+		"詳細"
+}
+
+"announcements.list.intent" :
+	inputs in en {
+		notice ,
+		notices ,
+		announcements ,
+		"get me my announcements" ,
+		"announcements please" ,
+		"any announcements?"
+	}
+	inputs in ja {
+		"お知らせはある？" ,
+		"お知らせは？" ,
+		"案内はある？" ,
+		"お知らせを教えて" ,
+		"お知らせを知りたい" ,
+		"アナウンス" ,
+		"知らせ" ,
+		"おしらせ" ,
+		"お知らせをおねがい" ,
+		"案内を知りたい" ,
+		"案内" ,
+		"お知らせ"
+}
+
+"events.last.intent" :
+
+"cancel.schedule.intent" :
+	inputs in en {
+		remove ,
+		"remove invite" ,
+		"remove please" ,
+		"cancel invite" ,
+		"cancel schedule"
+	}
+	inputs in ja {
+		"どかす" ,
+		"とる" ,
+		"やめる" ,
+		"スケジュールを取り消し" ,
+		"スケジュール取り消し" ,
+		"不参加" ,
+		"欠席します" ,
+		"欠席にしたい" ,
+		"欠席にする" ,
+		"欠席" ,
+		"スケジュールをキャンセル" ,
+		"招待をキャンセル"
+}
+
+"default.cancel.intent" :
+	inputs in en {
+		goodbye ,
+		nevermind ,
+		stop ,
+		cancel ,
+		exit
+	}
+	inputs in ja {
+		"終了にして" ,
+		"終わりにして" ,
+		"出る" ,
+		"退出" ,
+		"終了" ,
+		"キャンセル" ,
+		"キャンセルして" ,
+		"キャンセルする" ,
+		"やめ" ,
+		"やめる" ,
+		"ストップ" ,
+		"気にしないでください" ,
+		"気にしない" ,
+		"気にしないで" ,
+		"ごきげんよう。" ,
+		"さようなら。" ,
+		"終わり" ,
+		"おしまい" ,
+		"じゃあね" ,
+		"また" ,
+		"さようなら" ,
+		"see you" ,
+		bye ,
+		exit ,
+		"that\'s all" ,
+		cancel
+}
+
+"default.fallback.intent" Fallback :
+
+"decline.event.intent" :
+	inputs in en {
+		pass ,
+		nope ,
+		nah ,
+		^no
+	}
+	inputs in ja {
+		"やだ" ,
+		"いいえ" ,
+		"パス" ,
+		"やめる"
+}
+
+"attend.event.intent" :
+	inputs in en {
+		"hear more please" ,
+		"hear more" ,
+		more ,
+		details ,
+		ok ,
+		sure ,
+		yes
+	}
+	inputs in ja {
+		"参加" ,
+		"クラスに出席したい" ,
+		"でたい" ,
+		"おねがいします" ,
+		"聞くわ" ,
+		"聞かせて" ,
+		"聞きたい" ,
+		"もっと聞きたいよ" ,
+		"もっと聞きたいなあ" ,
+		"もっと聞きたいです" ,
+		"もっと" ,
+		"クラスに参加したい" ,
+		"いい" ,
+		"いいよ" ,
+		"もちろん" ,
+		"オーケー" ,
+		"オッケー" ,
+		OK ,
+		"詳細を聞きたい" ,
+		"詳細" ,
+		"詳しく" ,
+		"出席したいです" ,
+		"出席したい" ,
+		"出席" ,
+		"わかった" ,
+		"もっと教えて" ,
+		"もっと詳しく" ,
+		"もっと知りたい" ,
+		"もっと聞きたい" ,
+		"はい" ,
+		yup ,
+		sure ,
+		yes
+}
+
+"schedules.list.intent" :
+	inputs in en {
+		schedule ,
+		"schedule please" ,
+		"get me my schedule" ,
+		"what\'s my schedule like?"
+	}
+	inputs in ja {
+		"スケジュールはどんな感じ？" ,
+		"スケジュールを知りたい" ,
+		"スケジュールを教えて" ,
+		"スケジュールは？" ,
+		"予定" ,
+		"スケジュール" ,
+		"スケジュールはどう？" ,
+		"私のスケジュールは？"
+}
+
+"sign.in.intent" :
+	inputs in en {
+		"sign in" ,
+		login ,
+		authenticate
+	}
+	inputs in ja {
+		"証明書" ,
+		"証明" ,
+		"認証する" ,
+		" サインイン" ,
+		"ログイン"
+}
+
+"event.skip.intent" :
+	inputs in en {
+		"no next invite" ,
+		"no go to next event" ,
+		"next event" ,
+		"go to next" ,
+		^no ,
+		"next one" ,
+		skip ,
+		next
+	}
+	inputs in ja {
+		"次に" ,
+		"次へ" ,
+		"スキップして" ,
+		"飛ばして" ,
+		"飛ばす" ,
+		"次のにして" ,
+		"次にして" ,
+		"次の" ,
+		"いいえ" ,
+		"スキップ" ,
+		"次"
+}
+
+"signal.id.intent" :
+	inputs in en {
+		"give me my signal ID" ,
+		"signal ID?" ,
+		"what\'s my signal ID?"
+	}
+	inputs in ja {
+		"登録した番号？" ,
+		"登録の番号？" ,
+		"登録番号を知りたい" ,
+		"登録番号を教えて" ,
+		"登録番号？"
+}
+
+"events.list.intent" :
+	inputs in en {
+		"things to do" ,
+		events ,
+		"get list of events"
+	}
+	inputs in ja {
+		"リストを出して" ,
+		"やるべきこと" ,
+		"イベントのリスト" ,
+		"招待" ,
+		"イベント" ,
+		"やること"
+}
+
+"repeat.intent" :
+	inputs in en {
+		"say the same again" ,
+		"repeat it" ,
+		"could you repeat that" ,
+		"come again" ,
+		"say it again" ,
+		"repeat what you\'ve just said" ,
+		"repeat these results" ,
+		"please repeat that" ,
+		"do it again" ,
+		"can you say that again?" ,
+		repeat ,
+		"sorry?"
+	}
+	inputs in ja {
+		"もうー回" ,
+		"もう１度おねがいします" ,
+		"また来てね" ,
+		"また来て" ,
+		"また来てください" ,
+		"もう一回言ってください" ,
+		"繰り返して" ,
+		"くりかえし" ,
+		"同じことを言ってください" ,
+		"もう一回言って" ,
+		"もう一回" ,
+		"なんて" ,
+		"今言ったことをもう一回繰り返して" ,
+		"今言ったことをもう一回言って" ,
+		"もう一度" ,
+		"今のもう一回" ,
+		"なんて言ったの" ,
+		"もう一度お願いします" ,
+		"何" ,
+		"それをもう一度言って下さい" ,
+		"もう一回言ってくれませんか？" ,
+		"もう一度言ってくれませんか？" ,
+		"もう一度言って"
+}
+
+"event.details.intent" :
+	inputs in ja {
+		"詳細を聞きたい" ,
+		"もっと"
+}
+
+"help.intent" :
+	inputs in en {
+		"what can i do?" ,
+		help
+	}
+	inputs in ja {
+		"ヘルプ" ,
+		"お助けしましょうか？" ,
+		"どうしましょう" ,
+		help ,
+		"私に何ができる？" ,
+		"助けて"
+}
+
+"default.welcome.intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+	}
+	inputs in ja {
+		"ハロー" ,
+		"おひさしぶりですね" ,
+		"挨拶" ,
+		"ねえ" ,
+		"久しぶり" ,
+		"今日は" ,
+		"こんにちは" ,
+		"どうも" ,
+		"やあ、君" ,
+		"やあ" ,
+		"ご挨拶します" ,
+		"はい、こんにちは" ,
+		"おひさしぶりです" ,
+		"ご挨拶" ,
+		"皆さん、こんにちは"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-wakabadai-noticeboard.cloudfunctions.net/dialogflowWebhook" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in ja {
+			request. text
+	}
+	text response "overview.intentTxtResp1" :
+		inputs in ja {
+			" "
+	}
+	text response "overview.intentTxtResp2" :
+		inputs in ja {
+			"{name}さん{greetings}。 新しいお知らせが{announcements_count}件あります。それから {events_count}件の新しいイベントがあります。 "
+	}
+	text response "overview.intentTxtResp4" :
+		inputs in en {
+			"{greetings}, {name}. You have {announcements_count} new notices and {events_count} new invitations. "
+	}
+	text response "announcements.list.intentTxtResp2" :
+		inputs in ja {
+			"こちらがお知らせです。{notices_list}。イベントかスケジュールを確認したいですか？ "
+	}
+	text response "announcements.list.intentTxtResp4" :
+		inputs in en {
+			"here\'s your notices. {notices_list}. Would you like to check your invites or schedule? "
+	}
+	text response "events.last.intentTxtResp2" :
+		inputs in ja {
+			"こちらが最後のイベントです。{event_start}に {event_name}があります。このイベントについて詳しく知りたいですか？それともスケジュールを確認したいですか？もしくはお知らせを聞きたいですか？ "
+	}
+	text response "events.last.intentTxtResp4" :
+		inputs in en {
+			"last event, {event_name} on {event_start}. Wanna hear more or do you want to review your schedule or check out your notices? "
+	}
+	text response "cancel.schedule.intentTxtResp2" :
+		inputs in ja {
+			"わかりました。そういたします。もしお気持ちが変わっても、もう一度最初からイベントを登録しなければなりません。本当にこのイベントを欠席にしますか？ "
+	}
+	text response "cancel.schedule.intentTxtResp4" :
+		inputs in en {
+			"Okay, I can do that. But you’ll have to re-register for the event if you change your mind. So, are you sure you want me to remove it? "
+	}
+	text response "announcements.middle.intentTxtResp1" :
+		inputs in ja {
+			"次のお知らせです。{announcement_name}. {announcement_description}。次のお知らせを聞きたいですか？ "
+	}
+	text response "announcements.middle.intentTxtResp3" :
+		inputs in en {
+			"next notice, {announcement_name}. {announcement_description}. Do you want to hear next one? "
+	}
+	text response "default.cancel.intentTxtResp1" :
+		inputs in ja {
+			"またお会いしましょう。 "
+	}
+	text response "default.cancel.intentTxtResp4" :
+		inputs in en {
+			"see you soon "
+	}
+	text response "default.fallback.intentTxtResp1" :
+		inputs in ja {
+			"すみません。よく分かりませんでした。 " ,
+			"今のは少しわかりにくかったです。 " ,
+			"少し言い換えていただけませんか。 " ,
+			"失礼ですが、もう一度おねがいします。 " ,
+			"ちょっと分かりませんでした。 " ,
+			"今、なんておっしゃいましたか？ " ,
+			"わかりません。もう一度おっしゃってください。 " ,
+			"聞き取れませんでした。なんておっしゃいましたか？ " ,
+			"すいません。もう一度おっしゃってくださいませんか？ " ,
+			"すいません。もう一度おっしゃってください。 " ,
+			"もう一度言ってください。 " ,
+			"すいません。わかりませんでした。言い換えてくれませんか？ " ,
+			"すいません。なんておっしゃっいましたか？ " ,
+			"もう一度おねがいします？ " ,
+			"もう一度言ってくれませんか？ " ,
+			"わかりませんでした。繰り返してください。 " ,
+			"わかりません。もう一回おねがいします。 "
+	}
+	text response "default.fallback.intentTxtResp2" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "decline.event.intentTxtResp2" :
+		inputs in ja {
+			"了解です。このイベントをスケジュールに追加いたしません。 "
+	}
+	text response "decline.event.intentTxtResp3" :
+		inputs in en {
+			"okay, not adding this to your schedule "
+	}
+	text response "problem.intentTxtResp1" :
+		inputs in en {
+			"We are having some problems with your request, please try again later or contact our system administrator "
+	}
+	text response "problem.intentTxtResp3" :
+		inputs in ja {
+			"リクエストにお答えすることができません。なにか問題があるようです。後ほどもう一度お試しいただくか、システム管理者にお尋ねください。 "
+	}
+	text response "cancel.schedule.confirmed.intentTxtResp2" :
+		inputs in ja {
+			"了解です。スケジュールから取り除きました。 "
+	}
+	text response "cancel.schedule.confirmed.intentTxtResp4" :
+		inputs in en {
+			"Alright, it’s been removed from your schedule. "
+	}
+	text response "last.announcements.intentTxtResp1" :
+		inputs in ja {
+			"こちらが最後のお知らせです。 "
+	}
+	text response "last.announcements.intentTxtResp2" :
+		inputs in en {
+			"that was the last notice "
+	}
+	text response "schedules.last.intentTxtResp2" :
+		inputs in ja {
+			"最後のスケジュールです。{schedule_name}が、 {schedule_location}で {schedule_start}にあります。もっと詳しく知りたいですか？それともこちらのイベントを欠席にしたいですか？ "
+	}
+	text response "schedules.last.intentTxtResp4" :
+		inputs in en {
+			"last scheduled event, {schedule_name}. at {schedule_location} on {schedule_start}. Would you like to hear more, or remove it? "
+	}
+	text response "attend.event.intentTxtResp2" :
+		inputs in ja {
+			"了解です。スケジュールに追加しました。イベントが始まる１時間前に確認の合図をお送りします。 "
+	}
+	text response "attend.event.intentTxtResp4" :
+		inputs in en {
+			"Sure it’s been added to your schedule. We will send you a reminder an hour before the event starts. "
+	}
+	text response "schedules.list.intentTxtResp2" :
+		inputs in ja {
+			"{schedules_count} 件の登録したイベントがあります。最初に、 {schedule_name}が、 {schedule_location}で {schedule_start}にあります。これについて詳しく知りたいですか？それとも、こちらのイベントを欠席にしたいですか？[それとも、次のイベントを聞きたいですか？] "
+	}
+	text response "schedules.list.intentTxtResp4" :
+		inputs in en {
+			"You have {schedules_count} upcoming events. first item,  {schedule_name}. at {schedule_location} on {schedule_start}. Would you like to hear more, remove the invite[ or go on to the next one]? "
+	}
+	text response "no.schedules.intentTxtResp1" :
+		inputs in en {
+			"There are no upcoming scheduled events, please check again later. "
+	}
+	text response "no.schedules.intentTxtResp3" :
+		inputs in ja {
+			"予定されたイベントはありません。またご確認ください。何かご用はありますか？ "
+	}
+	text response "events.middle.intentTxtResp2" :
+		inputs in en {
+			"next invite, on {event_start}, there will be an {event_name}. Wanna hear more or would you like to check out the next invite? "
+	}
+	text response "events.middle.intentTxtResp4" :
+		inputs in ja {
+			"次のイベントは、{event_start}に {event_name}が行われます。これについて詳しく知りたいですか？それとも次のイベントについて知りたいですか？ "
+	}
+	text response "no.events.intentTxtResp1" :
+		inputs in en {
+			"There are no new events, please check again later. anything else i can help you with? "
+	}
+	text response "no.events.intentTxtResp3" :
+		inputs in ja {
+			"イベントがありません。またご確認ください。その他、何かご用はありますか？ "
+	}
+	text response "problem.login.intentTxtResp2" :
+		inputs in ja {
+			"サインインする際に何か問題があるようです。故意の場合は無視してください。そうでない場合は設定のパーソナライズ検索をオンにして再試行して下さい。 "
+	}
+	text response "problem.login.intentTxtResp3" :
+		inputs in en {
+			"We encountered a problem signing you in, if this is intended, please ignore. Otherwise please enable \"Personal Results\" in your device settings, and try again. "
+	}
+	text response "schedules.middle.intentTxtResp2" :
+		inputs in ja {
+			"次のスケジュールです。{schedule_name}が、 {schedule_location}で {schedule_start}にあります。このイベントについて詳しく知りたいですか？それともこちらのイベントを欠席にしたいですか？それとも次のイベントを聞きたいですか？ "
+	}
+	text response "schedules.middle.intentTxtResp4" :
+		inputs in en {
+			"next event, {schedule_name}. at {schedule_location} on {schedule_start}. Would you like to hear more, remove the event or hear the next one? "
+	}
+	text response "cancel.schedule.declined.intentTxtResp2" :
+		inputs in en {
+			"Alright, you can always change your schedule later. "
+	}
+	text response "cancel.schedule.declined.intentTxtResp4" :
+		inputs in ja {
+			"了解です。いつでもスケジュールを変更することができます。 "
+	}
+	text response "event.skip.intentTxtResp2" :
+		inputs in ja {
+			"わかりました。次のイベントです。 "
+	}
+	text response "event.skip.intentTxtResp3" :
+		inputs in en {
+			"alright, "
+	}
+	text response "signal.id.intentTxtResp2" :
+		inputs in ja {
+			"あなたのIDは {signal_id}です。次に何をしたいですか？ "
+	}
+	text response "signal.id.intentTxtResp3" :
+		inputs in en {
+			"your signal ID is {signal_id} "
+	}
+	text response "announcements.last.intentTxtResp1" :
+		inputs in ja {
+			"最後のお知らせです。 {announcement_name}。{announcement_description}。他に何かご用はありますか？ "
+	}
+	text response "announcements.last.intentTxtResp3" :
+		inputs in en {
+			"last notice, {announcement_name}. {announcement_description}. That\'s all i have now, what do you want to do next? "
+	}
+	text response "events.list.intentTxtResp2" :
+		inputs in ja {
+			"{events_count} 件のイベントがあります。最初のイベントは{event_start}に {event_name} があります。このイベントについて詳しく知りたいですか？それとも次のイベントを聞きたいですか？ "
+	}
+	text response "events.list.intentTxtResp4" :
+		inputs in en {
+			"You have {events_count} invites. First invite, {event_name} on {event_start}. Do you want to hear more about that event[, or go on to the next one]? "
+	}
+	text response "repeat.intentTxtResp2" :
+		inputs in ja {
+			"すいません。もう一度おっしゃってください。 "
+	}
+	text response "repeat.intentTxtResp3" :
+		inputs in en {
+			"Sorry, I said " ,
+			"Let me repeat that. "
+	}
+	text response "schedule.details.intentTxtResp2" :
+		inputs in ja {
+			"了解です。こちらです。{event_description}。{event_start}に {event_location}であります。繰り返し聞きたいですか？それともこちらのイベントを欠席にしたいですか？[それとも次のイベントを聞きたいですか？] "
+	}
+	text response "schedule.details.intentTxtResp4" :
+		inputs in en {
+			"Sure. Here’s what it’s about. {event_description}. It’ll be held on the {event_start}, at {event_location}. Do you want to repeat that, or remove the invite[ or go to the next one]? "
+	}
+	text response "event.details.intentTxtResp2" :
+		inputs in ja {
+			"こちらがこのイベントの詳細です。{event_description}。{event_start}に{event_location}で行われます。このイベントに出席したいですか？ "
+	}
+	text response "event.details.intentTxtResp4" :
+		inputs in en {
+			"That’s a great event! Here’s what it’s about. {event_description}. It\'ll be held on {event_start} at {event_location}. Now, would you like to join? " ,
+			"Here’s what it’s about. {event_description}. It\'ll be held on {event_start} at {event_location}. Now, would you like to join? "
+	}
+	text response "no.overview.intentTxtResp2" :
+		inputs in en {
+			"Hey {name}, you’re all caught up. We’ll alert you once you’ve received a new notice or invite. Thank you for checking in and have a great day ahead "
+	}
+	text response "no.overview.intentTxtResp4" :
+		inputs in ja {
+			"{name}さん、現在、新しいお知らせとイベントはありません。新しいお知らせとイベントがありましたら、すぐにお伝えします。ご確認ありがとうございます。どうぞ良い１日を。 "
+	}
+	text response "signed.in.intentTxtResp2" :
+		inputs in ja {
+			"次に何をしたいですか？ "
+	}
+	text response "signed.in.intentTxtResp3" :
+		inputs in en {
+			"what do you want to do next? "
+	}
+	text response "help.intentTxtResp2" :
+		inputs in ja {
+			"掲示 板コミュニティー案内へようこそ。最新のお知らせとイベント、あなたのスケジュールをご案内いたします。いかがなさいますか？ "
+	}
+	text response "help.intentTxtResp4" :
+		inputs in en {
+			"Consider me your guide. I am a community tool that can provide you with latest notices and event information. So, which would you like? "
+	}
+	text response "schedules.list.overview.intentTxtResp2" :
+		inputs in ja {
+			"新しいイベントはありません。スケジュールには {total_schedules} 件のイベントがあります。確認したいですか？ "
+	}
+	text response "schedules.list.overview.intentTxtResp4" :
+		inputs in en {
+			"There are no more new invites. You have {total_schedules} scheduled events. Would you like to review them? "
+	}
+	text response "default.welcome.intentTxtResp2" :
+		inputs in ja {
+			"コミュニティ掲示板へようこそ。私がご案内いたします。 "
+	}
+	text response "default.welcome.intentTxtResp3" :
+		inputs in en {
+			"Welcome to Wakabadai, consider me your guide. "
+	}
+	text response "no.announcements.intentTxtResp2" :
+		inputs in ja {
+			"新しいお知らせはありません。またご確認ください。他に何かご用はありますか？ "
+	}
+	text response "no.announcements.intentTxtResp4" :
+		inputs in en {
+			"There is no new notices. Please check again later. Anything else I can help you with? "
+	}
+
+flows :
+	- user1 : user "overview.intent" => bot1 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "overview.intentTxtResp2" , "overview.intentTxtResp4" ;
+	- user2 : user "announcements.list.intent" => bot2 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "announcements.list.intentTxtResp2" , "announcements.list.intentTxtResp4" ;
+	- user3 : user "events.last.intent" => bot34 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "no.announcements.intentTxtResp2" , "no.announcements.intentTxtResp4" ;
+	- user4 : user "cancel.schedule.intent" => bot4 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "cancel.schedule.intentTxtResp2" , "cancel.schedule.intentTxtResp4" ;
+	- user5 : user "default.cancel.intent" => bot6 : chatbot HttpRequest , HttpResponse , "default.cancel.intentTxtResp1" , "overview.intentTxtResp1" , "default.cancel.intentTxtResp4" ;
+	- user6 : user "default.fallback.intent" => bot7 : chatbot HttpRequest , HttpResponse , "default.fallback.intentTxtResp1" , "default.fallback.intentTxtResp2" ;
+	- user7 : user "decline.event.intent" => bot8 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "decline.event.intentTxtResp2" , "decline.event.intentTxtResp3" ;
+	- user8 : user "attend.event.intent" => bot13 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "attend.event.intentTxtResp2" , "attend.event.intentTxtResp4" ;
+	- user9 : user "schedules.list.intent" => bot14 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "schedules.list.intentTxtResp2" , "schedules.list.intentTxtResp4" ;
+	- user10 : user "sign.in.intent" => bot19 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" ;
+	- user11 : user "event.skip.intent" => bot22 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "event.skip.intentTxtResp2" , "event.skip.intentTxtResp3" ;
+	- user12 : user "signal.id.intent" => bot23 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "signal.id.intentTxtResp2" , "signal.id.intentTxtResp3" ;
+	- user13 : user "events.list.intent" => bot25 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "events.list.intentTxtResp2" , "events.list.intentTxtResp4" ;
+	- user14 : user "repeat.intent" => bot26 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "repeat.intentTxtResp2" , "repeat.intentTxtResp3" ;
+	- user15 : user "event.details.intent" => bot28 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "event.details.intentTxtResp2" , "event.details.intentTxtResp4" ;
+	- user16 : user "help.intent" => bot31 : chatbot "overview.intentTxtResp1" , "help.intentTxtResp2" , "help.intentTxtResp4" ;
+	- user17 : user "default.welcome.intent" => bot33 : chatbot HttpRequest , HttpResponse , "overview.intentTxtResp1" , "default.welcome.intentTxtResp2" , "default.welcome.intentTxtResp3" ;
+

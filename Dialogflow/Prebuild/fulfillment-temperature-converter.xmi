@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="fulfillment-temperature-converter">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Cancel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Quit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cancel"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Convert Rankine and Kelvin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Kelvin"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Rankine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="K"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="R"/>
+      </inputs>
+    </inputs>
+    <parameters name="absoluteTempUnit" entity="//@entities.0" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Rankine or Kelvin?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Convert Fahrenheit and Celsius">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="27"/>
+        <tokens xsi:type="generator:Literal" text="&#xb0;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="30"/>
+        <tokens xsi:type="generator:Literal" text=" degrees"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="25"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="45"/>
+        <tokens xsi:type="generator:Literal" text=" degrees?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="27"/>
+        <tokens xsi:type="generator:Literal" text="&#xb0; "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="Celsius"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="-40"/>
+        <tokens xsi:type="generator:Literal" text="&#xb0; "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="Fahrenheit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="45"/>
+        <tokens xsi:type="generator:Literal" text=" degrees "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="Celsius"/>
+      </inputs>
+    </inputs>
+    <parameters name="temperature" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What temperature would you like to convert?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="unit" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Fahrenheit or Celsius?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="absoluteTempUnit">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Kelvin">
+        <values>Kelvin</values>
+        <values>K</values>
+        <values>kelvin</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Rankine">
+        <values>Rankine</values>
+        <values>R</values>
+        <values>rankine</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="unit">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Celsius">
+        <values>Celsius</values>
+        <values>C</values>
+        <values>celsius</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Fahrenheit">
+        <values>Fahrenheit</values>
+        <values>F</values>
+        <values>fahrenheit</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-libsample-advanced.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Webhook Failed "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="CancelTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2">
+      <outcoming intent="//@intents.2" name="user3">
+        <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot3"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot4">
+      <outcoming intent="//@intents.2" name="user5">
+        <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot5"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.4" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

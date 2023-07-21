@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="fulfillment-telephony">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I can"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it looks perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="makeRes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="david"/>
+        <tokens xsi:type="generator:Literal" text=" is my first name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make reservation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.4" textReference="4153333333"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="attenborough"/>
+        <tokens xsi:type="generator:Literal" text=" is my last name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'd like to make a reservation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Kosiorek"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="barack obama"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="1 o'clock"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="next Tuesday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="john smith"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="1pm"/>
+      </inputs>
+    </inputs>
+    <parameters name="name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>I'll need a full name for the reservation</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="groupN" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>How many in your party?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="date" defaultEntity="DATE" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which day is this reservation for?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="time" defaultEntity="TIME" required="true">
+      <prompts language="ENGLISH">
+        <prompts>And for what time?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What number can we reach you at?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Welcome Intent - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no transfer me through please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no transfer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no we are good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="na"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no it isn't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's fine thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer call"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not interested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah I'm good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no maybe next time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but not this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main line please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no I cannot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do it"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="transfercall">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="direct line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="main line"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i'd like to be transferred"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-telephonysample.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&lt;speak>Hi there, are you calling to make a reservation at &lt;say-as interpret-as=&quot;characters&quot;>OMG&lt;/say-as> Garden?&lt;/speak> "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome Intent - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay sounds good! Remember at any point you can say transfer to be transferred to the direct line.  I'll just need some information, starting with the full name this reservation will be under. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="makeResTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great, I have got you down for "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="at "/>
+        <tokens xsi:type="generator:Literal" text="see you later! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome Intent - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome Intent - noTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry I couldn't help you today, I'll connect you to the main line in a moment "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfercallTxtResp4">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry I couldn't take down your reservation but you'll be connected to the main line in a moment "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry I didn't catch that do you want to continue making a reservation or would you prefer to be transferred to the main line? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1">
+      <outcoming intent="//@intents.1" name="user2">
+        <target actions="//@actions.3" name="bot2"/>
+      </outcoming>
+      <outcoming intent="//@intents.3" name="user3">
+        <target actions="//@actions.5 //@actions.6" name="bot3"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.5 //@actions.7" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.8" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

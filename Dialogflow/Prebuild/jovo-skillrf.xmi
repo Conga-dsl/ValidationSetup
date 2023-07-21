@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="jovo-skillrf">
+  <intents name="Default Welcome Intent"/>
+  <intents name="PreviousIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go to the previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip back to previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go back to the previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to listen to the previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to listen to the previous episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go back please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip back please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="previous episode please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip back to the previous episode please"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="MyNameIsIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you can call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="name"/>
+      </inputs>
+    </inputs>
+    <parameters name="name"/>
+  </intents>
+  <intents name="HelloWorldIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="say hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="say hello world"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="NextIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next one please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip the episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip to next episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip to the next episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="would like the next episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like the next episode"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to listen to the next episode"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/a36eb70c-d0bb-46ad-938e-3fd64afbaacd" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

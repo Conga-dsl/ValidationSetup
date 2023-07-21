@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="game-clock">
+  <intents name="YesIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aha"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="FinishIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="game over"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="finish"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="HelpIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to use"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="manual"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how to play"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="StartIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start new game for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="three"/>
+        <tokens xsi:type="generator:Literal" text=" gamers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start new round"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start a game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start new game"/>
+      </inputs>
+    </inputs>
+    <parameters name="gamers" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="GamersIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="three"/>
+        <tokens xsi:type="generator:Literal" text=" players"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="there are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="three"/>
+        <tokens xsi:type="generator:Literal" text=" gamers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="three"/>
+      </inputs>
+    </inputs>
+    <parameters name="gamers" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="PauseIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="break"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pause"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="PrevIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="back"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="previous"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="NoIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ResumeIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="continue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="resume"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="NextIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="done"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ready"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pass the turn"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="GamerColorIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="black"/>
+        <tokens xsi:type="generator:Literal" text=" chips"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="yellow"/>
+        <tokens xsi:type="generator:Literal" text=" color"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="blue"/>
+      </inputs>
+    </inputs>
+    <parameters name="color"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://215913f5.ngrok.io" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="YesIntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.0 //@actions.1" name="bot13"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

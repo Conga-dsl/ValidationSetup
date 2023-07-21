@@ -1,0 +1,115 @@
+Chatbot iLearn_Dialogflow2ServiceNow language : en
+
+intents :
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+"incident.status" :
+	inputs in en {
+		"check on status of my ticket" ,
+		"i would like status on my incident" ,
+		"what is the status of my ticket"
+}
+
+"incident.status.number" :
+	inputs in en {
+		"my ticket number is INC" ( "0010029" ) [ ^number ] ,
+		"my ticket # is " ( "59" ) [ ^number ] ,
+		"the ticket number is INC" ( "0010060" ) [ ^number ] ,
+		"my ticket number is " ( "30" ) [ ^number ]
+	}
+	parameters :
+		^number : entity float ;
+
+"incident.create.details" :
+	inputs in en {
+		( "Bud Richardson" ) [ username ] " and " ( "my mobile phone will not turn on" ) [ description ] ,
+		( "Margaret Grey" ) [ username ] ", my " ( "laptop has a blue screen" ) [ description ] ,
+		( "David Miller" ) [ username ] " and need to " ( "reset my password" ) [ description ]
+	}
+	parameters :
+		username ,
+		description : entity text ;
+
+"Default Fallback Intent" Fallback :
+
+"incident.create" :
+	inputs in en {
+		"helpdesk support" ,
+		"create an incident" ,
+		"i need to open a ticket"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://instance.service-now.com/api/path/post" ;
+		basicAuth : admin : "" ;
+		headers : "content-type" : "application/json" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "incident.statusTxtResp1" :
+		inputs in en {
+			"Okay, please provide your ticket number. "
+	}
+	text response "incident.status.numberTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "incident.createTxtResp1" :
+		inputs in en {
+			"Please provide your user name and short description of the issue. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "incident.status" => bot2 : chatbot "incident.statusTxtResp1" {
+		=> user3 : user "incident.status.number" => bot3 : chatbot HttpRequest , HttpResponse , "incident.status.numberTxtResp1" ;
+	} ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user5 : user "incident.create" => bot5 : chatbot "incident.createTxtResp1" {
+		=> user6 : user "incident.create.details" => bot6 : chatbot HttpRequest , HttpResponse , "incident.status.numberTxtResp1" ;
+	} ;
+

@@ -1,0 +1,756 @@
+Chatbot "Kodi-dialogflow" language : en , no
+
+intents :
+
+	"browse-genre" :
+		inputs in en {
+			"browse " ( "tv shows" ) [ media ] " that are  " ( drama ) [ genre ] " on " ( "living room tv" ) [ player ] ,
+			"browse " ( action ) [ genre ] " " ( movies ) [ media ] " on " ( "living room kodi" ) [ player ] ,
+			"I want to see a " ( horror ) [ genre ] " " ( movie ) [ media ] " in the " ( "living room" ) [ player ] ,
+			"browse " ( action ) [ genre ] " " ( movies ) [ media ] " on " ( "bedroom Kodi" ) [ player ] ,
+			"show me " ( horror ) [ genre ] " " ( "tv shows" ) [ media ] " on " ( "living room Kodi" ) [ player ]
+		}
+		parameters :
+			genre : entity genre ;
+			media : entity media ;
+			player : entity player ;
+
+	"search-related" :
+		inputs in en {
+			"Search for a similar " ( movie ) [ media ] " to " ( "the  karate kid" ) [ title ] ,
+			"Seek a " ( movie ) [ media ] " like the " ( Rocky ) [ title ] ,
+			"Find a similar " ( movie ) [ media ] " to " ( "Top gun" ) [ title ] ,
+			"Find me a related " ( movie ) [ media ] " to " ( "Star Wars" ) [ title ] ,
+			"Search for  " ( movie ) [ media ] " somewhat similar to " ( Joker ) [ title ] ,
+			"Find me a " ( movie ) [ media ] " that is alike " ( Jaws ) [ title ] ,
+			"Search for a " ( movie ) [ media ] " that is like " ( Hamilton ) [ title ] ,
+			"Find me a " ( movie ) [ media ] " like " ( "Palm Springs" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Search for " ( movies ) [ media ] " similar or familiar to " ( greyhound ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Search for a " ( movie ) [ media ] " like " ( "the godfather" ) [ title ] " on " ( "living room tv" ) [ player ] ,
+			"I want to search for a " ( movie ) [ media ] " related to " ( "the beach" ) [ title ] " on " ( "living room TV" ) [ player ] ,
+			"Find a " ( movie ) [ media ] " similar to " ( Superman ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Find " ( movies ) [ media ] " like " ( "the goonies" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Search for similar " ( movies ) [ media ] " to " ( "the matrix" ) [ title ] " on the " ( "living room TV" ) [ player ] ,
+			"Search for related " ( movies ) [ media ] " to " ( Rambo ) [ title ] " on " ( "living room TV" ) [ player ]
+		}
+		parameters :
+			media : entity media , required ;
+			player : entity player , required ;
+			title : entity "video-title" , required ;
+
+	"control-play" :
+		inputs in en {
+			"Let\'s watch " ( "total recall" ) [ title ] " from " ( "2012" ) [ year ] " on " ( "bedroom tv" ) [ player ] ,
+			"I want to watch " ( movie ) [ media ] " " ( "total recall" ) [ title ] " from " ( "1990" ) [ year ] " on " ( "living room kodi" ) [ player ] ,
+			"Let\'s watch " ( movie ) [ media ] " " ( "true lies" ) [ title ] " from " ( "1994" ) [ year ] " on " ( "bedroom kodi" ) [ player ] ,
+			"Let\'s watch " ( "the matrix" ) [ title ] " on the " ( "bedroom kodi" ) [ player ] ,
+			"Let\'s watch " ( "Action Jackson" ) [ title ] " on " ( "bedroom tv" ) [ player ] ,
+			"Let\'s watch " ( "true lies" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Let\'s watch " ( "palm springs" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Let\'s watch " ( greyhound ) [ title ] " on " ( "living room TV" ) [ player ] ,
+			"Play " ( "the new mutants" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Play " ( Superman ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"I want to watch " ( movie ) [ media ] " " ( "the invisible man" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Play " ( movie ) [ media ] " " ( "the Matrix" ) [ title ] " in the " ( bedroom ) [ player ] ,
+			"I want to watch " ( movie ) [ media ] " " ( Rocky ) [ title ] " on " ( "bedroom TV" ) [ player ] ,
+			"Play " ( movie ) [ media ] " " ( Rambo ) [ title ] " on " ( "living room TV" ) [ player ]
+		}
+		parameters :
+			media : entity media , required , prompts in en [ "Is that a movie or a tv-show?" ] ;
+			player : entity player , required , prompts in en [ "Which player do you want to play that on?" ] ;
+			title : entity text , required , prompts in en [ "Could you repeat the title?" ] ;
+			year : entity "sys.number" ;
+
+	"browse-media context: browse-actor" :
+		inputs in en {
+			"go to her " ( "tv shows" ) [ starsin ] ,
+			"go to his " ( "tv shows" ) [ starsin ] ,
+			"go to her " ( movies ) [ starsin ] ,
+			"go to his " ( movies ) [ starsin ] ,
+			"cast in " ( "tv shows" ) [ starsin ] ,
+			"cast in " ( movies ) [ starsin ]
+		}
+		parameters :
+			starsin : entity starsin ;
+
+	"sorting context:discover-titles" :
+		inputs in en {
+			"sort by " ( score ) [ sort ] ,
+			"sort by " ( "release date" ) [ sort ] ,
+			"sort by " ( popularity ) [ sort ]
+		}
+		parameters :
+			sort : entity sort ;
+
+	"browse-title" :
+		inputs in en {
+			"navgiate to " ( movie ) [ media ] " " ( "rocky balboa" ) [ title ] ,
+			"go to " ( movie ) [ media ] " " ( "the beach" ) [ title ] " on " ( "living room kodi" ) [ player ] ,
+			"Go to " ( "the beach" ) [ title ] " on " ( "living room TV" ) [ player ] ,
+			"Go to " ( Greyhound ) [ title ] " on " ( "living room TV" ) [ player ] ,
+			"Go to " ( "the goonies" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Go to " ( "the Terminator" ) [ title ] " on " ( "living room Tv" ) [ player ] ,
+			"Go to " ( superman ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Go to " ( Rambo ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Go to " ( "Star Wars" ) [ title ] " on " ( "living room TV" ) [ player ] ,
+			"Show " ( rambo ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Display " ( "the goonies" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Show me the " ( unforgiven ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Display " ( superman ) [ title ] " on the " ( "living room TV" ) [ player ] ,
+			"Show me " ( "the matrix" ) [ title ] " on the " ( "living room TV" ) [ player ] ,
+			"Show me " ( Rambo ) [ title ] " on " ( "living room Kodi" ) [ player ]
+		}
+		parameters :
+			player : entity player , required , prompts in en [ "Which Kodi device do you want me to show that on?" ] ;
+			title : entity "video-title" , required , prompts in en [ "I didn\'t catch the title. Could you repeat?" ] ;
+			media : entity media , required , prompts in en [ "Are you looking for a tv show or a movie?" ] ;
+
+	"browse-related" :
+		inputs in en {
+			"go to relevant" ,
+			"go to similar" ,
+			"now change to similar" ,
+			"Change to related" ,
+			"Change to similar" ,
+			"Show me similar" ,
+			"Find similar" ,
+			"Show me related movies"
+	}
+
+	"browse-filter-movies" :
+		inputs in en {
+			"go to " ( "box office" ) [ filter ] ,
+			"go to movies with the " ( "highest revenue" ) [ filter ] ,
+			"go to " ( "now playing" ) [ filter ] " movies" ,
+			"go to " ( upcoming ) [ filter ] " movies"
+		}
+		parameters :
+			filter : entity "filter-movies" , required , prompts in en [ "I didn\'t catch that. Could you repeat?" ] ;
+
+	"browse-filter-tv" :
+		inputs in en {
+			"go to episodes " ( "airing this week" ) [ filter ] ,
+			"go to " ( "my next episodes" ) [ filter ] ,
+			"show " ( "next aired library" ) [ filter ] ,
+			"show " ( "airing now" ) [ filter ] ,
+			"show tv shows " ( "airing today" ) [ filter ]
+		}
+		parameters :
+			filter : entity "filter-tv" ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+		}
+		inputs in no {
+			heia ,
+			"ville bare si hei" ,
+			heisann ,
+			halla ,
+			heihei ,
+			"god ettermiddag" ,
+			"hallo igjen" ,
+			"lenge siden sist" ,
+			hallo ,
+			halloen ,
+			"hei på deg" ,
+			"jeg sier hei" ,
+			"herlig dag i dag" ,
+			hei ,
+			"halla påsan" ,
+			"god dag" ,
+			hallohallo
+	}
+
+	"discover-titles" :
+		inputs in en {
+			"discover " ( movies ) [ media ] " that are " ( "not horror" ) [ notgenre ] " movies that are starring " ( "Sylvester Stallone" ) [ actor ] " and " ( "Brad Pitt" ) [ actor ] ,
+			"discover " ( movies ) [ media ] " with " ( "Bill Paxton" ) [ actor ] " and " ( "Sylvester Stallone" ) [ actor ] ,
+			"discover " ( action ) [ genre ] " and " ( horror ) [ genre ] " " ( movies ) [ media ] " starring " ( "Brad Pitt" ) [ actor ] " with a score between " ( "7" ) [ minscore ] " and " ( "10" ) [ maxscore ] " released between " ( "2000" ) [ releasedafter ] " and " ( "2020" ) [ releasedbefore ] ,
+			"discover " ( "tv shows" ) [ media ] " starring " ( "Brad Pitt" ) [ actor ] ,
+			"discover " ( movies ) [ media ] " starring " ( "Bill Paxton" ) [ actor ] ,
+			"discover " ( movies ) [ media ] " that are " ( "not horror" ) [ notgenre ] " with a score between " ( "2" ) [ minscore ] " and " ( "5" ) [ maxscore ] ,
+			"discover " ( movies ) [ media ] " with a score higher than " ( "7" ) [ minscore ] " than are " ( "not musicals" ) [ notgenre ] " and " ( "not action" ) [ notgenre ] ,
+			"discover " ( movies ) [ media ] " that are " ( "not musicals" ) [ notgenre ] " and " ( "not horror" ) [ notgenre ] ,
+			"discover " ( movies ) [ media ] " released in " ( "2020" ) [ releaseyear ] " that are " ( "not musicals" ) [ notgenre ] ,
+			"discover " ( movies ) [ media ] " that are not " ( horror ) [ genre ] " " ( on ) [ media ] " " ( "living room kodi" ) [ player ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " with a score of " ( "8" ) [ score ] " released in " ( "1987" ) [ releaseyear ] ,
+			"discover " ( movies ) [ media ] " with a score of " ( "5" ) [ score ] " released in the year " ( "2020" ) [ releaseyear ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " with a score between " ( "1" ) [ minscore ] " and " ( "4" ) [ maxscore ] " released before " ( "2010" ) [ releasedbefore ] " but after " ( "2000" ) [ releasedafter ] ,
+			"discover " ( action ) [ genre ] ", drama and " ( horror ) [ genre ] " " ( movies ) [ media ] " released between " ( "2000" ) [ releasedafter ] " and " ( "2002" ) [ releasedbefore ] " with a score between " ( "7" ) [ minscore ] " and " ( "10" ) [ maxscore ] ,
+			"discover " ( action ) [ genre ] " and " ( comedy ) [ genre ] " " ( movies ) [ media ] " with a minimum score of " ( "10" ) [ minscore ] " on " ( "living room kodi" ) [ player ] ,
+			"discover " ( drama ) [ genre ] " and " ( action ) [ genre ] " " ( movies ) [ media ] " released after " ( "2000" ) [ releasedafter ] " with a score of " ( "7" ) [ score ] ,
+			"discover " ( action ) [ genre ] " and " ( drama ) [ genre ] " " ( movies ) [ media ] " released between " ( "1980" ) [ releasedafter ] " and " ( "1982" ) [ releasedbefore ] ,
+			"discover " ( action ) [ genre ] ", " ( horror ) [ genre ] " and " ( drama ) [ genre ] " " ( movies ) [ media ] " on " ( "living room tv" ) [ player ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " released in " ( "1957" ) [ releaseyear ] ,
+			"discover " ( movies ) [ media ] " released in " ( "1980" ) [ releaseyear ] ,
+			"discover " ( movies ) [ media ] " released in " ( "1973" ) [ releaseyear ] ,
+			"discover " ( "tv shows" ) [ media ] " with genre " ( action ) [ genre ] " on the " ( "bedroom tv" ) [ player ] ,
+			"discover " ( "tv shows" ) [ media ] " in the " ( bedroom ) [ player ] ,
+			"discover " ( horror ) [ genre ] " " ( movies ) [ media ] "  on the " ( "living room tv" ) [ player ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " in the " ( bedroom ) [ player ] ,
+			"discover " ( comedy ) [ genre ] " " ( movies ) [ media ] " in the " ( "bedroom tv" ) [ player ] ,
+			"discover " ( horror ) [ genre ] " " ( movies ) [ media ] " in the " ( bedroom ) [ player ] ,
+			"discover " ( movies ) [ media ] " released after " ( "1993" ) [ releasedafter ] " and with a minimum score of " ( "6" ) [ minscore ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " released after " ( "2000" ) [ releasedafter ] " with a score more than" ( " 7" ) [ minscore ] ,
+			"discover " ( drama ) [ genre ] " " ( movies ) [ media ] " released after " ( "2008" ) [ releasedafter ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " released earlier than " ( "2000" ) [ releasedbefore ] ,
+			"discover " ( drama ) [ genre ] " " ( movies ) [ media ] " released between " ( "1996" ) [ releasedafter ] " and " ( "1998" ) [ releasedbefore ] ,
+			"discover " ( music ) [ genre ] " " ( movies ) [ media ] " released on the year " ( "2020" ) [ releaseyear ] ,
+			"discover " ( horror ) [ genre ] " " ( movies ) [ media ] " released between " ( "1980" ) [ releasedafter ] " and " ( "1990" ) [ releasedbefore ] ,
+			"discover " ( drama ) [ genre ] " " ( movies ) [ media ] " released after " ( "1980" ) [ releasedafter ] ,
+			"discover " ( horror ) [ genre ] " " ( movies ) [ media ] " released before " ( "1976" ) [ releasedbefore ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " released in the year " ( "2019" ) [ releaseyear ] ,
+			"discover " ( comedy ) [ genre ] " " ( movies ) [ media ] " released on " ( "2020" ) [ releaseyear ] ,
+			"discover " ( drama ) [ genre ] " " ( movies ) [ media ] " released before " ( "2000" ) [ releasedbefore ] ,
+			"discover " ( drama ) [ genre ] " " ( movies ) [ media ] " released after " ( "2000" ) [ releasedafter ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " released in " ( "1986" ) [ releaseyear ] ,
+			"discover " ( horror ) [ genre ] " " ( movies ) [ media ] " with a score lower than " ( "9" ) [ maxscore ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " with a score more than " ( "6" ) [ minscore ] ,
+			"discover " ( movies ) [ media ] " on " ( "living room kodi" ) [ player ] ,
+			"discover " ( action ) [ genre ] " " ( movies ) [ media ] " on " ( "living room kodi" ) [ player ]
+		}
+		parameters :
+			genre : entity genre ;
+			player : entity player ;
+			media : entity media ;
+			minscore : entity "sys.number" ;
+			maxscore : entity "sys.number" ;
+			releaseyear : entity "sys.number" ;
+			releasedafter : entity "sys.number" ;
+			releasedbefore : entity "sys.number" ;
+			score : entity "sys.number" ;
+			notgenre : entity notgenre ;
+			actor : entity actor ;
+
+	"control-status" :
+		inputs in en {
+			"what movie is playing on " ( "living room Kodi" ) [ player ] ,
+			"what is playing on " ( "living room TV" ) [ player ]
+		}
+		parameters :
+			player : entity player ;
+
+	"browse-filter" :
+		inputs in en {
+			"go to " ( "because most watched" ) [ filter ] " " ( "tv show" ) [ media ] ,
+			"go to " ( "because i watched" ) [ filter ] " " ( movie ) [ media ] " before" ,
+			"go to " ( "most watched" ) [ filter ] " " ( "tv shows" ) [ media ] ,
+			"go to " ( "most voted" ) [ filter ] " " ( movies ) [ media ] ,
+			"go to my " ( movie ) [ media ] " " ( watchlist ) [ filter ] ,
+			"go " ( "top top rated" ) [ filter ] " " ( "tv shows" ) [ media ] ,
+			"go to " ( "tv shows" ) [ media ] " " ( "trending today" ) [ filter ] ,
+			"go to " ( movies ) [ media ] " " ( "trending this week" ) [ filter ] ,
+			"go to " ( recommended ) [ filter ] " " ( "tv shows" ) [ media ] ,
+			"go to " ( "in progress" ) [ filter ] " " ( "tv shows" ) [ media ] ,
+			"go to " ( "in progress" ) [ filter ] " " ( movies ) [ media ] ,
+			"go to " ( "most watched" ) [ filter ] " " ( movies ) [ media ] ,
+			"go to " ( trending ) [ filter ] " " ( "tv shows" ) [ media ] ,
+			"go to " ( popular ) [ filter ] ,
+			"change to " ( trending ) [ filter ] " " ( "tv shows" ) [ media ] " on " ( "living room TV" ) [ player ] ,
+			"go to the most " ( popular ) [ filter ] " " ( "tv shows" ) [ media ] " on " ( "living room Kodi" ) [ player ] ,
+			"now change to " ( trending ) [ filter ] " " ( movies ) [ media ] " on " ( "living room TV" ) [ player ] ,
+			"change to the most " ( popular ) [ filter ] " " ( movies ) [ media ] " on " ( "living room kodi" ) [ player ] ,
+			"go to the " ( latest ) [ filter ] " " ( movies ) [ media ] " on " ( "living room tv" ) [ player ] ,
+			"navigate to " ( latest ) [ filter ] " " ( movies ) [ media ] " on the " ( "living room tv" ) [ player ] ,
+			"change to " ( recommended ) [ filter ] " " ( movies ) [ media ] " on " ( "living room tv" ) [ player ] ,
+			"go to " ( trending ) [ filter ] " " ( movies ) [ media ] " on the " ( "living room TV" ) [ player ] ,
+			"navigate to " ( trending ) [ filter ] " " ( movies ) [ media ] " on " ( "living room Kodi" ) [ player ] ,
+			"navigate to " ( popular ) [ filter ] " " ( "tv shows" ) [ media ] " on " ( "living room Kodi" ) [ player ] ,
+			"go to the " ( latest ) [ filter ] " " ( movies ) [ media ] " on " ( "living room Kodi" ) [ player ] ,
+			( trending ) [ filter ] " " ( "tv shows" ) [ media ] " on " ( "bedroom Kodi" ) [ player ] ,
+			"navigate to " ( popular ) [ filter ] " " ( movies ) [ media ] " on " ( "living  room  Kodi" ) [ player ]
+		}
+		parameters :
+			filter : entity filter , required ;
+			media : entity media , required , prompts in en [ "Movie or TV show?" ] ;
+			player : entity player , required , prompts in en [ "On which device?" ] ;
+
+	"search-title" :
+		inputs in en {
+			"search for " ( movie ) [ media ] " " ( "solo a star wars story" ) [ title ] ,
+			"search for " ( "solo a star wars story" ) [ title ] ,
+			"Search for " ( "tv show" ) [ media ] " " ( "the big bang theory" ) [ title ] " in the " ( bedroom ) [ player ] ,
+			"Find " ( "tv show" ) [ media ] " " ( "brooklyn nine nine" ) [ title ] " on " ( "living room tv" ) [ player ] ,
+			"Search for " ( "tv show" ) [ media ] " " ( "the simpsons" ) [ title ] " on the " ( "bedroom tv" ) [ player ] ,
+			"Search for " ( "tv show" ) [ media ] " " ( "hotel del luna" ) [ title ] " on " ( "living room kodi" ) [ player ] ,
+			"Search for " ( movie ) [ media ] " " ( ghostbusters ) [ title ] " on the " ( "living room TV" ) [ player ] ,
+			"Find " ( "Bird Box" ) [ title ] " on " ( "living room Kodi" ) [ player ] ,
+			"Search for  " ( "Don Juan" ) [ title ] " from " ( "1993" ) [ year ] " on the " ( "living room TV" ) [ player ] ,
+			"Search for " ( "Rocky 5" ) [ title ] " on " ( "living room TV" ) [ player ] ,
+			"Find " ( Aladdin ) [ title ] " from " ( "1992" ) [ year ] ,
+			"Find " ( Rocky ) [ title ] " in the " ( bedroom ) [ player ] ,
+			"Search for " ( "the Titanic" ) [ title ] ,
+			"Search for " ( movie ) [ media ] " " ( Rambo ) [ title ] " on " ( "living room Kodi" ) [ player ]
+		}
+		parameters :
+			media : entity media , required , prompts in en [ "Are you looking for a tv show or a movie?" ] ;
+			player : entity player , required , prompts in en [ "Which Kodi device do you want me to show that on?" ] ;
+			title : entity "video-title" , required , prompts in en [ "I didn\'t catch the title. Could you repeat?" ] ;
+			year : entity "sys.number" ;
+
+	"browse-actor" :
+		inputs in en {
+			"go to actress " ( "jodie foster" ) [ actor ] ,
+			"go to actress " ( "sharon stone" ) [ actor ] ,
+			"navigate to actor " ( "Bruce Willis" ) [ actor ] " on " ( "living room Kodi" ) [ player ] ,
+			"navigate to actor " ( "bill paxton" ) [ actor ] " on " ( "living room tv" ) [ player ] ,
+			"navigate to actor " ( "sylvester stallone" ) [ actor ] " on " ( "living room tv" ) [ player ] ,
+			"go to actor " ( "bill paxton" ) [ actor ]
+		}
+		parameters :
+			actor : entity actor , required , prompts in en [ "I didn\'t catch the name. Could you repeat?" ] ;
+			player : entity player , required , prompts in en [ "Which Kodi device do you want to display that on?" ] ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity "filter-tv" :
+		inputs in en {
+			airing_today synonyms "airing today"
+			on_the_air synonyms "airing now"
+			library_nextaired synonyms "next aired library"
+			trakt_calendar synonyms "my calendar" , calendar
+			trakt_nextepisodes synonyms "my next episodes"
+			trakt_myairing synonyms "airing this week"
+	}
+	Simple entity "video-source" :
+		inputs in en {
+			local synonyms local
+			elementum synonyms elementum , torrent
+			youtube synonyms youtube
+			serene synonyms serene
+			spotify synonyms spotify
+	}
+	Simple entity control :
+		inputs in en {
+			stop synonyms Stop
+			resume synonyms Resume
+			pause synonyms Pause
+	}
+	Simple entity media :
+		inputs in en {
+			movie synonyms movie , movies
+			tv synonyms "tv show" , "tv shows" , tv
+	}
+	Simple entity sort :
+		inputs in en {
+			popularity_asc synonyms popularity_asc , "popularity ascending"
+			popularity_desc synonyms popularity_desc , "popularity descending" , popularity
+			release_date_asc synonyms release_date_asc , "release date ascending"
+			release_date_desc synonyms release_date_desc , "release date descending" , "release date" , release
+			revenue_asc synonyms revenue_asc , "revenue ascending"
+			revenue_desc synonyms revenue_desc , "revenue descending" , revenue
+			vote_average_asc synonyms vote_average_asc , "vote average ascending"
+			vote_average_desc synonyms vote_average_desc , "vote average descending" , "vote average" , score
+			vote_count_asc synonyms vote_count_asc , "vote count ascending"
+			vote_count_desc synonyms vote_count_desc , "vote count descending" , "vote count" , votes
+	}
+	Simple entity "video-title" :
+		inputs in en {
+			"12 Angry Men" synonyms "12 Angry Men"
+			"2001: A Space Odyssey" synonyms "2001: A Space Odyssey"
+			"A Clockwork Orange" synonyms "A Clockwork Orange"
+			Alien synonyms Alien
+			Aliens synonyms Aliens
+			Amadeus synonyms Amadeus
+			"American Beauty" synonyms "American Beauty"
+			"American History X" synonyms "American History X"
+			"Amélie" synonyms "Amélie"
+			"Apocalypse Now" synonyms "Apocalypse Now"
+			"Back to the Future" synonyms "Back to the Future"
+			"Bicycle Thieves" synonyms "Bicycle Thieves"
+			Braveheart synonyms Braveheart
+			Casablanca synonyms Casablanca
+			"Cinema Paradiso" synonyms "Cinema Paradiso"
+			"Citizen Kane" synonyms "Citizen Kane"
+			"City Lights" synonyms "City Lights"
+			"City of God" synonyms "City of God"
+			"Das Boot" synonyms "Das Boot"
+			"Django Unchained" synonyms "Django Unchained"
+			"Double Indemnity" synonyms "Double Indemnity"
+			"Eternal Sunshine of the Spotless Mind" synonyms "Eternal Sunshine of the Spotless Mind"
+			"Fight Club" synonyms "Fight Club"
+			"Forrest Gump" synonyms "Forrest Gump"
+			"Full Metal Jacket" synonyms "Full Metal Jacket"
+			Gladiator synonyms Gladiator
+			Goodfellas synonyms Goodfellas
+			"Grave of the Fireflies" synonyms "Grave of the Fireflies"
+			"Harry Potter" synonyms "Harry Potter"
+			Inception synonyms Inception
+			"Inglourious Basterds" synonyms "Inglourious Basterds"
+			Interstellar synonyms Interstellar
+			"It\'s a Wonderful Life" synonyms "It\'s a Wonderful Life"
+			"La La Land" synonyms "La La Land"
+			"Lawrence of Arabia" synonyms "Lawrence of Arabia"
+			"Life Is Beautiful" synonyms "Life Is Beautiful"
+			"Léon: The Professional" synonyms "Léon: The Professional"
+			M synonyms M
+			Memento synonyms Memento
+			"Modern Times" synonyms "Modern Times"
+			"Monty Python and the Holy Grail" synonyms "Monty Python and the Holy Grail"
+			"North by Northwest" synonyms "North by Northwest"
+			"Once Upon a Time in the West" synonyms "Once Upon a Time in the West"
+			"One Flew Over the Cuckoo\'s Nest" synonyms "One Flew Over the Cuckoo\'s Nest"
+			"Paths of Glory" synonyms "Paths of Glory"
+			"Princess Mononoke" synonyms "Princess Mononoke"
+			Psycho synonyms Psycho
+			"Pulp Fiction" synonyms "Pulp Fiction"
+			"Raiders of the Lost Ark" synonyms "Raiders of the Lost Ark"
+			"Rear Window" synonyms "Rear Window"
+			"Requiem for a Dream" synonyms "Requiem for a Dream"
+			"Reservoir Dogs" synonyms "Reservoir Dogs"
+			"Saving Private Ryan" synonyms "Saving Private Ryan"
+			"Schindler\'s List" synonyms "Schindler\'s List"
+			Se7en synonyms Se7en
+			"Seven Samurai" synonyms "Seven Samurai"
+			"Singin\' in the Rain" synonyms "Singin\' in the Rain"
+			Snatch synonyms Snatch
+			"Spirited Away" synonyms "Spirited Away"
+			"Star Wars: Episode IV - A New Hope" synonyms "Star Wars: Episode IV - A New Hope"
+			"Star Wars: Episode V - The Empire Strikes Bac" synonyms "Star Wars: Episode V - The Empire Strikes Bac"
+			"Star Wars: Episode VI - Return of the Jed" synonyms "Star Wars: Episode VI - Return of the Jed"
+			"Strangelove or: How I Learned to Stop Worrying and Love the Bomb" synonyms "Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+			"Sunset Boulevard" synonyms "Sunset Boulevard"
+			"Taxi Driver" synonyms "Taxi Driver"
+			"Terminator 2: Judgment Day" synonyms "Terminator 2: Judgment Day"
+			"The Avengers" synonyms Avengers , "The Avengers"
+			"The Dark Knight" synonyms "The Dark Knight"
+			"The Dark Knight Rises" synonyms "The Dark Knight Rises"
+			"The Departed" synonyms "The Departed"
+			"The Godfather" synonyms "The Godfather"
+			"The Godfather: Part II" synonyms "The Godfather: Part II"
+			"The Good, the Bad and the Ugly" synonyms "The Good, the Bad and the Ugly"
+			"The Great Dictator" synonyms "The Great Dictator"
+			"The Green Mile" synonyms "The Green Mile"
+			"The Intouchables" synonyms "The Intouchables"
+			"The Kid" synonyms "The Kid"
+			"The Lion King" synonyms "The Lion King"
+			"The Lives of Others" synonyms "The Lives of Others"
+			"The Lord of the Rings: The Fellowship of the Ring" synonyms "The Lord of the Rings: The Fellowship of the Ring"
+			"The Lord of the Rings: The Return of the Kin" synonyms "The Lord of the Rings: The Return of the Kin"
+			"The Lord of the Rings: The Two Towers" synonyms "The Lord of the Rings: The Two Towers"
+			"The Matrix" synonyms "The Matrix"
+			"The Pianist" synonyms "The Pianist"
+			"The Prestige" synonyms "The Prestige"
+			"The Shawshank Redemption" synonyms "The Shawshank Redemption"
+			"The Shining" synonyms "The Shining"
+			"The Silence of the Lambs" synonyms "The Silence of the Lambs"
+			"The Sting" synonyms "The Sting"
+			"The Usual Suspects" synonyms "The Usual Suspects"
+			"To Kill a Mockingbird" synonyms "To Kill a Mockingbird"
+			"Toy Story" synonyms "Toy Story"
+			"Toy Story 3" synonyms "Toy Story 3"
+			Vertigo synonyms Vertigo
+			"WALL·E" synonyms "WALL·E"
+			Whiplash synonyms Whiplash
+			"Witness for the Prosecution" synonyms "Witness for the Prosecution"
+			"Дангал" synonyms "Дангал"
+			"Звёздочки на земле" synonyms "Звёздочки на земле"
+			"Мой отец и мой сын" synonyms "Мой отец и мой сын"
+			"Однажды в Америке" synonyms "Однажды в Америке"
+			"Олдбой" synonyms "Олдбой"
+	}
+	Simple entity starsin :
+		inputs in en {
+			stars_in_movies synonyms movie , movies
+			stars_in_tvshows synonyms tv , "tv shows"
+	}
+	Simple entity actor :
+		inputs in en {
+			"Al Pacino" synonyms "Al Pacino"
+			"Alan Arkin" synonyms "Alan Arkin"
+			"Alan Rickman" synonyms "Alan Rickman"
+			"Albert Finney" synonyms "Albert Finney"
+			"Alec Guinness" synonyms "Alec Guinness"
+			"Anthony Hopkins" synonyms "Anthony Hopkins"
+			"Anthony Quinn" synonyms "Anthony Quinn"
+			"Ben Kingsley" synonyms "Ben Kingsley"
+			"Benicio Del Toro" synonyms "Benicio Del Toro"
+			"Bill Murray" synonyms "Bill Murray"
+			"Brad Pitt" synonyms "Brad Pitt"
+			"Bruce Willis" synonyms "Bruce Willis"
+			"Burt Lancaster" synonyms "Burt Lancaster"
+			"Buster Keaton" synonyms "Buster Keaton"
+			"Cary Grant" synonyms "Cary Grant"
+			"Charles Chaplin" synonyms "Charles Chaplin"
+			"Charles Laughton" synonyms "Charles Laughton"
+			"Charlton Heston" synonyms "Charlton Heston"
+			"Christian Bale" synonyms "Christian Bale"
+			"Christoph Waltz" synonyms "Christoph Waltz"
+			"Christopher Plummer" synonyms "Christopher Plummer"
+			"Christopher Walken" synonyms "Christopher Walken"
+			"Clark Gable" synonyms "Clark Gable"
+			"Clint Eastwood" synonyms "Clint Eastwood"
+			"Colin Firth" synonyms "Colin Firth"
+			"Denzel Washington" synonyms "Denzel Washington"
+			"Don Cheadle" synonyms "Don Cheadle"
+			"Edward Norton" synonyms "Edward Norton"
+			"Gary Cooper" synonyms "Gary Cooper"
+			"Gary Oldman" synonyms "Gary Oldman"
+			"Gene Hackman" synonyms "Gene Hackman"
+			"Gene Kelly" synonyms "Gene Kelly"
+			"Geoffrey Rush" synonyms "Geoffrey Rush"
+			"Gregory Peck" synonyms "Gregory Peck"
+			"Harrison Ford" synonyms "Harrison Ford"
+			"Heath Ledger" synonyms "Heath Ledger"
+			"Henry Fonda" synonyms "Henry Fonda"
+			"Hugh Jackman" synonyms "Hugh Jackman"
+			"Humphrey Bogart" synonyms "Humphrey Bogart"
+			"Ian McKellen" synonyms "Ian McKellen"
+			"Jack Lemmon" synonyms "Jack Lemmon"
+			"Jack Nicholson" synonyms "Jack Nicholson"
+			Jackson synonyms Jackson
+			"James Cagney" synonyms "James Cagney"
+			"James Dean" synonyms "James Dean"
+			"James Stewart" synonyms "James Stewart"
+			"Jamie Foxx" synonyms "Jamie Foxx"
+			"Jason Robards" synonyms "Jason Robards"
+			"Javier Bardem" synonyms "Javier Bardem"
+			"Jeff Bridges" synonyms "Jeff Bridges"
+			"Jeremy Irons" synonyms "Jeremy Irons"
+			"Jim Carrey" synonyms "Jim Carrey"
+			"Joaquin Phoenix" synonyms "Joaquin Phoenix"
+			"Joe Pesci" synonyms "Joe Pesci"
+			"John Wayne" synonyms "John Wayne"
+			"Johnny Depp" synonyms "Johnny Depp"
+			"Jon Voight" synonyms "Jon Voight"
+			"Kevin Spacey" synonyms "Kevin Spacey"
+			"Kirk Douglas" synonyms "Kirk Douglas"
+			"Laurence Olivier" synonyms "Laurence Olivier"
+			"Leonardo DiCaprio" synonyms "Leonardo DiCaprio"
+			"Liam Neeson" synonyms "Liam Neeson"
+			"Marlon Brando" synonyms "Marlon Brando"
+			"Martin Sheen" synonyms "Martin Sheen"
+			"Matt Damon" synonyms "Matt Damon"
+			"Matthew McConaughey" synonyms "Matthew McConaughey"
+			"Mel Gibson" synonyms "Mel Gibson"
+			"Michael Caine" synonyms "Michael Caine"
+			"Michael Douglas" synonyms "Michael Douglas"
+			"Morgan Freeman" synonyms "Morgan Freeman"
+			"Orson Welles" synonyms "Orson Welles"
+			"Paul Newman" synonyms "Paul Newman"
+			"Peter Finch" synonyms "Peter Finch"
+			"Peter O\'Toole" synonyms "Peter O\'Toole"
+			"Philip Seymour Hoffman" synonyms "Philip Seymour Hoffman"
+			"Ralph Fiennes" synonyms "Ralph Fiennes"
+			"Richard Burton" synonyms "Richard Burton"
+			"Robert De Niro" synonyms "Robert De Niro"
+			"Robert Duvall" synonyms "Robert Duvall"
+			"Robert Mitchum" synonyms "Robert Mitchum"
+			"Robert Redford" synonyms "Robert Redford"
+			"Robin Williams" synonyms "Robin Williams"
+			"Russell Crowe" synonyms "Russell Crowe"
+			"Sean Penn" synonyms "Sean Penn"
+			"Sidney Poitier" synonyms "Sidney Poitier"
+			"Spencer Tracy" synonyms "Spencer Tracy"
+			"Steve McQueen" synonyms "Steve McQueen"
+			"Tom Cruise" synonyms "Tom Cruise"
+			"Tom Hanks" synonyms "Tom Hanks"
+			"Tom Hardy" synonyms "Tom Hardy"
+			"Tommy Lee Jones" synonyms "Tommy Lee Jones"
+			"Will Smith" synonyms "Will Smith"
+			"William Holden" synonyms "William Holden"
+			"Woody Allen" synonyms "Woody Allen"
+	}
+	Simple entity filter :
+		inputs in en {
+			trakt_popular synonyms popular , pop
+			trakt_trending synonyms trending , "trending today"
+			trakt_recommendations synonyms recommended , recommendations
+			trakt_inprogress synonyms "in progress" , "on deck"
+			trakt_mostplayed synonyms "most played"
+			trending_week synonyms "trending this week"
+			most_voted synonyms "most voted"
+			top_rated synonyms "top rated" , "highest rated"
+			trakt_watchlist synonyms watchlist , "watch list"
+			trakt_history synonyms "recently watched" , history
+			trakt_mostwatched synonyms "most watched"
+			trakt_becauseyouwatched synonyms "because I watched"
+			trakt_becausemostwatched synonyms "because most watched"
+	}
+	Simple entity trailer :
+		inputs in en {
+			^true synonyms promo , teaser , trailer
+	}
+	Simple entity notgenre :
+		inputs in en {
+			"28" synonyms "not action"
+			"16" synonyms "not animation" , "not anime" , "not cartoon"
+			"35" synonyms "not comedies" , "not comedy"
+			"80" synonyms "not detective" , "not crime"
+			"99" synonyms "not documentary"
+			"18" synonyms "not drama" , "not dramatic"
+			"10751" synonyms family , "not family"
+			"14" synonyms "not fantasy"
+			"27" synonyms "not horror" , "not scary"
+			"9648" synonyms "not mystery"
+			"10749" synonyms "not romantic" , love , "not girl flick"
+			"878" synonyms "not science fiction" , "not sci fi"
+			"53" synonyms "not thriller" , "not thrillers"
+			"37" synonyms "not western" , "not westerns"
+			"12" synonyms "not adventure"
+			"36" synonyms "not history"
+			"10402" synonyms "not music" , "not musical"
+			"10770" synonyms "not tv movie"
+			"10752" synonyms "not war"
+	}
+	Simple entity genre :
+		inputs in en {
+			"28" synonyms action
+			"16" synonyms animation , anime , cartoons
+			"35" synonyms comedies , comedy
+			"80" synonyms detective , crime
+			"99" synonyms documentary
+			"18" synonyms drama , dramatic
+			"10751" synonyms family
+			"14" synonyms fantasy
+			"27" synonyms horror , scary
+			"9648" synonyms mystery
+			"10749" synonyms romantic , love , "girl flick"
+			"878" synonyms "science fiction" , "sci fi"
+			"53" synonyms thriller , thrillers
+			"37" synonyms western , westerns
+			"12" synonyms adventure
+			"36" synonyms history , historical
+			"10402" synonyms music , musical
+			"10770" synonyms "tv movie"
+			"10752" synonyms war
+	}
+	Simple entity "filter-movies" :
+		inputs in en {
+			upcoming synonyms upcoming , coming , "soon arriving"
+			now_playing synonyms "now playing" , "in theathers"
+			revenue_movies synonyms "highest revenue"
+			trakt_boxoffice synonyms boxoffice , "box office"
+	}
+	Simple entity "sys.number" :
+		inputs in en {
+			"2020" synonyms "2020"
+			"2019" synonyms "2019"
+			"2018" synonyms "2018"
+			"1990" synonyms "1990"
+			"1985" synonyms "1985"
+			"1976" synonyms "1976"
+			"1966" synonyms "1966"
+	}
+	Simple entity player :
+		inputs in en {
+			p1 synonyms "living room Kodi" , "living room TV" , "living room"
+			p2 synonyms "bedroom Kodi" , "bedroom TV" , bedroom
+			p3 synonyms p3
+			p4 synonyms p4
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://www.sognen.info/dialogflow" ;
+		basicAuth : nodered : "" ;
+		headers :
+			"" : "" ,
+			async_action : False ,
+			"Content-Type" : "application/json" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in no {
+			request. text
+	}
+	text response "browse-genreTxtResp1" :
+		inputs in en {
+			"Alight here are some options. Showing on TV. "
+	}
+	text response "search-relatedTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "browse-titleTxtResp1" :
+		inputs in en {
+			"Alight. Showing on TV. "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? " ,
+			"Arrrrgggghhhh!,  scallywag. "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in no {
+			"Hei! " ,
+			"Hallo! " ,
+			"God dag! " ,
+			"Heisann! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in no {
+			"Det fikk jeg ikke med meg. Kan du si det på nytt? " ,
+			"Jeg fikk ikke med meg det du sa. Kan du si det på nytt? " ,
+			"Unnskyld, kan du si det på nytt? " ,
+			"Unnskyld, kan du si det på nytt? " ,
+			"Kan du si det på nytt? " ,
+			"Unnskyld, det fikk jeg ikke med meg. " ,
+			"Unnskyld, hva sa du? " ,
+			"En gang til? " ,
+			"Hva sa du? " ,
+			"Kan du gjenta det? " ,
+			"Det fikk jeg ikke med meg. " ,
+			"Det hørte jeg ikke. "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "browse-genre" => bot1 : chatbot HttpRequest , HttpResponse , "browse-genreTxtResp1" ;
+	- user2 : user "search-related" => bot2 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" ;
+	- user3 : user "control-play" => bot3 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" ;
+	- user4 : user "browse-title" => bot4 : chatbot HttpRequest , HttpResponse , "browse-titleTxtResp1" {
+		=> user5 : user "browse-related" => bot5 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" ;
+	} ;
+	- user6 : user "browse-filter-movies" => bot6 : chatbot HttpRequest , HttpResponse , "browse-genreTxtResp1" ;
+	- user7 : user "browse-filter-tv" => bot7 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" ;
+	- user8 : user "Default Welcome Intent" => bot8 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user9 : user "discover-titles" => bot9 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" {
+		=> user10 : user "sorting context:discover-titles" => bot10 : chatbot "search-relatedTxtResp1" { => back to user10 ; } ;
+	} ;
+	- user11 : user "control-status" => bot11 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" ;
+	- user12 : user "browse-filter" => bot12 : chatbot HttpRequest , HttpResponse , "browse-genreTxtResp1" ;
+	- user13 : user "search-title" => bot13 : chatbot HttpRequest , HttpResponse , "browse-genreTxtResp1" ;
+	- user14 : user "browse-actor" => bot14 : chatbot HttpRequest , HttpResponse , "browse-titleTxtResp1" {
+		=> user15 : user "browse-media context: browse-actor" => bot15 : chatbot HttpRequest , HttpResponse , "search-relatedTxtResp1" {
+						=> back to user15 ;
+		} ;
+	} ;
+	- user16 : user "Default Fallback Intent" => bot16 : chatbot "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" ;
+

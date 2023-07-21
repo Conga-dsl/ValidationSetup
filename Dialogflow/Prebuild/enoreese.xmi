@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="enoreese">
+  <intents name="Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes you can do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it looks perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I can"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Diagnos - Abdomen - Diarrhea">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="its diarrhea"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diarrhea"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Diagnos - Abdomen - Pain - Upper - yes - 1-5">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="4"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Create Appointment - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes you can do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I can"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it looks perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Check Appointment">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when be my next appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when i go see doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i get any appointment today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="next appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when is my appointment"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Diagnos - Abdomen - Pain - Upper">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="upper middle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="middle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="upper"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Diarrhea - 1-5 - MucusAll - yes - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="na"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no it isn't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah I'm good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no I cannot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but not this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no maybe next time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not this time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no we are good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's be all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nothing else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no way no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not interested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's fine thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Diagnos - Abdomen - Diarrhea - 1-5">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="5 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1 5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="5 - 10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="five to ten"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="one to five"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="1 -5"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Prescribe">
+    <parameters name="condition"/>
+  </intents>
+  <intents name="Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wattery and brown"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mucus, green water and brown"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="brown and mucus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mucus and brown"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="watery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="brown"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="green, watery and brown"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="watery and green"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="green watery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="green"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mucus"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mucus, green"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Diagnos - Abdomen - Pain">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="its paining me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it hurts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hurts"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Create Appointment">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="steveadeshina@yahoo.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="steve.adeshina@nileuniversity.edu.ng"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="tgrema@yahoo.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="nagwu@nileuniversity.edu.ng"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="osas.usen@gmail.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my email "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.3" textReference="test@example.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="Saturday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="7:00"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="5am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="4pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i won book appointment with doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i won see doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="book an appointment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to see a doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="2347088289121"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="08132283209"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="08033072730"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="07088289121"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to set an appointment for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="3pm"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="on Tuesday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Need an appointment for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="4pm"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Set an appointment "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="on Wednesday"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="at 2pm"/>
+      </inputs>
+    </inputs>
+    <parameters name="date" defaultEntity="DATE" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What date?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="time" defaultEntity="TIME" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What time?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phoneNumber" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please enter your phone number?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Enter your email?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Diagnos - Abdomen">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="belle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="belly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="stomach"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="belle"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="belly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="abdomen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="stomach"/>
+      </inputs>
+    </inputs>
+    <parameters name="BodyPart" entity="//@entities.0"/>
+  </intents>
+  <intents name="Diagnos">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i dey really sick mehn"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wan die"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im not alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i feel a bit sickly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i am not feeling good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="something is wrong with me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me doctor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diagnose"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im feeling sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="im not feeling fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i no dey feel fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i dey sick"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="diagnose me"/>
+      </inputs>
+    </inputs>
+    <parameters name="age" defaultEntity="NUMBER" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Whats your age?</prompts>
+        <prompts>Age please...</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="gender" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Gender please...</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="BodyPart">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Arms">
+        <values>Arm</values>
+        <values>Arms</values>
+        <values>Elbow</values>
+        <values>arm</values>
+        <values>hand</values>
+        <values>hands</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Breast">
+        <values>Breast</values>
+        <values>boobs</values>
+        <values>breast</values>
+        <values>breasts</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Chest">
+        <values>Chest</values>
+        <values>chest</values>
+        <values>torso</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Head">
+        <values>Brain</values>
+        <values>Head</values>
+        <values>brain</values>
+        <values>forehead</values>
+        <values>head</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Heart">
+        <values>Heart</values>
+        <values>heart</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Legs">
+        <values>Legs</values>
+        <values>feet</values>
+        <values>foot</values>
+        <values>leg</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Stomach'">
+        <values>Belle</values>
+        <values>Belly</values>
+        <values>Stomach'</values>
+        <values>bele</values>
+        <values>belle</values>
+        <values>belly</values>
+        <values>bely</values>
+        <values>stomac</values>
+        <values>stomach</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Gender">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Female">
+        <values>Female</values>
+        <values>Girl</values>
+        <values>Woman</values>
+        <values>female</values>
+        <values>girl</values>
+        <values>woman</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Male">
+        <values>Boy</values>
+        <values>Male</values>
+        <values>Man</values>
+        <values>boy</values>
+        <values>male</values>
+        <values>man</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Symptoms">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Burn">
+        <values>Burn</values>
+        <values>Hot</values>
+        <values>burn</values>
+        <values>heart burn</values>
+        <values>hot</values>
+        <values>on fire</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Cold">
+        <values>Cold</values>
+        <values>chills</values>
+        <values>cold</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Dizzyness">
+        <values>Dizzyness</values>
+        <values>Nausea</values>
+        <values>dizzy</values>
+        <values>nausea</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Fever">
+        <values>Fever</values>
+        <values>High Temperature</values>
+        <values>fever</values>
+        <values>high temperature</values>
+        <values>running temperature</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Headaches">
+        <values>Headaches</values>
+        <values>head ache</values>
+        <values>headaches</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Indigestion">
+        <values>Indigestion</values>
+        <values>indigestion</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Pain">
+        <values>Pain</values>
+        <values>hurts</values>
+        <values>pain</values>
+        <values>paining</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Stooling">
+        <values>Purging</values>
+        <values>purge</values>
+        <values>stooling</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Sweating">
+        <values>Sweating</values>
+        <values>sweat</values>
+        <values>sweating</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Vomit">
+        <values>Throw up</values>
+        <values>Vomit</values>
+        <values>throw up</values>
+        <values>vomit</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="http://3cdef67b.ngrok.io/" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose IntolerantTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your symptoms may be caused by LACTOSE INTOLERANCE. People who have this condition have trouble digesting the sugar in milk and other dairy products.&#xA;&#xA;If you think you have lactose intolerance, talk to your doctor. He or she may recommend taking lactase enzyme tablets or drops to help prevent problems. Also, avoid eating or drinking foods and beverages that make you sick "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - DiarrheaTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Got that. How many times in the last 24 hours? (1-5, 5-10, more than 10) "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Pain - Upper - yes - 1-5TxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright. Is the pain always there? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Create Appointment - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your appointment has been made! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Check AppointmentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your next appointment is by. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Pain - UpperTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay. Do you feel any of these? (Indigestion, Heartburn, Nausea) "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diarrhea - 1-5 - MucusAll - yes - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay. Have you eaten food that might be spoiled or did someone else eat the same food and become ill too? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Pain - Upper - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the severity of the pain from 1-10? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="1-5 - MucusAll - yes - no - Food PoisoningTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You may have FOOD POISONING. &#xA;&#xA;Most problems caused by food poisoning will clear up within 12 to 48 hours. In the meantime, drink plenty of fluids to avoid dehydration. Children should be given an oral rehydration solution (ORS). Avoid solid foods until the diarrhea goes away.&#xA;&#xA;If your symptoms last longer than 48 hours, or you&#x2019;re very uncomfortable, call your doctor "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Diarrhea - 1-5TxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay. How is your stooling? (Blood, Mucus, Green, Watery, Brown) "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="PrescribeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Diarrhea - 1-5 - MucusAllTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Are you nauseated or vomiting? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - PainTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry about that. What part of your abdomen? (Upper Middle, Left, Right) "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry to hear that. Did your symptoms begin 30 minutes to 2 hours after eating or drinking dairy products? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please see a doctor! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Pain - Upper - yes - 1-5 - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Go and see a doctor! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diarrhea - 1-5 - MucusAll - yes - no - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Flagly Tablets 400mg TDS, Tetracycline Tablets 500mg TDS and Oral hydration therapy &#xA;&#xA;TDS - Three Times Daily "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Create AppointmentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="you are all set for "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="at "/>
+        <tokens xsi:type="generator:Literal" text="Confirm? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="is already booked. Try "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - AbdomenTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have any of this symptoms ( Pain or Diarrhea)? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="DiagnosTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright. What part of your body do you feel the pain? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Diagnos - Abdomen - Pain - Upper - yes - 1-5 - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your predicted condition is Gastric Ulcer. &#xA;&#xA;Omepragile Tablets 20mg 2x daily for 14days.&#xA;Arithromycin Tablets 500g 2x daily for 14days.&#xA;Amoxicin Tablets 500g 300g 3x daily for 14days. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.4" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.6" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.8" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.12" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.10" name="user3">
+    <target actions="//@actions.14" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.12" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.20" name="bot4">
+      <outcoming intent="//@intents.3" name="user5">
+        <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot5"/>
+      </outcoming>
+      <outcoming intent="//@intents.6" name="user6">
+        <target actions="//@actions.12" name="bot6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.14" name="user7">
+    <target actions="//@actions.22" name="bot7">
+      <outcoming intent="//@intents.13" name="user8">
+        <target actions="//@actions.21" name="bot8">
+          <outcoming intent="//@intents.1" name="user9">
+            <target actions="//@actions.3" name="bot9">
+              <outcoming intent="//@intents.7" name="user10">
+                <target actions="//@actions.11" name="bot10">
+                  <outcoming intent="//@intents.9" name="user11">
+                    <target actions="//@actions.13" name="bot11">
+                      <outcoming intent="//@intents.0" name="user12">
+                        <target actions="//@actions.16" name="bot12">
+                          <outcoming intent="//@intents.0" name="user13">
+                            <target actions="//@actions.2" name="bot13"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.6" name="user14">
+                            <target actions="//@actions.8" name="bot14">
+                              <outcoming intent="//@intents.0" name="user15">
+                                <target actions="//@actions.10" name="bot15"/>
+                              </outcoming>
+                              <outcoming intent="//@intents.6" name="user16">
+                                <target actions="//@actions.19" name="bot17"/>
+                              </outcoming>
+                            </target>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                      <outcoming intent="//@intents.6" name="user17">
+                        <target actions="//@actions.17" name="bot18"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+          <outcoming intent="//@intents.11" name="user18">
+            <target actions="//@actions.15" name="bot19">
+              <outcoming intent="//@intents.5" name="user19">
+                <target actions="//@actions.7" name="bot20">
+                  <outcoming intent="//@intents.0" name="user20">
+                    <target actions="//@actions.9" name="bot21">
+                      <outcoming intent="//@intents.2" name="user21">
+                        <target actions="//@actions.4" name="bot22">
+                          <outcoming intent="//@intents.0" name="user22">
+                            <target actions="//@actions.18" name="bot23"/>
+                          </outcoming>
+                          <outcoming intent="//@intents.6" name="user23">
+                            <target actions="//@actions.23" name="bot24"/>
+                          </outcoming>
+                        </target>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                </target>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.15" name="user24">
+    <target actions="//@actions.24" name="bot25"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

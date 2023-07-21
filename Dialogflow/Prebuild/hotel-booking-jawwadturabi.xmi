@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="hotel-booking-jawwadturabi">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Help">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need support"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need customer support"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Booking">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="+923082466439"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="book a room"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want room"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want an "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.4" textReference="economy"/>
+        <tokens xsi:type="generator:Literal" text=" class"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="book room for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" persons"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My contact number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="+92312345678"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My email is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="abc@abc.com"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="john"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to book a room"/>
+      </inputs>
+    </inputs>
+    <parameters name="name" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Can you please tell me your name</prompts>
+        <prompts>kindly tell your name</prompts>
+        <prompts>Please tell me your good name</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="email" required="true">
+      <prompts language="ENGLISH">
+        <prompts>would you like to share your email</prompts>
+        <prompts>please tell me your email</prompts>
+        <prompts>your email please</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Kindly give me your contact number</prompts>
+        <prompts>Please tell me your contact number</prompts>
+        <prompts>tell me your phone number</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="person" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>For how many persons you want to book room</prompts>
+        <prompts>kindly tell me number of persons</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="type" entity="//@entities.0" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please tell me which type of class you want</prompts>
+        <prompts>In which category do you want to book room</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Complaint">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="subject is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="security"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the subject is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="staff"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="detail"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to report"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="feedback"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="suggestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="complain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="feedback"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to report something"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="suggestion"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="complaint"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+    </inputs>
+    <parameters name="Complaintype" entity="//@entities.3" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Do you want to give suggestions or complaint</prompts>
+        <prompts>Kindly specify that you want to give complaint or suggestion</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="subject" entity="//@entities.2" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please give the subject to your $Complaintype</prompts>
+        <prompts>Kindly tell the subject of your $Complaintype</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="ShowBookingsYes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes you can do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it looks perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I can"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="ShowBookings">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="all bookings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me my bookings"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="Category">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Vip">
+        <values>Vip</values>
+        <values>higher</values>
+        <values>upper class</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="economy">
+        <values>basic</values>
+        <values>economy</values>
+        <values>lower</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="standard">
+        <values>average</values>
+        <values>casual</values>
+        <values>standard</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="RoomType">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="economy">
+        <values>Low cost</values>
+        <values>Regular</values>
+        <values>economy</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="standard">
+        <values>standard</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vip">
+        <values>luxuery</values>
+        <values>special</values>
+        <values>vip</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="subject">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Secuirty">
+        <values>Secuirty</values>
+        <values>protection</values>
+        <values>security</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="food">
+        <values>dine</values>
+        <values>food</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="laundry">
+        <values>laundry</values>
+        <values>room service</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="management">
+        <values>discipline</values>
+        <values>management</values>
+        <values>staff</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="plumbing service">
+        <values>plumbing service</values>
+        <values>water leakage</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Complaintype">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="complain">
+        <values>complain</values>
+        <values>complaint</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="suggestion">
+        <values>advice</values>
+        <values>advise</values>
+        <values>feedback</values>
+        <values>suggestion</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-hotel-booking-agent-tyderl.cloudfunctions.net/webhook" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Have you designed it already?&#xA;&#xA;Below is an introduction to our production process.&#xA;&#xA; &#xA;&#xA;P icture &#x25a1; -1 P icture &#x25a1; -2&#xA;&#xA; &#xA;&#xA;If you have already designed it, you can also pass the picture directly&#xA;and tell us the material you want and the number of pieces.&#xA;&#xA;Please ask customer service directly to quote you &#x5466;^^&#xA;&#xA; &#xA;&#xA;Large image files, original image files, to avoid compression, please pass to the lower mailbox&#xA;&#xA;King.protee@gmail.com&#xA;&#xA;Thank you "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi.Welcome to our hotel. You can enjoy our Hotel services here.Say book a room if you want to book room. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello! Welcome ! Here we provide you the details about Hotel services.Say book hotel if  want to book room. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You are welcome to our hotel. Do you want to book room. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We warmly welcome you to our hotel.Do you want to book room. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="HelpTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&#x82e5;&#x6b32;&#x7533;&#x8acb;&#x5957;&#x91cf;&#x6a23;&#x8863;&#xA;&#x9084;&#x8acb;&#x63d0;&#x4f9b;&#x6536;&#x8ca8;&#x4eba;&#x8cc7;&#x8a0a;^^&#xA;&#xA;1.&#x6536;&#x4ef6;&#x4eba;&#x59d3;&#x540d;&#xA;2.&#x96fb;&#x8a71;&#xA;3.&#x5b78;&#x6821;&#x3001;&#x73ed;&#x7d1a;&#xA;4.&#x6536;&#x8ca8;&#x5730;&#x5740;(&#x5bc4;&#x5b78;&#x6821;&#x5247;&#x63d0;&#x4f9b;&#x5b78;&#x6821;&#x5730;&#x5740;&#xff0c;&#x8d85;&#x5546;&#x53d6;&#x8ca8;&#x9808;&#x63d0;&#x4f9b;&#x9580;&#x5e02;&#x8cc7;&#x6599;)&#xA;5.&#x5bc4;&#x56de;&#x65b9;&#x5f0f;(&#x90f5;&#x5bc4;&#x6216;7-11)&#xA;6.&#x6750;&#x8cea;&#xA;7.&#x9810;&#x8a08;&#x4f7f;&#x7528;&#x65e5;&#x671f;&#x8207;&#x6b78;&#x9084;&#x65e5;&#x671f;&#xff08;&#x7531;&#x65bc;&#x5957;&#x91cf;&#x6709;&#x9650;&#xff0c;&#x9700;&#x5728;&#x9001;&#x9054;&#x9694;&#x65e5;&#x6b78;&#x9084;&#xff09;&#xA;8.&#x5099;&#x8a3b;&#xA;&#xA;&#xA;&#x63d0;&#x9192;&#x60a8;&#xff0c;&#x5957;&#x91cf;&#x6a23;&#x8863;&#x53ea;&#x662f;&#x53c3;&#x8003;&#x7528;&#xff0c;&#x7531;&#x65bc;&#x6bcf;&#x6279;&#x8863;&#x670d;&#x4f9d;&#x88fd;&#x4f5c;&#x6279;&#x6b21;&#x4e0d;&#x540c;&#x9084;&#x662f;&#x6703;&#x6709;&#x4e9b;&#x5fae;&#x8aa4;&#x5dee;&#x3002;&#xA;&#x4ee5;&#x5c3a;&#x540b;&#x8868;&#x70ba;&#x57fa;&#x6e96;&#xff0c;&#x6210;&#x54c1;&#x53ef;&#x80fd;&#x6709;&#x6b63;&#x8ca0;2~3&#x516c;&#x5206;&#x4e4b;&#x8aa4;&#x5dee;&#x3002;&#xA;&#xA;&#x82e5;&#x6c42;&#x7cbe;&#x6e96;&#xff0c;&#x9084;&#x8acb;&#x52d9;&#x5fc5;&#x5c0d;&#x7167;&#x5c3a;&#x5bf8;&#x8cc7;&#x6599;&#x8868;&#x3002;&#xA;&#xA;&#xA;&#x5c3a;&#x5bf8;&#x8868;&#x53ef;&#x8a62;&#x554f;&#x5ba2;&#x670d;&#x6216;&#x662f;&#x65bc;&#x5b98;&#x7db2;&#x4e2d;&#x5c0d;&#x61c9;&#x6b3e;&#x5f0f;&#x7684;&#x4ecb;&#x9762;&#x627e;&#x5230;&#xA;https://kingprotee.weebly.com/t24676.html&#xA;&#x88fd;&#x4f5c;&#x6a21;&#x677f;&#x4ee5;&#x5c3a;&#x5bf8;&#x8868;&#x70ba;&#x6e96;&#x3002;&#xA;&#xA;&#xA;&#x8acb;&#x52d9;&#x5fc5;&#x6ce8;&#x610f;&#xff01;&#xff01;&#xA;&#x4e0d;&#x8981;&#x6311;&#x9078;&#x5b8c;&#x5168;&#x5408;&#x8eab;&#x7684;&#x5c3a;&#x5bf8;&#xff0c;&#x907f;&#x514d;&#x53ef;&#x80fd;&#x9020;&#x6210;&#x6210;&#x54c1;&#x7a7f;&#x4e0d;&#x4e0b;&#x7684;&#x7a98;&#x5883;&#x3002;&#xA;&#xA;-------segment-----&#xA;&#xA;&#x8acb;&#x52d9;&#x5fc5;&#x5148;&#x78ba;&#x8a8d;&#x76ee;&#x524d;&#x7684;&#x8a2d;&#x8a08;&#x3001;&#x6a21;&#x64ec;&#x5716;&#x3001;&#x50f9;&#x683c;&#x9810;&#x7b97;&#x7b49;&#x90fd;OK&#x4e4b;&#x5f8c;&#x518d;&#x7533;&#x8acb;&#x5957;&#x91cf;&#x670d;&#x52d9;&#x5466;&#xff01;&#xA;&#xA;&#x8a02;&#x88fd;&#x4ef6;&#x6578;&#x8f03;&#x5c11;&#x6642;&#xff0c;&#x7533;&#x8acb;&#x5be6;&#x9ad4;&#x5957;&#x91cf;&#x53ef;&#x80fd;&#x7522;&#x751f;&#x5957;&#x91cf;&#x624b;&#x7e8c;&#x8cbb;&#x4ee5;&#x53ca;&#x5bc4;&#x56de;&#x6642;&#x7684;&#x904b;&#x8cbb;&#xA;&#x8acb;&#x591a;&#x4f7f;&#x7528;&#x514d;&#x8cbb;&#x7684;&#x81ea;&#x52a9;&#x6e2c;&#x91cf;&#x670d;&#x52d9;&#x2192;&#x8f38;&#x5165;&quot;&#x6e2c;&#x91cf;&quot;&#xA;&#xA;P.S.&#xA;&#x672a;&#x6eff;30&#x4ef6; &#x5957;&#x91cf;&#x5c07;&#x6536;&#x53d6;100&#x4e4b;&#x5957;&#x91cf;&#x624b;&#x7e8c;&#x8cbb;&#xA;&#x672a;&#x6eff;15&#x4ef6; &#x5957;&#x91cf;&#x5c07;&#x6536;&#x53d6;150&#x4e4b;&#x5957;&#x91cf;&#x624b;&#x7e8c;&#x8cbb;&#xA;&#xA;&#x5957;&#x91cf;&#x6b78;&#x9084;&#x6642;&#xff0c;&#x53ef;&#x65bc;&#x4efb;&#x610f;&#x4e00;&#x9593;7-11&#x9032;&#x884c;&#x6b78;&#x9084;&#x3002;&#xA;&#x6b78;&#x9084;&#x6642;&#x5c07;&#x7522;&#x751f;60&#x5143;&#x4e4b;&#x904b;&#x8cbb;&#x3002;(&#x82e5;&#x6eff;50&#x4ef6;&#x3001;&#x6216;&#x662f;&#x6709;2&#x500b;&#x4ee5;&#x4e0a;&#x55ae;&#x4f4d;&#x5171;&#x7528;&#x6b64;&#x5957;&#x91cf;&#xff0c;&#x6b64;&#x8cbb;&#x7528;&#x5c07;&#x7531;&#x6211;&#x5011;&#x5438;&#x6536;)&#xA;&#xA;&#x8a73;&#x60c5;&#x8acb;&#x8f38;&#x5165;&#x2192;&#x6b78;&#x9084;&#xA;&#x81ea;&#x52a9;&#x6e2c;&#x91cf;&#x5c3a;&#x5bf8; &#x7cbe;&#x6e96;&#x53c8;&#x65b9;&#x4fbf;&#x5466;&#x2192;&#x6e2c;&#x91cf;&#xA;&#xA;&#x5982;&#x9700;&#x6750;&#x8cea;&#x6a23;&#x8863;&#x6216;&#x6709;&#x5176;&#x4ed6;&#x4efb;&#x4f55;&#x9700;&#x6c42;&#x6216;&#x554f;&#x984c;&#xff0c;&#x90fd;&#x6b61;&#x8fce;&#x7559;&#x8a00;&#x8a62;&#x554f;&#x5ba2;&#x670d;&#x5466;&#xff01; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Image" name="HelpImgResp1" URL="https://i.imgur.com/2UnaN8A.jpg"/>
+  <actions xsi:type="generator:Image" name="HelpImgResp2" URL="https://i.imgur.com/PJQpVjp.jpg"/>
+  <actions xsi:type="generator:Text" name="HelpTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="HelpTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Kindly mention what kind of help do you want? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please specify which sort of help do you required? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="BookingTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your is request is Forwarded. Thanks for using our service. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your request is proceeded to concern department. Thanks for choosing our Hotel. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="ComplaintTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for using our service. we'll get back to you  soon. Thanks for using our service. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="is proceeded to concern department. We will contact you soon. Good bye "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We've submit your "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=".We'll forward your request to "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="department. Thanks for using our customer support ! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="ShowBookingsYesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Something went wrong "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2 //@actions.3" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.4 //@actions.5 //@actions.6 //@actions.7 //@actions.8" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.7 //@actions.9" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.10" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.5" name="user5">
+    <target actions="//@actions.12" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.6" name="user6">
+    <target actions="//@actions.7" name="bot6">
+      <outcoming intent="//@intents.4" name="user7">
+        <target actions="//@actions.0 //@actions.1 //@actions.11" name="bot7"/>
+      </outcoming>
+    </target>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

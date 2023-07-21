@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="iotairblower">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="DeviceProgramming">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text="  with timer the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="airblow"/>
+        <tokens xsi:type="generator:Literal" text=" if the temperature is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="above"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="30 degrees"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="Cagliari"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="airblow"/>
+        <tokens xsi:type="generator:Literal" text=" if temperature is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="under"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="30 degrees"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="Rome"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="airblow"/>
+        <tokens xsi:type="generator:Literal" text=" if the temperature is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="above"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="30 degrees"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="Cagliari"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="airblow"/>
+        <tokens xsi:type="generator:Literal" text=" if the temperature is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="above"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="30 degrees"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="Milano"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="air"/>
+        <tokens xsi:type="generator:Literal" text=" blow if temperature in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="Milano"/>
+        <tokens xsi:type="generator:Literal" text=" is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="over"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="30 celsius degrees"/>
+      </inputs>
+    </inputs>
+    <parameters name="action" entity="//@entities.0" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which action do you want to perform? start the device, or stop it?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="deviceId" entity="//@entities.2" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which is the device  you want interact with?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="temperature" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which is the temperature to check?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="city" required="true">
+      <prompts language="ENGLISH">
+        <prompts>In which sity is the device?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="range" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Do you want $Actions the device $Devices if the temperature is higher or lower than $temperature?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="DeviceActivation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="air"/>
+        <tokens xsi:type="generator:Literal" text=" blow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="stop"/>
+        <tokens xsi:type="generator:Literal" text=" device"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="stop"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="airblow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey Google "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="air"/>
+        <tokens xsi:type="generator:Literal" text="  "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="blow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="start"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="airblow"/>
+      </inputs>
+    </inputs>
+    <parameters name="deviceId" entity="//@entities.2" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which device do you want to interact with?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="action" entity="//@entities.0" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which action do you want to do?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="deviceId1" entity="//@entities.2"/>
+  </intents>
+  <entities name="Actions">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="off">
+        <values>off</values>
+        <values>deactivate</values>
+        <values>disable</values>
+        <values>stop</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="on">
+        <values>on</values>
+        <values>activate</values>
+        <values>start</values>
+        <values>run</values>
+        <values>execute</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="range">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="above">
+        <values>above</values>
+        <values>more</values>
+        <values>hotter</values>
+        <values>upper</values>
+        <values>up</values>
+        <values>over</values>
+        <values>warmer</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="under">
+        <values>under</values>
+        <values>less</values>
+        <values>fresher</values>
+        <values>cooler</values>
+        <values>minor</values>
+        <values>lower</values>
+        <values>low</values>
+        <values>down</values>
+        <values>below</values>
+        <values>colder</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Devices">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="mycoolingfan">
+        <values>airblow</values>
+        <values>air</values>
+        <values>conditioning</values>
+        <values>blow</values>
+        <values>air blow</values>
+        <values>cooling fan</values>
+        <values>cold</values>
+        <values>cool</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="myspaceheater">
+        <values>spaceheater</values>
+        <values>space heater</values>
+        <values>heater</values>
+        <values>warming system</values>
+        <values>warm</values>
+        <values>hot</values>
+        <values>heat</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://acc14631.ngrok.io/api/smarthome" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! I can activate your smart devices. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="DeviceProgrammingTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot4"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

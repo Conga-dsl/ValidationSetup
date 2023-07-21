@@ -1,0 +1,27 @@
+Chatbot "in-my-seats-jovo" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+GetCountryAndPostalCodeIntent :
+	inputs in en {
+		"get my zip"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/12c5f858-98ff-4cc3-ab89-40afc1aaa9fa" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user GetCountryAndPostalCodeIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot HttpRequest , HttpResponse ;
+

@@ -1,0 +1,188 @@
+Chatbot "fulfillment-telephony" language : en
+
+intents :
+
+"Default Welcome Intent" :
+	inputs in en {
+		hello ,
+		hey ,
+		"hi there" ,
+		^hi ,
+		"hey there"
+}
+
+"Default Welcome Intent - yes" :
+	inputs in en {
+		yup ,
+		yep ,
+		exactly ,
+		"sounds good" ,
+		alright ,
+		"yes that\'s alright" ,
+		okay ,
+		"yep that\'s right" ,
+		"it\'s fine" ,
+		confirm ,
+		"yes I do" ,
+		"of course" ,
+		"alright why not" ,
+		absolutely ,
+		right ,
+		ok ,
+		"sure why not" ,
+		yes ,
+		"yes I can" ,
+		"do it" ,
+		"yes please" ,
+		"I think so" ,
+		perfect ,
+		"yes that\'t ok" ,
+		"sounds correct" ,
+		"it\'s okay" ,
+		"for sure" ,
+		"that\'s correct" ,
+		"yes I agree" ,
+		"it looks perfect" ,
+		"go ahead" ,
+		sure ,
+		yeah
+}
+
+makeRes :
+	inputs in en {
+		( today ) [ ^date ] ,
+		( david ) [ name ] " is my first name" ,
+		"make reservation" ,
+		( "4153333333" ) [ phone ] ,
+		( tomorrow ) [ ^date ] ,
+		( "4" ) [ groupN ] ,
+		( attenborough ) [ name ] " is my last name" ,
+		"i\'d like to make a reservation" ,
+		( Kosiorek ) [ name ] ,
+		( "3" ) [ groupN ] ,
+		( "barack obama" ) [ name ] ,
+		( "1 o\'clock" ) [ ^time ] ,
+		( "next Tuesday" ) [ ^date ] ,
+		( "5" ) [ groupN ] ,
+		"sure " ( "john smith" ) [ name ] ,
+		( "1pm" ) [ ^time ]
+	}
+	parameters :
+		name : entity text , required , prompts in en [ "I\'ll need a full name for the reservation" ] ;
+		groupN : entity float , required , prompts in en [ "How many in your party?" ] ;
+		^date : entity date , required , prompts in en [ "Which day is this reservation for?" ] ;
+		^time : entity time , required , prompts in en [ "And for what time?" ] ;
+		phone : entity text , required , prompts in en [ "What number can we reach you at?" ] ;
+
+"Default Welcome Intent - no" :
+	inputs in en {
+		"no transfer me through please" ,
+		"no transfer" ,
+		"transfer please" ,
+		"I disagree" ,
+		"no way" ,
+		"no thanks" ,
+		"no we are good" ,
+		"no no don\'t" ,
+		na ,
+		"no it isn\'t" ,
+		"I don\'t" ,
+		transfer ,
+		"thanks but no" ,
+		"no that\'s fine thank you" ,
+		"I\'m not" ,
+		"main line" ,
+		"I can\'t" ,
+		never ,
+		"not really" ,
+		nothing ,
+		"I don\'t think so" ,
+		"transfer call" ,
+		"nope not really" ,
+		"I don\'t want that" ,
+		"not at all" ,
+		"no way no" ,
+		"not today" ,
+		"not interested" ,
+		"definitely not" ,
+		nah ,
+		"nah I\'m good" ,
+		"no never" ,
+		^no ,
+		"no maybe next time" ,
+		"thanks but not this time" ,
+		"no don\'t" ,
+		"no that\'s be all" ,
+		"no not really" ,
+		"nothing else thanks" ,
+		nope ,
+		"I don\'t want" ,
+		"main line please" ,
+		"no I cannot" ,
+		"not right now" ,
+		"nothing else" ,
+		not ,
+		"don\'t" ,
+		"not this time" ,
+		"no that\'s ok" ,
+		"no that\'s okay" ,
+		"don\'t do it"
+}
+
+transfercall :
+	inputs in en {
+		"direct line" ,
+		"main line" ,
+		"transfer please" ,
+		transfer ,
+		"i\'d like to be transferred"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-telephonysample.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"<speak>Hi there, are you calling to make a reservation at <say-as interpret-as=\"characters\">OMG</say-as> Garden?</speak> "
+	}
+	text response "Default Welcome Intent - yesTxtResp1" :
+		inputs in en {
+			"Okay sounds good! Remember at any point you can say transfer to be transferred to the direct line.  I\'ll just need some information, starting with the full name this reservation will be under. "
+	}
+	text response makeResTxtResp1 :
+		inputs in en {
+			"Great, I have got you down for " [ "makeRes.date" ] "at " "see you later! "
+	}
+	text response "Default Welcome Intent - noTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome Intent - noTxtResp4" :
+		inputs in en {
+			"I\'m sorry I couldn\'t help you today, I\'ll connect you to the main line in a moment "
+	}
+	text response transfercallTxtResp4 :
+		inputs in en {
+			"I\'m sorry I couldn\'t take down your reservation but you\'ll be connected to the main line in a moment "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I\'m sorry I didn\'t catch that do you want to continue making a reservation or would you prefer to be transferred to the main line? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" {
+		=> user2 : user "Default Welcome Intent - yes" => bot2 : chatbot "Default Welcome Intent - yesTxtResp1" ;
+		=> user3 : user "Default Welcome Intent - no" => bot3 : chatbot "Default Welcome Intent - noTxtResp1" , "Default Welcome Intent - noTxtResp4" ;
+	} ;
+	- user4 : user makeRes => bot4 : chatbot HttpRequest , HttpResponse , makeResTxtResp1 ;
+	- user5 : user transfercall => bot5 : chatbot "Default Welcome Intent - noTxtResp1" , transfercallTxtResp4 ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse , "Default Fallback IntentTxtResp1" ;
+

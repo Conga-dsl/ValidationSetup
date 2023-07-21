@@ -1,0 +1,96 @@
+Chatbot "ha-austin" language : en
+
+intents :
+
+"Get destination" :
+	inputs in en {
+		( Julia ) [ "src-name" ] ": I want to go to " ( Austin ) [ "geo-city" ] ,
+		( Ishan ) [ "src-name" ] ": I want to visit " ( Chicago ) [ "geo-city" ] ,
+		( Ishan ) [ "src-name" ] ": I would like to visit " ( "San Francisco" ) [ "geo-city" ] ,
+		( Krishna ) [ "src-name" ] ": Let\'s go to " ( NYC ) [ "geo-city" ]
+	}
+	parameters :
+		"geo-city" : entity text , required ;
+		"src-name" : entity text , required ;
+
+"Default Welcome Intent" :
+	inputs in en {
+		"Hello " ( Harsh ) [ srcname ] " from " ( Krishna ) [ destname ]
+	}
+	parameters :
+		destname : entity text , required ;
+		srcname : entity text , required ;
+
+"Get budget" :
+	inputs in en {
+		( Julia ) [ "given-name" ] ": I am down with " ( spending ) [ "budget-spend" ] " " ( "400 bucks" ) [ "unit-currency" ] ,
+		( Julia ) [ "given-name" ] ": I cannot " ( spend ) [ "budget-spend" ] " more than " ( "$600" ) [ "unit-currency" ] ,
+		( Krishna ) [ "given-name" ] ": I am cool with " ( spending ) [ "budget-spend" ] " " ( "$500" ) [ "unit-currency" ] ,
+		( Harsh ) [ "given-name" ] ": I am fine with " ( spending ) [ "budget-spend" ] " " ( "$300" ) [ "unit-currency" ]
+	}
+	parameters :
+		"unit-currency" : entity text , required ;
+		"budget-spend" : entity text , required ;
+		"given-name" : entity text , required ;
+
+"Get source" :
+	inputs in en {
+		( Julia ) [ "src-name" ] ": I will fly out of New " ( York ) [ "geo-city" ] ,
+		( Julia ) [ "src-name" ] ": I can fly out of " ( "New York" ) [ "geo-city" ] ,
+		( Julia ) [ "src-name" ] ": I will depart from " ( "San Francisco" ) [ "geo-city" ] ,
+		( Krishna ) [ "src-name" ] ": I will leave from " ( Chicago ) [ "geo-city" ] ,
+		( Harsh ) [ "src-name" ] ": I will be flying out of " ( Austin ) [ "geo-city" ]
+	}
+	parameters :
+		"geo-city" : entity text , required ;
+		"src-name" : entity text , required ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://<example>" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Get destinationTxtResp1" :
+		inputs in en {
+			"($src-name,$geo-city) destination "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			[ "Default Welcome Intent.srcname" ] "says Hi to " [ "Default Welcome Intent.destname" ]
+	}
+	text response "Get budgetTxtResp1" :
+		inputs in en {
+			"($given-name,$unit-currency.amount) budget "
+	}
+	text response "Get sourceTxtResp1" :
+		inputs in en {
+			"($src-name,$geo-city) source "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Get destination" => bot1 : chatbot "Get destinationTxtResp1" ;
+	- user2 : user "Default Welcome Intent" => bot2 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user3 : user "Get budget" => bot3 : chatbot "Get budgetTxtResp1" ;
+	- user4 : user "Get source" => bot4 : chatbot "Get sourceTxtResp1" ;
+	- user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" ;
+

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Homie">
+  <intents name="blinds.close">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Close the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="blinds"/>
+        <tokens xsi:type="generator:Literal" text=" it the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="bedroom"/>
+      </inputs>
+    </inputs>
+    <parameters name="device" entity="//@entities.1"/>
+    <parameters name="room" entity="//@entities.3" required="true"/>
+  </intents>
+  <intents name="brightness.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what about brightness"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="brightness.off">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="switch it off"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="switch off the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="light"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="bedroom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please turn off the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="lights"/>
+        <tokens xsi:type="generator:Literal" text=" in the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="bathroom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="device"/>
+        <tokens xsi:type="generator:Literal" text=" off"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="switch off the light in the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="kitchen"/>
+      </inputs>
+    </inputs>
+    <parameters name="device" entity="//@entities.1"/>
+    <parameters name="room" entity="//@entities.3" required="true"/>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="help">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="say me what to do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what can you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="brightness.all">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Switch off"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="temperature.set">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Set my home temperature to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="13"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Set my home temperature to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="20"/>
+        <tokens xsi:type="generator:Literal" text=" degree"/>
+      </inputs>
+    </inputs>
+    <parameters name="number-integer" defaultEntity="NUMBER" required="true"/>
+  </intents>
+  <intents name="temperature.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me the current temperature"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is my home temperature"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the temperature"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="coffee">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want an espresso"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Make me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="coffee"/>
+      </inputs>
+    </inputs>
+    <parameters name="device" entity="//@entities.1" required="true"/>
+  </intents>
+  <intents name="blinds.open">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Open "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="blinds"/>
+        <tokens xsi:type="generator:Literal" text=" in the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="kitchen"/>
+      </inputs>
+    </inputs>
+    <parameters name="device" entity="//@entities.1"/>
+    <parameters name="room" entity="//@entities.3" required="true"/>
+  </intents>
+  <intents name="temperature.reset">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Undo action"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="undo"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="brightness.on">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn it on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="light"/>
+        <tokens xsi:type="generator:Literal" text=" on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn on the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="lights"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="switch on the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="lights"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="bedroom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="switch the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="kitchen"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="lights"/>
+        <tokens xsi:type="generator:Literal" text=" on"/>
+      </inputs>
+    </inputs>
+    <parameters name="room" entity="//@entities.3" required="true"/>
+    <parameters name="device" entity="//@entities.1"/>
+  </intents>
+  <entities name="condition">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="sunrise">
+        <values>sunrise</values>
+        <values>when the sun rises</values>
+        <values>early the morning</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="come">
+        <values>come</values>
+        <values>coming</values>
+        <values>came</values>
+        <values>arrived</values>
+        <values>arrive</values>
+        <values>arriving</values>
+        <values>get in</values>
+        <values>gets in</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="leave">
+        <values>leave</values>
+        <values>left</values>
+        <values>leaving</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="rain">
+        <values>rain</values>
+        <values>it's raining</values>
+        <values>raining</values>
+        <values>rains</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="sunset">
+        <values>sunset</values>
+        <values>dawn</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="warm">
+        <values>warm</values>
+        <values>hot</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cold">
+        <values>cold</values>
+        <values>cool</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="device">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="decorations">
+        <values>decorations</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="thermostat">
+        <values>thermostat</values>
+        <values>heater</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="light">
+        <values>light</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cofee machine">
+        <values>cofee machine</values>
+        <values>coffee</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="alarm">
+        <values>alarm</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="blinds">
+        <values>blinds</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="lights">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="table lamp">
+        <values>table lamp</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="decorations">
+        <values>decorations</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="room">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="kitchen">
+        <values>chamber</values>
+        <values>kitchen</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bedroom">
+        <values>bedroom</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bathroom">
+        <values>bathroom</values>
+        <values>bath</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="outdoor">
+        <values>outdoor</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="kids rooms">
+        <values>kids rooms</values>
+        <values>children</values>
+        <values>kids</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="dining room">
+        <values>dining room</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="studio">
+        <values>studio</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="stairs">
+        <values>stairs</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="garden">
+        <values>garden</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="blinds.closeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, I'm opening the "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.0/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="in the "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.0/@parameters.1"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="brightness.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="brightness.offTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, I'm doing! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, let's switching it off "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I just switched off "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="lights "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="lights are now off "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="helpTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="These are all my powers:&#xA; Tune the lights &#x1f4a1;, Regulate the blinds &#x1fa9f;, Control your alarm &#x1f6a8;, Regulate the temperature &#x1f321;&#xfe0f;, Make an espresso &#x2615;... And many more! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="brightness.allTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="foo "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="temperature.setTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, your home temperature will be "/>
+        <tokens xsi:type="generator:Literal" text="soon "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Let's regulate it to "/>
+        <tokens xsi:type="generator:Literal" text="soon "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="temperature.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your home temperature is 20&#xb0;C "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="coffeeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, coffe is almost ready! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm preparing it &#x2615; "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="blinds.openTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, I'm opening the "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.9/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="in the "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.9/@parameters.1"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="temperature.resetTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, i reset the temperature to the previous value "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="brightness.onTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok, "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="lights are now on "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.5" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.6" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.7" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.8" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.9" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.10" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.11" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.12" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.13" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.14" name="bot13"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

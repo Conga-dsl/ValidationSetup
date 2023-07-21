@@ -1,0 +1,82 @@
+Chatbot "fulfillment-temperature-converter" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			^hi
+	}
+
+	Cancel :
+		inputs in en {
+			Exit ,
+			Quit ,
+			Cancel
+	}
+
+	"Convert Rankine and Kelvin" :
+		inputs in en {
+			( Kelvin ) [ absoluteTempUnit ] ,
+			( Rankine ) [ absoluteTempUnit ] ,
+			( K ) [ absoluteTempUnit ] ,
+			( R ) [ absoluteTempUnit ]
+		}
+		parameters :
+			absoluteTempUnit : entity absoluteTempUnit , required , prompts in en [ "Rankine or Kelvin?" ] ;
+
+	"Convert Fahrenheit and Celsius" :
+		inputs in en {
+			( "27" ) [ temperature ] "°" ,
+			( "30" ) [ temperature ] " degrees" ,
+			( "25" ) [ temperature ] ,
+			"How about " ( "45" ) [ temperature ] " degrees?" ,
+			( "27" ) [ temperature ] "° " ( Celsius ) [ unit ] ,
+			( "-40" ) [ temperature ] "° " ( Fahrenheit ) [ unit ] ,
+			( "45" ) [ temperature ] " degrees " ( Celsius ) [ unit ]
+		}
+		parameters :
+			temperature : entity float , required , prompts in en [ "What temperature would you like to convert?" ] ;
+			unit : entity unit , required , prompts in en [ "Fahrenheit or Celsius?" ] ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity absoluteTempUnit :
+		inputs in en {
+			Kelvin synonyms Kelvin , K , kelvin
+			Rankine synonyms Rankine , R , rankine
+	}
+	Simple entity unit :
+		inputs in en {
+			Celsius synonyms Celsius , C , celsius
+			Fahrenheit synonyms Fahrenheit , F , fahrenheit
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-libsample-advanced.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Webhook Failed "
+	}
+	text response CancelTxtResp1 :
+		inputs in en {
+			"Goodbye! "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user2 : user Cancel => bot2 : chatbot CancelTxtResp1 {
+		=> user3 : user "Convert Rankine and Kelvin" => bot3 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	} ;
+	- user4 : user "Convert Fahrenheit and Celsius" => bot4 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" {
+		=> user5 : user "Convert Rankine and Kelvin" => bot5 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	} ;
+	- user6 : user "Default Fallback Intent" => bot6 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="gordobbot">
+  <intents name="genderReveal">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="James"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Melissa"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="female"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="MALE"/>
+      </inputs>
+    </inputs>
+    <parameters name="genderconfirmation" entity="//@entities.4"/>
+    <parameters name="person"/>
+  </intents>
+  <intents name="disconfirmation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't have all the ingredients"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I do not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No I don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That is all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No that is all"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="greeting">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ingredientRequest"/>
+  <intents name="appreciation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright, thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="checkCapability">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do you do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tell me what you do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is your function?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can you do?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="confirmation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="great"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nice"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="They are all here"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have all the ingredients I need"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, I have them all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can help me with something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes there is something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="There is something else"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="requestRecipeUtensil">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do I need a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="spoon"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="rice"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="utensil" entity="//@entities.1"/>
+    <parameters name="recipe" entity="//@entities.3"/>
+  </intents>
+  <intents name="requestClarification">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Help!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I do that ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you clarify please?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I do not understand"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What do you mean?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="recipeRequest">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="roasted"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="GPBroccoli"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Rice"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Cobbler"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd rather cook "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="one-pot chinese fried rice"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I really want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="one-pot chinese fried rice"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="garlic parmesan roasted broccoli"/>
+        <tokens xsi:type="generator:Literal" text=" please!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="slow-cooker mixed berries cobbler"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you make me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Slow-cooker mixed berries cobbler"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm craving for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="garlic parmesan roasted broccoli"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do you have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="One-Pot Chinese Fried Rice"/>
+      </inputs>
+    </inputs>
+    <parameters name="recipe" entity="//@entities.3"/>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="recipeContinuer">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Move on to the next step please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Complete"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Next"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please continue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Done"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Next step please"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="requestRecipeQuantity">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="oil"/>
+        <tokens xsi:type="generator:Literal" text=" do I need for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="GPbroccoli"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the amount of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="butter"/>
+        <tokens xsi:type="generator:Literal" text=" needed for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="cobbler"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me how much "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="parmesan cheese"/>
+        <tokens xsi:type="generator:Literal" text=" I need for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="roasted broccoli"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the amount of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="strawberries"/>
+        <tokens xsi:type="generator:Literal" text=" for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="cobbler"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="carrot"/>
+        <tokens xsi:type="generator:Literal" text=" is needed for the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="fried rice"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="ingredient" entity="//@entities.2"/>
+    <parameters name="recipe" entity="//@entities.3"/>
+  </intents>
+  <intents name="defaultFallback" fallbackIntent="true"/>
+  <intents name="selfIdentification">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="farewell">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="farewell"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="Origin">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="broccoli">
+        <values>broccoli</values>
+        <values>Broccoli, botanically known as Brassica oleracea italica, is native to the Mediterranean. It was engineered from a cabbage relative by the Etruscans&#x2014;an ancient Italian civilization who lived in what is now Tuscany..</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="rice">
+        <values>rice</values>
+        <values>Fried rice first developed during the Sui Dynasty in China and as such all fried rice dishes can trace their origins to Chinese fried rice.Many varieties of fried rice have their own specific list of ingredients.In Greater China, common varieties include Yangzhou fried rice and Hokkien fried rice.').</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cobbler">
+        <values>cobbler</values>
+        <values>Cobblers originated in the British American colonies.',  'English settlers were unable to make traditional suet puddings due to lack of suitable ingredients and cooking equipment.', 'So instead covered a stewed filling with a layer of uncooked plain biscuits, scone batter or dumplings, fitted together.').</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="utensil">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="pan">
+        <values>pan</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="large pan">
+        <values>large pan</values>
+        <values>big pan</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bowl">
+        <values>bowl</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="teaspoon">
+        <values>spoon</values>
+        <values>small spoon</values>
+        <values>teaspoon</values>
+        <values>spoon for tea</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="tablespoon">
+        <values>tablespoon</values>
+        <values>spoon</values>
+        <values>big spoon</values>
+        <values>eating spoon</values>
+        <values>spoon for eating</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="measuring cup">
+        <values>cup</values>
+        <values>measuring cup</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="baking pan">
+        <values>baking pan</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="slow cooker">
+        <values>slow cooker</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="knife">
+        <values>knife</values>
+        <values>chop</values>
+        <values>chopping</values>
+        <values>snip</values>
+        <values>chopped</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="spatula">
+        <values>spatula</values>
+        <values>mix</values>
+        <values>stir</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="fork">
+        <values>fork</values>
+        <values>beat</values>
+        <values>Beat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cutting board">
+        <values>cutting board</values>
+        <values>cutting-board</values>
+        <values>board for cutting</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="oven">
+        <values>oven</values>
+        <values>microwave oven</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="stove">
+        <values>stove</values>
+        <values>cooker</values>
+        <values>boiler</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="ingredient">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="carrot">
+        <values>carrot</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="green peas">
+        <values>peas</values>
+        <values>green pea</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="garlic">
+        <values>garlic</values>
+        <values>garlic powder</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="shrimp">
+        <values>shrimp</values>
+        <values>seafood</values>
+        <values>prawn</values>
+        <values>river prawn</values>
+        <values>fish</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="ham">
+        <values>ham</values>
+        <values>pork</values>
+        <values>cut of pork</values>
+        <values>meat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="white rice">
+        <values>rice</values>
+        <values>white rice</values>
+        <values>brown rice</values>
+        <values>yellow rice</values>
+        <values>grain</values>
+        <values>washed rice</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="soy sauce">
+        <values>soy sauce</values>
+        <values>soy</values>
+        <values>sauce</values>
+        <values>soya</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="broccoli">
+        <values>vegetable</values>
+        <values>broccoli</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="oil">
+        <values>oil</values>
+        <values>olive oil</values>
+        <values>heating oil</values>
+        <values>almond oil</values>
+        <values>grease</values>
+        <values>sunflower oil</values>
+        <values>rice oil</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="lemon juice">
+        <values>lemon juice</values>
+        <values>juice of a lemon</values>
+        <values>juice</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vegetarian parmesan cheese">
+        <values>vegetarian parmesan cheese</values>
+        <values>parmesan cheese</values>
+        <values>cheese</values>
+        <values>vegetarian cheese</values>
+        <values>vegatarian parmesan</values>
+        <values>parmesan</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="garlic powder">
+        <values>garlic powder</values>
+        <values>garlic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="red pepper flakes">
+        <values>red pepper flakes</values>
+        <values>pepper flakes</values>
+        <values>flakes</values>
+        <values>chilli flakes</values>
+        <values>chilli</values>
+        <values>red pepper</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="salt">
+        <values>salt</values>
+        <values>flavouring</values>
+        <values>seasoner</values>
+        <values>table salt</values>
+        <values>sea salt</values>
+        <values>himalaya salt</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="pepper">
+        <values>pepper</values>
+        <values>black pepper</values>
+        <values>seasoner</values>
+        <values>flavouring</values>
+        <values>spice</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="raspberry">
+        <values>raspberry</values>
+        <values>wineberry</values>
+        <values>raspberry bush</values>
+        <values>black raspberry</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="blueberry">
+        <values>blueberry</values>
+        <values>berrie</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="strawberry">
+        <values>strawberry</values>
+        <values>garden berry</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cornstarch">
+        <values>cornstarch</values>
+        <values>cornflour</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vanilla cake mix">
+        <values>vanilla cake mix</values>
+        <values>vanilla mix</values>
+        <values>cake mix</values>
+        <values>vanilla flavoured cake mix</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="butter">
+        <values>butter</values>
+        <values>dairy</values>
+        <values>margarine</values>
+        <values>salted butter</values>
+        <values>unsalted butter</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="recipe">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Cobbler">
+        <values>cobbler</values>
+        <values>Slow-cooker mixed berry cobbler</values>
+        <values>mixed berry cobbler</values>
+        <values>berry cobbler</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Rice">
+        <values>rice</values>
+        <values>One-pot Chinese fried rice</values>
+        <values>fried rice</values>
+        <values>Chinese fried rice</values>
+        <values>nasi</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Broccoli">
+        <values>Garlic Parmesan roasted Broccoli</values>
+        <values>roasted broccoli</values>
+        <values>roasted</values>
+        <values>broccoli</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="genderConfirmation">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="&#xa0;chef">
+        <values>chef</values>
+        <values>male</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="female chef">
+        <values>female chef</values>
+        <values>female</values>
+        <values>Melissa Leong</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="genderRevealTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="defaultFallbackTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="selfIdentificationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello. Im cooking bot! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.2" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.2" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.2" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.2" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.2" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.3" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.2" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.2" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.13" name="user14">
+    <target actions="//@actions.4" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.14" name="user15">
+    <target actions="//@actions.5" name="bot15"/>
+  </flows>
+  <flows intent="//@intents.15" name="user16">
+    <target actions="//@actions.2" name="bot16"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

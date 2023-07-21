@@ -1,0 +1,583 @@
+Chatbot hubot language : en
+
+intents :
+
+	"Standup: change color" :
+		inputs in en {
+			"change the color of the standup question 1 to " ( white ) [ color ] ,
+			"standup change question " ( "5" ) [ index ] " color to " ( cyan ) [ color ] ,
+			"edit standup color to " ( black ) [ color ] " of the question " ( "6" ) [ index ] ,
+			"change standup question " ( "1" ) [ index ] " color to " ( red ) [ color ]
+		}
+		parameters :
+			index : entity number , required ;
+			color : entity text , required ;
+
+	"Standup: change question text" :
+		inputs in en {
+			"change standup question" ,
+			"change standup question text" ,
+			"change standup question textchange standup question " ( "3" ) [ index ] " text" ,
+			"standup change question " ( "13" ) [ index ] " text to \"" ( whatever ) [ ^text ] "\"" ,
+			"change standup question " ( "5" ) [ index ] " text to \"" ( "Another question" ) [ ^text ] "\""
+		}
+		parameters :
+			index : entity number , required ;
+			^text : entity text , required ;
+
+	"Custom welcome intent" :
+		parameters :
+			user_name ,
+			question ,
+			answer : entity text , required , prompts in en [ "$question, $user_name." ] ;
+
+	"Jenkins: build Job" :
+		inputs in en {
+			"build a job in jenkins" ,
+			"jenkins build job" ,
+			"i would like to start a build job"
+		}
+		parameters :
+			jobName : entity text , required , prompts in en [ "For what job?" , "What is the job name?" , "Give me the job" ] ;
+
+	"Jenkins: last completed build of a job" :
+		inputs in en {
+			"jenkins last completed build" ,
+			"last completed build" ,
+			"show the last completed jenkins build of job" ,
+			"give me the last completed build in jenkins"
+		}
+		parameters :
+			jobName : entity text , required , prompts in en [ "Please give me the name of the job" , "What is the job name?" ] ;
+
+	"Github: add comment on issue" :
+		inputs in en {
+			"github add comment on issue" ,
+			"add github issue comment" ,
+			"issue " ( "6" ) [ issueNum ] " add comment"
+		}
+		parameters :
+			issueNum : entity float , required , prompts in en [ "Specify the issue number" ] ;
+			repoName : entity text , required , prompts in en [ "What is the repository name?" ] ;
+
+	"Standup: show standup settings" :
+		inputs in en {
+			"show standups" ,
+			"show standup" ,
+			"get me the standup settings pls" ,
+			"get me standup settings" ,
+			"show me the standup settings" ,
+			"standup settings" ,
+			"standup config" ,
+			"i would like to take a loot at standup configurations" ,
+			"show standup settings" ,
+			"standup show"
+	}
+
+	"Jenkins: add username" :
+		inputs in en {
+			"jenkins username" ,
+			"add my jenkins username" ,
+			"here is my jenkins username \"" ( "pet.Jas" ) [ username ] "\"" ,
+			"jenkins username = \'" ( andreas ) [ username ] "\'"
+		}
+		parameters :
+			username : entity text , required ;
+
+	"Trello: show my cards" :
+		inputs in en {
+			"trello show cards" ,
+			"trello show my cards" ,
+			"trello my cards" ,
+			"give me my cards on trello" ,
+			"give my trello cards"
+	}
+
+	"Trello sumups: Change status" :
+		inputs in en {
+			"please " ( "switch off" ) [ bool ] " those trello sumups" ,
+			"i would like to " ( "turn off" ) [ bool ] " sumups of trello" ,
+			"could you please " ( "turn on" ) [ bool ] " the trello sumups scheduler?" ,
+			( activate ) [ bool ] " sumups" ,
+			( enable ) [ bool ] " trello sumups"
+		}
+		parameters :
+			bool : entity bool , required ;
+
+	"Jenkins: console of a build" :
+		inputs in en {
+			"jenkins console build " ( "78" ) [ buildNum ] ,
+			"jenkins build " ( "93" ) [ buildNum ] " console job \"" ( ThisIsTestJob ) [ jobName ] "\"" ,
+			"jenkins build " ( "80" ) [ buildNum ] " console" ,
+			"i would like to see the output console of the build " ( "6" ) [ buildNum ] " of the job \"" ( "Test JOB" ) [ jobName ] "\""
+		}
+		parameters :
+			jobName : entity text , required , prompts in en [ "What is the name of the build\'s job?" , "Please give me the name of the job" , "What is the job\'s name?" ] ;
+			buildNum : entity number , required , prompts in en [ "For which build?" , "What is the number of the build?" ] ;
+
+	"Default Welcome Intent" :
+
+	"Jenkins: add token" :
+		inputs in en {
+			"jenkins token" ,
+			"here is my jenkins token. \"" ( dsfdsdfgvds4e4t32w4eg ) [ token ] "\"" ,
+			"jenkins token \"" ( sdzkjbjksdvgasdf ) [ token ] "\""
+		}
+		parameters :
+			token : entity text , required ;
+
+	"notSure - yes" :
+		inputs in en {
+			yep ,
+			yeap ,
+			aha ,
+			yes ,
+			"do it" ,
+			sure ,
+			exactly ,
+			confirm ,
+			"of course" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"I don\'t mind" ,
+			"I agree"
+	}
+
+	"Standup: remove question" :
+		inputs in en {
+			"delete the question " ( "7" ) [ index ] " in standup" ,
+			"standup remove question " ( "1" ) [ index ] ,
+			"standup delete question " ( "5" ) [ index ] ,
+			"please delete the " ( "6" ) [ index ] "th standup question" ,
+			"remove standup question " ( "5" ) [ index ]
+		}
+		parameters :
+			index : entity number , required ;
+
+	"Standup: change channel" :
+		inputs in en {
+			"standup edit channel to \"" ( Team ) [ channelName ] "\"" ,
+			"edit channel of standup reports to \"" ( "Reporting Channel" ) [ channelName ] "\"" ,
+			"please update the channel of standup reports to \"" ( DailYReports ) [ channelName ] "\"" ,
+			"i would like to change the standup channel" ,
+			"change standup channel to \"" ( general ) [ channelName ] "\"" ,
+			"change standup channel to \"" ( random ) [ channelName ] "\""
+		}
+		parameters :
+			channelName : entity text , required ;
+
+	"Jenkins: list builds of job" :
+		inputs in en {
+			"jenkins build 78 info" ,
+			"jenkins builds" ,
+			"list jenkins builds" ,
+			"gert me the jenkins builds" ,
+			"jenkins show me builds of job \"" ( JoBname ) [ jobName ] "\""
+		}
+		parameters :
+			jobName : entity text , required ;
+
+	"Trello sumups: change days" :
+		inputs in en {
+			"I would like to modify the trello sumup. Change the days to " ( weekdays ) [ days ] ,
+			"i want to change the days of the trello sumup to " ( Monday ) [ days ] ", " ( Tuesday ) [ days ] " and " ( Friday ) [ days ] ,
+			"change trello sumups days to " ( monday ) [ days ] " and " ( tuesday ) [ days ]
+		}
+		parameters :
+			days : entity days , required ;
+
+	"not Sure - no" :
+		inputs in en {
+			^no ,
+			"don\'t do it" ,
+			"definitely not" ,
+			"not really" ,
+			"thanks but no" ,
+			"not interested" ,
+			"I don\'t think so" ,
+			"I disagree" ,
+			"I don\'t want that"
+	}
+
+	"Standups: start a standup report" :
+		inputs in en {
+			"begin a report" ,
+			"begin a standup" ,
+			"i would like to report now" ,
+			"start a standup report now"
+	}
+
+	"Github: list issues of a repo" :
+		inputs in en {
+			"github " ( mentioned ) [ parameter ] " issues of repository \"anbot\"" ,
+			( open ) [ parameter ] " issues repo \"anbot\"" ,
+			"get me github " ( closed ) [ parameter ] " issues of repo \"anbot\"" ,
+			"get me " ( closed ) [ parameter ] " issues of repo \"" ( npmDigger ) [ repo ] "\"" ,
+			"github last " ( "5" ) [ issuesCnt ] " " ( open ) [ parameter ] " issues of repo \"" ( anbot ) [ repo ] "\""
+		}
+		parameters :
+			issuesCnt : entity number ;
+			parameter : entity github_status ;
+			repo : entity text , required ;
+
+	"Jenkins: last build of a job" :
+		inputs in en {
+			"jenkins job \"" ( myJob ) [ jobName ] "\" last build" ,
+			"jenkins last build of job \"" ( myJob ) [ jobName ] "\"" ,
+			"jenkins last build of \"" ( myJob ) [ jobName ] "\"" ,
+			"jenkins last build" ,
+			"give me the last build in jenkins" ,
+			"show the last jenkins build of job" ,
+			"last build"
+		}
+		parameters :
+			jobName : entity text , required , prompts in en [ "What is the name of the build\'s job?" , "What is the job\'s name?" , "Please give me the name of the job" ] ;
+
+	"Trello: show notifications" :
+		inputs in en {
+			"last " ( "5" ) [ limit ] " trello " ( read ) [ read_status ] " notifications" ,
+			"give me my trello " ( unread ) [ read_status ] " notifications" ,
+			"trello show notifications"
+		}
+		parameters :
+			read_status : entity notificationStatus ;
+			limit : entity float ;
+
+	"Jenkins: Login" :
+		inputs in en {
+			"sign in to jenkins" ,
+			"jenkins sign in" ,
+			"jenkis auth" ,
+			"jenkins authorization" ,
+			"authorize me to jenkins" ,
+			"login to jenkins"
+	}
+
+	"Standup: change days" :
+		inputs in en {
+			"change standup days to " ( monday ) [ days ] ,
+			"change standup days" ,
+			"change standup days to " ( monday ) [ days ] " and " ( tusday ) [ days ] ,
+			"change standup day to " ( monday ) [ days ] " and " ( friday ) [ days ] ,
+			"change standup days to " ( monday ) [ days ] ", " ( tusday ) [ days ] " and " ( friday ) [ days ] ,
+			"change standup days to " ( monday ) [ days ] ", " ( tuesday ) [ days ] " and " ( friday ) [ days ] ,
+			"standup days change " ( "to monday to wednesday" ) [ days ] ,
+			"standup days change to " ( "monday to friday" ) [ days ] ,
+			"update the days of standup to " ( monday ) [ days ] ", " ( tusday ) [ days ] " and " ( friday ) [ days ] ,
+			"change tandup days to " ( monday ) [ days ] " and " ( friday ) [ days ]
+		}
+		parameters :
+			days : entity days , required ;
+
+	"jenkins all jobs " :
+		inputs in en {
+			"jenkins all jobs" ,
+			"jenkins jobs" ,
+			"i would like to see the jenkins jobs" ,
+			"get me all the jenkins jobs"
+	}
+
+	"Jenkins: build info" :
+		inputs in en {
+			"build info" ,
+			"buil information" ,
+			"jenkins build information" ,
+			"i would like to get information about the build " ( "6" ) [ buildNum ] ,
+			"jenkins build " ( "78" ) [ buildNum ] " info" ,
+			"what do you know about the jenkins build " ( "13" ) [ buildNum ] " ?" ,
+			"jenkins build info" ,
+			"i would like to get information about the build 6 of job \"" ( JavascriptRuntime ) [ jobName ] "\""
+		}
+		parameters :
+			buildNum : entity number , required , prompts in en [ "For which build?" , "What is the build number?" , "Provide the build number please" ] ;
+			jobName : entity text , required , prompts in en [ "what is the job name?" ] ;
+
+	"Standup: change status (active/deactive)" :
+		inputs in en {
+			( disable ) [ status ] " standups" ,
+			( stop ) [ status ] " standup" ,
+			( deactivate ) [ status ] " standup" ,
+			( pause ) [ status ] " standup" ,
+			"i would like to " ( pause ) [ status ] " standup meetups"
+		}
+		parameters :
+			status : entity bool , required , prompts in en [ "What is the new status? (active/deactive)" , "Deactivate or activate it?" , "Enable or disable?" ] ;
+
+	"Standup: change time" :
+		inputs in en {
+			"can you edit time to " ( "10:36" ) [ ^time ] " of standup?" ,
+			"the time of standup must be change to " ( "8:39" ) [ ^time ] ,
+			"update standup time. make it " ( "09:30" ) [ ^time ] ,
+			"change the time of standup to " ( "10:55" ) [ ^time ] ,
+			"i would like to change standup time" ,
+			"change standup time to " ( "08:55" ) [ ^time ]
+		}
+		parameters :
+			^time : entity time , required ;
+
+	"Standup: reset configuration" :
+		inputs in en {
+			"reste standups" ,
+			"standup reset" ,
+			"i would like to reset the standup" ,
+			"reset standup settings"
+	}
+
+	"Trello: show sumup" :
+		inputs in en {
+			"me trello sumups" ,
+			"trello sumups" ,
+			"give me my trello summarize"
+	}
+
+	"Trello: show boards" :
+		inputs in en {
+			"i would like to see trello boards" ,
+			"trello boards" ,
+			"show trello boards" ,
+			"get me trello boards"
+	}
+
+	"Github: list issue comments" :
+		inputs in en {
+			"github issue " ( "8" ) [ issueNum ] " comments" ,
+			"list comments of the issue " ( "5" ) [ issueNum ]
+		}
+		parameters :
+			issueNum : entity number , required ;
+			repo : entity text , required ;
+
+	"Trello: show mentions" :
+		inputs in en {
+			"trello last " ( "6" ) [ limit ] " " ( unread ) [ read_filter ] " mentions" ,
+			"give me " ( all ) [ read_filter ] " my trello mentions" ,
+			"trello " ( unread ) [ read_filter ] " mentions" ,
+			"trello last " ( "5" ) [ limit ] " mentions"
+		}
+		parameters :
+			limit : entity float ;
+			read_filter : entity notificationStatus ;
+
+	"Trello: show webhooks" :
+		inputs in en {
+			"i would like to see the trello webhooks" ,
+			"trello webhooks" ,
+			"show me the trello webhooks" ,
+			"i would like to see the webhooks in trello" ,
+			"Please show me what webhoohs exist in Trello" ,
+			"can i have all the trello webhooks available?" ,
+			"give me trello webhooks"
+	}
+
+	"Github: Login" :
+		inputs in en {
+			"github sign in" ,
+			"sign in to github" ,
+			"i want to login to github" ,
+			"github login" ,
+			"authenticate me to github" ,
+			"login to github"
+	}
+
+	"Standup: add new question" :
+		inputs in en {
+			"\"" ( "What did you do yesterday?" ) [ ^text ] "\". Add this question please with " ( green ) [ color ] " color at the position " ( "7" ) [ index ] ,
+			"standup add a question at " ( "2" ) [ index ] " order" ,
+			"add standup question" ,
+			"add a new standup question" ,
+			"add standup question \"" ( "i am asking something?" ) [ ^text ] "\" at position " ( "5" ) [ index ] " with " ( red ) [ color ]
+		}
+		parameters :
+			index : entity number ;
+			^text : entity text , required , prompts in en [ "What is the question?" , "Enter your question please" ] ;
+			color : entity text ;
+
+	"Github: create issue" :
+		inputs in en {
+			"github create issue" ,
+			"create a new issue on github" ,
+			"create a new github issue"
+	}
+
+	"Standup: change questions order" :
+		inputs in en {
+			"standup rearrange question " ( "1" ) [ questionIndex ] " and " ( "2" ) [ newIndex ] ,
+			"change standup questions " ( "2" ) [ questionIndex ] " and " ( "5" ) [ newIndex ] " order" ,
+			"standup rearrange question " ( "1" ) [ questionIndex ] " and " ( "5" ) [ newIndex ] ,
+			"standup move question " ( "1" ) [ questionIndex ] " to " ( "5" ) [ newIndex ] ,
+			"move standup question " ( "1" ) [ questionIndex ] " to " ( "2" ) [ newIndex ]
+		}
+		parameters :
+			questionIndex : entity number , required , prompts in en [ "What is the index of the question you want to move?" ] ;
+			newIndex : entity number , required , prompts in en [ "What is the new index?" ] ;
+
+	"Jenkins: list last successful build of a job" :
+		inputs in en {
+			"jenkins last successful build" ,
+			"give me the last successful build in jenkins" ,
+			"show the last successful jenkins build of job" ,
+			"last successful build" ,
+			"jenkins last successful" ,
+			"give me that last successful build" ,
+			"Jenkins list last successful build of a job"
+		}
+		parameters :
+			jobName : entity text , required ;
+
+	"Default Fallback Intent" Fallback :
+
+	"Github: List repositories" :
+		inputs in en {
+			"github repos" ,
+			"github repositories"
+	}
+
+	"Github: show commits" :
+		inputs in en {
+			"get me the last " ( "6" ) [ limit ] " commits in github repository" ,
+			"list github commits"
+		}
+		parameters :
+			limit : entity float , required ;
+			repoName : entity text , required ;
+
+entities :
+	Composite entity notificationStatus :
+		inputs in en {
+			composite : all
+			composite : unread
+			composite : read
+	}
+	Simple entity bool :
+		inputs in en {
+			^true synonyms ^true , enable , activate , "turn on" , resume , "switch on"
+			^false synonyms ^false , disable , "turn off" , pause , deactivate , "switch off" , stop
+	}
+	Simple entity days :
+		inputs in en {
+			Monday synonyms Monday , Mon
+			Tuesday synonyms Tuesday , Tue , tuesday
+			Wednesday synonyms Wednesday , Wed
+			Thirsday synonyms Thirsday , Thi
+			Friday synonyms Friday , Fri
+			Saturday synonyms Saturday , Sat
+			Sunday synonyms Sunday
+			Weekends synonyms Weekends
+			Weekdays synonyms Weekdays , "week days" , "Monday to Friday"
+			Thursday synonyms Thursday
+			Daily synonyms "Every Day" , daily , everyday
+	}
+	Simple entity standup_name :
+		inputs in en {
+			name synonyms name
+			report synonyms report
+			Andreas synonyms Andreas
+			teamkMeetups synonyms teamkMeetups
+			TeamReports synonyms TeamReports
+	}
+	Composite entity github_status :
+		inputs in en {
+			composite : all
+			composite : mentioned
+			composite : open
+			composite : closed
+	}
+	Simple entity token :
+		inputs in en {
+			"fg&e6.0rdsfg$df44s_sd-TTfds54S4" synonyms "fg&e6.0rdsfg$df44s_sd-TTfds54S4"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://andreas-weather-api.herokuapp.com/webhook" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Standup: change colorTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Custom welcome intentTxtResp1" :
+		inputs in en {
+			"Welcome, " [ "Custom welcome intent.user_name" ]
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response "not Sure - noTxtResp1" :
+		inputs in en {
+			"maybe next time! " ,
+			"well, ok. " ,
+			"You can try again! " ,
+			"Nevermind. " ,
+			"Doesn\'t matter. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "Standup: change color" => bot1 : chatbot "Standup: change colorTxtResp1" ;
+	- user2 : user "Standup: change question text" => bot2 : chatbot "Standup: change colorTxtResp1" ;
+	- user3 : user "Custom welcome intent" => bot3 : chatbot "Custom welcome intentTxtResp1" ;
+	- user4 : user "Jenkins: build Job" => bot4 : chatbot "Standup: change colorTxtResp1" ;
+	- user5 : user "Jenkins: last completed build of a job" => bot5 : chatbot "Standup: change colorTxtResp1" ;
+	- user6 : user "Github: add comment on issue" => bot6 : chatbot "Standup: change colorTxtResp1" ;
+	- user7 : user "Standup: show standup settings" => bot7 : chatbot "Standup: change colorTxtResp1" ;
+	- user8 : user "Jenkins: add username" => bot8 : chatbot "Standup: change colorTxtResp1" ;
+	- user9 : user "Trello: show my cards" => bot9 : chatbot "Standup: change colorTxtResp1" ;
+	- user10 : user "Trello sumups: Change status" => bot10 : chatbot "Standup: change colorTxtResp1" ;
+	- user11 : user "Jenkins: console of a build" => bot11 : chatbot "Standup: change colorTxtResp1" ;
+	- user12 : user "Default Welcome Intent" => bot24 : chatbot "Standup: change colorTxtResp1" {
+		=> user24 : user "notSure - yes" => bot25 : chatbot "Standup: change colorTxtResp1" ;
+		=> user25 : user "not Sure - no" => bot26 : chatbot "not Sure - noTxtResp1" ;
+	} ;
+	- user13 : user "Jenkins: add token" => bot13 : chatbot "Standup: change colorTxtResp1" ;
+	- user14 : user "Standup: remove question" => bot14 : chatbot "Standup: change colorTxtResp1" ;
+	- user15 : user "Standup: change channel" => bot15 : chatbot "Standup: change colorTxtResp1" ;
+	- user16 : user "Jenkins: list builds of job" => bot16 : chatbot "Standup: change colorTxtResp1" ;
+	- user17 : user "Trello sumups: change days" => bot17 : chatbot "Standup: change colorTxtResp1" ;
+	- user18 : user "Standups: start a standup report" => bot18 : chatbot "Standup: change colorTxtResp1" ;
+	- user19 : user "Github: list issues of a repo" => bot19 : chatbot "Standup: change colorTxtResp1" ;
+	- user20 : user "Jenkins: last build of a job" => bot20 : chatbot "Standup: change colorTxtResp1" ;
+	- user21 : user "Trello: show notifications" => bot21 : chatbot "Standup: change colorTxtResp1" ;
+	- user22 : user "Jenkins: Login" => bot22 : chatbot "Standup: change colorTxtResp1" ;
+	- user23 : user "Standup: change days" => bot23 : chatbot "Standup: change colorTxtResp1" ;
+	- user26 : user "jenkins all jobs " => bot27 : chatbot "Standup: change colorTxtResp1" ;
+	- user27 : user "Jenkins: build info" => bot28 : chatbot "Standup: change colorTxtResp1" ;
+	- user28 : user "Standup: change status (active/deactive)" => bot29 : chatbot "Standup: change colorTxtResp1" ;
+	- user29 : user "Standup: change time" => bot30 : chatbot "Standup: change colorTxtResp1" ;
+	- user30 : user "Standup: reset configuration" => bot31 : chatbot "Standup: change colorTxtResp1" ;
+	- user31 : user "Trello: show sumup" => bot32 : chatbot "Standup: change colorTxtResp1" ;
+	- user32 : user "Trello: show boards" => bot33 : chatbot "Standup: change colorTxtResp1" ;
+	- user33 : user "Github: list issue comments" => bot34 : chatbot "Standup: change colorTxtResp1" ;
+	- user34 : user "Trello: show mentions" => bot35 : chatbot "Standup: change colorTxtResp1" ;
+	- user35 : user "Trello: show webhooks" => bot36 : chatbot "Standup: change colorTxtResp1" ;
+	- user36 : user "Github: Login" => bot37 : chatbot "Standup: change colorTxtResp1" ;
+	- user37 : user "Standup: add new question" => bot38 : chatbot "Standup: change colorTxtResp1" ;
+	- user38 : user "Github: create issue" => bot39 : chatbot "Standup: change colorTxtResp1" ;
+	- user39 : user "Standup: change questions order" => bot40 : chatbot "Standup: change colorTxtResp1" ;
+	- user40 : user "Jenkins: list last successful build of a job" => bot41 : chatbot "Standup: change colorTxtResp1" ;
+	- user41 : user "Default Fallback Intent" => bot42 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user42 : user "Github: List repositories" => bot43 : chatbot "Standup: change colorTxtResp1" ;
+	- user43 : user "Github: show commits" => bot44 : chatbot "Standup: change colorTxtResp1" ;
+

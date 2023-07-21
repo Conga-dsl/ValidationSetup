@@ -1,0 +1,110 @@
+Chatbot iotairblower language : en
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"just going to say hi" ,
+			greetings ,
+			"hey there" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hi there" ,
+			hey ,
+			"hello again" ,
+			hello ,
+			"long time no see" ,
+			"hello there" ,
+			"a good day" ,
+			^hi
+	}
+
+	DeviceProgramming :
+		inputs in en {
+			( start ) [ action ] "  with timer the " ( airblow ) [ deviceId ] " if the temperature is " ( above ) [ range ] " " ( "30 degrees" ) [ temperature ] " in " ( Cagliari ) [ city ] ,
+			( start ) [ action ] " " ( airblow ) [ deviceId ] " if temperature is " ( under ) [ range ] " " ( "30 degrees" ) [ temperature ] " in " ( Rome ) [ city ] ,
+			( start ) [ action ] " the " ( airblow ) [ deviceId ] " if the temperature is " ( above ) [ range ] " " ( "30 degrees" ) [ temperature ] " in " ( Cagliari ) [ city ] ,
+			( start ) [ action ] " the " ( airblow ) [ deviceId ] " if the temperature is " ( above ) [ range ] " " ( "30 degrees" ) [ temperature ] " in " ( Milano ) [ city ] ,
+			( start ) [ action ] " " ( air ) [ deviceId ] " blow if temperature in " ( Milano ) [ city ] " is " ( over ) [ range ] " " ( "30 celsius degrees" ) [ temperature ]
+		}
+		parameters :
+			action : entity Actions , required , prompts in en [ "Which action do you want to perform? start the device, or stop it?" ] ;
+			deviceId : entity Devices , required , prompts in en [ "Which is the device  you want interact with?" ] ;
+			temperature : entity text , required , prompts in en [ "Which is the temperature to check?" ] ;
+			city : entity text , required , prompts in en [ "In which sity is the device?" ] ;
+			range : entity range , required , prompts in en [ "Do you want $Actions the device $Devices if the temperature is higher or lower than $temperature?" ] ;
+
+	"Default Fallback Intent" Fallback :
+
+	DeviceActivation :
+		inputs in en {
+			( start ) [ action ] " " ( air ) [ deviceId ] " blow" ,
+			( stop ) [ action ] " device" ,
+			( stop ) [ action ] " " ( airblow ) [ deviceId ] ,
+			"hey Google " ( start ) [ action ] " the " ( air ) [ deviceId ] "  " ( blow ) [ deviceId1 ] ,
+			( start ) [ action ] " " ( airblow ) [ deviceId ]
+		}
+		parameters :
+			deviceId : entity Devices , required , prompts in en [ "Which device do you want to interact with?" ] ;
+			action : entity Actions , required , prompts in en [ "Which action do you want to do?" ] ;
+			deviceId1 : entity Devices ;
+
+entities :
+	Simple entity Actions :
+		inputs in en {
+			off synonyms off , deactivate , disable , stop
+			on synonyms on , activate , start , run , execute
+	}
+	Simple entity range :
+		inputs in en {
+			above synonyms above , more , hotter , upper , up , over , warmer
+			under synonyms under , less , fresher , cooler , minor , lower , low , down , below , colder
+	}
+	Simple entity Devices :
+		inputs in en {
+			mycoolingfan synonyms airblow , air , conditioning , blow , "air blow" , "cooling fan" , cold , cool
+			myspaceheater synonyms spaceheater , "space heater" , heater , "warming system" , warm , hot , heat
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://acc14631.ngrok.io/api/smarthome" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! I can activate your smart devices. "
+	}
+	text response DeviceProgrammingTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user2 : user DeviceProgramming => bot2 : chatbot HttpRequest , HttpResponse , DeviceProgrammingTxtResp1 ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user4 : user DeviceActivation => bot4 : chatbot HttpRequest , HttpResponse , DeviceProgrammingTxtResp1 ;
+

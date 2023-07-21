@@ -1,0 +1,463 @@
+Chatbot enoreese language : en
+
+intents :
+
+	"Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant" :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"Diagnos - Abdomen - Diarrhea" :
+		inputs in en {
+			"its diarrhea" ,
+			diarrhea
+	}
+
+	"Diagnos - Abdomen - Pain - Upper - yes - 1-5" :
+		inputs in en {
+			"5" ,
+			"4" ,
+			"3" ,
+			"2" ,
+			"1"
+	}
+
+	"Create Appointment - yes" :
+		inputs in en {
+			Yes ,
+			sure ,
+			okay ,
+			"sounds correct" ,
+			"that works" ,
+			"yep that\'s ok" ,
+			"yes that\'s alright" ,
+			"I think so" ,
+			"yes I agree" ,
+			"I don\'t mind" ,
+			"I agree" ,
+			"yes I do" ,
+			"for sure" ,
+			ok ,
+			"yes that\'t ok" ,
+			"that one works" ,
+			"yes you can do it" ,
+			perfect ,
+			yes ,
+			"why not" ,
+			"of course" ,
+			"yep that\'s right" ,
+			"okay I will" ,
+			exactly ,
+			"sure why not" ,
+			absolutely ,
+			"it\'s okay" ,
+			"it\'s fine" ,
+			"go ahead" ,
+			confirm ,
+			"sounds good" ,
+			alright ,
+			yeah ,
+			yup ,
+			"yes please" ,
+			"do it" ,
+			"yes I can" ,
+			"it looks perfect" ,
+			"that\'s correct" ,
+			right ,
+			"alright why not" ,
+			yep
+	}
+
+	"Check Appointment" :
+		inputs in en {
+			"when be my next appointment" ,
+			"when i go see doctor" ,
+			"i get any appointment today" ,
+			"next appointment" ,
+			"when is my appointment"
+	}
+
+	"Diagnos - Abdomen - Pain - Upper" :
+		inputs in en {
+			"upper middle" ,
+			middle ,
+			upper
+	}
+
+	"Diarrhea - 1-5 - MucusAll - yes - no" :
+		inputs in en {
+			"thanks but no" ,
+			"no way" ,
+			^no ,
+			"no no don\'t" ,
+			na ,
+			"no it isn\'t" ,
+			"don\'t" ,
+			"nah I\'m good" ,
+			"no I cannot" ,
+			"I can\'t" ,
+			nothing ,
+			"no that\'s okay" ,
+			"no not really" ,
+			"nope not really" ,
+			nope ,
+			"thanks but not this time" ,
+			"I don\'t think so" ,
+			"I disagree" ,
+			"no maybe next time" ,
+			"not this time" ,
+			"no don\'t" ,
+			"no we are good" ,
+			"don\'t do it" ,
+			"no that\'s be all" ,
+			"not right now" ,
+			"nothing else thanks" ,
+			"no thanks" ,
+			"no that\'s ok" ,
+			"I don\'t want that" ,
+			"definitely not" ,
+			"nothing else" ,
+			not ,
+			"not at all" ,
+			"no never" ,
+			never ,
+			"no way no" ,
+			"not really" ,
+			nah ,
+			"I don\'t" ,
+			"I don\'t want" ,
+			"not today" ,
+			"not interested" ,
+			"no that\'s fine thank you" ,
+			"I\'m not"
+	}
+
+	"Diagnos - Abdomen - Diarrhea - 1-5" :
+		inputs in en {
+			"5 10" ,
+			"1 5" ,
+			"5 - 10" ,
+			"five to ten" ,
+			"one to five" ,
+			"1 -5"
+	}
+
+	Prescribe :
+		parameters :
+			condition : entity text ;
+
+	"Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll" :
+		inputs in en {
+			"wattery and brown" ,
+			"mucus, green water and brown" ,
+			"brown and mucus" ,
+			"mucus and brown" ,
+			watery ,
+			brown ,
+			"green, watery and brown" ,
+			"watery and green" ,
+			"green watery" ,
+			green ,
+			mucus ,
+			"mucus, green"
+	}
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"hi there" ,
+			"a good day"
+	}
+
+	"Diagnos - Abdomen - Pain" :
+		inputs in en {
+			pain ,
+			"its paining me" ,
+			"it hurts" ,
+			hurts
+	}
+
+	"Create Appointment" :
+		inputs in en {
+			( "steveadeshina@yahoo.com" ) [ email ] ,
+			( "steve.adeshina@nileuniversity.edu.ng" ) [ email ] ,
+			( "tgrema@yahoo.com" ) [ email ] ,
+			( "nagwu@nileuniversity.edu.ng" ) [ email ] ,
+			( "osas.usen@gmail.com" ) [ email ] ,
+			"my email " ( "test@example.com" ) [ email ] ,
+			( Saturday ) [ ^date ] ,
+			( "7:00" ) [ ^time ] ,
+			( "5am" ) [ ^time ] ,
+			( "4pm" ) [ ^time ] ,
+			"i won book appointment with doctor" ,
+			"i won see doctor" ,
+			"book an appointment" ,
+			"i want to see a doctor" ,
+			( "2347088289121" ) [ phoneNumber ] ,
+			( "08132283209" ) [ phoneNumber ] ,
+			( "08033072730" ) [ phoneNumber ] ,
+			( "07088289121" ) [ phoneNumber ] ,
+			"I would like to set an appointment for " ( "3pm" ) [ ^time ] " " ( "on Tuesday" ) [ ^date ] ,
+			"Need an appointment for " ( "4pm" ) [ ^time ] " " ( tomorrow ) [ ^date ] ,
+			"Set an appointment " ( "on Wednesday" ) [ ^date ] " " ( "at 2pm" ) [ ^time ]
+		}
+		parameters :
+			^date : entity date , required , prompts in en [ "What date?" ] ;
+			^time : entity time , required , prompts in en [ "What time?" ] ;
+			phoneNumber : entity text , required , prompts in en [ "Please enter your phone number?" ] ;
+			email : entity text , required , prompts in en [ "Enter your email?" ] ;
+
+	"Diagnos - Abdomen" :
+		inputs in en {
+			( belle ) [ BodyPart ] ,
+			( belly ) [ BodyPart ] ,
+			( stomach ) [ BodyPart ] ,
+			"my " ( belle ) [ BodyPart ] ,
+			"my " ( belly ) [ BodyPart ] ,
+			abdomen ,
+			"my " ( stomach ) [ BodyPart ]
+		}
+		parameters :
+			BodyPart : entity BodyPart ;
+
+	Diagnos :
+		inputs in en {
+			"i dey really sick mehn" ,
+			"I wan die" ,
+			"im not alright" ,
+			"i feel a bit sickly" ,
+			"i am not feeling good" ,
+			"something is wrong with me" ,
+			"help me doctor" ,
+			diagnose ,
+			sick ,
+			"im sick" ,
+			"im feeling sick" ,
+			"im not feeling fine" ,
+			"i no dey feel fine" ,
+			"help me" ,
+			"i dey sick" ,
+			"diagnose me"
+		}
+		parameters :
+			age : entity number , required , prompts in en [ "Whats your age?" , "Age please..." ] ;
+			gender : entity Gender , required , prompts in en [ "Gender please..." ] ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity BodyPart :
+		inputs in en {
+			Arms synonyms Arm , Arms , Elbow , arm , hand , hands
+			Breast synonyms Breast , boobs , breast , breasts
+			Chest synonyms Chest , chest , torso
+			Head synonyms Brain , Head , brain , forehead , head
+			Heart synonyms Heart , heart
+			Legs synonyms Legs , feet , foot , leg
+			"Stomach\'" synonyms Belle , Belly , "Stomach\'" , bele , belle , belly , bely , stomac , stomach
+	}
+	Simple entity Gender :
+		inputs in en {
+			Female synonyms Female , Girl , Woman , female , girl , woman
+			Male synonyms Boy , Male , Man , boy , male , man
+	}
+	Simple entity Symptoms :
+		inputs in en {
+			Burn synonyms Burn , Hot , burn , "heart burn" , hot , "on fire"
+			Cold synonyms Cold , chills , cold
+			Dizzyness synonyms Dizzyness , Nausea , dizzy , nausea
+			Fever synonyms Fever , "High Temperature" , fever , "high temperature" , "running temperature"
+			Headaches synonyms Headaches , "head ache" , headaches
+			Indigestion synonyms Indigestion , indigestion
+			Pain synonyms Pain , hurts , pain , paining
+			Stooling synonyms Purging , purge , stooling
+			Sweating synonyms Sweating , sweat , sweating
+			Vomit synonyms "Throw up" , Vomit , "throw up" , vomit
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "http://3cdef67b.ngrok.io/" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose IntolerantTxtResp1" :
+		inputs in en {
+			"Your symptoms may be caused by LACTOSE INTOLERANCE. People who have this condition have trouble digesting the sugar in milk and other dairy products.\n\nIf you think you have lactose intolerance, talk to your doctor. He or she may recommend taking lactase enzyme tablets or drops to help prevent problems. Also, avoid eating or drinking foods and beverages that make you sick "
+	}
+	text response "Diagnos - Abdomen - DiarrheaTxtResp1" :
+		inputs in en {
+			"Got that. How many times in the last 24 hours? (1-5, 5-10, more than 10) "
+	}
+	text response "Diagnos - Abdomen - Pain - Upper - yes - 1-5TxtResp1" :
+		inputs in en {
+			"Alright. Is the pain always there? "
+	}
+	text response "Create Appointment - yesTxtResp1" :
+		inputs in en {
+			"Your appointment has been made! "
+	}
+	text response "Check AppointmentTxtResp1" :
+		inputs in en {
+			"Your next appointment is by. "
+	}
+	text response "Diagnos - Abdomen - Pain - UpperTxtResp1" :
+		inputs in en {
+			"Okay. Do you feel any of these? (Indigestion, Heartburn, Nausea) "
+	}
+	text response "Diarrhea - 1-5 - MucusAll - yes - noTxtResp1" :
+		inputs in en {
+			"Okay. Have you eaten food that might be spoiled or did someone else eat the same food and become ill too? "
+	}
+	text response "Diagnos - Abdomen - Pain - Upper - yesTxtResp1" :
+		inputs in en {
+			"What\'s the severity of the pain from 1-10? "
+	}
+	text response "1-5 - MucusAll - yes - no - Food PoisoningTxtResp1" :
+		inputs in en {
+			"You may have FOOD POISONING. \n\nMost problems caused by food poisoning will clear up within 12 to 48 hours. In the meantime, drink plenty of fluids to avoid dehydration. Children should be given an oral rehydration solution (ORS). Avoid solid foods until the diarrhea goes away.\n\nIf your symptoms last longer than 48 hours, or you’re very uncomfortable, call your doctor "
+	}
+	text response "Diagnos - Abdomen - Diarrhea - 1-5TxtResp1" :
+		inputs in en {
+			"Okay. How is your stooling? (Blood, Mucus, Green, Watery, Brown) "
+	}
+	text response PrescribeTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAllTxtResp1" :
+		inputs in en {
+			"Are you nauseated or vomiting? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "Diagnos - Abdomen - PainTxtResp1" :
+		inputs in en {
+			"Sorry about that. What part of your abdomen? (Upper Middle, Left, Right) "
+	}
+	text response "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yesTxtResp1" :
+		inputs in en {
+			"Sorry to hear that. Did your symptoms begin 30 minutes to 2 hours after eating or drinking dairy products? "
+	}
+	text response "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - noTxtResp1" :
+		inputs in en {
+			"Please see a doctor! "
+	}
+	text response "Diagnos - Abdomen - Pain - Upper - yes - 1-5 - yesTxtResp1" :
+		inputs in en {
+			"Go and see a doctor! "
+	}
+	text response "Diarrhea - 1-5 - MucusAll - yes - no - noTxtResp1" :
+		inputs in en {
+			"Flagly Tablets 400mg TDS, Tetracycline Tablets 500mg TDS and Oral hydration therapy \n\nTDS - Three Times Daily "
+	}
+	text response "Create AppointmentTxtResp1" :
+		inputs in en {
+			"you are all set for " [ "Create Appointment.date" ] "at " "Confirm? " ,
+			[ "Create Appointment.date" ] "and " [ "Create Appointment.time" ] "is already booked. Try "
+	}
+	text response "Diagnos - AbdomenTxtResp1" :
+		inputs in en {
+			"Do you have any of this symptoms ( Pain or Diarrhea)? "
+	}
+	text response DiagnosTxtResp1 :
+		inputs in en {
+			"Alright. What part of your body do you feel the pain? "
+	}
+	text response "Diagnos - Abdomen - Pain - Upper - yes - 1-5 - noTxtResp1" :
+		inputs in en {
+			"Your predicted condition is Gastric Ulcer. \n\nOmepragile Tablets 20mg 2x daily for 14days.\nArithromycin Tablets 500g 2x daily for 14days.\nAmoxicin Tablets 500g 300g 3x daily for 14days. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Check Appointment" => bot1 : chatbot HttpRequest , HttpResponse , "Check AppointmentTxtResp1" ;
+	- user2 : user Prescribe => bot2 : chatbot HttpRequest , HttpResponse , PrescribeTxtResp1 ;
+	- user3 : user "Default Welcome Intent" => bot3 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user4 : user "Create Appointment" => bot4 : chatbot HttpRequest , HttpResponse , "Create AppointmentTxtResp1" {
+		=> user5 : user "Create Appointment - yes" => bot5 : chatbot HttpRequest , HttpResponse , "Create Appointment - yesTxtResp1" ;
+		=> user6 : user "Diarrhea - 1-5 - MucusAll - yes - no" => bot6 : chatbot PrescribeTxtResp1 ;
+	} ;
+	- user7 : user Diagnos => bot7 : chatbot DiagnosTxtResp1 {
+		=> user8 : user "Diagnos - Abdomen" => bot8 : chatbot "Diagnos - AbdomenTxtResp1" { => user9 : user "Diagnos - Abdomen - Diarrhea" => bot9 : chatbot "Diagnos - Abdomen - DiarrheaTxtResp1" { => user10 : user "Diagnos - Abdomen - Diarrhea - 1-5" => bot10 : chatbot "Diagnos - Abdomen - Diarrhea - 1-5TxtResp1" { => user11 : user "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll" => bot11 : chatbot "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAllTxtResp1" { => user12 : user "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant" => bot12 : chatbot "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yesTxtResp1" { => user13 : user "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant" => bot13 : chatbot "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose IntolerantTxtResp1" ; => user14 : user "Diarrhea - 1-5 - MucusAll - yes - no" => bot14 : chatbot "Diarrhea - 1-5 - MucusAll - yes - noTxtResp1" { => user15 : user "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant" => bot15 : chatbot "1-5 - MucusAll - yes - no - Food PoisoningTxtResp1" ; => user16 : user "Diarrhea - 1-5 - MucusAll - yes - no" => bot17 : chatbot "Diarrhea - 1-5 - MucusAll - yes - no - noTxtResp1" ; } ; } ; => user17 : user "Diarrhea - 1-5 - MucusAll - yes - no" => bot18 : chatbot "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - noTxtResp1" ; } ; } ; } ; => user18 : user "Diagnos - Abdomen - Pain" => bot19 : chatbot "Diagnos - Abdomen - PainTxtResp1" { => user19 : user "Diagnos - Abdomen - Pain - Upper" => bot20 : chatbot "Diagnos - Abdomen - Pain - UpperTxtResp1" { => user20 : user "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant" => bot21 : chatbot "Diagnos - Abdomen - Pain - Upper - yesTxtResp1" { => user21 : user "Diagnos - Abdomen - Pain - Upper - yes - 1-5" => bot22 : chatbot "Diagnos - Abdomen - Pain - Upper - yes - 1-5TxtResp1" { => user22 : user "Diagnos - Abdomen - Diarrhea - 1-5 - MucusAll - yes - Lactose Intolerant" => bot23 : chatbot "Diagnos - Abdomen - Pain - Upper - yes - 1-5 - yesTxtResp1" ; => user23 : user "Diarrhea - 1-5 - MucusAll - yes - no" => bot24 : chatbot "Diagnos - Abdomen - Pain - Upper - yes - 1-5 - noTxtResp1" ; } ; } ; } ; } ; } ;
+	} ;
+	- user24 : user "Default Fallback Intent" => bot25 : chatbot "Default Fallback IntentTxtResp1" ;
+

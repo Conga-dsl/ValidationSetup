@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="G7-CinemaTicketBot">
+  <intents name="OrderTicket-Y-SelectSeat-Contact-N">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="there is some mistake"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it is wrong"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It is not correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want change it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="na"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no that's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="OrderTicket-Y">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes you can do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="OrderTicket-Y-SelectSeat">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It should be "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="near the entrance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="near the exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="ground floor"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="back"/>
+        <tokens xsi:type="generator:Literal" text=" seat works for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Center"/>
+        <tokens xsi:type="generator:Literal" text=" at the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="standard"/>
+        <tokens xsi:type="generator:Literal" text=" section"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Center"/>
+        <tokens xsi:type="generator:Literal" text=" point"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Front"/>
+        <tokens xsi:type="generator:Literal" text=" side"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Balcony"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="front"/>
+        <tokens xsi:type="generator:Literal" text=" side"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Back section"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Standard"/>
+        <tokens xsi:type="generator:Literal" text=" works for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="front"/>
+        <tokens xsi:type="generator:Literal" text=" seat at the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="balcony"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I prefer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="balcony"/>
+      </inputs>
+    </inputs>
+    <parameters name="seattype" entity="//@entities.4" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What type of seat do you like? Standard or Balcony?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="SeatSection" entity="//@entities.5" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Good Choice! Where do you prefer to seat in the theater salon? 
+Front Section, Back Section or the Center Section?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="OrderTicket-Y-SelectSeat-Contact">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="maryam aliakbari"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the number is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="4567891234"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="maryam"/>
+        <tokens xsi:type="generator:Literal" text=" and my phone is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="111-234-5678"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="here is my phone number "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="111-111-1111"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want it in the name of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="maryam"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="farzin"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="ezekiel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reserve the seats for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Ezekiel Ayeni"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Maryam"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah. set if for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Farzin Valiloo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes Sure. the order is in the name of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Maryam Aliakbari"/>
+      </inputs>
+    </inputs>
+    <parameters name="person" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please enter your name.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="phone-number" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Ok $person . For the last step, please enter your phone number.</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="OrderTicket">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="purchase ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="buy ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="buy a ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to buy a ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="gucci"/>
+        <tokens xsi:type="generator:Literal" text=" is my favourate movie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="wednesday"/>
+        <tokens xsi:type="generator:Literal" text=" works for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="evening"/>
+        <tokens xsi:type="generator:Literal" text=" I think"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" tickets for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="soho"/>
+        <tokens xsi:type="generator:Literal" text=" movie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to buy "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text=" ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy some tickets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="belfast"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Odeon"/>
+        <tokens xsi:type="generator:Literal" text=" for morning "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="sunday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" tickets for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Gucci"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="lakeshore"/>
+        <tokens xsi:type="generator:Literal" text=" cinema for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="tommorow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like to watch "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="soho"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i choose "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="imagine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am going to order "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="one"/>
+        <tokens xsi:type="generator:Literal" text=" ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" tickets"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" tickets for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="spencer"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="silvercity"/>
+        <tokens xsi:type="generator:Literal" text=" for the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="afternoon"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="today"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" tickets for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="gucci"/>
+        <tokens xsi:type="generator:Literal" text=" in cineplex for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="tomorrow"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to watch "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="Gucci"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy tickets for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="3"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="purchase some ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="purchase "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text=" ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cinema ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Movie ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="buy a film ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I wanna order Movie ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to watch a movie at the cinema"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="afternon"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="odeon"/>
+        <tokens xsi:type="generator:Literal" text=" cinema "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="no time for die"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="today"/>
+        <tokens xsi:type="generator:Literal" text="'s movie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="friday"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="night"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="soho"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="silvercity"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to watch a film"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to watch a movie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text=" ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Buy "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text=" ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to purchase "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="a"/>
+        <tokens xsi:type="generator:Literal" text=" ticket"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy movie ticket"/>
+      </inputs>
+    </inputs>
+    <parameters name="TheaterName" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Cool! I can help you then! You have 3 great options in Windsor city, choose your prefered theater among them: 
+SilverCity Windsor Cinemas, Cineplex Odeon Devonshire Mall Cinemas, or Imagine Cinemas Lakeshore</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="MovieName" entity="//@entities.0" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Good! There are 6 available movies at $TheaterName:
+Dune, No Time To Die, Belfast, House of Gucci, Spencer and, Last Night in Soho.
+What is your choice?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="OrderDay" entity="//@entities.2" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Great Choice! Which day do you want to book?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="DayTime" entity="//@entities.3" required="true">
+      <prompts language="ENGLISH">
+        <prompts>And, which session do want to attend? Morning, afternoon, evening or night?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="number" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>How many tickets do you want to buy for the $MovieName movie at the $TheaterName for $OrderDay $DayTime?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="WelcomeIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey I want to watch a movie in the cinema"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="OrderTicket-Cancel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I dont want it anymore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Just cancel the order"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I change my mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No just cancel it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just forget about it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="forget that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dismiss"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="OrderTicket-Y-SelectSeat-Contact-Y">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes. I confirm it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="OrderTicket-N">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No i don't confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could I change"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Want to change"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No please I want change it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no no don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="na"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no it isn't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no I cannot"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not today"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="OrderTicket-Y-SelectSeat-Cancel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="never mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just forget about it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do nothing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="skip"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="forget that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dismiss"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="Movie">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Dune">
+        <values>Dune</values>
+        <values>dun</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="No Time To Die">
+        <values>No Time To Die</values>
+        <values>no time for die</values>
+        <values>no time</values>
+        <values>no die</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="House of Gucci">
+        <values>House of Gucci</values>
+        <values>Gucci</values>
+        <values>House for gucci</values>
+        <values>gucci house</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Spencer">
+        <values>Spencer</values>
+        <values>spenser</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Last Night in Soho">
+        <values>Last Night in Soho</values>
+        <values>Soho</values>
+        <values>last night soho</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Theater">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="SilverCity Windsor Cinemas">
+        <values>SilverCity Windsor Cinemas</values>
+        <values>Silvercity</values>
+        <values>Silver</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Cineplex Odeon Devonshire Mall Cinema">
+        <values>Cineplex Odeon Devonshire Mall Cinema</values>
+        <values>Devonshire</values>
+        <values>Cineplex</values>
+        <values>odeon</values>
+        <values>Divonshire Mall</values>
+        <values>Cineplex Devonshire</values>
+        <values>Cieplex odeon</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Imagine Cinemas Lakeshore">
+        <values>Imagine Cinemas Lakeshore</values>
+        <values>Imagine</values>
+        <values>Lakeshore</values>
+        <values>lakeshore imagine</values>
+        <values>imagine lakeshore</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="OrderDay">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Today">
+        <values>Today</values>
+        <values>Now</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Tomorrow">
+        <values>Tomorrow</values>
+        <values>tommorrow</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Sunday">
+        <values>Next Sunday</values>
+        <values>Sunday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Monday">
+        <values>Next Monday</values>
+        <values>Monday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Tuseday">
+        <values>Next Tuseday</values>
+        <values>Tuseday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Wednesday">
+        <values>Next Wednesday</values>
+        <values>wednesday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Turseday">
+        <values>Next Turseday</values>
+        <values>Turseday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Friday">
+        <values>Next Friday</values>
+        <values>Friday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Next Saturday">
+        <values>Next Saturday</values>
+        <values>Saturday</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="DayTime">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Morning">
+        <values>Morning</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Afternoon">
+        <values>Afternoon</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Evening">
+        <values>Evening</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Night">
+        <values>Night</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="SeatType">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Standard">
+        <values>Standard</values>
+        <values>normal</values>
+        <values>floor</values>
+        <values>first floor</values>
+        <values>Ground</values>
+        <values>ground floor</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Balcony">
+        <values>Balcony</values>
+        <values>second floor</values>
+        <values>VIP</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="SeatSection">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Front Section">
+        <values>Front Section</values>
+        <values>Closer to screen</values>
+        <values>close to screen</values>
+        <values>front line</values>
+        <values>first rows</values>
+        <values>near to exit</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Back Section">
+        <values>Back Section</values>
+        <values>Further</values>
+        <values>further from screen</values>
+        <values>as far as possible</values>
+        <values>back row</values>
+        <values>near the entry</values>
+        <values>Back</values>
+        <values>near the entrance</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Center Section">
+        <values>Center Section</values>
+        <values>Center</values>
+        <values>Not too front not too back</values>
+        <values>not too close</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-Y-SelectSeat-Contact-NTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh. That's alright. we can do it again. Please re-enter your name. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-YTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Perfect! Now we can set your seat zone. Where do you want to seat? The standard floor or the Balcony? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-Y-SelectSeatTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok! "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="seat in "/>
+        <tokens xsi:type="generator:Literal" text="Great Choice. Your seats will be reserved for 15 mins. If we have your Name and Phone Number we can finalize it. Could you please enter your name? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-Y-SelectSeat-ContactTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Super! So the order is for "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="with the contact number of "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.3/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text=". Do you confirm it? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicketTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Fine. You just ordered "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.4"/>
+        <tokens xsi:type="generator:Literal" text="Tickets for "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.2"/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.3"/>
+        <tokens xsi:type="generator:Literal" text="session of "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="movie at the "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.4/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text=". Do you confirm this? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="WelcomeIntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! Welcome to G7 CinemaTicket chatbot. &#xA;How can I help you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-CancelTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok! No problem. I will Cancel the order. You can always return and re-order. Have a good one! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-Y-SelectSeat-Contact-YTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Superb! Your order is placed now and you can pay for it via the provided link. Here is your Order No.: #192837465"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Great! Here is your Order No.: #192837465     &#xA;Enjoy your movie! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-NTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh. We can fix it. You can choose among three Theater: SilverCity Windsor Cinemas, Cineplex Odeon Devonshire Mall Cinema and Imagine Cinemas Lakeshore. Which one is your choice? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="OrderTicket-Y-SelectSeat-CancelTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh sure! You are always welcome. We are waiting for you in your next order at G7 CinemaTicket Bot! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.4" name="user1">
+    <target actions="//@actions.6" name="bot1">
+      <outcoming intent="//@intents.1" name="user2">
+        <target actions="//@actions.3" name="bot2">
+          <outcoming intent="//@intents.2" name="user3">
+            <target actions="//@actions.4" name="bot3">
+              <outcoming intent="//@intents.0" name="user4">
+                <target actions="//@actions.2" backTo="//@flows.0/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.0" name="bot4">
+                  <outcoming intent="//@intents.3" name="user5">
+                    <target actions="//@actions.5" backTo="//@flows.0/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.0" name="bot5">
+                      <outcoming intent="//@intents.7" name="user6">
+                        <target actions="//@actions.9" name="bot6"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.9" name="user7">
+                    <target actions="//@actions.11" name="bot7"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.3" name="user8">
+                <target actions="//@actions.5" name="bot8">
+                  <outcoming intent="//@intents.0" name="user9">
+                    <target actions="//@actions.2" backTo="//@flows.0/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1/@target/@outcoming.0 //@flows.0/@target/@outcoming.0/@target/@outcoming.0/@target/@outcoming.1" name="bot9">
+                      <outcoming intent="//@intents.9" name="user10">
+                        <target actions="//@actions.11" name="bot10"/>
+                      </outcoming>
+                    </target>
+                  </outcoming>
+                  <outcoming intent="//@intents.7" name="user11">
+                    <target actions="//@actions.9" name="bot11"/>
+                  </outcoming>
+                </target>
+              </outcoming>
+              <outcoming intent="//@intents.9" name="user12">
+                <target actions="//@actions.11" name="bot12"/>
+              </outcoming>
+            </target>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.6" name="user13">
+        <target actions="//@actions.8" name="bot13"/>
+      </outcoming>
+      <outcoming intent="//@intents.8" name="user14">
+        <target actions="//@actions.10" name="bot14"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.5" name="user15">
+    <target actions="//@actions.7" name="bot15"/>
+  </flows>
+  <flows intent="//@intents.10" name="user16">
+    <target actions="//@actions.12" name="bot16"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

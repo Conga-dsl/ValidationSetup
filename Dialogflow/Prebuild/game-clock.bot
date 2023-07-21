@@ -1,0 +1,143 @@
+Chatbot "game-clock" language : en
+
+intents :
+
+YesIntent :
+	inputs in en {
+		aha ,
+		yep ,
+		yes
+}
+
+FinishIntent :
+	inputs in en {
+		"game over" ,
+		"stop music" ,
+		finish
+}
+
+HelpIntent :
+	inputs in en {
+		"how to use" ,
+		"what can you do" ,
+		manual ,
+		"how to play" ,
+		help
+}
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+StartIntent :
+	inputs in en {
+		"start new game for " ( three ) [ gamers ] " gamers" ,
+		"start new round" ,
+		"start a game" ,
+		"start new game"
+	}
+	parameters :
+		gamers : entity float ;
+
+GamersIntent :
+	inputs in en {
+		( three ) [ gamers ] " players" ,
+		"there are " ( three ) [ gamers ] " gamers" ,
+		( three ) [ gamers ]
+	}
+	parameters :
+		gamers : entity float ;
+
+PauseIntent :
+	inputs in en {
+		break ,
+		stop ,
+		pause
+}
+
+PrevIntent :
+	inputs in en {
+		^back ,
+		previous
+}
+
+NoIntent :
+	inputs in en {
+		nope ,
+		^no
+}
+
+ResumeIntent :
+	inputs in en {
+		continue ,
+		play ,
+		resume
+}
+
+NextIntent :
+	inputs in en {
+		"go next" ,
+		done ,
+		ready ,
+		"pass the turn" ,
+		next
+}
+
+GamerColorIntent :
+	inputs in en {
+		"I have " ( black ) [ color ] " chips" ,
+		( yellow ) [ color ] " color" ,
+		"I am " ( red ) [ color ] ,
+		( blue ) [ color ]
+	}
+	parameters :
+		color : entity text ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://215913f5.ngrok.io" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response YesIntentTxtResp1 :
+		inputs in en {
+			" "
+	}
+
+flows :
+	- user1 : user YesIntent => bot1 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user2 : user FinishIntent => bot2 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user3 : user HelpIntent => bot3 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user4 : user "Default Welcome Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user StartIntent => bot5 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user6 : user GamersIntent => bot6 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user7 : user PauseIntent => bot7 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user8 : user PrevIntent => bot8 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user9 : user NoIntent => bot9 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user10 : user ResumeIntent => bot10 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user11 : user NextIntent => bot11 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user12 : user GamerColorIntent => bot12 : chatbot HttpRequest , HttpResponse , YesIntentTxtResp1 ;
+	- user13 : user "Default Fallback Intent" => bot13 : chatbot HttpRequest , HttpResponse ;
+

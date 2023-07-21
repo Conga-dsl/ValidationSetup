@@ -1,0 +1,281 @@
+Chatbot gordobbot language : en
+
+intents :
+
+	genderReveal :
+		inputs in en {
+			( James ) [ person ] ,
+			( Melissa ) [ genderconfirmation ] ,
+			( female ) [ genderconfirmation ] ,
+			( MALE ) [ genderconfirmation ]
+		}
+		parameters :
+			genderconfirmation : entity genderConfirmation ;
+			person : entity text ;
+
+	disconfirmation :
+		inputs in en {
+			No ,
+			nah ,
+			"no thanks" ,
+			"I don\'t have all the ingredients" ,
+			"I do not" ,
+			"No I don\'t" ,
+			"I don\'t think so" ,
+			"That is all" ,
+			"No thank you" ,
+			"No that is all"
+	}
+
+	greeting :
+		inputs in en {
+			Hey ,
+			"Hi there" ,
+			"Good morning" ,
+			Hi ,
+			Hello
+	}
+
+	ingredientRequest :
+
+	appreciation :
+		inputs in en {
+			"Alright, thank you" ,
+			Thanks ,
+			"Thank you!"
+	}
+
+	checkCapability :
+		inputs in en {
+			"What do you do?" ,
+			"Tell me what you do" ,
+			"What is your function?" ,
+			"What can you do?"
+	}
+
+	confirmation :
+		inputs in en {
+			"Yes." ,
+			sure ,
+			okay ,
+			great ,
+			nice ,
+			"They are all here" ,
+			"I have all the ingredients I need" ,
+			"Yes, I have them all" ,
+			"You can help me with something else" ,
+			"Yes there is something else" ,
+			"There is something else" ,
+			Yes
+	}
+
+	requestRecipeUtensil :
+		inputs in en {
+			"Do I need a " ( spoon ) [ utensil ] " for " ( rice ) [ recipe ] "?"
+		}
+		parameters :
+			utensil : entity utensil ;
+			recipe : entity recipe ;
+
+	requestClarification :
+		inputs in en {
+			"Please help me" ,
+			"Help!" ,
+			"How do I do that ?" ,
+			"Can you clarify please?" ,
+			"I do not understand" ,
+			"What do you mean?"
+	}
+
+	recipeRequest :
+		inputs in en {
+			( roasted ) [ recipe ] ,
+			( GPBroccoli ) [ recipe ] ,
+			( Rice ) [ recipe ] ,
+			( Cobbler ) [ recipe ] ,
+			"I\'d rather cook " ( "one-pot chinese fried rice" ) [ recipe ] ,
+			"I really want " ( "one-pot chinese fried rice" ) [ recipe ] ,
+			( "garlic parmesan roasted broccoli" ) [ recipe ] " please!" ,
+			"I want " ( "slow-cooker mixed berries cobbler" ) [ recipe ] ,
+			"Can you make me a " ( "Slow-cooker mixed berries cobbler" ) [ recipe ] ,
+			"I\'m craving for a " ( "garlic parmesan roasted broccoli" ) [ recipe ] ,
+			"Do you have " ( "One-Pot Chinese Fried Rice" ) [ recipe ]
+		}
+		parameters :
+			recipe : entity recipe ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	recipeContinuer :
+		inputs in en {
+			"Okay next" ,
+			"Move on to the next step please" ,
+			Complete ,
+			Next ,
+			"Please continue" ,
+			Done ,
+			"Next step please"
+	}
+
+	requestRecipeQuantity :
+		inputs in en {
+			"how much " ( oil ) [ ingredient ] " do I need for " ( GPbroccoli ) [ recipe ] ,
+			"What is the amount of " ( butter ) [ ingredient ] " needed for " ( cobbler ) [ recipe ] "?" ,
+			"Can you tell me how much " ( "parmesan cheese" ) [ ingredient ] " I need for " ( "roasted broccoli" ) [ recipe ] "?" ,
+			"What is the amount of " ( strawberries ) [ ingredient ] " for a " ( cobbler ) [ recipe ] "?" ,
+			"How much " ( carrot ) [ ingredient ] " is needed for the " ( "fried rice" ) [ recipe ] "?"
+		}
+		parameters :
+			ingredient : entity ingredient ;
+			recipe : entity recipe ;
+
+	defaultFallback Fallback :
+
+	selfIdentification :
+		inputs in en {
+			"Hello!"
+	}
+
+	farewell :
+		inputs in en {
+			"see you" ,
+			bye ,
+			goodbye ,
+			farewell
+	}
+
+entities :
+	Simple entity Origin :
+		inputs in en {
+			broccoli synonyms broccoli , "Broccoli, botanically known as Brassica oleracea italica, is native to the Mediterranean. It was engineered from a cabbage relative by the Etruscans—an ancient Italian civilization who lived in what is now Tuscany.."
+			rice synonyms rice , "Fried rice first developed during the Sui Dynasty in China and as such all fried rice dishes can trace their origins to Chinese fried rice.Many varieties of fried rice have their own specific list of ingredients.In Greater China, common varieties include Yangzhou fried rice and Hokkien fried rice.\')."
+			cobbler synonyms cobbler , "Cobblers originated in the British American colonies.\',  \'English settlers were unable to make traditional suet puddings due to lack of suitable ingredients and cooking equipment.\', \'So instead covered a stewed filling with a layer of uncooked plain biscuits, scone batter or dumplings, fitted together.\')."
+	}
+	Simple entity utensil :
+		inputs in en {
+			pan synonyms pan
+			"large pan" synonyms "large pan" , "big pan"
+			bowl synonyms bowl
+			teaspoon synonyms spoon , "small spoon" , teaspoon , "spoon for tea"
+			tablespoon synonyms tablespoon , spoon , "big spoon" , "eating spoon" , "spoon for eating"
+			"measuring cup" synonyms cup , "measuring cup"
+			"baking pan" synonyms "baking pan"
+			"slow cooker" synonyms "slow cooker"
+			knife synonyms knife , chop , chopping , snip , chopped
+			spatula synonyms spatula , mix , stir
+			fork synonyms fork , beat , Beat
+			"cutting board" synonyms "cutting board" , "cutting-board" , "board for cutting"
+			oven synonyms oven , "microwave oven"
+			stove synonyms stove , cooker , boiler
+	}
+	Simple entity ingredient :
+		inputs in en {
+			carrot synonyms carrot
+			"green peas" synonyms peas , "green pea"
+			garlic synonyms garlic , "garlic powder"
+			shrimp synonyms shrimp , seafood , prawn , "river prawn" , fish
+			ham synonyms ham , pork , "cut of pork" , meat
+			"white rice" synonyms rice , "white rice" , "brown rice" , "yellow rice" , grain , "washed rice"
+			"soy sauce" synonyms "soy sauce" , soy , sauce , soya
+			broccoli synonyms vegetable , broccoli
+			oil synonyms oil , "olive oil" , "heating oil" , "almond oil" , grease , "sunflower oil" , "rice oil"
+			"lemon juice" synonyms "lemon juice" , "juice of a lemon" , juice
+			"vegetarian parmesan cheese" synonyms "vegetarian parmesan cheese" , "parmesan cheese" , cheese , "vegetarian cheese" , "vegatarian parmesan" , parmesan
+			"garlic powder" synonyms "garlic powder" , garlic
+			"red pepper flakes" synonyms "red pepper flakes" , "pepper flakes" , flakes , "chilli flakes" , chilli , "red pepper"
+			salt synonyms salt , flavouring , seasoner , "table salt" , "sea salt" , "himalaya salt"
+			pepper synonyms pepper , "black pepper" , seasoner , flavouring , spice
+			raspberry synonyms raspberry , wineberry , "raspberry bush" , "black raspberry"
+			blueberry synonyms blueberry , berrie
+			strawberry synonyms strawberry , "garden berry"
+			cornstarch synonyms cornstarch , cornflour
+			"vanilla cake mix" synonyms "vanilla cake mix" , "vanilla mix" , "cake mix" , "vanilla flavoured cake mix"
+			butter synonyms butter , dairy , margarine , "salted butter" , "unsalted butter"
+	}
+	Simple entity recipe :
+		inputs in en {
+			Cobbler synonyms cobbler , "Slow-cooker mixed berry cobbler" , "mixed berry cobbler" , "berry cobbler"
+			Rice synonyms rice , "One-pot Chinese fried rice" , "fried rice" , "Chinese fried rice" , nasi
+			Broccoli synonyms "Garlic Parmesan roasted Broccoli" , "roasted broccoli" , roasted , broccoli
+	}
+	Simple entity genderConfirmation :
+		inputs in en {
+			" chef" synonyms chef , male
+			"female chef" synonyms "female chef" , female , "Melissa Leong"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response genderRevealTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response defaultFallbackTxtResp1 :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response selfIdentificationTxtResp1 :
+		inputs in en {
+			"Hello. Im cooking bot! "
+	}
+
+flows :
+	- user1 : user genderReveal => bot1 : chatbot genderRevealTxtResp1 ;
+	- user2 : user disconfirmation => bot2 : chatbot genderRevealTxtResp1 ;
+	- user3 : user greeting => bot3 : chatbot genderRevealTxtResp1 ;
+	- user4 : user ingredientRequest => bot4 : chatbot genderRevealTxtResp1 ;
+	- user5 : user appreciation => bot5 : chatbot genderRevealTxtResp1 ;
+	- user6 : user checkCapability => bot6 : chatbot genderRevealTxtResp1 ;
+	- user7 : user confirmation => bot7 : chatbot genderRevealTxtResp1 ;
+	- user8 : user requestRecipeUtensil => bot8 : chatbot genderRevealTxtResp1 ;
+	- user9 : user requestClarification => bot9 : chatbot genderRevealTxtResp1 ;
+	- user10 : user recipeRequest => bot10 : chatbot genderRevealTxtResp1 ;
+	- user11 : user "Default Welcome Intent" => bot11 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user12 : user recipeContinuer => bot12 : chatbot genderRevealTxtResp1 ;
+	- user13 : user requestRecipeQuantity => bot13 : chatbot genderRevealTxtResp1 ;
+	- user14 : user defaultFallback => bot14 : chatbot defaultFallbackTxtResp1 ;
+	- user15 : user selfIdentification => bot15 : chatbot selfIdentificationTxtResp1 ;
+	- user16 : user farewell => bot16 : chatbot genderRevealTxtResp1 ;
+

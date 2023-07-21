@@ -1,0 +1,265 @@
+Chatbot "knowledge-graph" language : en
+
+intents :
+
+	launchClock :
+		inputs in en {
+			"what time is it" ,
+			"tell me the time" ,
+			"what is the time"
+	}
+
+	launchWeather :
+		inputs in en {
+			"What\'s the weather" ,
+			"Tell us the weather" ,
+			"Tell me the weather" ,
+			"How does the weather look" ,
+			"How is the weather looking"
+	}
+
+	launchWhoAmI :
+		inputs in en {
+			"who do you think I am" ,
+			"do you recognize me" ,
+			"who am i"
+	}
+
+	answerNo :
+		inputs in en {
+			"no I\'m not" ,
+			negative ,
+			"no I haven\'t" ,
+			"no I have not" ,
+			"no way" ,
+			nope ,
+			^no
+	}
+
+	launchDominos :
+		inputs in en {
+			"order a pizza" ,
+			"order pizzza" ,
+			"talk to dominos" ,
+			"I\'m hungry" ,
+			"let\'s get some pizza"
+	}
+
+	launchUserLikes :
+		inputs in en {
+			( Cynthia ) [ ^user ] " likes " ( penguins ) [ thing ] ,
+			( Andrew ) [ ^user ] " likes " ( whales ) [ thing ]
+		}
+		parameters :
+			thing : entity thing ;
+			thingOriginal : entity thing ;
+			^user : entity ^user ;
+
+	gameCommand :
+		inputs in en {
+			"I would like to " ( continue ) [ gameCommands ] ,
+			"Let\'s " ( continue ) [ gameCommands ]
+		}
+		parameters :
+			gameCommands : entity gameCommands ;
+
+	launchDoYouLike :
+		inputs in en {
+			"do you like " ( penguins ) [ thing ] ,
+			"do you like " ( whales ) [ thing ]
+		}
+		parameters :
+			thing : entity thing ;
+
+	launchGame :
+		inputs in en {
+			"start the game" ,
+			"resume the game" ,
+			"play the game" ,
+			"let\'s play a game"
+	}
+
+	"Default Welcome Intent" :
+
+	launchTellUser :
+		inputs in en {
+			"Tell " ( Cynthia ) [ ^user ] " that " ( "blah blah blah" ) [ any ] ,
+			"Tell " ( Andrew ) [ ^user ] " " ( something ) [ any ]
+		}
+		parameters :
+			any ,
+			^user : entity ^user ;
+
+	launchRepeatThat :
+		inputs in en {
+			"do that " ( Dance ) [ repeatableAction ] " again" ,
+			"repeat that" ,
+			"say that again" ,
+			"Repeat the " ( Dance ) [ repeatableAction ] ,
+			"repeat the " ( Time ) [ repeatableAction ] ,
+			"say that " ( Joke ) [ repeatableAction ] " again" ,
+			"Repeat that " ( Dance ) [ repeatableAction ] ,
+			"please repeat that" ,
+			"Repeat the " ( Joke ) [ repeatableAction ] ,
+			"do that again" ,
+			"Repeat that " ( Joke ) [ repeatableAction ] ,
+			"Repeat the " ( Weather ) [ repeatableAction ]
+		}
+		parameters :
+			repeatableAction : entity repeatableAction ;
+
+	launchHistory :
+		inputs in en {
+			"what have you been up to" ,
+			"what have you been doing" ,
+			"what have you been doing lately" ,
+			"what has been going on" ,
+			"what\'s been going on" ,
+			"what have you been up to lately"
+	}
+
+	answerYes :
+		inputs in en {
+			"yes I am" ,
+			affirmative ,
+			"yes I have" ,
+			"you bet" ,
+			sure ,
+			yup ,
+			yes
+	}
+
+	launchGameInventory :
+		inputs in en {
+			"tell me what\'s in my game inventory" ,
+			"what\'s in my game inventory" ,
+			"check my game inventory"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+	launchItsMe :
+		inputs in en {
+			"I\'m " ( Andrew ) [ ^user ] ,
+			"My name is " ( Andrew ) [ ^user ] ,
+			"I\'m " ( Alexis ) [ ^user ] ,
+			"My name is " ( Alexis ) [ ^user ] ,
+			"It\'s me, " ( Alexis ) [ ^user ] ,
+			"It\'s me, " ( Andrew ) [ ^user ]
+		}
+		parameters :
+			^user : entity ^user ;
+
+	launchJoke :
+		inputs in en {
+			"tell me a joke" ,
+			"do you know any jokes" ,
+			"say something funny" ,
+			"let\'s have a joke"
+	}
+
+entities :
+	Simple entity repeatableAction :
+		inputs in en {
+			Dance synonyms Dance
+			Joke synonyms joke
+			Time synonyms Time
+			Weather synonyms weather
+			"Weather Report" synonyms "weather report"
+	}
+	Simple entity pizzaTopping :
+		inputs in en {
+			Pepperoni synonyms pepperoni , pepperonis
+			Sausage synonyms sausage , sausages
+			Pineapple synonyms pineapple , pineapples
+			Cheese synonyms cheese , cheeses
+	}
+	Simple entity gameCommands :
+		inputs in en {
+			continue synonyms continue , go
+			quit synonyms quit , exit
+			equip synonyms equip
+			fight synonyms fight
+			run synonyms run
+			north synonyms north
+			south synonyms south
+			east synonyms east
+			west synonyms west
+			open synonyms open
+			close synonyms close
+			enter synonyms enter
+	}
+	Simple entity thing :
+		inputs in en {
+			Insect synonyms insect , insects
+			Chicken synonyms chicken , chickens
+			Flamingo synonyms flamingo , flamingos
+			Whale synonyms whale , whales
+			Animal synonyms animal , animals
+			Armadillo synonyms armadillo , armadillos
+			Bat synonyms bat , bats
+			Penguin synonyms penguin , penguins
+			Bird synonyms bird , birds
+			Breakfast synonyms breakfast
+			Monkey synonyms monkey , monkeys
+			Zebra synonyms zebra , zebras
+			Albatros synonyms albatros , albatrosses
+			Mammal synonyms mammal , mammals
+			Vertebrate synonyms vertebrate , vertebrates
+			Fly synonyms fly , flies
+			Cheese synonyms cheese
+			Butterfly synonyms butterfly , butterflies
+			Invertbrate synonyms invertbrate , invertebrates
+	}
+	Simple entity ^user :
+		inputs in en {
+			Jeri synonyms Jeri
+			Andrew synonyms Andrew , Dad
+			Jonathan synonyms Jonathan
+			Siggi synonyms Siggi
+			Cynthia synonyms Cynthia
+			Alexis synonyms Alexis
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://<example>" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response launchClockTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user answerNo => bot1 : chatbot launchClockTxtResp1 ;
+	- user2 : user gameCommand => bot2 : chatbot launchClockTxtResp1 ;
+	- user3 : user "Default Welcome Intent" => bot3 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user4 : user answerYes => bot4 : chatbot launchClockTxtResp1 ;
+	- user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" ;
+

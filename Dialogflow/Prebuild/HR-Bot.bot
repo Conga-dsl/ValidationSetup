@@ -1,0 +1,845 @@
+Chatbot "HR-Bot" language : en
+
+intents :
+
+	ask_information_no_servreq_no_feedyes :
+		parameters :
+			empid : entity number , required , prompts in ru [ "What is your employee id?" ] ;
+			feedback : entity text , required , prompts in ru [ "Please enter your feedback" ] ;
+
+	raise_service_request_emailyes_feedbackyes :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your employee id?" ] ;
+			feedback : entity text , required , prompts in en [ "Please provide your feedback" ] ;
+
+	make_appointment_yes :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	ask_information_no_servreq_no :
+		inputs in en {
+			"thanks but no" ,
+			"no way" ,
+			^no ,
+			"no no don\'t" ,
+			na ,
+			"no it isn\'t" ,
+			"don\'t" ,
+			"nah I\'m good" ,
+			"no I cannot" ,
+			"I can\'t" ,
+			nothing ,
+			"no that\'s okay" ,
+			"no not really" ,
+			"nope not really" ,
+			nope ,
+			"thanks but not this time" ,
+			"I don\'t think so" ,
+			"I disagree" ,
+			"no maybe next time" ,
+			"not this time" ,
+			"no don\'t" ,
+			"no we are good" ,
+			"don\'t do it" ,
+			"no that\'s be all" ,
+			"not right now" ,
+			"nothing else thanks" ,
+			"no thanks" ,
+			"no that\'s ok" ,
+			"I don\'t want that" ,
+			"definitely not" ,
+			"nothing else" ,
+			not ,
+			"not at all" ,
+			"no never" ,
+			never ,
+			"no way no" ,
+			"not really" ,
+			nah ,
+			"I don\'t" ,
+			"I don\'t want" ,
+			"not today" ,
+			"not interested" ,
+			"no that\'s fine thank you" ,
+			"I\'m not"
+	}
+
+	retrieve_information_no_servreqyes_emailyes_feedyes :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your employee id?" ] ;
+			feedback : entity text , required , prompts in en [ "Please enter your feedback" ] ;
+
+	detect_prog_language :
+		inputs in en {
+			"I know " ( javascript ) [ "programming-language" ] ,
+			"i know " ( Py ) [ "programming-language" ] ,
+			"i can code in " ( python ) [ "programming-language" ]
+		}
+		parameters :
+			"programming-language" : entity "programming-language" ;
+
+	servicereq_confirmation :
+		inputs in en {
+			"Can you provide any " ( "written confirmation?" ) [ service_request ] ,
+			"Please provide " ( confirmation ) [ service_request ] ,
+			"How to make sure that the " ( "service request" ) [ service_request ] " is confirmed?" ,
+			"I want a confirmation of my " ( "service request" ) [ service_request ] ,
+			"Is there is any way to confirm my " ( "service request" ) [ service_request ] "?" ,
+			"please provide an " ( "email confirmation" ) [ service_request ] ,
+			"please provide an email confirmation of my " ( "service request" ) [ service_request ] ,
+			"Request for " ( confirmation ) [ service_request ] ,
+			"How to confirm my " ( request ) [ service_request ] "?" ,
+			"Any " ( confirmation ) [ service_request ] "?" ,
+			( "Email confirmation" ) [ service_request ] ,
+			( "Service request" ) [ service_request ] ,
+			"Send me a " ( confirmation ) [ service_request ] ,
+			"How to confirm my " ( "service request" ) [ service_request ] "?" ,
+			"Can u provide an email confirmation of my " ( "service request" ) [ service_request ] "?" ,
+			"Require an email confirmation of my " ( "service request" ) [ service_request ] ,
+			"Send me an " ( "email confirmation" ) [ service_request ] ,
+			"Can u provide an " ( "email confirmation" ) [ service_request ] "?" ,
+			"I need an email confirmation of my " ( "service request" ) [ service_request ] ,
+			"Send me an email confirmation of my " ( "service request" ) [ service_request ]
+		}
+		parameters :
+			service_request : entity service_request ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"Good to see you" ,
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			Wellcome ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	retrieve_information_no_servreqyes :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your employee id?" ] ;
+			issue : entity text , required , prompts in en [ "Please provide the description of your issue" ] ;
+			email : entity text , required , prompts in en [ "Enter your email" ] ;
+
+	ask_information_no_servreq_yes_emailyes :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your employee id?" ] ;
+
+	get_status :
+		inputs in en {
+			"get status nr " ( "85" ) [ userid ] ,
+			"look up a value for user " ( "11" ) [ userid ] ,
+			"look up my status" ,
+			"read status" ,
+			"read from database" ,
+			"get status"
+		}
+		parameters :
+			userid : entity number , required , prompts in en [ "Whats your id number?" ] ;
+
+	make_appointment :
+		inputs in en {
+			"make a booking" ,
+			"book a slot" ,
+			"schedule a meeting" ,
+			"make an appointment" ,
+			"book me for " ( Monday ) [ ^date ] " " ( "10am" ) [ ^time ] ,
+			"Make appointment for " ( "1 october" ) [ ^date ] ,
+			"book a meeting for " ( tomorrow ) [ ^date ] ,
+			"i want make an appointment for " ( tuesday ) [ ^date ]
+		}
+		parameters :
+			^date : entity date , required , prompts in en [ "Sure, what day?" ] ;
+			^time : entity time , required , prompts in en [ "What time?" ] ;
+
+	ask_information :
+		inputs in en {
+			"What are " ( "staff wellness days" ) [ wellness_leave_info ] "?" ,
+			"Can you explain " ( "wellness days" ) [ wellness_leave_info ] ,
+			"Can you explain me about " ( "staff wellness days" ) [ wellness_leave_info ] ,
+			"What are " ( "wellness days" ) [ wellness_leave_info ] "?" ,
+			"Can you explain the " ( "recruiting process" ) [ hiring_recruitment ] "?" ,
+			"Can you explain the " ( "hiring process?" ) [ hiring_recruitment ] ,
+			"What is the " ( "hiring process" ) [ hiring_recruitment ] "?" ,
+			"How " ( hiring ) [ hiring_recruitment ] " is done?" ,
+			"Can you explain the " ( "hiring and recruitment" ) [ hiring_recruitment ] " process?" ,
+			( "Hiring and recruitment" ) [ hiring_recruitment ] ,
+			"Tell me about " ( "hiring and recruitment" ) [ hiring_recruitment ] " process" ,
+			"can you tell me about " ( "hiring and recruitment process?" ) [ hiring_recruitment ] ,
+			"tell me about " ( "employee onboarding" ) [ emp_onboarding ] ,
+			( "employee onboarding" ) [ emp_onboarding ] ,
+			"Please explain the " ( "employee onboarding" ) [ emp_onboarding ] " process?" ,
+			"explain the " ( "employee onboarding" ) [ emp_onboarding ] " process?" ,
+			"What is the " ( "onboarding process" ) [ emp_onboarding ] "?" ,
+			"How I can " ( contribute ) [ volunteering ] "?" ,
+			"How I can contribute to " ( society ) [ volunteering ] "?" ,
+			"What are the " ( opportunities ) [ volunteering ] "?" ,
+			"What are the opportunities in which I can " ( volunteer ) [ volunteering ] "?" ,
+			"Can you explain the " ( "employee onboarding" ) [ emp_onboarding ] " process?" ,
+			"Can you explain about the " ( "volunteering opportunities" ) [ volunteering ] "?" ,
+			( Volunteering ) [ volunteering ] " opportunities" ,
+			( "Time management" ) [ emp_time_hr ] ,
+			( "HR actions" ) [ emp_time_hr ] ,
+			"Explain employee " ( "time management" ) [ emp_time_hr ] "?" ,
+			"tell me about " ( volunteering ) [ volunteering ] " opportunities" ,
+			"Can you tell me about the " ( volunteering ) [ volunteering ] " opportunities?" ,
+			"What are the " ( volunteering ) [ volunteering ] " opportunities?" ,
+			"Can you tell me about " ( "employee onboarding" ) [ emp_onboarding ] "?" ,
+			"Can you explain about " ( "hiring and recruitment" ) [ hiring_recruitment ] "?" ,
+			"Can you explain the " ( "exit process" ) [ exit_process ] "?" ,
+			( "Compensation information" ) [ comp_info ] ,
+			"can you explain the " ( "compensation process" ) [ comp_info ] "?" ,
+			"Can you talk about the " ( "compensation info" ) [ comp_info ] "?" ,
+			"What is the " ( "compensation structure" ) [ comp_info ] "?" ,
+			"What is the " ( "compensation process" ) [ comp_info ] "?" ,
+			"What are the " ( compensations ) [ comp_info ] "?" ,
+			"Can you explain about the " ( "employee time and hr actions" ) [ emp_time_hr ] "?" ,
+			"What are the " ( "leave benefits" ) [ family_medical_info ] " on medical grounds?" ,
+			"What are the " ( "medical benefits" ) [ family_medical_info ] "?" ,
+			"what are the " ( "medical leave benefits" ) [ family_medical_info ] "?" ,
+			" Info about " ( "family and medical leave benefits" ) [ family_medical_info ] "?" ,
+			( "Merit information" ) [ merit_information ] ,
+			"Can you explain about the " ( compensation ) [ comp_info ] "?" ,
+			"What is the " ( "annual merit process" ) [ merit_information ] "?" ,
+			"What are paid " ( "family and medical leave benefits" ) [ family_medical_info ] "?"
+		}
+		parameters :
+			wellness_leave_info : entity wellness_leave_info ;
+			family_medical_info : entity family_medical_info ;
+			merit_information : entity merit_information ;
+			comp_info : entity comp_info ;
+			emp_time_hr : entity emp_time_hr ;
+			volunteering : entity volunteering ;
+			emp_onboarding : entity emp_onboarding ;
+			hiring_recruitment : entity hiring_recruitment ;
+			exit_process : entity exit_process ;
+
+	raise_service_request :
+		inputs in en {
+			"I have a " ( problem ) [ service_request ] ,
+			"I have an " ( issue ) [ service_request ] ,
+			"I have a " ( complaint ) [ service_request ] ,
+			"i want to raise a " ( "service request" ) [ service_request ]
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your employee id?" ] ;
+			issue : entity text , required , prompts in en [ "Please provide the description of the issue" ] ;
+			email : entity text , required , prompts in en [ "Enter your email id" ] ;
+			service_request : entity service_request ;
+
+	capture_feedback :
+		inputs in en {
+			"I want to provide my feedback"
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your Employee ID?" ] ;
+			feedback : entity text , required , prompts in en [ "Enter your feedback" ] ;
+
+	detect_language :
+		inputs in en {
+			"I know a little " ( mandarin ) [ ^language ] ,
+			"I can speak " ( spanish ) [ ^language ] ,
+			"I know " ( German ) [ ^language ] ,
+			"i speak " ( French ) [ ^language ]
+		}
+		parameters :
+			^language : entity text ;
+
+	ask_information_no_servreq_yes :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+		}
+		parameters :
+			empid : entity number , required , prompts in en [ "What is your employee id?" ] ;
+			issue : entity text , required , prompts in en [ "Please provide the description of your issue" ] ;
+			email : entity text , required , prompts in en [ "Enter your email id" ] ;
+
+	log_status :
+		inputs in en {
+			"user " ( "12" ) [ userid ] " log my status" ,
+			"save to database" ,
+			"fill my diary" ,
+			"save my condition" ,
+			"write an entry" ,
+			"record my status" ,
+			"log my status"
+		}
+		parameters :
+			userid : entity number , required , prompts in en [ "What is your id?" ] ;
+			status : entity text , required , prompts in en [ "What is your status?" ] ;
+
+	retrieve_information :
+		inputs in en {
+			"please provide the " ( "time duration of my work" ) [ hours_worked ] ,
+			"Please provide my " ( "salary details" ) [ salary ] ,
+			"What " ( "balance leave for medical" ) [ leave_balance_family_medical ] " do I have?" ,
+			"I want my " ( "salary slip" ) [ salary ] ,
+			"Please provide my " ( "salary slip" ) [ salary ] ,
+			( Duration ) [ hours_worked ] " of my work this year" ,
+			"what is my " ( "medical leave balance" ) [ leave_balance_family_medical ] "?" ,
+			"I want to know the number of " ( "hours I have worked" ) [ hours_worked ] "  this year" ,
+			"I want to know " ( "my salary" ) [ salary ] ,
+			( "My salary" ) [ salary ] ,
+			"How much I " ( earned ) [ salary ] " this year?" ,
+			"My " ( "annual package" ) [ salary ] "?" ,
+			"What is my " ( "annual income" ) [ leave_balance_wellness ] "?" ,
+			"What is my " ( income ) [ salary ] " for this year?" ,
+			"Please provide details for my " ( "leave balance for paid family and medical leaves" ) [ leave_balance_family_medical ] "?" ,
+			"Can you tell me what my " ( earning ) [ salary ] " is?" ,
+			"How many leave I am left with for the " ( "wellness days" ) [ leave_balance_wellness ] "?" ,
+			"Please provide the details for my " ( earnings ) [ salary ] "?" ,
+			"Please provide the details for my " ( "leave balance for wellness days" ) [ leave_balance_wellness ] "?" ,
+			"My " ( "wellness day leave balance" ) [ leave_balance_wellness ] ,
+			"Can you tell me what my " ( salary ) [ salary ] " is?" ,
+			"how many " ( hours ) [ hours_worked ] " have I worked this year?" ,
+			"what is my " ( salary ) [ salary ] "?" ,
+			"What is my " ( "leave balance for paid family and medical leaves" ) [ leave_balance_family_medical ] "?" ,
+			"What is my " ( "leave balance for wellness days" ) [ leave_balance_wellness ] "?"
+		}
+		parameters :
+			leave_balance_wellness : entity leave_balance_wellness ;
+			leave_balance_family_medical : entity leave_balance_family_medical ;
+			empid : entity number , required , prompts in en [ "What is your Employee id?" ] ;
+			salary : entity salary ;
+			hours_worked : entity hours_worked ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity exit_process :
+		inputs in en {
+			"exit process" synonyms "exit process"
+	}
+	Simple entity wellness_leave_info :
+		inputs in en {
+			"staff wellness days" synonyms "staff wellness days" , "wellness days" , "Wellness Days" , WellnessInfo
+	}
+	Simple entity family_medical_info :
+		inputs in en {
+			"paid family and medical benefits" synonyms "paid family and medical benefits" , "paid family benefits" , "medical benefits" , "paid family and medical leave benefits" , "paid family and medical leave" , "family and medical benefits"
+	}
+	Simple entity emp_time_hr :
+		inputs in en {
+			"employee time and hr actions" synonyms "employee time and hr actions" , "employee time and hr" , "employee time" , "hr actions"
+	}
+	Simple entity salary :
+		inputs in en {
+			salary synonyms salary , "current salary" , compensation , "annual salary"
+	}
+	Simple entity leave_balance_family_medical :
+		inputs in en {
+			"paid family and medical leave balance" synonyms "paid family and medical leave balance" , "leave balance paid family and medical leave" , "leave balance for paid family and medical leaves" , "leave balance medical leave" , "leave balance family leave" , "family leave balance" , "medical leave balance"
+	}
+	Simple entity leave_balance_wellness :
+		inputs in en {
+			"wellness leave balance" synonyms "wellness leave balance" , wellness , "wellness balance" , "wellness days" , "wellness day" , "welness days"
+	}
+	Simple entity emp_onboarding :
+		inputs in en {
+			"employee onboarding" synonyms "employee onboarding" , onboarding
+	}
+	Simple entity hiring_recruitment :
+		inputs in en {
+			"hiring and recruiting" synonyms "hiring and recruiting" , hiring , recruiting , recruitment
+	}
+	Simple entity "programming-language" :
+		inputs in en {
+			Python synonyms pytho , py
+			JavaScript synonyms JavaScript , js
+	}
+	Simple entity comp_info :
+		inputs in en {
+			compensation synonyms compensation , "compensation process" , "compensation structure" , Compensation
+	}
+	Simple entity hours_worked :
+		inputs in en {
+			"hours worked" synonyms "hours worked" , "time worked" , "time entry" , "total hours" , "total time"
+	}
+	Simple entity volunteering :
+		inputs in en {
+			volunteering synonyms volunteering , "volunteering opportunities"
+	}
+	Simple entity service_request :
+		inputs in en {
+			"service request" synonyms "service request" , "service ticket" , ticket , complaint
+	}
+	Simple entity merit_information :
+		inputs in en {
+			"annual merit process" synonyms "annual merit process" , "merit process" , merit , "Merit Information"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-questrom-hr-bot.cloudfunctions.net/hr-bot-function" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response ask_information_no_servreq_no_feedyesTxtResp1 :
+		inputs in ru {
+			" "
+	}
+	text response make_appointment_yesTxtResp1 :
+		inputs in en {
+			"From console: You\'re all set for " [ "make_appointment.date" ]
+	}
+	text response ask_information_no_servreq_noTxtResp1 :
+		inputs in en {
+			"Do you want to provide a feedback? "
+	}
+	text response ask_information_no_servreq_yes_emailyes_feednoTxtResp1 :
+		inputs in en {
+			"Thank you! Have a good day! "
+	}
+	text response retrieve_information_noTxtResp1 :
+		inputs in en {
+			"It was great talking to you today. Do you want to raise a service request? "
+	}
+	text response detect_prog_languageTxtResp1 :
+		inputs in en {
+			"Neat, how long have you known " [ "detect_prog_language.programming-language" ]
+	}
+	text response servicereq_confirmationTxtResp1 :
+		inputs in en {
+			"Please check the employee ID " ,
+			"Sorry, we are not able to confirm your service request this time. Please try later "
+	}
+	Image response "Default Welcome IntentImgResp1" :
+		URL : "https://miro.medium.com/max/1000/1*sSHzFZ3FcdXnLWqQZiEDsA.png"
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response ask_information_noTxtResp1 :
+		inputs in en {
+			"It was great talking to you. Do you want to raise a service request? "
+	}
+	text response retrieve_information_no_servreqyesTxtResp1 :
+		inputs in en {
+			"Webhook failed. Please try again. "
+	}
+	text response raise_service_request_emailno_feedbacknoTxtResp1 :
+		inputs in en {
+			"It was wonderful interacting with you! Have a good day! "
+	}
+	text response get_statusTxtResp1 :
+		inputs in en {
+			"Mmm... our servers seem to be offline at the moment. "
+	}
+	Button response ask_information_yesButtonResp1 : inputs in en { text: - "\n " buttons: - value: "Staff Wellness Days" - value: "Paid Family and Medical Benefits" - value: "Annual Merit Process" }
+	Button response ask_information_yesButtonResp2 : inputs in en { text: - "\n " buttons: - value: Compensation - value: "Employee Time and HR Actions" - value: "Exit Process" }
+	Button response ask_information_yesButtonResp3 : inputs in en { text: - "\n " buttons: - value: "Hiring & Recruiting" - value: Onboarding - value: Volunteering }
+	text response ask_information_yesTxtResp1 :
+		inputs in en {
+			"What do you want to know? "
+	}
+	text response make_appointmentTxtResp1 :
+		inputs in en {
+			"Are you sure you want to make a booking for "
+	}
+	text response ask_informationTxtResp1 :
+		inputs in en {
+			"BU recognizes that faculty and staff may need time away from work for personal medical and family concerns.\n\nTo provide peace of mind as employees juggle home and work demands, BU is proud to announce new " [ "ask_information.family_medical_info" ] "benefits effective January 1, 2021.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/paid-family-and-medical-leave-benefits/\n\nDo you need any other information? " ,
+			"On March 17, 2021, President Brown announced that Boston University staff will be eligible for two " [ "ask_information.wellness_leave_info" ] "in recognition of the hard work and commitment of the BU staff over the course of the past year.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/staff-wellness-days/\n\nDo you need any other information? " ,
+			"The " [ "ask_information.merit_information" ] "is a time to review employee performance and monetarily recognize employees for their performance. The process is jointly managed by the HR Business Partners, the Provost’s Office and Compensation. The Annual Merit Process is administered based on employee type.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/annual-performance-review-and-merit/\n\nDo you need any other information? " ,
+			"Employees can manage their " [ "ask_information.emp_time_hr" ] "using Manager Self-Service (MSS). MSS is a BUworks tool used to maintain employees’ position and salary information. Access to MSS depends on your role at the University.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/employee-time-an/\n\nDo you need any other information? " ,
+			[ "ask_information.comp_info" ] "provides the Boston University community with guidance, tools, and support for pay practices and procedures. Compensation supports the University in attracting, recognizing, and retaining talent by providing effective pay programs and administration. The department works with leaders and managers across the University to ensure informed decision-making, internal equity, external competitiveness, and alignment with organizational objectives at the school, department, and University levels.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/compensation/\n\nDo you need any other information? " ,
+			[ "ask_information.exit_process" ] "is initiated when an employee terminates or resigns from a position within your department. You need to perform a number of tasks to ensure a smooth exit transition. Employees will be automatically deprovisioned of basic privileges upon termination if the employee has no other BU affiliation. Retired Emeritus faculty retain access to VPN. Terminated employees, including non-emeritus retirees, will no longer have access to Wireless/VPN (retirees can still access BU’s network via Guest Wireless).\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/exit-process/\n\nDo you need any other information? " ,
+			"As a manager at BU, you play an important role in the University’s success towards " "The people you hire will have a direct impact on students, faculty, staff, alumni, external customers, and neighboring communities.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/hiring-recruiting/\n\nDo you need any other information? " ,
+			"BU has implemented changes to streamline " [ "ask_information.emp_onboarding" ] "and provisioning for paid staff and faculty. These changes greatly simplify and speed up the process of granting BU email, employee self-service, wireless, and VPN access.\n\nEmployees automatically receive their account creation invitation to their personal email account once the BUworks hire form has been submitted and fully approved.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/onboarding/\n\nDo you need any other information? " ,
+			"Boston University supports " [ "ask_information.volunteering" ] "activities and welcomes the assistance of volunteers who wish to help the University conduct its academic research, cultural, and athletic activities. However, use of volunteers must occur within the requirements imposed by the federal and state laws regulating employment and immigration and must be consistent with the University’s risk management objectives.\n\nFor more details, visit: https://www.bu.edu/hr/manager-resources/volunteers/\n\nDo you need any other information? "
+	}
+	text response raise_service_requestTxtResp1 :
+		inputs in en {
+			"Sorry. Try again " ,
+			"Error 404 "
+	}
+	text response capture_feedbackTxtResp1 :
+		inputs in en {
+			"Thank you for the valuable feedback! "
+	}
+	text response capture_feedbackTxtResp2 :
+		inputs in en {
+			"Webhook failed: please try again later. " ,
+			"I am sorry. I didn\'t get that. How can I help? " ,
+			"Error 404 " ,
+			"Fail to connect to the server " ,
+			"Network connection fail. Please try later " ,
+			"We are not able to collect feedback this time due to server problem. Please try later "
+	}
+	text response detect_languageTxtResp1 :
+		inputs in en {
+			"From console: Nice, I hear " [ "detect_language.language" ] "is hard to learn! "
+	}
+	text response retrieve_information_yesTxtResp1 :
+		inputs in en {
+			"What would you like to know? "
+	}
+	text response log_statusTxtResp1 :
+		inputs in en {
+			"Webhook failed: please try again later. " ,
+			"Error 404 " ,
+			"Network Problem, please try after sometime "
+	}
+	text response ask_information_no_servreq_yes_emailnoTxtResp1 :
+		inputs in en {
+			"Thank you. Do you want to provide your feedback? "
+	}
+	text response ask_information_no_servreq_no_feednoTxtResp1 :
+		inputs in en {
+			"It was great talking to you. Have a nice day! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? " ,
+			"Error 404 " ,
+			"Network connection fail, please try later. "
+	}
+
+flows :
+	- user1 : user detect_prog_language => bot1 : chatbot detect_prog_languageTxtResp1 ;
+	- user2 : user servicereq_confirmation => bot2 : chatbot HttpRequest , HttpResponse , servicereq_confirmationTxtResp1 ;
+	- user3 : user "Default Welcome Intent" => bot3 : chatbot "Default Welcome IntentImgResp1" , "Default Welcome IntentTxtResp1" ;
+	- user4 : user get_status => bot4 : chatbot HttpRequest , HttpResponse , get_statusTxtResp1 ;
+	- user5 : user make_appointment => bot5 : chatbot make_appointmentTxtResp1 {
+		=> user6 : user make_appointment_yes => bot6 : chatbot HttpRequest , HttpResponse , make_appointment_yesTxtResp1 ;
+		=> user7 : user ask_information_no_servreq_no => bot7 : chatbot ask_information_no_servreq_no_feedyesTxtResp1 ;
+	} ;
+	- user8 : user ask_information => bot8 : chatbot ask_informationTxtResp1 {
+		=> user9 : user ask_information_no_servreq_no => bot9 : chatbot ask_information_noTxtResp1 {
+			=> user10 : user ask_information_no_servreq_no => bot10 : chatbot ask_information_no_servreq_noTxtResp1 {
+				=> user11 : user ask_information_no_servreq_no_feedyes => bot11 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+				=> user12 : user ask_information_no_servreq_no => bot12 : chatbot ask_information_no_servreq_no_feednoTxtResp1 ;
+			} ;
+			=> user13 : user ask_information_no_servreq_yes => bot13 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 {
+				=> user14 : user ask_information_no_servreq_yes_emailyes => bot14 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 {
+					=> user15 : user ask_information_no_servreq_no => bot15 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 ;
+					=> user16 : user retrieve_information_no_servreqyes_emailyes_feedyes => bot16 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+				} ;
+				=> user17 : user ask_information_no_servreq_no => bot17 : chatbot ask_information_no_servreq_yes_emailnoTxtResp1 {
+					=> user18 : user retrieve_information_no_servreqyes_emailyes_feedyes => bot18 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+					=> user19 : user ask_information_no_servreq_no => bot19 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 ;
+				} ;
+			} ;
+		} ;
+		=> user20 : user make_appointment_yes => bot20 : chatbot ask_information_yesButtonResp1 , ask_information_yesButtonResp2 , ask_information_yesButtonResp3 , ask_information_yesTxtResp1 ;
+	} ;
+	- user21 : user raise_service_request => bot21 : chatbot HttpRequest , HttpResponse , raise_service_requestTxtResp1 {
+		=> user22 : user ask_information_no_servreq_yes_emailyes => bot22 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 {
+			=> user23 : user raise_service_request_emailyes_feedbackyes => bot23 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+			=> user24 : user ask_information_no_servreq_no => bot24 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 ;
+		} ;
+		=> user25 : user ask_information_no_servreq_no => bot25 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 {
+			=> user26 : user raise_service_request_emailyes_feedbackyes => bot26 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+			=> user27 : user ask_information_no_servreq_no => bot27 : chatbot raise_service_request_emailno_feedbacknoTxtResp1 ;
+		} ;
+	} ;
+	- user28 : user capture_feedback => bot28 : chatbot HttpRequest , HttpResponse , capture_feedbackTxtResp1 , capture_feedbackTxtResp2 ;
+	- user29 : user detect_language => bot29 : chatbot HttpRequest , HttpResponse , detect_languageTxtResp1 ;
+	- user30 : user log_status => bot30 : chatbot HttpRequest , HttpResponse , log_statusTxtResp1 ;
+	- user31 : user retrieve_information => bot31 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 {
+		=> user32 : user ask_information_no_servreq_no => bot32 : chatbot retrieve_information_noTxtResp1 {
+			=> user33 : user ask_information_no_servreq_no => bot33 : chatbot ask_information_no_servreq_noTxtResp1 {
+				=> user34 : user ask_information_no_servreq_no => bot34 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 ;
+				=> user35 : user retrieve_information_no_servreqyes_emailyes_feedyes => bot35 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+			} ;
+			=> user36 : user retrieve_information_no_servreqyes => bot36 : chatbot HttpRequest , HttpResponse , retrieve_information_no_servreqyesTxtResp1 {
+				=> user37 : user ask_information_no_servreq_no => bot37 : chatbot ask_information_no_servreq_noTxtResp1 {
+					=> user38 : user ask_information_no_servreq_no => bot38 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 ;
+					=> user39 : user retrieve_information_no_servreqyes_emailyes_feedyes => bot39 : chatbot HttpRequest , HttpResponse , retrieve_information_no_servreqyesTxtResp1 ;
+				} ;
+				=> user40 : user ask_information_no_servreq_yes_emailyes => bot40 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 {
+					=> user41 : user retrieve_information_no_servreqyes_emailyes_feedyes => bot41 : chatbot HttpRequest , HttpResponse , ask_information_no_servreq_no_feedyesTxtResp1 ;
+					=> user42 : user ask_information_no_servreq_no => bot42 : chatbot ask_information_no_servreq_yes_emailyes_feednoTxtResp1 ;
+				} ;
+			} ;
+		} ;
+		=> user43 : user make_appointment_yes => bot43 : chatbot retrieve_information_yesTxtResp1 ;
+	} ;
+	- user44 : user "Default Fallback Intent" => bot44 : chatbot "Default Fallback IntentTxtResp1" ;
+

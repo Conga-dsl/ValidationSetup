@@ -1,0 +1,174 @@
+Chatbot "fulfillment-regex" language : en
+
+intents :
+
+"Get Employee ID" :
+	inputs in en {
+		"The ID is " ( P9Y82X ) [ employeeID ] ,
+		"It\'s " ( "29HR1T" ) [ employeeID ] ,
+		"Employee ID " ( SL2Q83 ) [ employeeID ] ,
+		( ZA293W ) [ employeeID ] " is my ID" ,
+		"My Employee ID is " ( QRY396 ) [ employeeID ]
+	}
+	parameters :
+		employeeID : entity text ;
+
+"Default Welcome Intent" :
+	inputs in en {
+		Greetings ,
+		"What\'s up!" ,
+		"Hey!" ,
+		"Good Morning" ,
+		Hi ,
+		Hello
+}
+
+"Get Employee ID - yes" :
+	inputs in en {
+		yes ,
+		"okay I will" ,
+		"why not" ,
+		"yes that\'s alright" ,
+		"yes I do" ,
+		exactly ,
+		"of course" ,
+		"yep that\'s ok" ,
+		okay ,
+		ok ,
+		"for sure" ,
+		sg ,
+		"yes that\'t ok" ,
+		"I agree" ,
+		"yes you can do it" ,
+		"I don\'t mind" ,
+		"that one works" ,
+		"that works" ,
+		"sure why not" ,
+		perfect ,
+		"yep that\'s right" ,
+		"I think so" ,
+		"yes I agree" ,
+		sure ,
+		"sounds correct" ,
+		"sounds good" ,
+		"that\'s correct" ,
+		"go ahead" ,
+		"do it" ,
+		"it\'s fine" ,
+		yeah ,
+		"yes please" ,
+		"it\'s okay" ,
+		"alright why not" ,
+		alright ,
+		right ,
+		"it looks perfect" ,
+		"yes I can" ,
+		yup ,
+		yep ,
+		confirm ,
+		absolutely
+}
+
+"Get Employee ID - no" :
+	inputs in en {
+		"thanks but no" ,
+		"no way" ,
+		^no ,
+		"no no don\'t" ,
+		na ,
+		"no it isn\'t" ,
+		"don\'t" ,
+		"nah I\'m good" ,
+		"no I cannot" ,
+		"I can\'t" ,
+		nothing ,
+		"no that\'s okay" ,
+		"no not really" ,
+		"nope not really" ,
+		nope ,
+		"thanks but not this time" ,
+		"I don\'t think so" ,
+		"I disagree" ,
+		"no maybe next time" ,
+		"not this time" ,
+		"no don\'t" ,
+		"no we are good" ,
+		"don\'t do it" ,
+		"no that\'s be all" ,
+		"not right now" ,
+		"nothing else thanks" ,
+		"no thanks" ,
+		"no that\'s ok" ,
+		"I don\'t want that" ,
+		"definitely not" ,
+		"nothing else" ,
+		not ,
+		"not at all" ,
+		"no never" ,
+		never ,
+		"no way no" ,
+		"not really" ,
+		nah ,
+		"I don\'t" ,
+		"I don\'t want" ,
+		"not today" ,
+		"not interested" ,
+		"no that\'s fine thank you" ,
+		"I\'m not"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-test-agent-v2-dea27.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Get Employee IDTxtResp1" :
+		inputs in en {
+			"Thanks, I have noted down your Employee ID which is " "Can you please confirm if this is correct? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! Welcome to Employee Assistant. Can you please tell me your Employee ID? " ,
+			"Hello! Welcome to Employee Assistant. Can you please tell me your Employee ID? " ,
+			"Good day! Welcome to Employee Assistant. Can you please tell me your Employee ID? " ,
+			"Greetings! Welcome to Employee Assistant. Can you please tell me your Employee ID? "
+	}
+	text response "Get Employee ID - yesTxtResp1" :
+		inputs in en {
+			"Great! How can I help you? " ,
+			"Thanks for confirming. Please tell me how I can help you. "
+	}
+	text response "Get Employee ID - noTxtResp1" :
+		inputs in en {
+			"No problem at all. Can you please tell your Employee ID again? " ,
+			"OK. Please say your Employee ID one more time please. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "Get Employee ID" => bot1 : chatbot HttpRequest , HttpResponse , "Get Employee IDTxtResp1" {
+		=> user2 : user "Get Employee ID - yes" => bot2 : chatbot "Get Employee ID - yesTxtResp1" ;
+		=> user3 : user "Get Employee ID - no" => bot3 : chatbot "Get Employee ID - noTxtResp1" ;
+	} ;
+	- user4 : user "Default Welcome Intent" => bot4 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" ;
+

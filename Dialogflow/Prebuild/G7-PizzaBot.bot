@@ -1,0 +1,388 @@
+Chatbot "G7-PizzaBot" language : en
+
+intents :
+
+	"OrderPizza - yes - deliverytype" :
+		inputs in en {
+			"please " ( deliver ) [ deliverytype ] " it to my address" ,
+			"i will come and " ( "pick it up" ) [ deliverytype ] " myself" ,
+			( dine ) [ deliverytype ] " is good in a restaurant" ,
+			"i want to " ( "pick it up" ) [ deliverytype ] ,
+			( "dine in" ) [ deliverytype ] " is good" ,
+			"I want to " ( "dine in" ) [ deliverytype ] ,
+			( delivery ) [ deliverytype ] ,
+			( deliver ) [ deliverytype ] ,
+			( "pick up" ) [ deliverytype ] ,
+			"please " ( deliver ) [ deliverytype ] " it" ,
+			( dinein ) [ deliverytype ]
+		}
+		parameters :
+			deliverytype : entity DeliveryType ;
+
+	"OrderPizza - yes" :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			sg ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"I don\'t mind" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"I think so" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			"alright why not" ,
+			alright ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			^hi ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			"hello there" ,
+			"a good day"
+	}
+
+	"OrderPizza - yes - deliverytype - contact" :
+		inputs in en {
+			"my address is " ( "235 ouellette street" ) [ address ] " my phone number is " ( "444-444-4444" ) [ "phone-number" ] ,
+			"my phone " ( "555-555-5555" ) [ "phone-number" ] ,
+			"my phone number is " ( "111-111-1111" ) [ "phone-number" ] ,
+			( "111-111-1111" ) [ "phone-number" ] ,
+			( "223 university avenue" ) [ address ] ,
+			"my address is " ( "235 ouellette street" ) [ address ] ,
+			"i am " ( smith ) [ person ] ,
+			"it is for " ( "john smith" ) [ person ] ,
+			( "mary maple" ) [ person ] ,
+			"I am " ( "paul green" ) [ person ] ,
+			"my name is " ( "john smith" ) [ person ]
+		}
+		parameters :
+			person : entity text , required , prompts in en [ "Please enter your name." ] ;
+			"phone-number" : entity text , required , prompts in en [ "Ok $person, please enter your phone number." ] ;
+			address : entity text , required , prompts in en [ "And, for the last step, please enter your address." ] ;
+
+	OrderPizza :
+		inputs in en {
+			( "extra large" ) [ Size ] " " ( thick ) [ Crust ] " crust " ( "no sauce" ) [ Sauce ] " with " ( beef ) [ Toppings ] " and " ( spinach ) [ Toppings ] ,
+			( small ) [ Size ] " " ( beef ) [ Toppings ] " pizza with " ( "no drink" ) [ Drink ] ,
+			( small ) [ Size ] " one" ,
+			( big ) [ Size ] " " ( regular ) [ Crust ] " " ( onion ) [ Toppings ] " pizza with " ( pepsi ) [ Drink ] " and " ( hot ) [ Sauce ] " sauce" ,
+			( big ) [ Size ] " " ( regular ) [ Crust ] " " ( onion ) [ Toppings ] "  " ( beef ) [ Toppings ] " pizza with " ( pepsi ) [ Drink ] " and " ( hot ) [ Sauce ] " sauce" ,
+			( pepsi ) [ Drink ] " " ( small ) [ Size ] ,
+			( mushrooms ) [ Toppings ] " " ( crispy ) [ Crust ] ,
+			( "coca cola" ) [ Drink ] ,
+			( mushroom ) [ Toppings ] ,
+			( thin ) [ Crust ] ,
+			( crispy ) [ Crust ] ,
+			"do you have " ( small ) [ Size ] " pizza " ( regular ) [ Crust ] " crust " ( mushroom ) [ Toppings ] " " ( bacon ) [ Toppings ] " " ( beef ) [ Toppings ] " " ( chili ) [ Sauce ] " sauce with " ( pepsi ) [ Drink ] " topping" ,
+			"order " ( large ) [ Size ] " " ( crispy ) [ Crust ] " crust pizza with " ( bbq ) [ Sauce ] " sauce and " ( pepsi ) [ Drink ] ,
+			"order a " ( medium ) [ Size ] " pizza with " ( "coca cola" ) [ Drink ] ,
+			"I want to order a " ( small ) [ Size ] " pizza with " ( bacon ) [ Toppings ] " and " ( mushrooms ) [ Toppings ] ,
+			"I want to order a " ( small ) [ Size ] " pizza with " ( beef ) [ Toppings ] ,
+			"I want to order a " ( small ) [ Size ] " pizza" ,
+			"can I order a pizza" ,
+			"i want to have pizza" ,
+			"i would like to order a pizza" ,
+			"i want pizza" ,
+			"Order pizza"
+		}
+		parameters :
+			Size : entity PizzaSize , required , prompts in en [ "Great!  What pizza size would you like to order? Small, Medium, Large or X-large?" ] ;
+			Toppings : entity PizzaToppings , required , prompts in en [ "And, What toppings would you like?" ] ;
+			Crust : entity PizzaCrust , required , prompts in en [ "Good Choice! What type of crust would you like? Regular, Thin or Crispy?" , "Perfect Choice! How do you like your pizza crust? Regular, Thin or Crispy?" ] ;
+			Sauce : entity PizzaSauce , required , prompts in en [ "What kind of extra sauce would you like on your pizza? You can choose BBQ, Garlic, , Ketchup, or Chili sauces." , "Do you want any Extra sauce on your pizza? You can choose BBQ, Garlic, , Ketchup, or Chili sauces." ] ;
+			Drink : entity SideDrinks , required , prompts in en [ "What kind of drink would you like beside your pizza? We have Pepsi, Coca-Cola, Canada-Dry, Fanta and also Water" , "And How about a drink? We have Pepsi, Coca-Cola, Canada-Dry, Fanta and also Water." ] ;
+
+	"OrderPizza - yes - deliverytype - contact - yes" :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"It\'s good" ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"that works" ,
+			perfect ,
+			"yep that\'s right" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			right ,
+			"it looks perfect" ,
+			"yes I can" ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"OrderPizza - no" :
+		inputs in en {
+			^no ,
+			"thanks but no" ,
+			"no way" ,
+			"no no don\'t" ,
+			na ,
+			"no it isn\'t" ,
+			"don\'t" ,
+			"nah I\'m good" ,
+			"no I cannot" ,
+			"I can\'t" ,
+			nothing ,
+			"no that\'s okay" ,
+			"no not really" ,
+			"nope not really" ,
+			nope ,
+			"thanks but not this time" ,
+			"I don\'t think so" ,
+			"I disagree" ,
+			"no maybe next time" ,
+			"not this time" ,
+			"no don\'t" ,
+			"no we are good" ,
+			"don\'t do it" ,
+			"no that\'s be all" ,
+			"not right now" ,
+			"nothing else thanks" ,
+			"no thanks" ,
+			"no that\'s ok" ,
+			"I don\'t want that" ,
+			"definitely not" ,
+			"nothing else" ,
+			not ,
+			"not at all" ,
+			"no never" ,
+			never ,
+			"no way no" ,
+			"not really" ,
+			nah ,
+			"I don\'t" ,
+			"I don\'t want" ,
+			"not today" ,
+			"not interested" ,
+			"no that\'s fine thank you" ,
+			"I\'m not"
+	}
+
+	"OrderPizza - yes - deliverytype - contact - no" :
+		inputs in en {
+			"no way" ,
+			^no ,
+			"no no don\'t" ,
+			na ,
+			"nope not really" ,
+			nope ,
+			"I disagree" ,
+			not ,
+			"not at all" ,
+			"no way no" ,
+			"not really" ,
+			"I don\'t"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+	SpecialDailyOffer :
+		inputs in en {
+			"any suggestions" ,
+			"what do you suggest" ,
+			"what is good" ,
+			"what do you have" ,
+			"any special deals" ,
+			( "today\'s" ) [ "date-time" ] " dealtoday\'s offer" ,
+			( today ) [ "date-time" ] "\'s deal" ,
+			"special deal" ,
+			"daily offer" ,
+			"special offer"
+		}
+		parameters :
+			"date-time" : entity text ;
+
+entities :
+	Simple entity PizzaSauce :
+		inputs in en {
+			Garlic synonyms Garlic , "Garlic Sauce"
+			BBQ synonyms BBQ , barbeque
+			Chili synonyms Chili , hot , "red pepper"
+			Ketchup synonyms Ketchup , normal
+			"No Extra" synonyms "No Sauce" , nosauce , nosauces , "no sauces"
+	}
+	Simple entity PizzaCrust :
+		inputs in en {
+			Regular synonyms Regular , Normal , Thick
+			Thin synonyms Thin , Italian , thin
+			Crispy synonyms Crispy , Cracker
+	}
+	Simple entity PizzaSize :
+		inputs in en {
+			Small synonyms Small , S , Tiny , "Small one"
+			Medium synonyms Medium , M , Mid , Midsize , "Mid size"
+			Large synonyms Large , L , Big , "big one" , "large one"
+			"X-large" synonyms "X-large" , "Extra large" , "Very big" , bigget , Largest
+	}
+	Simple entity PizzaToppings :
+		inputs in en {
+			Beef synonyms Beef
+			Spinach synonyms Spinach
+			Pepperoni synonyms Pepperoni
+			Bacon synonyms Bacon
+			Sausage synonyms Sausage
+			Chicken synonyms Chicken
+			"Black olives" synonyms "Black olives"
+			Onion synonyms Onion
+			Mushroom synonyms Mushroom
+			Tomato synonyms Tomato
+	}
+	Simple entity DeliveryType :
+		inputs in en {
+			Pickup synonyms Pickup , "pick-up" , "pick up" , "pick it up"
+			Delivery synonyms Delivery , deliver
+			"Dine-In" synonyms "Dine-In" , "dine in" , dine
+	}
+	Simple entity SideDrinks :
+		inputs in en {
+			"Coca-cola" synonyms "Coca-cola" , coke , pops , "coca cola"
+			Pepsi synonyms Pepsi
+			Water synonyms Water
+			"Canada-Dry" synonyms "Canada-Dry" , canadadry , "canada dry"
+			Fanta synonyms Fanta
+			"No drinks" synonyms "No drinks" , nodrinks , "without drink" , "not drink" , "not drinks" , nothing , "no thank you" , "no drink"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "OrderPizza - yes - deliverytypeTxtResp1" :
+		inputs in en {
+			"Ok! I will prepare your order for " "enter your name: "
+	}
+	text response "OrderPizza - yesTxtResp1" :
+		inputs in en {
+			"Perfect! How would you like to receive your order? Pickup at the store? dine in? or delivery to your address? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello! Welcome to G7 PizzaBot!\nHow can I help you? "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			" "
+	}
+	text response "OrderPizza - yes - deliverytype - contactTxtResp1" :
+		inputs in en {
+			"Thank you " [ "OrderPizza - yes - deliverytype - contact.person" ] ".Your order will be for " [ "OrderPizza - yes - deliverytype - contact.address" ] "and your phone number is " [ "OrderPizza - yes - deliverytype - contact.phone-number" ] ".\nIs this contact information correct? "
+	}
+	text response OrderPizzaTxtResp1 :
+		inputs in en {
+			"Great! Your " [ "OrderPizza.Size" ] " " [ "OrderPizza.Crust" ] "crust pizza with " [ "OrderPizza.Toppings" ] "and, " [ "OrderPizza.Sauce" ] "sauce with " [ "OrderPizza.Drink" ] "has been placed successfully! Do you confirm? " ,
+			"Perfect! Your " [ "OrderPizza.Size" ] " " [ "OrderPizza.Crust" ] "crust pizza with " [ "OrderPizza.Toppings" ] "and, " [ "OrderPizza.Sauce" ] "sauce with " [ "OrderPizza.Drink" ] "has been placed successfully! Do you confirm? "
+	}
+	text response "OrderPizza - yes - deliverytype - contact - yesTxtResp1" :
+		inputs in en {
+			"Superb! Your order will be ready in 30 minutes. You can pay for your order online via this link. "
+	}
+	text response "OrderPizza - noTxtResp1" :
+		inputs in en {
+			"Ok! What kind of pizza would you like? "
+	}
+	text response "OrderPizza - yes - deliverytype - contact - noTxtResp1" :
+		inputs in en {
+			"Oh! We can set your contact information again. Please enter your name. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, I don\'t have any answers to that, can you rephrase? "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in en {
+			"I can help you with ordering a delicious Pizza! "
+	}
+	text response SpecialDailyOfferTxtResp1 :
+		inputs in en {
+			"Today\'s special offer is our X-large regular crust bacon mushroom pizza, with 2 Coca-Colas, Only for 11.59$!\nDo you want to order this special offer? " ,
+			"We have an offer for you! You can have our X-large regular crust bacon mushroom pizza, with 2 Coca-Colas for 11.59$!\nDo you want to order this special offer? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user2 : user OrderPizza => bot2 : chatbot OrderPizzaTxtResp1 {
+		=> user3 : user "OrderPizza - yes - deliverytype" => bot3 : chatbot "OrderPizza - yes - deliverytypeTxtResp1" {
+			=> user4 : user "OrderPizza - yes - deliverytype - contact" => bot4 : chatbot "OrderPizza - yes - deliverytype - contactTxtResp1" { => user5 : user "OrderPizza - yes - deliverytype - contact - yes" => bot5 : chatbot "OrderPizza - yes - deliverytype - contact - yesTxtResp1" ; => user6 : user "OrderPizza - yes - deliverytype - contact - no" => bot6 : chatbot "OrderPizza - yes - deliverytype - contact - noTxtResp1" ; => back to user3 ; => back to user4 ; } ; => back to user3 ;
+		} ;
+		=> user7 : user "OrderPizza - yes - deliverytype - contact" => bot7 : chatbot "OrderPizza - yes - deliverytype - contactTxtResp1" {
+			=> user8 : user "OrderPizza - yes - deliverytype - contact - yes" => bot8 : chatbot "OrderPizza - yes - deliverytype - contact - yesTxtResp1" ;
+			=> user9 : user "OrderPizza - yes - deliverytype - contact - no" => bot9 : chatbot "OrderPizza - yes - deliverytype - contact - noTxtResp1" ;
+			=> user10 : user "OrderPizza - yes - deliverytype" => bot10 : chatbot "OrderPizza - yes - deliverytypeTxtResp1" {
+				=> back to user10 ; => back to user7 ;
+			} ;
+			=> back to user7 ;
+		} ;
+		=> user11 : user "OrderPizza - yes" => bot11 : chatbot "OrderPizza - yesTxtResp1" ;
+		=> user12 : user "OrderPizza - no" => bot12 : chatbot "OrderPizza - noTxtResp1" ;
+	} ;
+	- user13 : user "Default Fallback Intent" => bot13 : chatbot "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" ;
+	- user14 : user SpecialDailyOffer => bot14 : chatbot SpecialDailyOfferTxtResp1 ;
+

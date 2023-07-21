@@ -1,0 +1,678 @@
+Chatbot "kube-django-ng" language : en , nl
+
+intents :
+
+	"[usecase 5] Undo transaction" :
+		inputs in en {
+			"Undo my transaction from last night" ,
+			"Please cancel my transaction" ,
+			"By accident I made a transaction to IBAN " ( "11111" ) [ account ] " how can I undo this?" ,
+			"Accidentally, I transferred the wrong amount. How can I cancel this?" ,
+			"Accidentally, I transferred the wrong amount. How can I undo this transaction?" ,
+			"By accident I transferred money to a wrong account, how can I undo this?" ,
+			"How can I undo a transaction" ,
+			"Can I remove a transaction" ,
+			"I want to undo a transaction" ,
+			"I would like to cancel a scheduled transaction"
+		}
+		inputs in nl {
+			"Ik heb naar het verkeerde bank account geld overgemaakt, wat nu?" ,
+			"Ik wil graag " ( een ) [ account ] " transactie ongedaan maken." ,
+			"Hoe kan ik een transactie cancellen?" ,
+			"Hoe kan ik een transactie ongedaan maken?" ,
+			"I heb per ongeluk een bedrag overgemaakt naar het verkeerde account nummer, wat nu?" ,
+			"Ik heb per ongeluk geld overgemaakt aan IBAN " ( "11122" ) [ account ] ", hoe kan ik dit ongedaan maken?"
+		}
+		parameters :
+			account : entity float , required , prompts in en [ "I\'m sorry to hear, what\'s the IBAN number of the wrong transaction?" , "No problem, let me check this. What\'s the IBAN number of the wrong transaction?" ] prompts in nl [ "Oh nee. Wat is het IBAN nummer van de verkeerde transactie?" , "Wat vervelend. Ik zal voor u kijken. Kunt u mij het IBAN nummer doorgeven?" ] ;
+
+	"[payload] What\'s your location" :
+		inputs in en {
+			"Where are you?" ,
+			"Where is your office?" ,
+			"Where are you located?" ,
+			"What\'s your location?"
+	}
+
+	"[payload] What\'s your website" :
+		inputs in en {
+			"Give me a a hyperlink" ,
+			"Give me a rich card" ,
+			"What\'s your website?" ,
+			"What\'s the url for your website?"
+	}
+
+	"[usecase 1b] How many days will it take?" :
+		inputs in en {
+			"How long" ,
+			"How long will it take" ,
+			"When will this been transferred?" ,
+			"When will I receive it?" ,
+			"When will this be done?" ,
+			"When will the transaction been processed?" ,
+			"How long will that take?" ,
+			"How many days will it take?"
+		}
+		inputs in nl {
+			"Wat is de wachttijd?" ,
+			"Wat bedraagt de wachttijd?" ,
+			"Hoe lang moet ik hier op wachten?" ,
+			"Hoe lang duurt het verwerken?" ,
+			"Hoe lang duur het om dit te processen?" ,
+			"Hoe lang duurt het?"
+	}
+
+	"[usecase 8] Transfer Call" :
+		inputs in en {
+			"Thank you, I would like to speak to someone." ,
+			"Yep. I would like to speak to someone." ,
+			"Yes please connect me through" ,
+			"Yeah, please connect me to a futurebank employee." ,
+			"Yes please transfer my call" ,
+			"Please transfer my call" ,
+			"Can you transfer my call" ,
+			"Please transfer me to an employee" ,
+			"I would like to talk to someone" ,
+			"I would like to talk to ING" ,
+			"I would like to talk to an employee" ,
+			"I would like to speak with an employee"
+	}
+
+	"[usecase 6] What\'s my balance" :
+		inputs in en {
+			"How much do I have in my account?" ,
+			"What\'s the balance?" ,
+			"Can you tell me my account balance?" ,
+			"How much money do I have in my account?" ,
+			"What\'s my balance?" ,
+			"What is my bank saldo?" ,
+			"What\'s my saldo?"
+	}
+
+	"[usecase 4] Mortgage request" :
+		inputs in en {
+			"I need to get a loan" ,
+			"I want to get a loan" ,
+			"I want to borrow money" ,
+			"I need a " ( mortgage ) [ paymentcategories ] ,
+			"I want to take a " ( mortgage ) [ paymentcategories ]
+		}
+		inputs in nl {
+			"Ik wil graag geld lenen" ,
+			"Ik heb een lening nodig" ,
+			"Ik wil een " ( huis ) [ housing_type ] " kopen en ik heb een lening nodig" ,
+			"Ik graag een lening afsluiten" ,
+			"Ik wil een lening afsluiten"
+		}
+		parameters :
+			housing_type : entity housing_type ;
+			paymentcategories : entity paymentcategories ;
+
+	"[usecase 6] What\'s my saldo - problem" :
+		inputs in en {
+			"I doubt that\'s the case." ,
+			"Impossible." ,
+			"That can not be true." ,
+			"No way! That can\'t happen." ,
+			"Huh? How is that possible?" ,
+			"That can\'t be possible." ,
+			"No. That\'s impossible." ,
+			"Wait. That\'s can\'t be!"
+	}
+
+	"[usecase 7] Last 3 transactions" :
+		inputs in en {
+			"Yes. I want to see the history." ,
+			"Yes. Please give me an overview." ,
+			"I want to receive an overview of my last purchases." ,
+			"Please give me an overview of my last purchases" ,
+			"Yes please tell me the last 3 transations." ,
+			"Yes, what are the last 3 transactions." ,
+			"Yes!"
+	}
+
+	"[usecase 4] Mortgage request - custom" :
+		inputs in en {
+			"We are looking to for a " ( villa ) [ housing_type ] "." ,
+			( Apartment ) [ housing_type ] ,
+			"We want to move to a new " ( apartment ) [ housing_type ] ,
+			"We want to buy a " ( house ) [ housing_type ] ,
+			"I want to buy a " ( house ) [ housing_type ] ,
+			"I want a " ( house ) [ housing_type ] ,
+			"A " ( bungalow ) [ housing_type ]
+		}
+		parameters :
+			housing_type : entity housing_type , required , prompts in en [ "What type of housing are you looking for? Apartment, House, Villa or Bungalow?" ] ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"Hey there" ,
+			Hi ,
+			Hey ,
+			Hello ,
+			Hallo
+		}
+		inputs in nl {
+			Hallo ,
+			Hey ,
+			Hoi ,
+			Hi
+	}
+
+	"[search] Spent" :
+		inputs in en {
+			"How much have I spent on " ( restaurants ) [ category ] " lately?" ,
+			"How much have I spent on " ( restaurants ) [ category ] ,
+			"What did I spent on " ( food ) [ category ] " this month?" ,
+			"What did I spent on " ( restaurants ) [ category ] ,
+			"Show me all payments about " ( vacations ) [ category ] ,
+			"Show me what I spent on " ( vacations ) [ category ] "?" ,
+			"How much money did I spent on " ( shoes ) [ category ] "?" ,
+			"How much did I spent on " ( clothing ) [ category ]
+		}
+		inputs in nl {
+			"Hoeveel spendeer ik aan " ( taxis ) [ category ] "?" ,
+			"Hoeveel heb ik betaald aan " ( restaurants ) [ category ] "?" ,
+			"Laat me alle " ( boodschappen ) [ category ] " uitgaves zien." ,
+			"Wat zijn mijn " ( schoenen ) [ category ] " uitgaves?" ,
+			"Hoeveel geef ik uit aan " ( schoenen ) [ category ] "?" ,
+			"Hoeveel geld heb ik uitgegeven aan " ( boodschappen ) [ category ] "?" ,
+			"Hoeveel heb ik de afgelopen maand besteed aan " ( restaurants ) [ category ] "?" ,
+			"Hoeveel heb ik besteed aan " ( restaurants ) [ category ] "?"
+		}
+		parameters :
+			category : entity paymentcategories ;
+
+	"[usecase 2] bIock/renew a service" :
+		inputs in en {
+			"I want to " ( renew ) [ cardaction ] " my " ( "bank pass" ) [ service ] ,
+			"I want a " ( new ) [ cardaction ] " " ( creditcard ) [ service ] ,
+			"Could you please " ( block ) [ cardaction ] " my " ( card ) [ service ] " for now" ,
+			( Stop ) [ cardaction ] " my " ( card ) [ service ] ,
+			( Block ) [ cardaction ] " my " ( card ) [ service ] " which ends with " ( "12" ) [ any ] ,
+			"I want to " ( disable ) [ cardaction ] " my " ( card ) [ service ] ,
+			"Can you please " ( block ) [ cardaction ] " my " ( card ) [ service ] ,
+			"I would like to " ( block ) [ cardaction ] " my " ( card ) [ service ]
+		}
+		inputs in nl {
+			"Ik wil mijn " ( bankpas ) [ service ] " " ( vernieuwen ) [ cardaction ] ,
+			"Ik wil pas mijn " ( rekening ) [ service ] " " ( "123456" ) [ any ] " " ( blokkeren ) [ cardaction ] " als mijn partner al een account heeft" ,
+			"Ik wil mijn " ( pas ) [ service ] " " ( blokkeren ) [ cardaction ] " voor rekening " ( "123456" ) [ any ] ,
+			"Ik wil graag mijn " ( pas ) [ service ] " " ( blokkeren ) [ cardaction ] ,
+			"Ik heb pas een " ( rekening ) [ service ] " gekregen die ik wil " ( blokkeren ) [ cardaction ]
+		}
+		parameters :
+			service : entity service , required , prompts in nl [ "Gaat dit om je bankpas of om je creditcard?" , "Bedoel je, je bankpas of je creditcard?" ] prompts in en [ "Do you mean your creditcard or debitcard?" ] ;
+			cardaction : entity cardaction , required , prompts in nl [ "Wil je dit vernieuwen of blokkeren?" , "Blokkeren of vernieuwen?" ] prompts in en [ "What would you like to do? I can block the card or renew it." ] ;
+			any : entity text , required , prompts in nl [ "Wat is het kaart nummer?" ] prompts in en [ "No problem. I just need to know the number of your current card." , "Of course. What\'s the number that\'s on your current card?" ] ;
+
+	"[usercase 1] transfer money" :
+		inputs in en {
+			"Give " ( "14.50 euro" ) [ amount ] " to " ( NL20INGB0001234567 ) [ account ] ,
+			"Please send " ( "12 euro" ) [ amount ] " to " ( NL20INGB0001234567 ) [ account ] " In " ( Germany ) [ destination ] ,
+			"I like to transfer money to " ( destination ) [ destination ] ,
+			"I like to send money" ,
+			"I have money that I want to tranfer" ,
+			"I like to transfer " ( "400 euro" ) [ amount ] " to my friend." ,
+			"I like to transfer " ( "40 dollar" ) [ amount ] " to " ( destination ) [ destination ] ,
+			"I like to transfer money" ,
+			"I would like to transfer money"
+		}
+		inputs in nl {
+			"Maak geld over." ,
+			"Ik wil geld sturen" ,
+			"Ik wil graag geld overmaken." ,
+			"Ik wil graag 100 euro overmaken naar " ( Rusland ) [ destination ] "." ,
+			"Ik wil graag geld overmaken naar " ( Rusland ) [ destination ] "."
+		}
+		parameters :
+			account : entity ibannumber , required , prompts in en [ "To which bank IBAN number do you want to transfer money?" , "What bank account number would you like to transfer money to?" ] prompts in nl [ "Naar welk rekening nummer?" ] ;
+			amount : entity text , required , prompts in en [ "How much do you want to transfer?" , "What\'s the amount you want to transfer?" ] prompts in nl [ "Wat is het bedrag?" , "Hoeveel wil je overmaken?" ] ;
+			destination : entity text , required , prompts in en [ "What\'s the destination country?" ] prompts in nl [ "Naar welke locatie?" , "Naar welk land?" ] ;
+
+	"[help]" :
+		inputs in en {
+			"What tasks will you do?" ,
+			"What can you do for me?" ,
+			"What can I ask" ,
+			"How can you help me" ,
+			"I need help"
+		}
+		inputs in nl {
+			"Welke vragen mag ik stellen?" ,
+			"Hoe kun jij mij helpen?" ,
+			"Wat kan ik aan je vragen?" ,
+			"Huh, help?" ,
+			"Help mij" ,
+			"Ik heb hulp nodig"
+	}
+
+	"[usercase1] transfer money - costs" :
+		inputs in en {
+			"How much will the transfer cost?" ,
+			"How much does it cost?" ,
+			"What are the costs for the transfer?" ,
+			"How much will it cost?" ,
+			"What\'s the price for this transfer?" ,
+			"How much will this cost?"
+	}
+
+	"[usecase 3] paperwork insurance" :
+		inputs in en {
+			"I would love to buy a new computer but I need help with my paperwork" ,
+			"I needs help to fill out the paperwork for my insurance" ,
+			paperwork ,
+			"I need help with my paper work" ,
+			"I would love to buy a new computer but I need help with my paper work" ,
+			"I need help with filling out paperwork" ,
+			"How do I need to fill out the paperwork" ,
+			"I need help with filling out insurance paperwork"
+	}
+
+	"[usecase 2] bIock/renew a service - yes" :
+		inputs in en {
+			sure ,
+			okay ,
+			"sounds correct" ,
+			"that works" ,
+			"yep that\'s ok" ,
+			"yes that\'s alright" ,
+			"I think so" ,
+			sg ,
+			"yes I agree" ,
+			"I don\'t mind" ,
+			"I agree" ,
+			"yes I do" ,
+			"for sure" ,
+			ok ,
+			"yes that\'t ok" ,
+			"that one works" ,
+			"yes you can do it" ,
+			perfect ,
+			yes ,
+			"why not" ,
+			"of course" ,
+			"yep that\'s right" ,
+			"okay I will" ,
+			exactly ,
+			"sure why not" ,
+			absolutely ,
+			"it\'s okay" ,
+			"it\'s fine" ,
+			"go ahead" ,
+			confirm ,
+			"sounds good" ,
+			alright ,
+			yeah ,
+			yup ,
+			"yes please" ,
+			"do it" ,
+			"yes I can" ,
+			"it looks perfect" ,
+			"that\'s correct" ,
+			right ,
+			"alright why not" ,
+			yep
+		}
+		inputs in nl {
+			^ja ,
+			"doe maar" ,
+			"dat wil ik wel" ,
+			"klinkt goed" ,
+			"mee eens" ,
+			"ja graag" ,
+			prima ,
+			"dat klopt" ,
+			akkoord ,
+			natuurlijk
+	}
+
+	"[search] Salary" :
+		inputs in en {
+			"Did I receive " ( "bank transfers" ) [ category ] "?" ,
+			"Did I receive a " ( refund ) [ category ] "?" ,
+			"Did my employer transfer " ( salary ) [ category ] "?" ,
+			"Did my employer " ( pay ) [ category ] " me?" ,
+			"Where is my " ( payslip ) [ category ] "?" ,
+			"How much " ( salary ) [ category ] " did I receive?" ,
+			"When will I receive my " ( salary ) [ category ] "?" ,
+			"Did my company sent me my " ( salary ) [ category ] "?" ,
+			"Is my " ( salary ) [ category ] " already transferred?" ,
+			"Did I receive my " ( salary ) [ category ] " yet?"
+		}
+		inputs in nl {
+			"Wanneer krijg ik mijn " ( salaris ) [ category ] "?" ,
+			"Is mijn " ( salaris ) [ category ] " al binnen?" ,
+			"Heeft mijn werkgever mij al betaald?" ,
+			"Ben ik al  uitbetaald?" ,
+			"Hoeveel " ( salaris ) [ category ] " heb ik ontvangen?" ,
+			"Hoeveel " ( salaris ) [ category ] " heb ik deze maand gekregen?" ,
+			"Heb ik " ( loon ) [ category ] " ontvangen?" ,
+			"Heb ik mijn " ( salaris ) [ category ] " al ontvangen?" ,
+			"Heeft mijn werkgever de " ( salaris ) [ category ] " al gestort?" ,
+			"Is mijn " ( salaris ) [ category ] " al gestort?"
+		}
+		parameters :
+			category : entity incomingpayments ;
+
+	"Default Fallback Intent" Fallback :
+
+	"[goodbye]" :
+		inputs in en {
+			"Ok goodbye" ,
+			"No I am good" ,
+			"Bye now" ,
+			"Thank you" ,
+			Cheers ,
+			Bye ,
+			Goodbye ,
+			"No that\'s it!"
+		}
+		inputs in nl {
+			"Fijne dag nog" ,
+			Daag ,
+			"Dank je wel" ,
+			"Nee je hoeft niets meer te doen" ,
+			"Nee dat is het" ,
+			"Nee dat was het" ,
+			Doei
+	}
+
+	"[bot-first-greeting] Introduction" :
+		inputs in en {
+			botHi
+		}
+		inputs in nl {
+			Hoi ,
+			"Hoi Babs" ,
+			Gegroet ,
+			Hey ,
+			"Hey hallo" ,
+			"Hoi daar" ,
+			Hallo ,
+			Hi
+	}
+
+	"[usecase 7] Last 3 transactions - I did not do that" :
+		inputs in en {
+			"I am really sure this is not me." ,
+			"This can not be me." ,
+			"That can\'t be" ,
+			"I didn\'t do that, I don\'t even have an account." ,
+			"I did not do that!" ,
+			"I didn\'t make these transactions" ,
+			"No, not at all!"
+	}
+
+entities :
+	Simple entity incomingpayments :
+		inputs in en {
+			loteries synonyms casino , game , lotery , win
+			presents synonyms present , presents
+			refunds synonyms refund , refunds
+			salary synonyms job , pay , "pay slip" , "pay slips" , salary
+			transfers synonyms "bank transfers" , transfers
+	}
+	Regex entity ibannumber :
+		inputs in en {
+			pattern : "\\d{1} \\d{1} \\d{1} \\d{1} \\d{1} \\d{1} \\d{1} \\d{1} \\d{1} \\d{1}"
+			pattern : "\\d{10}"
+			pattern : "0 1 2 3 4 5 6 7 8 9"
+			pattern : "1 2 3 4 5 6 7 8 9 0"
+			pattern : "01.234.567.890"
+			pattern : "\\d{2}.\\d{3}.\\d{3}.\\d{3}"
+		}
+		inputs in nl {
+			pattern : "\\d{10}"
+	}
+	Simple entity service :
+		inputs in en {
+			creditcard synonyms amex , cc , creditcard , "gold card" , mastercard , visa
+			debitcard synonyms "atm card" , "bank pass" , card , "debit card"
+		}
+		inputs in nl {
+			creditkaart synonyms creditcard , creditkaart , kreditkaart
+			pas synonyms bankpas , debitcard , pas
+			rekening synonyms account , rekening
+	}
+	Simple entity paymentcategories :
+		inputs in en {
+			clothes synonyms clothes , clothing
+			flights synonyms "airplane tickets" , flights
+			fun synonyms fun , hobby
+			groceries synonyms food , groceries , supermarket
+			mortgage synonyms house , mortgage , rent
+			"public transport" synonyms "public transport" , trains , trams , transportation
+			restaurants synonyms dinner , dinners , "eating out" , lunch , restaurants
+			shoes synonyms boots , pumps , shoes , sneakers
+			shopping synonyms shopping
+			taxis synonyms cabs , taxis , ubers
+			transfer synonyms "bank transfer" , transfer
+			vacation synonyms holiday , "summer vacation" , vacation , wintersport
+		}
+		inputs in nl {
+			boodschappen synonyms "albert heijn" , boodschappen , supermarket
+			fun synonyms fun , hobbies
+			kleding synonyms kleding , kleren
+			ov synonyms "openbaar vervoer" , trams , treinen
+			restaurants synonyms dinner , dinners , lunch , restaurants , "uit eten"
+			schoenen synonyms pumps , schoenen , sneakers , "sport schoenen"
+			taxis synonyms taxis , ubers
+			transfer synonyms "bank transfer" , transfer
+			vakanties synonyms wintersport , "zomer vakantie"
+			vluchten synonyms "vliegtuig tickets"
+			winkelen synonyms aankopen , winkelen
+	}
+	Simple entity housing_type :
+		inputs in en {
+			H001 synonyms H001 , House
+			H002 synonyms H002 , Villa
+			H003 synonyms Apartement , H003
+			H004 synonyms Bungalow , H005
+		}
+		inputs in nl {
+			H001 synonyms H001 , huis
+			H002 synonyms H002 , villa
+			H003 synonyms H003 , appartement
+			H004 synonyms H004 , bungalow
+	}
+	Simple entity "sys.color" :
+		inputs in en {
+			"blue-red" synonyms "blue-red"
+			"blue-pink" synonyms "blue-pink"
+	}
+	Simple entity cardaction :
+		inputs in en {
+			blocked synonyms block , disable , stop
+			renewed synonyms new , renew
+		}
+		inputs in nl {
+			geblokkeerd synonyms annuleren , blocken , blockeren , blokkeren , geblockeerd , geblokkeerd , stopzetten
+			vernieuwd synonyms "nieuwe aanvragen" , vernieuwd , vernieuwen
+	}
+	Simple entity "sys.last-name" :
+		inputs in en {
+			a synonyms a
+			Boonstra synonyms Boonstra
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-gke-pipeline-savelee-192517.cloudfunctions.net/balance" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in nl {
+			request. text
+	}
+	text response "[usecase 5] Undo transactionTxtResp1" :
+		inputs in en {
+			"The transaction has been cancelled. "
+	}
+	text response "[usecase 5] Undo transactionTxtResp2" :
+		inputs in nl {
+			"De transactie is ongedaan gemaakt. "
+	}
+	text response "[payload] What\'s your locationTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "[payload] What\'s your websiteTxtResp3" :
+		inputs in en {
+			"Please have a look: "
+	}
+	text response "[usecase 1b] How many days will it take?TxtResp1" :
+		inputs in en {
+			"The receiving banks often take 2-4 days for funds to be released to customers to make sure it\'s not a fraudulent transaction. Can I help you with anything else? " ,
+			"The receiving banks often take 2-4 days for funds to be released to customers to make sure it\'s not a fraudulent transaction. Is there anything else I can help you? "
+	}
+	text response "[usecase 8] Transfer CallTxtResp3" :
+		inputs in en {
+			"No problem. I will connect you to a live agent. "
+	}
+	text response "[usecase 6] What\'s my balanceTxtResp1" :
+		inputs in en {
+			"You currently have: -8101.90 euro in you account. " ,
+			"Your balance is: -8101.90 euro "
+	}
+	text response "[usecase 4] Mortgage requestTxtResp1" :
+		inputs in nl {
+			"Wat voor soort woning zoekt u? Een huis, villa, appartement of bungalow? "
+	}
+	text response "[usecase 4] Mortgage requestTxtResp2" :
+		inputs in en {
+			"What type of housing are you looking for? House, Villa, Apartment or Bungalow? "
+	}
+	text response "[usecase 6] What\'s my saldo - problemTxtResp1" :
+		inputs in en {
+			"Would you like to see the 3 latest transactions? "
+	}
+	text response "[usecase 7] Last 3 transactionsTxtResp1" :
+		inputs in en {
+			"You just transferred 100 euro to account number 01.23.456.789, Germany. Today, at 3:05am you transferred 8000 euro to account number 98.76.543.210, AliExpress. Today, at 3:00 am you transferred 1 euro cent to account number 98.76.543.210, AliExpress. Are you familiar with these transactions? "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			"Hi there! I\'m Babs the banking bot. I can help you with transferring money. Or I can tell you how much balance you have in your account. How can I help you? " ,
+			"Hello! I\'m Babs the banking bot. I\'m here to help you with transferring money. Also, I can tell you how much money you have in your account. Please tell me, how can I help you? "
+	}
+	text response "Default Welcome IntentTxtResp3" :
+		inputs in nl {
+			"Hallo! " ,
+			"Goedendag! " ,
+			"Hoi Hoi "
+	}
+	text response "[usecase 2] bIock/renew a serviceTxtResp1" :
+		inputs in nl {
+			"Geen probleem! We hebben je " [ "[usecase 2] bIock/renew a service.service" ] "met kaart nummer: " [ "[usecase 2] bIock/renew a service.any" ] "Is er nog iets anders waarbij ik je mag helpen? "
+	}
+	text response "[usecase 2] bIock/renew a serviceTxtResp2" :
+		inputs in en {
+			"No problem. Your " [ "[usecase 2] bIock/renew a service.service" ] "is " [ "[usecase 2] bIock/renew a service.cardaction" ] "with the number " [ "[usecase 2] bIock/renew a service.any" ] "at the end. Is there anything else I can help you with? " ,
+			"Sure. I\'ve " [ "[usecase 2] bIock/renew a service.cardaction" ] "your " [ "[usecase 2] bIock/renew a service.service" ] "with the number " [ "[usecase 2] bIock/renew a service.any" ] "at the end. Is there something else I can do for you? "
+	}
+	text response "[usercase 1] transfer moneyTxtResp1" :
+		inputs in en {
+			"Alright, I will transfer " [ "[usercase 1] transfer money.amount" ] "to bank account " [ "[usercase 1] transfer money.account" ] "Is there anything else I can help you with? " ,
+			"Alright then, I will transfer " [ "[usercase 1] transfer money.amount" ] "to bank account " [ "[usercase 1] transfer money.account" ] "Can I help you with anything else? "
+	}
+	text response "[usercase 1] transfer moneyTxtResp2" :
+		inputs in nl {
+			"Ok! Ik ga " [ "[usercase 1] transfer money.amount" ] "overmaken naar " [ "[usercase 1] transfer money.destination" ] ". Is er nog iets anders waarbij ik je mag helpen? "
+	}
+	text response "[help]TxtResp2" :
+		inputs in en {
+			"I can help you with transferring money, requesting your balance or I can tell you your payment history. "
+	}
+	text response "[help]TxtResp3" :
+		inputs in nl {
+			"Ik kan een transactie maken of je pas blokkeren of vernieuwen? Wat zal ik vandaag voor je doen? " ,
+			"Ik kan je helpen met het overmaken van een bedrag, of ik kan kaarten vernieuwen en blokkeren. Wat wil je dat ik voor je doe? "
+	}
+	text response "[usercase1] transfer money - costsTxtResp2" :
+		inputs in en {
+			"It costs 15 euro to transfer money to " [ "[usercase 1] transfer money.destination" ]
+	}
+	text response "[usecase 3] paperwork insuranceTxtResp1" :
+		inputs in en {
+			"I am happy to help with your paperwork! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in nl {
+			"Ik begrijp het niet. " ,
+			"Ik versta het niet. "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+	text response "[goodbye]TxtResp1" :
+		inputs in nl {
+			"Okee. Een fijne dag nog. " ,
+			"Okee. Tot de volgende keer! "
+	}
+	text response "[goodbye]TxtResp2" :
+		inputs in en {
+			"Alright. Have a nice day! " ,
+			"See you next time. Good bye! "
+	}
+	text response "[bot-first-greeting] IntroductionTxtResp1" :
+		inputs in nl {
+			"Hoi! Ik ben Babs de BankingBot. Ik kan je helpen met geld overmaken, je saldo opvragen of ik kan je betaal historie vertellen. Wat kan ik voor je doen? " ,
+			"Hallo, ik ben Babs de BankingBot. Ik kan je helpen met het overmaken van bedragen, saldo opvragen of ik kan je betaal historie vertellen. Hoe mag ik je helpen? "
+	}
+	text response "[bot-first-greeting] IntroductionTxtResp2" :
+		inputs in en {
+			"Hi there! I\'m Babs the Bankingbot. I can help you with transferring money, requesting your balance, or I can tell you your payment history. What can I do for you? " ,
+			"Hello! I\'m Babs the Bankingbot. I can help you with transferring money, requesting your balance, or I can tell you your payment history. How can I help you? "
+	}
+	text response "[usecase 7] Last 3 transactions - I did not do thatTxtResp1" :
+		inputs in en {
+			"I can connect you to a futurebank employee. Would you like me to transfer your call? "
+	}
+
+flows :
+	- user1 : user "[usecase 5] Undo transaction" => bot1 : chatbot "[usecase 5] Undo transactionTxtResp1" , "[usecase 5] Undo transactionTxtResp2" ;
+	- user2 : user "[payload] What\'s your location" => bot2 : chatbot "[payload] What\'s your locationTxtResp1" ;
+	- user3 : user "[payload] What\'s your website" => bot3 : chatbot "[payload] What\'s your locationTxtResp1" , "[payload] What\'s your websiteTxtResp3" ;
+	- user4 : user "[usecase 1b] How many days will it take?" => bot4 : chatbot "[usecase 1b] How many days will it take?TxtResp1" ;
+	- user5 : user "[usecase 8] Transfer Call" => bot5 : chatbot "[payload] What\'s your locationTxtResp1" , "[usecase 8] Transfer CallTxtResp3" ;
+	- user6 : user "[usecase 6] What\'s my balance" => bot6 : chatbot "[usecase 6] What\'s my balanceTxtResp1" {
+		=> user7 : user "[usecase 6] What\'s my saldo - problem" => bot7 : chatbot "[usecase 6] What\'s my saldo - problemTxtResp1" , "[payload] What\'s your locationTxtResp1" ;
+	} ;
+	- user8 : user "[usecase 4] Mortgage request" => bot8 : chatbot "[usecase 4] Mortgage requestTxtResp1" , "[usecase 4] Mortgage requestTxtResp2" {
+		=> user9 : user "[usecase 4] Mortgage request - custom" => bot9 : chatbot HttpRequest , HttpResponse , "[payload] What\'s your locationTxtResp1" ;
+	} ;
+	- user10 : user "[usecase 7] Last 3 transactions" => bot10 : chatbot "[usecase 7] Last 3 transactionsTxtResp1" {
+		=> user11 : user "[usecase 7] Last 3 transactions - I did not do that" => bot11 : chatbot "[usecase 7] Last 3 transactions - I did not do thatTxtResp1" , "[payload] What\'s your locationTxtResp1" ;
+	} ;
+	- user12 : user "Default Welcome Intent" => bot12 : chatbot "[payload] What\'s your locationTxtResp1" , "Default Welcome IntentTxtResp2" , "Default Welcome IntentTxtResp3" ;
+	- user13 : user "[search] Spent" => bot13 : chatbot HttpRequest , HttpResponse , "[payload] What\'s your locationTxtResp1" ;
+	- user14 : user "[usecase 2] bIock/renew a service" => bot14 : chatbot "[usecase 2] bIock/renew a serviceTxtResp1" , "[usecase 2] bIock/renew a serviceTxtResp2" {
+		=> user15 : user "[usecase 2] bIock/renew a service - yes" => bot15 : chatbot "[payload] What\'s your locationTxtResp1" ;
+	} ;
+	- user16 : user "[usercase 1] transfer money" => bot16 : chatbot "[usercase 1] transfer moneyTxtResp1" , "[usercase 1] transfer moneyTxtResp2" {
+		=> user17 : user "[usercase1] transfer money - costs" => bot17 : chatbot "[payload] What\'s your locationTxtResp1" , "[usercase1] transfer money - costsTxtResp2" ;
+	} ;
+	- user18 : user "[help]" => bot18 : chatbot "[payload] What\'s your locationTxtResp1" , "[help]TxtResp2" , "[help]TxtResp3" ;
+	- user19 : user "[usecase 3] paperwork insurance" => bot19 : chatbot "[usecase 3] paperwork insuranceTxtResp1" ;
+	- user20 : user "[search] Salary" => bot20 : chatbot HttpRequest , HttpResponse , "[payload] What\'s your locationTxtResp1" ;
+	- user21 : user "Default Fallback Intent" => bot21 : chatbot "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" ;
+	- user22 : user "[goodbye]" => bot22 : chatbot "[goodbye]TxtResp1" , "[goodbye]TxtResp2" ;
+	- user23 : user "[bot-first-greeting] Introduction" => bot23 : chatbot HttpRequest , HttpResponse , "[bot-first-greeting] IntroductionTxtResp1" , "[bot-first-greeting] IntroductionTxtResp2" ;
+

@@ -1,0 +1,189 @@
+Chatbot interviewer language : en
+
+intents :
+
+	"Closing-remark" :
+		inputs in en {
+			Nope ,
+			No ,
+			"i will stop here" ,
+			"stop here" ,
+			"nothing else" ,
+			"i want to end here" ,
+			"that\'s all about the picture" ,
+			"that\'s it" ,
+			"No, I have nothing to add" ,
+			"No, I won\'t continue" ,
+			"That\'s all I can see in the picture" ,
+			"no that\'s all i can say" ,
+			" that\'s enough" ,
+			"is it enough?" ,
+			"Isn\'t it enough?" ,
+			"No, that is it." ,
+			"That is all I can say about the picture" ,
+			" that is all about the picture" ,
+			"I think that is all about it." ,
+			"That is it" ,
+			"No I\'m done" ,
+			"I am done with it."
+	}
+
+	Acknowledgement :
+		inputs in en {
+			( "oh boy" ) [ ack ] ,
+			( "all righty" ) [ ack ] ,
+			( right ) [ ack ] ,
+			( "all right" ) [ ack ] ,
+			( hmm ) [ ack ] ,
+			( "got it" ) [ ack ] ,
+			( "I understand" ) [ ack ] ,
+			( alright ) [ ack ] ,
+			( okay ) [ ack ]
+		}
+		parameters :
+			ack : entity text ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			hey ,
+			hello ,
+			^hi ,
+			"hello there"
+	}
+
+	"Answer:topic" :
+		inputs in en {
+			( "the mother is wearing apron" ) [ topic ] ,
+			( "there is cup, plate lying on the counter" ) [ topic ] ,
+			( "she is drying the dishes" ) [ topic ] ,
+			( "there is cupboard in the kitchen" ) [ topic ] ,
+			( "the mother is doing dishes in the kitchen" ) [ topic ] ,
+			( "the lid of the cookie jar is falling" ) [ topic ] ,
+			( "the little boy is tipping over from the four legged stool" ) [ topic ] ,
+			( "the drapes is blowing" ) [ topic ] ,
+			( "there are trees, bushes outside the window" ) [ topic ] ,
+			( "there is a garden out of the window" ) [ topic ] ,
+			( "the sister is taking cookie from her brother" ) [ topic ] ,
+			( "the brother is stealing cookie from the cookie jar" ) [ topic ] ,
+			( "there is path out of the widow" ) [ topic ] ,
+			( "it seems it is summer time." ) [ topic ] ,
+			( "there is curtain in the window" ) [ topic ] ,
+			( "the woman is looking out of the window" ) [ topic ] ,
+			( "the mother is not looking at the kids" ) [ topic ] ,
+			( "the little girl is saying shhh" ) [ topic ] ,
+			( "water is overflowing out of the sink" ) [ topic ] ,
+			( "the kids are stealing cookie" ) [ topic ] ,
+			( "the girl is standing" ) [ topic ] ,
+			( "the boy is stealing cookie from the cookie jar" ) [ topic ] ,
+			"Kids are in the kitchen" ,
+			( "she is washing dishes" ) [ topic ] ,
+			( "the woman is washing dishes" ) [ topic ]
+		}
+		parameters :
+			topic : entity text ;
+
+	"Continue-conversation" :
+		inputs in en {
+			"i can try" ,
+			absolutely ,
+			yeah ,
+			"i think so" ,
+			sure ,
+			well ,
+			"let me see if I have something" ,
+			"let me see" ,
+			" I can go on" ,
+			yupp ,
+			yes
+	}
+
+	"input.none" :
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity ready :
+		inputs in en {
+			ready synonyms ready
+			"ready to go" synonyms "ready to go"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-virtual-interviewer-ttwdqc.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "input.noneTxtResp1" :
+		inputs in en {
+			"anything else? " ,
+			"are you there? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "input.none.FallbackTxtResp1" :
+		inputs in en {
+			"are you still there? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" {
+		=> user2 : user "Answer:topic" => bot2 : chatbot HttpRequest , HttpResponse {
+			=> user3 : user "Closing-remark" => bot3 : chatbot HttpRequest , HttpResponse ;
+			=> user4 : user "Continue-conversation" => bot4 : chatbot HttpRequest , HttpResponse {
+				=> user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" ; => back to user2 ;
+			} ;
+			=> user6 : user "Default Fallback Intent" => bot6 : chatbot "Default Fallback IntentTxtResp1" ;
+			=> back to user2 ;
+		} ;
+		=> user7 : user "Default Fallback Intent" => bot7 : chatbot "Default Fallback IntentTxtResp1" ;
+		=> user8 : user Acknowledgement => bot8 : chatbot HttpRequest , HttpResponse ;
+	} ;
+	- user9 : user "input.none" => bot9 : chatbot "input.noneTxtResp1" {
+		=> user10 : user "Answer:topic" => bot10 : chatbot HttpRequest , HttpResponse {
+			=> user11 : user "Closing-remark" => bot11 : chatbot HttpRequest , HttpResponse ;
+			=> user12 : user "Continue-conversation" => bot12 : chatbot HttpRequest , HttpResponse {
+				=> user13 : user "Default Fallback Intent" => bot13 : chatbot "Default Fallback IntentTxtResp1" ; => back to user10 ;
+			} ;
+			=> user14 : user "Default Fallback Intent" => bot14 : chatbot "Default Fallback IntentTxtResp1" ;
+			=> back to user10 ;
+		} ;
+		=> user15 : user "Default Fallback Intent" => bot15 : chatbot "Default Fallback IntentTxtResp1" ;
+		=> user16 : user "Continue-conversation" => bot16 : chatbot HttpRequest , HttpResponse {
+			=> user17 : user "Answer:topic" => bot17 : chatbot HttpRequest , HttpResponse {
+				=> user18 : user "Closing-remark" => bot18 : chatbot HttpRequest , HttpResponse ;
+				=> user19 : user "Default Fallback Intent" => bot19 : chatbot "Default Fallback IntentTxtResp1" ;
+				=> back to user16 ;
+				=> back to user17 ;
+			} ;
+			=> user20 : user "Default Fallback Intent" => bot20 : chatbot "Default Fallback IntentTxtResp1" ;
+		} ;
+		=> user21 : user "Closing-remark" => bot21 : chatbot HttpRequest , HttpResponse ;
+	} ;
+

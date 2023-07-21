@@ -1,0 +1,373 @@
+Chatbot "G7-CinemaTicketBot" language : en
+
+intents :
+
+	"OrderTicket-Y-SelectSeat-Contact-N" :
+		inputs in en {
+			No ,
+			"there is some mistake" ,
+			"it is wrong" ,
+			"It is not correct" ,
+			"I want change it" ,
+			^no ,
+			"no no don\'t" ,
+			na ,
+			"no that\'s okay" ,
+			"no not really" ,
+			"nope not really" ,
+			nah
+	}
+
+	"OrderTicket-Y" :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"yes you can do it" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"yes I agree" ,
+			sure ,
+			"sounds correct" ,
+			"sounds good" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			alright ,
+			right ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"OrderTicket-Y-SelectSeat" :
+		inputs in en {
+			"It should be " ( "near the entrance" ) [ SeatSection ] ,
+			"how about " ( "near the exit" ) [ SeatSection ] ,
+			( "ground floor" ) [ seattype ] " and " ( ^back ) [ SeatSection ] " seat works for me" ,
+			( Center ) [ SeatSection ] " at the " ( standard ) [ seattype ] " section" ,
+			( Center ) [ SeatSection ] " point" ,
+			( Front ) [ SeatSection ] " side" ,
+			( Balcony ) [ seattype ] " and " ( front ) [ SeatSection ] " side" ,
+			( "Back section" ) [ SeatSection ] " please" ,
+			( Standard ) [ seattype ] " works for me" ,
+			"I want " ( front ) [ SeatSection ] " seat at the " ( balcony ) [ seattype ] ,
+			"I prefer " ( balcony ) [ seattype ]
+		}
+		parameters :
+			seattype : entity SeatType , required , prompts in en [ "What type of seat do you like? Standard or Balcony?" ] ;
+			SeatSection : entity SeatSection , required , prompts in en [ "Good Choice! Where do you prefer to seat in the theater salon? \nFront Section, Back Section or the Center Section?" ] ;
+
+	"OrderTicket-Y-SelectSeat-Contact" :
+		inputs in en {
+			( "maryam aliakbari" ) [ person ] ,
+			"the number is " ( "4567891234" ) [ "phone-number" ] ,
+			( maryam ) [ person ] " and my phone is " ( "111-234-5678" ) [ "phone-number" ] ,
+			"here is my phone number " ( "111-111-1111" ) [ "phone-number" ] ,
+			"I want it in the name of " ( maryam ) [ person ] " and " ( farzin ) [ person ] " and " ( ezekiel ) [ person ] ,
+			"reserve the seats for " ( "Ezekiel Ayeni" ) [ person ] ,
+			"I am " ( Maryam ) [ person ] ,
+			"Yeah. set if for " ( "Farzin Valiloo" ) [ person ] ,
+			"Yes Sure. the order is in the name of " ( "Maryam Aliakbari" ) [ person ]
+		}
+		parameters :
+			person : entity text , required , prompts in en [ "Please enter your name." ] ;
+			"phone-number" : entity text , required , prompts in en [ "Ok $person . For the last step, please enter your phone number." ] ;
+
+	OrderTicket :
+		inputs in en {
+			"purchase ticket" ,
+			"buy ticket" ,
+			"buy a ticket" ,
+			"i want to buy a ticket" ,
+			( gucci ) [ MovieName ] " is my favourate movie" ,
+			( wednesday ) [ OrderDay ] " works for me" ,
+			( evening ) [ DayTime ] " I think" ,
+			"I want to buy " ( "3" ) [ ^number ] " tickets for " ( soho ) [ MovieName ] " movie" ,
+			"i want to buy " ( a ) [ ^number ] " ticket" ,
+			"I want to buy some tickets" ,
+			"just " ( "2" ) [ ^number ] " please" ,
+			( belfast ) [ MovieName ] " in " ( Odeon ) [ TheaterName ] " for morning " ( sunday ) [ OrderDay ] ,
+			( "5" ) [ ^number ] " tickets for " ( Gucci ) [ MovieName ] " in " ( lakeshore ) [ TheaterName ] " cinema for " ( tommorow ) [ OrderDay ] ,
+			"I like to watch " ( soho ) [ MovieName ] ,
+			"i choose " ( imagine ) [ TheaterName ] ,
+			"I am going to order " ( one ) [ ^number ] " ticket" ,
+			( "2" ) [ ^number ] " tickets" ,
+			( "2" ) [ ^number ] " please" ,
+			( "2" ) [ ^number ] " tickets for " ( spencer ) [ MovieName ] " in " ( silvercity ) [ TheaterName ] " for the " ( afternoon ) [ DayTime ] " " ( today ) [ OrderDay ] ,
+			"I want to buy " ( "3" ) [ ^number ] " tickets for " ( gucci ) [ MovieName ] " in cineplex for " ( tomorrow ) [ OrderDay ] " " ( morning ) [ DayTime ] ,
+			"I want to watch " ( Gucci ) [ MovieName ] ,
+			"I want to buy tickets for " ( "3" ) [ ^number ] ,
+			"purchase some ticket" ,
+			"purchase " ( a ) [ ^number ] " ticket" ,
+			"cinema ticket" ,
+			"Movie ticket" ,
+			"buy a film ticket" ,
+			"I wanna order Movie ticket" ,
+			"I want to watch a movie at the cinema" ,
+			( monday ) [ OrderDay ] " " ( afternon ) [ DayTime ] " in " ( odeon ) [ TheaterName ] " cinema " ( "no time for die" ) [ MovieName ] ,
+			( today ) [ OrderDay ] "\'s movie" ,
+			( friday ) [ OrderDay ] " " ( night ) [ DayTime ] " " ( soho ) [ MovieName ] " at " ( silvercity ) [ TheaterName ] ,
+			"I want to watch a film" ,
+			"I want to watch a movie" ,
+			"I want " ( a ) [ ^number ] " ticket" ,
+			"Buy " ( a ) [ ^number ] " ticket" ,
+			"I want to purchase " ( a ) [ ^number ] " ticket" ,
+			"I want to buy movie ticket"
+		}
+		parameters :
+			TheaterName : entity Theater , required , prompts in en [ "Cool! I can help you then! You have 3 great options in Windsor city, choose your prefered theater among them: \nSilverCity Windsor Cinemas, Cineplex Odeon Devonshire Mall Cinemas, or Imagine Cinemas Lakeshore" ] ;
+			MovieName : entity Movie , required , prompts in en [ "Good! There are 6 available movies at $TheaterName:\nDune, No Time To Die, Belfast, House of Gucci, Spencer and, Last Night in Soho.\nWhat is your choice?" ] ;
+			OrderDay : entity OrderDay , required , prompts in en [ "Great Choice! Which day do you want to book?" ] ;
+			DayTime : entity DayTime , required , prompts in en [ "And, which session do want to attend? Morning, afternoon, evening or night?" ] ;
+			^number : entity float , required , prompts in en [ "How many tickets do you want to buy for the $MovieName movie at the $TheaterName for $OrderDay $DayTime?" ] ;
+
+	WelcomeIntent :
+		inputs in en {
+			"Hey I want to watch a movie in the cinema" ,
+			"hello hi" ,
+			"hey there" ,
+			"hi there" ,
+			hey ,
+			hello ,
+			^hi ,
+			"hello there"
+	}
+
+	"OrderTicket-Cancel" :
+		inputs in en {
+			"I dont want it anymore" ,
+			"Just cancel the order" ,
+			"I change my mind" ,
+			"No just cancel it" ,
+			stop ,
+			"stop it" ,
+			"just forget about it" ,
+			"do nothing" ,
+			"cancel that" ,
+			"forget that" ,
+			cancel ,
+			dismiss
+	}
+
+	"OrderTicket-Y-SelectSeat-Contact-Y" :
+		inputs in en {
+			yes ,
+			"okay I will" ,
+			"why not" ,
+			"yes that\'s alright" ,
+			"yes I do" ,
+			exactly ,
+			"of course" ,
+			"yep that\'s ok" ,
+			okay ,
+			ok ,
+			"for sure" ,
+			"yes that\'t ok" ,
+			"I agree" ,
+			"that one works" ,
+			"that works" ,
+			"sure why not" ,
+			perfect ,
+			"yep that\'s right" ,
+			"yes I agree" ,
+			sure ,
+			"Yes. I confirm it" ,
+			"sounds correct" ,
+			"that\'s correct" ,
+			"go ahead" ,
+			"do it" ,
+			"it\'s fine" ,
+			yeah ,
+			"yes please" ,
+			"it\'s okay" ,
+			alright ,
+			right ,
+			yup ,
+			yep ,
+			confirm ,
+			absolutely
+	}
+
+	"OrderTicket-N" :
+		inputs in en {
+			"No i don\'t confirm" ,
+			"Could I change" ,
+			"Want to change" ,
+			"No please I want change it" ,
+			^no ,
+			"no no don\'t" ,
+			na ,
+			"no it isn\'t" ,
+			"don\'t" ,
+			"no I cannot" ,
+			"I can\'t" ,
+			nope ,
+			"I don\'t think so" ,
+			"I disagree" ,
+			"definitely not" ,
+			not ,
+			"not at all" ,
+			never ,
+			"not really" ,
+			nah ,
+			"I don\'t" ,
+			"not today"
+	}
+
+	"OrderTicket-Y-SelectSeat-Cancel" :
+		inputs in en {
+			stop ,
+			"stop it" ,
+			"never mind" ,
+			"just forget about it" ,
+			"do nothing" ,
+			skip ,
+			"cancel that" ,
+			"forget that" ,
+			cancel ,
+			dismiss
+	}
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity Movie :
+		inputs in en {
+			Dune synonyms Dune , dun
+			"No Time To Die" synonyms "No Time To Die" , "no time for die" , "no time" , "no die"
+			"House of Gucci" synonyms "House of Gucci" , Gucci , "House for gucci" , "gucci house"
+			Spencer synonyms Spencer , spenser
+			"Last Night in Soho" synonyms "Last Night in Soho" , Soho , "last night soho"
+	}
+	Simple entity Theater :
+		inputs in en {
+			"SilverCity Windsor Cinemas" synonyms "SilverCity Windsor Cinemas" , Silvercity , Silver
+			"Cineplex Odeon Devonshire Mall Cinema" synonyms "Cineplex Odeon Devonshire Mall Cinema" , Devonshire , Cineplex , odeon , "Divonshire Mall" , "Cineplex Devonshire" , "Cieplex odeon"
+			"Imagine Cinemas Lakeshore" synonyms "Imagine Cinemas Lakeshore" , Imagine , Lakeshore , "lakeshore imagine" , "imagine lakeshore"
+	}
+	Simple entity OrderDay :
+		inputs in en {
+			Today synonyms Today , Now
+			Tomorrow synonyms Tomorrow , tommorrow
+			"Next Sunday" synonyms "Next Sunday" , Sunday
+			"Next Monday" synonyms "Next Monday" , Monday
+			"Next Tuseday" synonyms "Next Tuseday" , Tuseday
+			"Next Wednesday" synonyms "Next Wednesday" , wednesday
+			"Next Turseday" synonyms "Next Turseday" , Turseday
+			"Next Friday" synonyms "Next Friday" , Friday
+			"Next Saturday" synonyms "Next Saturday" , Saturday
+	}
+	Simple entity DayTime :
+		inputs in en {
+			Morning synonyms Morning
+			Afternoon synonyms Afternoon
+			Evening synonyms Evening
+			Night synonyms Night
+	}
+	Simple entity SeatType :
+		inputs in en {
+			Standard synonyms Standard , normal , floor , "first floor" , Ground , "ground floor"
+			Balcony synonyms Balcony , "second floor" , VIP
+	}
+	Simple entity SeatSection :
+		inputs in en {
+			"Front Section" synonyms "Front Section" , "Closer to screen" , "close to screen" , "front line" , "first rows" , "near to exit"
+			"Back Section" synonyms "Back Section" , Further , "further from screen" , "as far as possible" , "back row" , "near the entry" , Back , "near the entrance"
+			"Center Section" synonyms "Center Section" , Center , "Not too front not too back" , "not too close"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "OrderTicket-Y-SelectSeat-Contact-NTxtResp1" :
+		inputs in en {
+			"Oh. That\'s alright. we can do it again. Please re-enter your name. "
+	}
+	text response "OrderTicket-YTxtResp1" :
+		inputs in en {
+			"Perfect! Now we can set your seat zone. Where do you want to seat? The standard floor or the Balcony? "
+	}
+	text response "OrderTicket-Y-SelectSeatTxtResp1" :
+		inputs in en {
+			"Ok! " [ "OrderTicket-Y-SelectSeat.seattype" ] "seat in " "Great Choice. Your seats will be reserved for 15 mins. If we have your Name and Phone Number we can finalize it. Could you please enter your name? "
+	}
+	text response "OrderTicket-Y-SelectSeat-ContactTxtResp1" :
+		inputs in en {
+			"Super! So the order is for " [ "OrderTicket-Y-SelectSeat-Contact.person" ] "with the contact number of " [ "OrderTicket-Y-SelectSeat-Contact.phone-number" ] ". Do you confirm it? "
+	}
+	text response OrderTicketTxtResp1 :
+		inputs in en {
+			"Fine. You just ordered " [ "OrderTicket.number" ] "Tickets for " [ "OrderTicket.OrderDay" ] [ "OrderTicket.DayTime" ] "session of " [ "OrderTicket.MovieName" ] "movie at the " [ "OrderTicket.TheaterName" ] ". Do you confirm this? "
+	}
+	text response WelcomeIntentTxtResp1 :
+		inputs in en {
+			"Hello! Welcome to G7 CinemaTicket chatbot. \nHow can I help you? "
+	}
+	text response "OrderTicket-CancelTxtResp1" :
+		inputs in en {
+			"Ok! No problem. I will Cancel the order. You can always return and re-order. Have a good one! "
+	}
+	text response "OrderTicket-Y-SelectSeat-Contact-YTxtResp1" :
+		inputs in en {
+			"Superb! Your order is placed now and you can pay for it via the provided link. Here is your Order No.: #192837465" ,
+			"Great! Here is your Order No.: #192837465     \nEnjoy your movie! "
+	}
+	text response "OrderTicket-NTxtResp1" :
+		inputs in en {
+			"Oh. We can fix it. You can choose among three Theater: SilverCity Windsor Cinemas, Cineplex Odeon Devonshire Mall Cinema and Imagine Cinemas Lakeshore. Which one is your choice? "
+	}
+	text response "OrderTicket-Y-SelectSeat-CancelTxtResp1" :
+		inputs in en {
+			"Oh sure! You are always welcome. We are waiting for you in your next order at G7 CinemaTicket Bot! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user OrderTicket => bot1 : chatbot OrderTicketTxtResp1 {
+		=> user2 : user "OrderTicket-Y" => bot2 : chatbot "OrderTicket-YTxtResp1" {
+			=> user3 : user "OrderTicket-Y-SelectSeat" => bot3 : chatbot "OrderTicket-Y-SelectSeatTxtResp1" { => user4 : user "OrderTicket-Y-SelectSeat-Contact-N" => bot4 : chatbot "OrderTicket-Y-SelectSeat-Contact-NTxtResp1" { => user5 : user "OrderTicket-Y-SelectSeat-Contact" => bot5 : chatbot "OrderTicket-Y-SelectSeat-ContactTxtResp1" { => user6 : user "OrderTicket-Y-SelectSeat-Contact-Y" => bot6 : chatbot "OrderTicket-Y-SelectSeat-Contact-YTxtResp1" ; => back to user4 ; } ; => user7 : user "OrderTicket-Y-SelectSeat-Cancel" => bot7 : chatbot "OrderTicket-Y-SelectSeat-CancelTxtResp1" ; => back to user4 ; } ; => user8 : user "OrderTicket-Y-SelectSeat-Contact" => bot8 : chatbot "OrderTicket-Y-SelectSeat-ContactTxtResp1" { => user9 : user "OrderTicket-Y-SelectSeat-Contact-N" => bot9 : chatbot "OrderTicket-Y-SelectSeat-Contact-NTxtResp1" { => user10 : user "OrderTicket-Y-SelectSeat-Cancel" => bot10 : chatbot "OrderTicket-Y-SelectSeat-CancelTxtResp1" ; => back to user9 ; => back to user8 ; } ; => user11 : user "OrderTicket-Y-SelectSeat-Contact-Y" => bot11 : chatbot "OrderTicket-Y-SelectSeat-Contact-YTxtResp1" ; } ; => user12 : user "OrderTicket-Y-SelectSeat-Cancel" => bot12 : chatbot "OrderTicket-Y-SelectSeat-CancelTxtResp1" ; } ;
+		} ;
+		=> user13 : user "OrderTicket-Cancel" => bot13 : chatbot "OrderTicket-CancelTxtResp1" ;
+		=> user14 : user "OrderTicket-N" => bot14 : chatbot "OrderTicket-NTxtResp1" ;
+	} ;
+	- user15 : user WelcomeIntent => bot15 : chatbot WelcomeIntentTxtResp1 ;
+	- user16 : user "Default Fallback Intent" => bot16 : chatbot "Default Fallback IntentTxtResp1" ;
+

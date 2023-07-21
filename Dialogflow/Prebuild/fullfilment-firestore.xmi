@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="fullfilment-firestore">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="WriteToFirestore">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Write &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Dialogflow rules"/>
+        <tokens xsi:type="generator:Literal" text="&quot; to the database"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="write"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I write to the Firestore database?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to write to Firestore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to write to the database"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Write "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="anything"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please write this to the database: "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="anything"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Write "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="anything"/>
+        <tokens xsi:type="generator:Literal" text=" to the database"/>
+      </inputs>
+    </inputs>
+    <parameters name="databaseEntry" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What would you like to write to the Firestore database?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="ReadFromFirestore">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is in the database?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="read from the Firestore database"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="read from the database"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="read from Firestore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="read"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-agent52-3e1ea.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello!  I can read or write to the Firestore database. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="WriteToFirestoreTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whoops, looks like you haven't setup the Firestore database yet. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="ReadFromFirestoreTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whoops!  Looks like you haven't setup the Firestore database yet. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't understand.  I can write or read to the Firestore database "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.5" name="bot4"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,138 @@
+Chatbot "iot-medan" language : en
+
+intents :
+
+	help :
+		inputs in en {
+			"what to say?" ,
+			"what can i say?" ,
+			"what do i do?" ,
+			"what can i do?" ,
+			"give me some help" ,
+			"give a hint" ,
+			"how should I answer the question?" ,
+			"how do I answer the question?" ,
+			"what to do?" ,
+			"what do I say?" ,
+			"what should I do?" ,
+			"how do i play?" ,
+			"please help me" ,
+			"I need some help" ,
+			"can you help me?" ,
+			"i don\'t understand" ,
+			"help me" ,
+			help
+	}
+
+	control_appliances :
+		inputs in en {
+			"tell him to switch my " ( fan ) [ devices ] " " ( off ) [ status ] ,
+			"switch my " ( lights ) [ devices ] " " ( on ) [ status ] ,
+			"control the appliance" ,
+			"control my appliance" ,
+			"control the " ( fan ) [ devices ] ,
+			"control the " ( light ) [ devices ] ,
+			"control my " ( fans ) [ devices ] ,
+			"control my " ( lights ) [ devices ] ,
+			"switch " ( off ) [ status ] " the appliance" ,
+			"switch " ( on ) [ status ] " the appliance" ,
+			"please switch " ( on ) [ status ] " the " ( fan ) [ devices ] ,
+			"can you please switch " ( off ) [ status ] " the " ( fan ) [ devices ] ,
+			"can you please switch " ( on ) [ status ] " the " ( light ) [ devices ] "?" ,
+			"can you please switch " ( off ) [ status ] " the " ( light ) [ devices ] "?" ,
+			"switch " ( off ) [ status ] " the " ( light ) [ devices ] ,
+			"switch " ( on ) [ status ] " the " ( light ) [ devices ] ,
+			"switch " ( off ) [ status ] " the " ( fans ) [ devices ] ,
+			"switch " ( on ) [ status ] " the " ( fans ) [ devices ] ,
+			"switch " ( off ) [ status ] " the " ( fan ) [ devices ] ,
+			"switch " ( on ) [ status ] " the " ( fan ) [ devices ] ,
+			"switch " ( off ) [ status ] " the " ( lights ) [ devices ] ,
+			"switch " ( on ) [ status ] " the " ( lights ) [ devices ]
+		}
+		parameters :
+			devices : entity devices , required , prompts in en [ "Which appliance you want to control? Light or fan?" ] ;
+			status : entity status , required , prompts in en [ "Do you want me to switch it on or off?" ] ;
+
+	quit :
+		inputs in en {
+			"that\'s all" ,
+			^no ,
+			"bye bye" ,
+			"I have to go" ,
+			"Let\'s talk later" ,
+			"Ok, thanks." ,
+			"I\'m done" ,
+			end ,
+			stop ,
+			"turn off" ,
+			terminate ,
+			"shut up" ,
+			quit ,
+			kill ,
+			finish ,
+			exit ,
+			close ,
+			"let\'s stop here" ,
+			cancel ,
+			"it\'s over" ,
+			"i give up" ,
+			"I quit"
+	}
+
+	input_unknown Fallback :
+
+	input_welcome :
+		inputs in en {
+			"talk to my action"
+	}
+
+entities :
+	Simple entity devices :
+		inputs in en {
+			fan synonyms fan , fans
+			light synonyms light , lights
+	}
+	Simple entity status :
+		inputs in en {
+			on synonyms on , bright
+			off synonyms off , dim
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-iot-medan.cloudfunctions.net/receiveAssistantRequests" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response helpTxtResp1 :
+		inputs in en {
+			"I can help you control your home appliances. What do you want to control? Lights or fans? "
+	}
+	text response control_appliancesTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response quitTxtResp1 :
+		inputs in en {
+			"Ok, see you later. "
+	}
+	text response input_unknownTxtResp1 :
+		inputs in en {
+			"I\'m sorry. I\'m having trouble understanding the question. " ,
+			"I think I may have misunderstood your last statement. " ,
+			"I\'m sorry. I didn\'t quite grasp what you just said. " ,
+			"I don\'t think I\'m qualified to answer that yet. " ,
+			"I\'m a bit confused by that last part. " ,
+			"I\'m not totally sure about that. "
+	}
+
+flows :
+	- user1 : user help => bot1 : chatbot helpTxtResp1 ;
+	- user2 : user control_appliances => bot2 : chatbot HttpRequest , HttpResponse , control_appliancesTxtResp1 ;
+	- user3 : user quit => bot3 : chatbot quitTxtResp1 ;
+	- user4 : user input_unknown => bot4 : chatbot input_unknownTxtResp1 ;
+	- user5 : user input_welcome => bot5 : chatbot control_appliancesTxtResp1 ;
+

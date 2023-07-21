@@ -1,0 +1,66 @@
+Chatbot "fullfilment-firestore" language : en
+
+intents :
+
+"Default Welcome Intent" :
+	inputs in en {
+		^hi
+}
+
+WriteToFirestore :
+	inputs in en {
+		"Write \"" ( "Dialogflow rules" ) [ databaseEntry ] "\" to the database" ,
+		write ,
+		"Can I write to the Firestore database?" ,
+		"I want to write to Firestore" ,
+		"I want to write to the database" ,
+		"Write " ( anything ) [ databaseEntry ] ,
+		"Please write this to the database: " ( anything ) [ databaseEntry ] ,
+		"Write " ( anything ) [ databaseEntry ] " to the database"
+	}
+	parameters :
+		databaseEntry : entity text , required , prompts in en [ "What would you like to write to the Firestore database?" ] ;
+
+ReadFromFirestore :
+	inputs in en {
+		"what is in the database?" ,
+		"read from the Firestore database" ,
+		"read from the database" ,
+		"read from Firestore" ,
+		read
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-agent52-3e1ea.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello!  I can read or write to the Firestore database. "
+	}
+	text response WriteToFirestoreTxtResp1 :
+		inputs in en {
+			"Whoops, looks like you haven\'t setup the Firestore database yet. "
+	}
+	text response ReadFromFirestoreTxtResp1 :
+		inputs in en {
+			"Whoops!  Looks like you haven\'t setup the Firestore database yet. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t understand.  I can write or read to the Firestore database "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user WriteToFirestore => bot2 : chatbot HttpRequest , HttpResponse , WriteToFirestoreTxtResp1 ;
+	- user3 : user ReadFromFirestore => bot3 : chatbot HttpRequest , HttpResponse , ReadFromFirestoreTxtResp1 ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot "Default Fallback IntentTxtResp1" ;
+

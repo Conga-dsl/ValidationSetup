@@ -1,0 +1,46 @@
+Chatbot "Jovo-sample" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	MyNameIsIntent :
+		inputs in en {
+			( name ) [ name ] ,
+			"my name is " ( name ) [ name ] ,
+			"i am " ( name ) [ name ] ,
+			"you can call me " ( name ) [ name ]
+		}
+		parameters :
+			name : entity "sys.given-name" ;
+
+	HelloWorldIntent :
+		inputs in en {
+			hello ,
+			"say hello" ,
+			"say hello world"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity "sys.given-name" :
+		inputs in en {
+			name synonyms name
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/1d5a180c-faa8-4553-b4c1-abd145fc2ed0" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user MyNameIsIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user HelloWorldIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+
