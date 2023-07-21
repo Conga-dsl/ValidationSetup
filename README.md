@@ -16,3 +16,4 @@ The repository contains a dataset used in evaluations of the CONGA DSL validator
 | Rasa           | Github      | 148           |
 |                | **Total**   | 291           |
 
+The chatbots are divided into two folders, Dialogflow and Rasa, depending on the technology to which the chatbot belongs. The folders contain the source of each chatbot, the CONGA's models (XMI file) and DSLs (Bot file) for each chatbot and a table with the results of the evaluation performed with CONGA DSL validator.
