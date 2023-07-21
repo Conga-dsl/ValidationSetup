@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="drum-tunner">
+  <intents name="tell-tips">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do you have any advices on how to tune a drum?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me some tips on drum tuning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to hear some tips"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me some drum tuning tips"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="tune-drum">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="15 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="floor tom"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="F sharp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="10 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="12 inch"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="14 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="thomas"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="F"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="10&quot;"/>
+        <tokens xsi:type="generator:Literal" text=", "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="12&quot;"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="14&quot;"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="rack toms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tune "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="10 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="12 inch"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="14 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="tom toms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="13 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="d sharp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="14&quot;"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="22 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="kick drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="f"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="26&quot;"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="bass drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="bass drum"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's the tuning of a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="bass drum"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="D"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="bass drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="B flat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="C flat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="bass drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="f sharp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="proceed with tuning of the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="kick drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="c sharp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="bass drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="a"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="make my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare"/>
+        <tokens xsi:type="generator:Literal" text=" tune in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="d flat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="c"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="f sharp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="floor tom"/>
+        <tokens xsi:type="generator:Literal" text=" very "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="low"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to tune "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="eight inch"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="fourteen inch"/>
+        <tokens xsi:type="generator:Literal" text=" drums"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="low"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune a piccolo "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let me tune "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="three"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="tom toms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="sixteen inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="floor"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="F"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="floor tom"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="C sharp"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my drumset up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's get my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="ten inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="twelve inch"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="fourteen inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="toms"/>
+        <tokens xsi:type="generator:Literal" text=" in tune"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my cool drum kit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my awesome drums"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my drumkit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="8 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="12 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="16 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="tom toms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="10 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="14 inch"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="16 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="toms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="floor tom"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tune "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="8 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="10 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="12 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="13 inch"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="14 inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="toms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to tune a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="fourteen inch"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="snare drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to tune my drum set"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune the drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let's tune a drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please tune my drum"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tune my drum"/>
+      </inputs>
+    </inputs>
+    <parameters name="tuning-style" entity="//@entities.1">
+      <prompts language="ENGLISH">
+        <prompts>Which drum head would you like to tune higher? Batter or resonant?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="drum-type" entity="//@entities.2" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What kind of drum would you like to tune? Snare drum, bass drum or tom toms?</prompts>
+        <prompts>Let's start from the basics. What drum type are we tuning? Snare, bass drum or toms?</prompts>
+        <prompts>We'll need to choose a drum first. Snare, kick or toms?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="resonance" entity="//@entities.4"/>
+    <parameters name="number" defaultEntity="FLOAT"/>
+    <parameters name="note" entity="//@entities.0">
+      <prompts language="ENGLISH">
+        <prompts>What's the desired note for that drum?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="drum-sizes"/>
+  </intents>
+  <intents name="Quit">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="quit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye Drum Tuner"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Welcome"/>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="note">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="C">
+        <values>C</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="C#">
+        <values>C#</values>
+        <values>C sharp</values>
+        <values>Db</values>
+        <values>D flat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="D">
+        <values>D</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="D#">
+        <values>D#</values>
+        <values>D sharp</values>
+        <values>Eb</values>
+        <values>E flat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="E">
+        <values>E</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="F">
+        <values>F</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="F#">
+        <values>F#</values>
+        <values>F sharp</values>
+        <values>Gb</values>
+        <values>G flat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="G">
+        <values>G</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="G#">
+        <values>G#</values>
+        <values>G sharp</values>
+        <values>Ab</values>
+        <values>A flat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="A">
+        <values>A</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="A#">
+        <values>A#</values>
+        <values>A sharp</values>
+        <values>Bb</values>
+        <values>B flat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="B">
+        <values>B</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="tuning-style">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="batter">
+        <values>batter</values>
+        <values>batter head</values>
+        <values>upper head</values>
+        <values>up head</values>
+        <values>batter drum head</values>
+        <values>batter drumhead</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="resonant">
+        <values>resonant</values>
+        <values>resonant head</values>
+        <values>resonant drum head</values>
+        <values>resonant drumhead</values>
+        <values>bottom head</values>
+        <values>bottom drum head</values>
+        <values>bottom drumhead</values>
+        <values>lower drum head</values>
+        <values>lower head</values>
+        <values>lower drumhead</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="drum-type">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="snare">
+        <values>snare</values>
+        <values>snare drum</values>
+        <values>high drum</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="tom">
+        <values>tom</values>
+        <values>tom tom</values>
+        <values>rack tom</values>
+        <values>thomas</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="floor tom">
+        <values>floor tom</values>
+        <values>lower drum</values>
+        <values>floor</values>
+        <values>floortom</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bass drum">
+        <values>bass drum</values>
+        <values>kick drum</values>
+        <values>bass</values>
+        <values>kick</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="pitch">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="default">
+        <values>default</values>
+        <values>normal</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="resonance">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="low">
+        <values>low</values>
+        <values>lower</values>
+        <values>loose</values>
+        <values>small</values>
+        <values>less</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="medium">
+        <values>medium</values>
+        <values>default</values>
+        <values>standard</values>
+        <values>normal</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="high">
+        <values>high</values>
+        <values>tight</values>
+        <values>more</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="max">
+        <values>max</values>
+        <values>maximum</values>
+        <values>highest</values>
+        <values>tense</values>
+        <values>big</values>
+        <values>huge</values>
+        <values>large</values>
+        <values>biggest</values>
+        <values>largest</values>
+        <values>enormous</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-drum-tuner.cloudfunctions.net/api_v1" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="tell-tipsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When you tune a drum, it's good to use two drum keys simultaneously. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When seating the bass drum head, it's a good practice to stretch it out before tuning. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When tuning the front head, increase tension in very small increments. Try using a quarter or a half of a turn at a time, no more. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whatever style and sound you are trying to achieve, generally a drum will sound best if the batter head is tuned lower (slacker) than the resonant head. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="If you find the overall pitch too low, go back to the bottom head and take it up another pitch level, return to tuning the top head and it will come back into tune with the bottom after a few turns of the rods. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Whenever detuning or loosening a rod, always end the movement with a slight re-tightening. This enables the rod to 'bite' and hold while getting the others sorted. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Try using a stool as your tuning base. It's a great way to dampen the batter head while working on the resonant head and you can (normally) spin the drum round as you go. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="tune-drumTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="QuitTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thanks for using Drum Tuner! See you next time. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You're all set! Happy drumming. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your drums now should sound fantastic. Enjoy! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="WelcomeTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! I'm your personal drum tuner. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome to Drum Tuner! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Drum Tuner for the win. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Let's make your drums sound awesome! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.3 //@actions.5" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.6" name="bot5"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

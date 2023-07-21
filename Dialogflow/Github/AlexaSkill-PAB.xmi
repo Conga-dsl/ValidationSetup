@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="AlexaSkill-PAB">
+  <intents name="Default Welcome Intent"/>
+  <intents name="PharmAssistIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pharm assist"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="say pharm assist"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="MedicationNowIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have medications to take right now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my medication ready"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my medicine ready"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have any medicine to take"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do i have any medicine to take right now"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="MedicationsTodayIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what times do i need to take my medication"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what time do i need to take my medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when do i need to take my medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when do i need to take my medication"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are todays dispensing times"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what time do i need to take my meds"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="DispenseMedicationIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dispense my medication"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="release my medication"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my medicine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my meds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dispense my meds"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/25d7f6b2-b5ed-47b6-b6e6-a5a6387d215d" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

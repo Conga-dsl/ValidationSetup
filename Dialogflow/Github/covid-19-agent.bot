@@ -1,0 +1,2012 @@
+Chatbot "covid-19-agent" language : en
+
+intents :
+
+	"coronavirus.stock_up" :
+		inputs in en {
+			"Should I buy more food or water" ,
+			"How much toilet paper do I need" ,
+			"How much toilet paper do I need to survive covid-19" ,
+			"What do I need to buy?" ,
+			"Is there anything in particular I need to stock up on?" ,
+			"should i stock up on medicines" ,
+			"do I need to stock up on food etc" ,
+			"do I need to bulk buy food" ,
+			"what should I think about having handy at home incase I get it" ,
+			"what should i Buy incase I get sick" ,
+			"do I need to  stock up on food" ,
+			"should i stock up on medicins" ,
+			"do I need to stock up on food" ,
+			"what do I need to stock up on" ,
+			"what should I think about having handy at home" ,
+			"should I provide myself with extra food at home" ,
+			"should I provide myself with having extra medicines at home" ,
+			"Okay, should I stock up?" ,
+			"should I stock up if I stay at home?" ,
+			"what " ( coronavirus ) [ "covid-19" ] " supplies should I have at home?" ,
+			"Food, supplies to buy for " ( coronavirus ) [ "covid-19" ] ,
+			"what to buy for home quarantine during the " ( coronavirus ) [ "covid-19" ] "?" ,
+			"covid-19 grocery list" ,
+			"what to buy for the " ( coronavirus ) [ "covid-19" ] " outbreak" ,
+			"essential quarantine items" ,
+			( coronavirus ) [ "covid-19" ] " shopping list" ,
+			"What to stock up on so I\'m prepared?" ,
+			"items to stock up" ,
+			"What are the things that I need to purchase for my household?" ,
+			"stock up checklist" ,
+			"Things to I should buy to stock up" ,
+			"What kind of supplies should I get to be prepared?" ,
+			"What to stock up for " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.mosquitoes" :
+		inputs in en {
+			"Can ticks cause " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"Do mosquitoes spread " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"Can I get " ( COVID ) [ "covid-19" ] " from ticks?" ,
+			"Can I get " ( coronavirus ) [ "covid-19" ] " from mosquitoes?" ,
+			"Can mosquitoes or ticks spread the " ( virus ) [ "covid-19" ] " that causes " ( "COVID-19" ) [ "covid-191" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"covid-191" : entity "covid-19" ;
+
+	"support.satisfied" :
+		inputs in en {
+			satisfied ,
+			"very satisfied" ,
+			"I got the information I needed" ,
+			"I am happy" ,
+			"I am satisfied" ,
+			"I\'m satisfied"
+	}
+
+	"q27.hemoglobin" :
+
+	"coronavirus.cleaning" :
+		inputs in en {
+			"What can I use to clean and disinfect " ( coronavirus ) [ "covid-19" ] "?" ,
+			"What cleaning products should I use to protect against " ( "COVID-19" ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"support.no_participation" :
+		inputs in en {
+			"I prefer not to answer" ,
+			"In between" ,
+			"I don\'t want to answer this question" ,
+			"I don\'t want to answer this survey" ,
+			"I don\'t know" ,
+			Neither ,
+			"I don\'t want to participate" ,
+			"I don\'t want to answer"
+	}
+
+	"coronavirus.at_risk" :
+		inputs in en {
+			"Is " ( "COVID-19" ) [ "covid-19" ] " spreading in the " ( US ) [ "geo-country" ] "?" ,
+			"Am I at risk for " ( "COVID-19" ) [ "covid-19" ] " in the " ( "United States" ) [ "geo-country" ] "?" ,
+			"Can I get " ( "COVID-19" ) [ "covid-19" ] " in the " ( USA ) [ "geo-country" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"geo-country" : entity text ;
+
+	"coronavirus.risk_severity" :
+		inputs in en {
+			"How dangerous is " ( Covid ) [ "covid-19" ] ,
+			"Who is most at risk?" ,
+			"Who is most at risk for " ( coronavirus ) [ "covid-19" ] "?" ,
+			"is " ( corona ) [ "covid-19" ] " more contagious than normal flu" ,
+			"am I at risk if i am 46?" ,
+			"who is most vulnerable?" ,
+			"Does a high potassium diet reduce risk of catching the virus?" ,
+			"Can young people die of " ( coronavirus ) [ "covid-19" ] "?" ,
+			"what are my odds of catching " ( Coronavirus ) [ "covid-19" ] ,
+			"how long does it take to recover?" ,
+			"how dangerous is " ( corona ) [ "covid-19" ] ,
+			"how dangerous is it actually" ,
+			"who are the people at higher risk" ,
+			"what age groups does the " ( coronavirus ) [ "covid-19" ] " affect?" ,
+			"why are elderly more at risk" ,
+			"what people are at higher risk?" ,
+			"Who is at risk?" ,
+			"am I at risk" ,
+			"can i die?" ,
+			"Is " ( coronavirus ) [ "covid-19" ] " deadly?" ,
+			"Are the symptoms in children different than in adults?" ,
+			"How severe is " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.package_safety" :
+		inputs in en {
+			"Can I get " ( "COVID-19" ) [ "covid-19" ] " from mail, packages, or products?" ,
+			"Is there " ( COVID ) [ "covid-19" ] " on packages?" ,
+			"Can deliveries spread " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"Can my mail give my " ( coronavirus ) [ "covid-19" ] "?" ,
+			"Am I at risk for " ( "COVID-19" ) [ "covid-19" ] " from mail, packages, or products?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.immune" :
+		inputs in en {
+			"Will I be immune when I get better?" ,
+			"How long will I be immune after recovering?" ,
+			"Can you catch " ( COVID ) [ "covid-19" ] " again?" ,
+			"If I have recovered from " ( "COVID-19" ) [ "covid-19" ] ", will I be immune to it?" ,
+			"Can you be immune to " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.sick_food" :
+		inputs in en {
+			"What if " ( COVID ) [ "covid-19" ] " gets on my " ( food ) [ surface ] "?" ,
+			"Can I get " ( coronavirus ) [ "covid-19" ] " if it\'s in my " ( food ) [ surface ] "?" ,
+			"Can I get sick with " ( "COVID-19" ) [ "covid-19" ] " if it is on " ( food ) [ surface ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			surface : entity surface ;
+
+	"coronavirus.incubation_period" :
+		inputs in en {
+			"How long is the incubation?" ,
+			"incubation period for coronavirus" ,
+			"how long does it take before I show symptoms?" ,
+			"How long is the incubation period" ,
+			"How long is the incubation" ,
+			"How long is the incubation period for COVID-19?"
+	}
+
+	"coronavirus.confirmed_cases" :
+		inputs in en {
+			"how many infected with " ( "covid-19" ) [ "covid-19" ] "?" ,
+			"how many infected in " ( US ) [ "geo-country" ] " ?" ,
+			"what\'s the status in " ( Russia ) [ "geo-country" ] "?" ,
+			"Harmony incidents have been reported in " ( Vatican ) [ "geo-country" ] " City" ,
+			"How many happened in " ( Vatican ) [ "geo-country" ] " City?" ,
+			"How many incidents are in reported in " ( Vatican ) [ "geo-country" ] " City?" ,
+			"Which countries have the most of cases?" ,
+			"Which states have the most " ( covid19 ) [ "covid-19" ] " cases?" ,
+			"How many cases of covid-19 are there?" ,
+			"How many cases in " ( "the United States" ) [ "geo-country" ] "?" ,
+			"infected people in " ( india ) [ "geo-country" ] ,
+			"How is covid situation in " ( Italy ) [ "geo-country" ] ,
+			"How many cases of covid-19 or Animal Planet, Georgia?" ,
+			"How many cases are in Georgia?" ,
+			"How many incidents are there in California?" ,
+			"How many cases of " ( coronavirus ) [ "covid-19" ] " are there in " ( Nigeria ) [ "geo-country" ] "?" ,
+			"How many people have called " ( Corona ) [ "covid-19" ] " virus in the " ( US ) [ "geo-country" ] "?" ,
+			"How many cases are in Massachusetts?" ,
+			"What\'s the number of cases in the " ( US ) [ "geo-country" ] "?" ,
+			"total number of cases in " ( "New Zealand" ) [ "geo-country" ] ,
+			"total cases of " ( coronavirus ) [ "covid-19" ] " in " ( india ) [ "geo-country" ] ,
+			"how many cases are open in " ( "south africa" ) [ "geo-country" ] ,
+			"how many cases are open in " ( india ) [ "geo-country" ] ,
+			"how many cases in " ( "south africa" ) [ "geo-country" ] ,
+			"total cases in " ( india ) [ "geo-country" ] ,
+			"total cases in " ( Jamaica ) [ "geo-country" ] ,
+			"total cases in princeton" ,
+			"total cases in " ( italy ) [ "geo-country" ] ,
+			"total cases" ,
+			"total cases in " ( US ) [ "geo-country" ] ,
+			"How many incidents have been recorded?" ,
+			"How many incidents have been reported to?" ,
+			"How many incidents have been reported in " ( Canada ) [ "geo-country" ] "?" ,
+			"How many cases have been reported in the " ( Vatican ) [ "geo-country" ] " City?" ,
+			"infection rate" ,
+			"Is there " ( "wuhan virus" ) [ "covid-19" ] " in my neighborhood?" ,
+			"how many people are infected?" ,
+			"how many cases are there globally" ,
+			"how many people of affected in " ( US ) [ "geo-country" ] " ?" ,
+			"how many people are affected in " ( India ) [ "geo-country" ] " ?" ,
+			"What is the status in the state of vermont" ,
+			"how many incidents have been reported in " ( Japan ) [ "geo-country" ] ,
+			"how many cases are there in marin" ,
+			"how many cases in Austin" ,
+			"where is the biggest outbreak" ,
+			"how many cases of covid are there" ,
+			"what is the infection in my state" ,
+			"How many cases are there?" ,
+			"how many people are infected in maryland?" ,
+			"How many cases did California have?" ,
+			"How many cases are open in the " ( "United States" ) [ "geo-country" ] "?" ,
+			"how many known cases in georgia" ,
+			"Is " ( coronavirus ) [ "covid-19" ] " spreading in " ( California ) [ "geo-state" ] "?" ,
+			"Where is the outbreak the worst?" ,
+			"What are the latest statistics for " ( Singapore ) [ "geo-country" ] "?" ,
+			"how many people in the state of new york have the virus?" ,
+			statistics ,
+			"How many cases are in " ( singapore ) [ "geo-country" ] "?" ,
+			"Which area has the highest covid" ,
+			"Which area has covid" ( "19" ) [ ^number ] " infection?" ,
+			"How many people are infected?" ,
+			"how many new cases today" ,
+			( singapore ) [ "geo-country" ] " cases" ,
+			"Latest cases in " ( china ) [ "geo-country" ] ,
+			"Cases reported in last 6 hours" ,
+			"Cases reported in last 24 hours" ,
+			"which are the states with highest cases reported" ,
+			"what is the total number of cases in " ( US ) [ "geo-country" ] ,
+			"Is " ( coronavirus ) [ "covid-19" ] " spreading in " ( California ) [ "geo-state" ] ,
+			"How many people has been effective in my area?" ,
+			"How many people have been infected in my area?" ,
+			"What\'s the estimated number of people infected with the covid-19?" ,
+			"how many people in Indiana have been confirmed?" ,
+			"how many cases in indiana have been confirmed?" ,
+			"How many confirmed cases have been found in " ( Canada ) [ "geo-country" ] "?" ,
+			"what\'s the current number of cases in california" ,
+			"How many people in the " ( "United States" ) [ "geo-country" ] " a tested positive for covid-19?" ,
+			"How many people have covid-19?" ,
+			"How many people are effective " ( today ) [ "date-time" ] "?" ,
+			"How many people are affected by the " ( Coronavirus ) [ "covid-19" ] "?" ,
+			"How many people have caught the " ( Coronavirus ) [ "covid-19" ] "?" ,
+			"How many cases are there in " ( "San Francisco" ) [ "geo-city" ] "?" ,
+			"How many cases are in Michigan?" ,
+			"Positive cases I\'m " ( US ) [ "geo-country" ] " today" ,
+			"How many people infected in " ( Seattle ) [ "geo-city" ] "?" ,
+			"How many confirmed cases in " ( Seattle ) [ "geo-city" ] "?" ,
+			"How many cases are there in Texas?" ,
+			"How many " ( Americans ) [ "geo-country" ] " are infected?" ,
+			"how many confirmed cases in the " ( US ) [ "geo-country" ] "?" ,
+			"How many rivets of cases do to do we see?" ,
+			"Can you give me the latest numbers?" ,
+			"What is the number of " ( coronavirus ) [ "covid-19" ] " cases in Alameda?" ,
+			"Just how many people are infected with " ( Coronavirus ) [ "covid-19" ] "?" ,
+			"what\'s the number of confirmed cases in " ( Canada ) [ "geo-country" ] "?" ,
+			"how many cases of " ( coronavirus ) [ "covid-19" ] " in the " ( US ) [ "geo-country" ] "?" ,
+			"what\'s the total number of people who has " ( coronavirus ) [ "covid-19" ] "?" ,
+			"number of cases of " ( coronavirus ) [ "covid-19" ] " diagnosed" ,
+			"How many cases are there in my area?" ,
+			"number of people who caught the disease" ,
+			"total number of confirmed cases" ,
+			"just how many people are infected with " ( coronavirus ) [ "covid-19" ] "?" ,
+			"How many people have caught " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"geo-country" ,
+			"date-time" ,
+			"geo-city" ,
+			"geo-state" ,
+			^number : entity float ;
+
+	"coronavirus.mask" :
+		inputs in en {
+			"Does CDC recommend the use of masks to prevent COVID-19?" ,
+			"Does CDC recommend the use of facemask or face coverings to prevent COVID-19?" ,
+			"Should I cover my face to prevent coronavirus?" ,
+			"Should I use a face mask to prevent COVID?" ,
+			"Do I need to wear mask?" ,
+			"where to buy face masks ?" ,
+			"Hi, we can I get surgical mask." ,
+			"Do I need to wear a surgical mask?" ,
+			"should I wear a mask when I go out" ,
+			"does it help wearing a mask" ,
+			"Where can I get a mask?" ,
+			"where can I get masks" ,
+			"are masks effective at stopping the virus?" ,
+			"does wearing a mask really help?" ,
+			"do face masks work for stopping covid-19?" ,
+			"Is it true that face masks won\'t prevent coronavirus?" ,
+			"should I wear a face mask to protect against corona virus?" ,
+			"can a face mask stop coronavirus?" ,
+			"can wearing a face mask protect me from the new conronavirus?" ,
+			"do I need to wear a mask in public?" ,
+			"should I wear a mask to protect myself?"
+	}
+
+	"cornavirus.test_negative" :
+		inputs in en {
+			"Can someone test positive for " ( COVID ) [ "covid-19" ] " after a negative test?" ,
+			"Can I have " ( coronavirus ) [ "covid-19" ] " if my test is negative?" ,
+			"Can I test positive after a negative test?" ,
+			"Can a person test negative and later test positive for " ( "COVID-19" ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.test_kind" :
+		inputs in en {
+			"What kind of test do I need to get checked for " ( COVID ) [ "covid-19" ] "?" ,
+			"What test diagnoses " ( coronavirus ) [ "covid-19" ] "?" ,
+			"What kind of test is being used to diagnose if I have " ( "COVID-19" ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.spread_quarantined" :
+		inputs in en {
+			"Can " ( COVID ) [ "covid-19" ] " spread after a quarantine?" ,
+			"Can I get " ( coronavirus ) [ "covid-19" ] " from someone who was quarantined?" ,
+			"Can someone who has been quarantined for " ( "COVID-19" ) [ "covid-19" ] " spread the illness to others?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"Default Fallback Intent" Fallback :
+		inputs in en {
+			"I want to have a corona" ,
+			"are you related to the corona beer?"
+	}
+
+	"coronavirus.weather" :
+		inputs in en {
+			"Well the warm weather stop the disease." ,
+			"can the temperature have an effect on the virus spread" ,
+			"Will a warm weather start stop covid-19?" ,
+			"will corona dissapear when it gets warmer outside" ,
+			"Can weather change?" ,
+			"Will warm weather stop the outbreak?" ,
+			"does weather have an impact on the virus" ,
+			"is it easier to spread if the climate is cold" ,
+			"Does the weather have an impact on the virus?" ,
+			"can hot weather prevent the virus to spread" ,
+			"can weather stop the virus" ,
+			"Is covid-19 seasonal?" ,
+			"Is covid-19 seasonal?" ,
+			"Is there a certain temperature in which the virus dies?" ,
+			"does the virus die if you cool it or heat it up?" ,
+			"Will warm weather stop the outbreak of COVID-19?"
+	}
+
+	"coronavirus.define" :
+		inputs in en {
+			"What is Covid" ,
+			"COVID-19" ,
+			"What is covid-19?" ,
+			"what is corona" ,
+			"what is covid-19 and why should i worry?" ,
+			"what is the difference between corona and covid-19" ,
+			"Okay. Can you define coronavirus for me, please?" ,
+			virus ,
+			"Is corona related to the flu" ,
+			"can you get pneumonia from corona" ,
+			"What is covid" ,
+			"what is ncov?" ,
+			"what is ncov19?" ,
+			"what is n-cov?" ,
+			"What is covid19" ,
+			"Where is covid" ,
+			"Corona virus" ,
+			"What is COVID-19?" ,
+			"what is the virus" ,
+			"what can you tell me about viruses" ,
+			"What is the virus?" ,
+			"what can you tell me about covid-19" ,
+			"What is Coronavirus?" ,
+			"what is this new coronavirus disease?" ,
+			"show me something about coronavirus" ,
+			"explain coronavirus to me" ,
+			"what is the novel virus going around called?" ,
+			"how did the coronavirus first start?" ,
+			"what is coronavirus and how did it start?" ,
+			"what to know about the mysterious coronavirus" ,
+			"want to know about covid 19" ,
+			"what is the new virus called?" ,
+			"what is a novel coronavirus?" ,
+			"coronavirus basic info" ,
+			"what is COVID-19?" ,
+			"I want to know about coronavirus" ,
+			"tell me something about coronavirus" ,
+			"define coronavirus" ,
+			"what is coronavirus?"
+	}
+
+	"coronavirus.spread" :
+		inputs in en {
+			"Is covid-19 spread by spit?" ,
+			"how do I get it" ,
+			"how contagious is the corona" ,
+			"can I get it by kissing someone" ,
+			"can I get it if I am in the same room" ,
+			"Can I pass it on to my child if I have it" ,
+			"how contagious is it?" ,
+			"does it spread easily?" ,
+			"does one simply walk into the " ( coronavirus ) [ "covid-19" ] "?" ,
+			"how contagious is it" ,
+			"Can I get the virus bringing in my trash barrel?" ,
+			"how do you get COVID-19?" ,
+			"can it spread via surfaces" ,
+			"can it get spread via food" ,
+			"can the virus be spread via toilets" ,
+			"How do I get COVID-19?" ,
+			"How do I get covid?" ,
+			"how do I get " ( corona ) [ "covid-19" ] ,
+			"Is it contagious?" ,
+			"Is COVID-" ( "19" ) [ ^number ] " contagious?" ,
+			"how do i catch" ,
+			"how do i catch covid-19" ,
+			"What are all the different ways that the virus can be spread to other people?" ,
+			"How does the virus spread?" ,
+			"How is COVID-19 transmitted?" ,
+			"how is it transmitted?" ,
+			"how is the virus transferred?" ,
+			"how do you get the virus?" ,
+			"How do I catch covid-19?" ,
+			"how does the virus spread?" ,
+			"is it transmittable before symptoms?" ,
+			"can someone infect before showing symptoms?" ,
+			"is it contagious before showing symptoms?" ,
+			"can the virus be spread through food?" ,
+			"How do people get the virus?" ,
+			"How can I catch this?" ,
+			"how do people get the virus?" ,
+			"how does it spread" ,
+			"how can i contract it?" ,
+			"How is the virus transmitted?" ,
+			"how does the virus transmit?" ,
+			"what do we know about the virus spread?" ,
+			"the spread of " ( coronavirus ) [ "covid-19" ] ,
+			"viral spread" ,
+			"why is covid-19 considered a community spread?" ,
+			"what does community spread mean?" ,
+			"covid-19 spread" ,
+			"How the new " ( coronavirus ) [ "covid-19" ] " spread?" ,
+			"What is community spread?" ,
+			"How is " ( coronavirus ) [ "covid-19" ] " spread?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			^number : entity float ;
+
+	"q1.pronouns_me" :
+		inputs in en {
+			"just me" ,
+			"answering for myself" ,
+			"answer for me" ,
+			"for myself" ,
+			"for me" ,
+			myself ,
+			me
+	}
+
+	"coronavirus.mask_children" :
+		inputs in en {
+			"Should my child wear a mask?" ,
+			"Children masks" ,
+			"Masks and kids" ,
+			"Can kids wear masks?" ,
+			"Should children wear masks?"
+	}
+
+	"coronavirus.animals" :
+		inputs in en {
+			"Animals with " ( coronavirus ) [ "covid-19" ] ,
+			"Can animals get " ( "COVID-19" ) [ "covid-19" ] ,
+			"Which animals can get " ( COVID ) [ "covid-19" ] ,
+			"What animals can get " ( COVID ) [ "covid-19" ] ,
+			"What animals can get " ( coronavirus ) [ "covid-19" ] ,
+			"What animals can get " ( "COVID-19" ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.death" :
+		inputs in en {
+			"how many people have died so far?" ,
+			"what is the mortality rate so far ?" ,
+			"people died in  " ( us ) [ "geo-country" ] ,
+			"How many deaths have been reported in " ( "New Zealand" ) [ "geo-country" ] "?" ,
+			"deaths in " ( india ) [ "geo-country" ] ,
+			"what is the mortality rrate in ages 30-40" ,
+			"How many deaths have been reported in " ( korea ) [ "geo-country" ] ,
+			"How many people have died in " ( Jordan ) [ "geo-country" ] "?" ,
+			"What\'s the number of deaf?" ,
+			"total death" ,
+			"total death in " ( US ) [ "geo-country" ] ,
+			"How many deaths have been reported in " ( France ) [ "geo-country" ] "?" ,
+			"How many deaths have been reported in the " ( US ) [ "geo-country" ] "?" ,
+			"How many " ( Corona ) [ "covid-19" ] " work deaths have happened in the " ( "United Kingdom" ) [ "geo-country" ] "?" ,
+			"Did anyone die come Coronavirus?" ,
+			"How many people died from Corona virus?" ,
+			"how many died in the " ( ^uk ) [ "geo-country" ] "?" ,
+			"died in usa" ,
+			"how many deaths so far in the " ( US ) [ "geo-country" ] ,
+			"How many people have died?" ,
+			"what is the current mortality rate" ,
+			"how many deaths have there been in the " ( us ) [ "geo-country" ] ,
+			"How many deaths have there been from COVID-19 in the " ( "United States" ) [ "geo-country" ] "?" ,
+			"how many people die every day" ,
+			"how many people have died" ,
+			"What is the mortality rate for covid" ,
+			"How many people have died covid?" ,
+			"How many people have died in San Bernardino County?" ,
+			"the total number of deaths" ,
+			"what is the death toll" ,
+			"How many deaths have resulted from covid-19?" ,
+			"How many people globally have died from the " ( coronavirus ) [ "covid-19" ] "?" ,
+			"what\'s the fatality rate?" ,
+			"can you tell me death rate by age?" ,
+			"was is the mortality rate?" ,
+			"Death rate in king county today" ,
+			"Death count" ,
+			"fatality rate" ,
+			"what is the current death count?" ,
+			( US ) [ "geo-country" ] " " ( coronavirus ) [ "covid-19" ] " death toll" ,
+			( coronavirus ) [ "covid-19" ] " death toll" ,
+			"how many people died" ,
+			"deaths number" ,
+			"how many deaths" ,
+			"death rate" ,
+			"What is the death rate of " ( coronavirus ) [ "covid-19" ] "?" ,
+			"How many people have died from " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"geo-country" : entity text ;
+
+	"coronavirus.outdoor_activities" :
+		inputs in en {
+			"Can I go out yet" ,
+			"can i go out" ,
+			"What does shelter in place mean?" ,
+			"What is shelter in place?" ,
+			"Can I still go to work?" ,
+			"Can I still take a walk in " ( "San Francisco" ) [ "geo-city" ] "?" ,
+			"Can I still take a walk in the neighborhood?" ,
+			"still jog" ,
+			"Can I still go take a hike?" ,
+			"shelter in place" ,
+			"can I still go for hikes" ,
+			"can I still go to restaurants" ,
+			"can I still go out" ,
+			"can I still go outside" ,
+			"Can I take a hike in the woods?" ,
+			"can I still do outside walks?" ,
+			"Am I allowed to go outside?" ,
+			"can I go to the gym" ,
+			"should I workout" ,
+			"Should I order take out?" ,
+			"Should I order food for delivery?" ,
+			"What has been cancelled?" ,
+			"should my " ( "70 year old" ) [ age ] " mother go out?" ,
+			"can I go grocery shopping" ,
+			"can I still go out to do my grocery shopping" ,
+			"Is it safe to go to the coffee shop?" ,
+			"Are my kids safe to do the monkey bars at an outside playground?" ,
+			"Is takeout pizza safe?" ,
+			"Can I take my boat out fishing?" ,
+			"can I cut my lawn?" ,
+			"can I take my dog for a walk?" ,
+			"can I go to work if I feel sick" ,
+			"is it safe to go to new york now" ,
+			"Can I visit with other people?" ,
+			"dangerous to go to a store?" ,
+			"is it safe to be outdoor" ,
+			"can I go ride my " ( bike ) [ outdoor_activities ] ,
+			"Can I ride my " ( bike ) [ outdoor_activities ] " outside?" ,
+			"Shall I go to work?" ,
+			"Can I go to work if I feel sick?" ,
+			"Can I still go to " ( church ) [ outdoor_activities ] "?" ,
+			"When am I safe to go in public?" ,
+			"Can I ride my " ( bike ) [ outdoor_activities ] " in " ( "san francisco" ) [ "geo-city" ] "?"
+		}
+		parameters :
+			"geo-city" ,
+			outdoor_activities : entity outdoor_activities ;
+			age : entity text ;
+
+	"coronavirus.vaccine" :
+		inputs in en {
+			"Where can I get a vaccine?" ,
+			"What about vaccines?" ,
+			"Can I get a vaccine?" ,
+			"I need a vaccine" ,
+			Vaccine ,
+			"Do we have a vaccine available?" ,
+			"when will they start testing vaccine" ,
+			"Shall I get a pneumonia vaccine?" ,
+			"is there a vaccine?" ,
+			"Shall i get a flu shot?" ,
+			"Is there a vaccine?" ,
+			"When can I expect a vaccine?" ,
+			"Is there a vaccine yet?" ,
+			"how far away is a " ( coronavirus ) [ "covid-19" ] " vaccine?" ,
+			"Where are we in the quest for a " ( coronavirus ) [ "covid-19" ] " vaccine" ,
+			"are we still waiting on the vaccine to be developed?" ,
+			"When could be see a " ( coronavirus ) [ "covid-19" ] " vaccine?" ,
+			"Is it true that we have a vaccine already?" ,
+			"Is a vaccine for the " ( coronavirus ) [ "covid-19" ] " coming?" ,
+			( coronavirus ) [ "covid-19" ] " vaccine" ,
+			"Is a covid-19 vaccine coming soon?" ,
+			"How close are we to a vaccine?" ,
+			"When will a " ( coronavirus ) [ "covid-19" ] " vaccine be ready?" ,
+			"Is there a vaccine available?" ,
+			"Is there a vaccine for " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.pets_avoid" :
+		inputs in en {
+			"I\'m sick and have animals" ,
+			"I\'m sick and have pets" ,
+			"Should I stay way from pets if I have " ( coronavirus ) [ "covid-19" ] ,
+			"Should I avoid contact with pets or other animals if I am sick with " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"What if I have pets when I\'m sick?" ,
+			"Should I avoid my pet while sick?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"q1.pronouns" :
+		inputs in en {
+			"👍🏽" ,
+			y ,
+			yeah ,
+			"let\'s do it" ,
+			okay ,
+			"let\'s get started" ,
+			yup ,
+			yes
+	}
+
+	"coronavirus.indoor_quarantine" :
+		inputs in en {
+			"Do I need to stay at home?" ,
+			"Should I work from home?" ,
+			"How long do I have to stay isolated?" ,
+			"how long do I need to stay at home" ,
+			"how long should I stay at home" ,
+			"What is shelter in place?" ,
+			"when should I stay at home" ,
+			"f I get sick how long to I need to be incubated" ,
+			"Are we required to stay in place?" ,
+			"should I stay home or go outside" ,
+			"where are we required to shelter in place\"" ,
+			"what is shelter in place?" ,
+			"how long will this quarantine last for?" ,
+			"where are we required to shelter in place" ,
+			"why are we required to have shelter in place?" ,
+			"how long do i need to sit in quarantaine?" ,
+			"How long do I need to stay away from other people" ,
+			"can I go outside if I\'m infected?" ,
+			"Can I leave my house?" ,
+			"Who should stay shelter in place?" ,
+			"how many days should someone with symptoms stay inside" ,
+			"if I get sick how long to I need to be incubated" ,
+			"how long to I need to stay at home" ,
+			"do I need to quarantine myself if I am sick" ,
+			"How long do I quarantine?" ,
+			"How long do I need to stay away from other people?" ,
+			"Do I have to self quarantine? It\'s time I fly." ,
+			"How long should I stay quarantined?" ,
+			"Should I quarantine myself?" ,
+			"should I stay at home?"
+	}
+
+	"coronavirus.medical_care" :
+		inputs in en {
+			"Can I still get medical care?" ,
+			"Can I go to the doctor for my other conditions?" ,
+			"Can I still go to my regular medical appointments?" ,
+			"Is it safe to go to the doctor right now?" ,
+			"Is it safe to get medical care for my other medical conditions during this time?"
+	}
+
+	"coronavirus.symptoms_children" :
+		inputs in en {
+			"Do kids get different symptoms from " ( coronavirus ) [ "covid-19" ] "?" ,
+			"Are the symptoms of " ( "COVID-19" ) [ "covid-19" ] " different in children than in adults?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.house" :
+		inputs in en {
+			"Someone in my house has " ( coronavirus ) [ "covid-19" ] ,
+			"What if my roommate is sick?" ,
+			"What should I do if someone in my house gets sick with " ( "COVID-19" ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.china" :
+		inputs in en {
+			"Why is the disease being called COVID-19?" ,
+			"what is the chinese virus?" ,
+			"what is the chinese flu?" ,
+			"what is the wuhan virus?" ,
+			"what is the wuhan disease?" ,
+			"china virus" ,
+			"wuhan virus" ,
+			"china flu" ,
+			"chinese virus"
+	}
+
+	"coronavirus.wash_hands" :
+		inputs in en {
+			"Wash hands" ,
+			"How often should I wash my hands?" ,
+			"how to clean my hands to protect myself from getting the virus" ,
+			"How can I wash my hands?" ,
+			"Can you give me tips on washing hands?" ,
+			"is it really that important to wash hands" ,
+			"how often should you wash your hands?" ,
+			"why so important to clean hands" ,
+			"advice for wash hands" ,
+			"how to wash your hands correctly to limit spread of disease" ,
+			"why hand washing matters?" ,
+			"how long do i need to wash my hands?" ,
+			"proper hand wash fights coronavirus" ,
+			"can the coronavirus be killed by washing hands?" ,
+			"can a thorough hand wash prevent disease?" ,
+			"Is soap better than hand sanitizer to prevent infection?" ,
+			"hand washing tips" ,
+			"how to clean your hands to protect against coronavirus" ,
+			"what are the proper steps of washing hands?" ,
+			"what do i need to know about washing my hands effectively?"
+	}
+
+	"q.no" :
+		inputs in en {
+			"they do not" ,
+			"I do not" ,
+			"they don\'t" ,
+			"I don\'t" ,
+			nope ,
+			^no
+	}
+
+	"coronavirus.closure" :
+		inputs in en {
+			"what " ( banks ) [ organization ] " are open in Parel 400012" ,
+			"where\'s hospital if I am suspect of corona virus victim." ,
+			"What\'s the " ( restaurant ) [ organization ] " open " ( today ) [ "date-time" ] "?" ,
+			"What " ( pharmacies ) [ organization ] " are open in " ( Boston ) [ "geo-city" ] "?" ,
+			"What " ( hospitals ) [ organization ] " are open in " ( Dallas ) [ "geo-city" ] "?" ,
+			"What\'s open " ( today ) [ "date-time" ] "?" ,
+			"What " ( schools ) [ organization ] " are open " ( today ) [ "date-time" ] "?" ,
+			"What fast food " ( restaurants ) [ organization ] " are open in 30024?" ,
+			"What " ( hospitals ) [ organization ] " are open in " ( Mumbai ) [ "geo-city" ] "?" ,
+			( "grocery stores" ) [ organization ] " in " ( siliguri ) [ "geo-city" ] ,
+			"are there any " ( hospital ) [ organization ] " in " ( boston ) [ "geo-city" ] ,
+			"are there any " ( hospital ) [ organization ] " in " ( phoenix ) [ "geo-city" ] ,
+			( Pharmacy ) [ organization ] " open in " ( "new york" ) [ "geo-city" ] ,
+			( Hospital ) [ organization ] " open in " ( "new york" ) [ "geo-city" ] ,
+			"What " ( stores ) [ organization ] " are open in " ( California ) [ "geo-city" ] "?" ,
+			"What " ( pharmacies ) [ organization ] " are open " ( today ) [ "date-time" ] "?" ,
+			"What " ( "grocery stores" ) [ organization ] " are open " ( today ) [ "date-time" ] "?" ,
+			"What " ( stores ) [ organization ] " are open nearby?" ,
+			( "new york" ) [ "geo-city" ] ,
+			"are the " ( stores ) [ organization ] " closed" ,
+			"Are " ( airports ) [ organization ] " closed?" ,
+			"will " ( stores ) [ organization ] " still be open?" ,
+			"Will the " ( "grocery store" ) [ organization ] " can hours only for the elderly do stop?" ,
+			"What are the open " ( "grocery stores" ) [ organization ] "?" ,
+			"What are the " ( restaurants ) [ organization ] " open?" ,
+			"are " ( schools ) [ organization ] " closed in " ( "morgan hill" ) [ "geo-city" ] " ca?" ,
+			"Are " ( restaurants ) [ organization ] " closed in " ( SF ) [ "geo-city" ] " ?" ,
+			"Where can I find " ( school ) [ organization ] " closings?" ,
+			"Are " ( "food delivery" ) [ organization ] " services still available?" ,
+			"Will " ( "grocery stores" ) [ organization ] " remain open?" ,
+			"Are " ( restaurants ) [ organization ] " closed in " ( SF ) [ "geo-city" ] "?" ,
+			"Are " ( schools ) [ organization ] " closed in " ( "the Bay Area" ) [ "geo-city" ] "?"
+		}
+		parameters :
+			organization : entity text , required , prompts in en [ "What specific type of service or business are you looking for?" ] ;
+			"geo-city" : entity text , required , prompts in en [ "In which city are you looking for?" ] ;
+			"date-time" : entity text ;
+
+	"support.name" :
+		inputs in en {
+			"What\'s your name?" ,
+			"are you a bot?" ,
+			"What are you?" ,
+			"are you a boss" ,
+			"your name please" ,
+			"what can I call you?" ,
+			"what are you known as?" ,
+			"what are you called?" ,
+			"do you have a name?" ,
+			"What\'s your name"
+	}
+
+	"coronavirus.symptoms" :
+		inputs in en {
+			"What about losing sense of taste" ,
+			"Is losing sense of smell a symptom of Covid?" ,
+			"is red eyes a symptom" ,
+			"what are the symptoms?" ,
+			"is chest pain a symptom" ,
+			"What are the signs of someone who caught Coronavirus?" ,
+			"And what are the symptoms?" ,
+			"what happens if you get it" ,
+			"what happens if you get the virus" ,
+			"what happens when you get the virus" ,
+			"how do I know if I have it" ,
+			"How do I know if I have it or not?" ,
+			"what indicates that I might have it" ,
+			"what indications" ,
+			"What are the top symptom of covid-19?" ,
+			"how do I know if I have the virus?" ,
+			"what are main symptoms of covid-19?" ,
+			"My throat is scratchy, how do i know if it is serious?" ,
+			"What are covid symptoms?" ,
+			"how do i find out if i have covid-19" ,
+			"What are the symptoms of covid-19" ,
+			"I have a rash, is that a symptom?" ,
+			"how do i know if i have coronavirus?" ,
+			"What are the symptoms of covid-19?" ,
+			"Tell me about symptoms." ,
+			"do you have a symptom checklist?" ,
+			"How can I tell if I have covid-19?" ,
+			"how can i tell if i have covid-19?" ,
+			"how do I check for symptoms?" ,
+			"What are the symptoms?" ,
+			"What is the signs of covid-19?" ,
+			"How do I know if I\'m feeling exposed?" ,
+			"What are the symptoms of Coronavirus?" ,
+			"How to tell if i am infected?" ,
+			"what is it like to have the virus?" ,
+			"what is it like to have the virus" ,
+			"what symptoms" ,
+			"is a runny nose a symptom of corona virus?" ,
+			"what should I look for to indicate I need a test for the covid19 virus" ,
+			"How do I know if I have the virus?" ,
+			"what symptoms do people show?" ,
+			"Covid symptoms" ,
+			Symptoms ,
+			symptoms ,
+			"How do I know if I\'m sick?" ,
+			"what are the symptoms of code 19" ,
+			"what symptoms should i be concerned about" ,
+			"What are the symptoms" ,
+			"How do I know if I\'m infected?" ,
+			"How do I know that I\'m infected by the Coronavirus?" ,
+			"what are the symptoms" ,
+			"OK and what if I have symptoms, how do I know? What are the symptoms?" ,
+			"I\'m not sure if I have Corona" ,
+			"how do I know if I have corona virus" ,
+			"what are the sypmtoms?" ,
+			"what are the symptoms this coronavirus causes?" ,
+			"how can I tell if I have coronavirus?" ,
+			"symptoms of coronavirus" ,
+			"common symptoms of covid 19" ,
+			"how can i tell if i am infected?" ,
+			"flu symptoms vs coronavirus symptoms" ,
+			"what are the common coronavirus symptoms?" ,
+			"what are the warning signs to know about coronavirus?" ,
+			"how does the new coronavirus symptoms compare with the flu?" ,
+			"what are the signs of a coronavirus infection?" ,
+			"what are the symptoms and complications that COVID-19 can cause?" ,
+			"how do I know if I have caught coronavirus or not?" ,
+			"what are the signs of someone who had caught covid-19?"
+	}
+
+	"q1.pronouns_they" :
+		inputs in en {
+			"my child" ,
+			"my daughter" ,
+			"my son" ,
+			"my parent" ,
+			"my dad" ,
+			"my mom" ,
+			"my wife" ,
+			"my husband" ,
+			"my partner" ,
+			"my friend" ,
+			them ,
+			"not me" ,
+			"somebody else" ,
+			"someone else"
+	}
+
+	"coronavirus.contact" :
+		inputs in en {
+			"I\'ve had close contact with someone who has " ( COVID ) [ "covid-19" ] ,
+			"What should I do if I\'ve met someone with " ( coronavirus ) [ "covid-19" ] "?" ,
+			"I\'ve been exposed to " ( coronavirus ) [ "covid-19" ] ,
+			"What should I do if I have had close contact with someone who has " ( "COVID-19" ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.origin" :
+		inputs in en {
+			"What is the source of the virus?" ,
+			"Where was " ( covid ) [ "covid-19" ] " first detected?" ,
+			"Where was " ( "covid-19" ) [ "covid-19" ] " first detected?" ,
+			"Where was " ( coronavirus ) [ "covid-19" ] " first detected?" ,
+			"How did it start" ,
+			"Where is the virus 1st found?" ,
+			"Where does the " ( "covid-19" ) [ "covid-19" ] " come from?" ,
+			"where did " ( corona ) [ "covid-19" ] " start" ,
+			"how did the virus start" ,
+			"where did " ( "covid-19" ) [ "covid-19" ] " start" ,
+			"where does the virus originally come from" ,
+			"where is the corona virus" ,
+			"where is the coronavirus" ,
+			"where is the " ( coronavirus ) [ "covid-19" ] " from?" ,
+			"Is " ( Coronavirus ) [ "covid-19" ] " or originated in China?" ,
+			"Is " ( Coronavirus ) [ "covid-19" ] " from China?" ,
+			( wuhan ) [ "covid-19" ] ,
+			"where does " ( coronavirus ) [ "covid-19" ] " first occur?" ,
+			"Where is " ( "covid-19" ) [ "covid-19" ] " first found?" ,
+			"where is " ( coronavirus ) [ "covid-19" ] " originated?" ,
+			"what do we know about the " ( virus ) [ "covid-19" ] "\'s origin?" ,
+			"Where is the " ( virus ) [ "covid-19" ] " first detected?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"support.bye-thank" :
+		inputs in en {
+			"no that\'s it" ,
+			"nope that\'s it" ,
+			"i\'m done" ,
+			"no I\'m done" ,
+			^no
+	}
+
+	"coronavirus.hand_sanitizer" :
+		inputs in en {
+			"What if I don\'t have any sanitizer?" ,
+			"what\'s better a sanitizer or hand washing" ,
+			"what if I don\'t have any sanitizer" ,
+			"does liquor work to sanitize" ,
+			"can I wash my hands in liquor" ,
+			"how can I use liquor" ,
+			"where can I get hand sanitizer" ,
+			"hand sanitizers are not available, what can I use instead?" ,
+			"Is hand sanitizer better than soap?" ,
+			"Is hand sanitizer useful in killing coronavirus?" ,
+			"Can i use rubbing alcohol if I don\'t have hand sanitizer?" ,
+			"all hand sanitizers are sold out, what can I do?" ,
+			"can i kill the virus using liquor?" ,
+			"can i use liquor to fight against coronavirus?" ,
+			"what can i do if I don\'t have hand sanitizer?" ,
+			"Can I use a strong alcohol content liquor in liue of hand sanitizer?" ,
+			"What alternatives do I have if there are no hand sanitizers available? Can I use other alcohol like ethyl or liquor?"
+	}
+
+	"coronavirus.antibody_testing" :
+		inputs in en {
+			( "COVID-19" ) [ "covid-19" ] " antibodies" ,
+			"Antibody testing" ,
+			"Do I have antibodies?" ,
+			"Can I get tested for " ( COVID ) [ "covid-19" ] " with antibodies?" ,
+			"Can I be tested for antibodies?" ,
+			"What is antibody testing?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"support.welcome" :
+		inputs in en {
+			"hello hello" ,
+			"What can I ask?" ,
+			"what is it that you help with?" ,
+			"what can you help me with" ,
+			"How can you help me?" ,
+			"What can i ask you?" ,
+			"what can you help with?" ,
+			"what can I ask" ,
+			"What can you help me with?" ,
+			"How can you help me" ,
+			"what can you help me with?" ,
+			"what can I ask you?" ,
+			"what can you answer?" ,
+			"What can you do?" ,
+			"hey there" ,
+			"hello there" ,
+			greetings ,
+			"trying to say hello" ,
+			"just going to say hi" ,
+			howdy ,
+			heya ,
+			hey ,
+			"hi there!" ,
+			hello ,
+			^hi
+	}
+
+	"coronavirus.protect" :
+		inputs in en {
+			"What are the precautions to take for " ( Corona ) [ "covid-19" ] " wear?" ,
+			"what precautions should i take?" ,
+			" If I’m sick, how do I protect the people I live with?" ,
+			"how to prevent getting " ( Coronavirus ) [ "covid-19" ] ,
+			"how to clean my home to prevent " ( Coronavirus ) [ "covid-19" ] ,
+			"how can I guard myself" ,
+			"What precautions I need to do?" ,
+			"I think I have " ( Corona ) [ "covid-19" ] ". How can I protect others from getting it?" ,
+			"How can I protect myself?" ,
+			precautions ,
+			"what to do" ,
+			"what can I do to protect my family" ,
+			"how can I defend myself from getting it" ,
+			"how can I save myself from getting it" ,
+			"should we wear gloves when we go out/" ,
+			"how can you stay safe" ,
+			"how can one stay safe" ,
+			"how to not get the virus" ,
+			"How do I protect myself?" ,
+			"what should I be doing?" ,
+			"what should I be doing" ,
+			"do you have any advice?" ,
+			"do you have any advice/" ,
+			"how do I stay safe amidst the outbreak?" ,
+			"do you have tips to stay safe?" ,
+			tips ,
+			"What should I do" ,
+			"what are the precautions which I can take to protect from getting infected" ,
+			"what should I do" ,
+			"What should I do?" ,
+			"how do I avoid giving " ( corona ) [ "covid-19" ] " to others" ,
+			"What can i do to not get infected" ,
+			"What should I do to keep myself safe?" ,
+			"Can I do anything to avoid being infected?" ,
+			"How do I avoid covid-19?" ,
+			"How do I avoid getting the virus?" ,
+			"What can I do to not get infected?" ,
+			"How can I keep my self safe from others?" ,
+			"how to stay safe from getting it" ,
+			"how do i make sure i don\'t get the virus" ,
+			"What precautions should I take" ,
+			"What should I avoid to do?" ,
+			"how do I avoid giving " ( corona ) [ "covid-19" ] " to others?" ,
+			"what should i do to avoid it" ,
+			"how can i avoid " ( corona ) [ "covid-19" ] "?" ,
+			"I\'m about to check myself in my family." ,
+			"Okay, how do I protect myself in my family?" ,
+			"What are the precautions I need to take?" ,
+			( coronavirus ) [ "covid-19" ] " preventive measures" ,
+			"methods of prevention" ,
+			"Protecting myself from the disease" ,
+			"How to protect my family from " ( coronavirus ) [ "covid-19" ] "?" ,
+			"How can I protect myself at a workplace?" ,
+			"what are the practical tips for " ( coronavirus ) [ "covid-19" ] " prevention?" ,
+			"How can I avoid getting infected?" ,
+			"Are there any prevention methods?" ,
+			"what to do to prevent " ( coronavirus ) [ "covid-19" ] "?" ,
+			"What can I do to protect myself and prevent the spread of disease?" ,
+			"What can I do to protect my self from being infected?" ,
+			"What precautions should I take to prevent being infected?" ,
+			"what should i do to prevent myself from being infected by " ( coronavirus ) [ "covid-19" ] "?" ,
+			"How can I protect myself from catching the " ( coronavirus ) [ "covid-19" ] " disease?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"support.thank" :
+		inputs in en {
+			"I see, thanks" ,
+			"Okay. Thank you." ,
+			"Thank you." ,
+			"that\'s great information, thank you" ,
+			"thank you i really appreciate it" ,
+			"ok, thanks" ,
+			"got it, thanks" ,
+			"thanks for the help" ,
+			"okay great, thank u" ,
+			"thanks a ton" ,
+			"thank you very much" ,
+			"Thanks a lot!" ,
+			"Thanks!" ,
+			"thank you"
+	}
+
+	"support.livechat" :
+		inputs in en {
+			"I want to talk to a live agent." ,
+			"representative transfer" ,
+			"talk to representative" ,
+			"human agent please" ,
+			"i need to talk to a human" ,
+			"transfer me to a live agent" ,
+			"talk to a nurse" ,
+			"chat with a representative" ,
+			"I want to talk to a live agent"
+	}
+
+	"coronavirus.social_distancing" :
+		inputs in en {
+			"Can I visit a patient with covid-19" ,
+			"Can I visit a patient with coronavirus" ,
+			"The rules of social distancing" ,
+			"Can I still see my friends" ,
+			"Why is social distancing so important?" ,
+			"What is social distancing?" ,
+			"how far should I distance from another person" ,
+			"why is it so important with social distancing" ,
+			"how far apart" ,
+			"what is social distancing" ,
+			"social distancing" ,
+			"what does social distancing mean" ,
+			"what is social distancing?"
+	}
+
+	"q.yes" :
+		inputs in en {
+			"👍🏽" ,
+			y ,
+			yeah ,
+			okay ,
+			yup ,
+			yes
+	}
+
+	"coronavirus.treatment" :
+		inputs in en {
+			"Should I take antibiotics?" ,
+			"Will antibiotics help with covid-19?" ,
+			"How do you treat covid-19?" ,
+			"Is there a treatment yet?" ,
+			"What is the treatment for covid-19?" ,
+			"Are there any treatments available?" ,
+			"treatments for " ( Corona ) [ "covid-19" ] ,
+			"what is the solution for covid?" ,
+			"how can we remove covid?" ,
+			"what is the solution to coronavirus?" ,
+			"Is there a cure for " ( coronavirus ) [ "covid-19" ] "?" ,
+			"is there any cure yet for the virus" ,
+			"can you be treated for corona" ,
+			"what medication should i take" ,
+			"Can I take medicine?" ,
+			"what medicines help" ,
+			"what remedies are available?" ,
+			"is there a cure?" ,
+			"where can i get treated for covid 19" ,
+			"what if I get sick with " ( coronovirus ) [ "covid-19" ] ,
+			"what do I do if I have " ( "corono virus" ) [ "covid-19" ] ,
+			"what do I do if I have " ( "corona virus" ) [ "covid-19" ] ,
+			"what do I do if I have " ( coronovirus ) [ "covid-19" ] ,
+			"Is there a treatment?" ,
+			"Is there an antidote yet?" ,
+			"what treatments are available to treat " ( coronavirus ) [ "covid-19" ] "?" ,
+			"is there an antiviral treatment for COVID-19?" ,
+			"are there any medicines or therapies that can cure " ( coronavirus ) [ "covid-19" ] "?" ,
+			"are antibiotics effective in preventing or treating the covid-19?" ,
+			"existing drugs in " ( coronavirus ) [ "covid-19" ] " fight" ,
+			"medical solutions to the coronavirus" ,
+			"does the US have effective treatment for " ( coronavirus ) [ "covid-19" ] "?" ,
+			"drugs to treat infection" ,
+			"do we have drugs for treating this new disease?" ,
+			"what\'s the most effective medicine to treat " ( coronavirus ) [ "covid-19" ] "?" ,
+			"can we use antibiotics to treat " ( coronavirus ) [ "covid-19" ] "?" ,
+			"can people be cured if they caught " ( coronavirus ) [ "covid-19" ] "?" ,
+			"Is there a medicine to treat this virus?" ,
+			"is there a cure for the new " ( coronavirus ) [ "covid-19" ] "?" ,
+			"can " ( coronavirus ) [ "covid-19" ] " be treated?" ,
+			"do we have treatment for covid-19?" ,
+			"Is there a treatment for " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.spread_others" :
+		inputs in en {
+			"How long after recovering can someone spread " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"Can someone spread " ( COVID ) [ "covid-19" ] " after getting better?" ,
+			"How long can someone spread " ( coronavirus ) [ "covid-19" ] " to others?" ,
+			"Can someone who has had " ( "COVID-19" ) [ "covid-19" ] " spread it to others?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.pregnancy" :
+		inputs in en {
+			"Can I pass Covid to my fetus" ,
+			"Can Corona virus be come an issue for pregnant women?" ,
+			"10 caronavirus cause issues for pregnant woman" ,
+			"Do i need to take extra precaution during pregnancy?" ,
+			"Will coronavirus harm the fetus in pregnant women?" ,
+			"Can COVID-19 be passed from a pregnant woman to the fetus or newborn?" ,
+			"I am pregnant can it effect my child" ,
+			"What happens if you are pregnant and is getting the virus" ,
+			"Are there any problems if I\'m pregnant?" ,
+			"Can COVID-19 cause problems for a pregnancy?"
+	}
+
+	"coronavirus.airborne" :
+		inputs in en {
+			"Is the widest airborne?" ,
+			"Is the virus airborne?" ,
+			"Can the virus be transmitted through air?" ,
+			"Is the virus in the air?" ,
+			"How long can coronavirus stay \"alive\" in the air?" ,
+			"can it spread through air?" ,
+			"is the virus airborne?" ,
+			"can you catch the virus from airborne?" ,
+			"can coronavirus stay alive in the air?" ,
+			"how long can the virus live in the air?" ,
+			"Is it true that coronavirus can live in air for 3 hours?" ,
+			"does the new virus persist in air for hours?" ,
+			"can the virus survive in air?" ,
+			"will coronavirus live in the air?" ,
+			"Can i get infected through air transmission?" ,
+			"does the virus spread through air?" ,
+			"Can the virus that causes COVID-19 be transmitted through the air?"
+	}
+
+	"pts.start-screening" :
+		inputs in en {
+			"Can I start the screener" ,
+			"Do the screener" ,
+			"I want to be screened" ,
+			"Start screener" ,
+			"I want to do screening" ,
+			"start screening" ,
+			"Start Screening"
+	}
+
+	"coronavirus.test_me" :
+		inputs in en {
+			"Should everyone get a " ( "COVID-19" ) [ "covid-19" ] " test?" ,
+			"Who needs a " ( COVID ) [ "covid-19" ] " test?" ,
+			"Should I be tested for " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"Do I need a test for " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.update" :
+		inputs in en {
+			"What are the latest news on covid in SF?" ,
+			"Can you give me the latest update?" ,
+			"where can i learn more about covid-19?" ,
+			"more information on " ( coronavirus ) [ "covid-19" ] ,
+			"I want to learn more about covid-19" ,
+			"Yes me an latest update." ,
+			"I want to see the latest news about the virus where can I find that" ,
+			"I want to find the latest update about the virus" ,
+			"can you give me " ( coronavirus ) [ "covid-19" ] " info" ,
+			"what is the latest " ( corona ) [ "covid-19" ] " update" ,
+			"I need more news about the virus where can I find that" ,
+			"Where can I find more information about the virus" ,
+			"Which site has updated information on the coronavirus" ,
+			"get info on covid 19" ,
+			"what\'s the latest news" ,
+			"What about the latest updates? Can you give me the latest updates?" ,
+			"How can I get the latest updates?" ,
+			"What\'s new" ,
+			"what is the latest news?" ,
+			"what is the update for " ( Alameda ) [ "geo-city" ] ,
+			"what is the " ( coronavirus ) [ "covid-19" ] " update in " ( "San Francisco" ) [ "geo-city" ] "?" ,
+			"what is the " ( coronavirus ) [ "covid-19" ] " update for east bay?" ,
+			"latest news on the global pandemic" ,
+			"How is " ( China ) [ "geo-country" ] " doing on " ( coronavirus ) [ "covid-19" ] " now?" ,
+			"what\'s the situation in the " ( US ) [ "geo-country" ] " right now?" ,
+			"what\'s the latest news on " ( coronavirus ) [ "covid-19" ] ,
+			"tell me live udpates" ,
+			"latest information on " ( coronavirus ) [ "covid-19" ] ,
+			"I want to know the updates on covid 19" ,
+			"play me latest news on " ( coronavirus ) [ "covid-19" ] ,
+			"give me an update on " ( conronavirus ) [ "covid-19" ]
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"geo-city" ,
+			"geo-country" : entity text ;
+
+	"pts-start-screening-no" :
+		inputs in en {
+			^no
+	}
+
+	"support.sick" :
+		inputs in en {
+			"Should I get tested if I don\'t feel that sick" ,
+			"I feel sick" ,
+			Fever ,
+			"Am I going to die?" ,
+			nausea ,
+			coughing ,
+			"should I go to hospital if I feel sick" ,
+			"i am a bit sore throat, dizzying, am I got the virus ?" ,
+			"i am a bit sore throat" ,
+			"I am coughing" ,
+			"I have a cold" ,
+			cough ,
+			"my temperature is " ( "37.5 degree celsius" ) [ temperature ] ,
+			"I have a temperature" ,
+			"I can\'t taste or smell anything" ,
+			"I can\'t taste" ,
+			"I can\'t smell" ,
+			"I have fever" ,
+			"I\'m not feeling well. What can I do?" ,
+			"how do i manage symptoms" ,
+			"Okay, what if I feel sick?" ,
+			"I\'m feeling I have a headache and I feeling sick. What should I do?" ,
+			"What should I do if I have a sore throat?" ,
+			"how do i manage my symptoms?" ,
+			"what should i do if i get the virus?" ,
+			"What should I do if I have coronavirus?" ,
+			"I think I\'ve been infected with coronavirus. What should I do?" ,
+			"what should I do if I am sick" ,
+			"i have a runny nose, should I be tested?" ,
+			"My throat hurts" ,
+			"What should I do if my throat hurts?" ,
+			"What should I do if my wife has Coronavirus?" ,
+			"what should I do if I have a fever?" ,
+			"who can i call?" ,
+			"Do I have coronavirus?" ,
+			"i have been exposed" ,
+			"i think i have corona" ,
+			"I have a fever" ,
+			"Where can I get help?" ,
+			"what if I can\'t get the medicine I need?" ,
+			"i have fever and cough" ,
+			"I have a sore throat and a fever, what should I do?" ,
+			"sore throat and a fever" ,
+			"I\'m having a fever and a cough" ,
+			"I have a fever and cough. What can I do?" ,
+			"i don\'t feel well" ,
+			"i have a fever" ,
+			"i have a high fever" ,
+			"i have a fever and a cough" ,
+			"should i take medicine?" ,
+			"how long will i be sick for?" ,
+			"how long does the sickness last" ,
+			"where can I turn to if I need to speak with someone" ,
+			"What should I do if I think I have the coronavirus?" ,
+			"where can I go for emergency in " ( "san francisco" ) [ "geo-city" ] ,
+			"when do I know if I have to call my doctor" ,
+			"i have a fever, should I worry?" ,
+			"Hi - I have some shortness of breath, but it might be allergies" ,
+			"I have shortness of breath - what should i do?" ,
+			"where should I go if I have symptoms?" ,
+			"What do I do if I\'m not feeling well?" ,
+			"What do I do if I have the virus" ,
+			"Do I have coronavirus" ,
+			"I have a fever and a cough. What can I do?" ,
+			"Where can I seek help?" ,
+			"what temperature should I look for?" ,
+			"what temperature is a fever?" ,
+			"how do i get help?" ,
+			"home remedies?" ,
+			"what should i be doing if I am tested positive?" ,
+			"what to do/" ,
+			"What should I do if I cough?" ,
+			"im sick" ,
+			"I have corona virus what should I do" ,
+			"what are the help line numbers for covid 19?" ,
+			"what should I do if see symptoms of covid " ( "19" ) [ ^number ] ,
+			"I am sneezing" ,
+			"I am feeling tired" ,
+			"what should i do if i am tested positive?" ,
+			"When shall I go to see a doctor?" ,
+			"When should I go to the hospital?" ,
+			"do I have the virus?" ,
+			"My child has covid-19, do I need to stay away from them?" ,
+			"I think my child has the virus, what do I do?" ,
+			"how do I know I have the virus" ,
+			"if you have a headache, do you have the coronavirus?" ,
+			"am i going to die" ,
+			"Where should I go if i have symptoms" ,
+			"Do I have the virus?" ,
+			"if you have a headache, do you have the coronavirus" ,
+			"Am I going to die" ,
+			"am i going to die?" ,
+			"my child may be sick, do i need to see a doctor?" ,
+			fever ,
+			"how high of a fever to expect." ,
+			"how high of a fever should I be concerned with?" ,
+			"I have shortness of breath - what should I do?" ,
+			"should I get tested if I have a headache" ,
+			help ,
+			"What do I do if i suspect that I have symptoms of the virus?" ,
+			"What if I think I have the virus?" ,
+			"how will I know I need a test for Coronavirus?" ,
+			"Hi - I think that I might have coronavirus" ,
+			"where should I go if I have symptoms" ,
+			"What should I do if I feel sick?" ,
+			"I think I\'ve been exposed. What should I do?" ,
+			"what happens if my child has the virus?" ,
+			"What do I do if I have Corona virus" ,
+			"What do I do if I have Coronavirus" ,
+			"I\'m feeling sick, what should I do?" ,
+			"I can\'t move" ,
+			"What do I do if my left foot hurts" ,
+			"I think I have corona what should I do?" ,
+			"who should i contact if i think i have covid" ,
+			"My kids don\'t feel well" ,
+			"I\'m worried I have covid " ( "19" ) [ ^number ] ,
+			"I just threw up" ,
+			"I\'m coughing like crazy" ,
+			"Do I have Caronavirus?" ,
+			"I don\'t feel well" ,
+			"My dad is 72 years old and he has symptoms last week. Do I need to take him to the hospital?" ,
+			Help ,
+			"Where should I go if i have any symptoms?" ,
+			"i feel sick"
+		}
+		parameters :
+			^number : entity float ;
+			"geo-city" ,
+			temperature : entity text ;
+
+	"support.not_satisfied" :
+		inputs in en {
+			"no satisfied" ,
+			"not satisfied" ,
+			"I do not have the information I need" ,
+			"I don\'t have the information I need" ,
+			"This was not helpful" ,
+			"I am unhappy" ,
+			"I am not satisfied" ,
+			"I\'m not satisfied"
+	}
+
+	"coronavirus.help" :
+		inputs in en {
+			"what can I do to help others during this difficult time?" ,
+			"How can I be a volunteer in this?" ,
+			"how can I help community" ,
+			"how can I help?" ,
+			"I want to donate money to people in need" ,
+			"I want to help other people during this difficult time" ,
+			"how can I help others" ,
+			"I want to volunteer" ,
+			"Can I do anything to help others in need" ,
+			"How can I help other people in need?" ,
+			"How can I help other people?" ,
+			"What can I do to help?"
+	}
+
+	"coronavirus.last_on_surface" :
+		inputs in en {
+			"can the " ( virsus ) [ "covid-19" ] " stay on " ( food ) [ surface ] ,
+			"can the " ( virsus ) [ "covid-19" ] " stay on food" ,
+			"can the virus stay on a surface" ,
+			"can the virus stick to surfaces" ,
+			"can the virus stay on " ( clothes ) [ surface ] ,
+			"How long does the last on " ( metal ) [ surface ] "?" ,
+			"How long does the virus last on that Hill surface?" ,
+			"How long does the virus last " ( paper ) [ surface ] "?" ,
+			"How long does the virus live on " ( paper ) [ surface ] "?" ,
+			"How long can the virus last on " ( plastic ) [ surface ] "?" ,
+			"how long can the virus live on " ( plastic ) [ surface ] "?" ,
+			"how long can the virus stay alive on " ( clothes ) [ surface ] "?" ,
+			"how long can the virus live on " ( paper ) [ surface ] "?" ,
+			"how long does the virus last on " ( "metal surfaces" ) [ surface ] "?" ,
+			"how long does the virus last on " ( metal ) [ surface ] ,
+			"How long does the virus remain on " ( surfaces ) [ surface ] "?" ,
+			"how long on " ( surfaces ) [ surface ] ,
+			"Can the virus spread from surfaces ?" ,
+			"How long " ( coronaviruses ) [ "covid-19" ] " may linger on contaminated " ( surfaces ) [ surface ] "?" ,
+			"how long can the new virus live on surface?" ,
+			"how long does the virus survive on surface?" ,
+			"How long does the " ( coronavirus ) [ "covid-19" ] " last on surface?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			surface : entity surface ;
+
+	"support.bye" :
+		inputs in en {
+			"Thank you. Good. Bye." ,
+			"Okay, that\'s all I want to ask." ,
+			"Okay, that\'s all." ,
+			"That\'s all the questions I have." ,
+			"That\'s all for now." ,
+			"that\'s all of my questions" ,
+			"i don\'t have anything else to ask" ,
+			"that\'s it" ,
+			"Okay, that\'s all my questions" ,
+			"Have a nice day." ,
+			"Bye. Bye." ,
+			"bye bye" ,
+			bye ,
+			by ,
+			"Good. Bye." ,
+			"Good bye!"
+	}
+
+	"coronavirus.pet" :
+		inputs in en {
+			"Can I get COVID-19 from my pets or other animals?" ,
+			"can I get it from pets?" ,
+			"Can my pets get the virus?" ,
+			"Can pets get the " ( virus ) [ "covid-19" ] "." ,
+			"can I get it from mosquitoes?" ,
+			"can bugs transfer it?" ,
+			"can i get " ( coronavirus ) [ "covid-19" ] " from my dog?" ,
+			"can my dog catch it?" ,
+			"Can dogs get " ( corona ) [ "covid-19" ] " virus?" ,
+			"can I give the virus to my dog" ,
+			"can I pass the virus over to a cat or other animal" ,
+			"Can my pet get the virus?" ,
+			"do animals get sick with this new disease?" ,
+			"can pets spread " ( "covid-19" ) [ "covid-19" ] "?" ,
+			"Is it possible for my cats catch " ( coronavirus ) [ "covid-19" ] "?" ,
+			"Are my pets at risk as well?" ,
+			"Can my dog get infected?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.testing" :
+		inputs in en {
+			"Where in the East Bay can I get tested" ,
+			"Where should I get tested" ,
+			"Should I get tested" ,
+			"testing kit" ,
+			"I need to test" ,
+			"I need testing" ,
+			"I need to be tested" ,
+			"I need a test" ,
+			"Where can I get tested if I\'m sick?" ,
+			"I’m definitely sick and still waiting to be tested. What else should I do?" ,
+			"Where can I go and get checked?" ,
+			"how do I get checked" ,
+			"where can I find testing in Frisco TX" ,
+			"Does Vermont have testing.." ,
+			"how do i get checked?" ,
+			"i have a runny nose, should I be tested?" ,
+			"Where can I get tested in Chicago?" ,
+			"where is the nearest testing?" ,
+			"How can I get tested?" ,
+			"where can i get tested?" ,
+			"Where is my nearest testing center?" ,
+			"Tell me about testing." ,
+			"Where is my closest testing facility?" ,
+			"how can i get checked?" ,
+			"how do i get tested?" ,
+			"where are the nearest medical facilities available for testing" ,
+			"Where is the nearest testing facility to me?" ,
+			"are there any testing centers in my area" ,
+			"how can I test myself" ,
+			"how can I be tested" ,
+			"Hi, what is the nearest location to where I can get testing done?" ,
+			"Is testing available?" ,
+			"where can I get tested?" ,
+			"tell me about testing" ,
+			"Where can I be tested?" ,
+			Testing ,
+			"can anyone get tested for " ( corona ) [ "covid-19" ] "?" ,
+			"testing centers cupertino" ,
+			"Can i get tested?" ,
+			"Where can I go to get tested?" ,
+			"What is the website to find location testing?" ,
+			"Where can I get tested?" ,
+			"How do I get a test?" ,
+			"Where can I get a covid test?" ,
+			"So can I see a hospital if I need to go or what should I do?" ,
+			"How do I get the tested can I see Hospital?" ,
+			"What number can I contact to get more help in case I get the " ( coronavirus ) [ "covid-19" ] "?" ,
+			"where can I get tested" ,
+			"what do I need to do to get tested?" ,
+			"tell me testing information" ,
+			"I think I have " ( coronavirus ) [ "covid-19" ] " symptoms, where can I get tested?" ,
+			"What\'s the website for self screening?" ,
+			"How to get tested for " ( coronavirus ) [ "covid-19" ] "?" ,
+			"I want to get tested, what should I do?" ,
+			"how can i get tested?" ,
+			"Where can I get tested for " ( coronavirus ) [ "covid-19" ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"support.okay" :
+		inputs in en {
+			"Okay." ,
+			"Tell more about COVID-19?" ,
+			"got it" ,
+			ok ,
+			okay
+	}
+
+	"coronavirus.higher_risk" :
+		inputs in en {
+			"What if I have high risk" ,
+			"What should I do if I have risk factors?" ,
+			"What should people at higher risk of serious illness with " ( "COVID-19" ) [ "covid-19" ] " do?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+
+	"coronavirus.travel" :
+		inputs in en {
+			"Can I still travel to " ( Iran ) [ "geo-country" ] "?" ,
+			"Can I still travel to " ( "South Korea" ) [ "geo-country" ] "?" ,
+			"should I not travel during a disease outbreak" ,
+			"Can I travel during it up break?" ,
+			"Which countries have travel bans for covid-19?" ,
+			"can I travel" ,
+			"when can i TRAVEL AGAIN" ,
+			"i need to go to " ( spain ) [ "geo-country" ] " can I travel" ,
+			"Where can I travel to?" ,
+			"I have the fly" ,
+			"can I go back to Kuala Lumpur now?" ,
+			"can i visit Kuala Lumpur?" ,
+			"Is it safe to travel?" ,
+			"Can i travel" ,
+			"what travel restrictions are in place?" ,
+			"Is it ok to travel?" ,
+			"Can I travel within the " ( US ) [ "geo-country" ] "?" ,
+			"Okay, but what if I need to travel internationally, what do I do?" ,
+			"Can I still fly home to Hawaii from San Francisco?" ,
+			"Can I still fly home to Hawaii?" ,
+			"It it still safe to fly to " ( UK ) [ "geo-country" ] "?" ,
+			"Can I travel to " ( India ) [ "geo-country" ] " right now?" ,
+			"how about traveling restrictions" ,
+			"I have a trip planned" ,
+			"what if I need to travel" ,
+			"Is it safe to travel during " ( coronavirus ) [ "covid-19" ] " outbreak?" ,
+			"Can I still travel?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"geo-country" : entity text ;
+
+	"coronavirus.spread_food" :
+		inputs in en {
+			"Can COVID-19 spread from food?" ,
+			"Do " ( food ) [ surface ] " deliveries spread " ( "COVID-19" ) [ "covid-19" ] "?" ,
+			"Can " ( COVID ) [ "covid-19" ] " spread through takeout?" ,
+			"Can the " ( virus ) [ "covid-19" ] " that causes " ( "COVID-19" ) [ "covid-191" ] " be spread through " ( food ) [ surface ] ", including restaurant take out, refrigerated or frozen packaged " ( food ) [ surface1 ] "?"
+		}
+		parameters :
+			"covid-19" : entity "covid-19" ;
+			"covid-191" : entity "covid-19" ;
+			surface : entity surface ;
+			surface1 : entity surface ;
+
+entities :
+	Simple entity outdoor_activities :
+		inputs in en {
+			bike synonyms bike
+			ski synonyms ski , skiing
+			jogging synonyms jogging , run
+			"walk dog" synonyms "walk dog" , "dog walking"
+			exercise synonyms exercise
+			park synonyms park
+			frisbee synonyms frisbee
+	}
+	Simple entity surface :
+		inputs in en {
+			surface synonyms surface , surfaces
+			paper synonyms paper , money , book
+			plastic synonyms plastic , plastics , pvc
+			wood synonyms wood , "wooden material" , table , desk
+			metal synonyms metal , copper , aluminum , "door nob"
+			clothes synonyms clothes , fabric , jacket , coat , cloth , towel
+	}
+	Simple entity organization :
+		inputs in en {
+			" schools" synonyms schools , university , "day care" , kindergarten , school
+			resturants synonyms resturant , resturants
+			banks synonyms bank , "JP Morgan Chase" , "Chase bank" , "Bank of America" , banks
+			"grocery stores" synonyms "grocery store" , Walmart , Safeway , "Whole Foods" , "grocery stores"
+			hospitals synonyms hospital , Kaiser , hospitals
+			pharmacies synonyms pharmacy , CVS , Walgreen , "Rite Aid" , pharmacies
+	}
+	Simple entity "covid-19" :
+		inputs in en {
+			coronavirus synonyms coronavirus , "corona virus" , coV , "covid-19" , "COVID 19"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-covid-19-faq-and-screener-gjrp.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "coronavirus.stock_upTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "coronavirus.stock_upTxtResp2" :
+		inputs in en {
+			"Create a plan to help protect your health and the health of those you care about, especially if there\'s an outbreak of COVID-19 in your community. You should base the details of your household plan on the needs and daily routine of your household members. Visit the CDC website for a planning guide. "
+	}
+	text response "coronavirus.mosquitoesTxtResp2" :
+		inputs in en {
+			"At this time, CDC has no data to suggest that this new coronavirus or other similar coronaviruses are spread by mosquitoes or ticks. The main way that COVID-19 spreads is from person to person. See How Coronavirus Spreads on the CDC website for more information. "
+	}
+	text response "support.satisfiedTxtResp2" :
+		inputs in en {
+			"Thank you for the feedback. Goodbye! "
+	}
+	text response "coronavirus.cleaningTxtResp2" :
+		inputs in en {
+			"Clean and disinfect frequently touched surfaces such as tables, doorknobs, light switches, countertops, handles, desks, phones, keyboards, toilets, faucets, and sinks.  If surfaces are dirty, clean them using detergent or soap and water prior to disinfection. To disinfect, most common EPA-registered household disinfectants will work. See CDC website for recommendations. "
+	}
+	text response "support.no_participationTxtResp2" :
+		inputs in en {
+			"Ok, goodbye. "
+	}
+	text response "coronavirus.at_riskTxtResp2" :
+		inputs in en {
+			"This is a rapidly evolving situation and the risk assessment may change daily. The latest updates are available on CDC’s Coronavirus Disease 2019 (COVID-19) website. "
+	}
+	text response "coronavirus.risk_severityTxtResp2" :
+		inputs in en {
+			"COVID-19 is a new disease and there is limited information regarding risk factors for severe disease. Based on currently available information and clinical expertise, older adults and people with underlying medical conditions are at higher risk for severe illness from COVID-19. "
+	}
+	text response "coronavirus.package_safetyTxtResp2" :
+		inputs in en {
+			"There is still a lot that is unknown about COVID-19 and how it spreads. Coronaviruses are thought to be spread most often by respiratory droplets. Although the virus can survive for a short period on some surfaces, it is unlikely to be spread from domestic or international mail, products or packaging. However, it may be possible that people can get COVID-19 by touching a surface or object that has the virus on it and then touching their own mouth, nose, or possibly their eyes, but this is not thought to be the main way the virus spreads. Learn more about safe handling of deliveries and mail on the CDC website. "
+	}
+	text response "coronavirus.immuneTxtResp2" :
+		inputs in en {
+			"CDC and partners are investigating to determine if you can get sick with COVID-19 more than once. At this time, we are not sure if you can become re-infected. Until we know more, continue to take steps to protect yourself and others. "
+	}
+	text response "coronavirus.sick_foodTxtResp2" :
+		inputs in en {
+			"Based on information about this novel coronavirus thus far, it seems unlikely that COVID-19 can be transmitted through food – additional investigation is needed. "
+	}
+	text response "coronavirus.incubation_periodTxtResp2" :
+		inputs in en {
+			"According to the World Health Organization, the incubation period, the time between catching the novel coronavirus and showing symptoms of  the COVID-19 disease range from 1-14 days, most commonly around 5 days. "
+	}
+	text response "coronavirus.maskTxtResp2" :
+		inputs in en {
+			"Wear masks in public settings when around people not living in your household and particularly where other social distancing measures are difficult to maintain, such as grocery stores, pharmacies, and gas stations. Masks may slow the spread of the virus and help people who may have the virus and do not know it from transmitting it to others.\n\nCOVID-19 can be spread by people who do not have symptoms and do not know that they are infected. That’s why it’s important for everyone to practice social distancing (staying at least 6 feet away from other people) and wear masks in public settings. Masks provide an extra layer to help prevent the respiratory droplets from traveling in the air and onto other people.\n\nThe masks recommended are not surgical masks or N-95 respirators. Those are critical supplies that must continue to be reserved for healthcare workers and other medical first responders, as recommended by current CDC guidance. "
+	}
+	text response "cornavirus.test_negativeTxtResp2" :
+		inputs in en {
+			"Using the CDC-developed viral test, a negative result means that the virus that causes COVID-19 was not found in the person’s sample. In the early stages of infection, it is possible the virus will not be detected.\nFor COVID-19, a negative test result for a sample collected while a person has symptoms likely means that the COVID-19 virus is not causing their current illness. "
+	}
+	text response "coronavirus.test_kindTxtResp2" :
+		inputs in en {
+			"There are actually many tests being used to diagnose COVID-19 that the U.S. Food & Drug Administration (FDA) has authorized for use during the current emergency. All of these viral tests identify the virus in samples from the respiratory system, such as from nasal or nasopharyngeal swabs. Some tests are conducted at the testing site you visit, and results are available to you within minutes. Other tests must be sent to a laboratory to analyze, a process that takes 1-2 days once the lab receives your samples. Two tests allow you to collect your own sample at home (either a nasal swab or a saliva sample) but you will still need to send the sample to a lab for processing.\nLocations and types of testing sites vary depending on where you live. Check with your testing site to learn which test it uses. You can find a patient information sheet about each test on the FDA website. "
+	}
+	text response "coronavirus.spread_quarantinedTxtResp2" :
+		inputs in en {
+			"Quarantine means separating a person or group of people who have been exposed to a contagious disease but have not developed illness (symptoms) from others who have not been exposed, in order to prevent the possible spread of that disease. Quarantine is usually established for the incubation period of the communicable disease, which is the span of time during which people have developed illness after exposure. For COVID-19, the period of quarantine is 14 days from the last date of exposure because the incubation period for this virus is 2 to 14 days. Someone who has been released from COVID-19 quarantine is not considered a risk for spreading the virus to others because they have not developed illness during the incubation period. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"Sorry, I don\'t know how to answer that. " ,
+			"I\'m not sure how to answer that question. Try rephrasing it. " ,
+			"I don\'t understand the question. " ,
+			"Hmm, I\'m not sure I know that. "
+	}
+	text response "coronavirus.weatherTxtResp2" :
+		inputs in en {
+			"It is not yet known whether weather and temperature affect the spread of COVID-19. Some other viruses, like those that cause the common cold and flu, spread more during cold weather months but it\'s still possible to get sick with these viruses at other times. There is much more to learn about the transmissibility, severity, and other features associated with COVID-19. "
+	}
+	text response "coronavirus.defineTxtResp2" :
+		inputs in en {
+			"A novel coronavirus is a new coronavirus that has not been previously identified. The virus causing coronavirus disease 2019 (COVID-19), is not the same as the coronaviruses that commonly circulate among humans and cause mild illness, like the common cold.\n\nA diagnosis with coronavirus 229E, NL63, OC43, or HKU1 is not the same as a COVID-19 diagnosis. Patients with COVID-19 will be evaluated and cared for differently than patients with common coronavirus diagnosis. "
+	}
+	text response "coronavirus.spreadTxtResp1" :
+		inputs in en {
+			"The virus that causes COVID-19 is thought to spread mainly from person to person, mainly through respiratory droplets produced when an infected person coughs or sneezes. These droplets can land in the mouths or noses of people who are nearby or possibly be inhaled into the lungs. Spread is more likely when people are in close contact with one another (within about 6 feet).\n\nCOVID-19 seems to be spreading easily and sustainably in the community (“community spread”) in many affected geographic areas. Community spread means people have been infected with the virus in an area, including some who are not sure how or where they became infected.\n\nVisit the CDC website to learn what is known about the spread of newly emerged coronaviruses. "
+	}
+	text response "coronavirus.mask_childrenTxtResp2" :
+		inputs in en {
+			"CDC recommends that everyone 2 years and older wear a mask that covers their nose and mouth in public settings when around people not living in your household, particularly where other social distancing measures are difficult to maintain. Masks should NOT be put on babies or children younger than 2 because of the danger of suffocation. Children younger than 2 years of age are listed as an exception as well as anyone who has trouble breathing or is unconscious, incapacitated, or otherwise unable to remove the mask without assistance. "
+	}
+	text response "coronavirus.animalsTxtResp2" :
+		inputs in en {
+			"We don’t know for sure which animals can be infected with the virus that causes COVID-19. CDC is aware of a small number of pets, including dogs and cats, reported to be infected with the virus that causes COVID-19, mostly after close contact with people with COVID-19. A tiger at a zoo in New York has also tested positive for the virus.\nRecent research shows that ferrets, cats, and golden Syrian hamsters can be experimentally infected with the virus and can spread the infection to other animals of the same species in laboratory settings. Pigs, chickens, and ducks did not become infected or spread the infection based on results from these studies. Data from one study suggested dogs are not as likely to become infected with the virus as cats and ferrets. These findings were based on a small number of animals, and do not show whether animals can spread infection to people.\nAt this time, there is no evidence that animals play a significant role in spreading the virus that causes COVID-19. Based on the limited information available to date, the risk of animals spreading COVID-19 to people is considered to be low. Further studies are needed to understand if and how different animals could be affected by the virus that causes COVID-19 and the role animals may play in the spread of COVID-19. "
+	}
+	text response "coronavirus.outdoor_activitiesTxtResp1" :
+		inputs in en {
+			"Check your local city, county, and state government website for specific guidelines during a shelter in place. "
+	}
+	text response "coronavirus.vaccineTxtResp2" :
+		inputs in en {
+			"Not yet. The World Health Organization states that at this time there is no vaccine or specific antiviral medicine to prevent or treat COVID-2019. "
+	}
+	text response "coronavirus.pets_avoidTxtResp2" :
+		inputs in en {
+			"We are still learning about this virus, but it appears that it can spread from people to animals in some situations. Until we learn more about this new coronavirus, you should restrict contact with pets and other animals while you are sick with COVID-19, just like you would with people. When possible, have another member of your household care for your animals while you are sick. If you are sick with COVID-19, avoid contact with your pet, including: petting; snuggling; being kissed or licked; sharing food or bedding.\nIf you must care for your pet or be around animals while you are sick, wash your hands before and after you interact with pets and wear a cloth face covering. "
+	}
+	text response "coronavirus.indoor_quarantineTxtResp2" :
+		inputs in en {
+			"Follow local authorities for shelter in place guidelines. In addition, the CDC recommends that you stay home if you are showing signs of COVID-19 or are mildly ill, except to get medical care. If you have COVID-19 symptoms, separate yourself from other people and pets in your home. "
+	}
+	text response "coronavirus.medical_careTxtResp2" :
+		inputs in en {
+			"It is important to continue taking care of your health and wellness. If you have a chronic health problem, you may be at higher risk for severe illness from COVID-19. \n\nContinue your medications, and do not change your treatment plan without talking to your healthcare provider. \nContinue to manage your disease the way your healthcare provider has told you. Have at least a 2-week supply of all prescription and non-prescription medications. \nTalk to your healthcare provider, insurer, and pharmacist about getting an extra supply of prescription medications, if possible, to reduce trips to the pharmacy. \nTalk to your healthcare provider about whether your vaccinations are up-to-date. \nCall your healthcare provider if you have any concerns about your medical conditions, or if you get sick.\nCall your healthcare provider to find out about different ways you can connect with your healthcare provider for chronic disease management or other conditions. Ask about phone calls, video appointments, use of the patient portal, emails and mailings. Learn more about telehealth at telehealth.hhs.gov. Do not delay getting emergency care for your health problems or any health condition that requires immediate attention.If you need emergency help, call 911. Emergency departments have infection prevention plans to protect you from getting COVID-19 if you need care for your medical condition.\nContinue to practice everyday prevention: wash your hands often, keep space between yourself and others, cover your mouth and nose with a cloth face cover when around other people, cover coughs and sneezes, and clean and disinfect frequently touched surfaces often. "
+	}
+	text response "coronavirus.symptoms_childrenTxtResp2" :
+		inputs in en {
+			"No. The symptoms of COVID-19 are similar in children and adults. However, children with confirmed COVID-19 have generally presented with mild symptoms. Reported symptoms in children include cold-like symptoms, such as fever, runny nose, and cough. Vomiting and diarrhea have also been reported. It’s not known yet whether some children may be at higher risk for severe illness, for example, children with underlying medical conditions and special healthcare needs. There is much more to be learned about how the disease impacts children. "
+	}
+	text response "coronavirus.houseTxtResp2" :
+		inputs in en {
+			"Most people who get COVID-19 will be able to recover at home. The CDC website has directions for people who are recovering at home and their caregivers. "
+	}
+	text response "coronavirus.chinaTxtResp2" :
+		inputs in en {
+			"On February 11, 2020 the World Health Organization announced an official name for the disease that is causing the 2019 novel coronavirus outbreak, first identified in Wuhan China. The new name of this disease is coronavirus disease 2019, abbreviated as COVID-19. In COVID-19, ‘CO’ stands for ‘corona,’ ‘VI’ for ‘virus,’ and ‘D’ for disease. Formerly, this disease was referred to as “2019 novel coronavirus” or “2019-nCoV”.\n\nThere are many types of human coronaviruses including some that commonly cause mild upper-respiratory tract illnesses. COVID-19 is a new disease, caused be a novel (or new) coronavirus that has not previously been seen in humans. The name of this disease was selected following the World Health Organization (WHO) best practice for naming of new human infectious diseases. "
+	}
+	text response "coronavirus.wash_handsTxtResp1" :
+		inputs in en {
+			"Wash your hands often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing. If soap and water are not readily available, use a hand sanitizer that contains at least 60% alcohol. Cover all surfaces of your hands and rub them together until they feel dry. Avoid touching your eyes, nose, and mouth with unwashed hands. "
+	}
+	text response "support.nameTxtResp2" :
+		inputs in en {
+			"This is the COVID-19 Virtual Agent. "
+	}
+	text response "coronavirus.symptomsTxtResp2" :
+		inputs in en {
+			"According to the Center for Disease Control and Prevention, current symptoms reported for patients with COVID-19 have included fever or chills, cough, shortness of breath or difficulty breathing, fatigue, muscle or body aches, headache, new loss of taste or smell, sore throat, congestion or runny nose, nausea or vomiting, diarrhea. Symptoms may appear 2-14 days after exposure. This list does not include all possible symptoms. "
+	}
+	text response "coronavirus.contactTxtResp2" :
+		inputs in en {
+			"There is information for people who have had close contact with a person confirmed to have, or being evaluated for, COVID-19 available on the CDC website. "
+	}
+	text response "coronavirus.originTxtResp1" :
+		inputs in en {
+			"COVID-19 is caused by a coronavirus called SARS-CoV-2. Coronaviruses are a large family of viruses that are common in people and may different species of animals, including camels, cattle, cats, and bats.  Rarely, animal coronaviruses can infect people and then spread between people. This occurred with MERS-CoV and SARS-CoV, and now with the virus that causes COVID-19. The SARS-CoV-2 virus is a betacoronavirus, like MERS-CoV and SARS-CoV. All three of these viruses have their origins in bats. The sequences from U.S. patients are similar to the one that China initially posted, suggesting a likely single, recent emergence of this virus from an animal reservoir. However, the exact source of this virus is unknown.\n\nMore information about the source and spread of COVID-19 is available on the CDC website. "
+	}
+	text response "support.bye-thankTxtResp2" :
+		inputs in en {
+			"Before you go, from \"very satisfied\" to \"not satisfied\" how would you rate the information you received today? "
+	}
+	text response "coronavirus.hand_sanitizerTxtResp1" :
+		inputs in en {
+			"The CDC recommends washing your hands with soap and water for at least 20 seconds. If soap and water aren\'t available, use an alcohol-based hand sanitizer with at least 60% alcohol. Liquor shouldn\'t be used in place of hand sanitizer. "
+	}
+	text response "coronavirus.antibody_testingTxtResp2" :
+		inputs in en {
+			"Antibody testing checks a sample of a person’s blood to look for antibodies to SARS-CoV-2, the virus that causes COVID-19. These antibodies are produced when someone has been infected, so a positive result from this test indicates that person was previously infected with the virus.\nCDC is working with other federal agencies to evaluate the performance of commercially manufactured antibody tests that are becoming increasingly available from healthcare providers. This evaluation is expected to be completed in early May.\nWe do not know yet if the antibodies that result from infection with SARS-CoV-2 can protect someone from reinfection with this virus (immunity) or how long antibodies to the virus will protect someone. Scientists are conducting research to answer those questions.\nAntibody tests may not be able to tell you if you are currently infected because it typically takes 1 to 3 weeks to develop antibodies to SARS-CoV-2. To tell if you are currently infected, you would need a test that identifies the virus in samples from your upper respiratory system, such as a nasopharyngeal swab. "
+	}
+	text response "coronavirus.protectTxtResp2" :
+		inputs in en {
+			"Visit the CDC website to learn about how to protect yourself from respiratory illnesses, like COVID-19. "
+	}
+	text response "support.thankTxtResp1" :
+		inputs in en {
+			"You\'re welcome. Do you have any other questions? "
+	}
+	text response "support.livechatTxtResp1" :
+		inputs in en {
+			"Okay. I\'m transferring you to a live agent right now. "
+	}
+	text response "coronavirus.social_distancingTxtResp2" :
+		inputs in en {
+			"Social distancing means keeping space between you and other people outside of your home. Stay at least 6 feet from other people, don\'t gather in groups and stay out of crowded places. Keeping space between you and others is one of the best tools we have to avoid being exposed to this virus and slowing its spread. "
+	}
+	text response "coronavirus.treatmentTxtResp2" :
+		inputs in en {
+			"There is no specific antiviral treatment recommended for COVID-19. People, particularly those with serious illness, may need to be hospitalized so that they can receive life-saving treatment for complications. Most patients recover thanks to such care. "
+	}
+	text response "coronavirus.spread_othersTxtResp2" :
+		inputs in en {
+			"The virus that causes COVID-19 is spreading from person-to-person. People are thought to be most contagious when they are symptomatic (the sickest). That is why CDC recommends that these patients be isolated either in the hospital or at home (depending on how sick they are) until they are better and no longer pose a risk of infecting others. More recently the virus has also been detected in asymptomatic persons.\n\nHow long someone is actively sick can vary so the decision on when to release someone from isolation is made using a test-based or non-test-based strategy (i.e. time since illness started and time since recovery) in consultation with state and local public health officials. The decision involves considering the specifics of each situation, including disease severity, illness signs and symptoms, and the results of laboratory testing for that patient.\n\nVisit the CDC website to learn more about CDC’s guidance on when to release someone from isolation and discharge hospitalized patients with COVID-19. For information on when someone who has been sick with COVID-19 is able to stop home isolation see Interim Guidance for Discontinuation of In-Home Isolation for Patients with COVID-19 on the CDC website.\n\nSomeone who has been released from isolation is not considered to pose a risk of infection to others. "
+	}
+	text response "coronavirus.pregnancyTxtResp2" :
+		inputs in en {
+			"According to the CDC, we do not know if pregnant people have a greater chance of getting sick from COVID-19 than the general public nor whether they are more likely to have serious illness as a result. Pregnant people seem to have the same risk as adults who are not pregnant. Mother-to-child transmission of coronavirus during pregnancy is unlikely, but after birth a newborn is susceptible to person-to-person spread and a very small number of babies have tested positive for the virus shortly after birth. "
+	}
+	text response "coronavirus.airborneTxtResp2" :
+		inputs in en {
+			"So far, studies suggest that the virus that causes COVID-19 is mainly transmitted through the respiratory droplets that spread when someone exhales, coughs, or sneezes. Those droplets can travel through the air and eventually land on surfaces. "
+	}
+	text response "coronavirus.test_meTxtResp2" :
+		inputs in en {
+			"Not everyone needs to be tested for COVID-19. For information about testing, visit the CDC website. "
+	}
+	text response "coronavirus.updateTxtResp1" :
+		inputs in en {
+			"The status of COVID-19 is changing daily. Please check the Center for Disease Control and Prevention\'s website for updates. "
+	}
+	text response "support.sickTxtResp2" :
+		inputs in en {
+			"I am not a clinician. Go to the CDC website for more information. "
+	}
+	text response "coronavirus.helpTxtResp1" :
+		inputs in en {
+			"Needs vary by community. Check with your local community to see how you can help. Good places to start include the websites for your local government. "
+	}
+	text response "coronavirus.last_on_surfaceTxtResp2" :
+		inputs in en {
+			"Studies have shown that the COVID-19 virus can survive for up to 72 hours on plastic and stainless steel, less than 4 hours on copper and less than 24 hours on cardboard. Common household disinfectants will kill the virus can be used to clean surfaces. "
+	}
+	text response "coronavirus.petTxtResp2" :
+		inputs in en {
+			"At this time, there is no evidence that animals play a significant role in spreading the virus that causes COVID-19. Based on the limited information available to date, the risk of animals spreading COVID-19 to people is considered to be low.  A small number of pets have been reported to be infected with the virus that causes COVID-19, mostly after contact with people with COVID-19.\n\nPets have other types of coronaviruses that can make them sick, like canine and feline coronaviruses. These other coronaviruses cannot infect people and are not related to the current COVID-19 outbreak.\n\nHowever, since animals can spread other diseases to people, it’s always a good idea to practice healthy habits around pets and other animals, such as washing your hands and maintaining good hygiene. For more information on the many benefits of pet ownership, as well as staying safe and healthy around animals including pets, livestock, and wildlife, visit the CDC’s Healthy Pets, Healthy People website. "
+	}
+	text response "coronavirus.testingTxtResp1" :
+		inputs in en {
+			"The process and locations for testing vary from place to place. Contact your state, local, tribal, or territorial department for more information, or reach out to a medical provider. While supplies of these tests are increasing, it may still be difficult to find someplace to get tested. If you think you may be sick, stay home and consult with your healthcare provider on the need for testing. "
+	}
+	text response "support.okayTxtResp2" :
+		inputs in en {
+			"What do you want to know about COVID-19? "
+	}
+	text response "coronavirus.higher_riskTxtResp2" :
+		inputs in en {
+			"If you are at higher risk of getting very sick from COVID-19, you should: stock up on supplies; take everyday precautions to keep space between yourself and others; when you go out in public, keep away from others who are sick; limit close contact and wash your hands often; avoid crowds, cruise travel, and non-essential travel.\nIf there is an outbreak in your community, stay home as much as possible. Watch for symptoms and emergency signs. If you get sick, stay home and call your doctor. More information on how to prepare, what to do if you get sick, and how communities and caregivers can support those at higher risk is available on the CDC website. "
+	}
+	text response "coronavirus.travelTxtResp2" :
+		inputs in en {
+			"The guidelines for travel are changing often. Check the Center for Disease Control and Prevention\'s website for travel notices before planning travel. "
+	}
+	text response "coronavirus.spread_foodTxtResp2" :
+		inputs in en {
+			"Coronaviruses are generally thought to be spread from person to person through respiratory droplets. Currently, there is no evidence to support transmission of COVID-19 associated with food. Before preparing or eating food it is important to always wash your hands with soap and water for at least 20 seconds for general food safety. Throughout the day use a tissue to cover your coughing or sneezing, and wash your hands after blowing your nose, coughing or sneezing, or going to the bathroom.\n\nIt may be possible that a person can get COVID-19 by touching a surface or object, like a packaging container, that has the virus on it and then touching their own mouth, nose, or possibly their eyes, but this is not thought to be the main way the virus spreads.\n\nIn general, because of poor survivability of these coronaviruses on surfaces, there is likely very low risk of spread from food products or packaging. "
+	}
+
+flows :
+	- user1 : user "coronavirus.stock_up" => bot1 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.stock_upTxtResp2" ;
+	- user2 : user "coronavirus.mosquitoes" => bot2 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.mosquitoesTxtResp2" ;
+	- user3 : user "support.satisfied" => bot3 : chatbot "coronavirus.stock_upTxtResp1" , "support.satisfiedTxtResp2" ;
+	- user4 : user "coronavirus.cleaning" => bot4 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.cleaningTxtResp2" ;
+	- user5 : user "support.no_participation" => bot5 : chatbot "coronavirus.stock_upTxtResp1" , "support.no_participationTxtResp2" ;
+	- user6 : user "coronavirus.at_risk" => bot6 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.at_riskTxtResp2" ;
+	- user7 : user "coronavirus.risk_severity" => bot7 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.risk_severityTxtResp2" ;
+	- user8 : user "coronavirus.package_safety" => bot8 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.package_safetyTxtResp2" ;
+	- user9 : user "coronavirus.immune" => bot9 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.immuneTxtResp2" ;
+	- user10 : user "coronavirus.sick_food" => bot10 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.sick_foodTxtResp2" ;
+	- user11 : user "coronavirus.incubation_period" => bot11 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.incubation_periodTxtResp2" ;
+	- user12 : user "coronavirus.confirmed_cases" => bot12 : chatbot HttpRequest , HttpResponse ;
+	- user13 : user "coronavirus.mask" => bot13 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.maskTxtResp2" ;
+	- user14 : user "cornavirus.test_negative" => bot14 : chatbot "coronavirus.stock_upTxtResp1" , "cornavirus.test_negativeTxtResp2" ;
+	- user15 : user "coronavirus.test_kind" => bot15 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.test_kindTxtResp2" ;
+	- user16 : user "coronavirus.spread_quarantined" => bot16 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.spread_quarantinedTxtResp2" ;
+	- user17 : user "Default Fallback Intent" => bot17 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user18 : user "coronavirus.weather" => bot18 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.weatherTxtResp2" ;
+	- user19 : user "coronavirus.define" => bot19 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.defineTxtResp2" ;
+	- user20 : user "coronavirus.spread" => bot20 : chatbot "coronavirus.spreadTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user21 : user "coronavirus.mask_children" => bot21 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.mask_childrenTxtResp2" ;
+	- user22 : user "coronavirus.animals" => bot22 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.animalsTxtResp2" ;
+	- user23 : user "coronavirus.death" => bot23 : chatbot HttpRequest , HttpResponse ;
+	- user24 : user "coronavirus.outdoor_activities" => bot24 : chatbot "coronavirus.outdoor_activitiesTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user25 : user "coronavirus.vaccine" => bot25 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.vaccineTxtResp2" ;
+	- user26 : user "coronavirus.pets_avoid" => bot26 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.pets_avoidTxtResp2" ;
+	- user27 : user "coronavirus.indoor_quarantine" => bot27 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.indoor_quarantineTxtResp2" ;
+	- user28 : user "coronavirus.medical_care" => bot28 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.medical_careTxtResp2" ;
+	- user29 : user "coronavirus.symptoms_children" => bot29 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.symptoms_childrenTxtResp2" ;
+	- user30 : user "coronavirus.house" => bot30 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.houseTxtResp2" ;
+	- user31 : user "coronavirus.china" => bot31 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.chinaTxtResp2" ;
+	- user32 : user "coronavirus.wash_hands" => bot32 : chatbot "coronavirus.wash_handsTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user33 : user "coronavirus.closure" => bot33 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" ;
+	- user34 : user "support.name" => bot34 : chatbot "coronavirus.stock_upTxtResp1" , "support.nameTxtResp2" ;
+	- user35 : user "coronavirus.symptoms" => bot35 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.symptomsTxtResp2" ;
+	- user36 : user "coronavirus.contact" => bot36 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.contactTxtResp2" ;
+	- user37 : user "coronavirus.origin" => bot37 : chatbot "coronavirus.originTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user38 : user "coronavirus.hand_sanitizer" => bot38 : chatbot "coronavirus.hand_sanitizerTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user39 : user "coronavirus.antibody_testing" => bot39 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.antibody_testingTxtResp2" ;
+	- user40 : user "support.welcome" => bot40 : chatbot "coronavirus.stock_upTxtResp1" ;
+	- user41 : user "coronavirus.protect" => bot41 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.protectTxtResp2" ;
+	- user42 : user "support.thank" => bot42 : chatbot "support.thankTxtResp1" , "coronavirus.stock_upTxtResp1" {
+		=> user43 : user "support.bye-thank" => bot43 : chatbot "coronavirus.stock_upTxtResp1" , "support.bye-thankTxtResp2" ;
+	} ;
+	- user44 : user "support.livechat" => bot44 : chatbot "support.livechatTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user45 : user "coronavirus.social_distancing" => bot45 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.social_distancingTxtResp2" ;
+	- user46 : user "coronavirus.treatment" => bot46 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.treatmentTxtResp2" ;
+	- user47 : user "coronavirus.spread_others" => bot47 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.spread_othersTxtResp2" ;
+	- user48 : user "coronavirus.pregnancy" => bot48 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.pregnancyTxtResp2" ;
+	- user49 : user "coronavirus.airborne" => bot49 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.airborneTxtResp2" ;
+	- user50 : user "pts.start-screening" => bot50 : chatbot "coronavirus.stock_upTxtResp1" {
+		=> user51 : user "q1.pronouns" => bot51 : chatbot "coronavirus.stock_upTxtResp1" {
+			=> user52 : user "q1.pronouns_me" => bot52 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" {
+				=> user53 : user "q27.hemoglobin" => bot53 : chatbot "coronavirus.stock_upTxtResp1" ;
+			} ;
+			=> user54 : user "q1.pronouns_they" => bot54 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" {
+				=> user55 : user "q27.hemoglobin" => bot55 : chatbot "coronavirus.stock_upTxtResp1" ;
+			} ;
+			=> user56 : user "pts-start-screening-no" => bot56 : chatbot "coronavirus.stock_upTxtResp1" { => back to user51 ; => back to user56 ; } ;
+			=> back to user51 ;
+		} ;
+		=> user57 : user "pts-start-screening-no" => bot57 : chatbot "coronavirus.stock_upTxtResp1" {
+			=> user58 : user "q1.pronouns" => bot58 : chatbot "coronavirus.stock_upTxtResp1" { => user59 : user "q1.pronouns_me" => bot59 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" { => user60 : user "q27.hemoglobin" => bot60 : chatbot "coronavirus.stock_upTxtResp1" ; } ; => user61 : user "q1.pronouns_they" => bot61 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" { => user62 : user "q27.hemoglobin" => bot62 : chatbot "coronavirus.stock_upTxtResp1" ; } ; => back to user58 ; => back to user57 ; } ; => back to user57 ;
+		} ;
+		=> user63 : user "q27.hemoglobin" => bot94 : chatbot "coronavirus.stock_upTxtResp1" ;
+		=> user64 : user "q.no" => bot75 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" ;
+		=> user65 : user "q.yes" => bot85 : chatbot HttpRequest , HttpResponse , "coronavirus.stock_upTxtResp1" ;
+	} ;
+	- user67 : user "coronavirus.test_me" => bot95 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.test_meTxtResp2" ;
+	- user68 : user "coronavirus.update" => bot96 : chatbot "coronavirus.updateTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user69 : user "support.sick" => bot97 : chatbot "coronavirus.stock_upTxtResp1" , "support.sickTxtResp2" ;
+	- user70 : user "support.not_satisfied" => bot98 : chatbot "coronavirus.stock_upTxtResp1" , "support.satisfiedTxtResp2" ;
+	- user71 : user "coronavirus.help" => bot99 : chatbot "coronavirus.helpTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user72 : user "coronavirus.last_on_surface" => bot100 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.last_on_surfaceTxtResp2" ;
+	- user73 : user "support.bye" => bot101 : chatbot "support.bye-thankTxtResp2" , "coronavirus.stock_upTxtResp1" ;
+	- user74 : user "coronavirus.pet" => bot102 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.petTxtResp2" ;
+	- user75 : user "coronavirus.testing" => bot103 : chatbot "coronavirus.testingTxtResp1" , "coronavirus.stock_upTxtResp1" ;
+	- user76 : user "support.okay" => bot104 : chatbot "coronavirus.stock_upTxtResp1" , "support.okayTxtResp2" ;
+	- user77 : user "coronavirus.higher_risk" => bot105 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.higher_riskTxtResp2" ;
+	- user78 : user "coronavirus.travel" => bot106 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.travelTxtResp2" ;
+	- user79 : user "coronavirus.spread_food" => bot107 : chatbot "coronavirus.stock_upTxtResp1" , "coronavirus.spread_foodTxtResp2" ;
+

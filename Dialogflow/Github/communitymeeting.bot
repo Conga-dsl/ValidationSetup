@@ -1,0 +1,223 @@
+Chatbot communitymeeting language : en
+
+intents :
+
+"travel.train" :
+	inputs in en {
+		"Look up train departures pls" ,
+		"Are there any trains at this date?" ,
+		"Could you look for trains?"
+}
+
+"agent.travel" :
+	inputs in en {
+		( "15.09" ) [ ^date ] ,
+		( Today ) [ ^date ] ,
+		"I want to travel " ( "13th February" ) [ ^date ] ,
+		"I must get out of this country " ( today ) [ ^date ] ,
+		"Can I book a flight " ( "in 4 days" ) [ ^date ] "?" ,
+		"What travels?" ,
+		"Any interesting travels " ( "10. Nov" ) [ ^date ] "?" ,
+		"Can I book a travel " ( "on Friday next week" ) [ ^date ] "?" ,
+		"A friend of mine wants to go somewhere" ,
+		"Now, where should I go for " ( "New Years Eve" ) [ ^date ] "?" ,
+		( Tomorrow ) [ ^date ] " we\'re going abroad" ,
+		"I would like to travel"
+	}
+	parameters :
+		^date : entity date , required ;
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+"agent.travel - yes" :
+	inputs in en {
+		sure ,
+		okay ,
+		"sounds correct" ,
+		"that works" ,
+		"yep that\'s ok" ,
+		"yes that\'s alright" ,
+		"I think so" ,
+		sg ,
+		"yes I agree" ,
+		"I don\'t mind" ,
+		"I agree" ,
+		"yes I do" ,
+		"for sure" ,
+		ok ,
+		"yes that\'t ok" ,
+		"that one works" ,
+		"yes you can do it" ,
+		perfect ,
+		yes ,
+		"why not" ,
+		"of course" ,
+		"yep that\'s right" ,
+		"okay I will" ,
+		exactly ,
+		"sure why not" ,
+		absolutely ,
+		"it\'s okay" ,
+		"it\'s fine" ,
+		"go ahead" ,
+		confirm ,
+		"sounds good" ,
+		alright ,
+		yeah ,
+		yup ,
+		"yes please" ,
+		"do it" ,
+		"yes I can" ,
+		"it looks perfect" ,
+		"that\'s correct" ,
+		right ,
+		"alright why not" ,
+		yep
+}
+
+"agent.travel - no" :
+	inputs in en {
+		"don\'t" ,
+		"nope not really" ,
+		"no that\'s be all" ,
+		"not right now" ,
+		"thanks but no" ,
+		not ,
+		"no we are good" ,
+		"nothing else" ,
+		"not interested" ,
+		"nah I\'m good" ,
+		"definitely not" ,
+		"no never" ,
+		never ,
+		nah ,
+		nothing ,
+		"no maybe next time" ,
+		"I don\'t want that" ,
+		"no not really" ,
+		"no that\'s ok" ,
+		"no no don\'t" ,
+		na ,
+		"no way no" ,
+		"I can\'t" ,
+		"no thanks" ,
+		"not at all" ,
+		"not really" ,
+		"I don\'t" ,
+		"no I cannot" ,
+		"no that\'s okay" ,
+		nope ,
+		"I don\'t think so" ,
+		"no it isn\'t" ,
+		"thanks but not this time" ,
+		"no that\'s fine thank you" ,
+		"no don\'t" ,
+		"don\'t do it" ,
+		"I don\'t want" ,
+		"not today" ,
+		"I\'m not" ,
+		"no way" ,
+		^no ,
+		"I disagree" ,
+		"not this time" ,
+		"nothing else thanks"
+}
+
+"Default Fallback Intent" Fallback :
+
+"travel.flight" :
+	inputs in en {
+		"I would like to look up flights" ,
+		"Fly to " ( CPH ) [ airport ] ,
+		"Look up flights to " ( VNO ) [ airport ] ,
+		"Can you look up flights?" ,
+		"What planes leave at this date?" ,
+		"Any departures going from the airport at this time?"
+	}
+	parameters :
+		airport : entity text , required , prompts in en [ "What airport you like to travel to? (write airport code please)" ] ;
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-testdelete-f8d2f.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "travel.trainTxtResp1" :
+		inputs in en {
+			"Sure, looking for train departures: " [ "agent.travel.date" ]
+	}
+	text response "agent.travelTxtResp1" :
+		inputs in en {
+			"Aha, so you would like to travel " "Is that correct? "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "agent.travel - yesTxtResp1" :
+		inputs in en {
+			"OK! You can look up flight or train departures on  " [ "agent.travel.date" ]
+	}
+	text response "agent.travel - noTxtResp1" :
+		inputs in en {
+			"I\'m sorry, please try again "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response "travel.flightTxtResp1" :
+		inputs in en {
+			"I am searching for flights on  " [ "agent.travel.date" ] "to "
+	}
+
+flows :
+	- user1 : user "agent.travel" => bot1 : chatbot "agent.travelTxtResp1" {
+		=> user2 : user "travel.train" => bot2 : chatbot "travel.trainTxtResp1" ;
+		=> user3 : user "agent.travel - yes" => bot3 : chatbot "agent.travel - yesTxtResp1" {
+			=> user4 : user "travel.train" => bot4 : chatbot "travel.trainTxtResp1" ;
+			=> user5 : user "agent.travel - no" => bot5 : chatbot "agent.travel - noTxtResp1" ;
+			=> user6 : user "travel.flight" => bot6 : chatbot HttpRequest , HttpResponse , "travel.flightTxtResp1" ;
+			=> back to user3 ;
+		} ;
+		=> user7 : user "agent.travel - no" => bot7 : chatbot "agent.travel - noTxtResp1" ;
+		=> user8 : user "travel.flight" => bot8 : chatbot HttpRequest , HttpResponse , "travel.flightTxtResp1" ;
+	} ;
+	- user9 : user "Default Welcome Intent" => bot9 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user10 : user "Default Fallback Intent" => bot10 : chatbot "Default Fallback IntentTxtResp1" ;
+

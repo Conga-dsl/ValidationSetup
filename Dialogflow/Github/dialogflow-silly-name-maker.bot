@@ -1,0 +1,45 @@
+Chatbot "dialogflow-silly-name-maker" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+make_name :
+	inputs in en {
+		( "23" ) [ ^number ] ,
+		"My lucky number is " ( "23" ) [ ^number ]
+	}
+	parameters :
+		^number : entity float , required , prompts in en [ "What is your lucky number?" ] ;
+		color : entity text , required , prompts in en [ "What is your favorite color?" , "What color is your favorite?" ] ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			"Hi! Welcome to Silly Name Maker! Let\'s get started. What is your lucky number? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"Hmm that doesn\'t sound like a number to me. What\'s your lucky number again? " ,
+			"Sorry I didn\'t quite understand that number. What is your lucky number? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user2 : user make_name => bot2 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" ;
+

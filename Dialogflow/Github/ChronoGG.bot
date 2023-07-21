@@ -1,0 +1,33 @@
+Chatbot ChronoGG language : en
+
+intents :
+
+GetDailyDeal :
+	inputs in en {
+		"Check today\'s daily deal?" ,
+		"What\'s the game that is on sale today?" ,
+		"Which game is the deal of the day?" ,
+		"What game is for sale?" ,
+		"What is the discount today?" ,
+		"What\'s on sale today?" ,
+		"what is today\'s deal" ,
+		"today\'s deal"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-chronogg-c0d41.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response GetDailyDealTxtResp1 :
+		inputs in en {
+			" "
+	}
+
+flows :
+	- user1 : user GetDailyDeal => bot1 : chatbot HttpRequest , HttpResponse , GetDailyDealTxtResp1 ;
+

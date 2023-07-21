@@ -1,0 +1,80 @@
+Chatbot airportagent language : en
+
+intents :
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"hi there" ,
+		"a good day"
+}
+
+"What time is boarding" :
+	inputs in en {
+		"When will you start boarding?" ,
+		"At what time should I be at the gate?" ,
+		"At what time can we enter the plane?" ,
+		"When can we enter the plane?" ,
+		"When does the boarding process starts?" ,
+		"When do I need to be at the gate?" ,
+		"What time should I board?" ,
+		"What time is boarding?"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "What time is boardingTxtResp1" :
+		inputs in en {
+			"Passport and security checks and boarding can take longer than expected. Per airport these times may also vary. To prevent delays, we ask that you arrive at both the airport and the gate on time, especially during the busy holiday travel seasons. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "What time is boarding" => bot2 : chatbot "What time is boardingTxtResp1" ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" ;
+

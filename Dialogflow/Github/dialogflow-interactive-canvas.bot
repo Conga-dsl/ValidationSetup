@@ -1,0 +1,69 @@
+Chatbot "dialogflow-interactive-canvas" language : en
+
+intents :
+
+instructions :
+	inputs in en {
+		"what do you want me to do?" ,
+		"what are the instructions?" ,
+		instructions
+}
+
+color :
+	inputs in en {
+		"change the triangle\'s color to " ( red ) [ color ] ,
+		"set tint to " ( blue ) [ color ] ,
+		( green ) [ color ] ,
+		"change color to " ( red ) [ color ]
+	}
+	parameters :
+		color : entity text ;
+
+"restart game" :
+	inputs in en {
+		"Restart game"
+}
+
+start :
+	inputs in en {
+		spin ,
+		start
+}
+
+fallback Fallback :
+
+welcome :
+
+pause :
+	inputs in en {
+		"pause spinning" ,
+		"stop spinning" ,
+		stop ,
+		pause ,
+		idle ,
+		"pause spin"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response colorTxtResp1 :
+		inputs in en {
+			" "
+	}
+
+flows :
+	- user1 : user instructions => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user color => bot2 : chatbot HttpRequest , HttpResponse , colorTxtResp1 ;
+	- user3 : user "restart game" => bot3 : chatbot HttpRequest , HttpResponse , colorTxtResp1 ;
+	- user4 : user start => bot4 : chatbot HttpRequest , HttpResponse , colorTxtResp1 ;
+	- user5 : user fallback => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user welcome => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user pause => bot7 : chatbot HttpRequest , HttpResponse , colorTxtResp1 ;
+

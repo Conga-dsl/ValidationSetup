@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="beta">
+  <intents name="Action_Cart_Delete">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Bucky Badger Plush"/>
+        <tokens xsi:type="generator:Literal" text=" please?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get rid of the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Wisconsin Leggings"/>
+        <tokens xsi:type="generator:Literal" text=" in the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please delete the product "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Wisconsin Running Shorts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please remove the item "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Wisconsin Running Shorts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Wisconsin Sweatpants"/>
+        <tokens xsi:type="generator:Literal" text=" in my cart anymore"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please take off the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Badger Bucky Keychain"/>
+        <tokens xsi:type="generator:Literal" text=" from the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="White Wisconsin Visor"/>
+        <tokens xsi:type="generator:Literal" text=" from the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Bucky Badger Pillow"/>
+        <tokens xsi:type="generator:Literal" text=" from the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Wisconsin Football Hat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Wisconsin Leggings"/>
+      </inputs>
+    </inputs>
+    <parameters name="Product" entity="//@entities.1" required="true"/>
+  </intents>
+  <intents name="Query_Category">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="categories"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to know about your category"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to see the category"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the category"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the categories"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the category?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What kind of products can I shop here?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what kind of category do you provide?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="category"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are categories of the product?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Query_Cart">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please tell me items in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="items in cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many things do I have in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what items are in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you show me the items in my cart?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you show me my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me what is in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is in my cart now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do I have in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me cart"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Navigation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="log in"/>
+        <tokens xsi:type="generator:Literal" text=" page"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="navigate to the page of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="Jump Around Shirts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="navigate to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="Wisconsin Leggings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="navigate to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="Leggings"/>
+        <tokens xsi:type="generator:Literal" text=" category"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="navigate to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="sign up"/>
+        <tokens xsi:type="generator:Literal" text=" page"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="take me to the page of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="Bucky Badger Plush"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="Wisconsin Football Hat"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="take me to the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="sweatshirts"/>
+        <tokens xsi:type="generator:Literal" text=" page"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="hats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="welcome"/>
+        <tokens xsi:type="generator:Literal" text=" page"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="take me to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="sign in"/>
+      </inputs>
+    </inputs>
+    <parameters name="page" entity="//@entities.2"/>
+    <parameters name="category" entity="//@entities.4"/>
+    <parameters name="Product" entity="//@entities.1"/>
+  </intents>
+  <intents name="Action_Cart_Review">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cart review"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please help me review the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you help me review my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="review cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to review my cart before checkout"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to review the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please take my to the cart page?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="take me to my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cart review, please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Take me to review my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to review my cart"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="End_Conversation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="end my session"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log out"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to log out"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to quit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="end dialogue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="end"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="end conversation"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Action_Tag">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I only want "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="women"/>
+        <tokens xsi:type="generator:Literal" text=" products"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I only want to see "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="black"/>
+        <tokens xsi:type="generator:Literal" text=" ones"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me only the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="fluffy"/>
+        <tokens xsi:type="generator:Literal" text=" ones"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="filter by the tag "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="black"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please show me only the products that are "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="men"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you filter the products by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="women"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="products that have tag "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="fluffy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are products that have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="black"/>
+        <tokens xsi:type="generator:Literal" text=" tag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me products by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me all the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="red"/>
+        <tokens xsi:type="generator:Literal" text=" ones"/>
+      </inputs>
+    </inputs>
+    <parameters name="tag" entity="//@entities.3" required="true"/>
+  </intents>
+  <intents name="Query_Product - review">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the reviews"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the rating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many stars is this product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the rating"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what does other user say about this product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="feedback of this product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the review"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the review of this product"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="review"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Query_Tag">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to know the tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="leggings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me the tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="hats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Do the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="hats"/>
+        <tokens xsi:type="generator:Literal" text=" has any tag?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to know the tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="hats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="Leggings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please tell me the tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="Sweatshirts"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="hats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tag of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="hats"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me the tag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Tag"/>
+      </inputs>
+    </inputs>
+    <parameters name="category" entity="//@entities.4" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Which category would you like to know tags for?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Login">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to log in with username "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="username"/>
+        <tokens xsi:type="generator:Literal" text=" and password "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="password"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to log into my account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log in, please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sign me in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you please sign me in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to sign in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sign in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I log in?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Log me in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to log in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="log in"/>
+      </inputs>
+    </inputs>
+    <parameters name="username" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please enter your username</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="password" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please enter your password</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="checklogin">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="am i in"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Action_Cart_Clear">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to delete everything in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to remove everything in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please clear the cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want a empty cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="empty cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete everything in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you clear my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to clear my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove everything in my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clear my cart"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Query_Product">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the information about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="W Cloud Pillow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Wisconsin Running Shorts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Jump Around Shirt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Wisconsin Leggings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Bucky Badger Pillow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Bucky Badger Plush"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="150 Year Commemorative Hoodie"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Bucky Crew Neck Sweatshirt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me more about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="White Wisconsin Visor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the information about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="Wisconsin Football Hat"/>
+      </inputs>
+    </inputs>
+    <parameters name="Product" entity="//@entities.1" required="true"/>
+  </intents>
+  <intents name="Action_Cart_Add">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="White Wisconsin Visor"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="put "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Wisconsin Football Hats"/>
+        <tokens xsi:type="generator:Literal" text=" to my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="6"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Wisconsin Football Hats"/>
+        <tokens xsi:type="generator:Literal" text=", please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="9"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Bucky Badger Pillow to my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Bucky Badger Keychain"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Bucky Badger Plush"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Bucky Crew Neck Sweatshirt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="W Cloud Pillow"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Wisconsin Leggings"/>
+        <tokens xsi:type="generator:Literal" text=" to my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.1" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="Bucky Crew Neck Sweatshirt"/>
+        <tokens xsi:type="generator:Literal" text=" to cart"/>
+      </inputs>
+    </inputs>
+    <parameters name="Product" entity="//@entities.1" required="true"/>
+    <parameters name="quantity" entity="//@entities.0" required="true"/>
+  </intents>
+  <intents name="Action_Cart_Review - Check Out">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="purchase"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Place my order"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check out"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please confirm my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My cart looks ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you help me confirm my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I confirm my cart"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My cart is alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to confirm to check out"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to check out"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Confirm cart"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="quantity">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="1">
+        <values>one</values>
+        <values>1</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="2">
+        <values>2</values>
+        <values>two</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="3">
+        <values>3</values>
+        <values>three</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="4">
+        <values>4</values>
+        <values>four</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="5">
+        <values>5</values>
+        <values>five</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="6">
+        <values>6</values>
+        <values>six</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="7">
+        <values>7</values>
+        <values>seven</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="8">
+        <values>8</values>
+        <values>eight</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="9">
+        <values>9</values>
+        <values>nine</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="10">
+        <values>10</values>
+        <values>ten</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Product">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Wisconsin Football Hat">
+        <values>Wisconsin Football Hat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="White Wisconsin Visor">
+        <values>White Wisconsin Visor</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Bucky Crew Neck Sweatshirt">
+        <values>Bucky Crew Neck Sweatshirt</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="150 Year Commemorative Hoodie">
+        <values>150 Year Commemorative Hoodie</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Bucky Badger Plush">
+        <values>Bucky Badger Plush</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Game Day Bucky Plush">
+        <values>Game Day Bucky Plush</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="W Cloud Pillow">
+        <values>W Cloud Pillow</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Bucky Badger Pillow">
+        <values>Bucky Badger Pillow</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Bucky Badger Keychain">
+        <values>Bucky Badger Keychain</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wisconsin Leggings">
+        <values>Wisconsin Leggings</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Bucky Badger Leggings">
+        <values>Bucky Badger Leggings</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Jump Around Shirt">
+        <values>Jump Around Shirt</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Women's Wisconsin Cuddle Joggers">
+        <values>Women's Wisconsin Cuddle Joggers</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wisconsin Sweatpants">
+        <values>Wisconsin Sweatpants</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wisconsin Qualifier Woven Short">
+        <values>Wisconsin Qualifier Woven Short</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wisconsin Running Shorts">
+        <values>Wisconsin Running Shorts</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="page">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="sign in">
+        <values>sign in</values>
+        <values>log in</values>
+        <values>login</values>
+        <values>signin</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="sign up">
+        <values>sign up</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="welcome">
+        <values>welcome</values>
+        <values>home</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cart">
+        <values>cart</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cart review">
+        <values>cart review</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cart confirm">
+        <values>cart confirm</values>
+        <values>purchase</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="Tag">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="men">
+        <values>men</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="women">
+        <values>women</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="red">
+        <values>red</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="white">
+        <values>white</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="logo">
+        <values>logo</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="printed">
+        <values>printed</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="cotton">
+        <values>cotton</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="polyester">
+        <values>polyester</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="shortsleeve">
+        <values>shortsleeve</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="longsleeve">
+        <values>longsleeve</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="shorts">
+        <values>shorts</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="pants">
+        <values>pants</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="sweats">
+        <values>sweats</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="hoodies">
+        <values>hoodies</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="grey">
+        <values>grey</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="youth">
+        <values>youth</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="adult">
+        <values>adult</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="embroidered">
+        <values>embroidered</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="black">
+        <values>black</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="fuzzy">
+        <values>fuzzy</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="badger">
+        <values>badger</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="pillow">
+        <values>pillow</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="keychain">
+        <values>keychain</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="visor">
+        <values>visor</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="category">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="hats">
+        <values>hats</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="sweatshirts">
+        <values>sweatshirts</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="plushes">
+        <values>plushes</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="leggings">
+        <values>leggings</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="tees">
+        <values>tees</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="bottoms">
+        <values>bottoms</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://f3203be96e8c.ngrok.io" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Action_Cart_DeleteTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Query_Product - reviewTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You said review "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="LoginTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="... "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! How are you doing? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! What can I do for you today? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! How can I assist? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot5">
+      <outcoming intent="//@intents.15" name="user6">
+        <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.5" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.6" name="user8">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.13" name="user14">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot14">
+      <outcoming intent="//@intents.7" name="user15">
+        <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot15"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.14" name="user16">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot16"/>
+  </flows>
+  <flows intent="//@intents.16" name="user17">
+    <target actions="//@actions.6" name="bot17"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

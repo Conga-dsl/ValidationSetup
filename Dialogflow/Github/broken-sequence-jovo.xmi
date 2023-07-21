@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="broken-sequence-jovo">
+  <intents name="Default Welcome Intent"/>
+  <intents name="UserScore">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is my score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many coins do I have now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my total score"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my total coins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my coins"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="AnswerIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the answer is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my answer is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="answer is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="select "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lock on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that was "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is it "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think it is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Answer"/>
+      </inputs>
+    </inputs>
+    <parameters name="Answer" entity="//@entities.0"/>
+  </intents>
+  <intents name="StopIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="nope"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="stop"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="HelpIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="help me"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="AskIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start playing"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Play the Game"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start the game"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="ANSWER">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="I don't know">
+        <values>I dont know</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="don't know">
+        <values>dont know</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Moon">
+        <values>Moon</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="FIFA">
+        <values>FIFA</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Green">
+        <values>Green</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Vienna">
+        <values>Vienna</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Patient">
+        <values>Patient</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Press">
+        <values>Press</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Facebook">
+        <values>Facebook</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Bath">
+        <values>Bath</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="April First">
+        <values>April First</values>
+        <values>1st of April</values>
+        <values>April 1st</values>
+        <values>April 1</values>
+        <values>April one</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Ball">
+        <values>Ball</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Protein">
+        <values>Protein</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/851b966a-dc76-47c2-8d55-87148be31184" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.0 //@actions.1" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.0 //@actions.1" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.0 //@actions.1" name="bot7"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

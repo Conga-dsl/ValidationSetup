@@ -1,0 +1,45 @@
+Chatbot "dialogflow-google-sign-in" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+"Give Color" :
+	inputs in en {
+		( red ) [ color ] " is my color" ,
+		"set my favorite color to " ( red ) [ color ] ,
+		( red ) [ color ] ,
+		"my favorite color is " ( red ) [ color ] ,
+		"I love " ( red ) [ color ] ,
+		"set my color to " ( red ) [ color ] ,
+		( red ) [ color ] " is my favorite color" ,
+		"I like " ( red ) [ color ]
+	}
+	parameters :
+		color : entity text ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Sorry, a problem occurred with the webhook. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			" "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot2 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user2 : user "Give Color" => bot3 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user3 : user "Default Fallback Intent" => bot4 : chatbot "Default Fallback IntentTxtResp1" ;
+

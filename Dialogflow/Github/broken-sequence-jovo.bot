@@ -1,0 +1,93 @@
+Chatbot "broken-sequence-jovo" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	UserScore :
+		inputs in en {
+			"what is my score" ,
+			"my score" ,
+			"how many coins do I have now" ,
+			"my total score" ,
+			"my total coins" ,
+			"my coins"
+	}
+
+	AnswerIntent :
+		inputs in en {
+			( Answer ) [ Answer ] ,
+			"the answer is " ( Answer ) [ Answer ] ,
+			"my answer is " ( Answer ) [ Answer ] ,
+			"answer is " ( Answer ) [ Answer ] ,
+			"select " ( Answer ) [ Answer ] ,
+			"lock on " ( Answer ) [ Answer ] ,
+			"that was " ( Answer ) [ Answer ] ,
+			"it is " ( Answer ) [ Answer ] ,
+			"is it " ( Answer ) [ Answer ] ,
+			"I think it is " ( Answer ) [ Answer ]
+		}
+		parameters :
+			Answer : entity ANSWER ;
+
+	StopIntent :
+		inputs in en {
+			^no ,
+			nope ,
+			stop
+	}
+
+	HelpIntent :
+		inputs in en {
+			help ,
+			"help me"
+	}
+
+	AskIntent :
+		inputs in en {
+			yes ,
+			start ,
+			sure ,
+			"start playing" ,
+			"Play the Game" ,
+			"start the game"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity ANSWER :
+		inputs in en {
+			"I don\'t know" synonyms "I dont know"
+			"don\'t know" synonyms "dont know"
+			Moon synonyms Moon
+			FIFA synonyms FIFA
+			Green synonyms Green
+			Vienna synonyms Vienna
+			Patient synonyms Patient
+			Press synonyms Press
+			Facebook synonyms Facebook
+			Bath synonyms Bath
+			"April First" synonyms "April First" , "1st of April" , "April 1st" , "April 1" , "April one"
+			Ball synonyms Ball
+			Protein synonyms Protein
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/851b966a-dc76-47c2-8d55-87148be31184" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user UserScore => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user AnswerIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user StopIntent => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user HelpIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user AskIntent => bot6 : chatbot HttpRequest , HttpResponse ;
+	- user7 : user "Default Fallback Intent" => bot7 : chatbot HttpRequest , HttpResponse ;
+

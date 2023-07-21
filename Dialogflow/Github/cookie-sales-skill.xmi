@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="cookie-sales-skill">
+  <intents name="Default Welcome Intent"/>
+  <intents name="CookieCountIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sales"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sales report"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many have I sold"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many boxes have I sold"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many cookies have I sold"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="DeliveryStatusIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delivery"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delivery report"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what needs to be delivered"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many boxes still need to be delivered"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who hasn't received their cookies"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="undefined" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1" name="bot4"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

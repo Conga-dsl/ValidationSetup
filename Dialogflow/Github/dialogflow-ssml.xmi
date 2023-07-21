@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="dialogflow-ssml">
+  <intents name="Choose Example">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+        <tokens xsi:type="generator:Literal" text=" example"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+        <tokens xsi:type="generator:Literal" text=" element"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+        <tokens xsi:type="generator:Literal" text=" feature"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me an example of the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+        <tokens xsi:type="generator:Literal" text=" feature"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me an example of the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+        <tokens xsi:type="generator:Literal" text=" element"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="prosody "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="example"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me an example of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="example of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="let me hear an example of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="prosody"/>
+      </inputs>
+    </inputs>
+    <parameters name="element" entity="//@entities.0"/>
+  </intents>
+  <intents name="Fallback" fallbackIntent="true"/>
+  <intents name="Welcome"/>
+  <entities name="ssml-element">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="sub">
+        <values>sub</values>
+        <values>substitute</values>
+        <values>substitution</values>
+        <values>alternative</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="audio">
+        <values>audio</values>
+        <values>sound</values>
+        <values>external</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="speed">
+        <values>speed</values>
+        <values>rate</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="break">
+        <values>break</values>
+        <values>stop</values>
+        <values>pause</values>
+        <values>wait</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="pitch">
+        <values>pitch</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="layered">
+        <values>layered</values>
+        <values>par</values>
+        <values>seq</values>
+        <values>media</values>
+        <values>layer</values>
+        <values>parallel</values>
+        <values>sequential</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="emphasis">
+        <values>emphasis</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="prosody">
+        <values>prosody</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="volume">
+        <values>volume</values>
+        <values>loudness</values>
+        <values>softness</values>
+        <values>quietness</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="say-as">
+        <values>say-as</values>
+        <values>say as</values>
+        <values>say</values>
+        <values>interpret</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="paragraph">
+        <values>paragraph</values>
+        <values>sentence</values>
+        <values>p</values>
+        <values>s</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Choose ExampleTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I couldn't get a response for the Choose Example intent from your webhook. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="FallbackTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I couldn't get a response for the Fallback intent from your webhook. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="WelcomeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I couldn't get a response for the Welcome intent from your webhook. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot3"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

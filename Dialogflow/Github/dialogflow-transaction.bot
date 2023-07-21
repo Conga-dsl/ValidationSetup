@@ -1,0 +1,102 @@
+Chatbot "dialogflow-transaction" language : en
+
+intents :
+
+"Transaction Merchant" :
+	inputs in en {
+		"Transaction Merchant" ,
+		"Merchant Transaction" ,
+		"merchant-managed pay" ,
+		"Transaction Check Merchant" ,
+		"check transaction with merchant payment"
+}
+
+"Default Welcome Intent" :
+
+"Delivery Address" :
+	inputs in en {
+		"Get delivery address"
+}
+
+"Transaction Google" :
+	inputs in en {
+		"Google Transaction" ,
+		"Transaction Google Pay" ,
+		"Google Pay Transaction" ,
+		"Transaction Check Google Pay" ,
+		"check transaction with google payment"
+}
+
+"Default Fallback Intent" Fallback :
+
+"Transaction Decision" :
+	inputs in en {
+		"confirm transaction"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://example.com" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Transaction MerchantTxtResp1" :
+		inputs in en {
+			"Could not request transactions check with merchant-managed payment "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Webhook failed "
+	}
+	text response "Delivery AddressTxtResp1" :
+		inputs in en {
+			"Could not get delivery address "
+	}
+	text response "Transaction Decision CompleteTxtResp1" :
+		inputs in en {
+			"Failed to get transaction decision "
+	}
+	text response "Delivery Address CompleteTxtResp1" :
+		inputs in en {
+			"Failed to get delivery address "
+	}
+	text response "Transaction Check CompleteTxtResp1" :
+		inputs in en {
+			"Failed to get transaction check results "
+	}
+	text response "Transaction GoogleTxtResp1" :
+		inputs in en {
+			"Could not request transactions check with Google Pay API "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+	text response "Transaction DecisionTxtResp1" :
+		inputs in en {
+			"Could not confirm transaction "
+	}
+
+flows :
+	- user1 : user "Transaction Merchant" => bot1 : chatbot HttpRequest , HttpResponse , "Transaction MerchantTxtResp1" ;
+	- user2 : user "Default Welcome Intent" => bot6 : chatbot HttpRequest , HttpResponse , "Transaction Check CompleteTxtResp1" ;
+	- user3 : user "Delivery Address" => bot3 : chatbot HttpRequest , HttpResponse , "Delivery AddressTxtResp1" ;
+	- user4 : user "Transaction Google" => bot7 : chatbot HttpRequest , HttpResponse , "Transaction GoogleTxtResp1" ;
+	- user5 : user "Default Fallback Intent" => bot8 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user6 : user "Transaction Decision" => bot9 : chatbot HttpRequest , HttpResponse , "Transaction DecisionTxtResp1" ;
+

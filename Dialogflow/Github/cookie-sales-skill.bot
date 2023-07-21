@@ -1,0 +1,41 @@
+Chatbot "cookie-sales-skill" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+CookieCountIntent :
+	inputs in en {
+		sales ,
+		"sales report" ,
+		"how many have I sold" ,
+		"how many boxes have I sold" ,
+		"how many cookies have I sold"
+}
+
+DeliveryStatusIntent :
+	inputs in en {
+		delivery ,
+		"delivery report" ,
+		"what needs to be delivered" ,
+		"how many boxes still need to be delivered" ,
+		"who hasn\'t received their cookies"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : undefined ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user CookieCountIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user DeliveryStatusIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+

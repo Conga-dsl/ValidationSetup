@@ -1,0 +1,178 @@
+Chatbot "drum-tunner" language : en
+
+intents :
+
+	"tell-tips" :
+		inputs in en {
+			"do you have any advices on how to tune a drum?" ,
+			"Give me some tips on drum tuning" ,
+			"I want to hear some tips" ,
+			"tell me some drum tuning tips"
+	}
+
+	"tune-drum" :
+		inputs in en {
+			"Please tune my " ( "15 inch" ) [ "drum-sizes" ] " " ( "floor tom" ) [ "drum-type" ] " to " ( "F sharp" ) [ note ] ,
+			"tune " ( "10 inch" ) [ "drum-sizes" ] " " ( "12 inch" ) [ "drum-sizes" ] " and " ( "14 inch" ) [ "drum-sizes" ] " " ( thomas ) [ "drum-type" ] ,
+			( F ) [ note ] ,
+			"Tune my " ( "10\"" ) [ "drum-sizes" ] ", " ( "12\"" ) [ "drum-sizes" ] " and " ( "14\"" ) [ "drum-sizes" ] " " ( "rack toms" ) [ "drum-type" ] ,
+			"Tune " ( "10 inch" ) [ "drum-sizes" ] " " ( "12 inch" ) [ "drum-sizes" ] " and " ( "14 inch" ) [ "drum-sizes" ] " " ( "tom toms" ) [ "drum-type" ] ,
+			"tune a " ( "13 inch" ) [ "drum-sizes" ] " " ( "snare drum" ) [ "drum-type" ] " to " ( "d sharp" ) [ note ] ,
+			"tune a " ( "14\"" ) [ "drum-sizes" ] " " ( "snare drum" ) [ "drum-type" ] ,
+			"tune a " ( "22 inch" ) [ "drum-sizes" ] " " ( "kick drum" ) [ "drum-type" ] " to " ( f ) [ note ] ,
+			"tune a " ( "26\"" ) [ "drum-sizes" ] " " ( "bass drum" ) [ "drum-type" ] ,
+			"tune a " ( "bass drum" ) [ "drum-type" ] " in " ( a ) [ note ] ,
+			"what\'s the tuning of a " ( "bass drum" ) [ "drum-type" ] " in " ( D ) [ note ] ,
+			"tune my " ( "bass drum" ) [ "drum-type" ] " to " ( "B flat" ) [ note ] ,
+			"please tune my " ( snare ) [ "drum-type" ] " to " ( "C flat" ) [ note ] ,
+			"tune my " ( "bass drum" ) [ "drum-type" ] " to " ( "f sharp" ) [ note ] ,
+			"proceed with tuning of the " ( "kick drum" ) [ "drum-type" ] " to " ( "c sharp" ) [ note ] ,
+			"tune my " ( "bass drum" ) [ "drum-type" ] " to " ( a ) [ note ] ,
+			"make my " ( snare ) [ "drum-type" ] " tune in " ( "d flat" ) [ note ] ,
+			"tune my " ( "snare drum" ) [ "drum-type" ] " to " ( c ) [ note ] ,
+			"tune my " ( "snare drum" ) [ "drum-type" ] " to " ( "f sharp" ) [ note ] ,
+			"tune my " ( "floor tom" ) [ "drum-type" ] " very " ( low ) [ resonance ] ,
+			"I want to tune " ( "eight inch" ) [ "drum-sizes" ] " and " ( "fourteen inch" ) [ "drum-sizes" ] " drums" ,
+			"tune my " ( "snare drum" ) [ "drum-type" ] " " ( low ) [ resonance ] ,
+			"tune a " ( "snare drum" ) [ "drum-type" ] ,
+			"tune a piccolo " ( "snare drum" ) [ "drum-type" ] ,
+			"let me tune " ( three ) [ ^number ] " " ( "tom toms" ) [ "drum-type" ] ,
+			"set my " ( "sixteen inch" ) [ "drum-sizes" ] " " ( floor ) [ "drum-type" ] " to " ( F ) [ note ] ,
+			"set my " ( "floor tom" ) [ "drum-type" ] " to " ( "C sharp" ) [ note ] ,
+			"set my drumset up" ,
+			"let\'s get my " ( "ten inch" ) [ "drum-sizes" ] " " ( "twelve inch" ) [ "drum-sizes" ] " and " ( "fourteen inch" ) [ "drum-sizes" ] " " ( toms ) [ "drum-type" ] " in tune" ,
+			"tune my cool drum kit" ,
+			"tune my awesome drums" ,
+			"tune my drumkit" ,
+			"tune the " ( "8 inch" ) [ "drum-sizes" ] " " ( "12 inch" ) [ "drum-sizes" ] " " ( "16 inch" ) [ "drum-sizes" ] " " ( "tom toms" ) [ "drum-type" ] ,
+			"tune the " ( "10 inch" ) [ "drum-sizes" ] " " ( "14 inch" ) [ "drum-sizes" ] " and " ( "16 inch" ) [ "drum-sizes" ] " " ( toms ) [ "drum-type" ] ,
+			"I want to tune a " ( "floor tom" ) [ "drum-type" ] ,
+			"Tune " ( "8 inch" ) [ "drum-sizes" ] " " ( "10 inch" ) [ "drum-sizes" ] " " ( "12 inch" ) [ "drum-sizes" ] " " ( "13 inch" ) [ "drum-sizes" ] " and " ( "14 inch" ) [ "drum-sizes" ] " " ( toms ) [ "drum-type" ] ,
+			"I\'d like to tune a " ( "fourteen inch" ) [ "drum-sizes" ] " " ( "snare drum" ) [ "drum-type" ] ,
+			"I\'d like to tune my drum set" ,
+			"tune the drum" ,
+			"let\'s tune a drum" ,
+			"please tune my drum" ,
+			"tune my drum"
+		}
+		parameters :
+			"tuning-style" : entity "tuning-style" , prompts in en [ "Which drum head would you like to tune higher? Batter or resonant?" ] ;
+			"drum-type" : entity "drum-type" , required , prompts in en [ "What kind of drum would you like to tune? Snare drum, bass drum or tom toms?" , "Let\'s start from the basics. What drum type are we tuning? Snare, bass drum or toms?" , "We\'ll need to choose a drum first. Snare, kick or toms?" ] ;
+			resonance : entity resonance ;
+			^number : entity float ;
+			note : entity note , prompts in en [ "What\'s the desired note for that drum?" ] ;
+			"drum-sizes" : entity text ;
+
+	Quit :
+		inputs in en {
+			exit ,
+			stop ,
+			quit ,
+			"bye Drum Tuner" ,
+			bye ,
+			thanks
+	}
+
+	Welcome :
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity note :
+		inputs in en {
+			C synonyms C
+			"C#" synonyms "C#" , "C sharp" , Db , "D flat"
+			D synonyms D
+			"D#" synonyms "D#" , "D sharp" , Eb , "E flat"
+			E synonyms E
+			F synonyms F
+			"F#" synonyms "F#" , "F sharp" , Gb , "G flat"
+			G synonyms G
+			"G#" synonyms "G#" , "G sharp" , Ab , "A flat"
+			A synonyms A
+			"A#" synonyms "A#" , "A sharp" , Bb , "B flat"
+			B synonyms B
+	}
+	Simple entity "tuning-style" :
+		inputs in en {
+			batter synonyms batter , "batter head" , "upper head" , "up head" , "batter drum head" , "batter drumhead"
+			resonant synonyms resonant , "resonant head" , "resonant drum head" , "resonant drumhead" , "bottom head" , "bottom drum head" , "bottom drumhead" , "lower drum head" , "lower head" , "lower drumhead"
+	}
+	Simple entity "drum-type" :
+		inputs in en {
+			snare synonyms snare , "snare drum" , "high drum"
+			tom synonyms tom , "tom tom" , "rack tom" , thomas
+			"floor tom" synonyms "floor tom" , "lower drum" , floor , floortom
+			"bass drum" synonyms "bass drum" , "kick drum" , bass , kick
+	}
+	Simple entity pitch :
+		inputs in en {
+			default synonyms default , normal
+	}
+	Simple entity resonance :
+		inputs in en {
+			low synonyms low , lower , loose , small , less
+			medium synonyms medium , default , standard , normal
+			high synonyms high , tight , more
+			max synonyms max , maximum , highest , tense , big , huge , large , biggest , largest , enormous
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-drum-tuner.cloudfunctions.net/api_v1" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "tell-tipsTxtResp1" :
+		inputs in en {
+			"When you tune a drum, it\'s good to use two drum keys simultaneously. " ,
+			"When seating the bass drum head, it\'s a good practice to stretch it out before tuning. " ,
+			"When tuning the front head, increase tension in very small increments. Try using a quarter or a half of a turn at a time, no more. " ,
+			"Whatever style and sound you are trying to achieve, generally a drum will sound best if the batter head is tuned lower (slacker) than the resonant head. " ,
+			"If you find the overall pitch too low, go back to the bottom head and take it up another pitch level, return to tuning the top head and it will come back into tune with the bottom after a few turns of the rods. " ,
+			"Whenever detuning or loosening a rod, always end the movement with a slight re-tightening. This enables the rod to \'bite\' and hold while getting the others sorted. " ,
+			"Try using a stool as your tuning base. It\'s a great way to dampen the batter head while working on the resonant head and you can (normally) spin the drum round as you go. "
+	}
+	text response "tune-drumTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response QuitTxtResp1 :
+		inputs in en {
+			"Thanks for using Drum Tuner! See you next time. " ,
+			"You\'re all set! Happy drumming. " ,
+			"Your drums now should sound fantastic. Enjoy! "
+	}
+	text response WelcomeTxtResp2 :
+		inputs in en {
+			"Hey! I\'m your personal drum tuner. " ,
+			"Welcome to Drum Tuner! " ,
+			"Drum Tuner for the win. " ,
+			"Let\'s make your drums sound awesome! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "tell-tips" => bot1 : chatbot "tell-tipsTxtResp1" ;
+	- user2 : user "tune-drum" => bot2 : chatbot HttpRequest , HttpResponse , "tune-drumTxtResp1" ;
+	- user3 : user Quit => bot3 : chatbot QuitTxtResp1 ;
+	- user4 : user Welcome => bot4 : chatbot "tune-drumTxtResp1" , WelcomeTxtResp2 ;
+	- user5 : user "Default Fallback Intent" => bot5 : chatbot "Default Fallback IntentTxtResp1" ;
+

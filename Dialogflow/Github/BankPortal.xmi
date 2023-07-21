@@ -1,0 +1,1812 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="BankPortal">
+  <intents name="[usecase 5] Undo transaction">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Undo my transaction from last night"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please cancel my transaction"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By accident I made a transaction to IBAN "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="11111"/>
+        <tokens xsi:type="generator:Literal" text=" how can I undo this?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Accidentally, I transferred the wrong amount. How can I cancel this?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Accidentally, I transferred the wrong amount. How can I undo this transaction?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="By accident I transferred money to a wrong account, how can I undo this?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can I undo a transaction"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I remove a transaction"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to undo a transaction"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to cancel a scheduled transaction"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik heb naar het verkeerde bank account geld overgemaakt, wat nu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil graag "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="een"/>
+        <tokens xsi:type="generator:Literal" text=" transactie ongedaan maken."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe kan ik een transactie cancellen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe kan ik een transactie ongedaan maken?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I heb per ongeluk een bedrag overgemaakt naar het verkeerde account nummer, wat nu?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik heb per ongeluk geld overgemaakt aan IBAN "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="11122"/>
+        <tokens xsi:type="generator:Literal" text=", hoe kan ik dit ongedaan maken?"/>
+      </inputs>
+    </inputs>
+    <parameters name="account" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>I'm sorry to hear, what's the IBAN number of the wrong transaction?</prompts>
+        <prompts>No problem, let me check this. What's the IBAN number of the wrong transaction?</prompts>
+      </prompts>
+      <prompts language="DUTCH">
+        <prompts>Oh nee. Wat is het IBAN nummer van de verkeerde transactie?</prompts>
+        <prompts>Wat vervelend. Ik zal voor u kijken. Kunt u mij het IBAN nummer doorgeven?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="[payload] What's your location">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are you?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is your office?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where are you located?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's your location?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[payload] What's your website">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me a a hyperlink"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give me a rich card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's your website?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the url for your website?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 1b] How many days will it take?">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How long"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How long will it take"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When will this been transferred?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When will I receive it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When will this be done?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When will the transaction been processed?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How long will that take?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How many days will it take?"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wat is de wachttijd?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wat bedraagt de wachttijd?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe lang moet ik hier op wachten?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe lang duurt het verwerken?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe lang duur het om dit te processen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe lang duurt het?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 8] Transfer Call">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you, I would like to speak to someone."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yep. I would like to speak to someone."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes please connect me through"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yeah, please connect me to a futurebank employee."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes please transfer my call"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please transfer my call"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you transfer my call"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please transfer me to an employee"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to talk to someone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to talk to ING"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to talk to an employee"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to speak with an employee"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 6] What's my balance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much do I have in my account?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the balance?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you tell me my account balance?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much money do I have in my account?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's my balance?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is my bank saldo?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's my saldo?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 4] Mortgage request">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to get a loan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to get a loan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to borrow money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="mortgage"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to take a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="mortgage"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil graag geld lenen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik heb een lening nodig"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil een "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="huis"/>
+        <tokens xsi:type="generator:Literal" text=" kopen en ik heb een lening nodig"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik graag een lening afsluiten"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil een lening afsluiten"/>
+      </inputs>
+    </inputs>
+    <parameters name="housing_type" entity="//@entities.4"/>
+    <parameters name="paymentcategories" entity="//@entities.3"/>
+  </intents>
+  <intents name="[usecase 6] What's my saldo - problem">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I doubt that's the case."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Impossible."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That can not be true."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No way! That can't happen."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Huh? How is that possible?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That can't be possible."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No. That's impossible."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wait. That's can't be!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 7] Last 3 transactions">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes. I want to see the history."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes. Please give me an overview."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to receive an overview of my last purchases."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please give me an overview of my last purchases"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes please tell me the last 3 transations."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes, what are the last 3 transactions."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Yes!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 4] Mortgage request - custom">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We are looking to for a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="villa"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="Apartment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We want to move to a new "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="apartment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We want to buy a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="house"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to buy a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="house"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="house"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="A "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="bungalow"/>
+      </inputs>
+    </inputs>
+    <parameters name="housing_type" entity="//@entities.4" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What type of housing are you looking for? Apartment, House, Villa or Bungalow?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hallo"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hallo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[search] Spent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much have I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="restaurants"/>
+        <tokens xsi:type="generator:Literal" text=" lately?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much have I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="food"/>
+        <tokens xsi:type="generator:Literal" text=" this month?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What did I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="restaurants"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me all payments about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="vacations"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me what I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="vacations"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much money did I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="shoes"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much did I spent on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="clothing"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel spendeer ik aan "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="taxis"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel heb ik betaald aan "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="restaurants"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Laat me alle "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="boodschappen"/>
+        <tokens xsi:type="generator:Literal" text=" uitgaves zien."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wat zijn mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="schoenen"/>
+        <tokens xsi:type="generator:Literal" text=" uitgaves?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel geef ik uit aan "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="schoenen"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel geld heb ik uitgegeven aan "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="boodschappen"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel heb ik de afgelopen maand besteed aan "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="restaurants"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel heb ik besteed aan "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="restaurants"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="category" entity="//@entities.3"/>
+  </intents>
+  <intents name="[usecase 2] bIock/renew a service">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="renew"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="bank pass"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="new"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="creditcard"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Could you please "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="block"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="card"/>
+        <tokens xsi:type="generator:Literal" text=" for now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="Stop"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="Block"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="card"/>
+        <tokens xsi:type="generator:Literal" text=" which ends with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="12"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="disable"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you please "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="block"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="block"/>
+        <tokens xsi:type="generator:Literal" text=" my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="card"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="bankpas"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="vernieuwen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil pas mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="rekening"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="123456"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="blokkeren"/>
+        <tokens xsi:type="generator:Literal" text=" als mijn partner al een account heeft"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="pas"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="blokkeren"/>
+        <tokens xsi:type="generator:Literal" text=" voor rekening "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.2" textReference="123456"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil graag mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="pas"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="blokkeren"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik heb pas een "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="rekening"/>
+        <tokens xsi:type="generator:Literal" text=" gekregen die ik wil "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.1" textReference="blokkeren"/>
+      </inputs>
+    </inputs>
+    <parameters name="service" entity="//@entities.2" required="true">
+      <prompts language="DUTCH">
+        <prompts>Gaat dit om je bankpas of om je creditcard?</prompts>
+        <prompts>Bedoel je, je bankpas of je creditcard?</prompts>
+      </prompts>
+      <prompts language="ENGLISH">
+        <prompts>Do you mean your creditcard or debitcard?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="cardaction" entity="//@entities.6" required="true">
+      <prompts language="DUTCH">
+        <prompts>Wil je dit vernieuwen of blokkeren?</prompts>
+        <prompts>Blokkeren of vernieuwen?</prompts>
+      </prompts>
+      <prompts language="ENGLISH">
+        <prompts>What would you like to do? I can block the card or renew it.</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="any" required="true">
+      <prompts language="DUTCH">
+        <prompts>Wat is het kaart nummer?</prompts>
+      </prompts>
+      <prompts language="ENGLISH">
+        <prompts>No problem. I just need to know the number of your current card.</prompts>
+        <prompts>Of course. What's the number that's on your current card?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="[usercase 1] transfer money">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Give "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.1" textReference="14.50 euro"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="NL20INGB0001234567"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please send "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.1" textReference="12 euro"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.0" textReference="NL20INGB0001234567"/>
+        <tokens xsi:type="generator:Literal" text=" In "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.2" textReference="Germany"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like to transfer money to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.2" textReference="destination"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like to send money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have money that I want to tranfer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like to transfer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.1" textReference="400 euro"/>
+        <tokens xsi:type="generator:Literal" text=" to my friend."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like to transfer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.1" textReference="40 dollar"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.2" textReference="destination"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like to transfer money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to transfer money"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Maak geld over."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil geld sturen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil graag geld overmaken."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil graag 100 euro overmaken naar "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.2" textReference="Rusland"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik wil graag geld overmaken naar "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.13/@parameters.2" textReference="Rusland"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+    </inputs>
+    <parameters name="account" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>To which bank IBAN number do you want to transfer money?</prompts>
+        <prompts>What bank account number would you like to transfer money to?</prompts>
+      </prompts>
+      <prompts language="DUTCH">
+        <prompts>Naar welk rekening nummer?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="amount" required="true">
+      <prompts language="ENGLISH">
+        <prompts>How much do you want to transfer?</prompts>
+        <prompts>What's the amount you want to transfer?</prompts>
+      </prompts>
+      <prompts language="DUTCH">
+        <prompts>Wat is het bedrag?</prompts>
+        <prompts>Hoeveel wil je overmaken?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="destination" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What's the destination country?</prompts>
+      </prompts>
+      <prompts language="DUTCH">
+        <prompts>Naar welke locatie?</prompts>
+        <prompts>Naar welk land?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="[help]">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What tasks will you do?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can you do for me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What can I ask"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How can you help me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welke vragen mag ik stellen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoe kun jij mij helpen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wat kan ik aan je vragen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Huh, help?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Help mij"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik heb hulp nodig"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usercase1] transfer money - costs">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much will the transfer cost?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much does it cost?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What are the costs for the transfer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much will it cost?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the price for this transfer?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much will this cost?"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 3] paperwork insurance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would love to buy a new computer but I need help with my paperwork"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I needs help to fill out the paperwork for my insurance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="paperwork"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help with my paper work"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would love to buy a new computer but I need help with my paper work"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help with filling out paperwork"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How do I need to fill out the paperwork"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need help with filling out insurance paperwork"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 2] bIock/renew a service - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that's alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sg"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I do"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes that't ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that one works"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes you can do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep that's right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay I will"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="absolutely"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it's fine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="go ahead"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeah"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes I can"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="it looks perfect"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="right"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alright why not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ja"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="doe maar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dat wil ik wel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="klinkt goed"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="mee eens"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ja graag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="prima"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="dat klopt"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="akkoord"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="natuurlijk"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[search] Salary">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did I receive "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="bank transfers"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did I receive a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="refund"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did my employer transfer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salary"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did my employer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="pay"/>
+        <tokens xsi:type="generator:Literal" text=" me?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where is my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="payslip"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salary"/>
+        <tokens xsi:type="generator:Literal" text=" did I receive?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When will I receive my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salary"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did my company sent me my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salary"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salary"/>
+        <tokens xsi:type="generator:Literal" text=" already transferred?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did I receive my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salary"/>
+        <tokens xsi:type="generator:Literal" text=" yet?"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wanneer krijg ik mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text=" al binnen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Heeft mijn werkgever mij al betaald?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ben ik al  uitbetaald?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text=" heb ik ontvangen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoeveel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text=" heb ik deze maand gekregen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Heb ik "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="loon"/>
+        <tokens xsi:type="generator:Literal" text=" ontvangen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Heb ik mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text=" al ontvangen?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Heeft mijn werkgever de "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text=" al gestort?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Is mijn "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.18/@parameters.0" textReference="salaris"/>
+        <tokens xsi:type="generator:Literal" text=" al gestort?"/>
+      </inputs>
+    </inputs>
+    <parameters name="category" entity="//@entities.0"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="[goodbye]">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No I am good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Thank you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Cheers"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Bye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goodbye"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No that's it!"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Fijne dag nog"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Daag"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Dank je wel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nee je hoeft niets meer te doen"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nee dat is het"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nee dat was het"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Doei"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[bot-first-greeting] Introduction">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="botHi"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoi Babs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Gegroet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey hallo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoi daar"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hallo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="[usecase 7] Last 3 transactions - I did not do that">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am really sure this is not me."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This can not be me."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="That can't be"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't do that, I don't even have an account."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I did not do that!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't make these transactions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No, not at all!"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="incomingpayments">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="loteries">
+        <values>casino</values>
+        <values>game</values>
+        <values>lotery</values>
+        <values>win</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="presents">
+        <values>present</values>
+        <values>presents</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="refunds">
+        <values>refund</values>
+        <values>refunds</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="salary">
+        <values>job</values>
+        <values>pay</values>
+        <values>pay slip</values>
+        <values>pay slips</values>
+        <values>salary</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="transfers">
+        <values>bank transfers</values>
+        <values>transfers</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="ibannumber">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:RegexInput" expresion="\d{1} \d{1} \d{1} \d{1} \d{1} \d{1} \d{1} \d{1} \d{1} \d{1}"/>
+      <inputs xsi:type="generator:RegexInput" expresion="\d{10}"/>
+      <inputs xsi:type="generator:RegexInput" expresion="0 1 2 3 4 5 6 7 8 9"/>
+      <inputs xsi:type="generator:RegexInput" expresion="1 2 3 4 5 6 7 8 9 0"/>
+      <inputs xsi:type="generator:RegexInput" expresion="01.234.567.890"/>
+      <inputs xsi:type="generator:RegexInput" expresion="\d{2}.\d{3}.\d{3}.\d{3}"/>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs xsi:type="generator:RegexInput" expresion="\d{10}"/>
+    </inputs>
+  </entities>
+  <entities name="service">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="creditcard">
+        <values>amex</values>
+        <values>cc</values>
+        <values>creditcard</values>
+        <values>gold card</values>
+        <values>mastercard</values>
+        <values>visa</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="debitcard">
+        <values>atm card</values>
+        <values>bank pass</values>
+        <values>card</values>
+        <values>debit card</values>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs xsi:type="generator:SimpleInput" name="creditkaart">
+        <values>creditcard</values>
+        <values>creditkaart</values>
+        <values>kreditkaart</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="pas">
+        <values>bankpas</values>
+        <values>debitcard</values>
+        <values>pas</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="rekening">
+        <values>account</values>
+        <values>rekening</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="paymentcategories">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="clothes">
+        <values>clothes</values>
+        <values>clothing</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="flights">
+        <values>airplane tickets</values>
+        <values>flights</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="fun">
+        <values>fun</values>
+        <values>hobby</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="groceries">
+        <values>food</values>
+        <values>groceries</values>
+        <values>supermarket</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="mortgage">
+        <values>house</values>
+        <values>mortgage</values>
+        <values>rent</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="public transport">
+        <values>public transport</values>
+        <values>trains</values>
+        <values>trams</values>
+        <values>transportation</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="restaurants">
+        <values>dinner</values>
+        <values>dinners</values>
+        <values>eating out</values>
+        <values>lunch</values>
+        <values>restaurants</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="shoes">
+        <values>boots</values>
+        <values>pumps</values>
+        <values>shoes</values>
+        <values>sneakers</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="shopping">
+        <values>shopping</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="taxis">
+        <values>cabs</values>
+        <values>taxis</values>
+        <values>ubers</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="transfer">
+        <values>bank transfer</values>
+        <values>transfer</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vacation">
+        <values>holiday</values>
+        <values>summer vacation</values>
+        <values>vacation</values>
+        <values>wintersport</values>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs xsi:type="generator:SimpleInput" name="boodschappen">
+        <values>albert heijn</values>
+        <values>boodschappen</values>
+        <values>supermarket</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="fun">
+        <values>fun</values>
+        <values>hobbies</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="kleding">
+        <values>kleding</values>
+        <values>kleren</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="ov">
+        <values>openbaar vervoer</values>
+        <values>trams</values>
+        <values>treinen</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="restaurants">
+        <values>dinner</values>
+        <values>dinners</values>
+        <values>lunch</values>
+        <values>restaurants</values>
+        <values>uit eten</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="schoenen">
+        <values>pumps</values>
+        <values>schoenen</values>
+        <values>sneakers</values>
+        <values>sport schoenen</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="taxis">
+        <values>taxis</values>
+        <values>ubers</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="transfer">
+        <values>bank transfer</values>
+        <values>transfer</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vakanties">
+        <values>wintersport</values>
+        <values>zomer vakantie</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vluchten">
+        <values>vliegtuig tickets</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="winkelen">
+        <values>aankopen</values>
+        <values>winkelen</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="housing_type">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="H001">
+        <values>H001</values>
+        <values>House</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H002">
+        <values>H002</values>
+        <values>Villa</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H003">
+        <values>Apartement</values>
+        <values>H003</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H004">
+        <values>Bungalow</values>
+        <values>H005</values>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs xsi:type="generator:SimpleInput" name="H001">
+        <values>H001</values>
+        <values>huis</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H002">
+        <values>H002</values>
+        <values>villa</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H003">
+        <values>H003</values>
+        <values>appartement</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H004">
+        <values>H004</values>
+        <values>bungalow</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sys.color">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="blue-red">
+        <values>blue-red</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="blue-pink">
+        <values>blue-pink</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="cardaction">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="blocked">
+        <values>block</values>
+        <values>disable</values>
+        <values>stop</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="renewed">
+        <values>new</values>
+        <values>renew</values>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs xsi:type="generator:SimpleInput" name="geblokkeerd">
+        <values>annuleren</values>
+        <values>blocken</values>
+        <values>blockeren</values>
+        <values>blokkeren</values>
+        <values>geblockeerd</values>
+        <values>geblokkeerd</values>
+        <values>stopzetten</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="vernieuwd">
+        <values>nieuwe aanvragen</values>
+        <values>vernieuwd</values>
+        <values>vernieuwen</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sys.last-name">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="a">
+        <values>a</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Boonstra">
+        <values>Boonstra</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-gke-pipeline-savelee-192517.cloudfunctions.net/balance" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 5] Undo transactionTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The transaction has been cancelled. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 5] Undo transactionTxtResp2">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="De transactie is ongedaan gemaakt. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[payload] What's your locationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[payload] What's your websiteTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please have a look: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 1b] How many days will it take?TxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The receiving banks often take 2-4 days for funds to be released to customers to make sure it's not a fraudulent transaction. Can I help you with anything else? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The receiving banks often take 2-4 days for funds to be released to customers to make sure it's not a fraudulent transaction. Is there anything else I can help you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 8] Transfer CallTxtResp3">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No problem. I will connect you to a live agent. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 6] What's my balanceTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You currently have: -8101.90 euro in you account. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your balance is: -8101.90 euro "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 4] Mortgage requestTxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Wat voor soort woning zoekt u? Een huis, villa, appartement of bungalow? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 4] Mortgage requestTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What type of housing are you looking for? House, Villa, Apartment or Bungalow? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 6] What's my saldo - problemTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Would you like to see the 3 latest transactions? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 7] Last 3 transactionsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You just transferred 100 euro to account number 01.23.456.789, Germany. Today, at 3:05am you transferred 8000 euro to account number 98.76.543.210, AliExpress. Today, at 3:00 am you transferred 1 euro cent to account number 98.76.543.210, AliExpress. Are you familiar with these transactions? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi there! I'm Babs the banking bot. I can help you with transferring money. Or I can tell you how much balance you have in your account. How can I help you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! I'm Babs the banking bot. I'm here to help you with transferring money. Also, I can tell you how much money you have in your account. Please tell me, how can I help you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp3">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hallo! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Goedendag! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoi Hoi "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 2] bIock/renew a serviceTxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Geen probleem! We hebben je "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="met kaart nummer: "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="Is er nog iets anders waarbij ik je mag helpen? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 2] bIock/renew a serviceTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No problem. Your "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="is "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="with the number "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="at the end. Is there anything else I can help you with? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure. I've "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="your "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="with the number "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.12/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="at the end. Is there something else I can do for you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usercase 1] transfer moneyTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright, I will transfer "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="to bank account "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="Is there anything else I can help you with? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright then, I will transfer "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="to bank account "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="Can I help you with anything else? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usercase 1] transfer moneyTxtResp2">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ok! Ik ga "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.1"/>
+        <tokens xsi:type="generator:Literal" text="overmaken naar "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text=". Is er nog iets anders waarbij ik je mag helpen? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[help]TxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can help you with transferring money, requesting your balance or I can tell you your payment history. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[help]TxtResp3">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik kan een transactie maken of je pas blokkeren of vernieuwen? Wat zal ik vandaag voor je doen? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik kan je helpen met het overmaken van een bedrag, of ik kan kaarten vernieuwen en blokkeren. Wat wil je dat ik voor je doe? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usercase1] transfer money - costsTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It costs 15 euro to transfer money to "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.13/@parameters.2"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 3] paperwork insuranceTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am happy to help with your paperwork! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik begrijp het niet. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Ik versta het niet. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[goodbye]TxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okee. Een fijne dag nog. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okee. Tot de volgende keer! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[goodbye]TxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Alright. Have a nice day! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="See you next time. Good bye! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[bot-first-greeting] IntroductionTxtResp1">
+    <inputs language="DUTCH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hoi! Ik ben Babs de BankingBot. Ik kan je helpen met geld overmaken, je saldo opvragen of ik kan je betaal historie vertellen. Wat kan ik voor je doen? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hallo, ik ben Babs de BankingBot. Ik kan je helpen met het overmaken van bedragen, saldo opvragen of ik kan je betaal historie vertellen. Hoe mag ik je helpen? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[bot-first-greeting] IntroductionTxtResp2">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi there! I'm Babs the Bankingbot. I can help you with transferring money, requesting your balance, or I can tell you your payment history. What can I do for you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! I'm Babs the Bankingbot. I can help you with transferring money, requesting your balance, or I can tell you your payment history. How can I help you? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="[usecase 7] Last 3 transactions - I did not do thatTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can connect you to a futurebank employee. Would you like me to transfer your call? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2 //@actions.3" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.4" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.4 //@actions.5" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.6" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.4 //@actions.7" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.8" name="bot6">
+      <outcoming intent="//@intents.7" name="user7">
+        <target actions="//@actions.11 //@actions.4" name="bot7"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.6" name="user8">
+    <target actions="//@actions.9 //@actions.10" name="bot8">
+      <outcoming intent="//@intents.9" name="user9">
+        <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot9"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.8" name="user10">
+    <target actions="//@actions.12" name="bot10">
+      <outcoming intent="//@intents.22" name="user11">
+        <target actions="//@actions.29 //@actions.4" name="bot11"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.10" name="user12">
+    <target actions="//@actions.4 //@actions.13 //@actions.14" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.11" name="user13">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.12" name="user14">
+    <target actions="//@actions.15 //@actions.16" name="bot14">
+      <outcoming intent="//@intents.17" name="user15">
+        <target actions="//@actions.4" name="bot15"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.13" name="user16">
+    <target actions="//@actions.17 //@actions.18" name="bot16">
+      <outcoming intent="//@intents.15" name="user17">
+        <target actions="//@actions.4 //@actions.21" name="bot17"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.14" name="user18">
+    <target actions="//@actions.4 //@actions.19 //@actions.20" name="bot18"/>
+  </flows>
+  <flows intent="//@intents.16" name="user19">
+    <target actions="//@actions.22" name="bot19"/>
+  </flows>
+  <flows intent="//@intents.18" name="user20">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot20"/>
+  </flows>
+  <flows intent="//@intents.19" name="user21">
+    <target actions="//@actions.23 //@actions.24" name="bot21"/>
+  </flows>
+  <flows intent="//@intents.20" name="user22">
+    <target actions="//@actions.25 //@actions.26" name="bot22"/>
+  </flows>
+  <flows intent="//@intents.21" name="user23">
+    <target actions="//@actions.0 //@actions.1 //@actions.27 //@actions.28" name="bot23"/>
+  </flows>
+  <languages>ENGLISH</languages>
+  <languages>DUTCH</languages>
+</generator:Bot>

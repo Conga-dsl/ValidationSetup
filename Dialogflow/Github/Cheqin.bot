@@ -1,0 +1,39 @@
+Chatbot Cheqin language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+EmotionLogIntent :
+	inputs in en {
+		( emotion ) [ emotion ] ,
+		"it was " ( emotion ) [ emotion ] ,
+		"i feel " ( emotion ) [ emotion ]
+	}
+	parameters :
+		emotion : entity text ;
+
+"Default Fallback Intent" Fallback :
+
+JournalLogIntent :
+	inputs in en {
+		( log ) [ log ]
+	}
+	parameters :
+		log : entity text ;
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/0ad2de8e-ed84-4fcb-a88d-e0c88303306b" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user EmotionLogIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user JournalLogIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+

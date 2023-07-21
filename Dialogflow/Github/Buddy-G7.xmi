@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Buddy-G7">
+  <intents name="answer_name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm called "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="given-name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My friends call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="given-name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Call me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="given-name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="given-name"/>
+      </inputs>
+    </inputs>
+    <parameters name="given-name" entity="//@entities.0"/>
+  </intents>
+  <intents name="Student_Agree_Schedule">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="We need to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No, I "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+        <tokens xsi:type="generator:Literal" text=" it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Agree"/>
+        <tokens xsi:type="generator:Literal" text=" plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="No, I "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+        <tokens xsi:type="generator:Literal" text=" at all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Yes"/>
+        <tokens xsi:type="generator:Literal" text=", that is a good plan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sounds "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="agree"/>
+        <tokens xsi:type="generator:Literal" text=" your plan!"/>
+      </inputs>
+    </inputs>
+    <parameters name="agree"/>
+  </intents>
+  <intents name="Student_Tells_ToDos">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I haven't "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="todo"/>
+        <tokens xsi:type="generator:Literal" text=" yet"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="todo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My To-Dos are: "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="todo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I still need to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="todo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="todo"/>
+      </inputs>
+    </inputs>
+    <parameters name="to_do"/>
+  </intents>
+  <intents name="studdy_buddy_activation">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's up "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="buddyName"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="buddyName"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="buddyName"/>
+      </inputs>
+    </inputs>
+    <parameters name="buddyName"/>
+  </intents>
+  <intents name="Student_Change_Wishes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="Wish"/>
+        <tokens xsi:type="generator:Literal" text=" is too much. I can't do it!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="wish"/>
+        <tokens xsi:type="generator:Literal" text=". Can we change it?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am not content with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="wish"/>
+        <tokens xsi:type="generator:Literal" text=". Let's change that!"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="wish"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Let's change "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="wish"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to change "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="wish"/>
+      </inputs>
+    </inputs>
+    <parameters name="any"/>
+  </intents>
+  <intents name="Student_gives_time_estimate">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="About "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="About "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It should take me about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I will be done in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It will take "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="timeLeft"/>
+      </inputs>
+    </inputs>
+    <parameters name="number-integer" entity="//@entities.1"/>
+  </intents>
+  <intents name="student_anxiousness_or_not">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+        <tokens xsi:type="generator:Literal" text=" tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have my exam tomorrow and I "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+        <tokens xsi:type="generator:Literal" text=" because "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I still "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+        <tokens xsi:type="generator:Literal" text=" for the exam"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+        <tokens xsi:type="generator:Literal" text=" of the exam I have tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It's been "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The thing is that I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To be honest, I'm a "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+        <tokens xsi:type="generator:Literal" text=", I want to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+        <tokens xsi:type="generator:Literal" text=", but my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I feel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I still have so many "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="feeling"/>
+      </inputs>
+    </inputs>
+    <parameters name="feeling"/>
+  </intents>
+  <intents name="Student_Tells_Time_Left">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" hours until the exam"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" left"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" hours left"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" hours left until the deadline"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" hours"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" hours until the exam"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Only "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" more hours left"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I only have only "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" until the exam"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I have "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="time"/>
+        <tokens xsi:type="generator:Literal" text=" left to study"/>
+      </inputs>
+    </inputs>
+    <parameters name="time_left" entity="//@entities.1"/>
+  </intents>
+  <intents name="Yes_No">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="n_y"/>
+        <tokens xsi:type="generator:Literal" text=", thanks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="n_y"/>
+        <tokens xsi:type="generator:Literal" text=", please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sure, "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="y_n"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="y_n"/>
+        <tokens xsi:type="generator:Literal" text=", of course not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="y_n"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.8/@parameters.0" textReference="y_n"/>
+        <tokens xsi:type="generator:Literal" text=", indeed"/>
+      </inputs>
+    </inputs>
+    <parameters name="y_n"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <entities name="sys.given-name">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="given-name">
+        <values>given-name</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="given_name">
+        <values>given_name</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="sys.number-integer">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="time">
+        <values>time</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="timeLeft">
+        <values>timeLeft</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="scared">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="scared">
+        <values>scared</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="anxious">
+        <values>anxious</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="not sure">
+        <values>not sure</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="worried">
+        <values>worried</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="unhappy">
+        <values>unhappy</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="not_anxious">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="content">
+        <values>content</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="happy">
+        <values>happy</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="forward">
+        <values>forward</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="answer_nameTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Student_Agree_ScheduleTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Robot asks what he should change "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Robot tells motivational quote "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Student_Tells_ToDosTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="[Reads schedule] Are you happy with this plan? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="studdy_buddy_activationTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi, how are you? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey, how do you do? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, how is it going? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="student_anxiousness_or_notTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I am sorry to hear that. How much time do you have left for studying? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="It seems you are quite positive today. Do you still need any motivation? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Student_Tells_Time_LeftTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh that's quite a lot! What are your to-dos until then and how much time (in hours) do you need for each to-do? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. Can you rephrase? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you repeat? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that, say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.9" name="user1">
+    <target actions="//@actions.8" name="bot1"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

@@ -1,0 +1,208 @@
+Chatbot "Buddy-G7" language : en
+
+intents :
+
+	answer_name :
+		inputs in en {
+			"I\'m called " ( "given-name" ) [ "given-name" ] ,
+			"My friends call me " ( "given-name" ) [ "given-name" ] ,
+			"Call me " ( "given-name" ) [ "given-name" ] ,
+			"My name is " ( "given-name" ) [ "given-name" ]
+		}
+		parameters :
+			"given-name" : entity "sys.given-name" ;
+
+	Student_Agree_Schedule :
+		inputs in en {
+			"We need to " ( agree ) [ agree ] ,
+			"No, I " ( agree ) [ agree ] ,
+			"I am " ( agree ) [ agree ] ,
+			"I " ( agree ) [ agree ] " it" ,
+			( Agree ) [ agree ] " plan" ,
+			"No, I " ( agree ) [ agree ] " at all" ,
+			( Yes ) [ agree ] ", that is a good plan" ,
+			"Sounds " ( agree ) [ agree ] ,
+			"I am " ( agree ) [ agree ] " your plan!"
+		}
+		parameters :
+			agree : entity text ;
+
+	Student_Tells_ToDos :
+		inputs in en {
+			"I haven\'t " ( todo ) [ to_do ] " yet" ,
+			( todo ) [ to_do ] ,
+			"My To-Dos are: " ( todo ) [ to_do ] ,
+			"I still need to " ( todo ) [ to_do ] ,
+			"I have to " ( todo ) [ to_do ]
+		}
+		parameters :
+			to_do : entity text ;
+
+	studdy_buddy_activation :
+		inputs in en {
+			"What\'s up " ( buddyName ) [ buddyName ] ,
+			"Hello " ( buddyName ) [ buddyName ] ,
+			"Hi " ( buddyName ) [ buddyName ]
+		}
+		parameters :
+			buddyName : entity text ;
+
+	Student_Change_Wishes :
+		inputs in en {
+			( Wish ) [ any ] " is too much. I can\'t do it!" ,
+			"I disagree with " ( wish ) [ any ] ". Can we change it?" ,
+			"I am not content with " ( wish ) [ any ] ". Let\'s change that!" ,
+			"I want to have " ( wish ) [ any ] ,
+			"Let\'s change " ( wish ) [ any ] ,
+			"I want to change " ( wish ) [ any ]
+		}
+		parameters :
+			any : entity text ;
+
+	Student_gives_time_estimate :
+		inputs in en {
+			"About " ( timeLeft ) [ "number-integer" ] " hours" ,
+			"About " ( timeLeft ) [ "number-integer" ] ,
+			"It should take me about " ( timeLeft ) [ "number-integer" ] " hours" ,
+			"I will be done in " ( timeLeft ) [ "number-integer" ] ,
+			( timeLeft ) [ "number-integer" ] " hours" ,
+			( timeLeft ) [ "number-integer" ] ,
+			"It will take " ( timeLeft ) [ "number-integer" ] " hours" ,
+			"I need " ( timeLeft ) [ "number-integer" ]
+		}
+		parameters :
+			"number-integer" : entity "sys.number-integer" ;
+
+	student_anxiousness_or_not :
+		inputs in en {
+			"I am " ( feeling ) [ feeling ] " tomorrow" ,
+			"I feel like " ( feeling ) [ feeling ] ,
+			"I have my exam tomorrow and I " ( feeling ) [ feeling ] ,
+			"I can " ( feeling ) [ feeling ] " because " ( feeling ) [ feeling ] ,
+			"I still " ( feeling ) [ feeling ] " for the exam" ,
+			"I am " ( feeling ) [ feeling ] " of the exam I have tomorrow" ,
+			"It\'s been " ( feeling ) [ feeling ] ,
+			"The thing is that I am " ( feeling ) [ feeling ] ,
+			"To be honest, I\'m a " ( feeling ) [ feeling ] ,
+			"I feel " ( feeling ) [ feeling ] ", I want to " ( feeling ) [ feeling ] ,
+			"I am " ( feeling ) [ feeling ] ,
+			"I am " ( feeling ) [ feeling ] ", but my " ( feeling ) [ feeling ] ,
+			"My " ( feeling ) [ feeling ] ,
+			"I feel " ( feeling ) [ feeling ] ,
+			"I still have so many " ( feeling ) [ feeling ]
+		}
+		parameters :
+			feeling : entity text ;
+
+	Student_Tells_Time_Left :
+		inputs in en {
+			( ^time ) [ time_left ] " hours until the exam" ,
+			"I have " ( ^time ) [ time_left ] " left" ,
+			"I have " ( ^time ) [ time_left ] " hours left" ,
+			( ^time ) [ time_left ] ,
+			"I have " ( ^time ) [ time_left ] " hours left until the deadline" ,
+			( ^time ) [ time_left ] " hours" ,
+			"I have " ( ^time ) [ time_left ] " hours until the exam" ,
+			"Only " ( ^time ) [ time_left ] " more hours left" ,
+			"I only have only " ( ^time ) [ time_left ] " until the exam" ,
+			"I have " ( ^time ) [ time_left ] " left to study"
+		}
+		parameters :
+			time_left : entity "sys.number-integer" ;
+
+	Yes_No :
+		inputs in en {
+			( n_y ) [ y_n ] ", thanks" ,
+			( n_y ) [ y_n ] ", please" ,
+			"Sure, " ( y_n ) [ y_n ] ,
+			( y_n ) [ y_n ] ", of course not" ,
+			( y_n ) [ y_n ] ,
+			( y_n ) [ y_n ] ", indeed"
+		}
+		parameters :
+			y_n : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity "sys.given-name" :
+		inputs in en {
+			"given-name" synonyms "given-name"
+			given_name synonyms given_name
+	}
+	Simple entity "sys.number-integer" :
+		inputs in en {
+			^time synonyms ^time
+			timeLeft synonyms timeLeft
+	}
+	Simple entity scared :
+		inputs in en {
+			scared synonyms scared
+			anxious synonyms anxious
+			"not sure" synonyms "not sure"
+			worried synonyms worried
+			unhappy synonyms unhappy
+	}
+	Simple entity not_anxious :
+		inputs in en {
+			content synonyms content
+			happy synonyms happy
+			forward synonyms forward
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response answer_nameTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response Student_Agree_ScheduleTxtResp1 :
+		inputs in en {
+			"Robot asks what he should change " ,
+			"Robot tells motivational quote "
+	}
+	text response Student_Tells_ToDosTxtResp1 :
+		inputs in en {
+			"[Reads schedule] Are you happy with this plan? "
+	}
+	text response studdy_buddy_activationTxtResp1 :
+		inputs in en {
+			"Hi, how are you? " ,
+			"Hey, how do you do? " ,
+			"Hello, how is it going? "
+	}
+	text response student_anxiousness_or_notTxtResp1 :
+		inputs in en {
+			"I am sorry to hear that. How much time do you have left for studying? " ,
+			"It seems you are quite positive today. Do you still need any motivation? "
+	}
+	text response Student_Tells_Time_LeftTxtResp1 :
+		inputs in en {
+			"Oh that\'s quite a lot! What are your to-dos until then and how much time (in hours) do you need for each to-do? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Fallback Intent" => bot1 : chatbot "Default Fallback IntentTxtResp1" ;
+

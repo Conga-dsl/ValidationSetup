@@ -1,0 +1,59 @@
+Chatbot "AlexaSkill-PAB" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+PharmAssistIntent :
+	inputs in en {
+		"pharm assist" ,
+		"say pharm assist"
+}
+
+MedicationNowIntent :
+	inputs in en {
+		"do i have medications to take right now" ,
+		"is my medication ready" ,
+		"is my medicine ready" ,
+		"do i have any medicine to take" ,
+		"do i have any medicine to take right now"
+}
+
+"Default Fallback Intent" Fallback :
+
+MedicationsTodayIntent :
+	inputs in en {
+		"what times do i need to take my medication" ,
+		"what time do i need to take my medicine" ,
+		"when do i need to take my medicine" ,
+		"when do i need to take my medication" ,
+		"what are todays dispensing times" ,
+		"what time do i need to take my meds"
+}
+
+DispenseMedicationIntent :
+	inputs in en {
+		"dispense my medication" ,
+		"release my medication" ,
+		"give me my medicine" ,
+		"give me my meds" ,
+		"dispense my meds"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/25d7f6b2-b5ed-47b6-b6e6-a5a6387d215d" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user PharmAssistIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user MedicationNowIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+	- user5 : user MedicationsTodayIntent => bot5 : chatbot HttpRequest , HttpResponse ;
+	- user6 : user DispenseMedicationIntent => bot6 : chatbot HttpRequest , HttpResponse ;
+

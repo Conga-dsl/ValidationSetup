@@ -1,0 +1,75 @@
+Chatbot "basic-slotfilling" language : en
+
+intents :
+
+"Default Welcome Intent" :
+	inputs in en {
+		"hello hi" ,
+		^hi ,
+		"hello there" ,
+		hello ,
+		"long time no see" ,
+		hey ,
+		"a good day" ,
+		"hey there" ,
+		"I greet you" ,
+		"hi there" ,
+		"hello again" ,
+		"lovely day isn\'t it" ,
+		howdy ,
+		greetings ,
+		"just going to say hi" ,
+		heya
+}
+
+makeAdlibStory :
+	inputs in en {
+		( orange ) [ color ] " " ( Iceland ) [ "geo-country" ] " " ( "1985" ) [ ^number ] ,
+		( Canada ) [ "geo-country" ] " " ( green ) [ color ] " " ( "1955" ) [ ^number ] ,
+		( brazil ) [ "geo-country" ] " " ( "1970" ) [ ^number ] " " ( yellow ) [ color ]
+	}
+	parameters :
+		"geo-country" : entity text , required , prompts in en [ "I need a country!" ] ;
+		^number : entity float , required , prompts in en [ "What\'s a random year?" ] ;
+		color : entity text , required , prompts in en [ "Give me a random color" ] ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-basic-slotfilling.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hey there, welcome to Ad Libs! All I need is a country, year, and color for a great story. "
+	}
+	text response makeAdlibStoryTxtResp1 :
+		inputs in en {
+			"So according to Professor David, back in the year " "the nearly  extinct yet exquisite, " [ "makeAdlibStory.color" ] "-bellied fox was introduced to " [ "makeAdlibStory.geo-country" ] "and now flourishes in over 236 distinct regions. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user makeAdlibStory => bot2 : chatbot HttpRequest , HttpResponse , makeAdlibStoryTxtResp1 ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" ;
+

@@ -1,0 +1,395 @@
+Chatbot beta language : en
+
+intents :
+
+	Action_Cart_Delete :
+		inputs in en {
+			"can you remove " ( "Bucky Badger Plush" ) [ Product ] " please?" ,
+			"get rid of the " ( "Wisconsin Leggings" ) [ Product ] " in the cart" ,
+			"please delete the product " ( "Wisconsin Running Shorts" ) [ Product ] ,
+			"please remove the item " ( "Wisconsin Running Shorts" ) [ Product ] ,
+			"I don\'t want the " ( "Wisconsin Sweatpants" ) [ Product ] " in my cart anymore" ,
+			"please take off the " ( "Badger Bucky Keychain" ) [ Product ] " from the cart" ,
+			"remove " ( "White Wisconsin Visor" ) [ Product ] " from the cart" ,
+			"delete " ( "Bucky Badger Pillow" ) [ Product ] " from the cart" ,
+			"remove " ( "Wisconsin Football Hat" ) [ Product ] ,
+			"delete " ( "Wisconsin Leggings" ) [ Product ]
+		}
+		parameters :
+			Product : entity Product , required ;
+
+	Query_Category :
+		inputs in en {
+			categories ,
+			"I would like to know about your category" ,
+			"I want to see the category" ,
+			"show me the category" ,
+			"show me the categories" ,
+			"What is the category?" ,
+			"What kind of products can I shop here?" ,
+			"what kind of category do you provide?" ,
+			category ,
+			"what are categories of the product?"
+	}
+
+	Query_Cart :
+		inputs in en {
+			"please tell me items in my cart" ,
+			"items in cart" ,
+			"how many things do I have in my cart" ,
+			"what items are in my cart" ,
+			"could you show me the items in my cart?" ,
+			"can you show me my cart" ,
+			"show me what is in my cart" ,
+			"what is in my cart now" ,
+			"what do I have in my cart" ,
+			"Show me cart"
+	}
+
+	Navigation :
+		inputs in en {
+			"show me the " ( "log in" ) [ page ] " page" ,
+			"navigate to the page of " ( "Jump Around Shirts" ) [ Product ] ,
+			"navigate to " ( "Wisconsin Leggings" ) [ Product ] ,
+			"navigate to " ( Leggings ) [ category ] " category" ,
+			"navigate to " ( "sign up" ) [ page ] " page" ,
+			"take me to the page of " ( "Bucky Badger Plush" ) [ Product ] ,
+			"show me " ( "Wisconsin Football Hat" ) [ Product ] ,
+			"take me to the " ( sweatshirts ) [ category ] " page" ,
+			"show me the " ( hats ) [ category ] ,
+			"show me the " ( welcome ) [ page ] " page" ,
+			"take me to " ( "sign in" ) [ page ]
+		}
+		parameters :
+			page : entity page ;
+			category : entity category ;
+			Product : entity Product ;
+
+	Action_Cart_Review :
+		inputs in en {
+			"cart review" ,
+			"please help me review the cart" ,
+			"can you help me review my cart" ,
+			"review cart" ,
+			"I want to review my cart before checkout" ,
+			"I would like to review the cart" ,
+			"could you please take my to the cart page?" ,
+			"take me to my cart" ,
+			"Cart review, please" ,
+			"Take me to review my cart" ,
+			"I want to review my cart"
+	}
+
+	End_Conversation :
+		inputs in en {
+			"end my session" ,
+			"log out" ,
+			"I want to log out" ,
+			"I want to quit" ,
+			"end dialogue" ,
+			end ,
+			"bye bye" ,
+			"end conversation" ,
+			goodbye ,
+			bye
+	}
+
+	Action_Tag :
+		inputs in en {
+			"I only want " ( women ) [ tag ] " products" ,
+			"I only want to see " ( black ) [ tag ] " ones" ,
+			"show me only the " ( fluffy ) [ tag ] " ones" ,
+			"filter by the tag " ( black ) [ tag ] ,
+			"could you please show me only the products that are " ( men ) [ tag ] ,
+			"can you filter the products by " ( women ) [ tag ] ,
+			"products that have tag " ( fluffy ) [ tag ] ,
+			"what are products that have " ( black ) [ tag ] " tag" ,
+			"Show me products by " ( red ) [ tag ] ,
+			"Show me all the " ( red ) [ tag ] " ones"
+		}
+		parameters :
+			tag : entity Tag , required ;
+
+	"Query_Product - review" :
+		inputs in en {
+			"what are the reviews" ,
+			"show me the rating" ,
+			"how many stars is this product" ,
+			rating ,
+			"what is the rating" ,
+			"what does other user say about this product" ,
+			"feedback of this product" ,
+			"show me the review" ,
+			"What is the review of this product" ,
+			review
+	}
+
+	Query_Tag :
+		inputs in en {
+			"I would like to know the tag of " ( leggings ) [ category ] ,
+			"Give me the tag of " ( hats ) [ category ] ,
+			"Do the " ( hats ) [ category ] " has any tag?" ,
+			"I want to know the tag of " ( hats ) [ category ] ,
+			"what is the tag of " ( Leggings ) [ category ] ,
+			"could you please tell me the tag of " ( Sweatshirts ) [ category ] "?" ,
+			"show me the tag of " ( hats ) [ category ] ,
+			"tag of " ( hats ) [ category ] ,
+			"Show me the tag" ,
+			Tag
+		}
+		parameters :
+			category : entity category , required , prompts in en [ "Which category would you like to know tags for?" ] ;
+
+	Login :
+		inputs in en {
+			"I want to log in with username " ( username ) [ username ] " and password " ( password ) [ password ] ,
+			"I would like to log into my account" ,
+			"log in, please" ,
+			"Sign me in" ,
+			"Could you please sign me in?" ,
+			"I want to sign in" ,
+			"Sign in" ,
+			"How can I log in?" ,
+			"Log me in" ,
+			"I want to log in" ,
+			"log in"
+		}
+		parameters :
+			username : entity text , required , prompts in en [ "Please enter your username" ] ;
+			password : entity text , required , prompts in en [ "Please enter your password" ] ;
+
+	checklogin :
+		inputs in en {
+			"am i in"
+	}
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"just going to say hi" ,
+			heya ,
+			"hello hi" ,
+			howdy ,
+			"hey there" ,
+			"hi there" ,
+			greetings ,
+			hey ,
+			"long time no see" ,
+			hello ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			"hello again" ,
+			^hi ,
+			"hello there" ,
+			"a good day"
+	}
+
+	Action_Cart_Clear :
+		inputs in en {
+			"I want to delete everything in my cart" ,
+			"I want to remove everything in my cart" ,
+			"could you please clear the cart" ,
+			"I want a empty cart" ,
+			"empty cart" ,
+			"delete everything in my cart" ,
+			"Can you clear my cart" ,
+			"I want to clear my cart" ,
+			"remove everything in my cart" ,
+			"clear my cart"
+	}
+
+	Query_Product :
+		inputs in en {
+			"show me the information about " ( "W Cloud Pillow" ) [ Product ] ,
+			"tell me more about " ( "Wisconsin Running Shorts" ) [ Product ] ,
+			"tell me more about " ( "Jump Around Shirt" ) [ Product ] ,
+			"tell me more about " ( "Wisconsin Leggings" ) [ Product ] ,
+			"tell me more about " ( "Bucky Badger Pillow" ) [ Product ] ,
+			"tell me more about " ( "Bucky Badger Plush" ) [ Product ] ,
+			"tell me more about " ( "150 Year Commemorative Hoodie" ) [ Product ] ,
+			"tell me more about " ( "Bucky Crew Neck Sweatshirt" ) [ Product ] ,
+			"tell me more about " ( "White Wisconsin Visor" ) [ Product ] ,
+			"show me the information about " ( "Wisconsin Football Hat" ) [ Product ]
+		}
+		parameters :
+			Product : entity Product , required ;
+
+	Action_Cart_Add :
+		inputs in en {
+			"add " ( "1" ) [ quantity ] " " ( "White Wisconsin Visor" ) [ Product ] ,
+			"put " ( "3" ) [ quantity ] " " ( "Wisconsin Football Hats" ) [ Product ] " to my cart" ,
+			"add " ( "6" ) [ quantity ] " " ( "Wisconsin Football Hats" ) [ Product ] ", please" ,
+			"I want to add " ( "9" ) [ quantity ] " " ( "Bucky Badger Pillow to my cart" ) [ Product ] ,
+			"I want to add " ( "2" ) [ quantity ] " " ( "Bucky Badger Keychain" ) [ Product ] ,
+			"add " ( "3" ) [ quantity ] " " ( "Bucky Badger Plush" ) [ Product ] ,
+			"I want to buy " ( "5" ) [ quantity ] " " ( "Bucky Crew Neck Sweatshirt" ) [ Product ] ,
+			"could you please add " ( "3" ) [ quantity ] " " ( "W Cloud Pillow" ) [ Product ] "?" ,
+			"please add " ( "2" ) [ quantity ] " " ( "Wisconsin Leggings" ) [ Product ] " to my cart" ,
+			"add " ( "1" ) [ quantity ] " " ( "Bucky Crew Neck Sweatshirt" ) [ Product ] " to cart"
+		}
+		parameters :
+			Product : entity Product , required ;
+			quantity : entity quantity , required ;
+
+	"Action_Cart_Review - Check Out" :
+		inputs in en {
+			purchase ,
+			"Place my order" ,
+			"check out" ,
+			"Please confirm my cart" ,
+			"My cart looks ok" ,
+			"Can you help me confirm my cart" ,
+			"I want to confirm" ,
+			"I confirm my cart" ,
+			"My cart is alright" ,
+			"I want to confirm to check out" ,
+			"I would like to check out" ,
+			confirm ,
+			"Confirm cart"
+	}
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity quantity :
+		inputs in en {
+			"1" synonyms one , "1"
+			"2" synonyms "2" , two
+			"3" synonyms "3" , three
+			"4" synonyms "4" , four
+			"5" synonyms "5" , five
+			"6" synonyms "6" , six
+			"7" synonyms "7" , seven
+			"8" synonyms "8" , eight
+			"9" synonyms "9" , nine
+			"10" synonyms "10" , ten
+	}
+	Simple entity Product :
+		inputs in en {
+			"Wisconsin Football Hat" synonyms "Wisconsin Football Hat"
+			"White Wisconsin Visor" synonyms "White Wisconsin Visor"
+			"Bucky Crew Neck Sweatshirt" synonyms "Bucky Crew Neck Sweatshirt"
+			"150 Year Commemorative Hoodie" synonyms "150 Year Commemorative Hoodie"
+			"Bucky Badger Plush" synonyms "Bucky Badger Plush"
+			"Game Day Bucky Plush" synonyms "Game Day Bucky Plush"
+			"W Cloud Pillow" synonyms "W Cloud Pillow"
+			"Bucky Badger Pillow" synonyms "Bucky Badger Pillow"
+			"Bucky Badger Keychain" synonyms "Bucky Badger Keychain"
+			"Wisconsin Leggings" synonyms "Wisconsin Leggings"
+			"Bucky Badger Leggings" synonyms "Bucky Badger Leggings"
+			"Jump Around Shirt" synonyms "Jump Around Shirt"
+			"Women\'s Wisconsin Cuddle Joggers" synonyms "Women\'s Wisconsin Cuddle Joggers"
+			"Wisconsin Sweatpants" synonyms "Wisconsin Sweatpants"
+			"Wisconsin Qualifier Woven Short" synonyms "Wisconsin Qualifier Woven Short"
+			"Wisconsin Running Shorts" synonyms "Wisconsin Running Shorts"
+	}
+	Simple entity page :
+		inputs in en {
+			"sign in" synonyms "sign in" , "log in" , login , signin
+			"sign up" synonyms "sign up"
+			welcome synonyms welcome , home
+			cart synonyms cart
+			"cart review" synonyms "cart review"
+			"cart confirm" synonyms "cart confirm" , purchase
+	}
+	Simple entity Tag :
+		inputs in en {
+			men synonyms men
+			women synonyms women
+			red synonyms red
+			white synonyms white
+			logo synonyms logo
+			printed synonyms printed
+			cotton synonyms cotton
+			polyester synonyms polyester
+			shortsleeve synonyms shortsleeve
+			longsleeve synonyms longsleeve
+			shorts synonyms shorts
+			pants synonyms pants
+			sweats synonyms sweats
+			hoodies synonyms hoodies
+			grey synonyms grey
+			youth synonyms youth
+			adult synonyms adult
+			embroidered synonyms embroidered
+			black synonyms black
+			fuzzy synonyms fuzzy
+			badger synonyms badger
+			pillow synonyms pillow
+			keychain synonyms keychain
+			visor synonyms visor
+	}
+	Simple entity category :
+		inputs in en {
+			hats synonyms hats
+			sweatshirts synonyms sweatshirts
+			plushes synonyms plushes
+			leggings synonyms leggings
+			tees synonyms tees
+			bottoms synonyms bottoms
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://f3203be96e8c.ngrok.io" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response Action_Cart_DeleteTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Query_Product - reviewTxtResp1" :
+		inputs in en {
+			"You said review "
+	}
+	text response LoginTxtResp1 :
+		inputs in en {
+			"... "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user Action_Cart_Delete => bot1 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user2 : user Query_Category => bot2 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user3 : user Query_Cart => bot3 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user4 : user Navigation => bot4 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user5 : user Action_Cart_Review => bot5 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 {
+		=> user6 : user "Action_Cart_Review - Check Out" => bot6 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	} ;
+	- user7 : user End_Conversation => bot7 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user8 : user Action_Tag => bot8 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user9 : user Query_Tag => bot9 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user10 : user Login => bot10 : chatbot HttpRequest , HttpResponse , LoginTxtResp1 ;
+	- user11 : user checklogin => bot11 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user12 : user "Default Welcome Intent" => bot12 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user13 : user Action_Cart_Clear => bot13 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user14 : user Query_Product => bot14 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 {
+		=> user15 : user "Query_Product - review" => bot15 : chatbot HttpRequest , HttpResponse , "Query_Product - reviewTxtResp1" ;
+	} ;
+	- user16 : user Action_Cart_Add => bot16 : chatbot HttpRequest , HttpResponse , Action_Cart_DeleteTxtResp1 ;
+	- user17 : user "Default Fallback Intent" => bot17 : chatbot "Default Fallback IntentTxtResp1" ;
+

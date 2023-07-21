@@ -1,0 +1,139 @@
+Chatbot "dialogflow-conversation-components" language : en
+
+intents :
+
+"basic card" :
+	inputs in en {
+		"basic card"
+}
+
+"browse carousel" :
+	inputs in en {
+		"browse carousel cards" ,
+		"browse carousel feature" ,
+		"browse carousel"
+}
+
+"media status" :
+
+"table builder" :
+	inputs in en {
+		"Table please" ,
+		"Can I see a table?" ,
+		"Can I see a table card?" ,
+		table ,
+		"table card" ,
+		"Show me a table card"
+}
+
+"bye response" :
+	inputs in en {
+		"bye response"
+}
+
+carousel :
+	inputs in en {
+		"carousel card" ,
+		carousel
+}
+
+list :
+	inputs in en {
+		list
+}
+
+"normal ask" :
+	inputs in en {
+		"normal ask"
+}
+
+"bye card" :
+	inputs in en {
+		"bye card"
+}
+
+"media response" :
+	inputs in en {
+		"media response" ,
+		"play me some media" ,
+		media
+}
+
+"card builder" :
+	inputs in en {
+		"card builder"
+}
+
+"normal bye" :
+	inputs in en {
+		"normal bye"
+}
+
+suggestions :
+	inputs in en {
+		"suggestions card" ,
+		suggestions ,
+		suggestion ,
+		"suggestion chips"
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://<REGION>-<PROJECT_ID>.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "basic cardTxtResp1" :
+		inputs in en {
+			"Webhook failed "
+	}
+	text response "browse carouselTxtResp1" :
+		inputs in en {
+			"The webhook failed "
+	}
+	text response carouselTxtResp1 :
+		inputs in en {
+			"webhook failed "
+	}
+	text response "card builderTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response suggestionsTxtResp1 :
+		inputs in en {
+			"suggestions "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "browse carousel" => bot1 : chatbot HttpRequest , HttpResponse , "browse carouselTxtResp1" ;
+	- user2 : user "media status" => bot11 : chatbot HttpRequest , HttpResponse , "basic cardTxtResp1" ;
+	- user3 : user "table builder" => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "bye response" => bot4 : chatbot HttpRequest , HttpResponse , "basic cardTxtResp1" ;
+	- user5 : user carousel => bot5 : chatbot HttpRequest , HttpResponse , carouselTxtResp1 ;
+	- user6 : user "normal ask" => bot6 : chatbot HttpRequest , HttpResponse , "basic cardTxtResp1" ;
+	- user7 : user "bye card" => bot8 : chatbot HttpRequest , HttpResponse , "basic cardTxtResp1" ;
+	- user8 : user "media response" => bot9 : chatbot HttpRequest , HttpResponse , "basic cardTxtResp1" ;
+	- user9 : user "card builder" => bot10 : chatbot HttpRequest , HttpResponse , "card builderTxtResp1" ;
+	- user10 : user "normal bye" => bot12 : chatbot HttpRequest , HttpResponse , "basic cardTxtResp1" ;
+	- user11 : user "Default Fallback Intent" => bot13 : chatbot "Default Fallback IntentTxtResp1" ;
+

@@ -1,0 +1,70 @@
+Chatbot "dialogflow-name-psychic" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+"Unrecognized Deep Link Fallback" Fallback :
+
+request_name_permission :
+	inputs in en {
+		"Guess my name" ,
+		"What is my name" ,
+		Name ,
+		"My name"
+}
+
+request_location_permission :
+	inputs in en {
+		"What is my location" ,
+		"Where am I" ,
+		Location ,
+		"Guess where I am" ,
+		"Guess my location" ,
+		"My location"
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Welcome to your Psychic! My mind is more powerful than you know! Shall I guess your name, or your current location? "
+	}
+	text response handle_permissionTxtResp1 :
+		inputs in en {
+			"This is strange! I could not read your mind! I must rest and practice using my powers! "
+	}
+	text response "Unrecognized Deep Link FallbackTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response request_name_permissionTxtResp1 :
+		inputs in en {
+			"I can\'t read your mind right now! My mystical powers have failed! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I\'m sorry. I\'m having trouble understanding the question. " ,
+			"I think I may have misunderstood your last statement. " ,
+			"I\'m sorry. I didn\'t quite grasp what you just said. " ,
+			"I don\'t think I\'m qualified to answer that yet. " ,
+			"I\'m a bit confused by that last part. " ,
+			"I\'m not totally sure about that. " ,
+			"I\'m not sure I follow. " ,
+			"I\'m afraid I don\'t understand. " ,
+			"I\'m a bit confused. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot4 : chatbot HttpRequest , HttpResponse , request_name_permissionTxtResp1 ;
+	- user2 : user request_name_permission => bot3 : chatbot HttpRequest , HttpResponse , request_name_permissionTxtResp1 ;
+	- user3 : user "Unrecognized Deep Link Fallback" => bot5 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user4 : user request_location_permission => bot6 : chatbot HttpRequest , HttpResponse , request_name_permissionTxtResp1 ;
+

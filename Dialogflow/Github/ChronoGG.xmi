@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="ChronoGG">
+  <intents name="GetDailyDeal">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Check today's daily deal?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's the game that is on sale today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Which game is the deal of the day?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What game is for sale?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is the discount today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What's on sale today?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is today's deal"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="today's deal"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-chronogg-c0d41.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="GetDailyDealTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

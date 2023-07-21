@@ -1,0 +1,99 @@
+Chatbot "city-streets-trivia" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			heya ,
+			"hey there" ,
+			hey ,
+			^hi ,
+			"long time no see" ,
+			"I greet you" ,
+			"just going to say hi" ,
+			hello ,
+			howdy ,
+			"hi there" ,
+			"hello hi" ,
+			"lovely day isn\'t it" ,
+			"hello there" ,
+			"hello again" ,
+			"a good day" ,
+			greetings
+	}
+
+	"Unknown answer" Fallback :
+
+	"City name" :
+		inputs in en {
+			"Let\'s do " ( Houston ) [ city ] ,
+			"I\'ll pick " ( Houston ) [ city ] ,
+			"How about " ( Chicago ) [ city ] "?" ,
+			( "New York" ) [ city ]
+		}
+		parameters :
+			city : entity city ;
+
+	"Trivia answer" :
+		inputs in en {
+			"How about " ( Broadway ) [ street ] ,
+			"I\'m not sure but it might be " ( Broadway ) [ street ] ,
+			"Maybe it\'s " ( Broadway ) [ street ] ,
+			"I think it\'s " ( Broadway ) [ street ] ,
+			( Broadway ) [ street ]
+		}
+		parameters :
+			street : entity street ;
+
+entities :
+	Simple entity city :
+		inputs in en {
+			"New York" synonyms "New York" , NYC
+			"Los Angeles" synonyms "Los Angeles" , LA , "L.A."
+			Chicago synonyms Chicago
+			Houston synonyms Houston
+	}
+	Simple entity street :
+		inputs in en {
+			Broadway synonyms Broadway
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-city-streets-trivia.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hey! Choose a city and I\'ll test your street smarts. Your options are New York, Los Angeles, Chicago, and Houston. "
+	}
+	text response "Unknown answerTxtResp1" :
+		inputs in en {
+			"Hmm, I don\'t actually know that one, but it\'s definitely not the right answer. Try again! "
+	}
+	text response "City nameTxtResp1" :
+		inputs in en {
+			"Sorry, there was a problem. Try again later! "
+	}
+	text response "Trivia answerTxtResp1" :
+		inputs in en {
+			"Oh dear! Something went wrong. What did you say again? "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I don\'t know that city! Your options are New York, Los Angeles, Chicago, and Houston. Which one do you want? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "City name" => bot2 : chatbot HttpRequest , HttpResponse , "City nameTxtResp1" {
+		=> user3 : user "Unknown answer" => bot3 : chatbot "Unknown answerTxtResp1" {
+			=> user4 : user "Trivia answer" => bot4 : chatbot HttpRequest , HttpResponse , "Trivia answerTxtResp1" ; => back to user3 ;
+		} ;
+		=> user5 : user "Trivia answer" => bot5 : chatbot HttpRequest , HttpResponse , "Trivia answerTxtResp1" ;
+	} ;
+	- user6 : user "Unknown answer" => bot6 : chatbot "Default Fallback IntentTxtResp1" ;
+

@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="chatops">
+  <intents name="Standup: change color">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change the color of the standup question 1 to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="white"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup change question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" color to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="cyan"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit standup color to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="black"/>
+        <tokens xsi:type="generator:Literal" text=" of the question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="6"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" color to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="red"/>
+      </inputs>
+    </inputs>
+    <parameters name="index" defaultEntity="NUMBER" required="true"/>
+    <parameters name="color" required="true"/>
+  </intents>
+  <intents name="Standup: change question text">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup question text"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup question textchange standup question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="3"/>
+        <tokens xsi:type="generator:Literal" text=" text"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup change question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="13"/>
+        <tokens xsi:type="generator:Literal" text=" text to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="whatever"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" text to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="Another question"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="index" defaultEntity="NUMBER" required="true"/>
+    <parameters name="text" required="true"/>
+  </intents>
+  <intents name="Custom welcome intent">
+    <parameters name="user_name"/>
+    <parameters name="question"/>
+    <parameters name="answer" required="true">
+      <prompts language="ENGLISH">
+        <prompts>$question, $user_name.</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Jenkins: build Job">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="build a job in jenkins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build job"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to start a build job"/>
+      </inputs>
+    </inputs>
+    <parameters name="jobName" required="true">
+      <prompts language="ENGLISH">
+        <prompts>For what job?</prompts>
+        <prompts>What is the job name?</prompts>
+        <prompts>Give me the job</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Jenkins: last completed build of a job">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins last completed build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last completed build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show the last completed jenkins build of job"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me the last completed build in jenkins"/>
+      </inputs>
+    </inputs>
+    <parameters name="jobName" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Please give me the name of the job</prompts>
+        <prompts>What is the job name?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Github: add comment on issue">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github add comment on issue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add github issue comment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="issue "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="6"/>
+        <tokens xsi:type="generator:Literal" text=" add comment"/>
+      </inputs>
+    </inputs>
+    <parameters name="issueNum" defaultEntity="FLOAT" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Specify the issue number</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="repoName" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the repository name?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Standup: show standup settings">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show standups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me the standup settings pls"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me standup settings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the standup settings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup settings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup config"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to take a loot at standup configurations"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show standup settings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup show"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Jenkins: add username">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins username"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add my jenkins username"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="here is my jenkins username &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="pet.Jas"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins username = '"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="andreas"/>
+        <tokens xsi:type="generator:Literal" text="'"/>
+      </inputs>
+    </inputs>
+    <parameters name="username" required="true"/>
+  </intents>
+  <intents name="Trello: show my cards">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello show cards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello show my cards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello my cards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my cards on trello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give my trello cards"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Trello sumups: Change status">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="switch off"/>
+        <tokens xsi:type="generator:Literal" text=" those trello sumups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="turn off"/>
+        <tokens xsi:type="generator:Literal" text=" sumups of trello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you please "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="turn on"/>
+        <tokens xsi:type="generator:Literal" text=" the trello sumups scheduler?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="activate"/>
+        <tokens xsi:type="generator:Literal" text=" sumups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="enable"/>
+        <tokens xsi:type="generator:Literal" text=" trello sumups"/>
+      </inputs>
+    </inputs>
+    <parameters name="bool" entity="//@entities.1" required="true"/>
+  </intents>
+  <intents name="Jenkins: console of a build">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins console build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="78"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="93"/>
+        <tokens xsi:type="generator:Literal" text=" console job &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="ThisIsTestJob"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="80"/>
+        <tokens xsi:type="generator:Literal" text=" console"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to see the output console of the build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.1" textReference="6"/>
+        <tokens xsi:type="generator:Literal" text=" of the job &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.10/@parameters.0" textReference="Test JOB"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="jobName" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the name of the build's job?</prompts>
+        <prompts>Please give me the name of the job</prompts>
+        <prompts>What is the job's name?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="buildNum" defaultEntity="NUMBER" required="true">
+      <prompts language="ENGLISH">
+        <prompts>For which build?</prompts>
+        <prompts>What is the number of the build?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Default Welcome Intent"/>
+  <intents name="Jenkins: add token">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins token"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="here is my jenkins token. &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="dsfdsdfgvds4e4t32w4eg"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins token &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="sdzkjbjksdvgasdf"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="token" required="true"/>
+  </intents>
+  <intents name="notSure - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yep"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yeap"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="aha"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Standup: remove question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete the question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="7"/>
+        <tokens xsi:type="generator:Literal" text=" in standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup remove question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="1"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup delete question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please delete the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="6"/>
+        <tokens xsi:type="generator:Literal" text="th standup question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove standup question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="5"/>
+      </inputs>
+    </inputs>
+    <parameters name="index" defaultEntity="NUMBER" required="true"/>
+  </intents>
+  <intents name="Standup: change channel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup edit channel to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="Team"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit channel of standup reports to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="Reporting Channel"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please update the channel of standup reports to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="DailYReports"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to change the standup channel"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup channel to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="general"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup channel to &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="random"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="channelName" required="true"/>
+  </intents>
+  <intents name="Jenkins: list builds of job">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build 78 info"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins builds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list jenkins builds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="gert me the jenkins builds"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins show me builds of job &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.16/@parameters.0" textReference="JoBname"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="jobName" required="true"/>
+  </intents>
+  <intents name="Trello sumups: change days">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I would like to modify the trello sumup. Change the days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="weekdays"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to change the days of the trello sumup to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="Monday"/>
+        <tokens xsi:type="generator:Literal" text=", "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="Tuesday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="Friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change trello sumups days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.17/@parameters.0" textReference="tuesday"/>
+      </inputs>
+    </inputs>
+    <parameters name="days" entity="//@entities.2" required="true"/>
+  </intents>
+  <intents name="not Sure - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not interested"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want that"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Standups: start a standup report">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="begin a report"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="begin a standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to report now"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="start a standup report now"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Github: list issues of a repo">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.1" textReference="mentioned"/>
+        <tokens xsi:type="generator:Literal" text=" issues of repository &quot;anbot&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.1" textReference="open"/>
+        <tokens xsi:type="generator:Literal" text=" issues repo &quot;anbot&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me github "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.1" textReference="closed"/>
+        <tokens xsi:type="generator:Literal" text=" issues of repo &quot;anbot&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.1" textReference="closed"/>
+        <tokens xsi:type="generator:Literal" text=" issues of repo &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.2" textReference="npmDigger"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.1" textReference="open"/>
+        <tokens xsi:type="generator:Literal" text=" issues of repo &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.20/@parameters.2" textReference="anbot"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="issuesCnt" defaultEntity="NUMBER"/>
+    <parameters name="parameter" entity="//@entities.4"/>
+    <parameters name="repo" required="true"/>
+  </intents>
+  <intents name="Jenkins: last build of a job">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins job &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.21/@parameters.0" textReference="myJob"/>
+        <tokens xsi:type="generator:Literal" text="&quot; last build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins last build of job &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.21/@parameters.0" textReference="myJob"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins last build of &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.21/@parameters.0" textReference="myJob"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins last build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me the last build in jenkins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show the last jenkins build of job"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last build"/>
+      </inputs>
+    </inputs>
+    <parameters name="jobName" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the name of the build's job?</prompts>
+        <prompts>What is the job's name?</prompts>
+        <prompts>Please give me the name of the job</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Trello: show notifications">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.22/@parameters.1" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" trello "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.22/@parameters.0" textReference="read"/>
+        <tokens xsi:type="generator:Literal" text=" notifications"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my trello "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.22/@parameters.0" textReference="unread"/>
+        <tokens xsi:type="generator:Literal" text=" notifications"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello show notifications"/>
+      </inputs>
+    </inputs>
+    <parameters name="read_status" entity="//@entities.0"/>
+    <parameters name="limit" defaultEntity="FLOAT"/>
+  </intents>
+  <intents name="Jenkins: Login">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sign in to jenkins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins sign in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkis auth"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins authorization"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="authorize me to jenkins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="login to jenkins"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Standup: change days">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup days"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="tusday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup day to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=", "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="tusday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=", "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="tuesday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup days change "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="to monday to wednesday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup days change to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday to friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update the days of standup to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=", "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="tusday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change tandup days to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="monday"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.24/@parameters.0" textReference="friday"/>
+      </inputs>
+    </inputs>
+    <parameters name="days" entity="//@entities.2" required="true"/>
+  </intents>
+  <intents name="jenkins all jobs ">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins all jobs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins jobs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to see the jenkins jobs"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me all the jenkins jobs"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Jenkins: build info">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="build info"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="buil information"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build information"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to get information about the build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.26/@parameters.0" textReference="6"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.26/@parameters.0" textReference="78"/>
+        <tokens xsi:type="generator:Literal" text=" info"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what do you know about the jenkins build "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.26/@parameters.0" textReference="13"/>
+        <tokens xsi:type="generator:Literal" text=" ?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins build info"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to get information about the build 6 of job &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.26/@parameters.1" textReference="JavascriptRuntime"/>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+      </inputs>
+    </inputs>
+    <parameters name="buildNum" defaultEntity="NUMBER" required="true">
+      <prompts language="ENGLISH">
+        <prompts>For which build?</prompts>
+        <prompts>What is the build number?</prompts>
+        <prompts>Provide the build number please</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="jobName" required="true">
+      <prompts language="ENGLISH">
+        <prompts>what is the job name?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Standup: change status (active/deactive)">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.27/@parameters.0" textReference="disable"/>
+        <tokens xsi:type="generator:Literal" text=" standups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.27/@parameters.0" textReference="stop"/>
+        <tokens xsi:type="generator:Literal" text=" standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.27/@parameters.0" textReference="deactivate"/>
+        <tokens xsi:type="generator:Literal" text=" standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.27/@parameters.0" textReference="pause"/>
+        <tokens xsi:type="generator:Literal" text=" standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.27/@parameters.0" textReference="pause"/>
+        <tokens xsi:type="generator:Literal" text=" standup meetups"/>
+      </inputs>
+    </inputs>
+    <parameters name="status" entity="//@entities.1" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the new status? (active/deactive)</prompts>
+        <prompts>Deactivate or activate it?</prompts>
+        <prompts>Enable or disable?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Standup: change time">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you edit time to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="10:36"/>
+        <tokens xsi:type="generator:Literal" text=" of standup?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the time of standup must be change to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="8:39"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="update standup time. make it "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="09:30"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change the time of standup to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="10:55"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to change standup time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup time to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.28/@parameters.0" textReference="08:55"/>
+      </inputs>
+    </inputs>
+    <parameters name="time" defaultEntity="TIME" required="true"/>
+  </intents>
+  <intents name="Standup: reset configuration">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reste standups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup reset"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to reset the standup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reset standup settings"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Trello: show sumup">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="me trello sumups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello sumups"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me my trello summarize"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Trello: show boards">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to see trello boards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello boards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show trello boards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me trello boards"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Github: list issue comments">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github issue "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.32/@parameters.0" textReference="8"/>
+        <tokens xsi:type="generator:Literal" text=" comments"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list comments of the issue "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.32/@parameters.0" textReference="5"/>
+      </inputs>
+    </inputs>
+    <parameters name="issueNum" defaultEntity="NUMBER" required="true"/>
+    <parameters name="repo" required="true"/>
+  </intents>
+  <intents name="Trello: show mentions">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.33/@parameters.0" textReference="6"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.33/@parameters.1" textReference="unread"/>
+        <tokens xsi:type="generator:Literal" text=" mentions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.33/@parameters.1" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my trello mentions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.33/@parameters.1" textReference="unread"/>
+        <tokens xsi:type="generator:Literal" text=" mentions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.33/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" mentions"/>
+      </inputs>
+    </inputs>
+    <parameters name="limit" defaultEntity="FLOAT"/>
+    <parameters name="read_filter" entity="//@entities.0"/>
+  </intents>
+  <intents name="Trello: show webhooks">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to see the trello webhooks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="trello webhooks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me the trello webhooks"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i would like to see the webhooks in trello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Please show me what webhoohs exist in Trello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can i have all the trello webhooks available?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me trello webhooks"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Github: Login">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github sign in"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sign in to github"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i want to login to github"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github login"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="authenticate me to github"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="login to github"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Standup: add new question">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="&quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.1" textReference="What did you do yesterday?"/>
+        <tokens xsi:type="generator:Literal" text="&quot;. Add this question please with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.2" textReference="green"/>
+        <tokens xsi:type="generator:Literal" text=" color at the position "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.0" textReference="7"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup add a question at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.0" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" order"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add standup question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add a new standup question"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="add standup question &quot;"/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.1" textReference="i am asking something?"/>
+        <tokens xsi:type="generator:Literal" text="&quot; at position "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.0" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.36/@parameters.2" textReference="red"/>
+      </inputs>
+    </inputs>
+    <parameters name="index" defaultEntity="NUMBER"/>
+    <parameters name="text" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the question?</prompts>
+        <prompts>Enter your question please</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="color"/>
+  </intents>
+  <intents name="Github: create issue">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github create issue"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create a new issue on github"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="create a new github issue"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Standup: change questions order">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup rearrange question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.1" textReference="2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change standup questions "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="2"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.1" textReference="5"/>
+        <tokens xsi:type="generator:Literal" text=" order"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup rearrange question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.1" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="standup move question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.1" textReference="5"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="move standup question "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.0" textReference="1"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.38/@parameters.1" textReference="2"/>
+      </inputs>
+    </inputs>
+    <parameters name="questionIndex" defaultEntity="NUMBER" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the index of the question you want to move?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="newIndex" defaultEntity="NUMBER" required="true">
+      <prompts language="ENGLISH">
+        <prompts>What is the new index?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="Jenkins: list last successful build of a job">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins last successful build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me the last successful build in jenkins"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show the last successful jenkins build of job"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="last successful build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="jenkins last successful"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="give me that last successful build"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Jenkins list last successful build of a job"/>
+      </inputs>
+    </inputs>
+    <parameters name="jobName" required="true"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <intents name="Github: List repositories">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github repos"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="github repositories"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Github: show commits">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get me the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.42/@parameters.0" textReference="6"/>
+        <tokens xsi:type="generator:Literal" text=" commits in github repository"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list github commits"/>
+      </inputs>
+    </inputs>
+    <parameters name="limit" defaultEntity="FLOAT" required="true"/>
+    <parameters name="repoName" required="true"/>
+  </intents>
+  <entities name="notificationStatus">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="all"/>
+      </inputs>
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="unread"/>
+      </inputs>
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="read"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="bool">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="true">
+        <values>true</values>
+        <values>enable</values>
+        <values>activate</values>
+        <values>turn on</values>
+        <values>resume</values>
+        <values>switch on</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="false">
+        <values>false</values>
+        <values>disable</values>
+        <values>turn off</values>
+        <values>pause</values>
+        <values>deactivate</values>
+        <values>switch off</values>
+        <values>stop</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="days">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Monday">
+        <values>Monday</values>
+        <values>Mon</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Tuesday">
+        <values>Tuesday</values>
+        <values>Tue</values>
+        <values>tuesday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wednesday">
+        <values>Wednesday</values>
+        <values>Wed</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Thirsday">
+        <values>Thirsday</values>
+        <values>Thi</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Friday">
+        <values>Friday</values>
+        <values>Fri</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Saturday">
+        <values>Saturday</values>
+        <values>Sat</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Sunday">
+        <values>Sunday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Weekends">
+        <values>Weekends</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Weekdays">
+        <values>Weekdays</values>
+        <values>week days</values>
+        <values>Monday to Friday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Thursday">
+        <values>Thursday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Daily">
+        <values>Every Day</values>
+        <values>daily</values>
+        <values>everyday</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="standup_name">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="name">
+        <values>name</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="report">
+        <values>report</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Andreas">
+        <values>Andreas</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="teamkMeetups">
+        <values>teamkMeetups</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="TeamReports">
+        <values>TeamReports</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="github_status">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="all"/>
+      </inputs>
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="mentioned"/>
+      </inputs>
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="open"/>
+      </inputs>
+      <inputs xsi:type="generator:CompositeInput">
+        <expresion xsi:type="generator:Literal" text="closed"/>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="token">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="fg&amp;e6.0rdsfg$df44s_sd-TTfds54S4">
+        <values>fg&amp;e6.0rdsfg$df44s_sd-TTfds54S4</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://andreas-weather-api.herokuapp.com/webhook" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Standup: change colorTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Custom welcome intentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome, "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.2/@parameters.0"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hi! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Good day! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Greetings! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="not Sure - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="maybe next time! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="well, ok. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="You can try again! "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Nevermind. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Doesn't matter. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.3" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.2" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.4" name="user5">
+    <target actions="//@actions.2" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.5" name="user6">
+    <target actions="//@actions.2" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.6" name="user7">
+    <target actions="//@actions.2" name="bot7"/>
+  </flows>
+  <flows intent="//@intents.7" name="user8">
+    <target actions="//@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.8" name="user9">
+    <target actions="//@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.9" name="user10">
+    <target actions="//@actions.2" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.10" name="user11">
+    <target actions="//@actions.2" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.11" name="user12">
+    <target actions="//@actions.2" name="bot24">
+      <outcoming intent="//@intents.13" name="user24">
+        <target actions="//@actions.2" name="bot25"/>
+      </outcoming>
+      <outcoming intent="//@intents.18" name="user25">
+        <target actions="//@actions.5" name="bot26"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.12" name="user13">
+    <target actions="//@actions.2" name="bot13"/>
+  </flows>
+  <flows intent="//@intents.14" name="user14">
+    <target actions="//@actions.2" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.15" name="user15">
+    <target actions="//@actions.2" name="bot15"/>
+  </flows>
+  <flows intent="//@intents.16" name="user16">
+    <target actions="//@actions.2" name="bot16"/>
+  </flows>
+  <flows intent="//@intents.17" name="user17">
+    <target actions="//@actions.2" name="bot17"/>
+  </flows>
+  <flows intent="//@intents.19" name="user18">
+    <target actions="//@actions.2" name="bot18"/>
+  </flows>
+  <flows intent="//@intents.20" name="user19">
+    <target actions="//@actions.2" name="bot19"/>
+  </flows>
+  <flows intent="//@intents.21" name="user20">
+    <target actions="//@actions.2" name="bot20"/>
+  </flows>
+  <flows intent="//@intents.22" name="user21">
+    <target actions="//@actions.2" name="bot21"/>
+  </flows>
+  <flows intent="//@intents.23" name="user22">
+    <target actions="//@actions.2" name="bot22"/>
+  </flows>
+  <flows intent="//@intents.24" name="user23">
+    <target actions="//@actions.2" name="bot23"/>
+  </flows>
+  <flows intent="//@intents.25" name="user26">
+    <target actions="//@actions.2" name="bot27"/>
+  </flows>
+  <flows intent="//@intents.26" name="user27">
+    <target actions="//@actions.2" name="bot28"/>
+  </flows>
+  <flows intent="//@intents.27" name="user28">
+    <target actions="//@actions.2" name="bot29"/>
+  </flows>
+  <flows intent="//@intents.28" name="user29">
+    <target actions="//@actions.2" name="bot30"/>
+  </flows>
+  <flows intent="//@intents.29" name="user30">
+    <target actions="//@actions.2" name="bot31"/>
+  </flows>
+  <flows intent="//@intents.30" name="user31">
+    <target actions="//@actions.2" name="bot32"/>
+  </flows>
+  <flows intent="//@intents.31" name="user32">
+    <target actions="//@actions.2" name="bot33"/>
+  </flows>
+  <flows intent="//@intents.32" name="user33">
+    <target actions="//@actions.2" name="bot34"/>
+  </flows>
+  <flows intent="//@intents.33" name="user34">
+    <target actions="//@actions.2" name="bot35"/>
+  </flows>
+  <flows intent="//@intents.34" name="user35">
+    <target actions="//@actions.2" name="bot36"/>
+  </flows>
+  <flows intent="//@intents.35" name="user36">
+    <target actions="//@actions.2" name="bot37"/>
+  </flows>
+  <flows intent="//@intents.36" name="user37">
+    <target actions="//@actions.2" name="bot38"/>
+  </flows>
+  <flows intent="//@intents.37" name="user38">
+    <target actions="//@actions.2" name="bot39"/>
+  </flows>
+  <flows intent="//@intents.38" name="user39">
+    <target actions="//@actions.2" name="bot40"/>
+  </flows>
+  <flows intent="//@intents.39" name="user40">
+    <target actions="//@actions.2" name="bot41"/>
+  </flows>
+  <flows intent="//@intents.40" name="user41">
+    <target actions="//@actions.6" name="bot42"/>
+  </flows>
+  <flows intent="//@intents.41" name="user42">
+    <target actions="//@actions.2" name="bot43"/>
+  </flows>
+  <flows intent="//@intents.42" name="user43">
+    <target actions="//@actions.2" name="bot44"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

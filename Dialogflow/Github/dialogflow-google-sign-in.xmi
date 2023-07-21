@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="dialogflow-google-sign-in">
+  <intents name="Default Welcome Intent"/>
+  <intents name="Give Color">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+        <tokens xsi:type="generator:Literal" text=" is my color"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my favorite color to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my favorite color is "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I love "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set my color to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+        <tokens xsi:type="generator:Literal" text=" is my favorite color"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I like "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="red"/>
+      </inputs>
+    </inputs>
+    <parameters name="color"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, a problem occurred with the webhook. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.3" name="bot4"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

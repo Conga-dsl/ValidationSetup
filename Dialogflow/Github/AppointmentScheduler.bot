@@ -1,0 +1,124 @@
+Chatbot AppointmentScheduler language : en , es
+
+intents :
+
+	"Default Welcome Intent" :
+		inputs in en {
+			"hi there" ,
+			"hello there" ,
+			heya ,
+			"hey there" ,
+			hello ,
+			howdy ,
+			"a good day" ,
+			"just going to say hi" ,
+			greetings ,
+			"hello hi" ,
+			"lovely day isn\'t it" ,
+			"I greet you" ,
+			^hi ,
+			hey ,
+			"long time no see" ,
+			"hello again" ,
+			"hello hi" ,
+			"just going to say hi" ,
+			"lovely day isn\'t it" ,
+			"hello there" ,
+			"a good day" ,
+			"hello again" ,
+			heya ,
+			"hi there" ,
+			"hey there" ,
+			"I greet you" ,
+			"long time no see" ,
+			greetings ,
+			^hi ,
+			hey ,
+			howdy ,
+			hello
+		}
+		inputs in es {
+			saludos ,
+			hola ,
+			"hey ho" ,
+			chao
+	}
+
+	"Schedule Appointment" :
+		inputs in en {
+			"set an appointment for " ( "drivers license" ) [ AppointmentType ] " " ( "at 3pm" ) [ ^time ] " " ( tomorrow ) [ ^date ] ,
+			"Need an appointment for " ( "4pm" ) [ ^time ] " " ( tomorrow ) [ ^date ] ,
+			( "vehicle registration" ) [ AppointmentType ] " appointment for " ( monday ) [ ^date ] ,
+			"I would like to set an appointment for " ( "3pm" ) [ ^time ] " " ( "on Tuesday" ) [ ^date ] ,
+			"Set an appointment " ( "on Wednesday" ) [ ^date ] " " ( "at 2pm" ) [ ^time ]
+		}
+		parameters :
+			^time : entity time , required , prompts in en [ "What time would you like to come in?" ] ;
+			^date : entity date , required , prompts in en [ "What date?" ] ;
+			AppointmentType : entity AppointmentType , required , prompts in en [ "What services are you looking to get? DMV offers Driver license and vehicle registration services." ] ;
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity AppointmentType :
+		inputs in en {
+			"Vehicle registration" synonyms "Vehicle registration" , registration , "car registration" , register
+			"Drivers License" synonyms "Drivers License" , DL , license , test , "driving test" , "real ID"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://us-central1-appointmentscheduler-af48c.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in es {
+			request. text
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in es {
+			"¡Hola! " ,
+			"¡Hey! " ,
+			"¡Buenos días! "
+	}
+	text response "Default Welcome IntentTxtResp2" :
+		inputs in en {
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "Schedule AppointmentTxtResp1" :
+		inputs in en {
+			"You are all set for you " [ "Schedule Appointment.AppointmentType" ] "on " [ "Schedule Appointment.date" ] "at " "see you then! "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in es {
+			"Ups, no he entendido a que te refieres. " ,
+			"¿Podrías repetirlo, por favor? " ,
+			"¿Disculpa? " ,
+			"¿Decías? " ,
+			"¿Cómo? "
+	}
+	text response "Default Fallback IntentTxtResp2" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" , "Default Welcome IntentTxtResp2" ;
+	- user2 : user "Schedule Appointment" => bot2 : chatbot HttpRequest , HttpResponse , "Schedule AppointmentTxtResp1" ;
+	- user3 : user "Default Fallback Intent" => bot3 : chatbot "Default Fallback IntentTxtResp1" , "Default Fallback IntentTxtResp2" ;
+

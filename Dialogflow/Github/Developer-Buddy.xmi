@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Developer-Buddy">
+  <intents name="CheckEmails">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check your inbox"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did you get my emails"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check your inbox"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did you get my emails"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check your inbox"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did you get my emails"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="WelcomeIntent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="welcome"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="welcome"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="welcome"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="ConvertImageToCode">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="convert image to code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="act voice to code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="convert picture to code "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="convert image to code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="act voice to code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="convert picture to code "/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="convert image to code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="act voice to code"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="convert picture to code "/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://webhook.jovo.cloud/1fdd42ff-7057-4841-a4cf-47359835ad95" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+    <inputs language="JAPANESE">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.0 //@actions.1" name="bot2"/>
+  </flows>
+  <flows intent="//@intents.2" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <languages>ENGLISH</languages>
+  <languages>JAPANESE</languages>
+</generator:Bot>

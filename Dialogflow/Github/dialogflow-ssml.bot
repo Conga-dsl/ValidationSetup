@@ -1,0 +1,67 @@
+Chatbot "dialogflow-ssml" language : en
+
+intents :
+
+	"Choose Example" :
+		inputs in en {
+			"show me a " ( prosody ) [ element ] " example" ,
+			( prosody ) [ element ] " element" ,
+			( prosody ) [ element ] " feature" ,
+			( prosody ) [ element ] ,
+			"give me an example of the " ( prosody ) [ element ] " feature" ,
+			"give me an example of the " ( prosody ) [ element ] " element" ,
+			"prosody " ( example ) [ element ] ,
+			"give me an example of " ( prosody ) [ element ] ,
+			"example of " ( prosody ) [ element ] ,
+			"let me hear an example of " ( prosody ) [ element ]
+		}
+		parameters :
+			element : entity "ssml-element" ;
+
+	^Fallback Fallback :
+
+	Welcome :
+
+entities :
+	Simple entity "ssml-element" :
+		inputs in en {
+			sub synonyms sub , substitute , substitution , alternative
+			audio synonyms audio , sound , external
+			speed synonyms speed , rate
+			break synonyms break , stop , pause , wait
+			pitch synonyms pitch
+			layered synonyms layered , par , seq , media , layer , parallel , sequential
+			emphasis synonyms emphasis
+			prosody synonyms prosody
+			volume synonyms volume , loudness , softness , quietness
+			"say-as" synonyms "say-as" , "say as" , say , interpret
+			paragraph synonyms paragraph , sentence , p , s
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Choose ExampleTxtResp1" :
+		inputs in en {
+			"Sorry, I couldn\'t get a response for the Choose Example intent from your webhook. "
+	}
+	text response FallbackTxtResp1 :
+		inputs in en {
+			"Sorry, I couldn\'t get a response for the Fallback intent from your webhook. "
+	}
+	text response WelcomeTxtResp1 :
+		inputs in en {
+			"Sorry, I couldn\'t get a response for the Welcome intent from your webhook. "
+	}
+
+flows :
+	- user1 : user "Choose Example" => bot1 : chatbot HttpRequest , HttpResponse , "Choose ExampleTxtResp1" ;
+	- user2 : user ^Fallback => bot2 : chatbot HttpRequest , HttpResponse , FallbackTxtResp1 ;
+	- user3 : user Welcome => bot3 : chatbot HttpRequest , HttpResponse , WelcomeTxtResp1 ;
+

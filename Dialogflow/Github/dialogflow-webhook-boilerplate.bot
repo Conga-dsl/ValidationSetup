@@ -1,0 +1,93 @@
+Chatbot "dialogflow-webhook-boilerplate" language : en
+
+intents :
+
+cancel :
+
+"Default Welcome Intent" :
+	inputs in en {
+		"just going to say hi" ,
+		heya ,
+		"hello hi" ,
+		howdy ,
+		"hey there" ,
+		"hi there" ,
+		greetings ,
+		hey ,
+		"long time no see" ,
+		hello ,
+		"lovely day isn\'t it" ,
+		"I greet you" ,
+		"hello again" ,
+		^hi ,
+		"hello there" ,
+		"a good day"
+}
+
+"Default Fallback Intent" Fallback :
+
+bye :
+	inputs in en {
+		adios ,
+		"adios!" ,
+		"bye!" ,
+		"good bye" ,
+		cya ,
+		"bye bye" ,
+		"buh bye" ,
+		goodbye ,
+		bye
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://example.com/" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response cancelTxtResp1 :
+		inputs in en {
+			"Okay, let\'s try this again later. "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! How are you doing? " ,
+			"Hello! How can I help you? " ,
+			"Good day! What can I do for you today? " ,
+			"Greetings! How can I assist? "
+	}
+	text response "Reprompt on no inputTxtResp1" :
+		inputs in en {
+			"What was that? " ,
+			"Sorry, I didn\'t catch that. Could you repeat yourself? " ,
+			"Okay, let\'s try this again later. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. What was that? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. Can you rephrase? " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that one more time? " ,
+			"I didn\'t get that. Can you repeat? " ,
+			"I missed that, say that again? "
+	}
+	text response byeTxtResp1 :
+		inputs in en {
+			" "
+	}
+
+flows :
+	- user1 : user cancel => bot3 : chatbot "Reprompt on no inputTxtResp1" ;
+	- user2 : user "Default Welcome Intent" => bot2 : chatbot HttpRequest , HttpResponse , "Default Welcome IntentTxtResp1" ;
+	- user3 : user "Default Fallback Intent" => bot4 : chatbot "Default Fallback IntentTxtResp1" ;
+	- user4 : user bye => bot5 : chatbot HttpRequest , HttpResponse , byeTxtResp1 ;
+

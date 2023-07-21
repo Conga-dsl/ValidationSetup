@@ -1,0 +1,134 @@
+Chatbot "defaults-manychat" language : en
+
+intents :
+
+"Default Welcome Intent (Redirect)" :
+	inputs in en {
+		"👋" ,
+		"re-start" ,
+		"main menu" ,
+		"start over" ,
+		"restart bot" ,
+		"how do I start over" ,
+		"can we start over?" ,
+		"I want to start over" ,
+		"let\'s start over" ,
+		"start again" ,
+		"back to start" ,
+		reset ,
+		"Greetings and salutations" ,
+		"What\'s new?" ,
+		"What\'s the word?" ,
+		"Long time no see" ,
+		"How are you" ,
+		"Hey boo" ,
+		"What\'s happening" ,
+		"Nice to see you" ,
+		"great to see you" ,
+		"Good to see you" ,
+		"how are things?" ,
+		"How\'s everything" ,
+		"what\'s going on" ,
+		"hey what\'s up" ,
+		Konnichiwa ,
+		Ciao ,
+		Hallo ,
+		"Que pasa" ,
+		Hola ,
+		Aloha ,
+		"hey you" ,
+		"Why hello there" ,
+		"how you doin?" ,
+		ello ,
+		Whaddup ,
+		"You know who this is" ,
+		"Hello, my name is Inigo Montoya" ,
+		"sup homeslice" ,
+		Hiya ,
+		matey ,
+		Ahoy ,
+		"I come in peace" ,
+		"Hi mister" ,
+		Boo ,
+		"What\'s kickin" ,
+		"Howdy partner" ,
+		"Hello sunshine" ,
+		Howdy ,
+		Whazzup ,
+		"then what\'s up" ,
+		"what\'s cracking" ,
+		"I said what\'s up" ,
+		"what\'s the deal" ,
+		"good what\'s up" ,
+		"what\'s cooking" ,
+		"what\'s up" ,
+		sup ,
+		"what\'s up today" ,
+		wassup ,
+		"what\'s shaking" ,
+		"what is up" ,
+		"Hi bot" ,
+		"what is happening" ,
+		"what is going on" ,
+		bonjour ,
+		"good afternoon" ,
+		"good day" ,
+		ola ,
+		"let\'s talk" ,
+		"can we chat" ,
+		"pleasure to meet" ,
+		"glad to meet you" ,
+		"pleasure to meet you" ,
+		"it\'s nice to meet you" ,
+		"please to meet you" ,
+		"nice meeting you" ,
+		"nice to meet you" ,
+		"good to know you" ,
+		"hello there" ,
+		"good morning there" ,
+		"and a good morning to you" ,
+		"good morning to you" ,
+		"hello good morning" ,
+		"hi good morning" ,
+		"good morning" ,
+		"good morning you" ,
+		"good evening you" ,
+		"good evening" ,
+		"hey good evening" ,
+		"whats up?" ,
+		"hey there" ,
+		yo ,
+		greetings ,
+		hello ,
+		"começar" ,
+		^hi ,
+		you ,
+		hey
+}
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://janis.ai" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "Default Welcome Intent (Redirect)TxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"Got it. I just sent an alert :bell: to my team so they can train me to learn from our conversation. " ,
+			"OK got it. I forwarded that message to my team. " ,
+			"I\'ve forwarded that message on. Thanks. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent (Redirect)" => bot1 : chatbot "Default Welcome Intent (Redirect)TxtResp1" ;
+	- user2 : user "Default Fallback Intent" => bot2 : chatbot "Default Fallback IntentTxtResp1" ;
+

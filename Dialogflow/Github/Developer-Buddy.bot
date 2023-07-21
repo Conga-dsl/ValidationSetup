@@ -1,0 +1,57 @@
+Chatbot "Developer-Buddy" language : en , ja
+
+intents :
+
+CheckEmails :
+	inputs in en {
+		"check your inbox" ,
+		"did you get my emails" ,
+		"check your inbox" ,
+		"did you get my emails"
+	}
+	inputs in ja {
+		"check your inbox" ,
+		"did you get my emails"
+}
+
+WelcomeIntent :
+	inputs in en {
+		welcome ,
+		welcome
+	}
+	inputs in ja {
+		welcome
+}
+
+ConvertImageToCode :
+	inputs in en {
+		"convert image to code" ,
+		"act voice to code" ,
+		"convert picture to code " ,
+		"convert image to code" ,
+		"act voice to code" ,
+		"convert picture to code "
+	}
+	inputs in ja {
+		"convert image to code" ,
+		"act voice to code" ,
+		"convert picture to code "
+}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/1fdd42ff-7057-4841-a4cf-47359835ad95" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+		}
+		inputs in ja {
+			request. text
+	}
+
+flows :
+	- user1 : user CheckEmails => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user WelcomeIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user ConvertImageToCode => bot3 : chatbot HttpRequest , HttpResponse ;
+

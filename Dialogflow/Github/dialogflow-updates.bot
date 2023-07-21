@@ -1,0 +1,99 @@
+Chatbot "dialogflow-updates" language : en
+
+intents :
+
+	"Default Welcome Intent" :
+
+	setup_push :
+		inputs in en {
+			"Alert me of new tips"
+	}
+
+	setup_update :
+		inputs in en {
+			"Send daily"
+		}
+		parameters :
+			category : entity "tip-category" , required ;
+
+	tell_latest_tip :
+		inputs in en {
+			"most recent" ,
+			latest ,
+			"Tell me the most recently added tip" ,
+			"Tell me the newest tip" ,
+			"I want to hear the latest tip"
+	}
+
+	tell_tip :
+		inputs in en {
+			( random ) [ category ] ,
+			"I want to hear about " ( "voice user interface" ) [ category ] ,
+			( "voice user interface" ) [ category ] ,
+			"I\'m interested in the " ( dialogflow ) [ category ] " category" ,
+			"I\'m interested in " ( dialogflow ) [ category ] ,
+			"Tell me about the " ( dialogflow ) [ category ] " category" ,
+			"Tell me about " ( dialogflow ) [ category ] ,
+			"The dialogflow " ( category ) [ category ] ,
+			"I want to hear about " ( dialogflow ) [ category ] ,
+			( tools ) [ category ] ,
+			( dialogflow ) [ category ]
+		}
+		parameters :
+			category : entity "tip-category" , required ;
+
+	finish_push_setup :
+		inputs in en {
+			finish_push_setup
+	}
+
+	"Default Fallback Intent" Fallback :
+
+entities :
+	Simple entity "tip-category" :
+		inputs in en {
+			tools synonyms tooling , tools , workflow
+			random synonyms randomize , random
+			"voice user interface" synonyms "voice user interface" , vui
+			development synonyms development
+			dialogflow synonyms dialogflow
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "https://example.com" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response setup_pushTxtResp1 :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot7 : chatbot HttpRequest , HttpResponse , setup_pushTxtResp1 ;
+	- user2 : user setup_push => bot2 : chatbot HttpRequest , HttpResponse , setup_pushTxtResp1 ;
+	- user3 : user setup_update => bot3 : chatbot HttpRequest , HttpResponse , setup_pushTxtResp1 ;
+	- user4 : user tell_latest_tip => bot4 : chatbot HttpRequest , HttpResponse , setup_pushTxtResp1 ;
+	- user5 : user tell_tip => bot5 : chatbot HttpRequest , HttpResponse , setup_pushTxtResp1 ;
+	- user6 : user finish_push_setup => bot6 : chatbot HttpRequest , HttpResponse , setup_pushTxtResp1 ;
+	- user7 : user "Default Fallback Intent" => bot8 : chatbot "Default Fallback IntentTxtResp1" ;
+

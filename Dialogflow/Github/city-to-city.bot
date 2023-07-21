@@ -1,0 +1,51 @@
+Chatbot "city-to-city" language : en
+
+intents :
+
+"Default Welcome Intent" :
+
+HelloMapsIntent :
+	inputs in en {
+		hello ,
+		"say hello" ,
+		"say hello maps" ,
+		maps ,
+		"open maps"
+}
+
+NewRouteIntent :
+	inputs in en {
+		( cityOne ) [ cityOne ] " and " ( cityTwo ) [ cityTwo ] ,
+		( cityOne ) [ cityOne ] " " ( cityTwo ) [ cityTwo ] ,
+		"I want to go from " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"Go from " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"Please take me from " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"take me " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"location from " ( cityOne ) [ cityOne ] " " ( cityTwo ) [ cityTwo ] ,
+		"distance from " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"find " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"find " ( cityOne ) [ cityOne ] " and " ( cityTwo ) [ cityTwo ] ,
+		"You can take me from " ( cityOne ) [ cityOne ] " to " ( cityTwo ) [ cityTwo ] ,
+		"You can take me " ( cityOne ) [ cityOne ] " and " ( cityTwo ) [ cityTwo ]
+	}
+	parameters :
+		cityOne ,
+		cityTwo : entity text ;
+
+"Default Fallback Intent" Fallback :
+
+actions :
+	Request post HttpRequest :
+		URL : "https://webhook.jovo.cloud/c67c63d5-0dd3-4692-b674-5039070840b1" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot HttpRequest , HttpResponse ;
+	- user2 : user HelloMapsIntent => bot2 : chatbot HttpRequest , HttpResponse ;
+	- user3 : user NewRouteIntent => bot3 : chatbot HttpRequest , HttpResponse ;
+	- user4 : user "Default Fallback Intent" => bot4 : chatbot HttpRequest , HttpResponse ;
+

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="city-streets-trivia">
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="heya"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="long time no see"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I greet you"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="just going to say hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="howdy"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="lovely day isn't it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello there"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello again"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="a good day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="greetings"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Unknown answer" fallbackIntent="true"/>
+  <intents name="City name">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Let's do "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Houston"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'll pick "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Houston"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="Chicago"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="New York"/>
+      </inputs>
+    </inputs>
+    <parameters name="city" entity="//@entities.0"/>
+  </intents>
+  <intents name="Trivia answer">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Broadway"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not sure but it might be "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Broadway"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Maybe it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Broadway"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think it's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Broadway"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Broadway"/>
+      </inputs>
+    </inputs>
+    <parameters name="street" entity="//@entities.1"/>
+  </intents>
+  <entities name="city">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="New York">
+        <values>New York</values>
+        <values>NYC</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Los Angeles">
+        <values>Los Angeles</values>
+        <values>LA</values>
+        <values>L.A.</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Chicago">
+        <values>Chicago</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Houston">
+        <values>Houston</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="street">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Broadway">
+        <values>Broadway</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://us-central1-city-streets-trivia.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST"/>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hey! Choose a city and I'll test your street smarts. Your options are New York, Los Angeles, Chicago, and Houston. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Unknown answerTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hmm, I don't actually know that one, but it's definitely not the right answer. Try again! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="City nameTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, there was a problem. Try again later! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Trivia answerTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Oh dear! Something went wrong. What did you say again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't know that city! Your options are New York, Los Angeles, Chicago, and Houston. Which one do you want? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.2" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot2">
+      <outcoming intent="//@intents.1" name="user3">
+        <target actions="//@actions.3" backTo="//@flows.1/@target/@outcoming.0" name="bot3">
+          <outcoming intent="//@intents.3" name="user4">
+            <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot4"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.3" name="user5">
+        <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot5"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1" name="user6">
+    <target actions="//@actions.6" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

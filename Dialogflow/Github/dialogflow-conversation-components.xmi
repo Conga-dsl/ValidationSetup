@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="dialogflow-conversation-components">
+  <intents name="basic card">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="basic card"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="browse carousel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="browse carousel cards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="browse carousel feature"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="browse carousel"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="media status"/>
+  <intents name="table builder">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Table please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I see a table?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can I see a table card?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="table"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="table card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Show me a table card"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bye response">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye response"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="carousel">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="carousel card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="carousel"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="list">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="list"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="normal ask">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="normal ask"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="bye card">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="bye card"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="media response">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="media response"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play me some media"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="media"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="card builder">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="card builder"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="normal bye">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="normal bye"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="suggestions">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestions card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestions"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestion"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestion chips"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true"/>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://&lt;REGION>-&lt;PROJECT_ID>.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="basic cardTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Webhook failed "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="browse carouselTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The webhook failed "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="carouselTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="webhook failed "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="card builderTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="suggestionsTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="suggestions "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.1" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.2" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot11"/>
+  </flows>
+  <flows intent="//@intents.3" name="user3">
+    <target actions="//@actions.0 //@actions.1" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.4" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.5" name="user5">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.7" name="user6">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot6"/>
+  </flows>
+  <flows intent="//@intents.8" name="user7">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot8"/>
+  </flows>
+  <flows intent="//@intents.9" name="user8">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot9"/>
+  </flows>
+  <flows intent="//@intents.10" name="user9">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot10"/>
+  </flows>
+  <flows intent="//@intents.11" name="user10">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot12"/>
+  </flows>
+  <flows intent="//@intents.13" name="user11">
+    <target actions="//@actions.7" name="bot13"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

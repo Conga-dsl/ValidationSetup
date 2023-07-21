@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="dialogflow-name-psychic">
+  <intents name="Default Welcome Intent"/>
+  <intents name="Unrecognized Deep Link Fallback" fallbackIntent="true"/>
+  <intents name="request_name_permission">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Guess my name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is my name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Name"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My name"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="request_location_permission">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What is my location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Where am I"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Guess where I am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Guess my location"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="My location"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="https://${REGION}-${PROJECT_ID}.cloudfunctions.net/dialogflowFirebaseFulfillment" method="POST">
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Welcome to your Psychic! My mind is more powerful than you know! Shall I guess your name, or your current location? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="handle_permissionTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This is strange! I could not read your mind! I must rest and practice using my powers! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Unrecognized Deep Link FallbackTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="request_name_permissionTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I can't read your mind right now! My mystical powers have failed! "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry. I'm having trouble understanding the question. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I think I may have misunderstood your last statement. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm sorry. I didn't quite grasp what you just said. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think I'm qualified to answer that yet. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm a bit confused by that last part. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not totally sure about that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm not sure I follow. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm afraid I don't understand. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm a bit confused. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot4"/>
+  </flows>
+  <flows intent="//@intents.2" name="user2">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot3"/>
+  </flows>
+  <flows intent="//@intents.1" name="user3">
+    <target actions="//@actions.6" name="bot5"/>
+  </flows>
+  <flows intent="//@intents.3" name="user4">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot6"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>
