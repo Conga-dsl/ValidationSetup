@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Alarm">
+  <intents name="alarm.change">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit the wake up call song to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.8" textReference="Yellow Submarine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change the alarm music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="move my alarm from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Friday"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="6 pm"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="Saturday"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="7 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="move my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="4:00 am"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="5:30"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can I change the wake up music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rename my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.6" textReference="Gym"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.7" textReference="Sports"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how can I modify my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.4" textReference="daily"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to reschedule "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.9" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.9" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="move my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.6" textReference="Gym"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="10 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="8:45"/>
+        <tokens xsi:type="generator:Literal" text=" alarm music to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.8" textReference="Yellow Submarine"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.4" textReference="daily"/>
+        <tokens xsi:type="generator:Literal" text=" alarm recurrence to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.5" textReference="every Sunday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you move my alarm from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Friday"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.1" textReference="Saturday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you change the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="8:30"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to change my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="5 am"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="7 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to customize my alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="6 am"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="7 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reschedule an alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="6:10"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.4" textReference="every Monday"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.5" textReference="every Tuesday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to customize my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="07:45"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="manage alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit the wake up time"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change my alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="3 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to change my alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="8:30 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reschedule the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.2" textReference="6 pm"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="7 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reschedule my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.4" textReference="daily"/>
+        <tokens xsi:type="generator:Literal" text=" alarm to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.5" textReference="every Monday"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.3" textReference="9 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="Tuesday"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit the ringtone for my alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit my alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="rename my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.6" textReference="Work"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+    </inputs>
+    <parameters name="date-from" defaultEntity="DATE"/>
+    <parameters name="date-to" defaultEntity="DATE"/>
+    <parameters name="time-from" defaultEntity="TIME"/>
+    <parameters name="time-to" defaultEntity="TIME"/>
+    <parameters name="recurrence-from" entity="//@entities.1"/>
+    <parameters name="recurrence-to" entity="//@entities.1"/>
+    <parameters name="alarm-name"/>
+    <parameters name="alarm-name-to"/>
+    <parameters name="song" entity="//@entities.2"/>
+    <parameters name="all" entity="//@entities.0"/>
+  </intents>
+  <intents name="alarm.remove">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't wake me up on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.6" textReference="Mondays"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="6 am"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove my alarms for the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn off my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.6" textReference="weekly"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove my alarms set for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="8 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't wake me up at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="5 am"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="next week"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to remove my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove alarms for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="tomorrow"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="9"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn off the alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to turn off the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.6" textReference="weekly"/>
+        <tokens xsi:type="generator:Literal" text=" alarm at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn off alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="cancel "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="8 pm"/>
+        <tokens xsi:type="generator:Literal" text=" alarm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you erase my alarms list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you remove my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="6 am"/>
+        <tokens xsi:type="generator:Literal" text=" alarm please"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="disable my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Work"/>
+        <tokens xsi:type="generator:Literal" text=" alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="switch off my alarms for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.3" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="8 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="clear the alarms list for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.4" textReference="next week"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete the alarm called "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="Gym"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn off "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="erase the list of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.5" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+    </inputs>
+    <parameters name="alarm-name"/>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="time-period"/>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="date-period"/>
+    <parameters name="all" entity="//@entities.0"/>
+    <parameters name="recurrence" entity="//@entities.1"/>
+  </intents>
+  <intents name="alarm.remove - context:alarm-remove">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" of them"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="remove for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="7 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.1" textReference="Saturday"/>
+        <tokens xsi:type="generator:Literal" text=" too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="delete "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.3" textReference="all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="erase for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="every Monday"/>
+        <tokens xsi:type="generator:Literal" text=" too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="now the one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="9 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="turn off the one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.2" textReference="every Sunday"/>
+      </inputs>
+    </inputs>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="recurrence" entity="//@entities.1"/>
+    <parameters name="all" entity="//@entities.0"/>
+  </intents>
+  <intents name="alarm.set - context:alarm - comment:another one">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set another one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="every day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set another one"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="every Monday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="Sunday"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="8 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="another one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="tomorrow"/>
+      </inputs>
+    </inputs>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="recurrence" entity="//@entities.1"/>
+  </intents>
+  <intents name="alarm.change - context:alarm-change">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="next Sunday"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="this Sunday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="5:45"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="5:30"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.5" textReference="every weekday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change it from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="Tuesday"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="Wednesday"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="11 am"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change it to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.6" textReference="All of me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.5" textReference="daily"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="weekdays"/>
+        <tokens xsi:type="generator:Literal" text=" only"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change it to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="Wednesday"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="Friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.6" textReference="Shape Of You"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no the one on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="Monday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.2" textReference="Tuesday"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.3" textReference="Monday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.5" textReference="every weekend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="10 am"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.1" textReference="9 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="the one at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.0" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.4" textReference="weekdays"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.4/@parameters.5" textReference="every day"/>
+      </inputs>
+    </inputs>
+    <parameters name="time-from" defaultEntity="TIME"/>
+    <parameters name="time-to" defaultEntity="TIME"/>
+    <parameters name="date-from" defaultEntity="DATE"/>
+    <parameters name="date-to" defaultEntity="DATE"/>
+    <parameters name="recurrence-from" entity="//@entities.1"/>
+    <parameters name="recurrence-to" entity="//@entities.1"/>
+    <parameters name="song" entity="//@entities.2"/>
+  </intents>
+  <intents name="alarm.set - context:alarm - comment:recurrence">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set it for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="every Friday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="repeat it "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="every day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need it to be repeated "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="every Monday"/>
+      </inputs>
+    </inputs>
+    <parameters name="recurrence" entity="//@entities.1"/>
+  </intents>
+  <intents name="alarm.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show me "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="weekly"/>
+        <tokens xsi:type="generator:Literal" text=" alarm set"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my alarms for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my alarm set"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Work"/>
+        <tokens xsi:type="generator:Literal" text=" alarm on"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what time did you set the alarm for"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="is my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="daily"/>
+        <tokens xsi:type="generator:Literal" text=" alarm set for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="my alarms set for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="8 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did you set that alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="6:30"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for what time do I have my alarm set"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check alarms at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="9:30 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pull up the list of "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.6" textReference="all"/>
+        <tokens xsi:type="generator:Literal" text=" my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how many alarms do I have for the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my alarm called "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Gym"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do I have any alarms set"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do I have any alarms set for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="June 22"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="6 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alarms list"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to see my alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="at what time do you wake me up on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="Mondays"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alarms list for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.4" textReference="next week"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="did you set the alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="10 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to see my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.5" textReference="daily"/>
+        <tokens xsi:type="generator:Literal" text=" alarms"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what time is my alarm set for"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do I have any alarms "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="tomorrow"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="9"/>
+      </inputs>
+    </inputs>
+    <parameters name="alarm-name"/>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="time-period"/>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="date-period"/>
+    <parameters name="recurrence" entity="//@entities.1"/>
+    <parameters name="all" entity="//@entities.0"/>
+  </intents>
+  <intents name="alarm.set">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="every day"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="6"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="new alarm called "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Gym"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="weekdays"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="10"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set alarm at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="8 am"/>
+        <tokens xsi:type="generator:Literal" text=" in the morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need an alarm set for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="weekdays"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="4 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.4" textReference="Cool Girl"/>
+        <tokens xsi:type="generator:Literal" text=" song"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you set an alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="6 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="10 am"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.2" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you set an alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="every Monday"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="9 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set new alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="9 am"/>
+        <tokens xsi:type="generator:Literal" text=" on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.2" textReference="Wednesday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set new alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="10 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.2" textReference="tomorrow"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="8 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="9 am"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to set an alarm at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="7 am"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="every weekend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to wake "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="every day"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="7 am"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.6" textReference="Jazz"/>
+        <tokens xsi:type="generator:Literal" text=" music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="could you set an alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set an alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="8"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.3" textReference="every day"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="new alarm called "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Gym"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="in 8 hours"/>
+        <tokens xsi:type="generator:Literal" text=" with "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.4" textReference="Let It Be"/>
+        <tokens xsi:type="generator:Literal" text=" by "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.5" textReference="The Beatles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="new alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="alarm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'd like to set an alarm for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="7 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="set alarm "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.0" textReference="Work"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.2" textReference="tomorrow"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="9 pm"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="wake me up at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.7/@parameters.1" textReference="9 am"/>
+      </inputs>
+    </inputs>
+    <parameters name="alarm-name"/>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="recurrence" entity="//@entities.1"/>
+    <parameters name="song" entity="//@entities.2"/>
+    <parameters name="artist"/>
+    <parameters name="genre"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="reschedule the meeting for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="edit the ringtone on my phone"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="change the music"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play Let It Be by The Beatles"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what a beautiful morning"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="waking up in the morning is so hard"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="play a song for me"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't want an alarm"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="alarm.check - context:alarm-check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.3" textReference="all"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.2" textReference="every day"/>
+        <tokens xsi:type="generator:Literal" text=" as well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.2" textReference="every Monday"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and the one for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.0" textReference="tomorrow"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.9/@parameters.1" textReference="9 am"/>
+      </inputs>
+    </inputs>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="time" defaultEntity="TIME"/>
+    <parameters name="recurrence" entity="//@entities.1"/>
+    <parameters name="all" entity="//@entities.0"/>
+  </intents>
+  <entities name="all">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="true">
+        <values>all</values>
+        <values>all of</values>
+        <values>each</values>
+        <values>every</values>
+        <values>everything</values>
+        <values>everywhere</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="recurrence">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Fridays">
+        <values>Fridays</values>
+        <values>each Friday</values>
+        <values>every Friday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mondays">
+        <values>Mondays</values>
+        <values>each Monday</values>
+        <values>every Monday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mondays, Tuesdays">
+        <values>Mondays, Tuesdays</values>
+        <values>every Monday and Tuesday</values>
+        <values>every Monday and every Tuesday</values>
+        <values>on Mondays and Tuesdays</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mondays, Tuesdays, Wednesdays">
+        <values>Mondays, Tuesdays, Wednesdays</values>
+        <values>every Monday, Tuesday and Wednesday</values>
+        <values>on Mondays, Tuesdays and Wednesdays</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mondays, Tuesdays, Wednesdays, Thursdays">
+        <values>Mondays, Tuesdays, Wednesdays, Thursdays</values>
+        <values>every Monday, Tuesday, Wednesday and Thursday</values>
+        <values>on Mondays, Tuesdays, Wednesdays and Thursdays</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays">
+        <values>Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays</values>
+        <values>every day except Sundays</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Saturdays">
+        <values>Saturdays</values>
+        <values>each Saturday</values>
+        <values>every Saturday</values>
+        <values>for saturdays</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Sundays">
+        <values>Sundays</values>
+        <values>each Sunday</values>
+        <values>every Sunday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Thursdays">
+        <values>Thursdays</values>
+        <values>each Thursday</values>
+        <values>every Thursday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Tuesdays">
+        <values>Tuesdays</values>
+        <values>each Tuesday</values>
+        <values>every Tuesday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wednesdays">
+        <values>Wednesdays</values>
+        <values>each Wednesday</values>
+        <values>every Wednesday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="every day">
+        <values>daily</values>
+        <values>each weekend</values>
+        <values>each&#xa0;morning</values>
+        <values>every day</values>
+        <values>every morning</values>
+        <values>everyday</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="every&#xa0;month">
+        <values>every&#xa0;month</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="weekdays">
+        <values>Weekdays</values>
+        <values>every weekday</values>
+        <values>every workday</values>
+        <values>monday to friday</values>
+        <values>on weekdays</values>
+        <values>only on weeekdays</values>
+        <values>week days</values>
+        <values>work days</values>
+        <values>workday</values>
+        <values>workdays</values>
+        <values>working days</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="weekends">
+        <values>Weekends</values>
+        <values>every weekend</values>
+        <values>only on weekends</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="weekly">
+        <values>weekly</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="song">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="7 Years">
+        <values>7 Years</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="A Thousand Years">
+        <values>A Thousand Years</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="All I Ask">
+        <values>All I Ask</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="All I Want">
+        <values>All I Want</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="All Of Me">
+        <values>All Of Me</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Boulevard Of Broken Dreams Acoustic">
+        <values>Boulevard Of Broken Dreams Acoustic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Cant Help Falling In Love With You">
+        <values>Cant Help Falling In Love With You</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Castle On The Hill">
+        <values>Castle On The Hill</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Chasing Cars">
+        <values>Chasing Cars</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="City Of Stars">
+        <values>City Of Stars</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="City Of Stars Acoustic">
+        <values>City Of Stars Acoustic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Closer">
+        <values>Closer</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Counting Stars">
+        <values>Counting Stars</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Creep">
+        <values>Creep</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Dancing On My Own">
+        <values>Dancing On My Own</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Dont Look Back In Anger">
+        <values>Dont Look Back In Anger</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Faded">
+        <values>Faded</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Fix You Acoustic">
+        <values>Fix You Acoustic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Good Riddance Time Of Your Life">
+        <values>Good Riddance Time Of Your Life</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hallelujah">
+        <values>Hallelujah</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Halo">
+        <values>Halo</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Heathens">
+        <values>Heathens</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hello">
+        <values>Hello</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hey Jude">
+        <values>Hey Jude</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hey Soul Sister">
+        <values>Hey Soul Sister</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hey There Delilah">
+        <values>Hey There Delilah</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hotel California">
+        <values>Hotel California</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="House Of The Rising Sun">
+        <values>House Of The Rising Sun</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="How Far Ill Go">
+        <values>How Far Ill Go</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="How Would You Feel">
+        <values>How Would You Feel</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Human">
+        <values>Human</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hurt">
+        <values>Hurt</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="I Dont Wanna Live Forever">
+        <values>I Dont Wanna Live Forever</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="I See Fire">
+        <values>I See Fire</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="I Wont Give Up">
+        <values>I Wont Give Up</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Im Not The Only One">
+        <values>Im Not The Only One</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Im Yours">
+        <values>Im Yours</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Imagine">
+        <values>Imagine</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Iris">
+        <values>Iris</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Jolene">
+        <values>Jolene</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="La La Land - Audition The Fools Who Dream">
+        <values>La La Land - Audition The Fools Who Dream</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Let Her Go">
+        <values>Let Her Go</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Let It Be">
+        <values>Let It Be</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Let It Go">
+        <values>Let It Go</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Lost Boy Acoustic">
+        <values>Lost Boy Acoustic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Love">
+        <values>Love</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Love On The Brain">
+        <values>Love On The Brain</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Love Yourself">
+        <values>Love Yourself</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Make You Feel My Love">
+        <values>Make You Feel My Love</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Mercy">
+        <values>Mercy</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Million Reasons">
+        <values>Million Reasons</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="More Than Words">
+        <values>More Than Words</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Nothing Else Matters">
+        <values>Nothing Else Matters</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="One Call Away">
+        <values>One Call Away</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Photograph">
+        <values>Photograph</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Radioactive">
+        <values>Radioactive</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Redemption Song">
+        <values>Redemption Song</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Riptide">
+        <values>Riptide</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Rockabye">
+        <values>Rockabye</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Say Something">
+        <values>Say Something</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Say You Wont Let Go">
+        <values>Say You Wont Let Go</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Shape Of You">
+        <values>Shape Of You</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Skinny Love">
+        <values>Skinny Love</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Someone Like You">
+        <values>Someone Like You</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Something Just Like This">
+        <values>Something Just Like This</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Somewhere Over The Rainbow">
+        <values>Somewhere Over The Rainbow</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Sound Of Silence">
+        <values>Sound Of Silence</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Stairway To Heaven">
+        <values>Stairway To Heaven</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Starving">
+        <values>Starving</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Stay With Me">
+        <values>Stay With Me</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Stitches">
+        <values>Stitches</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Surat Cinta Untuk Starla">
+        <values>Surat Cinta Untuk Starla</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Sweater Weather">
+        <values>Sweater Weather</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Sweet Child O Mine">
+        <values>Sweet Child O Mine</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="The A Team">
+        <values>The A Team</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="The Scientist Acoustic">
+        <values>The Scientist Acoustic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Thinking Out Loud">
+        <values>Thinking Out Loud</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="This Town">
+        <values>This Town</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Treat You Better">
+        <values>Treat You Better</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Under The Bridge">
+        <values>Under The Bridge</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Versace On The Floor">
+        <values>Versace On The Floor</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="We Dont Talk Anymore">
+        <values>We Dont Talk Anymore</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="When I Was Your Man">
+        <values>When I Was Your Man</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="When We Were Young">
+        <values>When We Were Young</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wish You Were Here">
+        <values>Wish You Were Here</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Wonderwall">
+        <values>Wonderwall</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Yellow Acoustic">
+        <values>Yellow Acoustic</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Youve Got A Friend In Me">
+        <values>Youve Got A Friend In Me</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="alarm.changeTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text=" "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed what you said. Say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, what was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="One more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="What was that? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I missed that. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.2" name="bot1">
+      <outcoming intent="//@intents.4" name="user2">
+        <target actions="//@actions.2" name="bot2"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.1" name="user3">
+    <target actions="//@actions.2" name="bot3">
+      <outcoming intent="//@intents.2" name="user4">
+        <target actions="//@actions.2" name="bot4"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.6" name="user5">
+    <target actions="//@actions.2" name="bot5">
+      <outcoming intent="//@intents.9" name="user6">
+        <target actions="//@actions.2" name="bot6"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.7" name="user7">
+    <target actions="//@actions.2" name="bot7">
+      <outcoming intent="//@intents.3" name="user8">
+        <target actions="//@actions.2" backTo="//@flows.3/@target/@outcoming.0" name="bot8">
+          <outcoming intent="//@intents.5" name="user9">
+            <target actions="//@actions.2" backTo="//@flows.3/@target/@outcoming.0 //@flows.3/@target/@outcoming.0/@target/@outcoming.0" name="bot9"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.5" name="user10">
+        <target actions="//@actions.2" backTo="//@flows.3/@target/@outcoming.1" name="bot10">
+          <outcoming intent="//@intents.3" name="user11">
+            <target actions="//@actions.2" backTo="//@flows.3/@target/@outcoming.1/@target/@outcoming.0 //@flows.3/@target/@outcoming.1" name="bot11"/>
+          </outcoming>
+        </target>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.8" name="user12">
+    <target actions="//@actions.0 //@actions.1 //@actions.3" name="bot12"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

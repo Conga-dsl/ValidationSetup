@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="ASCII"?>
+<generator:Bot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:generator="http://generator" name="Banking">
+  <intents name="transfer.date.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when was my last transfer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="date of my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="deposit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="EFT"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you show the date of my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="credit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when was the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="credit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When was my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.0/@parameters.0" textReference="deposit"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="type" entity="//@entities.1"/>
+  </intents>
+  <intents name="transfer.money">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to send "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="2 bucks"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send money into my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings account"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="100 dollars"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" into "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="checking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pay for card from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send money from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" into my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I need to send "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="2 bucks"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="$30"/>
+        <tokens xsi:type="generator:Literal" text=" from my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you send payment for my card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to transfer money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer money between my accounts"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer to my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="$6"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="pay for the card from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you help me send some money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="card payment from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" to "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="checking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="$5000"/>
+        <tokens xsi:type="generator:Literal" text=" should be transferred to my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you make a money transfer"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="send "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="$2000"/>
+        <tokens xsi:type="generator:Literal" text=" from "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" to my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer money from my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="i need to pay for the card from the "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.0" textReference="saving account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.2" textReference="$100"/>
+        <tokens xsi:type="generator:Literal" text=" to my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.1/@parameters.1" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="transfer money from one card to another"/>
+      </inputs>
+    </inputs>
+    <parameters name="account-from" entity="//@entities.3" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Sure. Transfer from which account?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="account-to" entity="//@entities.3" required="true">
+      <prompts language="ENGLISH">
+        <prompts>To which account?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="amount" required="true">
+      <prompts language="ENGLISH">
+        <prompts>And, how much do you want to transfer?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="transfer.amount.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="credit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much was my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="deposit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="was my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="deposit"/>
+        <tokens xsi:type="generator:Literal" text=" large"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check the amount of my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.2/@parameters.0" textReference="credit"/>
+      </inputs>
+    </inputs>
+    <parameters name="type" entity="//@entities.1"/>
+  </intents>
+  <intents name="account.earning.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="deposits"/>
+        <tokens xsi:type="generator:Literal" text=" history"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="see my latest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="deposit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to see my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.2" textReference="deposits"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check earnings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="earnings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you say how much money I got "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="last month"/>
+        <tokens xsi:type="generator:Literal" text=" on my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="checking account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much money did I earn in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="December"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much money did I earn on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="January 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my earnings on my card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check earnings are on my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.0" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="get info about my earnings on my card in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.3/@parameters.1" textReference="December"/>
+      </inputs>
+    </inputs>
+    <parameters name="account" entity="//@entities.3">
+      <prompts language="ENGLISH">
+        <prompts>What account are we checking?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="date-time"/>
+    <parameters name="category" entity="//@entities.2"/>
+  </intents>
+  <intents name="transfer.money - yes">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sure"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't mind"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="okay"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="that's correct"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I agree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="ok"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="of course"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="sounds good"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yes"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="exactly"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="confirm"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="transfer.sender.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="where was my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="deposit"/>
+        <tokens xsi:type="generator:Literal" text=" from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who have I got the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="credit"/>
+        <tokens xsi:type="generator:Literal" text=" from"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who sent me the last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="credit"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="who was my last "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.5/@parameters.0" textReference="deposit"/>
+        <tokens xsi:type="generator:Literal" text=" from"/>
+      </inputs>
+    </inputs>
+    <parameters name="type" entity="//@entities.1"/>
+  </intents>
+  <intents name="account.spending.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="withdrawal"/>
+        <tokens xsi:type="generator:Literal" text=" history"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can I see my latest "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="withdrawals"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my spendings on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Marriott"/>
+        <tokens xsi:type="generator:Literal" text=" for "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="this week"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check yesterday's "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="ATM Withdrawals"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much money did I spend on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="shopping"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="December"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="have I spent a lot at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Hyatt London"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="travel"/>
+        <tokens xsi:type="generator:Literal" text=" spendings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check how much money did I spend on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="taxes"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="December"/>
+        <tokens xsi:type="generator:Literal" text=" on my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.1" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much did I spend on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="Travel"/>
+        <tokens xsi:type="generator:Literal" text=" in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="January"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much did i spend on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="Utilities"/>
+        <tokens xsi:type="generator:Literal" text=" at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="PG&amp;E"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me how much did I spend on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.2" textReference="restaurants"/>
+        <tokens xsi:type="generator:Literal" text=" "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="this weekend"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Did I pay for something at "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Amazon"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to see withdrawals for  "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="January 3, 2017"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much money did I spend "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.3" textReference="yesterday"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="How much did I spend in "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.6/@parameters.0" textReference="Starbucks"/>
+        <tokens xsi:type="generator:Literal" text="?"/>
+      </inputs>
+    </inputs>
+    <parameters name="merchant" entity="//@entities.0"/>
+    <parameters name="account" entity="//@entities.3">
+      <prompts language="ENGLISH">
+        <prompts>What account are we checking?</prompts>
+      </prompts>
+    </parameters>
+    <parameters name="category" entity="//@entities.2"/>
+    <parameters name="date-time"/>
+  </intents>
+  <intents name="Default Welcome Intent">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="whatsup"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="yo"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="welcome"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hi"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hello"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="hey"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's up"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="account.open">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are the steps for opening account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="account opening"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="open an account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I want to open an account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how do I open an account"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="payment.due_date">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="When is the payment due?"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="when is the payment due on the my card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what are payments deadlines"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show due dates for my cards"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what is the payment due date"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="due date for the payment"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you check my payment due date for my credit card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="please check my payments deadlines"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check the payment due date"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check due date for the payment on my card"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="transfer.money - no">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I disagree"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't think so"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I don't want that"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="don't do it"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not really"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="definitely not"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="thanks but no"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="not interested"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <intents name="account.balance.check">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="credit card"/>
+        <tokens xsi:type="generator:Literal" text=" balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what's the balance in my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show available money on my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.11/@parameters.0" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much money is available on my bank account"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check how much money do i have"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much money do I have on the card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you show balance on the card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check money on my card"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="show balance"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check my account"/>
+      </inputs>
+    </inputs>
+    <parameters name="account" entity="//@entities.3" required="true">
+      <prompts language="ENGLISH">
+        <prompts>Balance for which savings or checking?</prompts>
+        <prompts>What account do you want the balance for: savings or checking?</prompts>
+      </prompts>
+    </parameters>
+  </intents>
+  <intents name="account.balance.check - context: account">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and for savings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="checking"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="savings"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="can you check my "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="savings"/>
+        <tokens xsi:type="generator:Literal" text=" as well"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.12/@parameters.0" textReference="checking"/>
+        <tokens xsi:type="generator:Literal" text=" too"/>
+      </inputs>
+    </inputs>
+    <parameters name="account" entity="//@entities.3"/>
+  </intents>
+  <intents name="account.balance.check - context: balance">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check how much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check how much money"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="how much"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="tell me how much money there is"/>
+      </inputs>
+    </inputs>
+    <parameters name="account" entity="//@entities.3"/>
+  </intents>
+  <intents name="account.earning.check - context: earning - date">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Check "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="January 1"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="January 2"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="January 1"/>
+        <tokens xsi:type="generator:Literal" text=" too"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.14/@parameters.0" textReference="December 30"/>
+      </inputs>
+    </inputs>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="account" entity="//@entities.3"/>
+  </intents>
+  <intents name="account.spending.check - context: spending - date">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="and on "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="1/5/2017"/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Check "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="January 1"/>
+        <tokens xsi:type="generator:Literal" text="."/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="what about "/>
+        <tokens xsi:type="generator:ParameterReferenceToken" parameter="//@intents.15/@parameters.0" textReference="January 2, 2017"/>
+      </inputs>
+    </inputs>
+    <parameters name="date" defaultEntity="DATE"/>
+    <parameters name="account" entity="//@entities.3"/>
+    <parameters name="merchant" entity="//@entities.0"/>
+  </intents>
+  <intents name="Default Fallback Intent" fallbackIntent="true">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="check weather today"/>
+      </inputs>
+    </inputs>
+  </intents>
+  <entities name="merchant">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="7-Eleven">
+        <values>7-Eleven</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="ARCO">
+        <values>ARCO</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Acme Payroll">
+        <values>Acme Payroll</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Amazon">
+        <values>Amazon</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Belle Tire">
+        <values>Belle Tire</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Burger King">
+        <values>Burger King</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="H&amp;M">
+        <values>H&amp;M</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Hyatt London">
+        <values>Hyatt London</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Marks &amp; Spencer">
+        <values>Marks &amp; Spencer</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Marriot Paris">
+        <values>Marriot Paris</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="PG&amp;E">
+        <values>PG&amp;E</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Papa John's Pizza">
+        <values>Papa John's Pizza</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Shell">
+        <values>Shell</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Starbucks">
+        <values>Starbucks</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="transfer-type">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="Credit">
+        <values>credit</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Deposit">
+        <values>deposit</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="EFT">
+        <values>EFT</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="category">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="ATM Withdrawals">
+        <values>ATM Withdrawals</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Auto">
+        <values>Auto</values>
+        <values>Car</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Deposits">
+        <values>deposit</values>
+        <values>deposits</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Payroll">
+        <values>Payroll</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Restaurants">
+        <values>Eating Out</values>
+        <values>Restaurants</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Shopping">
+        <values>Shopping</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Taxes">
+        <values>Taxes</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Travel">
+        <values>Travel</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Utilities">
+        <values>Utilities</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="Withdrawals">
+        <values>withdrawal</values>
+        <values>withdrawals</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <entities name="account">
+    <inputs language="ENGLISH">
+      <inputs xsi:type="generator:SimpleInput" name="checking account">
+        <values>checking</values>
+        <values>checking account</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="credit card">
+        <values>credit card</values>
+      </inputs>
+      <inputs xsi:type="generator:SimpleInput" name="savings account">
+        <values>savings</values>
+        <values>savings account</values>
+      </inputs>
+    </inputs>
+  </entities>
+  <actions xsi:type="generator:HTTPRequest" name="HttpRequest" URL="" method="POST">
+    <basicAuth key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </basicAuth>
+    <headers key="">
+      <value xsi:type="generator:Literal" text=""/>
+    </headers>
+  </actions>
+  <actions xsi:type="generator:HTTPResponse" name="HttpResponse" HTTPRequest="//@actions.0">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:HTTPRequestToke"/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfer.date.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your last incoming transfer was on: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfer.moneyTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="All right. So, you're transferring "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.1/@parameters.2"/>
+        <tokens xsi:type="generator:Literal" text="from your "/>
+        <tokens xsi:type="generator:ParameterToken" parameter="//@intents.1/@parameters.0"/>
+        <tokens xsi:type="generator:Literal" text="to a "/>
+        <tokens xsi:type="generator:Literal" text="Is that right? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfer.amount.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The last transfer into your account was: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.earning.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here are your deposit transactions: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfer.money - yesTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Okay, I have processed your transfer. Your confirmation number is: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfer.sender.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Your last deposit was by: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.spending.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here are your withdrawals: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Welcome IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello. Welcome to ACME Bank. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Hello, thanks for choosing ACME Bank. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.openTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="To open your account you should come to one of our banks in person. Don't forget to bring your ID. "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="payment.due_dateTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="The due date is: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="transfer.money - noTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry. Can you repeat your transfer request? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.balance.checkTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here's your latest balance: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.balance.check - context: accountTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here's the balance for this account: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.balance.check - context: balanceTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="This is your latest balance: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.earning.check - context: earning - dateTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here are your deposits for that date: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="account.spending.check - context: spending - dateTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Here are your withdrawals for that date: "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <actions xsi:type="generator:Text" name="Default Fallback IntentTxtResp1">
+    <inputs language="ENGLISH">
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, I didn&#x2019;t get that. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I'm afraid I don't understand. "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="I didn't get that. Can you say it again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, could you say that again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you tell me again? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, tell me one more time? "/>
+      </inputs>
+      <inputs>
+        <tokens xsi:type="generator:Literal" text="Sorry, can you say that again? "/>
+      </inputs>
+    </inputs>
+  </actions>
+  <flows intent="//@intents.0" name="user1">
+    <target actions="//@actions.0 //@actions.1 //@actions.2" name="bot1"/>
+  </flows>
+  <flows intent="//@intents.1" name="user2">
+    <target actions="//@actions.3" name="bot2">
+      <outcoming intent="//@intents.4" name="user3">
+        <target actions="//@actions.6" name="bot12"/>
+      </outcoming>
+      <outcoming intent="//@intents.10" name="user4">
+        <target actions="//@actions.12" name="bot13"/>
+      </outcoming>
+      <outcoming intent="//@intents.12" name="user5">
+        <target actions="//@actions.0 //@actions.1 //@actions.14" backTo="//@flows.1/@target/@outcoming.2" name="bot7">
+          <outcoming intent="//@intents.4" name="user6">
+            <target actions="//@actions.6" name="bot8"/>
+          </outcoming>
+          <outcoming intent="//@intents.10" name="user7">
+            <target actions="//@actions.12" name="bot9"/>
+          </outcoming>
+          <outcoming intent="//@intents.13" name="user8">
+            <target actions="//@actions.0 //@actions.1 //@actions.15" name="bot10"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user9">
+        <target actions="//@actions.0 //@actions.1 //@actions.15" name="bot11"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.2" name="user10">
+    <target actions="//@actions.0 //@actions.1 //@actions.4" name="bot14"/>
+  </flows>
+  <flows intent="//@intents.3" name="user11">
+    <target actions="//@actions.0 //@actions.1 //@actions.5" name="bot15">
+      <outcoming intent="//@intents.14" name="user12">
+        <target actions="//@actions.0 //@actions.1 //@actions.16" name="bot16"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.5" name="user13">
+    <target actions="//@actions.0 //@actions.1 //@actions.7" name="bot17"/>
+  </flows>
+  <flows intent="//@intents.6" name="user14">
+    <target actions="//@actions.0 //@actions.1 //@actions.8" name="bot18">
+      <outcoming intent="//@intents.15" name="user15">
+        <target actions="//@actions.0 //@actions.1 //@actions.17" name="bot19"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.7" name="user16">
+    <target actions="//@actions.9" name="bot20"/>
+  </flows>
+  <flows intent="//@intents.8" name="user17">
+    <target actions="//@actions.10" name="bot21"/>
+  </flows>
+  <flows intent="//@intents.9" name="user18">
+    <target actions="//@actions.0 //@actions.1 //@actions.11" name="bot22">
+      <outcoming intent="//@intents.4" name="user19">
+        <target actions="//@actions.6" name="bot23"/>
+      </outcoming>
+      <outcoming intent="//@intents.10" name="user20">
+        <target actions="//@actions.12" name="bot24"/>
+      </outcoming>
+      <outcoming intent="//@intents.12" name="user21">
+        <target actions="//@actions.0 //@actions.1 //@actions.14" backTo="//@flows.8/@target/@outcoming.2" name="bot25">
+          <outcoming intent="//@intents.4" name="user22">
+            <target actions="//@actions.6" name="bot26"/>
+          </outcoming>
+          <outcoming intent="//@intents.10" name="user23">
+            <target actions="//@actions.12" name="bot27"/>
+          </outcoming>
+          <outcoming intent="//@intents.13" name="user24">
+            <target actions="//@actions.0 //@actions.1 //@actions.15" name="bot28"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user25">
+        <target actions="//@actions.0 //@actions.1 //@actions.15" name="bot29"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.11" name="user26">
+    <target actions="//@actions.13" name="bot30">
+      <outcoming intent="//@intents.4" name="user27">
+        <target actions="//@actions.6" name="bot31"/>
+      </outcoming>
+      <outcoming intent="//@intents.10" name="user28">
+        <target actions="//@actions.12" name="bot32"/>
+      </outcoming>
+      <outcoming intent="//@intents.12" name="user29">
+        <target actions="//@actions.0 //@actions.1 //@actions.14" backTo="//@flows.9/@target/@outcoming.2" name="bot33">
+          <outcoming intent="//@intents.4" name="user30">
+            <target actions="//@actions.6" name="bot34"/>
+          </outcoming>
+          <outcoming intent="//@intents.10" name="user31">
+            <target actions="//@actions.12" name="bot35"/>
+          </outcoming>
+          <outcoming intent="//@intents.13" name="user32">
+            <target actions="//@actions.0 //@actions.1 //@actions.15" name="bot36"/>
+          </outcoming>
+        </target>
+      </outcoming>
+      <outcoming intent="//@intents.13" name="user33">
+        <target actions="//@actions.0 //@actions.1 //@actions.15" name="bot37"/>
+      </outcoming>
+    </target>
+  </flows>
+  <flows intent="//@intents.16" name="user34">
+    <target actions="//@actions.18" name="bot38"/>
+  </flows>
+  <languages>ENGLISH</languages>
+</generator:Bot>

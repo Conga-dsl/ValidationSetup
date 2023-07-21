@@ -1,0 +1,1286 @@
+Chatbot "Events-Search" language : en
+
+intents :
+
+	"events.search - next" :
+		inputs in en {
+			"switch to the next" ,
+			"show me next" ,
+			"show me the next page" ,
+			"next page" ,
+			next ,
+			"read the next results" ,
+			"go forward" ,
+			"following result" ,
+			"go to the next page" ,
+			"show me the following results"
+	}
+
+	"Default Welcome Intent" :
+
+	"events.search" :
+		inputs in en {
+			"find me " ( "2" ) [ amount ] " tickets to " ( "Madonna\'s" ) [ artist ] " " ( concert ) [ "event-type" ] " in " ( "New York" ) [ location ] ,
+			"what\'s playing at the " ( movies ) [ location ] " on " ( "September 17th" ) [ "date-time" ] ,
+			"where is " ( "Big Data" ) [ artist ] " playing" ,
+			"events at " ( "Madison Square garden" ) [ location ] ,
+			"please show all the events in " ( Paris ) [ location ] ,
+			"search for " ( "Chicago Bulls" ) [ team ] " " ( "next week" ) [ "date-time" ] " in " ( Chicago ) [ location ] ,
+			"any " ( "rock concerts" ) [ "event-type" ] " on " ( weekends ) [ "date-time" ] " near " ( "Palo Alto" ) [ location ] ,
+			"I\'d love to listen to some " ( jazz ) [ "music-genre" ] " performances in " ( California ) [ location ] " " ( "next Sunday" ) [ "date-time" ] ,
+			"I\'m in the mood for some " ( jazz ) [ "music-genre" ] ,
+			"when is " ( "Bruno Mars" ) [ artist ] " coming to " ( Raleigh ) [ location ] ,
+			( concerts ) [ "event-type" ] " at " ( "Hudson gardens" ) [ location ] ,
+			"what to do in " ( Boston ) [ location ] ,
+			"what\'s going on " ( tonight ) [ "date-time" ] " in " ( "Portsmouth New Hampshir" ) [ location ] ,
+			"what is played at the " ( theater ) [ location ] ,
+			"any " ( concerts ) [ "event-type" ] " in " ( "New York" ) [ location ] " " ( "right now" ) [ "date-time" ] ,
+			"any " ( good ) [ sort ] " " ( concerts ) [ "event-type" ] " in the city " ( tonight ) [ "date-time" ] ,
+			( exhibition ) [ "event-type" ] " " ( "Legion of Honor" ) [ "event-title" ] " in " ( "San Francisco museum" ) [ location ] ,
+			"what shows are playing in " ( "Hamilton Maryland" ) [ location ] ,
+			"find me " ( "Taylor Swift" ) [ artist ] " in " ( "Saratoga Springs" ) [ location ] " " ( Thursday ) [ "date-time" ] ,
+			"is there a " ( "baseball game" ) [ "event-type" ] " in town " ( tonight ) [ "date-time" ] ,
+			"check the event " ( "Dance Of The Vampires" ) [ "event-title" ] " in " ( Moscow ) [ location ] ,
+			( concerts ) [ "event-type" ] ,
+			"I want you to tell me what " ( concerts ) [ "event-type" ] " are coming up at the " ( "State fair in Indiana" ) [ location ] ,
+			"search upcoming " ( concerts ) [ "event-type" ] " in " ( Michigan ) [ location ] ,
+			"what " ( "rock concerts" ) [ "event-type" ] " are coming up in " ( Iowa ) [ location ] ,
+			"where is " ( "Ariana Grande" ) [ artist ] " next " ( concert ) [ "event-type" ] ,
+			"what " ( festivals ) [ "event-type" ] " are coming " ( tonight ) [ "date-time" ] ,
+			"upcoming " ( concerts ) [ "event-type" ] ,
+			"are there any " ( concerts ) [ "event-type" ] " going on in " ( Chicago ) [ location ] " " ( tonight ) [ "date-time" ] ,
+			"what are the upcoming " ( concerts ) [ "event-type" ] ,
+			"what\'s happening " ( "this weekend" ) [ "date-time" ] ,
+			"what\'s playing at " ( "The Parkside Drive Inn in Maryville Tennessee" ) [ location ] " " ( tonight ) [ "date-time" ] ,
+			"look for " ( Maddona ) [ artist ] "\'s " ( concerts ) [ "event-type" ] " " ( "next week" ) [ "date-time" ] " " ( Moscow ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " are playing " ( nearby ) [ sort ] ,
+			"are there any " ( concerts ) [ "event-type" ] " " ( today ) [ "date-time" ] " in " ( Colorado ) [ location ] ,
+			"are there any " ( "music concerts" ) [ "event-type" ] " in " ( "Los Angeles" ) [ location ] " " ( tonight ) [ "date-time" ] ,
+			"what " ( movies ) [ "event-type" ] " are playing " ( "this evening" ) [ "date-time" ] ,
+			"what " ( festivals ) [ "event-type" ] " are taking place " ( "this weekend" ) [ "date-time" ] ,
+			"show me events on " ( Saturday ) [ "date-time" ] ,
+			( "movies in the Park" ) [ "event-type" ] " in " ( "Albuquerque New Mexico" ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " are playing" ,
+			"when is the next " ( "Black Veil Brides" ) [ artist ] " " ( concerts ) [ "event-type" ] ,
+			"what time is the next " ( "Teenage Mutant Ninja Turtle" ) [ "event-title" ] " " ( movie ) [ "event-type" ] ,
+			( concerts ) [ "event-type" ] " in " ( London ) [ location ] " " ( today ) [ "date-time" ] ,
+			"tell me about " ( concerts ) [ "event-type" ] " in " ( Saskatoon ) [ location ] " " ( today ) [ "date-time" ] ,
+			"is there any " ( "music festivals" ) [ "event-type" ] " " ( "around my area" ) [ sort ] ,
+			( concerts ) [ "event-type" ] " in " ( Tarragona ) [ location ] " in " ( August ) [ "date-time" ] ,
+			"any " ( interesting ) [ sort ] " " ( exhibitions ) [ "event-type" ] " in " ( London ) [ location ] ,
+			"search upcoming " ( concerts ) [ "event-type" ] " in " ( Michigan ) [ location ] ,
+			"find me " ( Adele ) [ artist ] " in " ( "New York" ) [ location ] ,
+			"new " ( "movies for kids" ) [ "event-type" ] ,
+			"look for " ( concerts ) [ "event-type" ] " in " ( Indiana ) [ location ] ,
+			"I want to visit " ( "Synthetic Sound Festival" ) [ "event-title" ] " in " ( Moscow ) [ location ] ,
+			( conference ) [ "event-type" ] ,
+			( "Bellevue Park" ) [ location ] " " ( "band concerts" ) [ "event-type" ] ,
+			"can you search for the latest " ( movie ) [ "event-type" ] ,
+			"I\'d like to go to a " ( drake ) [ artist ] " " ( concert ) [ "event-type" ] ,
+			( Chicago ) [ "event-title" ] " " ( musical ) [ "event-type" ] ,
+			"are there any " ( concerts ) [ "event-type" ] " going on " ( "this weekend" ) [ "date-time" ] " " ( "near me" ) [ sort ] ,
+			"what " ( movies ) [ "event-type" ] " are in " ( theaters ) [ location ] ,
+			"any " ( concerts ) [ "event-type" ] " " ( today ) [ "date-time" ] ,
+			"are there any events " ( nearby ) [ sort ] ,
+			"when is " ( "Depeche Mode" ) [ artist ] " playing in " ( LA ) [ location ] ,
+			"show me " ( "Bon Jovi" ) [ artist ] " " ( concerts ) [ "event-type" ] " at " ( "Irving Plaza NY" ) [ location ] " in " ( May ) [ "date-time" ] ,
+			"when will " ( "Bruno Mars" ) [ artist ] "\' " ( concert ) [ "event-type" ] " take place in " ( "New Hampshire Twickenham Stadium" ) [ location ] ,
+			"what shows are playing in " ( Hamilton ) [ location ] ,
+			"when is " ( "Mariah Carey" ) [ artist ] "\'s " ( concert ) [ "event-type" ] ,
+			"information on " ( bieber ) [ artist ] " " ( concert ) [ "event-type" ] ,
+			( movies ) [ "event-type" ] " in " ( "Redding California" ) [ location ] ,
+			( festivals ) [ "event-type" ] " " ( "in this area" ) [ sort ] " " ( "this weekend" ) [ "date-time" ] ,
+			"find me " ( "Big Sean" ) [ artist ] " at " ( "Bethel Woods Center for the Arts" ) [ location ] " " ( "next week" ) [ "date-time" ] ,
+			"are there any " ( competitions ) [ "event-type" ] "/events going on in the " ( "ski resort" ) [ location ] ,
+			"I want to go to " ( "Moscow International Open Fitness Festival" ) [ "event-title" ] " event" ,
+			"could you find me band " ( concerts ) [ "event-type" ] " in " ( Newport ) [ location ] ,
+			( concerts ) [ "event-type" ] " for " ( tonight ) [ "date-time" ] ,
+			( concerts ) [ "event-type" ] " " ( "around me" ) [ sort ] ,
+			"what " ( concerts ) [ "event-type" ] " are playing in the " ( "South Carolina" ) [ location ] " " ( today ) [ "date-time" ] ,
+			"I\'m in the mood for some " ( "stand-up comedy" ) [ "event-type" ] ,
+			"find " ( Coldplay ) [ artist ] " at the " ( "Rose Bowl" ) [ location ] ,
+			"when is " ( Santana ) [ artist ] " coming in " ( concert ) [ "event-type" ] " at " ( "Darien Lake" ) [ location ] ,
+			( jazz ) [ "music-genre" ] " in " ( Mississippi ) [ location ] " " ( tonight ) [ "date-time" ] ,
+			( concerts ) [ "event-type" ] " in " ( London ) [ location ] ,
+			( "opera performances" ) [ "event-type" ] " at " ( "Bolshoi Theatre" ) [ location ] ,
+			"is " ( Madonna ) [ artist ] " playing in " ( Moscow ) [ location ] ,
+			( "open-air festival" ) [ "event-type" ] ,
+			( concerts ) [ "event-type" ] " " ( today ) [ "date-time" ] ,
+			"what " ( concerts ) [ "event-type" ] " are playing in " ( "Cleveland Ohio" ) [ location ] " " ( "July 17th" ) [ "date-time" ] ,
+			"are there any " ( festivals ) [ "event-type" ] " going on " ( tonight ) [ "date-time" ] " in " ( "Cincinnati Ohio" ) [ location ] ,
+			"any " ( interesting ) [ sort ] " " ( exhibitions ) [ "event-type" ] " in " ( Paris ) [ location ] ,
+			"what " ( exhibitions ) [ "event-type" ] " in " ( Edinburgh ) [ location ] " are on " ( tomorrow ) [ "date-time" ] ,
+			( jazz ) [ "music-genre" ] " in " ( "New York" ) [ location ] " " ( tonight ) [ "date-time" ] ,
+			"I\'m looking for shows in " ( Texas ) [ location ] " for the " ( "next two weeks" ) [ "date-time" ] ,
+			"when are " ( "Atlanta Braves" ) [ team ] " playing in " ( LA ) [ location ] ,
+			"look for " ( "this week" ) [ "date-time" ] " " ( "Brooklyn Steel New York" ) [ location ] " " ( "Nick Cave" ) [ artist ] ,
+			( concerts ) [ "event-type" ] " with " ( "Demi Lavato" ) [ artist ] ,
+			( concerts ) [ "event-type" ] " at " ( "Klipsch Music Center Noblesville Indianapolis Indiana" ) [ location ] ,
+			( "adult movies" ) [ "event-type" ] " cinemas" ,
+			( "Hall Green" ) [ location ] " search " ( concerts ) [ "event-type" ] ,
+			"is there any " ( concert ) [ "event-type" ] ,
+			"find " ( "Cold Play" ) [ artist ] " in " ( Raleigh ) [ location ] ,
+			"date for " ( "Neil Diamond" ) [ artist ] " " ( Detroit ) [ location ] " " ( concert ) [ "event-type" ] ,
+			"what " ( concerts ) [ "event-type" ] " are " ( today ) [ "date-time" ] ,
+			"are there any " ( concerts ) [ "event-type" ] " coming up" ,
+			( concerts ) [ "event-type" ] " on " ( Friday ) [ "date-time" ] ,
+			( movies ) [ "event-type" ] " " ( tonight ) [ "date-time" ] ,
+			( concerts ) [ "event-type" ] " in " ( "Santa Monica" ) [ location ] " on " ( "July 7th" ) [ "date-time" ] ,
+			"what " ( movies ) [ "event-type" ] " are playing in " ( theaters ) [ location ] " " ( "right now" ) [ "date-time" ] ,
+			( "art exhibitions" ) [ "event-type" ] " in " ( "San Francisco" ) [ location ] " " ( "this week" ) [ "date-time" ] ,
+			"what time is " ( "Ariana Grande" ) [ artist ] "\'s show " ( tomorrow ) [ "date-time" ] " in " ( "New York" ) [ location ] ,
+			"what\'s playing at the " ( nearest ) [ sort ] " " ( "movie theater" ) [ location ] ,
+			"could you find me " ( "band concerts" ) [ "event-type" ] " in " ( Newport ) [ location ] ,
+			( "band concerts" ) [ "event-type" ] " in " ( Newport ) [ location ] ,
+			( concerts ) [ "event-type" ] " " ( "May 14th at 7 pm" ) [ "date-time" ] ,
+			"do you know of any " ( concerts ) [ "event-type" ] " in " ( Miami ) [ location ] " for the " ( "coming months" ) [ "date-time" ] ,
+			"what " ( movies ) [ "event-type" ] " are on " ( tonight ) [ "date-time" ] ,
+			"what " ( concerts ) [ "event-type" ] " are in town " ( tonight ) [ "date-time" ] ,
+			"what\'s playing at the " ( "movie theater" ) [ location ] ,
+			( "Bruno Mars" ) [ artist ] " in " ( Kansas ) [ location ] ,
+			"find " ( "Alicia Keys" ) [ artist ] " in " ( Bethel ) [ location ] " " ( "next week" ) [ "date-time" ] ,
+			( today ) [ "date-time" ] " " ( concerts ) [ "event-type" ] " in " ( "Czech Republic" ) [ location ] ,
+			"are there any " ( concerts ) [ "event-type" ] " " ( "this weekend" ) [ "date-time" ] " in " ( Atlanta ) [ location ] ,
+			"any " ( concerts ) [ "event-type" ] " in " ( Moscow ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " are out in " ( theaters ) [ location ] " " ( "right now" ) [ "date-time" ] ,
+			"find me " ( rap ) [ "music-genre" ] " shows in " ( Durham ) [ location ] ,
+			( Adele ) [ artist ] " " ( "next week" ) [ "date-time" ] " in " ( Durham ) [ location ] ,
+			"are there any " ( nice ) [ sort ] " " ( festivals ) [ "event-type" ] " in the time " ( "from 30th of July 22nd of August" ) [ "date-time" ] ,
+			( free ) [ sort ] " " ( concerts ) [ "event-type" ] " " ( "Indianapolis State Fair" ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " playing " ( tonight ) [ "date-time" ] ,
+			( concerts ) [ "event-type" ] " from " ( "Mindless Behavior" ) [ artist ] ,
+			"are there any " ( competitions ) [ "event-type" ] " going on in the " ( "ski resort" ) [ location ] ,
+			"how about upcoming " ( concerts ) [ "event-type" ] " at " ( "Red Rocks Amphitheatre" ) [ location ] ,
+			( movies ) [ "event-type" ] " in " ( "Huntington west virginia" ) [ location ] ,
+			"show me " ( concerts ) [ "event-type" ] " going on in " ( "New Orleans" ) [ location ] " " ( tonight ) [ "date-time" ] ,
+			( festivals ) [ "event-type" ] " in " ( "Key West" ) [ location ] " for " ( July ) [ "date-time" ] ,
+			"I\'m looking for " ( "Ed Sheeran" ) [ artist ] ,
+			( "Frank Ocean" ) [ artist ] " " ( tonight ) [ "date-time" ] " in " ( "New York at Madison Square Garden" ) [ location ] ,
+			"is there any " ( movies ) [ "event-type" ] " on " ( "Star Trek" ) [ "event-title" ] ,
+			"can you look up on the internet when is the next " ( "One Direction" ) [ artist ] " " ( concert ) [ "event-type" ] ,
+			( "clothes exhibition" ) [ "event-type" ] " in " ( Bhubaneswar ) [ location ] ,
+			events ,
+			"are there any " ( concerts ) [ "event-type" ] " in town " ( "this week" ) [ "date-time" ] ,
+			"what " ( movies ) [ "event-type" ] " are playing" ,
+			( movies ) [ "event-type" ] " " ( today ) [ "date-time" ] ,
+			"I want to see a " ( play ) [ "event-type" ] ,
+			"who is playing at " ( "Irving Plaza" ) [ artist ] " " ( "next Friday" ) [ "date-time" ] ,
+			"find shows for " ( Paramore ) [ artist ] " " ( "next weekend" ) [ "date-time" ] " in " ( "Mountain View, California" ) [ location ] ,
+			"find " ( "Cold Play" ) [ artist ] " at the " ( "Rose Bowl" ) [ location ] ,
+			( local ) [ sort ] " " ( festivals ) [ "event-type" ] ,
+			"find me " ( club ) [ "event-type" ] " events" ,
+			( "Neil Diamond" ) [ artist ] " " ( "concert tour" ) [ "event-type" ] " dates for " ( "Detroit Michigan" ) [ location ] ,
+			"what " ( concerts ) [ "event-type" ] " will there be held in " ( Kuwait ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " can I see " ( today ) [ "date-time" ] ,
+			"show me the " ( cinema ) [ location ] " program" ,
+			( "wine festivals" ) [ "event-type" ] " in " ( Maryland ) [ location ] " " ( "this month" ) [ "date-time" ] ,
+			"show me what " ( movies ) [ "event-type" ] " are playing at " ( "Movie Tavern in Tucker" ) [ location ] ,
+			( Adele ) [ artist ] " " ( "New York" ) [ location ] ,
+			"I am looking for " ( "Madonna\'s" ) [ artist ] " " ( "7th April" ) [ "date-time" ] " " ( concert ) [ "event-type" ] " in " ( "San Francisco" ) [ location ] ,
+			"find " ( "Bruno Mars" ) [ artist ] " in " ( "Las Vegas" ) [ location ] ,
+			"where will " ( "Breaking Benjamin" ) [ artist ] " be performing on " ( "May 10 at 6:30 PM" ) [ "date-time" ] " in " ( Chicago ) [ location ] ,
+			( movies ) [ "event-type" ] " " ( "in my city" ) [ sort ] ,
+			"find " ( "rock concerts" ) [ "event-type" ] " in " ( "Los Angeles" ) [ location ] ,
+			"all " ( concerts ) [ "event-type" ] ,
+			"what " ( concerts ) [ "event-type" ] " are " ( "in my area" ) [ sort ] ,
+			( "art exhibitions" ) [ "event-type" ] " in " ( Delhi ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " are playing in the " ( "movie theater" ) [ location ] ,
+			"upcoming " ( festivals ) [ "event-type" ] " in " ( India ) [ location ] ,
+			"any " ( concerts ) [ "event-type" ] " in " ( NY ) [ location ] ,
+			"events for " ( "August 30th" ) [ "date-time" ] ,
+			( "Legion of Honor" ) [ "event-title" ] " " ( exhibition ) [ "event-type" ] " in " ( SF ) [ location ] ,
+			"is " ( Madonna ) [ artist ] " performing " ( "this month" ) [ "date-time" ] " in " ( SF ) [ location ] ,
+			"what " ( movies ) [ "event-type" ] " are on at " ( "The Cinemark Theatre in Helena" ) [ location ] ,
+			"now look for " ( "band concerts" ) [ "event-type" ] " in " ( Newport ) [ location ] ,
+			( "American homeopathic" ) [ "event-title" ] " " ( conference ) [ "event-type" ] ,
+			"pull up " ( movie ) [ "event-type" ] " listings for your " ( local ) [ sort ] " " ( theater ) [ location ] ,
+			"is there any " ( concerts ) [ "event-type" ] " going on " ( "around here" ) [ sort ] ,
+			"what " ( movies ) [ "event-type" ] " are playing " ( "in the area" ) [ sort ] ,
+			"search " ( concerts ) [ "event-type" ] " in " ( London ) [ location ] " " ( today ) [ "date-time" ] ,
+			"what\'s going on " ( tomorrow ) [ "date-time" ]
+		}
+		parameters :
+			location : entity text , required , prompts in en [ "At what location?" ] ;
+			"date-time" : entity text , required , prompts in en [ "For what date/time?" ] ;
+			amount : entity float , prompts in en [ "How many of you are going?" ] ;
+			artist ,
+			"event-title" ,
+			"event-type" : entity "event-type" ;
+			sort : entity "map-sort" ;
+			"music-genre" ,
+			team : entity "sport-team" ;
+
+	"events.search - select.number - no" :
+		inputs in en {
+			"not interested" ,
+			"don\'t do it" ,
+			"I don\'t want that" ,
+			"definitely not" ,
+			"I don\'t think so" ,
+			"thanks but no" ,
+			^no ,
+			"not really" ,
+			"I disagree"
+	}
+
+	"events.search - previous" :
+		inputs in en {
+			"read out the previous results" ,
+			"return to previous page" ,
+			"previous results" ,
+			"return to the previous" ,
+			"go to the previous page" ,
+			"go back" ,
+			previous ,
+			"previous page" ,
+			^back ,
+			"go back to previous results"
+	}
+
+	"events.tickets.book" :
+		inputs in en {
+			"book a ticket at at " ( "Bolshoi Theatre" ) [ location ] " for an " ( "opera performances" ) [ "event-type" ] ,
+			"tickets to shows that are playing in " ( Hamilton ) [ location ] ,
+			"tickets booking" ,
+			tickets ,
+			"I need to book tickets for a " ( concert ) [ "event-type" ] " " ( "tomorrow night" ) [ "date-time" ] " in " ( LA ) [ location ] ,
+			"I need tickets to a " ( nice ) [ sort ] " event in " ( "Beverly Hills" ) [ location ] ,
+			"book a ticket to a " ( pop ) [ genre ] " " ( concert ) [ "event-type" ] " " ( "next Friday" ) [ "date-time" ] ,
+			"I need tickets to " ( "Frank Ocean" ) [ artist ] " " ( tonight ) [ "date-time" ] " in " ( "New York at Madison Square Garden" ) [ location ] ,
+			"I need tickets" ,
+			"I need " ( "2" ) [ amount ] " tickets to some " ( jazz ) [ genre ] " performances in " ( California ) [ location ] " " ( "next Sunday" ) [ "date-time" ] ,
+			( movie ) [ "event-type" ] " tickets " ( "Mountain View" ) [ location ] " " ( today ) [ "date-time" ] ,
+			"book a ticket to a " ( nice ) [ sort ] " " ( festival ) [ "event-type" ] " in the time " ( "from 30th of July 22nd of August" ) [ "date-time" ] ,
+			"tickets for " ( Paramore ) [ artist ] " " ( "next weekend" ) [ "date-time" ] " in " ( "Mountain View, California" ) [ location ] ,
+			"I need tickets for the next " ( "One Direction" ) [ artist ] " " ( concert ) [ "event-type" ] ,
+			"new tickets" ,
+			"book me a ticket to " ( "Big Sean" ) [ artist ] " at " ( "Bethel Woods Center for the Arts" ) [ location ] " " ( "next week" ) [ "date-time" ] ,
+			"I want you to book a ticket for me to any " ( concerts ) [ "event-type" ] " that are coming up at the " ( "State fair in Indiana" ) [ location ] ,
+			"we need tickets" ,
+			"book tickets for " ( Maddona ) [ artist ] "\'s " ( concerts ) [ "event-type" ] " " ( "next week" ) [ "date-time" ] " " ( Moscow ) [ location ] ,
+			( "Atlanta Braves" ) [ team ] " are playing in " ( LA ) [ location ] " " ( "this week" ) [ "date-time" ] " please book tickets" ,
+			"book the " ( best ) [ sort ] " " ( movie ) [ "event-type" ] " tickets " ( "in town" ) [ sort ] ,
+			"please book me a ticket" ,
+			"book " ( free ) [ sort ] " tickets" ,
+			"book tickets to a " ( play ) [ "event-type" ] " " ( "Chicago Bulls" ) [ team ] " " ( "next week" ) [ "date-time" ] " in " ( Chicago ) [ location ] ,
+			"book me tickets to " ( Adele ) [ artist ] " in " ( "New York" ) [ location ] ,
+			"book evets" ,
+			"can you buy a tickets" ,
+			"book the " ( best ) [ sort ] " tickets" ,
+			"can I book tickets " ( here ) [ sort ] ,
+			( Adele ) [ artist ] " " ( "New York" ) [ location ] " tickets" ,
+			"I want tickets for me and my friends" ,
+			"tickets please" ,
+			"can you book tickets for " ( "baseball game" ) [ "event-type" ] " these " ( weekends ) [ "date-time" ] ,
+			"book tickets " ( Madonna ) [ artist ] "\'s " ( concert ) [ "event-type" ] ,
+			"let\'s book a ticket" ,
+			( jazz ) [ genre ] " in " ( "New York" ) [ location ] " " ( tonight ) [ "date-time" ] " book tickets" ,
+			"I would like to book " ( movie ) [ "event-type" ] " tickets for " ( free ) [ sort ] ,
+			"book baseball tickets" ,
+			"book seats for " ( "baseball game" ) [ "event-type" ] " " ( "in town" ) [ sort ] " " ( tonight ) [ "date-time" ] ,
+			"buy " ( concert ) [ "event-type" ] " tickets" ,
+			"can I book the " ( cheapest ) [ sort ] " tickets to the theatre in " ( LA ) [ location ] ,
+			"book tickets"
+		}
+		parameters :
+			amount : entity float , required , prompts in en [ "How many tickets do you need?" ] ;
+			"date-time" : entity text , required , prompts in en [ "For what date/time?" ] ;
+			location : entity text , required , prompts in en [ "Where is it?" ] ;
+			artist ,
+			"event-type" : entity "event-type" ;
+			sort : entity "map-sort" ;
+			genre ,
+			team : entity "sport-team" ;
+
+	"events.search.implicit" :
+		inputs in en {
+			"what should I do" ,
+			"I\'m bored" ,
+			bored ,
+			"need some fun" ,
+			"how can I kill time " ( nearby ) [ sort ] ,
+			"how can I entertain myself for " ( free ) [ sort ] " " ( tonight ) [ "date-time" ] ,
+			"where can I go to have some fun " ( "tomorrow evening" ) [ "date-time" ] ,
+			"where to go" ,
+			"where to go for a date" ,
+			"what should I do " ( tonight ) [ "date-time" ] ,
+			boring ,
+			"I want entertainment" ,
+			"where should I have fun " ( "these weekends" ) [ "date-time" ] ,
+			"I\'m so bored"
+		}
+		parameters :
+			"date-time" ,
+			sort : entity "map-sort" ;
+
+	"events.search - select.number - later" :
+		inputs in en {
+			later ,
+			"not at this time" ,
+			"not yet" ,
+			"some other time" ,
+			"do it later" ,
+			"not at the moment" ,
+			"not right now" ,
+			"next time" ,
+			"I said later" ,
+			"ask me later"
+	}
+
+	"events.search - select.number - yes" :
+		inputs in en {
+			exactly ,
+			"I don\'t mind" ,
+			"yes book" ,
+			"book it" ,
+			"of course" ,
+			"buy it" ,
+			"book them" ,
+			sure ,
+			"that\'s correct" ,
+			yes ,
+			"sounds good" ,
+			confirm ,
+			"do it" ,
+			"I agree"
+		}
+		parameters :
+			amount : entity text ;
+
+	"events.search - book" :
+		inputs in en {
+			"buy it" ,
+			"book it for me" ,
+			"book " ( "2" ) [ amount ] ,
+			"I want these tickets" ,
+			"book it" ,
+			"can you book it for me"
+		}
+		parameters :
+			amount : entity float , required , prompts in en [ "How many tickets do you need?" ] ;
+			artist ,
+			"date-time" ,
+			"event-title" ,
+			"event-type" ,
+			sort ,
+			"music-genre" ,
+			location ,
+			team : entity text ;
+
+	"Default Fallback Intent" Fallback :
+
+	"events.search - select.number" :
+		inputs in en {
+			"I like number " ( "2" ) [ ^number ] " I need " ( "3" ) [ amount ] " tickets" ,
+			"I select number " ( "2" ) [ ^number ] " and number " ( "5" ) [ ^number ] ,
+			"see " ( "1" ) [ ^number ] " " ( "2" ) [ ^number ] " " ( "3" ) [ ^number ] " " ( "4" ) [ ^number ] " and " ( "5" ) [ ^number ] ,
+			"select the " ( first ) [ ^number ] " one" ,
+			"more about the " ( "3rd" ) [ ^number ] " one" ,
+			( second ) [ ^number ] " one" ,
+			"more about number " ( "1" ) [ ^number ] ,
+			"number " ( "4" ) [ ^number ] " " ( "5" ) [ ^number ] " " ( "7" ) [ ^number ] " and " ( "8" ) [ ^number ] ,
+			"choose numbers " ( "1" ) [ ^number ] " " ( "2" ) [ ^number ] " " ( "3" ) [ ^number ] " and " ( "5" ) [ ^number ] ,
+			"I choose number " ( "3" ) [ ^number ] ,
+			"show me the " ( second ) [ ^number ] " one" ,
+			"the " ( "1st" ) [ ^number ] " one and the " ( "2nd" ) [ ^number ] " one" ,
+			"choose " ( "1st" ) [ ^number ] " and " ( "2nd" ) [ ^number ] " one"
+		}
+		parameters :
+			^number : entity float ;
+			amount : entity float , required , prompts in en [ "How many of you are going?" ] ;
+
+entities :
+	Simple entity "map-sort" :
+		inputs in en {
+			"best matched" synonyms "best matched"
+			nearest synonyms nearest , closest , nearby , "near me" , "near by" , "in my location" , "in this district" , "in the area" , "in my area" , "on my way" , "at my destination" , "close by" , nearbys , "along my route" , "in my neighborhood" , "around me" , immediate , "in this area" , "around here" , local , "close to me" , here , "closest to me" , "very close" , "near my house" , "near this area" , near , "around my area" , around , "close to my area" , "this area" , "not far from here" , "in town" , "in my city"
+			expensive synonyms "most expensive" , expensive
+			cheapest synonyms cheapest , cheap , "less expensive" , "best priced"
+			free synonyms free
+			best synonyms best , top , good , nice , great , cool , fine , interesting
+	}
+	Simple entity "event-type" :
+		inputs in en {
+			concert synonyms concert , concerts
+			"art exhibition" synonyms "art exhibitions" , "art exhibition"
+			"jazz concert" synonyms "jazz concert" , "jazz concerts"
+			"band concert" synonyms "band concerts"
+			"adult movies" synonyms "adult movies"
+			competition synonyms competition , competitions
+			"rock concert" synonyms "rock concerts"
+			exhibition synonyms exhibition , exhibitions
+			"music concerts" synonyms "music concerts"
+			"beer festival" synonyms "beer festivals" , "beer festival"
+			"opera performance" synonyms "opera performances"
+			"clothes exhibition" synonyms "clothes exhibition" , "clothes exhibitions"
+			conference synonyms conference , conferences
+			game synonyms game
+			"open-air festival" synonyms "open-air festival" , "open air festival" , "open air festivals" , "open-air festivals"
+			"baseball game" synonyms "baseball game" , baseball
+			"stand-up" synonyms "stand-up" , "stand-up comedy" , "stand-up concert"
+			"wine festival" synonyms "wine festivals" , "wine festival"
+			club synonyms club
+			festival synonyms festival , festivals
+			musical synonyms musical , musicals
+			"live concert" synonyms "live concerts" , "live concert"
+			movie synonyms movie , movies , film , movietickets , movieticket
+			"music festival" synonyms "music festival" , "music festivals"
+			play synonyms play
+	}
+	Simple entity "sport-team" :
+		inputs in en {
+			"Albuquerque Isotopes" synonyms "Albuquerque Isotopes"
+			"Aberdeen IronBirds" synonyms "Aberdeen IronBirds"
+			"Adirondack Thunder" synonyms "Adirondack Thunder"
+			"Allen Americans" synonyms "Allen Americans"
+			"Arizona Rattlers" synonyms "Arizona Rattlers"
+			"Atlanta Hawks" synonyms "Atlanta Hawks"
+			"Augusta GreenJackets" synonyms "Augusta GreenJackets"
+			"Bakersfield Condors" synonyms "Bakersfield Condors"
+			"Atlanta Dream" synonyms "Atlanta Dream"
+			"Akron RubberDucks" synonyms "Akron RubberDucks"
+			"Austin Spurs" synonyms "Austin Spurs"
+			"Akron Racers" synonyms "Akron Racers"
+			"Albany Devils" synonyms "Albany Devils"
+			"Altoona Curve" synonyms "Altoona Curve"
+			"Anaheim Ducks" synonyms "Anaheim Ducks"
+			"Auburn Doubledays" synonyms "Auburn Doubledays"
+			"Arizona Coyotes" synonyms "Arizona Coyotes"
+			"Arkansas Travelers" synonyms "Arkansas Travelers"
+			"Amarillo Venom" synonyms "Amarillo Venom"
+			"Arizona Diamondbacks" synonyms "Arizona Diamondbacks"
+			"Atlanta Falcons" synonyms "Atlanta Falcons"
+			"Atlanta Hustle" synonyms "Atlanta Hustle"
+			"Arizona Cardinals" synonyms "Arizona Cardinals"
+			"Atlanta Gladiators" synonyms "Atlanta Gladiators"
+			"Atlanta Braves" synonyms "Atlanta Braves"
+			"Austin Sol" synonyms "Austin Sol"
+			"BC Lions" synonyms "BC Lions"
+			"Asheville Tourists" synonyms "Asheville Tourists"
+			"Atlanta Blaze" synonyms "Atlanta Blaze"
+			"Alaska Aces" synonyms "Alaska Aces"
+			"Alpine Cowboys" synonyms "Alpine Cowboys"
+			"Arizona United SC" synonyms "Arizona United SC"
+			"Arsenal football team" synonyms "Arsenal football team"
+			"Bethlehem Steel FC" synonyms "Bethlehem Steel FC"
+			"Bowie Baysox" synonyms "Bowie Baysox"
+			"Brampton Beast" synonyms "Brampton Beast"
+			"Bridgeport Sound Tigers" synonyms "Bridgeport Sound Tigers"
+			"Bristol Pirates" synonyms "Bristol Pirates"
+			"Buffalo Beauts" synonyms "Buffalo Beauts"
+			"Cincinnati Reds" synonyms "Cincinnati Reds"
+			"Cincinnati Revolution" synonyms "Cincinnati Revolution"
+			"Cleveland Indians" synonyms "Cleveland Indians"
+			"Columbus Cottonmouths" synonyms "Columbus Cottonmouths"
+			"Dayton Dragons" synonyms "Dayton Dragons"
+			"Daytona Tortugas" synonyms "Daytona Tortugas"
+			"Baltimore Orioles" synonyms "Baltimore Orioles"
+			"Batavia Muckdogs" synonyms "Batavia Muckdogs"
+			"Berlin River Drivers" synonyms "Berlin River Drivers"
+			"Boise Hawks" synonyms "Boise Hawks"
+			"Boston Blades" synonyms "Boston Blades"
+			"Boston Celtics" synonyms "Boston Celtics"
+			"Boston Red Sox" synonyms "Boston Red Sox"
+			"Burlington Bees" synonyms "Burlington Bees"
+			"Calgary Flames" synonyms "Calgary Flames"
+			"Canadian Women\'s Hockey League" synonyms "Canadian Women\'s Hockey League"
+			"Chattanooga Lookouts" synonyms "Chattanooga Lookouts"
+			"Chicago Eagles" synonyms "Chicago Eagles"
+			"Connecticut Tigers" synonyms "Connecticut Tigers"
+			"Cornwall Nationals" synonyms "Cornwall Nationals"
+			"Calgary Roughnecks" synonyms "Calgary Roughnecks"
+			"Carolina Panthers" synonyms "Carolina Panthers"
+			"Chicago Bears" synonyms "Chicago Bears"
+			"Chicago Cubs" synonyms "Chicago Cubs"
+			"Chicago Red Stars" synonyms "Chicago Red Stars"
+			"Chicago Wildfire" synonyms "Chicago Wildfire"
+			"Colorado Avalanche" synonyms "Colorado Avalanche"
+			"Danbury Titans" synonyms "Danbury Titans"
+			"Baltimore Ride" synonyms "Baltimore Ride"
+			"Birmingham Barons" synonyms "Birmingham Barons"
+			"Boston Pride" synonyms "Boston Pride"
+			"DC Breeze" synonyms "DC Breeze"
+			"Dallas Mavericks" synonyms "Dallas Mavericks"
+			"Dallas Roughnecks" synonyms "Dallas Roughnecks"
+			"Danville Braves" synonyms "Danville Braves"
+			"Charleston Battery" synonyms "Charleston Battery"
+			"Chicago Fire" synonyms "Chicago Fire"
+			"Columbus Clippers" synonyms "Columbus Clippers"
+			"Connecticut Sun" synonyms "Connecticut Sun"
+			"Beloit Snappers" synonyms "Beloit Snappers"
+			"CenTex Cavalry" synonyms "CenTex Cavalry"
+			"Colorado Mammoth" synonyms "Colorado Mammoth"
+			"Colorado Rockies" synonyms "Colorado Rockies"
+			"Billings Mustangs" synonyms "Billings Mustangs"
+			"Biloxi Shuckers" synonyms "Biloxi Shuckers"
+			"Binghamton Mets" synonyms "Binghamton Mets"
+			"Binghamton Senators" synonyms "Binghamton Senators"
+			"Boston Breakers" synonyms "Boston Breakers"
+			"Burlington Royals" synonyms "Burlington Royals"
+			"Carolina RailHawks" synonyms "Carolina RailHawks"
+			"Charlotte Independence" synonyms "Charlotte Independence"
+			"Charlotte Knights" synonyms "Charlotte Knights"
+			"Chicago Bulls" synonyms "Chicago Bulls"
+			"Chicago Sky" synonyms "Chicago Sky"
+			"Connecticut Whale" synonyms "Connecticut Whale"
+			"D.C. United" synonyms "D.C. United"
+			"Dallas Marshals" synonyms "Dallas Marshals"
+			"Buffalo Bandits" synonyms "Buffalo Bandits"
+			"Charlotte Express" synonyms "Charlotte Express"
+			"Charlotte Hornets" synonyms "Charlotte Hornets"
+			"Cincinnati Bengals" synonyms "Cincinnati Bengals"
+			"Cleveland Cavaliers" synonyms "Cleveland Cavaliers"
+			"DC Current" synonyms "DC Current"
+			"Dallas Wings" synonyms "Dallas Wings"
+			"Barrie, Ontario" synonyms "Barrie, Ontario"
+			"Buffalo Bills" synonyms "Buffalo Bills"
+			"Carolina Mudcats" synonyms "Carolina Mudcats"
+			"Cleveland Gladiators" synonyms "Cleveland Gladiators"
+			"Colorado Eagles" synonyms "Colorado Eagles"
+			"Colorado Springs Sky Sox" synonyms "Colorado Springs Sky Sox"
+			"Boston Cannons" synonyms "Boston Cannons"
+			"Brampton Thunder" synonyms "Brampton Thunder"
+			"Bridgeport Bluefish" synonyms "Bridgeport Bluefish"
+			"Calgary Stampeders" synonyms "Calgary Stampeders"
+			"Cedar Rapids Titans" synonyms "Cedar Rapids Titans"
+			"Chicago White Sox" synonyms "Chicago White Sox"
+			"Clinton LumberKings" synonyms "Clinton LumberKings"
+			"Columbus Crew SC" synonyms "Columbus Crew SC"
+			"Corpus Christi Hooks" synonyms "Corpus Christi Hooks"
+			"Danville Dashers" synonyms "Danville Dashers"
+			"Boston Storm" synonyms "Boston Storm"
+			"Bradenton Marauders" synonyms "Bradenton Marauders"
+			"Chicago Bandits" synonyms "Chicago Bandits"
+			"Chicago Blackhawks" synonyms "Chicago Blackhawks"
+			"Clearwater Threshers" synonyms "Clearwater Threshers"
+			"Cleveland Monsters" synonyms "Cleveland Monsters"
+			"Columbia Fireflies" synonyms "Columbia Fireflies"
+			"Charleston RiverDogs" synonyms "Charleston RiverDogs"
+			"Charlotte Checkers" synonyms "Charlotte Checkers"
+			"Brooklyn Nets" synonyms "Brooklyn Nets"
+			"Calgary Inferno" synonyms "Calgary Inferno"
+			"Chesapeake Bayhawks" synonyms "Chesapeake Bayhawks"
+			"Dallas Cowboys" synonyms "Dallas Cowboys"
+			"Baltimore Ravens" synonyms "Baltimore Ravens"
+			"Bloomington Edge" synonyms "Bloomington Edge"
+			"Boston Bruins" synonyms "Boston Bruins"
+			"Cape Breton Highlanders" synonyms "Cape Breton Highlanders"
+			"Cedar Rapids Kernels" synonyms "Cedar Rapids Kernels"
+			"Central Florida Baseball" synonyms "Central Florida Baseball"
+			"Charlotte Stone Crabs" synonyms "Charlotte Stone Crabs"
+			"Cleveland Browns" synonyms "Cleveland Browns"
+			"Colorado Crush" synonyms "Colorado Crush"
+			"Columbus Blue Jackets" synonyms "Columbus Blue Jackets"
+			"Dallas Stars" synonyms "Dallas Stars"
+			"Bluefield Blue Jays" synonyms "Bluefield Blue Jays"
+			"Boston Whitecaps" synonyms "Boston Whitecaps"
+			"Canton Charge" synonyms "Canton Charge"
+			"Chicago Wolves" synonyms "Chicago Wolves"
+			"Cincinnati Cyclones" synonyms "Cincinnati Cyclones"
+			Bismarck synonyms Bismarck
+			"Bowling Green Hot Rods" synonyms "Bowling Green Hot Rods"
+			"Brooklyn Cyclones" synonyms "Brooklyn Cyclones"
+			"Buffalo Bisons" synonyms "Buffalo Bisons"
+			"Buffalo Sabres" synonyms "Buffalo Sabres"
+			"Canadian Lacrosse League" synonyms "Canadian Lacrosse League"
+			"Carolina Hurricanes" synonyms "Carolina Hurricanes"
+			"Charlotte Hounds" synonyms "Charlotte Hounds"
+			"Colorado Rapids" synonyms "Colorado Rapids"
+			"Colorado Springs Switchbacks FC" synonyms "Colorado Springs Switchbacks FC"
+			Division synonyms Division
+			"Erie BayHawks" synonyms "Erie BayHawks"
+			"Golden State Warriors" synonyms "Golden State Warriors"
+			"Hartford Wolf Pack" synonyms "Hartford Wolf Pack"
+			"Hershey Bears" synonyms "Hershey Bears"
+			"Huntsville Havoc" synonyms "Huntsville Havoc"
+			"Jackson Generals" synonyms "Jackson Generals"
+			"Kansas City Royals" synonyms "Kansas City Royals"
+			"Lake County Captains" synonyms "Lake County Captains"
+			"Laredo Lemurs" synonyms "Laredo Lemurs"
+			"Los Angeles Clippers" synonyms "Los Angeles Clippers"
+			"Los Angeles D-Fenders" synonyms "Los Angeles D-Fenders"
+			"Los Angeles Lakers" synonyms "Los Angeles Lakers"
+			"Louisville Bats" synonyms "Louisville Bats"
+			"Memphis Grizzlies" synonyms "Memphis Grizzlies"
+			"Miami FC" synonyms "Miami FC"
+			"Miami Marlins" synonyms "Miami Marlins"
+			"Nashville Predators" synonyms "Nashville Predators"
+			"New England Black Wolves" synonyms "New England Black Wolves"
+			"New England Revolution" synonyms "New England Revolution"
+			"New York Red Bulls II" synonyms "New York Red Bulls II"
+			"Paris, Ontario" synonyms "Paris, Ontario"
+			"Philadelphia Phillies" synonyms "Philadelphia Phillies"
+			"Sacramento Express" synonyms "Sacramento Express"
+			"Sacramento Republic FC" synonyms "Sacramento Republic FC"
+			"Saskatchewan Rush" synonyms "Saskatchewan Rush"
+			"Seattle Reign FC" synonyms "Seattle Reign FC"
+			"Springfield Cardinals" synonyms "Springfield Cardinals"
+			"Syracuse Chiefs" synonyms "Syracuse Chiefs"
+			"Toronto Marlies" synonyms "Toronto Marlies"
+			"West Virginia Black Bears" synonyms "West Virginia Black Bears"
+			"Wichita Force" synonyms "Wichita Force"
+			"Wilkes-Barre/Scranton Penguins" synonyms "Wilkes-Barre/Scranton Penguins"
+			"Winnipeg Blue Bombers" synonyms "Winnipeg Blue Bombers"
+			"Winston-Salem Dash" synonyms "Winston-Salem Dash"
+			"Wisconsin Timber Rattlers" synonyms "Wisconsin Timber Rattlers"
+			"Denver Stampede" synonyms "Denver Stampede"
+			"Duke City Gladiators" synonyms "Duke City Gladiators"
+			"Dunedin Blue Jays" synonyms "Dunedin Blue Jays"
+			"Evansville Otters" synonyms "Evansville Otters"
+			"Federal Hockey League" synonyms "Federal Hockey League"
+			"Florida Panthers" synonyms "Florida Panthers"
+			"Grand Rapids Griffins" synonyms "Grand Rapids Griffins"
+			"Green Bay Packers" synonyms "Green Bay Packers"
+			"Harrisburg City Islanders" synonyms "Harrisburg City Islanders"
+			"Iowa Energy" synonyms "Iowa Energy"
+			"Jacksonville Jaguars" synonyms "Jacksonville Jaguars"
+			"Jacksonville Suns" synonyms "Jacksonville Suns"
+			"Knoxville Ice Bears" synonyms "Knoxville Ice Bears"
+			"Long Island Sound" synonyms "Long Island Sound"
+			"Louisville City FC" synonyms "Louisville City FC"
+			"Miami Dolphins" synonyms "Miami Dolphins"
+			"Mississippi Braves" synonyms "Mississippi Braves"
+			"Montreal Alouettes" synonyms "Montreal Alouettes"
+			"Myrtle Beach Pelicans" synonyms "Myrtle Beach Pelicans"
+			"New York Red Bulls" synonyms "New York Red Bulls"
+			"Oakland Athletics" synonyms "Oakland Athletics"
+			"Ogden Raptors" synonyms "Ogden Raptors"
+			"Oklahoma City Dodgers" synonyms "Oklahoma City Dodgers"
+			"Oklahoma City Energy FC" synonyms "Oklahoma City Energy FC"
+			"Ottawa Champions" synonyms "Ottawa Champions"
+			"Ottawa Fury FC" synonyms "Ottawa Fury FC"
+			"Philadelphia Spinners" synonyms "Philadelphia Spinners"
+			"Phoenix Mercury" synonyms "Phoenix Mercury"
+			"Pittsburgh Penguins" synonyms "Pittsburgh Penguins"
+			"Portland Thorns FC" synonyms "Portland Thorns FC"
+			"Princeton Rays" synonyms "Princeton Rays"
+			"Reading Royals" synonyms "Reading Royals"
+			"Rochester Knighthawks" synonyms "Rochester Knighthawks"
+			"Rochester Rhinos" synonyms "Rochester Rhinos"
+			"Salem Red Sox" synonyms "Salem Red Sox"
+			"San Francisco FlameThrowers" synonyms "San Francisco FlameThrowers"
+			"Seattle Sounders FC" synonyms "Seattle Sounders FC"
+			"Texas AirHogs" synonyms "Texas AirHogs"
+			"Toronto Blue Jays" synonyms "Toronto Blue Jays"
+			"Toronto Rock" synonyms "Toronto Rock"
+			"Toronto Wolfpack" synonyms "Toronto Wolfpack"
+			"Tri-City Dust Devils" synonyms "Tri-City Dust Devils"
+			"Vermont Lake Monsters" synonyms "Vermont Lake Monsters"
+			"Washington Valor" synonyms "Washington Valor"
+			"Windy City ThunderBolts" synonyms "Windy City ThunderBolts"
+			"Denver Outlaws" synonyms "Denver Outlaws"
+			"Elizabethton Twins" synonyms "Elizabethton Twins"
+			"Erie SeaWolves" synonyms "Erie SeaWolves"
+			"Hagersville, Ontario" synonyms "Hagersville, Ontario"
+			"Indy Eleven" synonyms "Indy Eleven"
+			"Jacksonville Cannons" synonyms "Jacksonville Cannons"
+			"Lakeland Flying Tigers" synonyms "Lakeland Flying Tigers"
+			"Long Island Ducks" synonyms "Long Island Ducks"
+			"Macon Mayhem" synonyms "Macon Mayhem"
+			"Midland RockHounds" synonyms "Midland RockHounds"
+			"Minnesota Vikings" synonyms "Minnesota Vikings"
+			"Mississippi RiverKings" synonyms "Mississippi RiverKings"
+			"National Women\'s Hockey League" synonyms "National Women\'s Hockey League"
+			"New York Giants" synonyms "New York Giants"
+			"Norfolk Admirals" synonyms "Norfolk Admirals"
+			"Northern Arizona Suns" synonyms "Northern Arizona Suns"
+			"Orangeville A\'s" synonyms "Orangeville A\'s"
+			"Orlando Magic" synonyms "Orlando Magic"
+			"Palm Beach Cardinals" synonyms "Palm Beach Cardinals"
+			"Philadelphia 76ers" synonyms "Philadelphia 76ers"
+			"Philadelphia Soul" synonyms "Philadelphia Soul"
+			"Pittsburg Diamonds" synonyms "Pittsburg Diamonds"
+			"Saint Louis FC" synonyms "Saint Louis FC"
+			"Salina Stockade" synonyms "Salina Stockade"
+			"Schaumburg Boomers" synonyms "Schaumburg Boomers"
+			"Seattle Storm" synonyms "Seattle Storm"
+			"Sioux City Explorers" synonyms "Sioux City Explorers"
+			"Springfield Thunderbirds" synonyms "Springfield Thunderbirds"
+			"State College Spikes" synonyms "State College Spikes"
+			"Staten Island Yankees" synonyms "Staten Island Yankees"
+			"Stockton Ports" synonyms "Stockton Ports"
+			"Texas Charge" synonyms "Texas Charge"
+			"White Sands PupFish" synonyms "White Sands PupFish"
+			"Winnipeg Jets" synonyms "Winnipeg Jets"
+			"Detroit Mechanix" synonyms "Detroit Mechanix"
+			"Great Falls Voyagers" synonyms "Great Falls Voyagers"
+			"Hickory Crawdads" synonyms "Hickory Crawdads"
+			"Houston Rockets" synonyms "Houston Rockets"
+			"Indiana Fever" synonyms "Indiana Fever"
+			"Iowa Wild" synonyms "Iowa Wild"
+			"Island Storm" synonyms "Island Storm"
+			"Las Vegas 51s" synonyms "Las Vegas 51s"
+			"Los Angeles Rams" synonyms "Los Angeles Rams"
+			"Mahoning Valley Scrappers" synonyms "Mahoning Valley Scrappers"
+			"Manitoba Moose" synonyms "Manitoba Moose"
+			"Nebraska Danger" synonyms "Nebraska Danger"
+			"New Orleans Saints" synonyms "New Orleans Saints"
+			"New York Empire" synonyms "New York Empire"
+			"Ohio Machine" synonyms "Ohio Machine"
+			"Pittsburgh Steelers" synonyms "Pittsburgh Steelers"
+			"Port Huron Prowlers" synonyms "Port Huron Prowlers"
+			"Quad Cities River Bandits" synonyms "Quad Cities River Bandits"
+			"Reno Bighorns" synonyms "Reno Bighorns"
+			"Saint John Mill Rats" synonyms "Saint John Mill Rats"
+			"San Diego Chargers" synonyms "San Diego Chargers"
+			"San Francisco Giants" synonyms "San Francisco Giants"
+			"San Rafael Pacifics" synonyms "San Rafael Pacifics"
+			"Sonoma Stompers" synonyms "Sonoma Stompers"
+			"South Carolina Stingrays" synonyms "South Carolina Stingrays"
+			"St. Lucie Mets" synonyms "St. Lucie Mets"
+			"Tampa Bay Lightning" synonyms "Tampa Bay Lightning"
+			"Toronto Maple Leafs" synonyms "Toronto Maple Leafs"
+			"Toronto Rush" synonyms "Toronto Rush"
+			"Traverse City Beach Bums" synonyms "Traverse City Beach Bums"
+			"Tucson Saguaros" synonyms "Tucson Saguaros"
+			"Tulsa Roughnecks FC" synonyms "Tulsa Roughnecks FC"
+			"Wheeling Nailers" synonyms "Wheeling Nailers"
+			"Wilmington Blue Rocks" synonyms "Wilmington Blue Rocks"
+			"York Revolution" synonyms "York Revolution"
+			"Delaware 87ers" synonyms "Delaware 87ers"
+			"Detroit Tigers" synonyms "Detroit Tigers"
+			"Durham Bulls" synonyms "Durham Bulls"
+			"FC Kansas City" synonyms "FC Kansas City"
+			"Florence Freedom" synonyms "Florence Freedom"
+			"Frederick Keys" synonyms "Frederick Keys"
+			"Hartford Yard Goats" synonyms "Hartford Yard Goats"
+			"KW Titans" synonyms "KW Titans"
+			"Madison Radicals" synonyms "Madison Radicals"
+			"Minnesota Wind Chill" synonyms "Minnesota Wind Chill"
+			"Missouri Mavericks" synonyms "Missouri Mavericks"
+			"Oakland Raiders" synonyms "Oakland Raiders"
+			"Omaha Storm Chasers" synonyms "Omaha Storm Chasers"
+			"Peoria Chiefs" synonyms "Peoria Chiefs"
+			"Pittsburgh Thunderbirds" synonyms "Pittsburgh Thunderbirds"
+			"Portland Stags" synonyms "Portland Stags"
+			"Rancho Cucamonga Quakes" synonyms "Rancho Cucamonga Quakes"
+			"Rayo OKC" synonyms "Rayo OKC"
+			"Real Monarchs SLC" synonyms "Real Monarchs SLC"
+			"River City Rascals" synonyms "River City Rascals"
+			"San Diego Growlers" synonyms "San Diego Growlers"
+			"San Jose Sharks" synonyms "San Jose Sharks"
+			"Somerset Patriots" synonyms "Somerset Patriots"
+			"Utah Jazz" synonyms "Utah Jazz"
+			"Vancouver Canadians" synonyms "Vancouver Canadians"
+			"Washington Wild Things" synonyms "Washington Wild Things"
+			"West Virginia Power" synonyms "West Virginia Power"
+			"Detroit Red Wings" synonyms "Detroit Red Wings"
+			"Grand Junction Rockies" synonyms "Grand Junction Rockies"
+			"Harrisburg Senators" synonyms "Harrisburg Senators"
+			"Houston Dash" synonyms "Houston Dash"
+			"Hudson Valley Renegades" synonyms "Hudson Valley Renegades"
+			"Indy Fuel" synonyms "Indy Fuel"
+			"Jupiter Hammerheads" synonyms "Jupiter Hammerheads"
+			"Kane County Cougars" synonyms "Kane County Cougars"
+			"Lake Erie Crushers" synonyms "Lake Erie Crushers"
+			"Lakewood BlueClaws" synonyms "Lakewood BlueClaws"
+			"Lancaster Barnstormers" synonyms "Lancaster Barnstormers"
+			"Lexington Legends" synonyms "Lexington Legends"
+			"Long Island Nets" synonyms "Long Island Nets"
+			"Manchester Monarchs" synonyms "Manchester Monarchs"
+			"Minnesota Twins" synonyms "Minnesota Twins"
+			"New York Cosmos" synonyms "New York Cosmos"
+			"Norfolk Tides" synonyms "Norfolk Tides"
+			"Ohio Aviators" synonyms "Ohio Aviators"
+			"Orlando Solar Bears" synonyms "Orlando Solar Bears"
+			"Oshawa, Ontario" synonyms "Oshawa, Ontario"
+			"Philadelphia Eagles" synonyms "Philadelphia Eagles"
+			"Pittsburgh Riverhounds" synonyms "Pittsburgh Riverhounds"
+			"Portland Timbers" synonyms "Portland Timbers"
+			"Portland Timbers 2" synonyms "Portland Timbers 2"
+			"Potomac Nationals" synonyms "Potomac Nationals"
+			"Reno Aces" synonyms "Reno Aces"
+			"Richmond Kickers" synonyms "Richmond Kickers"
+			"Rochester Red Wings" synonyms "Rochester Red Wings"
+			"San Francisco Dogfish" synonyms "San Francisco Dogfish"
+			"San Jose Giants" synonyms "San Jose Giants"
+			"Saskatchewan Roughriders" synonyms "Saskatchewan Roughriders"
+			"Scrap Yard Dawgs" synonyms "Scrap Yard Dawgs"
+			"Southern Maryland Blue Crabs" synonyms "Southern Maryland Blue Crabs"
+			"St. Paul Saints" synonyms "St. Paul Saints"
+			"Texas Legends" synonyms "Texas Legends"
+			"Toledo Walleye" synonyms "Toledo Walleye"
+			"Topeka Train Robbers" synonyms "Topeka Train Robbers"
+			"Toronto FC" synonyms "Toronto FC"
+			"USSSA Florida Pride" synonyms "USSSA Florida Pride"
+			"Utah Grizzlies" synonyms "Utah Grizzlies"
+			"Visalia Rawhide" synonyms "Visalia Rawhide"
+			"FC Edmonton" synonyms "FC Edmonton"
+			"Florida Launch" synonyms "Florida Launch"
+			"Great Lakes Loons" synonyms "Great Lakes Loons"
+			"Houston Texans" synonyms "Houston Texans"
+			"Idaho Steelheads" synonyms "Idaho Steelheads"
+			"Lake Elsinore Storm" synonyms "Lake Elsinore Storm"
+			"Lincoln Saltdogs" synonyms "Lincoln Saltdogs"
+			"Milwaukee Bucks" synonyms "Milwaukee Bucks"
+			"Montreal Canadiens" synonyms "Montreal Canadiens"
+			"New Britain Bees" synonyms "New Britain Bees"
+			"New Hampshire Fisher Cats" synonyms "New Hampshire Fisher Cats"
+			"New York Rangers" synonyms "New York Rangers"
+			"New York Yankees" synonyms "New York Yankees"
+			"Orlando City B" synonyms "Orlando City B"
+			"Pennsylvania Rebellion" synonyms "Pennsylvania Rebellion"
+			"Pittsburgh Pirates" synonyms "Pittsburgh Pirates"
+			"Portland Trail Blazers" synonyms "Portland Trail Blazers"
+			"Real Salt Lake" synonyms "Real Salt Lake"
+			"Sioux Falls Canaries" synonyms "Sioux Falls Canaries"
+			"Sioux Falls Skyforce" synonyms "Sioux Falls Skyforce"
+			"Spokane Indians" synonyms "Spokane Indians"
+			"St. Louis Blues" synonyms "St. Louis Blues"
+			"Tampa Bay Rowdies" synonyms "Tampa Bay Rowdies"
+			"Toledo Mud Hens" synonyms "Toledo Mud Hens"
+			"Toronto Raptors" synonyms "Toronto Raptors"
+			"Vancouver Whitecaps FC 2" synonyms "Vancouver Whitecaps FC 2"
+			"Washington Mystics" synonyms "Washington Mystics"
+			"Washington Redskins" synonyms "Washington Redskins"
+			"Western New York Flash" synonyms "Western New York Flash"
+			"Wichita Falls Nighthawks" synonyms "Wichita Falls Nighthawks"
+			"Wilmington Hammerheads" synonyms "Wilmington Hammerheads"
+			"Edmonton Oilers" synonyms "Edmonton Oilers"
+			"FC Dallas" synonyms "FC Dallas"
+			"Fargo-Moorhead RedHawks" synonyms "Fargo-Moorhead RedHawks"
+			"Green Bay Blizzard" synonyms "Green Bay Blizzard"
+			"Greeneville Astros" synonyms "Greeneville Astros"
+			"Helena Brewers" synonyms "Helena Brewers"
+			"Idaho Falls Chukars" synonyms "Idaho Falls Chukars"
+			"Lansing Lugnuts" synonyms "Lansing Lugnuts"
+			"Los Angeles Kings" synonyms "Los Angeles Kings"
+			"Los Angeles Sparks" synonyms "Los Angeles Sparks"
+			"Maine Red Claws" synonyms "Maine Red Claws"
+			"Minnesota United FC" synonyms "Minnesota United FC"
+			"Missoula Osprey" synonyms "Missoula Osprey"
+			"Modesto Nuts" synonyms "Modesto Nuts"
+			"Montgomery Biscuits" synonyms "Montgomery Biscuits"
+			"Montreal Royal" synonyms "Montreal Royal"
+			"New Jersey Devils" synonyms "New Jersey Devils"
+			"New Orleans Zephyrs" synonyms "New Orleans Zephyrs"
+			"New York Jets" synonyms "New York Jets"
+			"Pensacola Ice Flyers" synonyms "Pensacola Ice Flyers"
+			"Rapid City Rush" synonyms "Rapid City Rush"
+			"Rockland Boulders" synonyms "Rockland Boulders"
+			"Salina Liberty" synonyms "Salina Liberty"
+			"San Francisco Rush" synonyms "San Francisco Rush"
+			"Seattle Seahawks" synonyms "Seattle Seahawks"
+			"Wichita Wingnuts" synonyms "Wichita Wingnuts"
+			"El Paso Chihuahuas" synonyms "El Paso Chihuahuas"
+			"Florida Everblades" synonyms "Florida Everblades"
+			"Hamilton Tiger-Cats" synonyms "Hamilton Tiger-Cats"
+			"Indianapolis Colts" synonyms "Indianapolis Colts"
+			"Kansas City T-Bones" synonyms "Kansas City T-Bones"
+			"Los Angeles Aviators" synonyms "Los Angeles Aviators"
+			"Miami Heat" synonyms "Miami Heat"
+			"Minnesota Timberwolves" synonyms "Minnesota Timberwolves"
+			"New England Patriots" synonyms "New England Patriots"
+			"New York Lizards" synonyms "New York Lizards"
+			"New York Mets" synonyms "New York Mets"
+			"Oklahoma City Blue" synonyms "Oklahoma City Blue"
+			"Ontario Reign" synonyms "Ontario Reign"
+			"Ottawa Outlaws" synonyms "Ottawa Outlaws"
+			"Puerto Rico FC" synonyms "Puerto Rico FC"
+			"Rio Grande Valley FC Toros" synonyms "Rio Grande Valley FC Toros"
+			"Rochester Rattlers" synonyms "Rochester Rattlers"
+			"Roswell Invaders" synonyms "Roswell Invaders"
+			"Sacramento Kings" synonyms "Sacramento Kings"
+			"San Antonio Rampage" synonyms "San Antonio Rampage"
+			"San Antonio Stars" synonyms "San Antonio Stars"
+			"San Jose Earthquakes" synonyms "San Jose Earthquakes"
+			"Scranton/Wilkes-Barre RailRiders" synonyms "Scranton/Wilkes-Barre RailRiders"
+			"Tennessee Smokies" synonyms "Tennessee Smokies"
+			"Texas Revolution" synonyms "Texas Revolution"
+			"Texas Stars" synonyms "Texas Stars"
+			"Toronto Argonauts" synonyms "Toronto Argonauts"
+			"Watertown Wolves" synonyms "Watertown Wolves"
+			"West Michigan Ironmen" synonyms "West Michigan Ironmen"
+			"Westchester Knicks" synonyms "Westchester Knicks"
+			"Winnipeg Goldeyes" synonyms "Winnipeg Goldeyes"
+			"Delmarva Shorebirds" synonyms "Delmarva Shorebirds"
+			"Fort Lauderdale Strikers" synonyms "Fort Lauderdale Strikers"
+			"Eugene Emeralds" synonyms "Eugene Emeralds"
+			"Frisco RoughRiders" synonyms "Frisco RoughRiders"
+			"Georgia Swarm" synonyms "Georgia Swarm"
+			"Greenville Swamp Rabbits" synonyms "Greenville Swamp Rabbits"
+			"Halifax Hurricanes" synonyms "Halifax Hurricanes"
+			"Iowa Cubs" synonyms "Iowa Cubs"
+			"Major League Lacrosse" synonyms "Major League Lacrosse"
+			"Memphis Redbirds" synonyms "Memphis Redbirds"
+			"Nashville NightWatch" synonyms "Nashville NightWatch"
+			"New York Liberty" synonyms "New York Liberty"
+			"Philadelphia Flyers" synonyms "Philadelphia Flyers"
+			"Philadelphia Union" synonyms "Philadelphia Union"
+			"Québec Capitales" synonyms "Québec Capitales"
+			"Reading Fightin Phils" synonyms "Reading Fightin Phils"
+			"San Francisco 49ers" synonyms "San Francisco 49ers"
+			"Seattle Mariners" synonyms "Seattle Mariners"
+			"Seattle Sounders FC 2" synonyms "Seattle Sounders FC 2"
+			"Spokane Empire" synonyms "Spokane Empire"
+			"Sporting Kansas City" synonyms "Sporting Kansas City"
+			"St. John\'s IceCaps" synonyms "St. John\'s IceCaps"
+			"Texas Rangers" synonyms "Texas Rangers"
+			"Tulsa Oilers" synonyms "Tulsa Oilers"
+			"Utica Comets" synonyms "Utica Comets"
+			"Washington Spirit" synonyms "Washington Spirit"
+			"Washington Wizards" synonyms "Washington Wizards"
+			"Denver Nuggets" synonyms "Denver Nuggets"
+			"Elmira Jackals" synonyms "Elmira Jackals"
+			"Garden City Wind" synonyms "Garden City Wind"
+			"Gwinnett Braves" synonyms "Gwinnett Braves"
+			"Houston Astros" synonyms "Houston Astros"
+			"Indiana Pacers" synonyms "Indiana Pacers"
+			"Indianapolis AlleyCats" synonyms "Indianapolis AlleyCats"
+			"LA Galaxy" synonyms "LA Galaxy"
+			"LA Galaxy II" synonyms "LA Galaxy II"
+			"Lowell Spinners" synonyms "Lowell Spinners"
+			"Lynchburg Hillcats" synonyms "Lynchburg Hillcats"
+			"Minnesota Wild" synonyms "Minnesota Wild"
+			"Montreal Impact" synonyms "Montreal Impact"
+			"Orlando Pride" synonyms "Orlando Pride"
+			"Portland Sea Dogs" synonyms "Portland Sea Dogs"
+			"Richmond Flying Squirrels" synonyms "Richmond Flying Squirrels"
+			"Rochester Americans" synonyms "Rochester Americans"
+			"Round Rock Express" synonyms "Round Rock Express"
+			"Salem-Keizer Volcanoes" synonyms "Salem-Keizer Volcanoes"
+			"San Diego Gulls" synonyms "San Diego Gulls"
+			"San Jose Barracuda" synonyms "San Jose Barracuda"
+			"Santa Cruz Warriors" synonyms "Santa Cruz Warriors"
+			"Sioux City Bandits" synonyms "Sioux City Bandits"
+			"Tampa Bay Rays" synonyms "Tampa Bay Rays"
+			"Tennessee Titans" synonyms "Tennessee Titans"
+			"Iowa Barnstormers" synonyms "Iowa Barnstormers"
+			"Johnson City Cardinals" synonyms "Johnson City Cardinals"
+			"Joplin Blasters" synonyms "Joplin Blasters"
+			Lacrosse synonyms Lacrosse
+			"Les Canadiennes" synonyms "Les Canadiennes"
+			"London Lightning" synonyms "London Lightning"
+			"Los Angeles Dodgers" synonyms "Los Angeles Dodgers"
+			"New York Knicks" synonyms "New York Knicks"
+			"Orem Owlz" synonyms "Orem Owlz"
+			"Pawtucket Red Sox" synonyms "Pawtucket Red Sox"
+			"Philadelphia Phoenix" synonyms "Philadelphia Phoenix"
+			"Phoenix Suns" synonyms "Phoenix Suns"
+			"Seattle Cascades" synonyms "Seattle Cascades"
+			"Tampa Yankees" synonyms "Tampa Yankees"
+			"Toronto FC II" synonyms "Toronto FC II"
+			"Vancouver Whitecaps FC" synonyms "Vancouver Whitecaps FC"
+			"Washington Capitals" synonyms "Washington Capitals"
+			"West Michigan Whitecaps" synonyms "West Michigan Whitecaps"
+			"Wichita Thunder" synonyms "Wichita Thunder"
+			"Windsor Express" synonyms "Windsor Express"
+			"Dodge City Law" synonyms "Dodge City Law"
+			"Fort Myers Miracle" synonyms "Fort Myers Miracle"
+			"Fort Wayne Komets" synonyms "Fort Wayne Komets"
+			"Fresno Grizzlies" synonyms "Fresno Grizzlies"
+			"Greenville Drive" synonyms "Greenville Drive"
+			"Hagerstown Suns" synonyms "Hagerstown Suns"
+			"Indianapolis Indians" synonyms "Indianapolis Indians"
+			"Kansas City Chiefs" synonyms "Kansas City Chiefs"
+			"Mobile BayBears" synonyms "Mobile BayBears"
+			"Nashville Sounds" synonyms "Nashville Sounds"
+			"New Orleans Pelicans" synonyms "New Orleans Pelicans"
+			"New York City FC" synonyms "New York City FC"
+			"New York Rumble" synonyms "New York Rumble"
+			"Oklahoma City Thunder" synonyms "Oklahoma City Thunder"
+			"Omaha Beef" synonyms "Omaha Beef"
+			"Pensacola Blue Wahoos" synonyms "Pensacola Blue Wahoos"
+			"Raleigh Flyers" synonyms "Raleigh Flyers"
+			"River City Raiders" synonyms "River City Raiders"
+			"Santa Fe Fuego" synonyms "Santa Fe Fuego"
+			"Southern Illinois Miners" synonyms "Southern Illinois Miners"
+			"St. Catherines, Ontario" synonyms "St. Catherines, Ontario"
+			"Syracuse Crunch" synonyms "Syracuse Crunch"
+			"Tacoma Rainiers" synonyms "Tacoma Rainiers"
+			"Tampa Bay Buccaneers" synonyms "Tampa Bay Buccaneers"
+			"Tampa Bay Storm" synonyms "Tampa Bay Storm"
+			"Vancouver Canucks" synonyms "Vancouver Canucks"
+			"Vancouver Riptide" synonyms "Vancouver Riptide"
+			"Detroit Pistons" synonyms "Detroit Pistons"
+			"Edmonton Eskimos" synonyms "Edmonton Eskimos"
+			"Everett AquaSox" synonyms "Everett AquaSox"
+			"Fort Wayne Mad Ants" synonyms "Fort Wayne Mad Ants"
+			"Great Bend Boom" synonyms "Great Bend Boom"
+			"Greensboro Grasshoppers" synonyms "Greensboro Grasshoppers"
+			"Hillsboro Hops" synonyms "Hillsboro Hops"
+			"Kannapolis Intimidators" synonyms "Kannapolis Intimidators"
+			"Kansas City Phantoms" synonyms "Kansas City Phantoms"
+			"Kingsport Mets" synonyms "Kingsport Mets"
+			"Moncton Miracles" synonyms "Moncton Miracles"
+			"New York Islanders" synonyms "New York Islanders"
+			"New York Riveters" synonyms "New York Riveters"
+			"Niagara River Lions" synonyms "Niagara River Lions"
+			"Philly Force" synonyms "Philly Force"
+			"Pulaski Yankees" synonyms "Pulaski Yankees"
+			"Raptors 905" synonyms "Raptors 905"
+			"Rome Braves" synonyms "Rome Braves"
+			"Salt Lake Bees" synonyms "Salt Lake Bees"
+			"Salt Lake City Stars" synonyms "Salt Lake City Stars"
+			"San Antonio Missions" synonyms "San Antonio Missions"
+			"San Diego Padres" synonyms "San Diego Padres"
+			"San Jose Spiders" synonyms "San Jose Spiders"
+			"Seattle Rainmakers" synonyms "Seattle Rainmakers"
+			"Sioux Falls Storm" synonyms "Sioux Falls Storm"
+			"St. Louis Cardinals" synonyms "St. Louis Cardinals"
+			"Trenton Thunder" synonyms "Trenton Thunder"
+			"Vancouver Nighthawks" synonyms "Vancouver Nighthawks"
+			"Denver Broncos" synonyms "Denver Broncos"
+			"Detroit Lions" synonyms "Detroit Lions"
+			"FC Montreal" synonyms "FC Montreal"
+			"Gary SouthShore RailCats" synonyms "Gary SouthShore RailCats"
+			"Joliet Slammers" synonyms "Joliet Slammers"
+			"Lehigh Valley Phantoms" synonyms "Lehigh Valley Phantoms"
+			"Minnesota Lynx" synonyms "Minnesota Lynx"
+			"Normal CornBelters" synonyms "Normal CornBelters"
+			"Northwest Arkansas Naturals" synonyms "Northwest Arkansas Naturals"
+			"Ottawa Redblacks" synonyms "Ottawa Redblacks"
+			"Ottawa Senators" synonyms "Ottawa Senators"
+			"Peoria Rivermen" synonyms "Peoria Rivermen"
+			"Rio Grande Valley Vipers" synonyms "Rio Grande Valley Vipers"
+			"Rockford IceHogs" synonyms "Rockford IceHogs"
+			"San Antonio Spurs" synonyms "San Antonio Spurs"
+			"San Diego Breakers" synonyms "San Diego Breakers"
+			"Sky Blue FC" synonyms "Sky Blue FC"
+			"South Bend Cubs" synonyms "South Bend Cubs"
+			"Sussex County Miners" synonyms "Sussex County Miners"
+			"Swope Park Rangers" synonyms "Swope Park Rangers"
+			"Toronto Furies" synonyms "Toronto Furies"
+			"Tri-City ValleyCats" synonyms "Tri-City ValleyCats"
+			"Trois-Rivières Aigles" synonyms "Trois-Rivières Aigles"
+			"Tulsa Drillers" synonyms "Tulsa Drillers"
+			"Vallejo Admirals" synonyms "Vallejo Admirals"
+			"Windy City Bulls" synonyms "Windy City Bulls"
+			"Evansville Thunderbolts" synonyms "Evansville Thunderbolts"
+			"FC Cincinnati" synonyms "FC Cincinnati"
+			"Fayetteville FireAntz" synonyms "Fayetteville FireAntz"
+			"Fort Wayne TinCaps" synonyms "Fort Wayne TinCaps"
+			"Gateway Grizzlies" synonyms "Gateway Grizzlies"
+			"Grand Rapids Drive" synonyms "Grand Rapids Drive"
+			"Greensboro Swarm" synonyms "Greensboro Swarm"
+			"Houston Dynamo" synonyms "Houston Dynamo"
+			"Inland Empire 66ers" synonyms "Inland Empire 66ers"
+			"Jacksonville Armada FC" synonyms "Jacksonville Armada FC"
+			"Kalamazoo Wings" synonyms "Kalamazoo Wings"
+			"Lancaster JetHawks" synonyms "Lancaster JetHawks"
+			"Lehigh Valley IronPigs" synonyms "Lehigh Valley IronPigs"
+			"Liverpool football team" synonyms "Liverpool football team"
+			"Los Angeles Angels of Anaheim" synonyms "Los Angeles Angels of Anaheim"
+			"Milwaukee Admirals" synonyms "Milwaukee Admirals"
+			"Milwaukee Brewers" synonyms "Milwaukee Brewers"
+			"New Jersey Jackals" synonyms "New Jersey Jackals"
+			"Orange County Blues FC" synonyms "Orange County Blues FC"
+			"Orlando City SC" synonyms "Orlando City SC"
+			"Providence Bruins" synonyms "Providence Bruins"
+			"Quad City Mallards" synonyms "Quad City Mallards"
+			"Roanoke Rail Yard Dawgs" synonyms "Roanoke Rail Yard Dawgs"
+			"Sacramento River Cats" synonyms "Sacramento River Cats"
+			"San Antonio FC" synonyms "San Antonio FC"
+			"St. Clair Shores Fighting Saints" synonyms "St. Clair Shores Fighting Saints"
+			"Stockton Heat" synonyms "Stockton Heat"
+			"Sugar Land Skeeters" synonyms "Sugar Land Skeeters"
+			"Trinidad Triggers" synonyms "Trinidad Triggers"
+			"Tucson Roadrunners" synonyms "Tucson Roadrunners"
+			"Vancouver Stealth" synonyms "Vancouver Stealth"
+			"Washington Nationals" synonyms "Washington Nationals"
+			"Williamsport Crosscutters" synonyms "Williamsport Crosscutters"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "events.search - nextTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hi! " ,
+			"Hello! " ,
+			"Good day! " ,
+			"Greetings! "
+	}
+	text response "events.searchTxtResp1" :
+		inputs in en {
+			"Here are the results for " "You can navigate through results by saying next/previous/more about number 3. "
+	}
+	text response "events.search - select.number - noTxtResp1" :
+		inputs in en {
+			"No problem. Let me search something else for you. What events are you interested in? "
+	}
+	text response "events.search.implicitTxtResp1" :
+		inputs in en {
+			"I\'m searching for events in your location. You can navigate through results by saying next/previous/more about number 3. "
+	}
+	text response "events.search - select.number - yesTxtResp1" :
+		inputs in en {
+			"Booked. " ,
+			"I\'ve booked " [ "events.search - select.number - yes.amount" ] "ticket(s) for you. "
+	}
+	text response "events.search - bookTxtResp1" :
+		inputs in en {
+			"I\'ve booked " [ "events.search - book.amount" ] "tickets. "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+	text response "events.search - select.numberTxtResp1" :
+		inputs in en {
+			"Like it? Ready to book tickets? "
+	}
+
+flows :
+	- user1 : user "Default Welcome Intent" => bot1 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user2 : user "events.search" => bot2 : chatbot "events.searchTxtResp1" {
+		=> user3 : user "events.search - next" => bot3 : chatbot "events.search - nextTxtResp1" {
+			=> user4 : user "events.search - previous" => bot4 : chatbot "events.search - nextTxtResp1" {
+				=> user5 : user "events.search - book" => bot5 : chatbot "events.search - bookTxtResp1" ;
+				=> user6 : user "events.search - select.number" => bot6 : chatbot "events.search - select.numberTxtResp1" {
+					=> user7 : user "events.search - select.number - no" => bot7 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user8 : user "events.search - select.number - later" => bot8 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user9 : user "events.search - select.number - yes" => bot9 : chatbot "events.search - select.number - yesTxtResp1" ;
+				} ;
+				=> back to user3 ;
+				=> back to user4 ;
+			} ;
+			=> user10 : user "events.search - book" => bot10 : chatbot "events.search - bookTxtResp1" ;
+			=> user11 : user "events.search - select.number" => bot11 : chatbot "events.search - select.numberTxtResp1" {
+				=> user12 : user "events.search - select.number - no" => bot12 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user13 : user "events.search - select.number - later" => bot13 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user14 : user "events.search - select.number - yes" => bot14 : chatbot "events.search - select.number - yesTxtResp1" ;
+			} ;
+			=> back to user3 ;
+		} ;
+		=> user15 : user "events.search - previous" => bot15 : chatbot "events.search - nextTxtResp1" {
+			=> user16 : user "events.search - next" => bot16 : chatbot "events.search - nextTxtResp1" {
+				=> user17 : user "events.search - book" => bot17 : chatbot "events.search - bookTxtResp1" ;
+				=> user18 : user "events.search - select.number" => bot18 : chatbot "events.search - select.numberTxtResp1" {
+					=> user19 : user "events.search - select.number - no" => bot19 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user20 : user "events.search - select.number - later" => bot20 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user21 : user "events.search - select.number - yes" => bot21 : chatbot "events.search - select.number - yesTxtResp1" ;
+				} ;
+				=> back to user16 ;
+				=> back to user15 ;
+			} ;
+			=> user22 : user "events.search - book" => bot22 : chatbot "events.search - bookTxtResp1" ;
+			=> user23 : user "events.search - select.number" => bot23 : chatbot "events.search - select.numberTxtResp1" {
+				=> user24 : user "events.search - select.number - no" => bot24 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user25 : user "events.search - select.number - later" => bot25 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user26 : user "events.search - select.number - yes" => bot26 : chatbot "events.search - select.number - yesTxtResp1" ;
+			} ;
+			=> back to user15 ;
+		} ;
+		=> user27 : user "events.search - book" => bot27 : chatbot "events.search - bookTxtResp1" ;
+		=> user28 : user "events.search - select.number" => bot28 : chatbot "events.search - select.numberTxtResp1" {
+			=> user29 : user "events.search - select.number - no" => bot29 : chatbot "events.search - select.number - noTxtResp1" ;
+			=> user30 : user "events.search - select.number - later" => bot30 : chatbot "events.search - select.number - noTxtResp1" ;
+			=> user31 : user "events.search - select.number - yes" => bot31 : chatbot "events.search - select.number - yesTxtResp1" ;
+		} ;
+	} ;
+	- user32 : user "events.tickets.book" => bot32 : chatbot "events.searchTxtResp1" {
+		=> user33 : user "events.search - next" => bot33 : chatbot "events.search - nextTxtResp1" {
+			=> user34 : user "events.search - previous" => bot34 : chatbot "events.search - nextTxtResp1" {
+				=> user35 : user "events.search - book" => bot35 : chatbot "events.search - bookTxtResp1" ;
+				=> user36 : user "events.search - select.number" => bot36 : chatbot "events.search - select.numberTxtResp1" {
+					=> user37 : user "events.search - select.number - no" => bot37 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user38 : user "events.search - select.number - later" => bot38 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user39 : user "events.search - select.number - yes" => bot39 : chatbot "events.search - select.number - yesTxtResp1" ;
+				} ;
+				=> back to user33 ;
+				=> back to user34 ;
+			} ;
+			=> user40 : user "events.search - book" => bot40 : chatbot "events.search - bookTxtResp1" ;
+			=> user41 : user "events.search - select.number" => bot41 : chatbot "events.search - select.numberTxtResp1" {
+				=> user42 : user "events.search - select.number - no" => bot42 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user43 : user "events.search - select.number - later" => bot43 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user44 : user "events.search - select.number - yes" => bot44 : chatbot "events.search - select.number - yesTxtResp1" ;
+			} ;
+			=> back to user33 ;
+		} ;
+		=> user45 : user "events.search - previous" => bot45 : chatbot "events.search - nextTxtResp1" {
+			=> user46 : user "events.search - next" => bot46 : chatbot "events.search - nextTxtResp1" {
+				=> user47 : user "events.search - book" => bot47 : chatbot "events.search - bookTxtResp1" ;
+				=> user48 : user "events.search - select.number" => bot48 : chatbot "events.search - select.numberTxtResp1" {
+					=> user49 : user "events.search - select.number - no" => bot49 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user50 : user "events.search - select.number - later" => bot50 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user51 : user "events.search - select.number - yes" => bot51 : chatbot "events.search - select.number - yesTxtResp1" ;
+				} ;
+				=> back to user46 ;
+				=> back to user45 ;
+			} ;
+			=> user52 : user "events.search - book" => bot52 : chatbot "events.search - bookTxtResp1" ;
+			=> user53 : user "events.search - select.number" => bot53 : chatbot "events.search - select.numberTxtResp1" {
+				=> user54 : user "events.search - select.number - no" => bot54 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user55 : user "events.search - select.number - later" => bot55 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user56 : user "events.search - select.number - yes" => bot56 : chatbot "events.search - select.number - yesTxtResp1" ;
+			} ;
+			=> back to user45 ;
+		} ;
+		=> user57 : user "events.search - book" => bot57 : chatbot "events.search - bookTxtResp1" ;
+		=> user58 : user "events.search - select.number" => bot58 : chatbot "events.search - select.numberTxtResp1" {
+			=> user59 : user "events.search - select.number - no" => bot59 : chatbot "events.search - select.number - noTxtResp1" ;
+			=> user60 : user "events.search - select.number - later" => bot60 : chatbot "events.search - select.number - noTxtResp1" ;
+			=> user61 : user "events.search - select.number - yes" => bot61 : chatbot "events.search - select.number - yesTxtResp1" ;
+		} ;
+	} ;
+	- user62 : user "events.search.implicit" => bot62 : chatbot "events.search.implicitTxtResp1" {
+		=> user63 : user "events.search - next" => bot63 : chatbot "events.search - nextTxtResp1" {
+			=> user64 : user "events.search - previous" => bot64 : chatbot "events.search - nextTxtResp1" {
+				=> user65 : user "events.search - book" => bot65 : chatbot "events.search - bookTxtResp1" ;
+				=> user66 : user "events.search - select.number" => bot66 : chatbot "events.search - select.numberTxtResp1" {
+					=> user67 : user "events.search - select.number - no" => bot67 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user68 : user "events.search - select.number - later" => bot68 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user69 : user "events.search - select.number - yes" => bot69 : chatbot "events.search - select.number - yesTxtResp1" ;
+				} ;
+				=> back to user63 ;
+				=> back to user64 ;
+			} ;
+			=> user70 : user "events.search - book" => bot70 : chatbot "events.search - bookTxtResp1" ;
+			=> user71 : user "events.search - select.number" => bot71 : chatbot "events.search - select.numberTxtResp1" {
+				=> user72 : user "events.search - select.number - no" => bot72 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user73 : user "events.search - select.number - later" => bot73 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user74 : user "events.search - select.number - yes" => bot74 : chatbot "events.search - select.number - yesTxtResp1" ;
+			} ;
+			=> back to user63 ;
+		} ;
+		=> user75 : user "events.search - previous" => bot75 : chatbot "events.search - nextTxtResp1" {
+			=> user76 : user "events.search - next" => bot76 : chatbot "events.search - nextTxtResp1" {
+				=> user77 : user "events.search - book" => bot77 : chatbot "events.search - bookTxtResp1" ;
+				=> user78 : user "events.search - select.number" => bot78 : chatbot "events.search - select.numberTxtResp1" {
+					=> user79 : user "events.search - select.number - no" => bot79 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user80 : user "events.search - select.number - later" => bot80 : chatbot "events.search - select.number - noTxtResp1" ;
+					=> user81 : user "events.search - select.number - yes" => bot81 : chatbot "events.search - select.number - yesTxtResp1" ;
+				} ;
+				=> back to user76 ;
+				=> back to user75 ;
+			} ;
+			=> user82 : user "events.search - book" => bot82 : chatbot "events.search - bookTxtResp1" ;
+			=> user83 : user "events.search - select.number" => bot83 : chatbot "events.search - select.numberTxtResp1" {
+				=> user84 : user "events.search - select.number - no" => bot84 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user85 : user "events.search - select.number - later" => bot85 : chatbot "events.search - select.number - noTxtResp1" ;
+				=> user86 : user "events.search - select.number - yes" => bot86 : chatbot "events.search - select.number - yesTxtResp1" ;
+			} ;
+			=> back to user75 ;
+		} ;
+		=> user87 : user "events.search - book" => bot87 : chatbot "events.search - bookTxtResp1" ;
+		=> user88 : user "events.search - select.number" => bot88 : chatbot "events.search - select.numberTxtResp1" {
+			=> user89 : user "events.search - select.number - no" => bot89 : chatbot "events.search - select.number - noTxtResp1" ;
+			=> user90 : user "events.search - select.number - later" => bot90 : chatbot "events.search - select.number - noTxtResp1" ;
+			=> user91 : user "events.search - select.number - yes" => bot91 : chatbot "events.search - select.number - yesTxtResp1" ;
+		} ;
+	} ;
+	- user92 : user "Default Fallback Intent" => bot92 : chatbot "Default Fallback IntentTxtResp1" ;
+

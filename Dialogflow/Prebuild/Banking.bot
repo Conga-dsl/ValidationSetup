@@ -1,0 +1,419 @@
+Chatbot Banking language : en
+
+intents :
+
+	"transfer.date.check" :
+		inputs in en {
+			"when was my last transfer" ,
+			"date of my last " ( deposit ) [ type ] ,
+			"check the last " ( EFT ) [ type ] ,
+			"can you show the date of my last " ( credit ) [ type ] ,
+			"when was the last " ( credit ) [ type ] ,
+			"When was my last " ( deposit ) [ type ] "?"
+		}
+		parameters :
+			type : entity "transfer-type" ;
+
+	"transfer.money" :
+		inputs in en {
+			"I need to send " ( "2 bucks" ) [ amount ] " to " ( savings ) [ "account-to" ] " from " ( checking ) [ "account-from" ] ,
+			"send money into my " ( "savings account" ) [ "account-to" ] " from " ( checking ) [ "account-from" ] ,
+			"transfer " ( "100 dollars" ) [ amount ] " from " ( savings ) [ "account-from" ] " into " ( checking ) [ "account-to" ] ,
+			"pay for card from " ( checking ) [ "account-from" ] ,
+			"send money from " ( checking ) [ "account-from" ] " into my " ( savings ) [ "account-to" ] " account" ,
+			"I need to send " ( "2 bucks" ) [ amount ] " from " ( checking ) [ "account-from" ] " to " ( savings ) [ "account-to" ] ,
+			"send " ( "$30" ) [ amount ] " from my " ( savings ) [ "account-from" ] " account" ,
+			"can you send payment for my card" ,
+			"I want to transfer money" ,
+			"transfer money between my accounts" ,
+			"transfer to my " ( savings ) [ "account-to" ] " account " ( "$6" ) [ amount ] ,
+			"pay for the card from " ( "checking account" ) [ "account-from" ] ,
+			"can you help me send some money" ,
+			"card payment from " ( savings ) [ "account-from" ] " to " ( checking ) [ "account-to" ] ,
+			( "$5000" ) [ amount ] " should be transferred to my " ( savings ) [ "account-to" ] " account" ,
+			"transfer money" ,
+			"can you make a money transfer" ,
+			"send " ( "$2000" ) [ amount ] " from " ( savings ) [ "account-from" ] " to my " ( checking ) [ "account-from" ] " account" ,
+			"transfer money from my " ( savings ) [ "account-from" ] " account" ,
+			"i need to pay for the card from the " ( "saving account" ) [ "account-from" ] ,
+			"transfer " ( "$100" ) [ amount ] " to my " ( savings ) [ "account-to" ] " account" ,
+			"transfer money from one card to another"
+		}
+		parameters :
+			"account-from" : entity account , required , prompts in en [ "Sure. Transfer from which account?" ] ;
+			"account-to" : entity account , required , prompts in en [ "To which account?" ] ;
+			amount : entity text , required , prompts in en [ "And, how much do you want to transfer?" ] ;
+
+	"transfer.amount.check" :
+		inputs in en {
+			"check my last " ( credit ) [ type ] ,
+			"how much was my last " ( deposit ) [ type ] ,
+			"was my last " ( deposit ) [ type ] " large" ,
+			"check the amount of my last " ( credit ) [ type ]
+		}
+		parameters :
+			type : entity "transfer-type" ;
+
+	"account.earning.check" :
+		inputs in en {
+			( deposits ) [ category ] " history" ,
+			"see my latest " ( deposit ) [ category ] ,
+			"I want to see my " ( deposits ) [ category ] ,
+			"check earnings" ,
+			earnings ,
+			"can you say how much money I got " ( "last month" ) [ "date-time" ] " on my " ( "checking account" ) [ account ] ,
+			"how much money did I earn in " ( December ) [ "date-time" ] ,
+			"how much money did I earn on " ( "January 2" ) [ "date-time" ] ,
+			"check my earnings on my card" ,
+			"check earnings are on my " ( checking ) [ account ] " account" ,
+			"get info about my earnings on my card in " ( December ) [ "date-time" ]
+		}
+		parameters :
+			account : entity account , prompts in en [ "What account are we checking?" ] ;
+			"date-time" ,
+			category : entity category ;
+
+	"transfer.money - yes" :
+		inputs in en {
+			sure ,
+			"I don\'t mind" ,
+			okay ,
+			"that\'s correct" ,
+			"I agree" ,
+			ok ,
+			"of course" ,
+			"do it" ,
+			"sounds good" ,
+			yes ,
+			exactly ,
+			confirm
+	}
+
+	"transfer.sender.check" :
+		inputs in en {
+			"where was my last " ( deposit ) [ type ] " from" ,
+			"who have I got the last " ( credit ) [ type ] " from" ,
+			"who sent me the last " ( credit ) [ type ] ,
+			"who was my last " ( deposit ) [ type ] " from"
+		}
+		parameters :
+			type : entity "transfer-type" ;
+
+	"account.spending.check" :
+		inputs in en {
+			( withdrawal ) [ category ] " history" ,
+			"can I see my latest " ( withdrawals ) [ category ] ,
+			"check my spendings on " ( Marriott ) [ merchant ] " for " ( "this week" ) [ "date-time" ] ,
+			"check yesterday\'s " ( "ATM Withdrawals" ) [ category ] ,
+			"how much money did I spend on " ( shopping ) [ category ] " in " ( December ) [ "date-time" ] ,
+			"have I spent a lot at " ( "Hyatt London" ) [ merchant ] "?" ,
+			"check my " ( travel ) [ category ] " spendings" ,
+			"check how much money did I spend on " ( taxes ) [ category ] " in " ( December ) [ "date-time" ] " on my " ( checking ) [ account ] " account" ,
+			"How much did I spend on " ( Travel ) [ category ] " in " ( January ) [ "date-time" ] "?" ,
+			"how much did i spend on " ( Utilities ) [ category ] " at " ( "PG&E" ) [ merchant ] ,
+			"tell me how much did I spend on " ( restaurants ) [ category ] " " ( "this weekend" ) [ "date-time" ] ,
+			"Did I pay for something at " ( Amazon ) [ merchant ] "?" ,
+			"I want to see withdrawals for  " ( "January 3, 2017" ) [ "date-time" ] ,
+			"How much money did I spend " ( yesterday ) [ "date-time" ] "?" ,
+			"How much did I spend in " ( Starbucks ) [ merchant ] "?"
+		}
+		parameters :
+			merchant : entity merchant ;
+			account : entity account , prompts in en [ "What account are we checking?" ] ;
+			category : entity category ;
+			"date-time" : entity text ;
+
+	"Default Welcome Intent" :
+		inputs in en {
+			whatsup ,
+			yo ,
+			welcome ,
+			^hi ,
+			hello ,
+			hey ,
+			"what\'s up"
+	}
+
+	"account.open" :
+		inputs in en {
+			"what are the steps for opening account" ,
+			"account opening" ,
+			"open an account" ,
+			"I want to open an account" ,
+			"how do I open an account"
+	}
+
+	"payment.due_date" :
+		inputs in en {
+			"When is the payment due?" ,
+			"when is the payment due on the my card" ,
+			"what are payments deadlines" ,
+			"show due dates for my cards" ,
+			"what is the payment due date" ,
+			"due date for the payment" ,
+			"can you check my payment due date for my credit card" ,
+			"please check my payments deadlines" ,
+			"check the payment due date" ,
+			"check due date for the payment on my card"
+	}
+
+	"transfer.money - no" :
+		inputs in en {
+			"I disagree" ,
+			"I don\'t think so" ,
+			"I don\'t want that" ,
+			"don\'t do it" ,
+			"not really" ,
+			"definitely not" ,
+			^no ,
+			"thanks but no" ,
+			"not interested"
+	}
+
+	"account.balance.check" :
+		inputs in en {
+			"check my " ( "credit card" ) [ account ] " balance" ,
+			balance ,
+			"check my " ( savings ) [ account ] " account" ,
+			"what\'s the balance in my " ( savings ) [ account ] " account" ,
+			"show available money on my " ( checking ) [ account ] " account" ,
+			"how much money is available on my bank account" ,
+			"check how much money do i have" ,
+			"how much money do I have on the card" ,
+			"check my balance" ,
+			"can you show balance on the card" ,
+			"check money on my card" ,
+			"show balance" ,
+			"check my account"
+		}
+		parameters :
+			account : entity account , required , prompts in en [ "Balance for which savings or checking?" , "What account do you want the balance for: savings or checking?" ] ;
+
+	"account.balance.check - context: account" :
+		inputs in en {
+			"and for savings" ,
+			"how about " ( checking ) [ account ] ,
+			"and " ( savings ) [ account ] ,
+			"can you check my " ( savings ) [ account ] " as well" ,
+			"check " ( checking ) [ account ] " too"
+		}
+		parameters :
+			account : entity account ;
+
+	"account.balance.check - context: balance" :
+		inputs in en {
+			"how much money" ,
+			"check how much" ,
+			"check how much money" ,
+			"how much" ,
+			"tell me how much money there is"
+		}
+		parameters :
+			account : entity account ;
+
+	"account.earning.check - context: earning - date" :
+		inputs in en {
+			"Check " ( "January 1" ) [ ^date ] "." ,
+			"and " ( "January 2" ) [ ^date ] ,
+			"check " ( "January 1" ) [ ^date ] " too" ,
+			"what about " ( "December 30" ) [ ^date ]
+		}
+		parameters :
+			^date : entity date ;
+			account : entity account ;
+
+	"account.spending.check - context: spending - date" :
+		inputs in en {
+			"and on " ( "1/5/2017" ) [ ^date ] ,
+			"Check " ( "January 1" ) [ ^date ] "." ,
+			"what about " ( "January 2, 2017" ) [ ^date ]
+		}
+		parameters :
+			^date : entity date ;
+			account : entity account ;
+			merchant : entity merchant ;
+
+	"Default Fallback Intent" Fallback :
+		inputs in en {
+			"check weather today"
+	}
+
+entities :
+	Simple entity merchant :
+		inputs in en {
+			"7-Eleven" synonyms "7-Eleven"
+			ARCO synonyms ARCO
+			"Acme Payroll" synonyms "Acme Payroll"
+			Amazon synonyms Amazon
+			"Belle Tire" synonyms "Belle Tire"
+			"Burger King" synonyms "Burger King"
+			"H&M" synonyms "H&M"
+			"Hyatt London" synonyms "Hyatt London"
+			"Marks & Spencer" synonyms "Marks & Spencer"
+			"Marriot Paris" synonyms "Marriot Paris"
+			"PG&E" synonyms "PG&E"
+			"Papa John\'s Pizza" synonyms "Papa John\'s Pizza"
+			Shell synonyms Shell
+			Starbucks synonyms Starbucks
+	}
+	Simple entity "transfer-type" :
+		inputs in en {
+			Credit synonyms credit
+			Deposit synonyms deposit
+			EFT synonyms EFT
+	}
+	Simple entity category :
+		inputs in en {
+			"ATM Withdrawals" synonyms "ATM Withdrawals"
+			Auto synonyms Auto , Car
+			Deposits synonyms deposit , deposits
+			Payroll synonyms Payroll
+			Restaurants synonyms "Eating Out" , Restaurants
+			Shopping synonyms Shopping
+			Taxes synonyms Taxes
+			Travel synonyms Travel
+			Utilities synonyms Utilities
+			Withdrawals synonyms withdrawal , withdrawals
+	}
+	Simple entity account :
+		inputs in en {
+			"checking account" synonyms checking , "checking account"
+			"credit card" synonyms "credit card"
+			"savings account" synonyms savings , "savings account"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+		headers : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "transfer.date.checkTxtResp1" :
+		inputs in en {
+			"Your last incoming transfer was on: "
+	}
+	text response "transfer.moneyTxtResp1" :
+		inputs in en {
+			"All right. So, you\'re transferring " [ "transfer.money.amount" ] "from your " [ "transfer.money.account-from" ] "to a " "Is that right? "
+	}
+	text response "transfer.amount.checkTxtResp1" :
+		inputs in en {
+			"The last transfer into your account was: "
+	}
+	text response "account.earning.checkTxtResp1" :
+		inputs in en {
+			"Here are your deposit transactions: "
+	}
+	text response "transfer.money - yesTxtResp1" :
+		inputs in en {
+			"Okay, I have processed your transfer. Your confirmation number is: "
+	}
+	text response "transfer.sender.checkTxtResp1" :
+		inputs in en {
+			"Your last deposit was by: "
+	}
+	text response "account.spending.checkTxtResp1" :
+		inputs in en {
+			"Here are your withdrawals: "
+	}
+	text response "Default Welcome IntentTxtResp1" :
+		inputs in en {
+			"Hello. Welcome to ACME Bank. " ,
+			"Hello, thanks for choosing ACME Bank. "
+	}
+	text response "account.openTxtResp1" :
+		inputs in en {
+			"To open your account you should come to one of our banks in person. Don\'t forget to bring your ID. "
+	}
+	text response "payment.due_dateTxtResp1" :
+		inputs in en {
+			"The due date is: "
+	}
+	text response "transfer.money - noTxtResp1" :
+		inputs in en {
+			"Sorry. Can you repeat your transfer request? "
+	}
+	text response "account.balance.checkTxtResp1" :
+		inputs in en {
+			"Here\'s your latest balance: "
+	}
+	text response "account.balance.check - context: accountTxtResp1" :
+		inputs in en {
+			"Here\'s the balance for this account: "
+	}
+	text response "account.balance.check - context: balanceTxtResp1" :
+		inputs in en {
+			"This is your latest balance: "
+	}
+	text response "account.earning.check - context: earning - dateTxtResp1" :
+		inputs in en {
+			"Here are your deposits for that date: "
+	}
+	text response "account.spending.check - context: spending - dateTxtResp1" :
+		inputs in en {
+			"Here are your withdrawals for that date: "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"Sorry, I didn’t get that. " ,
+			"I\'m afraid I don\'t understand. " ,
+			"Sorry, say that again? " ,
+			"Sorry, can you say that again? " ,
+			"I didn\'t get that. Can you say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you tell me again? " ,
+			"Sorry, tell me one more time? " ,
+			"Sorry, can you say that again? "
+	}
+
+flows :
+	- user1 : user "transfer.date.check" => bot1 : chatbot HttpRequest , HttpResponse , "transfer.date.checkTxtResp1" ;
+	- user2 : user "transfer.money" => bot2 : chatbot "transfer.moneyTxtResp1" {
+		=> user3 : user "transfer.money - yes" => bot12 : chatbot "transfer.money - yesTxtResp1" ;
+		=> user4 : user "transfer.money - no" => bot13 : chatbot "transfer.money - noTxtResp1" ;
+		=> user5 : user "account.balance.check - context: account" => bot7 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: accountTxtResp1" {
+			=> user6 : user "transfer.money - yes" => bot8 : chatbot "transfer.money - yesTxtResp1" ;
+			=> user7 : user "transfer.money - no" => bot9 : chatbot "transfer.money - noTxtResp1" ;
+			=> user8 : user "account.balance.check - context: balance" => bot10 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: balanceTxtResp1" ;
+			=> back to user5 ;
+		} ;
+		=> user9 : user "account.balance.check - context: balance" => bot11 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: balanceTxtResp1" ;
+	} ;
+	- user10 : user "transfer.amount.check" => bot14 : chatbot HttpRequest , HttpResponse , "transfer.amount.checkTxtResp1" ;
+	- user11 : user "account.earning.check" => bot15 : chatbot HttpRequest , HttpResponse , "account.earning.checkTxtResp1" {
+		=> user12 : user "account.earning.check - context: earning - date" => bot16 : chatbot HttpRequest , HttpResponse , "account.earning.check - context: earning - dateTxtResp1" ;
+	} ;
+	- user13 : user "transfer.sender.check" => bot17 : chatbot HttpRequest , HttpResponse , "transfer.sender.checkTxtResp1" ;
+	- user14 : user "account.spending.check" => bot18 : chatbot HttpRequest , HttpResponse , "account.spending.checkTxtResp1" {
+		=> user15 : user "account.spending.check - context: spending - date" => bot19 : chatbot HttpRequest , HttpResponse , "account.spending.check - context: spending - dateTxtResp1" ;
+	} ;
+	- user16 : user "Default Welcome Intent" => bot20 : chatbot "Default Welcome IntentTxtResp1" ;
+	- user17 : user "account.open" => bot21 : chatbot "account.openTxtResp1" ;
+	- user18 : user "payment.due_date" => bot22 : chatbot HttpRequest , HttpResponse , "payment.due_dateTxtResp1" {
+		=> user19 : user "transfer.money - yes" => bot23 : chatbot "transfer.money - yesTxtResp1" ;
+		=> user20 : user "transfer.money - no" => bot24 : chatbot "transfer.money - noTxtResp1" ;
+		=> user21 : user "account.balance.check - context: account" => bot25 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: accountTxtResp1" {
+			=> user22 : user "transfer.money - yes" => bot26 : chatbot "transfer.money - yesTxtResp1" ;
+			=> user23 : user "transfer.money - no" => bot27 : chatbot "transfer.money - noTxtResp1" ;
+			=> user24 : user "account.balance.check - context: balance" => bot28 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: balanceTxtResp1" ;
+			=> back to user21 ;
+		} ;
+		=> user25 : user "account.balance.check - context: balance" => bot29 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: balanceTxtResp1" ;
+	} ;
+	- user26 : user "account.balance.check" => bot30 : chatbot "account.balance.checkTxtResp1" {
+		=> user27 : user "transfer.money - yes" => bot31 : chatbot "transfer.money - yesTxtResp1" ;
+		=> user28 : user "transfer.money - no" => bot32 : chatbot "transfer.money - noTxtResp1" ;
+		=> user29 : user "account.balance.check - context: account" => bot33 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: accountTxtResp1" {
+			=> user30 : user "transfer.money - yes" => bot34 : chatbot "transfer.money - yesTxtResp1" ;
+			=> user31 : user "transfer.money - no" => bot35 : chatbot "transfer.money - noTxtResp1" ;
+			=> user32 : user "account.balance.check - context: balance" => bot36 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: balanceTxtResp1" ;
+			=> back to user29 ;
+		} ;
+		=> user33 : user "account.balance.check - context: balance" => bot37 : chatbot HttpRequest , HttpResponse , "account.balance.check - context: balanceTxtResp1" ;
+	} ;
+	- user34 : user "Default Fallback Intent" => bot38 : chatbot "Default Fallback IntentTxtResp1" ;
+

@@ -1,0 +1,423 @@
+Chatbot Alarm language : en
+
+intents :
+
+	"alarm.change" :
+		inputs in en {
+			"edit the wake up call song to " ( "Yellow Submarine" ) [ song ] ,
+			"change the alarm music" ,
+			"move my alarm from " ( Friday ) [ "date-from" ] " " ( "6 pm" ) [ "time-from" ] " to " ( Saturday ) [ "date-to" ] " " ( "7 pm" ) [ "time-to" ] ,
+			"move my " ( "4:00 am" ) [ "time-from" ] " alarm to " ( "5:30" ) [ "time-to" ] ,
+			"how can I change the wake up music" ,
+			"rename my " ( Gym ) [ "alarm-name" ] " alarm to " ( Sports ) [ "alarm-name-to" ] ,
+			"how can I modify my " ( daily ) [ "recurrence-from" ] " alarm" ,
+			"I\'d like to reschedule " ( all ) [ all ] " my alarms" ,
+			"change " ( all ) [ all ] " my alarms" ,
+			"move my " ( Gym ) [ "alarm-name" ] " alarm to " ( "10 pm" ) [ "time-to" ] ,
+			"change the " ( "8:45" ) [ "time-from" ] " alarm music to " ( "Yellow Submarine" ) [ song ] ,
+			"change my " ( daily ) [ "recurrence-from" ] " alarm recurrence to " ( "every Sunday" ) [ "recurrence-to" ] ,
+			"could you move my alarm from " ( Friday ) [ "date-from" ] " to " ( Saturday ) [ "date-to" ] ,
+			"could you change the " ( "8:30" ) [ "time-from" ] " alarm" ,
+			"I need to change my " ( "5 am" ) [ "time-from" ] " alarm to " ( "7 am" ) [ "time-to" ] ,
+			"I\'d like to customize my alarm" ,
+			"change " ( "6 am" ) [ "time-from" ] " alarm to " ( "7 am" ) [ "time-to" ] ,
+			"reschedule an alarm" ,
+			"edit my " ( "6:10" ) [ "time-from" ] " alarm" ,
+			"edit " ( "every Monday" ) [ "recurrence-from" ] " alarm to " ( "every Tuesday" ) [ "recurrence-to" ] ,
+			"I\'d like to customize my " ( "07:45" ) [ "time-from" ] " alarm" ,
+			"manage alarms" ,
+			"edit the wake up time" ,
+			"change my alarm to " ( "3 pm" ) [ "time-to" ] ,
+			"I\'d like to change my alarm to " ( "8:30 am" ) [ "time-to" ] ,
+			"reschedule the " ( "6 pm" ) [ "time-from" ] " alarm to " ( "7 pm" ) [ "time-to" ] ,
+			"reschedule my " ( daily ) [ "recurrence-from" ] " alarm to " ( "every Monday" ) [ "recurrence-to" ] " at " ( "9 am" ) [ "time-to" ] ,
+			"edit alarm" ,
+			"change my " ( Tuesday ) [ "date-from" ] " alarm" ,
+			"edit the ringtone for my alarm" ,
+			"edit my alarm for " ( tomorrow ) [ "date-from" ] ,
+			"rename my " ( Work ) [ "alarm-name" ] " alarm"
+		}
+		parameters :
+			"date-from" : entity date ;
+			"date-to" : entity date ;
+			"time-from" : entity time ;
+			"time-to" : entity time ;
+			"recurrence-from" : entity recurrence ;
+			"recurrence-to" : entity recurrence ;
+			"alarm-name" ,
+			"alarm-name-to" ,
+			song : entity song ;
+			all : entity all ;
+
+	"alarm.remove" :
+		inputs in en {
+			"don\'t wake me up on " ( Mondays ) [ recurrence ] ,
+			"remove " ( "6 am" ) [ ^time ] " alarm" ,
+			"remove my alarms for the " ( morning ) [ "time-period" ] ,
+			"turn off my " ( weekly ) [ recurrence ] " alarm" ,
+			"remove my alarms set for " ( "8 am" ) [ ^time ] ,
+			"remove alarm" ,
+			"don\'t wake me up at " ( "5 am" ) [ ^time ] " " ( "next week" ) [ "date-period" ] ,
+			"remove " ( all ) [ all ] " my alarms" ,
+			"I\'d like to remove my alarms" ,
+			"remove alarms for " ( tomorrow ) [ ^date ] " at " ( "9" ) [ ^time ] ,
+			"turn off the alarm for " ( "10 am" ) [ ^time ] ,
+			"I\'d like to turn off the " ( weekly ) [ recurrence ] " alarm at " ( "10 am" ) [ ^time ] ,
+			"turn off alarms" ,
+			"cancel " ( "8 pm" ) [ ^time ] " alarm " ( tomorrow ) [ ^date ] ,
+			"could you erase my alarms list" ,
+			"can you remove my " ( "6 am" ) [ ^time ] " alarm please" ,
+			"disable my " ( Work ) [ "alarm-name" ] " alarm" ,
+			"switch off my alarms for " ( tomorrow ) [ ^date ] ,
+			"remove " ( all ) [ all ] " my alarms at " ( "8 am" ) [ ^time ] ,
+			"clear the alarms list for " ( "next week" ) [ "date-period" ] ,
+			"delete the alarm called " ( Gym ) [ "alarm-name" ] ,
+			"turn off " ( all ) [ all ] " my alarms" ,
+			"erase the list of " ( all ) [ all ] " my alarms"
+		}
+		parameters :
+			"alarm-name" ,
+			^time : entity time ;
+			"time-period" ,
+			^date : entity date ;
+			"date-period" ,
+			all : entity all ;
+			recurrence : entity recurrence ;
+
+	"alarm.remove - context:alarm-remove" :
+		inputs in en {
+			"remove " ( all ) [ all ] " of them" ,
+			"remove for " ( "7 am" ) [ ^time ] ,
+			"the one for " ( Saturday ) [ ^date ] " too" ,
+			"delete " ( all ) [ all ] ,
+			"erase for " ( "every Monday" ) [ recurrence ] " too" ,
+			"now the one for " ( "9 pm" ) [ ^time ] ,
+			"turn off the one for " ( "every Sunday" ) [ recurrence ]
+		}
+		parameters :
+			^time : entity time ;
+			^date : entity date ;
+			recurrence : entity recurrence ;
+			all : entity all ;
+
+	"alarm.set - context:alarm - comment:another one" :
+		inputs in en {
+			"another one" ,
+			"set another one for " ( "every day" ) [ recurrence ] ,
+			"set another one" ,
+			"another for " ( "every Monday" ) [ recurrence ] ,
+			"another one for " ( "10 am" ) [ ^time ] ,
+			"and for " ( Sunday ) [ ^date ] " at " ( "8 am" ) [ ^time ] ,
+			"another one for " ( tomorrow ) [ ^date ]
+		}
+		parameters :
+			^date : entity date ;
+			^time : entity time ;
+			recurrence : entity recurrence ;
+
+	"alarm.change - context:alarm-change" :
+		inputs in en {
+			"from " ( "next Sunday" ) [ "date-from" ] " to " ( "this Sunday" ) [ "date-to" ] ,
+			"change it" ,
+			"from " ( "5:45" ) [ "time-from" ] " to " ( "5:30" ) [ "time-to" ] " " ( "every weekday" ) [ "recurrence-to" ] ,
+			"change it from " ( Tuesday ) [ "date-from" ] " to " ( Wednesday ) [ "date-to" ] " from " ( "11 am" ) [ "time-from" ] " to " ( "10 am" ) [ "time-to" ] ,
+			"change it to " ( "All of me" ) [ song ] ,
+			"to " ( daily ) [ "recurrence-to" ] " from " ( weekdays ) [ "recurrence-from" ] " only" ,
+			"change it to " ( Wednesday ) [ "date-to" ] " from " ( Friday ) [ "date-from" ] ,
+			"to " ( "Shape Of You" ) [ song ] ,
+			"no the one on " ( Monday ) [ "date-from" ] ,
+			"from " ( Tuesday ) [ "date-from" ] " to " ( Monday ) [ "date-to" ] ,
+			"to " ( "10 am" ) [ "time-to" ] ,
+			"no to " ( "10 am" ) [ "time-to" ] ,
+			"to " ( "every weekend" ) [ "recurrence-to" ] ,
+			"and from " ( "10 am" ) [ "time-from" ] " to " ( "9 am" ) [ "time-to" ] ,
+			"the one at " ( "10 am" ) [ "time-from" ] ,
+			"from " ( weekdays ) [ "recurrence-from" ] " to " ( "every day" ) [ "recurrence-to" ]
+		}
+		parameters :
+			"time-from" : entity time ;
+			"time-to" : entity time ;
+			"date-from" : entity date ;
+			"date-to" : entity date ;
+			"recurrence-from" : entity recurrence ;
+			"recurrence-to" : entity recurrence ;
+			song : entity song ;
+
+	"alarm.set - context:alarm - comment:recurrence" :
+		inputs in en {
+			"set it for " ( "every Friday" ) [ recurrence ] ,
+			"repeat it " ( "every day" ) [ recurrence ] ,
+			"I need it to be repeated " ( "every Monday" ) [ recurrence ]
+		}
+		parameters :
+			recurrence : entity recurrence ;
+
+	"alarm.check" :
+		inputs in en {
+			"show me " ( all ) [ all ] " my alarms" ,
+			"check " ( all ) [ all ] " my alarms" ,
+			"is my " ( weekly ) [ recurrence ] " alarm set" ,
+			"my alarms" ,
+			"show my alarms for " ( tomorrow ) [ ^date ] ,
+			"is my alarm set" ,
+			( all ) [ all ] " my alarms" ,
+			"is my " ( Work ) [ "alarm-name" ] " alarm on" ,
+			"what time did you set the alarm for" ,
+			"is my " ( daily ) [ recurrence ] " alarm set for " ( "10 am" ) [ ^time ] ,
+			"my alarms set for " ( "8 am" ) [ ^time ] ,
+			"did you set that alarm for " ( "6:30" ) [ ^time ] ,
+			"for what time do I have my alarm set" ,
+			"check alarms at " ( "9:30 pm" ) [ ^time ] ,
+			"pull up the list of " ( all ) [ all ] " my alarms" ,
+			"how many alarms do I have for the " ( morning ) [ "time-period" ] ,
+			"show my alarm called " ( Gym ) [ "alarm-name" ] ,
+			"do I have any alarms set" ,
+			"do I have any alarms set for " ( "June 22" ) [ ^date ] ,
+			"check my alarm for " ( "6 am" ) [ ^time ] ,
+			"show my alarms" ,
+			"alarms list" ,
+			"I\'d like to see my alarms" ,
+			"at what time do you wake me up on " ( Mondays ) [ recurrence ] ,
+			"alarms list for " ( "next week" ) [ "date-period" ] ,
+			"did you set the alarm for " ( "10 am" ) [ ^time ] ,
+			"I\'d like to see my " ( daily ) [ recurrence ] " alarms" ,
+			"what time is my alarm set for" ,
+			"do I have any alarms " ( tomorrow ) [ ^date ] " at " ( "9" ) [ ^time ]
+		}
+		parameters :
+			"alarm-name" ,
+			^time : entity time ;
+			"time-period" ,
+			^date : entity date ;
+			"date-period" ,
+			recurrence : entity recurrence ;
+			all : entity all ;
+
+	"alarm.set" :
+		inputs in en {
+			"wake me up " ( "every day" ) [ recurrence ] " at " ( "6" ) [ ^time ] ,
+			"new alarm called " ( Gym ) [ "alarm-name" ] " for " ( weekdays ) [ recurrence ] " at " ( "10" ) [ ^time ] ,
+			"set alarm at " ( "8 am" ) [ ^time ] " in the morning" ,
+			"I need an alarm set for " ( weekdays ) [ recurrence ] " at " ( "4 am" ) [ ^time ] ,
+			"wake me up with " ( "Cool Girl" ) [ song ] " song" ,
+			"could you set an alarm for " ( "6 am" ) [ ^time ] ,
+			"set alarm for " ( "10 am" ) [ ^time ] " " ( tomorrow ) [ ^date ] ,
+			"could you set an alarm for " ( "every Monday" ) [ recurrence ] " at " ( "9 am" ) [ ^time ] ,
+			"wake me up" ,
+			"set new alarm for " ( "9 am" ) [ ^time ] " on " ( Wednesday ) [ ^date ] ,
+			"set new alarm for " ( "10 pm" ) [ ^time ] ,
+			"alarm for " ( tomorrow ) [ ^date ] " at " ( "8 pm" ) [ ^time ] ,
+			"alarm for " ( "9 am" ) [ ^time ] ,
+			"I\'d like to set an alarm at " ( "7 am" ) [ ^time ] " " ( "every weekend" ) [ recurrence ] ,
+			"I want to wake " ( "every day" ) [ recurrence ] " at " ( "7 am" ) [ ^time ] " with " ( Jazz ) [ genre ] " music" ,
+			"could you set an alarm" ,
+			"set an alarm" ,
+			"wake me up at " ( "8" ) [ ^time ] " " ( "every day" ) [ recurrence ] ,
+			"new alarm called " ( Gym ) [ "alarm-name" ] ,
+			"wake me up " ( "in 8 hours" ) [ ^time ] " with " ( "Let It Be" ) [ song ] " by " ( "The Beatles" ) [ artist ] ,
+			"new alarm" ,
+			alarm ,
+			"I\'d like to set an alarm for " ( "7 pm" ) [ ^time ] ,
+			"set alarm " ( Work ) [ "alarm-name" ] " " ( tomorrow ) [ ^date ] " at " ( "9 pm" ) [ ^time ] ,
+			"wake me up at " ( "9 am" ) [ ^time ]
+		}
+		parameters :
+			"alarm-name" ,
+			^time : entity time ;
+			^date : entity date ;
+			recurrence : entity recurrence ;
+			song : entity song ;
+			artist ,
+			genre : entity text ;
+
+	"Default Fallback Intent" Fallback :
+		inputs in en {
+			"reschedule the meeting for me" ,
+			"edit the ringtone on my phone" ,
+			"change the music" ,
+			"play Let It Be by The Beatles" ,
+			"what a beautiful morning" ,
+			"waking up in the morning is so hard" ,
+			"play a song for me" ,
+			"I didn\'t want an alarm"
+	}
+
+	"alarm.check - context:alarm-check" :
+		inputs in en {
+			"check " ( all ) [ all ] ,
+			"for " ( "every day" ) [ recurrence ] " as well" ,
+			"and for " ( "every Monday" ) [ recurrence ] ,
+			"and the one for " ( tomorrow ) [ ^date ] ,
+			"and for " ( "9 am" ) [ ^time ]
+		}
+		parameters :
+			^date : entity date ;
+			^time : entity time ;
+			recurrence : entity recurrence ;
+			all : entity all ;
+
+entities :
+	Simple entity all :
+		inputs in en {
+			^true synonyms all , "all of" , each , every , everything , everywhere
+	}
+	Simple entity recurrence :
+		inputs in en {
+			Fridays synonyms Fridays , "each Friday" , "every Friday"
+			Mondays synonyms Mondays , "each Monday" , "every Monday"
+			"Mondays, Tuesdays" synonyms "Mondays, Tuesdays" , "every Monday and Tuesday" , "every Monday and every Tuesday" , "on Mondays and Tuesdays"
+			"Mondays, Tuesdays, Wednesdays" synonyms "Mondays, Tuesdays, Wednesdays" , "every Monday, Tuesday and Wednesday" , "on Mondays, Tuesdays and Wednesdays"
+			"Mondays, Tuesdays, Wednesdays, Thursdays" synonyms "Mondays, Tuesdays, Wednesdays, Thursdays" , "every Monday, Tuesday, Wednesday and Thursday" , "on Mondays, Tuesdays, Wednesdays and Thursdays"
+			"Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays" synonyms "Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays" , "every day except Sundays"
+			Saturdays synonyms Saturdays , "each Saturday" , "every Saturday" , "for saturdays"
+			Sundays synonyms Sundays , "each Sunday" , "every Sunday"
+			Thursdays synonyms Thursdays , "each Thursday" , "every Thursday"
+			Tuesdays synonyms Tuesdays , "each Tuesday" , "every Tuesday"
+			Wednesdays synonyms Wednesdays , "each Wednesday" , "every Wednesday"
+			"every day" synonyms daily , "each weekend" , "each morning" , "every day" , "every morning" , everyday
+			"every month" synonyms "every month"
+			weekdays synonyms Weekdays , "every weekday" , "every workday" , "monday to friday" , "on weekdays" , "only on weeekdays" , "week days" , "work days" , workday , workdays , "working days"
+			weekends synonyms Weekends , "every weekend" , "only on weekends"
+			weekly synonyms weekly
+	}
+	Simple entity song :
+		inputs in en {
+			"7 Years" synonyms "7 Years"
+			"A Thousand Years" synonyms "A Thousand Years"
+			"All I Ask" synonyms "All I Ask"
+			"All I Want" synonyms "All I Want"
+			"All Of Me" synonyms "All Of Me"
+			"Boulevard Of Broken Dreams Acoustic" synonyms "Boulevard Of Broken Dreams Acoustic"
+			"Cant Help Falling In Love With You" synonyms "Cant Help Falling In Love With You"
+			"Castle On The Hill" synonyms "Castle On The Hill"
+			"Chasing Cars" synonyms "Chasing Cars"
+			"City Of Stars" synonyms "City Of Stars"
+			"City Of Stars Acoustic" synonyms "City Of Stars Acoustic"
+			Closer synonyms Closer
+			"Counting Stars" synonyms "Counting Stars"
+			Creep synonyms Creep
+			"Dancing On My Own" synonyms "Dancing On My Own"
+			"Dont Look Back In Anger" synonyms "Dont Look Back In Anger"
+			Faded synonyms Faded
+			"Fix You Acoustic" synonyms "Fix You Acoustic"
+			"Good Riddance Time Of Your Life" synonyms "Good Riddance Time Of Your Life"
+			Hallelujah synonyms Hallelujah
+			Halo synonyms Halo
+			Heathens synonyms Heathens
+			Hello synonyms Hello
+			"Hey Jude" synonyms "Hey Jude"
+			"Hey Soul Sister" synonyms "Hey Soul Sister"
+			"Hey There Delilah" synonyms "Hey There Delilah"
+			"Hotel California" synonyms "Hotel California"
+			"House Of The Rising Sun" synonyms "House Of The Rising Sun"
+			"How Far Ill Go" synonyms "How Far Ill Go"
+			"How Would You Feel" synonyms "How Would You Feel"
+			Human synonyms Human
+			Hurt synonyms Hurt
+			"I Dont Wanna Live Forever" synonyms "I Dont Wanna Live Forever"
+			"I See Fire" synonyms "I See Fire"
+			"I Wont Give Up" synonyms "I Wont Give Up"
+			"Im Not The Only One" synonyms "Im Not The Only One"
+			"Im Yours" synonyms "Im Yours"
+			Imagine synonyms Imagine
+			Iris synonyms Iris
+			Jolene synonyms Jolene
+			"La La Land - Audition The Fools Who Dream" synonyms "La La Land - Audition The Fools Who Dream"
+			"Let Her Go" synonyms "Let Her Go"
+			"Let It Be" synonyms "Let It Be"
+			"Let It Go" synonyms "Let It Go"
+			"Lost Boy Acoustic" synonyms "Lost Boy Acoustic"
+			Love synonyms Love
+			"Love On The Brain" synonyms "Love On The Brain"
+			"Love Yourself" synonyms "Love Yourself"
+			"Make You Feel My Love" synonyms "Make You Feel My Love"
+			Mercy synonyms Mercy
+			"Million Reasons" synonyms "Million Reasons"
+			"More Than Words" synonyms "More Than Words"
+			"Nothing Else Matters" synonyms "Nothing Else Matters"
+			"One Call Away" synonyms "One Call Away"
+			Photograph synonyms Photograph
+			Radioactive synonyms Radioactive
+			"Redemption Song" synonyms "Redemption Song"
+			Riptide synonyms Riptide
+			Rockabye synonyms Rockabye
+			"Say Something" synonyms "Say Something"
+			"Say You Wont Let Go" synonyms "Say You Wont Let Go"
+			"Shape Of You" synonyms "Shape Of You"
+			"Skinny Love" synonyms "Skinny Love"
+			"Someone Like You" synonyms "Someone Like You"
+			"Something Just Like This" synonyms "Something Just Like This"
+			"Somewhere Over The Rainbow" synonyms "Somewhere Over The Rainbow"
+			"Sound Of Silence" synonyms "Sound Of Silence"
+			"Stairway To Heaven" synonyms "Stairway To Heaven"
+			Starving synonyms Starving
+			"Stay With Me" synonyms "Stay With Me"
+			Stitches synonyms Stitches
+			"Surat Cinta Untuk Starla" synonyms "Surat Cinta Untuk Starla"
+			"Sweater Weather" synonyms "Sweater Weather"
+			"Sweet Child O Mine" synonyms "Sweet Child O Mine"
+			"The A Team" synonyms "The A Team"
+			"The Scientist Acoustic" synonyms "The Scientist Acoustic"
+			"Thinking Out Loud" synonyms "Thinking Out Loud"
+			"This Town" synonyms "This Town"
+			"Treat You Better" synonyms "Treat You Better"
+			"Under The Bridge" synonyms "Under The Bridge"
+			"Versace On The Floor" synonyms "Versace On The Floor"
+			"We Dont Talk Anymore" synonyms "We Dont Talk Anymore"
+			"When I Was Your Man" synonyms "When I Was Your Man"
+			"When We Were Young" synonyms "When We Were Young"
+			"Wish You Were Here" synonyms "Wish You Were Here"
+			Wonderwall synonyms Wonderwall
+			"Yellow Acoustic" synonyms "Yellow Acoustic"
+			"Youve Got A Friend In Me" synonyms "Youve Got A Friend In Me"
+	}
+
+actions :
+	Request post HttpRequest :
+		URL : "" ;
+		basicAuth : "" : "" ;
+	Response HttpResponse :
+		Request : HttpRequest ;
+		inputs in en {
+			request. text
+	}
+	text response "alarm.changeTxtResp1" :
+		inputs in en {
+			" "
+	}
+	text response "Default Fallback IntentTxtResp1" :
+		inputs in en {
+			"I didn\'t get that. Can you say it again? " ,
+			"I missed what you said. Say it again? " ,
+			"Sorry, could you say that again? " ,
+			"Sorry, can you say that again? " ,
+			"Can you say that again? " ,
+			"Sorry, I didn\'t get that. " ,
+			"Sorry, what was that? " ,
+			"One more time? " ,
+			"What was that? " ,
+			"Say that again? " ,
+			"I didn\'t get that. " ,
+			"I missed that. "
+	}
+
+flows :
+	- user1 : user "alarm.change" => bot1 : chatbot "alarm.changeTxtResp1" {
+		=> user2 : user "alarm.change - context:alarm-change" => bot2 : chatbot "alarm.changeTxtResp1" ;
+	} ;
+	- user3 : user "alarm.remove" => bot3 : chatbot "alarm.changeTxtResp1" {
+		=> user4 : user "alarm.remove - context:alarm-remove" => bot4 : chatbot "alarm.changeTxtResp1" ;
+	} ;
+	- user5 : user "alarm.check" => bot5 : chatbot "alarm.changeTxtResp1" {
+		=> user6 : user "alarm.check - context:alarm-check" => bot6 : chatbot "alarm.changeTxtResp1" ;
+	} ;
+	- user7 : user "alarm.set" => bot7 : chatbot "alarm.changeTxtResp1" {
+		=> user8 : user "alarm.set - context:alarm - comment:another one" => bot8 : chatbot "alarm.changeTxtResp1" {
+			=> user9 : user "alarm.set - context:alarm - comment:recurrence" => bot9 : chatbot "alarm.changeTxtResp1" { => back to user8 ; => back to user9 ; } ; => back to user8 ;
+		} ;
+		=> user10 : user "alarm.set - context:alarm - comment:recurrence" => bot10 : chatbot "alarm.changeTxtResp1" {
+			=> user11 : user "alarm.set - context:alarm - comment:another one" => bot11 : chatbot "alarm.changeTxtResp1" { => back to user11 ; => back to user10 ; } ; => back to user10 ;
+		} ;
+	} ;
+	- user12 : user "Default Fallback Intent" => bot12 : chatbot HttpRequest , HttpResponse , "Default Fallback IntentTxtResp1" ;
+
