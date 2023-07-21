@@ -1,8 +1,8 @@
 # Dialogflow chatbots
 This folder contains 140 Dialogflow chatbots conform to CONGA model and the CONGA DSL.
 
-* Prebuild folder contains the predefined chatbots, which are provided by Dialogflow tool.
-* Kommunicate folder contains the predefined chatbots from Kommunicate web page
+* Prebuild folder contains the predefined chatbots, which are provided by [Dialogflow tool](https://dialogflow.cloud.google.com/).
+* Kommunicate folder contains the predefined chatbots from [Kommunicate web page](https://docs.kommunicate.io/docs/bot-samples).
 * Github folder contains the open source chatbots from Github. Inside the folder, there is a table with the exact location for each chatbot in Dialogflow format.
 
 ## Evaluation Result
