@@ -17,3 +17,29 @@ The repository contains a dataset used in evaluations of the CONGA DSL validator
 |                | **Total**   | 291           |
 
 The chatbots are divided into two folders, Dialogflow and Rasa, depending on the technology to which the chatbot belongs. The folders contain the source of each chatbot, the CONGA's models (XMI file) and DSLs (Bot file) for each chatbot and a table with the results of the evaluation performed with CONGA DSL validator.
+
+## CONGA Validator
+The CONGA DSL includes model validation rules, which every CONGA model should satisfy. The table summarizes the validation rules currently supported by CONGA. The rules has two types of severity, error and warnings. Warnings can also be classified in Best Practice (BP), Heuristic (H), Missing Element (ME), Malformed element (MF) and Unused Element (UE). 
+
+| **Id**  | **Validation rule**                                                                                  | **Severity** |
+|---------|------------------------------------------------------------------------------------------------------|:------------:|
+| **G1**  | Names of intents, actions, entities, and parameters should be unique                                 |     error    |
+| **G2**  | The language of the element (intent, action, entity) must be included within the chatbot languages   |     error    |
+| **G3**  | There cannot be two LanguageInputs of the same language in the same element (intent, action, entity) |     error    |
+| **G4**  | Different flow paths cannot start with the same intent                                               |     error    |
+| **G5**  | There should be a referencing HTTPRequest before each HTTPResponse                                   |     error    |
+| **G6**  | Reference “back to” must point to an element in the same path, at a previous position                |     error    |
+| **G7**  | Parameters in the training phrase must be defined in the same intent                                 |     error    |
+| **G8**  | All entries of the entity should be of the same type                                                 |     error    |
+| **G9**  | There should be one LanguageInput per chatbot language                                               | warning (ME) |
+| **G10** | Regex syntax must be well-formed                                                                     | warning (MF) |
+| **G11** | Loops should have some terminating branch                                                            |  warning (H) |
+| **G12** | Defined entities should be used in some parameter                                                    | warning (UE) |
+| **G13** | Intents should be used in some flow                                                                  | warning (UE) |
+| **G14** | Mandatory parameters should be used in some training phrase                                          | warning (UE) |
+| **G15** | The language intent must contain at least three training phrases                                     | warning (BP) |
+| **G16** | Two training phrases should not be equal in different intents                                        | warning (BP) |
+| **G17** | Two training phrases should not be equal in the same intent                                          | warning (BP) |
+| **G18** | If the phrase has a text parameter, it should have more content                                      | warning (BP) |
+| **G19** | The chatbot should have a fallback intent                                                            | warning (BP) |
+| **G20** | Mandatory parameters should have prompts                                                             | warning (BP) |
