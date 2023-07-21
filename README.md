@@ -1,5 +1,5 @@
 # Validation Setup
-(CONGA)[https://saraperezsoler.github.io/CONGA/] is a MDE solution to implement chatbots. It consists of:
+[CONGA](https://saraperezsoler.github.io/CONGA/) is a MDE solution to implement chatbots. It consists of:
 
 - A DSL to define chatbot models
 - A code generator for several chatbot development tools
